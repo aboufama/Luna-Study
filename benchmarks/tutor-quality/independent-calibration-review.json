@@ -1,0 +1,70 @@
+{
+  "reviewedAt": "2026-10-02T11:37:08.931Z",
+  "reviewer": "independent relevance_design agent",
+  "providerCallsByReview": 0,
+  "source": "live-candidate-calibration.json",
+  "sourceSha256": "99486538a652a3445d7a106768c27acea0e72ce1a43b262d583a23d55f619358",
+  "preCallReview": "Inspected and discussed all24fixtures before provider calls. Concrete target positives/wrong labels accepted; mixed negative conditional on no comparison requested. Generic incomplete examples required separate insufficient-specificity reporting, not semantic-wrong labels.",
+  "selectionReview": "Artifact records prespecified .70/.85/.90 selection rule and development-only .70 selection before held-out calls. No evidence of held-out retuning.",
+  "observed": [
+    {
+      "split": "development",
+      "threshold": 0.7,
+      "n": 12,
+      "positiveCases": 3,
+      "wrongOrMixedCases": 6,
+      "incompleteCases": 3,
+      "truePositive": 2,
+      "falsePositive": 0,
+      "displayedIncomplete": 0,
+      "withheldPositive": 1,
+      "safelyWithheldWrongOrMixed": 6,
+      "incompleteAbstentions": 2,
+      "incompleteConfidentRejections": 1,
+      "abstentions": 6,
+      "unavailable": 0
+    },
+    {
+      "split": "held-out",
+      "threshold": 0.7,
+      "n": 12,
+      "positiveCases": 3,
+      "wrongOrMixedCases": 6,
+      "incompleteCases": 3,
+      "truePositive": 2,
+      "falsePositive": 0,
+      "displayedIncomplete": 0,
+      "withheldPositive": 1,
+      "safelyWithheldWrongOrMixed": 6,
+      "incompleteAbstentions": 3,
+      "incompleteConfidentRejections": 0,
+      "abstentions": 7,
+      "unavailable": 0
+    },
+    {
+      "split": "all",
+      "threshold": 0.7,
+      "n": 24,
+      "positiveCases": 6,
+      "wrongOrMixedCases": 12,
+      "incompleteCases": 6,
+      "truePositive": 4,
+      "falsePositive": 0,
+      "displayedIncomplete": 0,
+      "withheldPositive": 2,
+      "safelyWithheldWrongOrMixed": 12,
+      "incompleteAbstentions": 5,
+      "incompleteConfidentRejections": 1,
+      "abstentions": 13,
+      "unavailable": 0
+    }
+  ],
+  "limits": [
+    "Six correlated subject families, not24independent domains; held-out12cases cover3newdomains.",
+    "Correct3x5grid(.62) and chemistry reaction(.55) remain withheld at.70. This is limited positive recall improvement, not complete activation.",
+    "Generic rules/definitions can be useful teaching; withholding them here tests exact-target specificity, not general relatedness. Five incomplete cases abstain, one is confidently rejected.",
+    "No test here validates every scientific fact or permission to reveal a solution.",
+    "No operator/sign substitution, adversarial summaries, large truncation, repeated independent samples, human-rated broad corpus or clinical learning effect.",
+    "Classifier scores are model outputs, not calibrated probabilities."
+  ]
+}

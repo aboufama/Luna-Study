@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "title": "Luna — A world in every stone.",
+  "description": "Twelve subject-shaped mosaics made with Luna’s hand-cut tesserae, mineral pigments, and open negative space.",
+  "nativeCanvasSize": 360,
+  "sources": {
+    "field": "src/mosaic-field.mjs",
+    "renderer": "src/course-mosaics/renderer.mjs",
+    "collection": "src/course-mosaics/courses.mjs",
+    "exporter": "scripts/export-course-mosaics.mjs"
+  },
+  "courses": [
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "category": "Formal sciences",
+      "subtitle": "The beauty of a pattern.",
+      "description": "A bold pi symbol built entirely from hand-cut moss-dark stone. Its broad roof and gently curved legs make mathematics immediately recognisable, with a small ochre accent at the foot.",
+      "detail": "Pi symbol · broad stone strokes · moss and ochre",
+      "palette": {
+        "ink": "#4d6157",
+        "accent": "#aa8350",
+        "stone": "#c5c8be"
+      },
+      "stoneCount": 500,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/sciences.mjs",
+      "files": {
+        "png": "luna-mathematics.png",
+        "svg": "luna-mathematics.svg"
+      }
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "category": "Natural sciences",
+      "subtitle": "Everything is in relation.",
+      "description": "Three crossing ribbons of lapis and blue-grey stone trace an atom around a substantial nucleus. Small dark electron clusters punctuate the open orbital silhouette.",
+      "detail": "Three orbital ribbons · central nucleus · lapis and blue-grey",
+      "palette": {
+        "ink": "#46617c",
+        "accent": "#829aa9",
+        "stone": "#c4c7c3"
+      },
+      "stoneCount": 552,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/sciences.mjs",
+      "files": {
+        "png": "luna-physics.png",
+        "svg": "luna-physics.svg"
+      }
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "category": "Natural sciences",
+      "subtitle": "Small bonds. Vast possibilities.",
+      "description": "A substantial benzene ring branches into rose-coloured atom clusters. Plum bond ribbons, spare double bonds, and hand-cut edges give the molecular silhouette a tactile depth.",
+      "detail": "Benzene ring · branching bonds · plum and rose atoms",
+      "palette": {
+        "ink": "#665366",
+        "accent": "#ad7a79",
+        "stone": "#c8c3bf"
+      },
+      "stoneCount": 333,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/sciences.mjs",
+      "files": {
+        "png": "luna-chemistry.png",
+        "svg": "luna-chemistry.svg"
+      }
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "category": "Life sciences",
+      "subtitle": "The shape of living things.",
+      "description": "Two substantial strands of pine and celadon stone twist into a gently tilted double helix. Short limestone bridges span the open spaces between them.",
+      "detail": "Double helix · paired bridges · pine and celadon",
+      "palette": {
+        "ink": "#41685e",
+        "accent": "#87a182",
+        "stone": "#c1c8bd"
+      },
+      "stoneCount": 336,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/sciences.mjs",
+      "files": {
+        "png": "luna-biology.png",
+        "svg": "luna-biology.svg"
+      }
+    },
+    {
+      "id": "computer-science",
+      "name": "Computer science",
+      "category": "Computing",
+      "subtitle": "An idea, branching outward.",
+      "description": "A broad circuit tree branches from one root into four square terminals. Slate routes, pale stone edges, and terracotta endpoints make a precise, recognisable silhouette.",
+      "detail": "Branching tree · four terminals · slate and terracotta",
+      "palette": {
+        "ink": "#4c5d6c",
+        "accent": "#aa765d",
+        "stone": "#c2c7c3"
+      },
+      "stoneCount": 423,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/sciences.mjs",
+      "files": {
+        "png": "luna-computer-science.png",
+        "svg": "luna-computer-science.svg"
+      }
+    },
+    {
+      "id": "astronomy",
+      "name": "Astronomy",
+      "category": "Space sciences",
+      "subtitle": "A little piece of the infinite.",
+      "description": "A solid gold-toned planet meets wide, tilted lapis rings, with three small tessellated stars nearby. The stones make Saturn’s silhouette, including its generous open spaces.",
+      "detail": "Solid ringed planet · tessellated stars · gold and twilight lapis",
+      "palette": {
+        "ink": "#4d566f",
+        "accent": "#b19a62",
+        "stone": "#c4c6c1"
+      },
+      "stoneCount": 375,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/sciences.mjs",
+      "files": {
+        "png": "luna-astronomy.png",
+        "svg": "luna-astronomy.svg"
+      }
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "category": "Society & systems",
+      "subtitle": "The shape of possibility",
+      "description": "Four stone pillars rise at measured intervals beneath a sweeping ochre curve. Their open spaces and ascending rhythm turn growth into a small piece of architecture.",
+      "detail": "Blue slate · yellow ochre",
+      "palette": {
+        "ink": "#59777e",
+        "accent": "#b58e53",
+        "stone": "#b3bbb3"
+      },
+      "stoneCount": 459,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/humanities.mjs",
+      "files": {
+        "png": "luna-economics.png",
+        "svg": "luna-economics.svg"
+      }
+    },
+    {
+      "id": "world-history",
+      "name": "World History",
+      "category": "Humanities",
+      "subtitle": "Built across centuries",
+      "description": "A classical temple assembled from sandstone fragments: a broad triangular pediment, four subtly tapered columns, and three stepped foundation courses. Light passes freely between the columns.",
+      "detail": "Sandstone · warm bronze",
+      "palette": {
+        "ink": "#876d57",
+        "accent": "#bd995f",
+        "stone": "#bcafa0"
+      },
+      "stoneCount": 718,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/humanities.mjs",
+      "files": {
+        "png": "luna-world-history.png",
+        "svg": "luna-world-history.svg"
+      }
+    },
+    {
+      "id": "literature",
+      "name": "Literature",
+      "category": "Humanities",
+      "subtitle": "A world unfolding",
+      "description": "An open book in warm ivory stone, with curved paper leaves, a plum-gray binding, and a fine cover beneath. Six spare lines follow the natural sweep of the pages, leaving their pale surfaces open and quiet.",
+      "detail": "Ivory limestone · plum-gray binding",
+      "palette": {
+        "ink": "#6b6174",
+        "accent": "#aa9a85",
+        "stone": "#dfd9cc"
+      },
+      "stoneCount": 722,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/humanities.mjs",
+      "files": {
+        "png": "luna-literature.png",
+        "svg": "luna-literature.svg"
+      }
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "category": "Mind & behavior",
+      "subtitle": "Patterns of thought",
+      "description": "Two sculptural lobes are built from lavender and rose-earth stones. Winding folds move through their solid surfaces, divided by a narrow seam of light and joined at a small descending stem.",
+      "detail": "Blue lavender · rose earth",
+      "palette": {
+        "ink": "#68728f",
+        "accent": "#ab8987",
+        "stone": "#b6b2c0"
+      },
+      "stoneCount": 647,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/humanities.mjs",
+      "files": {
+        "png": "luna-psychology.png",
+        "svg": "luna-psychology.svg"
+      }
+    },
+    {
+      "id": "music-theory",
+      "name": "Music Theory",
+      "category": "Arts & expression",
+      "subtitle": "Intervals in stone",
+      "description": "A warm bronze lyre has substantial curled arms, a rounded stone soundbox, and five straight, evenly spaced strings. Gold inlay follows the bowl and the central string, giving its measured intervals a gentle radiance.",
+      "detail": "Warm bronze · antique gold",
+      "palette": {
+        "ink": "#7c6852",
+        "accent": "#bd9b53",
+        "stone": "#bcab8d"
+      },
+      "stoneCount": 591,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/humanities.mjs",
+      "files": {
+        "png": "luna-music-theory.png",
+        "svg": "luna-music-theory.svg"
+      }
+    },
+    {
+      "id": "environmental-science",
+      "name": "Environmental Science",
+      "category": "Living systems",
+      "subtitle": "The shape of growth",
+      "description": "A fern is assembled leaf by leaf from moss-green stones. Broad, asymmetrical blades taper toward their tips, and open air separates each pair as the stem rises into a small unfurling curl.",
+      "detail": "Moss green · olive mineral",
+      "palette": {
+        "ink": "#4e755d",
+        "accent": "#aaa86e",
+        "stone": "#96a58e"
+      },
+      "stoneCount": 481,
+      "shape": "subject-silhouette",
+      "source": "src/course-mosaics/humanities.mjs",
+      "files": {
+        "png": "luna-environmental-science.png",
+        "svg": "luna-environmental-science.svg"
+      }
+    }
+  ],
+  "export": {
+    "png": {
+      "width": 1800,
+      "height": 1800,
+      "background": "transparent",
+      "format": "image/png"
+    },
+    "svg": {
+      "width": 1440,
+      "height": 1440,
+      "background": "transparent",
+      "format": "image/svg+xml"
+    },
+    "contactSheet": {
+      "file": "collection.png",
+      "width": 1800,
+      "height": 1700,
+      "columns": 4,
+      "rows": 3,
+      "background": "#faf9f6"
+    },
+    "gallery": "/course-mosaics"
+  }
+}

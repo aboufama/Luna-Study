@@ -1,0 +1,155 @@
+{
+  "artifact": "benchmarks/tutor-quality/live-adaptive-final.json",
+  "sha256": "a21282087e57ff1c438943937693b4c4cea7be23cbcc94a2f55b124600aeb0ab",
+  "assessment": "Complete sustained interaction loop; not a complete grading-quality pass. Neutral restatement assistance false positives are preserved for separate repair.",
+  "actualRequests": {
+    "openai": 55,
+    "jev": 56
+  },
+  "usageComplete": true,
+  "estimatedUsd": 0.271574814,
+  "grades": {
+    "reviewJobs": 12,
+    "providerRequests": 24,
+    "recognizedAttempts": 9,
+    "acceptedCheckedGrades": 7,
+    "rejectedReviews": 5,
+    "targetRejectedReviews": 2,
+    "persistedGradeEvents": 7
+  },
+  "finalMastery": {
+    "overall": 62,
+    "topics": [
+      {
+        "id": "7fafcd4cb67a69bee132bb17",
+        "title": "Equations",
+        "score": 90,
+        "mastered": false
+      },
+      {
+        "id": "590da97ebea25bdca1ead597",
+        "title": "Cell transport",
+        "score": 33,
+        "mastered": false
+      }
+    ]
+  },
+  "unrecognizedAdaptiveTargets": [],
+  "boardCounts": {
+    "validatedCandidates": 16,
+    "invalidAttempts": 2,
+    "visibleCanvasUpdates": 8,
+    "hidePackets": 5,
+    "interpretation": "Separate generation/routing events, not a semantic accuracy denominator."
+  },
+  "acceptedBoardSteps": [
+    {
+      "stepId": "clarify-current",
+      "revision": "4746776d-c61f-423f-9389-b514bd33cac9",
+      "types": [
+        "latex",
+        "text"
+      ]
+    },
+    {
+      "stepId": "partial-step",
+      "revision": "cbfd9bae-bb53-4d21-ac18-2ff70d4cdcde",
+      "types": [
+        "latex",
+        "text"
+      ]
+    },
+    {
+      "stepId": "next-equation",
+      "revision": "09e27a90-c678-4b7a-b429-91cf459d90ae",
+      "types": [
+        "latex"
+      ]
+    },
+    {
+      "stepId": "independent-equation",
+      "revision": "e0e30e9a-59d3-420d-be42-d56eb5146d96",
+      "types": [
+        "latex"
+      ]
+    },
+    {
+      "stepId": "biology-full",
+      "revision": "1aadfa8d-1f69-4c82-a7fd-37675ed05e36",
+      "types": [
+        "flow"
+      ]
+    },
+    {
+      "stepId": "resume-study",
+      "revision": "2eff7f25-a4fc-471f-a675-879907a55014",
+      "types": [
+        "latex"
+      ]
+    },
+    {
+      "stepId": "ask-next",
+      "revision": "fa21e21b-e042-4a11-887b-f07c63b66d19",
+      "types": [
+        "latex"
+      ]
+    },
+    {
+      "stepId": "fourth-equation",
+      "revision": "5331e92a-9587-4741-825d-736c46bd0834",
+      "types": [
+        "latex",
+        "text"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "code": "CURRENT_HINT_GRANTS_DELIVERED",
+      "steps": [
+        "hint-one",
+        "hint-two",
+        "hint-three"
+      ],
+      "status": "observed"
+    },
+    {
+      "code": "WRONG_ANSWER_REPAIR_FIRST",
+      "step": "incorrect-full-target",
+      "reply": "Not quite: subtracting the constant does not remove the coefficient on x, so the variable is not isolated yet. What equation remains after subtracting 3 from both sides?"
+    },
+    {
+      "code": "NEUTRAL_RESTATEMENT_MISLABELED_ASSISTANCE",
+      "steps": [
+        "third-equation",
+        "fourth-equation"
+      ],
+      "detail": "Independent audit finds no w-target hint or solution before its first submission. Both graders mark w assisted; first y correctness agrees but assistance differs. Prompt repair/control experiments are separate; raw unchanged."
+    },
+    {
+      "code": "FINAL_REVIEW_PRESENT",
+      "reply": "Next, prioritize cell transport: you gave one strong explanation, but it has had less practice. Then do a brief equations teach-back focused on why dividing by the coefficient isolates the variable—not just the calculation. I’m not treating either topic as complete."
+    },
+    {
+      "code": "LATE_REPEATED_TEACH_BACK",
+      "steps": [
+        "identify-review-target",
+        "explain-back",
+        "method-recap",
+        "ask-transfer-check"
+      ],
+      "detail": "Repeated y operation questions limit naturalness; scripted student repeats the full canonical answer instead of adapting to a narrower local prompt."
+    }
+  ],
+  "independentEvidence": [
+    "final-grading-audit.json",
+    "final-board-audit.json"
+  ],
+  "limitations": [
+    "30-minute virtual timeline, not a human learning study",
+    "Synthetic STT/TTS and deterministic bank preparation; real tutor/Jev/graders",
+    "Short synthetic originals with correct scripted answers copied from them",
+    "No claim of fully reliable grading or general candidate relevance",
+    "Component rendering replay does not prove full app interaction/camera behavior"
+  ]
+}

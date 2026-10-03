@@ -1,0 +1,2019 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:40:00.758Z",
+  "liveProviders": false,
+  "model": "gpt-6-luna",
+  "budget": {
+    "maximumPaidRequests": 9,
+    "paidRequests": 0
+  },
+  "sources": [
+    {
+      "id": "econ2801-pset3",
+      "name": "Problem Set 3 Econ 2801 2026.pdf",
+      "pdfSha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+      "pdfBytes": 107943,
+      "pages": 2,
+      "characters": 4366,
+      "textSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset2-solutions",
+      "name": "Problem_Set_2_Detailed_Answer_Discussion_Fall_2026_ECON_2801.pdf",
+      "pdfSha256": "637afcb2362a123dd12012a6209a8299d01ef308ddbb413542509e7e56640f43",
+      "pdfBytes": 108259,
+      "pages": 5,
+      "characters": 10412,
+      "textSha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset5-solutions",
+      "name": "Solution_Problem_Set_5_Fall_2026_ECON_2801__Corrected_.pdf",
+      "pdfSha256": "949198239c729af4f88de8fbe2512fa368f62d489b999e5615c26f299a0d31cf",
+      "pdfBytes": 115074,
+      "pages": 6,
+      "characters": 10903,
+      "textSha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180",
+      "chunks": 1
+    }
+  ],
+  "totalCharacters": 25681,
+  "codeHashes": {
+    "server/indexing.mjs": "6e958bbee92f7e5d942d39aa1746bc8987433a3cf930e04a53de97afc2ce502e",
+    "server/index-citations.mjs": "c7f972ab1f7fe73788a29093df254d24c66394ee241b4998f5c4bf84c77c3bf1",
+    "server/api.mjs": "d5cca4acb0f84694860512a16a6ebe9491b5089ab97a2f8d7ad81d03bb477aa8",
+    "server/openai-luna.mjs": "10b77b58ade0f834c9c8b65de1aadf5e5b0be7d6cfc1a2627d1e70a34de7f7b5"
+  },
+  "settings": {
+    "concurrency": 5,
+    "directChars": 24000,
+    "chunkChars": 18000,
+    "batchChars": 22000
+  },
+  "trials": [
+    {
+      "round": 1,
+      "testId": "28137f3a-afc6-4ebe-b46e-29649a0a64e4",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-map",
+          "startedMs": 1.6,
+          "inputBytes": 17077,
+          "inputSha256": "72d5a4419c1997e584aba54336262b9874b065a7106e37d9bae49e82fcf19b22",
+          "instructionSha256": "fca3f817070f21a0d3283a87db9aca5387cb503b0126c3a6b55d78c78050e932",
+          "schemaSha256": "24f1facc1a47e7b7b2220e65e956ec5f755d8d8ac9de6a405a9d8080e41b1386",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions"
+          ],
+          "chunkCount": 2,
+          "characters": 14778,
+          "status": "completed",
+          "catalog": [
+            {
+              "chunkId": "028af49cb71e084dce93312e7f48a9a555662251553151be8b0a90515b357890",
+              "sourceId": "econ2801-pset3",
+              "excerpts": [
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-0-520",
+                  "text": "[PDF page 1]\n1 \nKaushik Basu \nEcon 2801/COGST 2801/Govt 2803/Phil 2835 \nGame Theory \nFall 2026, Cornell University \nProblem Set 3 \n[Total 25 points]\n[This problem set will be graded to give you a sense of how you are doing (the score will\nnot be part of your final evaluation). To be graded you must upload your answer sheet on\nthe course canvas by 18 September.]\n1.   Consider a 3-player game in which player 1 chooses between U and D, player 2\nchooses between L and R, and player 3 chooses between A and B. The payoff\n"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-520-1044",
+                  "text": "matrix of this three-player game is illustrated below. Thus if 1 plays U, 2 plays R\nand 3 plays B, the payoffs they earn are (1, 6, 1). Describe all the Nash equilibria\nof this game? \nL   R   L   R\nU   7, 7, 1   1, 8, 2   U   7, 7, 0   1, 6, 1\nD   8, 1, 2   2, 2, 0   D   6, 1, 1   0, 0, 1 \nA   B \n[2 points] \n2.   Consider the Traveler’s Dilemma game.\n(a)   Suppose that both players become moral in the sense of becoming ‘utilitarian’. A\nutilitarian is a person who tries to maximize the total amount of money (or payoff)\n"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-1044-1623",
+                  "text": "earned by all the players (in this case, both players). Describe all the Nash\nequilibria of this transformed game.\n(b)   Suppose now player 1 is selfish (maximizes his own income) but player 2 is\nutilitarian (she maximizes the total income earned by the two players). Describe\nthe Nash equilibrium of this game.\n[For both parts, (a) and (b), it may help to write down the payoff matrix of a segment\nof the full game—for instance, strategies, 100, 99, and 98, for each player.]\n[2 + 3 points]\n3.   Three friends, Anna (A), Berlin (B) and Churchill (C) plan to meet at the cinema.\n"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-1623-2173",
+                  "text": "However, they forget to decide whether to meet for the matinee show (M) or the\nnight show (N). Each must choose independently between M and N.\nCase I: If all of them manage to meet at the cinema, they are happy and they get 2\nutils each. If all do not manage to meet, they are unhappy and get 0 util each.\nCase II: A and C have the same preference as in Case I (if all 3 meet, they get 2\nutils each; if all 3 do not meet, they get 0 utils). B gets 2 utils if   only   B and A\nmeet. Under all other circumstances he gets zero utils. \n\n[PDF page 2]\n2 \n"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-2173-2746",
+                  "text": "(a)   Describe the payoff matrices for the two games (i.e., Case I and Case II).\n[For each game you will need to write down two matrices, the way it is\ndone in Question 1.]\n(b)   What are the Nash equilibria in the two games? \n[3 + 2 points]\n4.   There is a straight-line city, as shown below, in which people live uniformly\nspread all along the line, from point 0 to point 1.\n0 ____________________________ 1\nTwo vendors, A and B, have to each choose a location on the line. Each vendor’s\naim is to maximize the number of her customers. Citizens can travel along the line\n"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-2746-3266",
+                  "text": "(in either direction). They buy from the closest vendor (and choose by coin toss if\nmore than one vendor is located at the same distance). As you already know, there\nis a unique Nash equilibrium in this 2-player game.\n(a)   Now suppose a new vendor comes to town. Is there a Nash equilibrium (in\nthis 3-player game)? If so, describe it; and if not, explain why not.\n(b)   Go back to the assumption of there being only two vendors. Suppose now\nthe culture of living in high-rise buildings comes up, and the citizens live\n"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-3266-3815",
+                  "text": "in four high-rise apartment buildings which are built at four equi-distant\npoints in the city. At the extreme left (that is, at 0) we have building   a ,\nthen   b , then   g , and at the extreme right   d . In other words, one-fourth of the\ncity lives at each of these 4 points and no one in the stretches in between.\nDescribe all the Nash equilibria in this game.\n[2 + 3 points]\n5.   Consider the 2-player game described below in which player 1 chooses between\nU and D and 2 chooses between L and R. \nL   R\nU   8,   8   0,   x\nD   x,   0   2,   2 \n"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-3815-4365",
+                  "text": "(a)   Insert a value of x which will make this game represent the Prisoner’s\nDilemma (a game in which individual rationality leads to collective harm).\n(b)   Insert a value of x, which makes this game into an Assurance Game or a\nCoordination game (that is, one with two equilibria, one good and one bad).\n[2 + 2 points]\n6.   Consider a 2-player normal-form game in which player 1 has 8 strategies and\nplayer 2 has 10 strategies. What is the maximum number of strict Nash equilibria\nthat this game can have? Briefly explain your answer.\n[2 + 2 points]"
+                },
+                {
+                  "id": "e-36feb9e3ae66d0ff8dfab0f6-4365-4366",
+                  "text": " "
+                }
+              ]
+            },
+            {
+              "chunkId": "081ae227a4bd5dc957c3b6b85d9a98eed9bdc35964dcfd49d504b8345f76cff8",
+              "sourceId": "econ2801-pset2-solutions",
+              "excerpts": [
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-0-557",
+                  "text": "[PDF page 1]\nProblem Set 2 Detailed Answer Discussion Fall\n2026 ECON 2801 \nPatrick Luo\nSeptember 2026 \n1   Question 1: \n1.   Consider a two-player game in which each player has 4 strategies, and\nhence it is a game with 16 outcomes. Is it possible to have payoffs such that all\noutcomes (no matter what the players choose) constitute a Nash Equilibrium.\nIf not, explain why not. If yes, describe a game which has this property. Can all\noutcomes be strict Nash equilibria? What is the largest number of strict Nash\nEquilibria that this game can have?\nAnswer:\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-557-1113",
+                  "text": "Let us start by reviewing a few definitions from class:\n1.   Nash equilibria   are strategy pairs such that, for each player, their strat-\negy is the best response (you cannot do strictly better with any other\nstrategy) given the other player’s strategy.\n2.   Strict Nash equilibria   are strategy pairs such that, for each player, their\nstrategy is strictly the best response (you cannot do strictly   OR   weakly\nbetter with any other strategy) given the other player’s strategy.\nTo answer the first part of the question, we can imagine a 4x4 game where\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-1113-1689",
+                  "text": "every strategy pair is a Nash equilibria. This requires that each player has the\nsame payoff no matter their strategy. A simple example is shown below:\nA   B   C   D\na   1,1   1,1   1,1   1,1\nb   1,1   1,1   1,1   1,1\nc   1,1   1,1   1,1   1,1\nd   1,1   1,1   1,1   1,1\nTable 1: A symmetric game where every strategy pair is Nash \nAside:   One might note that the above is very symmetric and fair (everyone\nis getting the same payoff). However, this need not be true for every strategy\npair to be Nash. One player could get more than the other as seen below:\n1 \n\n[PDF page 2]\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-1689-2250",
+                  "text": "A   B   C   D\na   -1,3   -1,3   -1,3   -1,3\nb   -1,3   -1,3   -1,3   -1,3\nc   -1,3   -1,3   -1,3   -1,3\nd   -1,3   -1,3   -1,3   -1,3\nTable 2: A asymmetric game where every strategy pair is Nash\nEach strategy pair in the above games are Nash because every other strategy\nyields the same payoff given any opposing strategy.   Consequently, we cannot\nconstruct a game where every strategy pair is strictly Nash.\nWe can show this by a quick proof by contradiction.   Let us assume that\nany given strategy pair is a strict Nash equilibrium.   Thus, it must be that\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-2250-2784",
+                  "text": "for a given strategy from the opposing player, let us call that   x , our payoff for\nplaying each of our four possible strategies is strictly greater than the others.\nThe contradiction flows directly, if the pair ( A, x ) (assuming we are player 1) is\na strict Nash equilibrium, it can’t be that ( B, x ) (for the same opposing strategy \nx ) is also a strict Nash equilibrium.   Thus, not every strategy pair in a game\ncan be a strict Nash equilibrium strategy.\nNow note how I disproved the above requires that for any given opposing\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-2784-3379",
+                  "text": "player strategy, there can be at most one strictly best response to have strict\nNash equilibria.   Logically, this implies that there is at most 4 strict Nash\nequilibria in a 4x4 game (i.e.   the size of the smaller of the players’ strategy\nset). We can construct a game as an example of a 4x4 game with 4 strict Nash\nequilibria:\nA   B   C   D\na   1,1   0,0   0,0   0,0\nb   0,0   1,1   0,0   0,0\nc   0,0   0,0   1,1   0,0\nd   0,0   0,0   0,0   1,1\nTable 3: A 4x4 game with 4 strict Nash equilibria \n2   Question 2: \n2.   The Traveler’s Dilemma is a troublesome game.   Individuals seeking to do\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-3379-3963",
+                  "text": "well for themselves end up doing miserably. \na.   Do you find the standard game-theoretic analysis and the outcome pre-\ndicted by the concept of Nash equlibrium persuasive? Spell out the reasoning\nbehind your answer.\nThe question above is open ended and does not have a set answer. However,\none potential cogent response is as below:\n2 \n\n[PDF page 3]\nThe standard game-theoretic analysis and its outcome is convincing so far\nas the strong assumptions of rationality and complete information apply.   All\nplayers fully understand the structure of the game, understand that their oppo-\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-3963-4549",
+                  "text": "nent has an equal understanding and foresight regarding the game, and they all\nhave unlimited, costless time to consider the game.   Under these assumptions\nthe Nash equilibrium is logical and convincing.   However, as soon as we start\npulling these pillars away, and these pillars are rather strong (i.e. I would not\nexpect a random selection of strangers would satisfy all these conditions), the\nlogical Nash outcome rapidly becomes unreasonable.\nFor example, the Nash outcome requires rather many cycles of logic, as-\nsuming the opposition is willing to go through the same hoops.   "
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-4549-5128",
+                  "text": "In reality, an\nindividual may not fully rationalize all outcomes, rather settling for the first\n”good enough” answer and potentially land on the highest outcome rather than\nthe Nash outcome.   In essence, time and mental capacity is valuable.   People\nmay not want to go through the hassle of thinking through the entire strategy\nspace for a relatively small reward (i.e. the apparently small 1 or 2 dollar incre-\nments) and thus land on a non-Nash outcome when the experiment is done in\npractice. \nb.   Explain briefly, if you were playing the Traveler’s Dilemma, what strategy\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-5128-5667",
+                  "text": "you would use and explain the rationale behind your choice?\nAnswer:\nAs with part a, there is no strict answer but one cogent response is as follows:\nAssuming I am playing against a random player drawn from the population\nof the USA (rather than from a population of Economists or Game Theorists) I\nwould play 100. My strategy relies upon the irrationality of my likely opponent.\nFor many, the first instinct upon seeing the traveler’s dilemma is to pick a large\nvalue; humans are naturally cooperative when the reward is not very high for\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-5667-6255",
+                  "text": "defection, and by design, the first defection earns only one percent extra on the\ncooperative reward.   Consequently, I would leverage the fact that I am likely\nfacing someone not versed in economics and general human behavior to attempt\nto achieve the cooperative outcome.\nAs for why I do not play 99 if that is the case; I also gloss over the fact\nthat monetary reward is not the only outcome under consideration.   I would\nfeel rather bad if someone opted to go for the cooperative play and I instantly\nbetrayed them. As 1 dollar is not too important for me, I am willing to sacrifice\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-6255-6835",
+                  "text": "that for the sake of my conscience. \n3   Question 3: \n3.   Consider a variant of the Traveler’s Dilemma in which each player must\nchoose an   even-numbered   integer from 2 to 100. The rest is the same as in the\nstandard Traveler’s Dilemma.   If they choose the same integer, they get that\ninteger in dollars as payoff. If they choose different integers, they both get the\nlower integer in dollars, but with one adjustment: the one who chose the lower\ninteger gets an additional   $ 2 and the one who chose the higher integer has   $ 2\n3 \n\n[PDF page 4]\ndeducted from her payoff. \n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-6835-7429",
+                  "text": "a.   Describe all the Nash equilibria of this game.\nAnswer:\nEvidently, no asymmetric strategy pairs (i.e. pairs where one person calls a\nlower value while the other a higher one) can be a Nash outcome —the person\ncalling a higher value is strictly worse off.   Thus, the only strategy pairs to\nconsider are those where both players quote the same number. In that case, we\nneed to check if they have any reason to deviate.   As per above, none would\ndeviate to a higher number.   Deviating to a lower number is at best going to\nyield the same outcome (going down one increment of 2 and claiming "
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-7429-8028",
+                  "text": "the 2 dollar\nbonus for being the lower bid). Thus, all strategy pairs where both players play\nthe same value is a Nash equilibrium \nb.   Describe all the strict Nash equilibria of this game.\nFollowing the logic from part a, most pairs are not a strict Nash equilibrium\nstrategy pair because a person defecting to a value one step lower is just as well\noff.   This, of course, is impossible at the lower bound.   Thus the unique strict\nNash equilibrium strategy is (2,2). \n4   Question 4: \n4.   In Rosenthal’s Centipede game (described in Chapter 2 of Basu:   Prelude\nto Political Economy), standard "
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-8028-8622",
+                  "text": "game-theoretic analysis, based on backward\ninduction, predicts that players will choose “keep” at every period and so they\nwill end up with player 1 earning 3 dollars and 2 earning 0 dollars.   Try to\ndevelop a cogent argument why the standard game-theoretic argument may be\nflawed and why rational players may choose “pass” at least for a few times.\nThis question is open ended and there are many valid answers. One example\nis as follows:\nWe may suspect that people playing the Centipede game is more interested\nin regret minimization rather than the classic rational game theory analysis. In\n"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-8622-9219",
+                  "text": "this case, the players may want to minimize the potential loss of their strategy\nand so are willing to pursue cooperation for some number of rounds as the\nrelative reward to continuing compared to the reward of immediate exit starts\nhigh. Only after the pot is big and ”tempting” enough would the players begin\nto consider exit. \n5   Question 5: \nDescribe the Hawk-Dove game by writing down the payoff matrix of the game.\nDoes the game have any Nash equilibria? Which ones of those are strict Nash\nequilibrium?\nLet us now complicate the game a bit.   Suppose that, over and above the\ntwo actions, "
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-9219-9815",
+                  "text": "H (Hawk) and D (Dove), each player has a third option, M. M\ncan stand for Moderate, referring to behavior that is less aggressive than H and\n4 \n\n[PDF page 5]\nmore aggressive than D. If both players play M, they both get a payoff of 1. If\none of them plays M and the other something else, they both get 0.\nWrite down the payoff matrix of this 3-by-3 game. Describe the Nash equi-\nlibria of this game? Describe the strict Nash equilibria of this game.\nAnswer:\nRecall from class:   the Dove-Hawk game has two Nash equilibria, (Dove,\nHawk) and (Hawk, Dove). Both of these are strict Nash equilibria, "
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-9815-10411",
+                  "text": "neither player\ncan do weakly better with any other strategy through unilateral deviation. An\nexample of such a game is as blow:\nH   D\nH   -1,-1   2,0\nD   0,2   1,1\nTable 4: Classic Dove-Hawk Game\nNow if we add a third potential strategy we have the following 3x3 game:\nH   M   D\nH   -1,-1   0,0   4,0\nM   0,0   1,1   0,0\nD   0,4   0,0   2,2\nTable 5: 3x3 Dove-Hawk Modification\nHere there are three Nash strategy pairs: (H,D), (D,H), and (M,M). How-\never, a dove in either (H,D) or (D,H) is equally as well off playing M. Conse-\nquently, the only strict Nash strategy pair is (M,M) in this game.\n5"
+                },
+                {
+                  "id": "e-f27abd8ef0787c4009bc3262-10411-10412",
+                  "text": " "
+                }
+              ]
+            }
+          ],
+          "result": {
+            "chunks": [
+              {
+                "chunkId": "028af49cb71e084dce93312e7f48a9a555662251553151be8b0a90515b357890",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-36feb9e3ae66d0ff8dfab0f6-0-520"
+                    ]
+                  }
+                ]
+              },
+              {
+                "chunkId": "081ae227a4bd5dc957c3b6b85d9a98eed9bdc35964dcfd49d504b8345f76cff8",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-f27abd8ef0787c4009bc3262-0-557"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6.6,
+          "durationMs": 5
+        },
+        {
+          "id": 2,
+          "operation": "index-map",
+          "startedMs": 1.9,
+          "inputBytes": 12560,
+          "inputSha256": "5821a6ff60e913a84e496a3f5a4494d7cdb9c42225d69f1dafae1a64f9340a11",
+          "instructionSha256": "fca3f817070f21a0d3283a87db9aca5387cb503b0126c3a6b55d78c78050e932",
+          "schemaSha256": "dbd9d986623e859d70fbd729fb2c5e5286ac19e65a167efd8650bb0a75002dde",
+          "sourceIds": [
+            "econ2801-pset5-solutions"
+          ],
+          "chunkCount": 1,
+          "characters": 10903,
+          "status": "completed",
+          "catalog": [
+            {
+              "chunkId": "ef6995383a31b9f65d48bb9116b52c2e05e5cb3d2ce6d48b9017f52056c76ece",
+              "sourceId": "econ2801-pset5-solutions",
+              "excerpts": [
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-0-547",
+                  "text": "[PDF page 1]\nSolution Problem Set 5 Fall 2026 ECON 2801 \nSeptember 2026 \nQuestion 1 \nFor each of the statements below answer true or false (assume throughout that\nno mixed strategies are allowed). \nPart A \nConsider a 2-player game with non-negative payoffs. If we change the game so\nthat player 1 gets double what she was getting earlier and 2 gets 4-times what\nhe was getting earlier, then this game will have the same Nash equilibria as the\noriginal one.\nAnswer: True.\nIf a strategy pair is Nash, it must be that for a given player they have no\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-547-1123",
+                  "text": "strict incentive to deviate. If we simply multiply every payoff by a set positive\nconstant, the greater than relations are unchanged; this also works in the inverse\nfor multiplying by the reciprocal. Thus, the Nashes are the same. \nPart B \nConsider a 2-player game with non-negative payoffs. If we change the game so\nthat player 1 gets minus 2 dollars for all outcomes compared to what she was\ngetting in the original game, and player 2 gets half of what he was getting in the\noriginal game, then this game will have the same Nash equilibria as the original\none.\nAnswer: True\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-1123-1696",
+                  "text": "Here, once again, we can imagine any Nash outcome in the game. By def-\ninition, the payoff for a given player for their strategy is at least as good for\nany other   P   ( s i , s ′ \ni )   ≥   P   ( s − i , s ′ \ni ), this relation remains true no matte what we\nadd, subtract, or multiply each side by, so long as we do not multiply by zero\nor a negative value. Thus, any pre-existing Nash remains Nash. Moreover, we\ncan also consider multiplying the outcome game by the reciprocal constant, or\nadding the negative offset coefficient; thus, any Nash in the outcome game must\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-1696-2263",
+                  "text": "also be Nash in the first game.\n1 \n\n[PDF page 2]\nPart C \nSuppose people live uniformly distributed on a one-mile stretch and buy from\nthe nearest vendor (and choose randomly from among vendors equi-distant to\nthem). Three vendors (each interested in maximizing the number of people who\nwill buy from them) must choose a location to set up store on the 1-mile stretch.\nOne vendor being at the start of the mile, one in the middle, and one at the\nend is not a Nash equilibrium.\nAnswer: True\nA simple proof by contradiction:   Let us assume this is a Nash.   If this is\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-2263-2807",
+                  "text": "a Nash, no one should have incentive to deviate. However, any of the vendors\nat the end can do strictly better by moving towards the midpoint of the line.\nThus, it cannot be that the proposed outcome is a Nash Equilibrium \nPart D \nIn Chess, if both players had flawless minds, as soon as it was decided who will\nplay White and who Black, the outcome of the game would be known.\nAnswer: True\nProof by contradiction.   Let us assume that, with perfect information, the\noutcome is unknown.   In that case, at least two of three end states must be\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-2807-3377",
+                  "text": "possible and occur with non-zero probability:   white wins, black wins, or the\ngame draws. We should be able to work backwards from each state to the start\nof the game. There must, thus, be some point of departure in the order of play\nthat reaches each of the two or more potential final outcomes. The last player\nwho plays has strict preferences on which outcome they want (win¿draw¿loss).\nThus, the last player who decides which path the game goes down has a strict\npreference and thus would not randomize. Therefore, the outcome of the game\nmust be certain. \nPart E \n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-3377-3959",
+                  "text": "A zero-sum game cannot have a Nash equilibrium.\nAnswer: False\nProof by counterexample: A zero sum game requires only that the payoffs\nin each cell adds to zero.   Thus, trivially, we can have a game where all cells\nare identical, let’s say they contain (0,0) for simplicity. In this case all strategy\npairs are Nash equilibria. \nPart F \nIn a zero-sum game every outcome can be a Nash equilibrium.\nAnswer: True; see above\n2 \n\n[PDF page 3]\nQuestion 2 \nConsider the Hawk-Dove game shown below (with player 1 choosing between\nrows and 2 choosing between columns).\nH   D\nH   -1,-1   4,0\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-3959-4522",
+                  "text": "D   0,4   2,2 \nPart A \nDescribe the Nash equilibria of this game.\nAnswer: The two Nash equilibria are (H,D) and (D,H) \nPart B \nIf this game was played in a sequence, with 1 moving first and 2 moving second,\nwhat would you expect the outcome to be and why?\nAnswer:   We would expect the first player to always play Hawk and the\nsecond dove.   We find this by backwards induction on the game tree.   If the\nfirst player played Hawk, the second player would always prefer dove (0¿-1),\nconversely, if the first player played Dove, the second player would prefer Hawk\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-4522-5107",
+                  "text": "(4¿2). The first player; thus, would prefer to play Hawk to get 4 instead of 0 in\nthe subgame perfect equilibrium. \nPart C \nExplain why the US got an advantage in the Cuban missile crisis by secretly\nplanning its strategy and then suddenly announcing it to the Russians.\nThis question is open ended, but one formulation of the answer is as follows:\nThe US took advantage of the Hawk-Dove structure of nuclear brinkmanship\nto gain an advantage. By playing a more aggressive, threatening stance first, the\nonly truly viable strategy for the USSR was to back down or risk the destruction\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-5107-5673",
+                  "text": "of the world. In essence, by threatening escalation first, the USSR can respond\nby escalating leading to nuclear war or backing down and losing their strategic\nposition in Cuba. \nQuestion 3 \nConsider two players, who, in period 1, plays the “Prisoner’s Dilemma” game\ndescribed below, and, after seeing the outcome of this game, play the “Assurance\nGame” also shown below.\nPrisoner’s Dilemma\n3 \n\n[PDF page 4]\nC   D\nC   5,5   0,7\nD   7,0   1,1\nAssurance Game\nA   B\nA   2,2   0,0\nB   0,0   1,1\nIs it possible to have a subgame perfect equilibrium of this 2-period game\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-5673-6232",
+                  "text": "such that in period 1 both players choose C? If yes, describe the full equilibrium.\nIf not, explain why not. Keep your answer brief—just one or two sentences.\nAnswer: It is not possible: the maximum punishment the subsequent assur-\nance game can generate is 1 (playing (B,B) in case of any deviation compared\nto (A,A) for cooperating). However, the incentive to deviate from cooperation\nis 2. Thus, a collaborative outcome of (C,C) in the fist game is impossible. \nQuestion 4 \nPeople live uniformly distributed all over a city shaped like a chopped isosceles\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-6232-6812",
+                  "text": "triangle, as shown below. Two vendors, 1 and 2, have to each set up a store in\nthe city. People buy from the nearest vendor. (If both vendors are located at\nthe same distance, they toss a coin).   The aim of each vendor is to maximize\nthe number of customers.\nDoes this game have a Nash equilibrium? If so, describe it. If not, explain\nwhy not.\nThis game does not have a Nash equilibrium.   A Nash equilibrium in this\nstyle of vendor game requires that they converge to a point where they split the\narea or population exactly in half in every conceivable way to cut the shape. In\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-6812-7344",
+                  "text": "other words, we need a centrally symmetric point, where every line that cuts\nthe shape in half intersects. Such a point does not exist for a trapezoid. Thus,\na Nash equilibrium does not exist.   A player can deviate at any given point\ntowards one of the bisecting lines and do better, since not all bisecting lines\nmeet at one point. \nQuestion 5 \nConsider the Prisoner’s Dilemma game described below:\nC   D\nC   4,4   -1,5\nD   5,-1   0,0\n4 \n\n[PDF page 5]\nSuppose this game is played infinitely many times. The players use a discount\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-7344-7935",
+                  "text": "factor   δ   to calculate the present value of return of infinite streams of income,\nwhere 0   ≤   δ <   1. Assume that they decide to use the trigger strategy. \nPart A \nExplain in words, why if   δ   = 0, they will not be able to cooperate and play C\neach time.\nA variety of answers is admissible, one example is as follows:\nWhen the discount rate equals to zero, neither player cares for the next day.\nThus, we can treat the sequence of games as games being played independently.\nConsequently, the only Nash equilibrium is (D,D) in every period. \nPart B \nCalculate the smallest value of d "
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-7935-8523",
+                  "text": "which will enable the two players to cooperate\nand play C each time, by using the trigger strategy.   That is, the use of the\ntrigger strategy is a Nash equilibrium.\nAnswer:\nStart with the discounted value of cooperation: \nP V   = 4 + 4 δ   + 4 δ 2   + 4 δ 3   +   ... \n=   4\n1   −   δ \nNext look at the discounted value of deviation for the deviator: \nP V   = 5\nNow we can implement the condition for non-deviation and solve for   δ \n4\n1   −   δ   ≥   5\n4   ≥   5(1   −   δ )\n5 δ   ≥   1 \nδ   ≥   1\n5 \nPart C \nIf the above game was being played a finite number of times, say 1000 times,\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-8523-9109",
+                  "text": "explain, assuming rationality is common knowledge, the players will get a total\nreturn of zero.\nAnswer: A player knowing there is a finite number of repetition recognizes\nthat the last game only has one possible Nash outcome: (D,D). Since the last\n5 \n\n[PDF page 6]\ngame’s outcome is known we can treat the game as repeating 999 times, since\nthe last game’s outcome is known. We then repeat this analysis backwards to\ndetermine that players would play (D,D) in every period yielding a zero return. \nPart D \nExplain briefly why our commonsense may conflict with the formal game-theoretic\n"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-9109-9703",
+                  "text": "answer to part (c).\nThis is an open ended question; one example answer is as below:\nPlayers seeing a long pattern of repetition may seek to minimize regret, and,\nthus, choose some degree of early cooperation rather than accepting an outcome\nof zero. More practically, a random individual when faced with this game may\nnot think so pessimistically as to assume cooperation will immediately break\ndown even if it is rational. In such a case, believing there is a chance for some\nlength of cooperation may lead to a different outcome if the belief is mutual. \nQuestion 6 \nConsider a game like the "
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-9703-10303",
+                  "text": "Centipede, except that it is infinitely long. (The two\nplayers can go on choosing between Keep and Pass even after they have passed\n100 times.) \nPart A \nExplain why both players choosing Pass every time is a Nash equilibrium.\nAnswer: We can approach this with a proof by contradiction.\nLet us assume that both players choosing Pass every time is not a Nash\nEquilibrium. Thus, one of the players must take at some period. However, this\nplayer knows that if they Pass on this period and take the next time they have\na turn will yield strictly more for them.   Thus, they would delay taking.   As\nthe ga"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-10303-10902",
+                  "text": "me is infinite, this logic does not break down due to the end of the game;\nthus, always Passing is a Nash Equilibrium. \nPart B \nExplain why both players choosing Keep every time is a Nash equilibrium.\nAnswer: this can be proven directly:\nIf both players always play Keep, no one player benefit from deviating. Any\ndeviation past the first period does not change payoffs, since the first player\nalready took. However, on the first turn, choosing to Pas will yield strictly less,\nas player two will then immediately take.   Thus, both players choosing Keep\nevery time is likewise a Nash Equilibrium.\n6"
+                },
+                {
+                  "id": "e-9d6b61b45a67cd9973afcfc4-10902-10903",
+                  "text": " "
+                }
+              ]
+            }
+          ],
+          "result": {
+            "chunks": [
+              {
+                "chunkId": "ef6995383a31b9f65d48bb9116b52c2e05e5cb3d2ce6d48b9017f52056c76ece",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-9d6b61b45a67cd9973afcfc4-0-547"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "finishedMs": 7.2,
+          "durationMs": 5.3
+        },
+        {
+          "id": 3,
+          "operation": "index-merge",
+          "startedMs": 7.6,
+          "inputBytes": 6270,
+          "inputSha256": "2416b52e44a7cabbb8d594bb7251f7a13d22cc23c72088b2fa3bcb7decabdac1",
+          "instructionSha256": "fbdaa4a8742e41945af1e8ae5397920fb7f314aaf7f2254c72ae6ca0cd65d7fd",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 5556,
+          "status": "completed",
+          "result": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 13.5,
+          "durationMs": 5.9
+        }
+      ],
+      "events": [
+        {
+          "atMs": 1.1,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "characters": 14778
+          }
+        },
+        {
+          "atMs": 1.8,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "characters": 10903
+          }
+        },
+        {
+          "atMs": 6.8,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "durationMs": 6,
+            "reason": "all-batch-citations-verified"
+          }
+        },
+        {
+          "atMs": 7.3,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "durationMs": 6,
+            "reason": "all-batch-citations-verified"
+          }
+        },
+        {
+          "atMs": 7.5,
+          "type": "index.coverage.ready",
+          "details": {
+            "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+            "sourceCount": 3,
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions",
+              "econ2801-pset5-solutions"
+            ],
+            "total": 3,
+            "characters": 25681,
+            "reason": "every-source-chunk-has-verified-evidence"
+          }
+        },
+        {
+          "atMs": 7.6,
+          "type": "index.merge.started",
+          "details": {
+            "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+            "sourceCount": 3,
+            "characters": 5556
+          }
+        },
+        {
+          "atMs": 13.6,
+          "type": "index.merge.ready",
+          "details": {
+            "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+            "sourceCount": 3,
+            "durationMs": 6
+          }
+        },
+        {
+          "atMs": 14.7,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "f6fa3c2d-1e76-46fb-9675-2230b2fddf2d",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.1,
+          "status": "ready",
+          "durationMs": 13.5,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 3,
+          "events": [
+            {
+              "atMs": 1.1,
+              "type": "index.map.started",
+              "details": {
+                "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ],
+                "total": 2,
+                "characters": 14778
+              }
+            },
+            {
+              "atMs": 1.8,
+              "type": "index.map.started",
+              "details": {
+                "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 1,
+                "characters": 10903
+              }
+            },
+            {
+              "atMs": 6.8,
+              "type": "index.map.ready",
+              "details": {
+                "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ],
+                "total": 2,
+                "durationMs": 6,
+                "reason": "all-batch-citations-verified"
+              }
+            },
+            {
+              "atMs": 7.3,
+              "type": "index.map.ready",
+              "details": {
+                "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 1,
+                "durationMs": 6,
+                "reason": "all-batch-citations-verified"
+              }
+            },
+            {
+              "atMs": 7.5,
+              "type": "index.coverage.ready",
+              "details": {
+                "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+                "sourceCount": 3,
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 3,
+                "characters": 25681,
+                "reason": "every-source-chunk-has-verified-evidence"
+              }
+            },
+            {
+              "atMs": 7.6,
+              "type": "index.merge.started",
+              "details": {
+                "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+                "sourceCount": 3,
+                "characters": 5556
+              }
+            },
+            {
+              "atMs": 13.6,
+              "type": "index.merge.ready",
+              "details": {
+                "requestId": "42f5acc7-d6f9-4c2d-9dcd-a470b91d2cfc",
+                "sourceCount": 3,
+                "durationMs": 6
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 4,
+            "cacheChars": 5724,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 14.6,
+          "status": "ready",
+          "durationMs": 0.1,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 14.7,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "f6fa3c2d-1e76-46fb-9675-2230b2fddf2d",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 4,
+            "cacheChars": 5724,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 2
+    },
+    {
+      "round": 2,
+      "testId": "ab3fcfd9-22d7-4dca-83a3-509b55f37acc",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-map",
+          "startedMs": 0.4,
+          "inputBytes": 17077,
+          "inputSha256": "1a22f2b536dfdafcb88cf5a23eedc78b3744071c4f180065937ee185b0982972",
+          "instructionSha256": "fca3f817070f21a0d3283a87db9aca5387cb503b0126c3a6b55d78c78050e932",
+          "schemaSha256": "62dba65d77ecb115dc11ddeb103394683af80d557973121768a159e75818283c",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions"
+          ],
+          "chunkCount": 2,
+          "characters": 14778,
+          "status": "completed",
+          "catalog": [
+            {
+              "chunkId": "542ead0691f8fa414618d0edc5ec10f110796d2059317f1abb418cf8a959eee8",
+              "sourceId": "econ2801-pset3",
+              "excerpts": [
+                {
+                  "id": "e-82dbc8d226023128b45a8210-0-520",
+                  "text": "[PDF page 1]\n1 \nKaushik Basu \nEcon 2801/COGST 2801/Govt 2803/Phil 2835 \nGame Theory \nFall 2026, Cornell University \nProblem Set 3 \n[Total 25 points]\n[This problem set will be graded to give you a sense of how you are doing (the score will\nnot be part of your final evaluation). To be graded you must upload your answer sheet on\nthe course canvas by 18 September.]\n1.   Consider a 3-player game in which player 1 chooses between U and D, player 2\nchooses between L and R, and player 3 chooses between A and B. The payoff\n"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-520-1044",
+                  "text": "matrix of this three-player game is illustrated below. Thus if 1 plays U, 2 plays R\nand 3 plays B, the payoffs they earn are (1, 6, 1). Describe all the Nash equilibria\nof this game? \nL   R   L   R\nU   7, 7, 1   1, 8, 2   U   7, 7, 0   1, 6, 1\nD   8, 1, 2   2, 2, 0   D   6, 1, 1   0, 0, 1 \nA   B \n[2 points] \n2.   Consider the Traveler’s Dilemma game.\n(a)   Suppose that both players become moral in the sense of becoming ‘utilitarian’. A\nutilitarian is a person who tries to maximize the total amount of money (or payoff)\n"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-1044-1623",
+                  "text": "earned by all the players (in this case, both players). Describe all the Nash\nequilibria of this transformed game.\n(b)   Suppose now player 1 is selfish (maximizes his own income) but player 2 is\nutilitarian (she maximizes the total income earned by the two players). Describe\nthe Nash equilibrium of this game.\n[For both parts, (a) and (b), it may help to write down the payoff matrix of a segment\nof the full game—for instance, strategies, 100, 99, and 98, for each player.]\n[2 + 3 points]\n3.   Three friends, Anna (A), Berlin (B) and Churchill (C) plan to meet at the cinema.\n"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-1623-2173",
+                  "text": "However, they forget to decide whether to meet for the matinee show (M) or the\nnight show (N). Each must choose independently between M and N.\nCase I: If all of them manage to meet at the cinema, they are happy and they get 2\nutils each. If all do not manage to meet, they are unhappy and get 0 util each.\nCase II: A and C have the same preference as in Case I (if all 3 meet, they get 2\nutils each; if all 3 do not meet, they get 0 utils). B gets 2 utils if   only   B and A\nmeet. Under all other circumstances he gets zero utils. \n\n[PDF page 2]\n2 \n"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-2173-2746",
+                  "text": "(a)   Describe the payoff matrices for the two games (i.e., Case I and Case II).\n[For each game you will need to write down two matrices, the way it is\ndone in Question 1.]\n(b)   What are the Nash equilibria in the two games? \n[3 + 2 points]\n4.   There is a straight-line city, as shown below, in which people live uniformly\nspread all along the line, from point 0 to point 1.\n0 ____________________________ 1\nTwo vendors, A and B, have to each choose a location on the line. Each vendor’s\naim is to maximize the number of her customers. Citizens can travel along the line\n"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-2746-3266",
+                  "text": "(in either direction). They buy from the closest vendor (and choose by coin toss if\nmore than one vendor is located at the same distance). As you already know, there\nis a unique Nash equilibrium in this 2-player game.\n(a)   Now suppose a new vendor comes to town. Is there a Nash equilibrium (in\nthis 3-player game)? If so, describe it; and if not, explain why not.\n(b)   Go back to the assumption of there being only two vendors. Suppose now\nthe culture of living in high-rise buildings comes up, and the citizens live\n"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-3266-3815",
+                  "text": "in four high-rise apartment buildings which are built at four equi-distant\npoints in the city. At the extreme left (that is, at 0) we have building   a ,\nthen   b , then   g , and at the extreme right   d . In other words, one-fourth of the\ncity lives at each of these 4 points and no one in the stretches in between.\nDescribe all the Nash equilibria in this game.\n[2 + 3 points]\n5.   Consider the 2-player game described below in which player 1 chooses between\nU and D and 2 chooses between L and R. \nL   R\nU   8,   8   0,   x\nD   x,   0   2,   2 \n"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-3815-4365",
+                  "text": "(a)   Insert a value of x which will make this game represent the Prisoner’s\nDilemma (a game in which individual rationality leads to collective harm).\n(b)   Insert a value of x, which makes this game into an Assurance Game or a\nCoordination game (that is, one with two equilibria, one good and one bad).\n[2 + 2 points]\n6.   Consider a 2-player normal-form game in which player 1 has 8 strategies and\nplayer 2 has 10 strategies. What is the maximum number of strict Nash equilibria\nthat this game can have? Briefly explain your answer.\n[2 + 2 points]"
+                },
+                {
+                  "id": "e-82dbc8d226023128b45a8210-4365-4366",
+                  "text": " "
+                }
+              ]
+            },
+            {
+              "chunkId": "456afa8ae758121371ae09ab2adcdac308cd595f984d961a0f5a184e272c52fd",
+              "sourceId": "econ2801-pset2-solutions",
+              "excerpts": [
+                {
+                  "id": "e-119729e97e78c434dc511f76-0-557",
+                  "text": "[PDF page 1]\nProblem Set 2 Detailed Answer Discussion Fall\n2026 ECON 2801 \nPatrick Luo\nSeptember 2026 \n1   Question 1: \n1.   Consider a two-player game in which each player has 4 strategies, and\nhence it is a game with 16 outcomes. Is it possible to have payoffs such that all\noutcomes (no matter what the players choose) constitute a Nash Equilibrium.\nIf not, explain why not. If yes, describe a game which has this property. Can all\noutcomes be strict Nash equilibria? What is the largest number of strict Nash\nEquilibria that this game can have?\nAnswer:\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-557-1113",
+                  "text": "Let us start by reviewing a few definitions from class:\n1.   Nash equilibria   are strategy pairs such that, for each player, their strat-\negy is the best response (you cannot do strictly better with any other\nstrategy) given the other player’s strategy.\n2.   Strict Nash equilibria   are strategy pairs such that, for each player, their\nstrategy is strictly the best response (you cannot do strictly   OR   weakly\nbetter with any other strategy) given the other player’s strategy.\nTo answer the first part of the question, we can imagine a 4x4 game where\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-1113-1689",
+                  "text": "every strategy pair is a Nash equilibria. This requires that each player has the\nsame payoff no matter their strategy. A simple example is shown below:\nA   B   C   D\na   1,1   1,1   1,1   1,1\nb   1,1   1,1   1,1   1,1\nc   1,1   1,1   1,1   1,1\nd   1,1   1,1   1,1   1,1\nTable 1: A symmetric game where every strategy pair is Nash \nAside:   One might note that the above is very symmetric and fair (everyone\nis getting the same payoff). However, this need not be true for every strategy\npair to be Nash. One player could get more than the other as seen below:\n1 \n\n[PDF page 2]\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-1689-2250",
+                  "text": "A   B   C   D\na   -1,3   -1,3   -1,3   -1,3\nb   -1,3   -1,3   -1,3   -1,3\nc   -1,3   -1,3   -1,3   -1,3\nd   -1,3   -1,3   -1,3   -1,3\nTable 2: A asymmetric game where every strategy pair is Nash\nEach strategy pair in the above games are Nash because every other strategy\nyields the same payoff given any opposing strategy.   Consequently, we cannot\nconstruct a game where every strategy pair is strictly Nash.\nWe can show this by a quick proof by contradiction.   Let us assume that\nany given strategy pair is a strict Nash equilibrium.   Thus, it must be that\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-2250-2784",
+                  "text": "for a given strategy from the opposing player, let us call that   x , our payoff for\nplaying each of our four possible strategies is strictly greater than the others.\nThe contradiction flows directly, if the pair ( A, x ) (assuming we are player 1) is\na strict Nash equilibrium, it can’t be that ( B, x ) (for the same opposing strategy \nx ) is also a strict Nash equilibrium.   Thus, not every strategy pair in a game\ncan be a strict Nash equilibrium strategy.\nNow note how I disproved the above requires that for any given opposing\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-2784-3379",
+                  "text": "player strategy, there can be at most one strictly best response to have strict\nNash equilibria.   Logically, this implies that there is at most 4 strict Nash\nequilibria in a 4x4 game (i.e.   the size of the smaller of the players’ strategy\nset). We can construct a game as an example of a 4x4 game with 4 strict Nash\nequilibria:\nA   B   C   D\na   1,1   0,0   0,0   0,0\nb   0,0   1,1   0,0   0,0\nc   0,0   0,0   1,1   0,0\nd   0,0   0,0   0,0   1,1\nTable 3: A 4x4 game with 4 strict Nash equilibria \n2   Question 2: \n2.   The Traveler’s Dilemma is a troublesome game.   Individuals seeking to do\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-3379-3963",
+                  "text": "well for themselves end up doing miserably. \na.   Do you find the standard game-theoretic analysis and the outcome pre-\ndicted by the concept of Nash equlibrium persuasive? Spell out the reasoning\nbehind your answer.\nThe question above is open ended and does not have a set answer. However,\none potential cogent response is as below:\n2 \n\n[PDF page 3]\nThe standard game-theoretic analysis and its outcome is convincing so far\nas the strong assumptions of rationality and complete information apply.   All\nplayers fully understand the structure of the game, understand that their oppo-\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-3963-4549",
+                  "text": "nent has an equal understanding and foresight regarding the game, and they all\nhave unlimited, costless time to consider the game.   Under these assumptions\nthe Nash equilibrium is logical and convincing.   However, as soon as we start\npulling these pillars away, and these pillars are rather strong (i.e. I would not\nexpect a random selection of strangers would satisfy all these conditions), the\nlogical Nash outcome rapidly becomes unreasonable.\nFor example, the Nash outcome requires rather many cycles of logic, as-\nsuming the opposition is willing to go through the same hoops.   "
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-4549-5128",
+                  "text": "In reality, an\nindividual may not fully rationalize all outcomes, rather settling for the first\n”good enough” answer and potentially land on the highest outcome rather than\nthe Nash outcome.   In essence, time and mental capacity is valuable.   People\nmay not want to go through the hassle of thinking through the entire strategy\nspace for a relatively small reward (i.e. the apparently small 1 or 2 dollar incre-\nments) and thus land on a non-Nash outcome when the experiment is done in\npractice. \nb.   Explain briefly, if you were playing the Traveler’s Dilemma, what strategy\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-5128-5667",
+                  "text": "you would use and explain the rationale behind your choice?\nAnswer:\nAs with part a, there is no strict answer but one cogent response is as follows:\nAssuming I am playing against a random player drawn from the population\nof the USA (rather than from a population of Economists or Game Theorists) I\nwould play 100. My strategy relies upon the irrationality of my likely opponent.\nFor many, the first instinct upon seeing the traveler’s dilemma is to pick a large\nvalue; humans are naturally cooperative when the reward is not very high for\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-5667-6255",
+                  "text": "defection, and by design, the first defection earns only one percent extra on the\ncooperative reward.   Consequently, I would leverage the fact that I am likely\nfacing someone not versed in economics and general human behavior to attempt\nto achieve the cooperative outcome.\nAs for why I do not play 99 if that is the case; I also gloss over the fact\nthat monetary reward is not the only outcome under consideration.   I would\nfeel rather bad if someone opted to go for the cooperative play and I instantly\nbetrayed them. As 1 dollar is not too important for me, I am willing to sacrifice\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-6255-6835",
+                  "text": "that for the sake of my conscience. \n3   Question 3: \n3.   Consider a variant of the Traveler’s Dilemma in which each player must\nchoose an   even-numbered   integer from 2 to 100. The rest is the same as in the\nstandard Traveler’s Dilemma.   If they choose the same integer, they get that\ninteger in dollars as payoff. If they choose different integers, they both get the\nlower integer in dollars, but with one adjustment: the one who chose the lower\ninteger gets an additional   $ 2 and the one who chose the higher integer has   $ 2\n3 \n\n[PDF page 4]\ndeducted from her payoff. \n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-6835-7429",
+                  "text": "a.   Describe all the Nash equilibria of this game.\nAnswer:\nEvidently, no asymmetric strategy pairs (i.e. pairs where one person calls a\nlower value while the other a higher one) can be a Nash outcome —the person\ncalling a higher value is strictly worse off.   Thus, the only strategy pairs to\nconsider are those where both players quote the same number. In that case, we\nneed to check if they have any reason to deviate.   As per above, none would\ndeviate to a higher number.   Deviating to a lower number is at best going to\nyield the same outcome (going down one increment of 2 and claiming "
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-7429-8028",
+                  "text": "the 2 dollar\nbonus for being the lower bid). Thus, all strategy pairs where both players play\nthe same value is a Nash equilibrium \nb.   Describe all the strict Nash equilibria of this game.\nFollowing the logic from part a, most pairs are not a strict Nash equilibrium\nstrategy pair because a person defecting to a value one step lower is just as well\noff.   This, of course, is impossible at the lower bound.   Thus the unique strict\nNash equilibrium strategy is (2,2). \n4   Question 4: \n4.   In Rosenthal’s Centipede game (described in Chapter 2 of Basu:   Prelude\nto Political Economy), standard "
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-8028-8622",
+                  "text": "game-theoretic analysis, based on backward\ninduction, predicts that players will choose “keep” at every period and so they\nwill end up with player 1 earning 3 dollars and 2 earning 0 dollars.   Try to\ndevelop a cogent argument why the standard game-theoretic argument may be\nflawed and why rational players may choose “pass” at least for a few times.\nThis question is open ended and there are many valid answers. One example\nis as follows:\nWe may suspect that people playing the Centipede game is more interested\nin regret minimization rather than the classic rational game theory analysis. In\n"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-8622-9219",
+                  "text": "this case, the players may want to minimize the potential loss of their strategy\nand so are willing to pursue cooperation for some number of rounds as the\nrelative reward to continuing compared to the reward of immediate exit starts\nhigh. Only after the pot is big and ”tempting” enough would the players begin\nto consider exit. \n5   Question 5: \nDescribe the Hawk-Dove game by writing down the payoff matrix of the game.\nDoes the game have any Nash equilibria? Which ones of those are strict Nash\nequilibrium?\nLet us now complicate the game a bit.   Suppose that, over and above the\ntwo actions, "
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-9219-9815",
+                  "text": "H (Hawk) and D (Dove), each player has a third option, M. M\ncan stand for Moderate, referring to behavior that is less aggressive than H and\n4 \n\n[PDF page 5]\nmore aggressive than D. If both players play M, they both get a payoff of 1. If\none of them plays M and the other something else, they both get 0.\nWrite down the payoff matrix of this 3-by-3 game. Describe the Nash equi-\nlibria of this game? Describe the strict Nash equilibria of this game.\nAnswer:\nRecall from class:   the Dove-Hawk game has two Nash equilibria, (Dove,\nHawk) and (Hawk, Dove). Both of these are strict Nash equilibria, "
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-9815-10411",
+                  "text": "neither player\ncan do weakly better with any other strategy through unilateral deviation. An\nexample of such a game is as blow:\nH   D\nH   -1,-1   2,0\nD   0,2   1,1\nTable 4: Classic Dove-Hawk Game\nNow if we add a third potential strategy we have the following 3x3 game:\nH   M   D\nH   -1,-1   0,0   4,0\nM   0,0   1,1   0,0\nD   0,4   0,0   2,2\nTable 5: 3x3 Dove-Hawk Modification\nHere there are three Nash strategy pairs: (H,D), (D,H), and (M,M). How-\never, a dove in either (H,D) or (D,H) is equally as well off playing M. Conse-\nquently, the only strict Nash strategy pair is (M,M) in this game.\n5"
+                },
+                {
+                  "id": "e-119729e97e78c434dc511f76-10411-10412",
+                  "text": " "
+                }
+              ]
+            }
+          ],
+          "result": {
+            "chunks": [
+              {
+                "chunkId": "542ead0691f8fa414618d0edc5ec10f110796d2059317f1abb418cf8a959eee8",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-82dbc8d226023128b45a8210-0-520"
+                    ]
+                  }
+                ]
+              },
+              {
+                "chunkId": "456afa8ae758121371ae09ab2adcdac308cd595f984d961a0f5a184e272c52fd",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-119729e97e78c434dc511f76-0-557"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6.3,
+          "durationMs": 5.9
+        },
+        {
+          "id": 2,
+          "operation": "index-map",
+          "startedMs": 0.5,
+          "inputBytes": 12560,
+          "inputSha256": "623884fab0529822b937af16a0a4fd6467ead1bdb919d26f602e36320e9d3819",
+          "instructionSha256": "fca3f817070f21a0d3283a87db9aca5387cb503b0126c3a6b55d78c78050e932",
+          "schemaSha256": "6657429ee8c86ca004f967e33a68dd240c71aebe3faf63c2e9e439fa0648868d",
+          "sourceIds": [
+            "econ2801-pset5-solutions"
+          ],
+          "chunkCount": 1,
+          "characters": 10903,
+          "status": "completed",
+          "catalog": [
+            {
+              "chunkId": "9eb657797f633913cf708e7e5761eec4ccf8b54b74ad3f3c5234629bd543a6d2",
+              "sourceId": "econ2801-pset5-solutions",
+              "excerpts": [
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-0-547",
+                  "text": "[PDF page 1]\nSolution Problem Set 5 Fall 2026 ECON 2801 \nSeptember 2026 \nQuestion 1 \nFor each of the statements below answer true or false (assume throughout that\nno mixed strategies are allowed). \nPart A \nConsider a 2-player game with non-negative payoffs. If we change the game so\nthat player 1 gets double what she was getting earlier and 2 gets 4-times what\nhe was getting earlier, then this game will have the same Nash equilibria as the\noriginal one.\nAnswer: True.\nIf a strategy pair is Nash, it must be that for a given player they have no\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-547-1123",
+                  "text": "strict incentive to deviate. If we simply multiply every payoff by a set positive\nconstant, the greater than relations are unchanged; this also works in the inverse\nfor multiplying by the reciprocal. Thus, the Nashes are the same. \nPart B \nConsider a 2-player game with non-negative payoffs. If we change the game so\nthat player 1 gets minus 2 dollars for all outcomes compared to what she was\ngetting in the original game, and player 2 gets half of what he was getting in the\noriginal game, then this game will have the same Nash equilibria as the original\none.\nAnswer: True\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-1123-1696",
+                  "text": "Here, once again, we can imagine any Nash outcome in the game. By def-\ninition, the payoff for a given player for their strategy is at least as good for\nany other   P   ( s i , s ′ \ni )   ≥   P   ( s − i , s ′ \ni ), this relation remains true no matte what we\nadd, subtract, or multiply each side by, so long as we do not multiply by zero\nor a negative value. Thus, any pre-existing Nash remains Nash. Moreover, we\ncan also consider multiplying the outcome game by the reciprocal constant, or\nadding the negative offset coefficient; thus, any Nash in the outcome game must\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-1696-2263",
+                  "text": "also be Nash in the first game.\n1 \n\n[PDF page 2]\nPart C \nSuppose people live uniformly distributed on a one-mile stretch and buy from\nthe nearest vendor (and choose randomly from among vendors equi-distant to\nthem). Three vendors (each interested in maximizing the number of people who\nwill buy from them) must choose a location to set up store on the 1-mile stretch.\nOne vendor being at the start of the mile, one in the middle, and one at the\nend is not a Nash equilibrium.\nAnswer: True\nA simple proof by contradiction:   Let us assume this is a Nash.   If this is\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-2263-2807",
+                  "text": "a Nash, no one should have incentive to deviate. However, any of the vendors\nat the end can do strictly better by moving towards the midpoint of the line.\nThus, it cannot be that the proposed outcome is a Nash Equilibrium \nPart D \nIn Chess, if both players had flawless minds, as soon as it was decided who will\nplay White and who Black, the outcome of the game would be known.\nAnswer: True\nProof by contradiction.   Let us assume that, with perfect information, the\noutcome is unknown.   In that case, at least two of three end states must be\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-2807-3377",
+                  "text": "possible and occur with non-zero probability:   white wins, black wins, or the\ngame draws. We should be able to work backwards from each state to the start\nof the game. There must, thus, be some point of departure in the order of play\nthat reaches each of the two or more potential final outcomes. The last player\nwho plays has strict preferences on which outcome they want (win¿draw¿loss).\nThus, the last player who decides which path the game goes down has a strict\npreference and thus would not randomize. Therefore, the outcome of the game\nmust be certain. \nPart E \n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-3377-3959",
+                  "text": "A zero-sum game cannot have a Nash equilibrium.\nAnswer: False\nProof by counterexample: A zero sum game requires only that the payoffs\nin each cell adds to zero.   Thus, trivially, we can have a game where all cells\nare identical, let’s say they contain (0,0) for simplicity. In this case all strategy\npairs are Nash equilibria. \nPart F \nIn a zero-sum game every outcome can be a Nash equilibrium.\nAnswer: True; see above\n2 \n\n[PDF page 3]\nQuestion 2 \nConsider the Hawk-Dove game shown below (with player 1 choosing between\nrows and 2 choosing between columns).\nH   D\nH   -1,-1   4,0\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-3959-4522",
+                  "text": "D   0,4   2,2 \nPart A \nDescribe the Nash equilibria of this game.\nAnswer: The two Nash equilibria are (H,D) and (D,H) \nPart B \nIf this game was played in a sequence, with 1 moving first and 2 moving second,\nwhat would you expect the outcome to be and why?\nAnswer:   We would expect the first player to always play Hawk and the\nsecond dove.   We find this by backwards induction on the game tree.   If the\nfirst player played Hawk, the second player would always prefer dove (0¿-1),\nconversely, if the first player played Dove, the second player would prefer Hawk\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-4522-5107",
+                  "text": "(4¿2). The first player; thus, would prefer to play Hawk to get 4 instead of 0 in\nthe subgame perfect equilibrium. \nPart C \nExplain why the US got an advantage in the Cuban missile crisis by secretly\nplanning its strategy and then suddenly announcing it to the Russians.\nThis question is open ended, but one formulation of the answer is as follows:\nThe US took advantage of the Hawk-Dove structure of nuclear brinkmanship\nto gain an advantage. By playing a more aggressive, threatening stance first, the\nonly truly viable strategy for the USSR was to back down or risk the destruction\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-5107-5673",
+                  "text": "of the world. In essence, by threatening escalation first, the USSR can respond\nby escalating leading to nuclear war or backing down and losing their strategic\nposition in Cuba. \nQuestion 3 \nConsider two players, who, in period 1, plays the “Prisoner’s Dilemma” game\ndescribed below, and, after seeing the outcome of this game, play the “Assurance\nGame” also shown below.\nPrisoner’s Dilemma\n3 \n\n[PDF page 4]\nC   D\nC   5,5   0,7\nD   7,0   1,1\nAssurance Game\nA   B\nA   2,2   0,0\nB   0,0   1,1\nIs it possible to have a subgame perfect equilibrium of this 2-period game\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-5673-6232",
+                  "text": "such that in period 1 both players choose C? If yes, describe the full equilibrium.\nIf not, explain why not. Keep your answer brief—just one or two sentences.\nAnswer: It is not possible: the maximum punishment the subsequent assur-\nance game can generate is 1 (playing (B,B) in case of any deviation compared\nto (A,A) for cooperating). However, the incentive to deviate from cooperation\nis 2. Thus, a collaborative outcome of (C,C) in the fist game is impossible. \nQuestion 4 \nPeople live uniformly distributed all over a city shaped like a chopped isosceles\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-6232-6812",
+                  "text": "triangle, as shown below. Two vendors, 1 and 2, have to each set up a store in\nthe city. People buy from the nearest vendor. (If both vendors are located at\nthe same distance, they toss a coin).   The aim of each vendor is to maximize\nthe number of customers.\nDoes this game have a Nash equilibrium? If so, describe it. If not, explain\nwhy not.\nThis game does not have a Nash equilibrium.   A Nash equilibrium in this\nstyle of vendor game requires that they converge to a point where they split the\narea or population exactly in half in every conceivable way to cut the shape. In\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-6812-7344",
+                  "text": "other words, we need a centrally symmetric point, where every line that cuts\nthe shape in half intersects. Such a point does not exist for a trapezoid. Thus,\na Nash equilibrium does not exist.   A player can deviate at any given point\ntowards one of the bisecting lines and do better, since not all bisecting lines\nmeet at one point. \nQuestion 5 \nConsider the Prisoner’s Dilemma game described below:\nC   D\nC   4,4   -1,5\nD   5,-1   0,0\n4 \n\n[PDF page 5]\nSuppose this game is played infinitely many times. The players use a discount\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-7344-7935",
+                  "text": "factor   δ   to calculate the present value of return of infinite streams of income,\nwhere 0   ≤   δ <   1. Assume that they decide to use the trigger strategy. \nPart A \nExplain in words, why if   δ   = 0, they will not be able to cooperate and play C\neach time.\nA variety of answers is admissible, one example is as follows:\nWhen the discount rate equals to zero, neither player cares for the next day.\nThus, we can treat the sequence of games as games being played independently.\nConsequently, the only Nash equilibrium is (D,D) in every period. \nPart B \nCalculate the smallest value of d "
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-7935-8523",
+                  "text": "which will enable the two players to cooperate\nand play C each time, by using the trigger strategy.   That is, the use of the\ntrigger strategy is a Nash equilibrium.\nAnswer:\nStart with the discounted value of cooperation: \nP V   = 4 + 4 δ   + 4 δ 2   + 4 δ 3   +   ... \n=   4\n1   −   δ \nNext look at the discounted value of deviation for the deviator: \nP V   = 5\nNow we can implement the condition for non-deviation and solve for   δ \n4\n1   −   δ   ≥   5\n4   ≥   5(1   −   δ )\n5 δ   ≥   1 \nδ   ≥   1\n5 \nPart C \nIf the above game was being played a finite number of times, say 1000 times,\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-8523-9109",
+                  "text": "explain, assuming rationality is common knowledge, the players will get a total\nreturn of zero.\nAnswer: A player knowing there is a finite number of repetition recognizes\nthat the last game only has one possible Nash outcome: (D,D). Since the last\n5 \n\n[PDF page 6]\ngame’s outcome is known we can treat the game as repeating 999 times, since\nthe last game’s outcome is known. We then repeat this analysis backwards to\ndetermine that players would play (D,D) in every period yielding a zero return. \nPart D \nExplain briefly why our commonsense may conflict with the formal game-theoretic\n"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-9109-9703",
+                  "text": "answer to part (c).\nThis is an open ended question; one example answer is as below:\nPlayers seeing a long pattern of repetition may seek to minimize regret, and,\nthus, choose some degree of early cooperation rather than accepting an outcome\nof zero. More practically, a random individual when faced with this game may\nnot think so pessimistically as to assume cooperation will immediately break\ndown even if it is rational. In such a case, believing there is a chance for some\nlength of cooperation may lead to a different outcome if the belief is mutual. \nQuestion 6 \nConsider a game like the "
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-9703-10303",
+                  "text": "Centipede, except that it is infinitely long. (The two\nplayers can go on choosing between Keep and Pass even after they have passed\n100 times.) \nPart A \nExplain why both players choosing Pass every time is a Nash equilibrium.\nAnswer: We can approach this with a proof by contradiction.\nLet us assume that both players choosing Pass every time is not a Nash\nEquilibrium. Thus, one of the players must take at some period. However, this\nplayer knows that if they Pass on this period and take the next time they have\na turn will yield strictly more for them.   Thus, they would delay taking.   As\nthe ga"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-10303-10902",
+                  "text": "me is infinite, this logic does not break down due to the end of the game;\nthus, always Passing is a Nash Equilibrium. \nPart B \nExplain why both players choosing Keep every time is a Nash equilibrium.\nAnswer: this can be proven directly:\nIf both players always play Keep, no one player benefit from deviating. Any\ndeviation past the first period does not change payoffs, since the first player\nalready took. However, on the first turn, choosing to Pas will yield strictly less,\nas player two will then immediately take.   Thus, both players choosing Keep\nevery time is likewise a Nash Equilibrium.\n6"
+                },
+                {
+                  "id": "e-03b427a74d833f8e27c1f444-10902-10903",
+                  "text": " "
+                }
+              ]
+            }
+          ],
+          "result": {
+            "chunks": [
+              {
+                "chunkId": "9eb657797f633913cf708e7e5761eec4ccf8b54b74ad3f3c5234629bd543a6d2",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-03b427a74d833f8e27c1f444-0-547"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6.5,
+          "durationMs": 6
+        },
+        {
+          "id": 3,
+          "operation": "index-merge",
+          "startedMs": 6.7,
+          "inputBytes": 6270,
+          "inputSha256": "2416b52e44a7cabbb8d594bb7251f7a13d22cc23c72088b2fa3bcb7decabdac1",
+          "instructionSha256": "fbdaa4a8742e41945af1e8ae5397920fb7f314aaf7f2254c72ae6ca0cd65d7fd",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 5556,
+          "status": "completed",
+          "result": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 12.6,
+          "durationMs": 5.9
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.3,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "characters": 14778
+          }
+        },
+        {
+          "atMs": 0.5,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "characters": 10903
+          }
+        },
+        {
+          "atMs": 6.4,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "durationMs": 7,
+            "reason": "all-batch-citations-verified"
+          }
+        },
+        {
+          "atMs": 6.6,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "durationMs": 7,
+            "reason": "all-batch-citations-verified"
+          }
+        },
+        {
+          "atMs": 6.7,
+          "type": "index.coverage.ready",
+          "details": {
+            "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+            "sourceCount": 3,
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions",
+              "econ2801-pset5-solutions"
+            ],
+            "total": 3,
+            "characters": 25681,
+            "reason": "every-source-chunk-has-verified-evidence"
+          }
+        },
+        {
+          "atMs": 6.7,
+          "type": "index.merge.started",
+          "details": {
+            "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+            "sourceCount": 3,
+            "characters": 5556
+          }
+        },
+        {
+          "atMs": 12.6,
+          "type": "index.merge.ready",
+          "details": {
+            "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+            "sourceCount": 3,
+            "durationMs": 6
+          }
+        },
+        {
+          "atMs": 13.1,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "5a161572-0ace-4fc8-bc01-c052fc6047f1",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.1,
+          "status": "ready",
+          "durationMs": 12.5,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 3,
+          "events": [
+            {
+              "atMs": 0.3,
+              "type": "index.map.started",
+              "details": {
+                "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ],
+                "total": 2,
+                "characters": 14778
+              }
+            },
+            {
+              "atMs": 0.5,
+              "type": "index.map.started",
+              "details": {
+                "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 1,
+                "characters": 10903
+              }
+            },
+            {
+              "atMs": 6.4,
+              "type": "index.map.ready",
+              "details": {
+                "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ],
+                "total": 2,
+                "durationMs": 7,
+                "reason": "all-batch-citations-verified"
+              }
+            },
+            {
+              "atMs": 6.6,
+              "type": "index.map.ready",
+              "details": {
+                "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 1,
+                "durationMs": 7,
+                "reason": "all-batch-citations-verified"
+              }
+            },
+            {
+              "atMs": 6.7,
+              "type": "index.coverage.ready",
+              "details": {
+                "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+                "sourceCount": 3,
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 3,
+                "characters": 25681,
+                "reason": "every-source-chunk-has-verified-evidence"
+              }
+            },
+            {
+              "atMs": 6.7,
+              "type": "index.merge.started",
+              "details": {
+                "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+                "sourceCount": 3,
+                "characters": 5556
+              }
+            },
+            {
+              "atMs": 12.6,
+              "type": "index.merge.ready",
+              "details": {
+                "requestId": "e817132c-63f9-4678-8c77-ed4bde316d6d",
+                "sourceCount": 3,
+                "durationMs": 6
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 4,
+            "cacheChars": 5724,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 13,
+          "status": "ready",
+          "durationMs": 0.1,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 13.1,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "5a161572-0ace-4fc8-bc01-c052fc6047f1",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 4,
+            "cacheChars": 5724,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 2
+    },
+    {
+      "round": 3,
+      "testId": "432c8712-a969-4abf-9da6-f8c7a2d55425",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-map",
+          "startedMs": 0.4,
+          "inputBytes": 17077,
+          "inputSha256": "e543cc04933724b28596f64457518536775a799ccfbc9fcaeb89047b4ceaa7ce",
+          "instructionSha256": "fca3f817070f21a0d3283a87db9aca5387cb503b0126c3a6b55d78c78050e932",
+          "schemaSha256": "4721fbf716cd58315d3d608e58ff13cefedd196fb30769102c57a6111295ffd5",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions"
+          ],
+          "chunkCount": 2,
+          "characters": 14778,
+          "status": "completed",
+          "catalog": [
+            {
+              "chunkId": "fd4c878f4d39845485177f10a6d54978ea26cc2f12dc829359c50c8310832425",
+              "sourceId": "econ2801-pset3",
+              "excerpts": [
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-0-520",
+                  "text": "[PDF page 1]\n1 \nKaushik Basu \nEcon 2801/COGST 2801/Govt 2803/Phil 2835 \nGame Theory \nFall 2026, Cornell University \nProblem Set 3 \n[Total 25 points]\n[This problem set will be graded to give you a sense of how you are doing (the score will\nnot be part of your final evaluation). To be graded you must upload your answer sheet on\nthe course canvas by 18 September.]\n1.   Consider a 3-player game in which player 1 chooses between U and D, player 2\nchooses between L and R, and player 3 chooses between A and B. The payoff\n"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-520-1044",
+                  "text": "matrix of this three-player game is illustrated below. Thus if 1 plays U, 2 plays R\nand 3 plays B, the payoffs they earn are (1, 6, 1). Describe all the Nash equilibria\nof this game? \nL   R   L   R\nU   7, 7, 1   1, 8, 2   U   7, 7, 0   1, 6, 1\nD   8, 1, 2   2, 2, 0   D   6, 1, 1   0, 0, 1 \nA   B \n[2 points] \n2.   Consider the Traveler’s Dilemma game.\n(a)   Suppose that both players become moral in the sense of becoming ‘utilitarian’. A\nutilitarian is a person who tries to maximize the total amount of money (or payoff)\n"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-1044-1623",
+                  "text": "earned by all the players (in this case, both players). Describe all the Nash\nequilibria of this transformed game.\n(b)   Suppose now player 1 is selfish (maximizes his own income) but player 2 is\nutilitarian (she maximizes the total income earned by the two players). Describe\nthe Nash equilibrium of this game.\n[For both parts, (a) and (b), it may help to write down the payoff matrix of a segment\nof the full game—for instance, strategies, 100, 99, and 98, for each player.]\n[2 + 3 points]\n3.   Three friends, Anna (A), Berlin (B) and Churchill (C) plan to meet at the cinema.\n"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-1623-2173",
+                  "text": "However, they forget to decide whether to meet for the matinee show (M) or the\nnight show (N). Each must choose independently between M and N.\nCase I: If all of them manage to meet at the cinema, they are happy and they get 2\nutils each. If all do not manage to meet, they are unhappy and get 0 util each.\nCase II: A and C have the same preference as in Case I (if all 3 meet, they get 2\nutils each; if all 3 do not meet, they get 0 utils). B gets 2 utils if   only   B and A\nmeet. Under all other circumstances he gets zero utils. \n\n[PDF page 2]\n2 \n"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-2173-2746",
+                  "text": "(a)   Describe the payoff matrices for the two games (i.e., Case I and Case II).\n[For each game you will need to write down two matrices, the way it is\ndone in Question 1.]\n(b)   What are the Nash equilibria in the two games? \n[3 + 2 points]\n4.   There is a straight-line city, as shown below, in which people live uniformly\nspread all along the line, from point 0 to point 1.\n0 ____________________________ 1\nTwo vendors, A and B, have to each choose a location on the line. Each vendor’s\naim is to maximize the number of her customers. Citizens can travel along the line\n"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-2746-3266",
+                  "text": "(in either direction). They buy from the closest vendor (and choose by coin toss if\nmore than one vendor is located at the same distance). As you already know, there\nis a unique Nash equilibrium in this 2-player game.\n(a)   Now suppose a new vendor comes to town. Is there a Nash equilibrium (in\nthis 3-player game)? If so, describe it; and if not, explain why not.\n(b)   Go back to the assumption of there being only two vendors. Suppose now\nthe culture of living in high-rise buildings comes up, and the citizens live\n"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-3266-3815",
+                  "text": "in four high-rise apartment buildings which are built at four equi-distant\npoints in the city. At the extreme left (that is, at 0) we have building   a ,\nthen   b , then   g , and at the extreme right   d . In other words, one-fourth of the\ncity lives at each of these 4 points and no one in the stretches in between.\nDescribe all the Nash equilibria in this game.\n[2 + 3 points]\n5.   Consider the 2-player game described below in which player 1 chooses between\nU and D and 2 chooses between L and R. \nL   R\nU   8,   8   0,   x\nD   x,   0   2,   2 \n"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-3815-4365",
+                  "text": "(a)   Insert a value of x which will make this game represent the Prisoner’s\nDilemma (a game in which individual rationality leads to collective harm).\n(b)   Insert a value of x, which makes this game into an Assurance Game or a\nCoordination game (that is, one with two equilibria, one good and one bad).\n[2 + 2 points]\n6.   Consider a 2-player normal-form game in which player 1 has 8 strategies and\nplayer 2 has 10 strategies. What is the maximum number of strict Nash equilibria\nthat this game can have? Briefly explain your answer.\n[2 + 2 points]"
+                },
+                {
+                  "id": "e-51ded59cbd2b4c9a08a88f41-4365-4366",
+                  "text": " "
+                }
+              ]
+            },
+            {
+              "chunkId": "577a04ae6e5dff49097b05d5d4048c1c839c9ec68adffc4048a8f61efa1d214a",
+              "sourceId": "econ2801-pset2-solutions",
+              "excerpts": [
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-0-557",
+                  "text": "[PDF page 1]\nProblem Set 2 Detailed Answer Discussion Fall\n2026 ECON 2801 \nPatrick Luo\nSeptember 2026 \n1   Question 1: \n1.   Consider a two-player game in which each player has 4 strategies, and\nhence it is a game with 16 outcomes. Is it possible to have payoffs such that all\noutcomes (no matter what the players choose) constitute a Nash Equilibrium.\nIf not, explain why not. If yes, describe a game which has this property. Can all\noutcomes be strict Nash equilibria? What is the largest number of strict Nash\nEquilibria that this game can have?\nAnswer:\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-557-1113",
+                  "text": "Let us start by reviewing a few definitions from class:\n1.   Nash equilibria   are strategy pairs such that, for each player, their strat-\negy is the best response (you cannot do strictly better with any other\nstrategy) given the other player’s strategy.\n2.   Strict Nash equilibria   are strategy pairs such that, for each player, their\nstrategy is strictly the best response (you cannot do strictly   OR   weakly\nbetter with any other strategy) given the other player’s strategy.\nTo answer the first part of the question, we can imagine a 4x4 game where\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-1113-1689",
+                  "text": "every strategy pair is a Nash equilibria. This requires that each player has the\nsame payoff no matter their strategy. A simple example is shown below:\nA   B   C   D\na   1,1   1,1   1,1   1,1\nb   1,1   1,1   1,1   1,1\nc   1,1   1,1   1,1   1,1\nd   1,1   1,1   1,1   1,1\nTable 1: A symmetric game where every strategy pair is Nash \nAside:   One might note that the above is very symmetric and fair (everyone\nis getting the same payoff). However, this need not be true for every strategy\npair to be Nash. One player could get more than the other as seen below:\n1 \n\n[PDF page 2]\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-1689-2250",
+                  "text": "A   B   C   D\na   -1,3   -1,3   -1,3   -1,3\nb   -1,3   -1,3   -1,3   -1,3\nc   -1,3   -1,3   -1,3   -1,3\nd   -1,3   -1,3   -1,3   -1,3\nTable 2: A asymmetric game where every strategy pair is Nash\nEach strategy pair in the above games are Nash because every other strategy\nyields the same payoff given any opposing strategy.   Consequently, we cannot\nconstruct a game where every strategy pair is strictly Nash.\nWe can show this by a quick proof by contradiction.   Let us assume that\nany given strategy pair is a strict Nash equilibrium.   Thus, it must be that\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-2250-2784",
+                  "text": "for a given strategy from the opposing player, let us call that   x , our payoff for\nplaying each of our four possible strategies is strictly greater than the others.\nThe contradiction flows directly, if the pair ( A, x ) (assuming we are player 1) is\na strict Nash equilibrium, it can’t be that ( B, x ) (for the same opposing strategy \nx ) is also a strict Nash equilibrium.   Thus, not every strategy pair in a game\ncan be a strict Nash equilibrium strategy.\nNow note how I disproved the above requires that for any given opposing\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-2784-3379",
+                  "text": "player strategy, there can be at most one strictly best response to have strict\nNash equilibria.   Logically, this implies that there is at most 4 strict Nash\nequilibria in a 4x4 game (i.e.   the size of the smaller of the players’ strategy\nset). We can construct a game as an example of a 4x4 game with 4 strict Nash\nequilibria:\nA   B   C   D\na   1,1   0,0   0,0   0,0\nb   0,0   1,1   0,0   0,0\nc   0,0   0,0   1,1   0,0\nd   0,0   0,0   0,0   1,1\nTable 3: A 4x4 game with 4 strict Nash equilibria \n2   Question 2: \n2.   The Traveler’s Dilemma is a troublesome game.   Individuals seeking to do\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-3379-3963",
+                  "text": "well for themselves end up doing miserably. \na.   Do you find the standard game-theoretic analysis and the outcome pre-\ndicted by the concept of Nash equlibrium persuasive? Spell out the reasoning\nbehind your answer.\nThe question above is open ended and does not have a set answer. However,\none potential cogent response is as below:\n2 \n\n[PDF page 3]\nThe standard game-theoretic analysis and its outcome is convincing so far\nas the strong assumptions of rationality and complete information apply.   All\nplayers fully understand the structure of the game, understand that their oppo-\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-3963-4549",
+                  "text": "nent has an equal understanding and foresight regarding the game, and they all\nhave unlimited, costless time to consider the game.   Under these assumptions\nthe Nash equilibrium is logical and convincing.   However, as soon as we start\npulling these pillars away, and these pillars are rather strong (i.e. I would not\nexpect a random selection of strangers would satisfy all these conditions), the\nlogical Nash outcome rapidly becomes unreasonable.\nFor example, the Nash outcome requires rather many cycles of logic, as-\nsuming the opposition is willing to go through the same hoops.   "
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-4549-5128",
+                  "text": "In reality, an\nindividual may not fully rationalize all outcomes, rather settling for the first\n”good enough” answer and potentially land on the highest outcome rather than\nthe Nash outcome.   In essence, time and mental capacity is valuable.   People\nmay not want to go through the hassle of thinking through the entire strategy\nspace for a relatively small reward (i.e. the apparently small 1 or 2 dollar incre-\nments) and thus land on a non-Nash outcome when the experiment is done in\npractice. \nb.   Explain briefly, if you were playing the Traveler’s Dilemma, what strategy\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-5128-5667",
+                  "text": "you would use and explain the rationale behind your choice?\nAnswer:\nAs with part a, there is no strict answer but one cogent response is as follows:\nAssuming I am playing against a random player drawn from the population\nof the USA (rather than from a population of Economists or Game Theorists) I\nwould play 100. My strategy relies upon the irrationality of my likely opponent.\nFor many, the first instinct upon seeing the traveler’s dilemma is to pick a large\nvalue; humans are naturally cooperative when the reward is not very high for\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-5667-6255",
+                  "text": "defection, and by design, the first defection earns only one percent extra on the\ncooperative reward.   Consequently, I would leverage the fact that I am likely\nfacing someone not versed in economics and general human behavior to attempt\nto achieve the cooperative outcome.\nAs for why I do not play 99 if that is the case; I also gloss over the fact\nthat monetary reward is not the only outcome under consideration.   I would\nfeel rather bad if someone opted to go for the cooperative play and I instantly\nbetrayed them. As 1 dollar is not too important for me, I am willing to sacrifice\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-6255-6835",
+                  "text": "that for the sake of my conscience. \n3   Question 3: \n3.   Consider a variant of the Traveler’s Dilemma in which each player must\nchoose an   even-numbered   integer from 2 to 100. The rest is the same as in the\nstandard Traveler’s Dilemma.   If they choose the same integer, they get that\ninteger in dollars as payoff. If they choose different integers, they both get the\nlower integer in dollars, but with one adjustment: the one who chose the lower\ninteger gets an additional   $ 2 and the one who chose the higher integer has   $ 2\n3 \n\n[PDF page 4]\ndeducted from her payoff. \n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-6835-7429",
+                  "text": "a.   Describe all the Nash equilibria of this game.\nAnswer:\nEvidently, no asymmetric strategy pairs (i.e. pairs where one person calls a\nlower value while the other a higher one) can be a Nash outcome —the person\ncalling a higher value is strictly worse off.   Thus, the only strategy pairs to\nconsider are those where both players quote the same number. In that case, we\nneed to check if they have any reason to deviate.   As per above, none would\ndeviate to a higher number.   Deviating to a lower number is at best going to\nyield the same outcome (going down one increment of 2 and claiming "
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-7429-8028",
+                  "text": "the 2 dollar\nbonus for being the lower bid). Thus, all strategy pairs where both players play\nthe same value is a Nash equilibrium \nb.   Describe all the strict Nash equilibria of this game.\nFollowing the logic from part a, most pairs are not a strict Nash equilibrium\nstrategy pair because a person defecting to a value one step lower is just as well\noff.   This, of course, is impossible at the lower bound.   Thus the unique strict\nNash equilibrium strategy is (2,2). \n4   Question 4: \n4.   In Rosenthal’s Centipede game (described in Chapter 2 of Basu:   Prelude\nto Political Economy), standard "
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-8028-8622",
+                  "text": "game-theoretic analysis, based on backward\ninduction, predicts that players will choose “keep” at every period and so they\nwill end up with player 1 earning 3 dollars and 2 earning 0 dollars.   Try to\ndevelop a cogent argument why the standard game-theoretic argument may be\nflawed and why rational players may choose “pass” at least for a few times.\nThis question is open ended and there are many valid answers. One example\nis as follows:\nWe may suspect that people playing the Centipede game is more interested\nin regret minimization rather than the classic rational game theory analysis. In\n"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-8622-9219",
+                  "text": "this case, the players may want to minimize the potential loss of their strategy\nand so are willing to pursue cooperation for some number of rounds as the\nrelative reward to continuing compared to the reward of immediate exit starts\nhigh. Only after the pot is big and ”tempting” enough would the players begin\nto consider exit. \n5   Question 5: \nDescribe the Hawk-Dove game by writing down the payoff matrix of the game.\nDoes the game have any Nash equilibria? Which ones of those are strict Nash\nequilibrium?\nLet us now complicate the game a bit.   Suppose that, over and above the\ntwo actions, "
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-9219-9815",
+                  "text": "H (Hawk) and D (Dove), each player has a third option, M. M\ncan stand for Moderate, referring to behavior that is less aggressive than H and\n4 \n\n[PDF page 5]\nmore aggressive than D. If both players play M, they both get a payoff of 1. If\none of them plays M and the other something else, they both get 0.\nWrite down the payoff matrix of this 3-by-3 game. Describe the Nash equi-\nlibria of this game? Describe the strict Nash equilibria of this game.\nAnswer:\nRecall from class:   the Dove-Hawk game has two Nash equilibria, (Dove,\nHawk) and (Hawk, Dove). Both of these are strict Nash equilibria, "
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-9815-10411",
+                  "text": "neither player\ncan do weakly better with any other strategy through unilateral deviation. An\nexample of such a game is as blow:\nH   D\nH   -1,-1   2,0\nD   0,2   1,1\nTable 4: Classic Dove-Hawk Game\nNow if we add a third potential strategy we have the following 3x3 game:\nH   M   D\nH   -1,-1   0,0   4,0\nM   0,0   1,1   0,0\nD   0,4   0,0   2,2\nTable 5: 3x3 Dove-Hawk Modification\nHere there are three Nash strategy pairs: (H,D), (D,H), and (M,M). How-\never, a dove in either (H,D) or (D,H) is equally as well off playing M. Conse-\nquently, the only strict Nash strategy pair is (M,M) in this game.\n5"
+                },
+                {
+                  "id": "e-5dffb9c6d9a07018e002f035-10411-10412",
+                  "text": " "
+                }
+              ]
+            }
+          ],
+          "result": {
+            "chunks": [
+              {
+                "chunkId": "fd4c878f4d39845485177f10a6d54978ea26cc2f12dc829359c50c8310832425",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-51ded59cbd2b4c9a08a88f41-0-520"
+                    ]
+                  }
+                ]
+              },
+              {
+                "chunkId": "577a04ae6e5dff49097b05d5d4048c1c839c9ec68adffc4048a8f61efa1d214a",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-5dffb9c6d9a07018e002f035-0-557"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6.3,
+          "durationMs": 5.9
+        },
+        {
+          "id": 2,
+          "operation": "index-map",
+          "startedMs": 0.6,
+          "inputBytes": 12560,
+          "inputSha256": "4ae8b2b7c1fd39cbdfc92e966cf49cabf8d64805e8336d7998932657082a6855",
+          "instructionSha256": "fca3f817070f21a0d3283a87db9aca5387cb503b0126c3a6b55d78c78050e932",
+          "schemaSha256": "c7a41d9120313bc5fce40fcccdbe59faf8906ddc0c447535f9a5d5687f4c12b4",
+          "sourceIds": [
+            "econ2801-pset5-solutions"
+          ],
+          "chunkCount": 1,
+          "characters": 10903,
+          "status": "completed",
+          "catalog": [
+            {
+              "chunkId": "90047c7f616c0be6842de2f9b7cb0cf23f5f3e4efd7d529bee38dfb6a4fe8995",
+              "sourceId": "econ2801-pset5-solutions",
+              "excerpts": [
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-0-547",
+                  "text": "[PDF page 1]\nSolution Problem Set 5 Fall 2026 ECON 2801 \nSeptember 2026 \nQuestion 1 \nFor each of the statements below answer true or false (assume throughout that\nno mixed strategies are allowed). \nPart A \nConsider a 2-player game with non-negative payoffs. If we change the game so\nthat player 1 gets double what she was getting earlier and 2 gets 4-times what\nhe was getting earlier, then this game will have the same Nash equilibria as the\noriginal one.\nAnswer: True.\nIf a strategy pair is Nash, it must be that for a given player they have no\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-547-1123",
+                  "text": "strict incentive to deviate. If we simply multiply every payoff by a set positive\nconstant, the greater than relations are unchanged; this also works in the inverse\nfor multiplying by the reciprocal. Thus, the Nashes are the same. \nPart B \nConsider a 2-player game with non-negative payoffs. If we change the game so\nthat player 1 gets minus 2 dollars for all outcomes compared to what she was\ngetting in the original game, and player 2 gets half of what he was getting in the\noriginal game, then this game will have the same Nash equilibria as the original\none.\nAnswer: True\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-1123-1696",
+                  "text": "Here, once again, we can imagine any Nash outcome in the game. By def-\ninition, the payoff for a given player for their strategy is at least as good for\nany other   P   ( s i , s ′ \ni )   ≥   P   ( s − i , s ′ \ni ), this relation remains true no matte what we\nadd, subtract, or multiply each side by, so long as we do not multiply by zero\nor a negative value. Thus, any pre-existing Nash remains Nash. Moreover, we\ncan also consider multiplying the outcome game by the reciprocal constant, or\nadding the negative offset coefficient; thus, any Nash in the outcome game must\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-1696-2263",
+                  "text": "also be Nash in the first game.\n1 \n\n[PDF page 2]\nPart C \nSuppose people live uniformly distributed on a one-mile stretch and buy from\nthe nearest vendor (and choose randomly from among vendors equi-distant to\nthem). Three vendors (each interested in maximizing the number of people who\nwill buy from them) must choose a location to set up store on the 1-mile stretch.\nOne vendor being at the start of the mile, one in the middle, and one at the\nend is not a Nash equilibrium.\nAnswer: True\nA simple proof by contradiction:   Let us assume this is a Nash.   If this is\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-2263-2807",
+                  "text": "a Nash, no one should have incentive to deviate. However, any of the vendors\nat the end can do strictly better by moving towards the midpoint of the line.\nThus, it cannot be that the proposed outcome is a Nash Equilibrium \nPart D \nIn Chess, if both players had flawless minds, as soon as it was decided who will\nplay White and who Black, the outcome of the game would be known.\nAnswer: True\nProof by contradiction.   Let us assume that, with perfect information, the\noutcome is unknown.   In that case, at least two of three end states must be\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-2807-3377",
+                  "text": "possible and occur with non-zero probability:   white wins, black wins, or the\ngame draws. We should be able to work backwards from each state to the start\nof the game. There must, thus, be some point of departure in the order of play\nthat reaches each of the two or more potential final outcomes. The last player\nwho plays has strict preferences on which outcome they want (win¿draw¿loss).\nThus, the last player who decides which path the game goes down has a strict\npreference and thus would not randomize. Therefore, the outcome of the game\nmust be certain. \nPart E \n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-3377-3959",
+                  "text": "A zero-sum game cannot have a Nash equilibrium.\nAnswer: False\nProof by counterexample: A zero sum game requires only that the payoffs\nin each cell adds to zero.   Thus, trivially, we can have a game where all cells\nare identical, let’s say they contain (0,0) for simplicity. In this case all strategy\npairs are Nash equilibria. \nPart F \nIn a zero-sum game every outcome can be a Nash equilibrium.\nAnswer: True; see above\n2 \n\n[PDF page 3]\nQuestion 2 \nConsider the Hawk-Dove game shown below (with player 1 choosing between\nrows and 2 choosing between columns).\nH   D\nH   -1,-1   4,0\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-3959-4522",
+                  "text": "D   0,4   2,2 \nPart A \nDescribe the Nash equilibria of this game.\nAnswer: The two Nash equilibria are (H,D) and (D,H) \nPart B \nIf this game was played in a sequence, with 1 moving first and 2 moving second,\nwhat would you expect the outcome to be and why?\nAnswer:   We would expect the first player to always play Hawk and the\nsecond dove.   We find this by backwards induction on the game tree.   If the\nfirst player played Hawk, the second player would always prefer dove (0¿-1),\nconversely, if the first player played Dove, the second player would prefer Hawk\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-4522-5107",
+                  "text": "(4¿2). The first player; thus, would prefer to play Hawk to get 4 instead of 0 in\nthe subgame perfect equilibrium. \nPart C \nExplain why the US got an advantage in the Cuban missile crisis by secretly\nplanning its strategy and then suddenly announcing it to the Russians.\nThis question is open ended, but one formulation of the answer is as follows:\nThe US took advantage of the Hawk-Dove structure of nuclear brinkmanship\nto gain an advantage. By playing a more aggressive, threatening stance first, the\nonly truly viable strategy for the USSR was to back down or risk the destruction\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-5107-5673",
+                  "text": "of the world. In essence, by threatening escalation first, the USSR can respond\nby escalating leading to nuclear war or backing down and losing their strategic\nposition in Cuba. \nQuestion 3 \nConsider two players, who, in period 1, plays the “Prisoner’s Dilemma” game\ndescribed below, and, after seeing the outcome of this game, play the “Assurance\nGame” also shown below.\nPrisoner’s Dilemma\n3 \n\n[PDF page 4]\nC   D\nC   5,5   0,7\nD   7,0   1,1\nAssurance Game\nA   B\nA   2,2   0,0\nB   0,0   1,1\nIs it possible to have a subgame perfect equilibrium of this 2-period game\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-5673-6232",
+                  "text": "such that in period 1 both players choose C? If yes, describe the full equilibrium.\nIf not, explain why not. Keep your answer brief—just one or two sentences.\nAnswer: It is not possible: the maximum punishment the subsequent assur-\nance game can generate is 1 (playing (B,B) in case of any deviation compared\nto (A,A) for cooperating). However, the incentive to deviate from cooperation\nis 2. Thus, a collaborative outcome of (C,C) in the fist game is impossible. \nQuestion 4 \nPeople live uniformly distributed all over a city shaped like a chopped isosceles\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-6232-6812",
+                  "text": "triangle, as shown below. Two vendors, 1 and 2, have to each set up a store in\nthe city. People buy from the nearest vendor. (If both vendors are located at\nthe same distance, they toss a coin).   The aim of each vendor is to maximize\nthe number of customers.\nDoes this game have a Nash equilibrium? If so, describe it. If not, explain\nwhy not.\nThis game does not have a Nash equilibrium.   A Nash equilibrium in this\nstyle of vendor game requires that they converge to a point where they split the\narea or population exactly in half in every conceivable way to cut the shape. In\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-6812-7344",
+                  "text": "other words, we need a centrally symmetric point, where every line that cuts\nthe shape in half intersects. Such a point does not exist for a trapezoid. Thus,\na Nash equilibrium does not exist.   A player can deviate at any given point\ntowards one of the bisecting lines and do better, since not all bisecting lines\nmeet at one point. \nQuestion 5 \nConsider the Prisoner’s Dilemma game described below:\nC   D\nC   4,4   -1,5\nD   5,-1   0,0\n4 \n\n[PDF page 5]\nSuppose this game is played infinitely many times. The players use a discount\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-7344-7935",
+                  "text": "factor   δ   to calculate the present value of return of infinite streams of income,\nwhere 0   ≤   δ <   1. Assume that they decide to use the trigger strategy. \nPart A \nExplain in words, why if   δ   = 0, they will not be able to cooperate and play C\neach time.\nA variety of answers is admissible, one example is as follows:\nWhen the discount rate equals to zero, neither player cares for the next day.\nThus, we can treat the sequence of games as games being played independently.\nConsequently, the only Nash equilibrium is (D,D) in every period. \nPart B \nCalculate the smallest value of d "
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-7935-8523",
+                  "text": "which will enable the two players to cooperate\nand play C each time, by using the trigger strategy.   That is, the use of the\ntrigger strategy is a Nash equilibrium.\nAnswer:\nStart with the discounted value of cooperation: \nP V   = 4 + 4 δ   + 4 δ 2   + 4 δ 3   +   ... \n=   4\n1   −   δ \nNext look at the discounted value of deviation for the deviator: \nP V   = 5\nNow we can implement the condition for non-deviation and solve for   δ \n4\n1   −   δ   ≥   5\n4   ≥   5(1   −   δ )\n5 δ   ≥   1 \nδ   ≥   1\n5 \nPart C \nIf the above game was being played a finite number of times, say 1000 times,\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-8523-9109",
+                  "text": "explain, assuming rationality is common knowledge, the players will get a total\nreturn of zero.\nAnswer: A player knowing there is a finite number of repetition recognizes\nthat the last game only has one possible Nash outcome: (D,D). Since the last\n5 \n\n[PDF page 6]\ngame’s outcome is known we can treat the game as repeating 999 times, since\nthe last game’s outcome is known. We then repeat this analysis backwards to\ndetermine that players would play (D,D) in every period yielding a zero return. \nPart D \nExplain briefly why our commonsense may conflict with the formal game-theoretic\n"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-9109-9703",
+                  "text": "answer to part (c).\nThis is an open ended question; one example answer is as below:\nPlayers seeing a long pattern of repetition may seek to minimize regret, and,\nthus, choose some degree of early cooperation rather than accepting an outcome\nof zero. More practically, a random individual when faced with this game may\nnot think so pessimistically as to assume cooperation will immediately break\ndown even if it is rational. In such a case, believing there is a chance for some\nlength of cooperation may lead to a different outcome if the belief is mutual. \nQuestion 6 \nConsider a game like the "
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-9703-10303",
+                  "text": "Centipede, except that it is infinitely long. (The two\nplayers can go on choosing between Keep and Pass even after they have passed\n100 times.) \nPart A \nExplain why both players choosing Pass every time is a Nash equilibrium.\nAnswer: We can approach this with a proof by contradiction.\nLet us assume that both players choosing Pass every time is not a Nash\nEquilibrium. Thus, one of the players must take at some period. However, this\nplayer knows that if they Pass on this period and take the next time they have\na turn will yield strictly more for them.   Thus, they would delay taking.   As\nthe ga"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-10303-10902",
+                  "text": "me is infinite, this logic does not break down due to the end of the game;\nthus, always Passing is a Nash Equilibrium. \nPart B \nExplain why both players choosing Keep every time is a Nash equilibrium.\nAnswer: this can be proven directly:\nIf both players always play Keep, no one player benefit from deviating. Any\ndeviation past the first period does not change payoffs, since the first player\nalready took. However, on the first turn, choosing to Pas will yield strictly less,\nas player two will then immediately take.   Thus, both players choosing Keep\nevery time is likewise a Nash Equilibrium.\n6"
+                },
+                {
+                  "id": "e-6dba306fe43a6f1676b392b4-10902-10903",
+                  "text": " "
+                }
+              ]
+            }
+          ],
+          "result": {
+            "chunks": [
+              {
+                "chunkId": "90047c7f616c0be6842de2f9b7cb0cf23f5f3e4efd7d529bee38dfb6a4fe8995",
+                "topics": [
+                  {
+                    "title": "Offline source excerpt",
+                    "citationIds": [
+                      "e-6dba306fe43a6f1676b392b4-0-547"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6.5,
+          "durationMs": 5.9
+        },
+        {
+          "id": 3,
+          "operation": "index-merge",
+          "startedMs": 6.6,
+          "inputBytes": 6270,
+          "inputSha256": "2416b52e44a7cabbb8d594bb7251f7a13d22cc23c72088b2fa3bcb7decabdac1",
+          "instructionSha256": "fbdaa4a8742e41945af1e8ae5397920fb7f314aaf7f2254c72ae6ca0cd65d7fd",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 5556,
+          "status": "completed",
+          "result": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 12.4,
+          "durationMs": 5.8
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.3,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "characters": 14778
+          }
+        },
+        {
+          "atMs": 0.5,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "characters": 10903
+          }
+        },
+        {
+          "atMs": 6.4,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "durationMs": 6,
+            "reason": "all-batch-citations-verified"
+          }
+        },
+        {
+          "atMs": 6.5,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "durationMs": 7,
+            "reason": "all-batch-citations-verified"
+          }
+        },
+        {
+          "atMs": 6.6,
+          "type": "index.coverage.ready",
+          "details": {
+            "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+            "sourceCount": 3,
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions",
+              "econ2801-pset5-solutions"
+            ],
+            "total": 3,
+            "characters": 25681,
+            "reason": "every-source-chunk-has-verified-evidence"
+          }
+        },
+        {
+          "atMs": 6.6,
+          "type": "index.merge.started",
+          "details": {
+            "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+            "sourceCount": 3,
+            "characters": 5556
+          }
+        },
+        {
+          "atMs": 12.4,
+          "type": "index.merge.ready",
+          "details": {
+            "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+            "sourceCount": 3,
+            "durationMs": 5
+          }
+        },
+        {
+          "atMs": 13.2,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "fcd57e78-2616-47e5-8952-b4da516772fe",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.1,
+          "status": "ready",
+          "durationMs": 12.3,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 3,
+          "events": [
+            {
+              "atMs": 0.3,
+              "type": "index.map.started",
+              "details": {
+                "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ],
+                "total": 2,
+                "characters": 14778
+              }
+            },
+            {
+              "atMs": 0.5,
+              "type": "index.map.started",
+              "details": {
+                "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 1,
+                "characters": 10903
+              }
+            },
+            {
+              "atMs": 6.4,
+              "type": "index.map.ready",
+              "details": {
+                "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ],
+                "total": 2,
+                "durationMs": 6,
+                "reason": "all-batch-citations-verified"
+              }
+            },
+            {
+              "atMs": 6.5,
+              "type": "index.map.ready",
+              "details": {
+                "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 1,
+                "durationMs": 7,
+                "reason": "all-batch-citations-verified"
+              }
+            },
+            {
+              "atMs": 6.6,
+              "type": "index.coverage.ready",
+              "details": {
+                "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+                "sourceCount": 3,
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ],
+                "total": 3,
+                "characters": 25681,
+                "reason": "every-source-chunk-has-verified-evidence"
+              }
+            },
+            {
+              "atMs": 6.6,
+              "type": "index.merge.started",
+              "details": {
+                "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+                "sourceCount": 3,
+                "characters": 5556
+              }
+            },
+            {
+              "atMs": 12.4,
+              "type": "index.merge.ready",
+              "details": {
+                "requestId": "b586fb16-fd1c-4ff1-893d-c690a7fd668e",
+                "sourceCount": 3,
+                "durationMs": 5
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 4,
+            "cacheChars": 5724,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 13.1,
+          "status": "ready",
+          "durationMs": 0.1,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 13.2,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "fcd57e78-2616-47e5-8952-b4da516772fe",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 4,
+            "cacheChars": 5724,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 2
+    }
+  ],
+  "method": "Three fresh production indexer instances. Each cold request is followed by exact same-test cached input on that instance. Provider slot is held across each cold+cached pair; acquisition excluded. The same already-extracted original PDF corpus is used. No question preparation, Jev, microphone or paid voice. Empty application cache does not imply cold provider prompt cache.",
+  "finishedAt": "2026-10-02T08:40:00.803Z",
+  "assessment": {
+    "readyCold": 3,
+    "underTenSeconds": 3,
+    "cachedWithoutProviderCalls": 3,
+    "allRequiredSourcesRepresented": 3,
+    "limitation": "Three samples of one real corpus, not latency percentiles or a guarantee. Source citation coverage is not exhaustive topic coverage; manual guide review is recorded separately."
+  }
+}

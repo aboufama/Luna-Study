@@ -1,0 +1,54 @@
+{
+  "source": "benchmarks/tutor-quality/live-planning-release.json",
+  "sourceSha256": "ec363e620d24eb94816899fa2f07aa01fb349b9bc6e84cff6883d23db935c1b6",
+  "auditedAt": "2026-10-02T12:25:42.488Z",
+  "mechanicalChecks": {
+    "completed": true,
+    "codeUnchanged": true,
+    "noProviderErrors": true,
+    "noCapBlocks": true,
+    "noInventedExamDate": true,
+    "trackedCellPracticeAfterBothRequests": true,
+    "noGradesFromPlanning": true
+  },
+  "manualReview": {
+    "pass": true,
+    "unknownTimingAccepted": true,
+    "repeatedTimingRequestsAfterUnknown": 0,
+    "planningRefusalRespected": true,
+    "weakTopicPracticeStarted": true,
+    "canonicalQuestionIdStable": true,
+    "noAnswerGiven": true,
+    "observedWelcome": "Tutor asks the exam date once; it does not repeat the question after the unknown-date reply.",
+    "limits": [
+      "One synthetic session with two fixed student turns; not a general planning reliability estimate.",
+      "Fake ElevenLabs transport, no human microphone/playback, fixed bank and original synthetic materials.",
+      "No correctness/grade/learning outcomes tested; no date was supplied for acceptance testing.",
+      "Optional calculator/topic-switch scenario intentionally omitted."
+    ]
+  },
+  "replies": [
+    {
+      "stepId": "welcome",
+      "text": "We can jump into quiz practice. When is your test?"
+    },
+    {
+      "stepId": "unknown-date-priority",
+      "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+    },
+    {
+      "stepId": "decline-more-planning",
+      "text": "Absolutely—go ahead and answer the cell transport question in your own words. Take your time."
+    }
+  ],
+  "accounting": {
+    "paidRequests": {
+      "openai": 3,
+      "jev": 5
+    },
+    "allPaidRequestsHaveUsage": true,
+    "estimatedUsd": 0.016311484,
+    "providerReportedUsd": null,
+    "actualWallMs": 7517
+  }
+}

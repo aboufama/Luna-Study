@@ -1,0 +1,143 @@
+{
+  "title": "Animal cell",
+  "revision": "1c2bf241-d39b-4309-8ef8-e770b9df81cd",
+  "blocks": [
+    {
+      "id": "world",
+      "type": "scene",
+      "width": 800,
+      "height": 500,
+      "objects": [
+        {
+          "id": "cell-membrane",
+          "type": "ellipse",
+          "x": 150,
+          "y": 70,
+          "width": 410,
+          "height": 330,
+          "tone": "ink"
+        },
+        {
+          "id": "cytoplasm",
+          "type": "ellipse",
+          "x": 170,
+          "y": 90,
+          "width": 370,
+          "height": 290,
+          "tone": "muted"
+        },
+        {
+          "id": "nucleus",
+          "type": "ellipse",
+          "x": 300,
+          "y": 175,
+          "width": 120,
+          "height": 100,
+          "tone": "accent"
+        },
+        {
+          "id": "membrane-leader",
+          "type": "line",
+          "x1": 175,
+          "y1": 135,
+          "x2": 75,
+          "y2": 100,
+          "tone": "ink"
+        },
+        {
+          "id": "cytoplasm-leader",
+          "type": "line",
+          "x1": 205,
+          "y1": 315,
+          "x2": 75,
+          "y2": 350,
+          "tone": "ink"
+        },
+        {
+          "id": "nucleus-leader",
+          "type": "line",
+          "x1": 420,
+          "y1": 210,
+          "x2": 650,
+          "y2": 150,
+          "tone": "ink"
+        },
+        {
+          "id": "membrane-label",
+          "type": "text",
+          "x": 25,
+          "y": 65,
+          "width": 150,
+          "height": 35,
+          "text": "Cell membrane",
+          "fontSize": 22
+        },
+        {
+          "id": "cytoplasm-label",
+          "type": "text",
+          "x": 25,
+          "y": 350,
+          "width": 145,
+          "height": 35,
+          "text": "Cytoplasm",
+          "fontSize": 22
+        },
+        {
+          "id": "nucleus-label",
+          "type": "text",
+          "x": 650,
+          "y": 115,
+          "width": 120,
+          "height": 35,
+          "text": "Nucleus",
+          "fontSize": 22
+        },
+        {
+          "id": "teaching-note",
+          "type": "text",
+          "x": 590,
+          "y": 350,
+          "width": 190,
+          "height": 70,
+          "text": "Membrane: selective boundary",
+          "fontSize": 20,
+          "tone": "accent"
+        }
+      ],
+      "zones": [
+        {
+          "id": "select-membrane",
+          "label": "cell membrane",
+          "anchor": {
+            "kind": "object",
+            "id": "cell-membrane"
+          }
+        },
+        {
+          "id": "select-cytoplasm",
+          "label": "cytoplasm",
+          "anchor": {
+            "kind": "object",
+            "id": "cytoplasm"
+          }
+        },
+        {
+          "id": "select-nucleus",
+          "label": "nucleus",
+          "anchor": {
+            "kind": "object",
+            "id": "nucleus"
+          }
+        },
+        {
+          "id": "select-note",
+          "label": "teaching note",
+          "anchor": {
+            "kind": "object",
+            "id": "teaching-note"
+          }
+        }
+      ]
+    }
+  ]
+}

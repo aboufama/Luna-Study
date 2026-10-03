@@ -1,0 +1,443 @@
+{
+  "provenance": "Exact projections from immutable live-adaptive-results.json",
+  "hints": [
+    {
+      "step": {
+        "id": "hint-one",
+        "virtualMs": 210000,
+        "input": {
+          "type": "hint"
+        },
+        "requestsBefore": 9,
+        "messagesBefore": 161,
+        "replies": [
+          "Start by identifying the operations attached to x, then think about which inverse operations could isolate x while keeping both sides equal. What would you try first?"
+        ],
+        "hintState": {
+          "virtualMs": 210000,
+          "wallMs": 10710,
+          "stepId": "hint-one",
+          "type": "hint-state",
+          "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+          "remaining": 2,
+          "cooldownUntil": 1790957055000,
+          "retryAfterMs": 45000,
+          "available": false,
+          "busy": true,
+          "suggested": false,
+          "reason": "busy"
+        },
+        "requests": 2,
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "7fafcd4cb67a69bee132bb17",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "590da97ebea25bdca1ead597",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        }
+      },
+      "request": [
+        {
+          "virtualMs": 210000,
+          "wallMs": 7440,
+          "stepId": "hint-one",
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "kind": "tutor",
+          "instructionSha256": "8820e911c35cd7ac1f20083e39c7486e85719fff0ce253b807d80679f948f340",
+          "inputSummary": {
+            "sourceIds": [
+              "equation-notes",
+              "biology-notes"
+            ],
+            "activeQuestionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+            "hintContext": {
+              "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+              "maxHints": 3,
+              "hintsUsed": 0,
+              "hintsRemaining": 2,
+              "hintAllowed": true,
+              "hintNumber": 1,
+              "hintLevel": "orientation",
+              "allowAnswerReview": false,
+              "requiresAttempt": false,
+              "answerAttemptReceived": false,
+              "answerReviewPending": false,
+              "setupClarification": false
+            },
+            "bankQuestions": [
+              {
+                "id": "5b3f8dc4-5bb6-430b-ae37-3471223306cf",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "637ee56b-6b36-43df-8c74-3d1c850e4138",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "eb88bd74-175e-4275-b4c3-5f4c21d9ac45",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "57261ce5-6bcb-4107-93ae-48512e8e4be7",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "0bcfaeb4-d321-4b16-a608-a263c2ec6de6",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "9952a9f8-c308-420b-8226-77bd939c74de",
+                "hasReferenceAnswer": false
+              }
+            ],
+            "workingProblem": {
+              "id": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+              "topicId": "7fafcd4cb67a69bee132bb17",
+              "topicTitle": "Equations",
+              "difficulty": "hard",
+              "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+              "sourceIds": [
+                "equation-notes"
+              ],
+              "attempts": 0,
+              "assisted": false
+            },
+            "gradingContext": {
+              "canonicalPromptActive": true,
+              "workingProblemConfirmed": true
+            }
+          },
+          "status": "completed",
+          "httpStatus": 200,
+          "publicOutput": "<say>Start by identifying the operations attached to x, then think about which inverse operations could isolate x while keeping both sides equal. What would you try first?</say>\n<board>{\"title\":\"Equation\",\"mode\":\"patch\",\"blocks\":[{\"id\":\"focus\",\"type\":\"text\",\"content\":\"Goal: isolate x using equal operations on both sides.\"}]}</board>",
+          "usage": {
+            "inputTokens": 4628,
+            "outputTokens": 175,
+            "cachedInputTokens": 2868,
+            "cacheWriteTokens": 1757,
+            "reasoningTokens": 95
+          },
+          "resolvedModel": "gpt-5.6-terra",
+          "serviceTier": "default",
+          "estimatedCost": {
+            "usd": 0.0070721,
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "observationReadError": "AbortError",
+          "durationMs": 2992
+        }
+      ]
+    },
+    {
+      "step": {
+        "id": "hint-two",
+        "virtualMs": 390000,
+        "input": {
+          "type": "hint"
+        },
+        "requestsBefore": 19,
+        "messagesBefore": 341,
+        "replies": [
+          "Absolutely—no calculator needed, and you’ll choose the operations. What would you try first?"
+        ],
+        "hintState": {
+          "virtualMs": 390000,
+          "wallMs": 23458,
+          "stepId": "hint-two",
+          "type": "hint-state",
+          "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+          "remaining": 1,
+          "cooldownUntil": 1790957235000,
+          "retryAfterMs": 45000,
+          "available": false,
+          "busy": true,
+          "suggested": false,
+          "reason": "busy"
+        },
+        "requests": 2,
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "7fafcd4cb67a69bee132bb17",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "590da97ebea25bdca1ead597",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        }
+      },
+      "request": [
+        {
+          "virtualMs": 390000,
+          "wallMs": 21807,
+          "stepId": "hint-two",
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "kind": "tutor",
+          "instructionSha256": "8820e911c35cd7ac1f20083e39c7486e85719fff0ce253b807d80679f948f340",
+          "inputSummary": {
+            "sourceIds": [
+              "equation-notes",
+              "biology-notes"
+            ],
+            "activeQuestionId": null,
+            "hintContext": {
+              "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+              "maxHints": 3,
+              "hintsUsed": 1,
+              "hintsRemaining": 1,
+              "hintAllowed": true,
+              "hintNumber": 2,
+              "hintLevel": "strategy",
+              "allowAnswerReview": false,
+              "requiresAttempt": false,
+              "answerAttemptReceived": false,
+              "answerReviewPending": false,
+              "setupClarification": false
+            },
+            "bankQuestions": [
+              {
+                "id": "5b3f8dc4-5bb6-430b-ae37-3471223306cf",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "637ee56b-6b36-43df-8c74-3d1c850e4138",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "eb88bd74-175e-4275-b4c3-5f4c21d9ac45",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "57261ce5-6bcb-4107-93ae-48512e8e4be7",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "0bcfaeb4-d321-4b16-a608-a263c2ec6de6",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "9952a9f8-c308-420b-8226-77bd939c74de",
+                "hasReferenceAnswer": false
+              }
+            ],
+            "workingProblem": {
+              "id": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+              "topicId": "7fafcd4cb67a69bee132bb17",
+              "topicTitle": "Equations",
+              "difficulty": "hard",
+              "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+              "sourceIds": [
+                "equation-notes"
+              ],
+              "attempts": 0,
+              "assisted": true
+            },
+            "gradingContext": {
+              "canonicalPromptActive": false,
+              "workingProblemConfirmed": true
+            }
+          },
+          "status": "completed",
+          "httpStatus": 200,
+          "publicOutput": "<say>Absolutely—no calculator needed, and you’ll choose the operations. What would you try first?</say>",
+          "usage": {
+            "inputTokens": 4712,
+            "outputTokens": 56,
+            "cachedInputTokens": 2868,
+            "cacheWriteTokens": 1841,
+            "reasoningTokens": 26
+          },
+          "resolvedModel": "gpt-5.6-terra",
+          "serviceTier": "default",
+          "estimatedCost": {
+            "usd": 0.0058541,
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "observationReadError": "AbortError",
+          "durationMs": 1481
+        }
+      ]
+    },
+    {
+      "step": {
+        "id": "hint-three",
+        "virtualMs": 510000,
+        "input": {
+          "type": "hint"
+        },
+        "requestsBefore": 22,
+        "messagesBefore": 402,
+        "replies": [
+          "You’ve used all available hints for this problem. Give your best attempt—even just the first operation and why it keeps the equation balanced."
+        ],
+        "hintState": {
+          "virtualMs": 510000,
+          "wallMs": 26553,
+          "stepId": "hint-three",
+          "type": "hint-state",
+          "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+          "remaining": 0,
+          "cooldownUntil": 1790957355000,
+          "retryAfterMs": 45000,
+          "available": false,
+          "busy": true,
+          "suggested": false,
+          "reason": "busy"
+        },
+        "requests": 2,
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "7fafcd4cb67a69bee132bb17",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "590da97ebea25bdca1ead597",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        }
+      },
+      "request": [
+        {
+          "virtualMs": 510000,
+          "wallMs": 24880,
+          "stepId": "hint-three",
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "kind": "tutor",
+          "instructionSha256": "8820e911c35cd7ac1f20083e39c7486e85719fff0ce253b807d80679f948f340",
+          "inputSummary": {
+            "sourceIds": [
+              "equation-notes",
+              "biology-notes"
+            ],
+            "activeQuestionId": null,
+            "hintContext": {
+              "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+              "maxHints": 3,
+              "hintsUsed": 2,
+              "hintsRemaining": 0,
+              "hintAllowed": true,
+              "hintNumber": 3,
+              "hintLevel": "next-step",
+              "allowAnswerReview": false,
+              "requiresAttempt": true,
+              "answerAttemptReceived": false,
+              "answerReviewPending": false,
+              "setupClarification": false
+            },
+            "bankQuestions": [
+              {
+                "id": "5b3f8dc4-5bb6-430b-ae37-3471223306cf",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "637ee56b-6b36-43df-8c74-3d1c850e4138",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "eb88bd74-175e-4275-b4c3-5f4c21d9ac45",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "57261ce5-6bcb-4107-93ae-48512e8e4be7",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "0bcfaeb4-d321-4b16-a608-a263c2ec6de6",
+                "hasReferenceAnswer": false
+              },
+              {
+                "id": "9952a9f8-c308-420b-8226-77bd939c74de",
+                "hasReferenceAnswer": false
+              }
+            ],
+            "workingProblem": {
+              "id": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+              "topicId": "7fafcd4cb67a69bee132bb17",
+              "topicTitle": "Equations",
+              "difficulty": "hard",
+              "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+              "sourceIds": [
+                "equation-notes"
+              ],
+              "attempts": 0,
+              "assisted": true
+            },
+            "gradingContext": {
+              "canonicalPromptActive": false,
+              "workingProblemConfirmed": true
+            }
+          },
+          "status": "completed",
+          "httpStatus": 200,
+          "publicOutput": "<say>You’ve used all available hints for this problem. Give your best attempt—even just the first operation and why it keeps the equation balanced.</say>",
+          "usage": {
+            "inputTokens": 4756,
+            "outputTokens": 71,
+            "cachedInputTokens": 2868,
+            "cacheWriteTokens": 1885,
+            "reasoningTokens": 34
+          },
+          "resolvedModel": "gpt-5.6-terra",
+          "serviceTier": "default",
+          "estimatedCost": {
+            "usd": 0.0061441,
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "observationReadError": "AbortError",
+          "durationMs": 1539
+        }
+      ]
+    }
+  ]
+}

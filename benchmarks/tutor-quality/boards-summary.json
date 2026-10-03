@@ -1,0 +1,81 @@
+{
+  "method": "Statistics from every recorded board model call, including rejected output. Completed means generation+validation, not audible response. Separate cohorts are not pooled as matched quality or latency estimates. USD is public-rate estimate from reported usage, not invoice cost.",
+  "cohorts": [
+    {
+      "file": "boards-results.json",
+      "paidRequests": 20,
+      "groups": {
+        "before": {
+          "runs": 10,
+          "valid": 9,
+          "firstTextMedianMs": 899,
+          "completedMedianMs": 3396,
+          "inputTokens": 25392,
+          "outputTokens": 3718
+        },
+        "current": {
+          "runs": 10,
+          "valid": 10,
+          "firstTextMedianMs": 857,
+          "completedMedianMs": 2512.5,
+          "inputTokens": 26032,
+          "outputTokens": 3507
+        }
+      },
+      "estimatedUsd": 0.10946220000000001,
+      "estimatedRequests": 20,
+      "partialRequests": 0
+    },
+    {
+      "file": "boards-repaired-results.json",
+      "paidRequests": 8,
+      "groups": {
+        "current": {
+          "runs": 8,
+          "valid": 7,
+          "firstTextMedianMs": 913.5,
+          "completedMedianMs": 1973.5,
+          "inputTokens": 22654,
+          "outputTokens": 1123
+        }
+      },
+      "estimatedUsd": 0.0270315,
+      "estimatedRequests": 8,
+      "partialRequests": 0
+    },
+    {
+      "file": "boards-diagnostic-results.json",
+      "paidRequests": 4,
+      "groups": {
+        "current": {
+          "runs": 4,
+          "valid": 3,
+          "firstTextMedianMs": 839.5,
+          "completedMedianMs": 1603,
+          "inputTokens": 11332,
+          "outputTokens": 449
+        }
+      },
+      "estimatedUsd": 0.009101999999999999,
+      "estimatedRequests": 4,
+      "partialRequests": 0
+    },
+    {
+      "file": "boards-final-results.json",
+      "paidRequests": 4,
+      "groups": {
+        "current": {
+          "runs": 4,
+          "valid": 4,
+          "firstTextMedianMs": 845,
+          "completedMedianMs": 1748.5,
+          "inputTokens": 11878,
+          "outputTokens": 669
+        }
+      },
+      "estimatedUsd": 0.0183004,
+      "estimatedRequests": 4,
+      "partialRequests": 0
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "repo": "xai-org/xai-cookbook",
+    "path": "examples/voice-agent-web/xai/backend-nodejs/src/index.ts",
+    "url": "https://raw.githubusercontent.com/xai-org/xai-cookbook/main/examples/voice-agent-web/xai/backend-nodejs/src/index.ts",
+    "status": 200,
+    "lines": []
+  },
+  {
+    "repo": "google-gemini/live-api-web-console",
+    "path": "src/lib/genai-live-client.ts",
+    "url": "https://raw.githubusercontent.com/google-gemini/live-api-web-console/main/src/lib/genai-live-client.ts",
+    "status": 200,
+    "lines": [
+      "26:   LiveServerToolCallCancellation,",
+      "43:   // Emitted when the connection closes",
+      "44:   close: (event: CloseEvent) => void;",
+      "49:   // Emitted when the server interrupts the current generation",
+      "50:   interrupted: () => void;",
+      "59:   // Emitted when a tool call is cancelled",
+      "60:   toolcallcancellation: (",
+      "61:     toolcallCancellation: LiveServerToolCallCancellation",
+      "85:   private _model: string | null = null;",
+      "102:     this.onclose = this.onclose.bind(this);",
+      "115:   async connect(model: string, config: LiveConnectConfig): Promise<boolean> {",
+      "128:       onclose: this.onclose,",
+      "151:     this.session?.close();",
+      "155:     this.log(\"client.close\", `Disconnected`);",
+      "169:   protected onclose(e: CloseEvent) {",
+      "171:       `server.close`,",
+      "174:     this.emit(\"close\", e);",
+      "188:     if (message.toolCallCancellation) {",
+      "189:       this.log(\"server.toolCallCancellation\", message);",
+      "190:       this.emit(\"toolcallcancellation\", message.toolCallCancellation);",
+      "194:     // this json also might be `contentUpdate { interrupted: true }`",
+      "198:       if (\"interrupted\" in serverContent) {",
+      "199:         this.log(\"server.content\", \"interrupted\");",
+      "200:         this.emit(\"interrupted\");"
+    ]
+  },
+  {
+    "repo": "openai/openai-realtime-agents",
+    "path": "src/app/hooks/useRealtimeSession.ts",
+    "url": "https://raw.githubusercontent.com/openai/openai-realtime-agents/main/src/app/hooks/useRealtimeSession.ts",
+    "status": 200,
+    "lines": [
+      "137:         model: 'gpt-4o-realtime-preview-2025-06-03',",
+      "140:             model: 'gpt-4o-mini-transcribe',",
+      "154:     sessionRef.current?.close();",
+      "165:   const interrupt = useCallback(() => {",
+      "166:     sessionRef.current?.interrupt();",
+      "202:     interrupt,"
+    ]
+  },
+  {
+    "repo": "langchain-ai/voice-demo",
+    "path": "src/voice_demo/pipecat/agent.py",
+    "url": "https://raw.githubusercontent.com/langchain-ai/voice-demo/main/src/voice_demo/pipecat/agent.py",
+    "status": 200,
+    "lines": [
+      "30: ## Interruption handling",
+      "38:     the deprecated `allow_interruptions` flag.)",
+      "39:   * The turn tracker (`enable_turn_tracking=True`) records `was_interrupted` on",
+      "162:         settings=DeepgramSTTService.Settings(model=STT_MODEL),",
+      "165:         settings=OpenAILLMService.Settings(model=LLM_MODEL, temperature=0.3)",
+      "229:         enable_turn_tracking=True,  # required for tracing; records was_interrupted"
+    ]
+  },
+  {
+    "repo": "HumeAI/hume-react-sdk",
+    "path": "packages/react/src/lib/useVoiceClient.ts",
+    "url": "https://raw.githubusercontent.com/HumeAI/hume-react-sdk/main/packages/react/src/lib/useVoiceClient.ts",
+    "status": 200,
+    "lines": [
+      "26:   CLOSED = 'closed',",
+      "82:   onClose?: Hume.empathicVoice.chat.ChatSocket.EventHandlers['close'];",
+      "99:   const onClose = useLatestRef(props.onClose);",
+      "143:           socket.close();",
+      "173:             message.type === 'user_interruption' ||",
+      "260:         socket.on('close', (event) => {",
+      "262:           onClose.current?.(event);",
+      "263:           setReadyState(VoiceReadyState.CLOSED);",
+      "283:     client.current?.close();"
+    ]
+  },
+  {
+    "repo": "inworld-ai/inworld-api-examples",
+    "path": "realtime/js/websockets/basic/server.js",
+    "url": "https://raw.githubusercontent.com/inworld-ai/inworld-api-examples/main/realtime/js/websockets/basic/server.js",
+    "status": 200,
+    "lines": [
+      "34:   browser.on('close', () => api.close());",
+      "35:   api.on('close', () => { if (browser.readyState === WebSocket.OPEN) browser.close(); });"
+    ]
+  },
+  {
+    "repo": "google-gemini/live-api-web-console",
+    "path": "src/lib/audio-streamer.ts",
+    "url": "https://raw.githubusercontent.com/google-gemini/live-api-web-console/main/src/lib/audio-streamer.ts",
+    "status": 200,
+    "lines": [
+      "23:   private sampleRate: number = 24000;",
+      "28:   // Indicates if the stream has finished playing, e.g., interrupted.",
+      "40:   constructor(public context: AudioContext) {",
+      "131:       this.sampleRate"
+    ]
+  },
+  {
+    "repo": "fixie-ai/ultravox-client-sdk-js",
+    "path": "src/index.ts",
+    "url": "https://raw.githubusercontent.com/fixie-ai/ultravox-client-sdk-js/main/src/index.ts",
+    "status": 200,
+    "lines": [
+      "26:   /* The client is connected and the server is considering its response. The user can still interrupt. */",
+      "28:   /* The client is connected and the server is playing response audio. The user can interrupt as needed. */",
+      "48:   /* Don't interrupt the agent, but respond at the next opportunity. This is the default. */",
+      "116:     super('data_message', { cancelable: true });",
+      "184:   private readonly audioContext: AudioContext;",
+      "193:    * @param audioContext An AudioContext to use for audio processing. If not provided, a new AudioContext will be created.",
+      "200:     audioContext,",
+      "205:     audioContext?: AudioContext;",
+      "211:     this.audioContext = audioContext || new AudioContext();",
+      "245:    * AnalyserNode to drive a speech indicator. The node belongs to the session's AudioContext",
+      "254:       this._micSourceNode = this.audioContext.createMediaStreamSource(new MediaStream([track]));",
+      "261:    * drive a speech indicator. The node belongs to the session's AudioContext (which can be",
+      "268:       this._agentSourceNode = this.audioContext.createMediaStreamSource(new MediaStream([track]));",
+      "316:     this.socket.onclose = (event) => this.handleSocketClose(event);",
+      "439:       // A message already queued when leaveCall closed the socket can still be dispatched. If",
+      "467:     this.audioContext.resume()?.catch(() => {});",
+      "481:     this.localAudioTrack.setAudioContext(this.audioContext);",
+      "490:   private async handleSocketClose(event: CloseEvent) {",
+      "494:     const socketClosedNormally = event.wasClean && (event.code === 1000 || event.code === 1005);",
+      "496:     if (!socketClosedNormally) {",
+      "499:           new Error(`Session socket closed abnormally. code=${event.code} reason=${event.reason}`),",
+      "552:     this.socket?.close();"
+    ]
+  },
+  {
+    "repo": "langchain-ai/voice-demo",
+    "path": "src/voice_demo/livekit/agent.py",
+    "url": "https://raw.githubusercontent.com/langchain-ai/voice-demo/main/src/voice_demo/livekit/agent.py",
+    "status": 200,
+    "lines": [
+      "125:         if TTS_MODEL:",
+      "130:             stt=assemblyai.STT(model=STT_MODEL) if STT_MODEL else assemblyai.STT(),",
+      "131:             llm=lk_openai.LLM(model=LLM_MODEL, temperature=0.3),",
+      "134:             # livekit-agents >=1.6 replaced the top-level ``turn_detection`` arg",
+      "136:             turn_handling=TurnHandlingOptions(turn_detection=MultilingualModel()),",
+      "162:             # and report automatically when the AgentSession closes."
+    ]
+  }
+]

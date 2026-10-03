@@ -1,0 +1,25 @@
+{
+  "createdAt": "2026-10-02T07:29:24.751Z",
+  "model": "gpt-6-luna",
+  "mainModel": "gpt-5.6-terra",
+  "cases": [
+    {
+      "name": "correct",
+      "expected": "correct",
+      "pass": false,
+      "error": {
+        "status": 502,
+        "providerStatus": 400,
+        "message": "OpenAI could not complete the Luna request."
+      }
+    }
+  ],
+  "requests": [
+    {
+      "status": 400,
+      "elapsedMs": 186,
+      "providerError": "Invalid schema for response_format 'study_response': In context=('properties', 'sourceIds'), 'uniqueItems' is not permitted."
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,58 @@
+<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'"><style>*{box-sizing:border-box}html,body{margin:0;width:800px;height:500px;overflow:hidden;font-family:Arial,sans-serif;background:white}#stage{position:relative;width:800px;height:500px}svg{overflow:visible}</style></head><body><main id="stage"><canvas width="800" height="500"></canvas></main><script>window.__done=false;window.__error=null;window.__texts=[];window.__hits=[];window.__draws=[];window.addEventListener('error',e=>window.__error=String(e.message).slice(0,180));
+
+function draw(ctx, hit) {
+	ctx.fillStyle = "#ffffff";
+	ctx.fillRect(0, 0, 800, 500);
+	ctx.fillStyle = "#111111";
+	ctx.textAlign = "left";
+	ctx.textBaseline = "middle";
+	ctx.font = "bold 20px Arial";
+	ctx.fillText("Problem 6", 32, 30);
+	hit("problem-6", 32, 16, 120, 28);
+	const left = 100, top = 92, cellW = 68, cellH = 46;
+	const cols = 10, rows = 8;
+	ctx.font = "16px Arial";
+	ctx.textAlign = "center";
+	ctx.fillText("Player 2", left + cols * cellW / 2, 61);
+	hit("player-2-label", left, 47, cols * cellW, 26);
+	ctx.textAlign = "left";
+	ctx.fillText("Player 1", 22, top + rows * cellH / 2);
+	hit("player-1-label", 22, top + 8, 68, rows * cellH - 16);
+	ctx.textAlign = "center";
+	for (let c = 0; c < cols; c++) {
+		const x = left + c * cellW + cellW / 2;
+		ctx.fillText("c" + (c + 1), x, top - 18);
+		hit("column-c" + (c + 1), left + c * cellW, top - 32, cellW, 28);
+	}
+	ctx.textAlign = "right";
+	for (let r = 0; r < rows; r++) {
+		const y = top + r * cellH + cellH / 2;
+		ctx.fillText("r" + (r + 1), left - 12, y);
+		hit("row-r" + (r + 1), left - 72, top + r * cellH, 68, cellH);
+	}
+	ctx.strokeStyle = "#222222";
+	ctx.lineWidth = 1.25;
+	ctx.beginPath();
+	for (let c = 0; c <= cols; c++) {
+		const x = left + c * cellW;
+		ctx.moveTo(x, top);
+		ctx.lineTo(x, top + rows * cellH);
+	}
+	for (let r = 0; r <= rows; r++) {
+		const y = top + r * cellH;
+		ctx.moveTo(left, y);
+		ctx.lineTo(left + cols * cellW, y);
+	}
+	ctx.stroke();
+	for (let r = 0; r < rows; r++) {
+		for (let c = 0; c < cols; c++) {
+			hit("cell-r" + r + "-c" + c, left + c * cellW, top + r * cellH, cellW, cellH);
+		}
+	}
+}
+
+try{const canvas=document.querySelector('canvas'),native=canvas.getContext('2d');let count=0;
+ native.fillStyle='white';native.fillRect(0,0,800,500);native.fillStyle='#243544';native.strokeStyle='#243544';native.lineWidth=2;native.font='18px Arial';
+ const ctx=new Proxy(native,{get(target,key){const v=target[key];if(typeof v!=='function')return v;return(...args)=>{if(++count>12000)throw Error('Drawing call limit');if(key==='fillText'||key==='strokeText'){const [text,x,y]=args,m=target.measureText(String(text)),fontSize=parseFloat(target.font),transform=target.getTransform(),p=new DOMPoint(x,y).matrixTransform(transform);let left=p.x;if(target.textAlign==='center')left-=m.width/2;else if(['right','end'].includes(target.textAlign))left-=m.width;let y0=p.y-fontSize;if(target.textBaseline==='middle')y0=p.y-fontSize/2;else if(['top','hanging'].includes(target.textBaseline))y0=p.y;window.__texts.push({text:String(text),x:left,y:y0,width:m.width,height:fontSize,fontSize});}if(window.__draws.length<3000)window.__draws.push({op:key,args:args.map(v=>typeof v==='number'||typeof v==='string'?v:null)});return v.apply(target,args);};},set(target,key,value){target[key]=value;return true;}});
+ const hit=(id,x,y,width,height)=>{if(typeof id!=='string'||id.length>120||![x,y,width,height].every(Number.isFinite)||width<0||height<0||window.__hits.length>=2000)throw Error('Invalid hit region');window.__hits.push({id,x,y,width,height});};
+ draw(ctx,hit);window.__done=true;}catch(error){window.__error=String(error.message).slice(0,180);window.__done=true;}</script></body></html>

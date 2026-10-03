@@ -1,0 +1,4144 @@
+{
+  "generatedAt": "2026-10-02T19:17:51.190Z",
+  "scope": "Numbered GPT-Live smoke/policy benchmark files plus explicitly reconstructed direct transport probes; excludes interactive user demo sessions and all unrelated prior experiments.",
+  "runStatus": [
+    {
+      "file": "gpt-live-policy-01.json",
+      "startedAt": "2026-10-02T18:02:10.976Z",
+      "finishedAt": "2026-10-02T18:03:42.383Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 6,
+        "jev": 8
+      }
+    },
+    {
+      "file": "gpt-live-policy-02.json",
+      "startedAt": "2026-10-02T18:10:03.119Z",
+      "finishedAt": "2026-10-02T18:13:06.005Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 8,
+        "jev": 10
+      }
+    },
+    {
+      "file": "gpt-live-policy-03.json",
+      "startedAt": "2026-10-02T18:25:31.722Z",
+      "finishedAt": "2026-10-02T18:26:06.713Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 2,
+        "jev": 0
+      }
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "startedAt": "2026-10-02T18:43:24.598Z",
+      "finishedAt": "2026-10-02T18:45:45.026Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 14,
+        "jev": 27
+      }
+    },
+    {
+      "file": "gpt-live-policy-05.json",
+      "startedAt": "2026-10-02T19:15:48.734Z",
+      "finishedAt": "2026-10-02T19:17:11.904Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 10,
+        "jev": 17
+      }
+    },
+    {
+      "file": "gpt-live-smoke-01.json",
+      "startedAt": "2026-10-02T17:51:15.296Z",
+      "finishedAt": "2026-10-02T17:51:19.370Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 0,
+        "jev": 0
+      }
+    },
+    {
+      "file": "gpt-live-smoke-02.json",
+      "startedAt": "2026-10-02T17:51:56.286Z",
+      "finishedAt": "2026-10-02T17:52:00.635Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 0,
+        "jev": 0
+      }
+    },
+    {
+      "file": "gpt-live-smoke-03.json",
+      "startedAt": "2026-10-02T17:52:36.886Z",
+      "finishedAt": "2026-10-02T17:53:16.003Z",
+      "status": "incomplete",
+      "providerRequests": {
+        "openai": 4,
+        "jev": 3
+      }
+    },
+    {
+      "file": "gpt-live-smoke-04.json",
+      "startedAt": "2026-10-02T17:54:20.350Z",
+      "finishedAt": "2026-10-02T17:54:48.927Z",
+      "status": "completed",
+      "providerRequests": {
+        "openai": 2,
+        "jev": 3
+      }
+    },
+    {
+      "file": "gpt-live-smoke-05.json",
+      "startedAt": "2026-10-02T18:01:02.452Z",
+      "finishedAt": "2026-10-02T18:01:44.761Z",
+      "status": "completed",
+      "providerRequests": {
+        "openai": 2,
+        "jev": 3
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "file": "gpt-live-policy-01.json",
+      "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+      "arm": "eleven",
+      "status": "complete",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 18,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 18,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.027431019604,
+        "estimatedRequests": 16,
+        "partialEstimatedRequests": 1,
+        "unestimatedRequests": 2,
+        "estimateComplete": false,
+        "missingUsageRequests": 2,
+        "statusCounts": {
+          "completed": 15,
+          "canceled": 3
+        },
+        "units": {
+          "audioInputMs": 43202.5625,
+          "characters": 388,
+          "audioOutputMs": 27600,
+          "inputTokens": 21954,
+          "outputTokens": 888,
+          "cachedInputTokens": 8568,
+          "cacheWriteTokens": 4326,
+          "reasoningTokens": 281
+        },
+        "unitCoverage": {
+          "audioInputMs": 1,
+          "characters": 5,
+          "audioOutputMs": 5,
+          "inputTokens": 10,
+          "outputTokens": 10,
+          "cachedInputTokens": 3,
+          "cacheWriteTokens": 3,
+          "reasoningTokens": 3
+        },
+        "estimateSources": [
+          {
+            "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+              "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+            ]
+          },
+          {
+            "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+              "Characters measure submitted text, not verified billed characters or played audio.",
+              "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 7,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 7,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000380142,
+          "estimatedRequests": 7,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 7
+          },
+          "units": {
+            "inputTokens": 9051,
+            "outputTokens": 425
+          },
+          "unitCoverage": {
+            "inputTokens": 7,
+            "outputTokens": 7
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 5,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 5,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0181026,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "completed": 3,
+            "canceled": 2
+          },
+          "units": {
+            "inputTokens": 12903,
+            "outputTokens": 463,
+            "cachedInputTokens": 8568,
+            "cacheWriteTokens": 4326,
+            "reasoningTokens": 281
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3,
+            "cachedInputTokens": 3,
+            "cacheWriteTokens": 3,
+            "reasoningTokens": 3
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 6,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 6,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.008948277604,
+          "estimatedRequests": 6,
+          "partialEstimatedRequests": 1,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 5,
+            "canceled": 1
+          },
+          "units": {
+            "audioInputMs": 43202.5625,
+            "characters": 388,
+            "audioOutputMs": 27600
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 5,
+            "audioOutputMs": 5
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "complete",
+          "speechEndToCommitMs": 799.1,
+          "speechEndToFirstTextMs": 2890.5,
+          "speechEndToFirstReceivedAudioMs": 3012.4,
+          "commitToFirstAudioMs": 2213.3,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "unauthorized-hint",
+          "status": "complete",
+          "speechEndToCommitMs": 760,
+          "speechEndToFirstTextMs": 948.2,
+          "speechEndToFirstReceivedAudioMs": 1180.4,
+          "commitToFirstAudioMs": 420.4,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "problem-switch",
+          "status": "complete",
+          "speechEndToCommitMs": -1289.8,
+          "speechEndToFirstTextMs": 2762.6,
+          "speechEndToFirstReceivedAudioMs": 2887.4,
+          "commitToFirstAudioMs": 4177.2,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T18:03:42.383Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": true
+    },
+    {
+      "file": "gpt-live-policy-01.json",
+      "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+      "arm": "gpt-live",
+      "status": "failed",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 3,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 3,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.039290557333,
+        "estimatedRequests": 3,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": true,
+        "missingUsageRequests": 0,
+        "statusCounts": {
+          "completed": 3
+        },
+        "units": {
+          "sessionDurationMs": 40000,
+          "inputTokens": 5346,
+          "outputTokens": 240,
+          "cachedInputTokens": 2856,
+          "cacheWriteTokens": 1165,
+          "reasoningTokens": 52
+        },
+        "unitCoverage": {
+          "sessionDurationMs": 1,
+          "inputTokens": 2,
+          "outputTokens": 2,
+          "cachedInputTokens": 1,
+          "cacheWriteTokens": 1,
+          "reasoningTokens": 1
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-live-1-2026-10-02",
+            "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000055524,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "inputTokens": 1322,
+            "outputTokens": 39
+          },
+          "unitCoverage": {
+            "inputTokens": 1,
+            "outputTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0059017,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "inputTokens": 4024,
+            "outputTokens": 201,
+            "cachedInputTokens": 2856,
+            "cacheWriteTokens": 1165,
+            "reasoningTokens": 52
+          },
+          "unitCoverage": {
+            "inputTokens": 1,
+            "outputTokens": 1,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.033333333333,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "sessionDurationMs": 40000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "failed",
+          "speechEndToCommitMs": null,
+          "speechEndToFirstTextMs": null,
+          "speechEndToFirstReceivedAudioMs": null,
+          "commitToFirstAudioMs": null,
+          "usefulAnswerAudioMs": null,
+          "error": "Timed out waiting for final assistant transcript and audio-end"
+        }
+      ],
+      "spokenFidelity": [
+        {
+          "phase": "startup",
+          "approved": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        }
+      ],
+      "snapshotAt": "2026-10-02T18:03:42.383Z",
+      "voiceFinalizationConfirmed": true,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-policy-02.json",
+      "testId": "f3fa1bd8-9fea-474f-aadc-210f2ae71fc0",
+      "arm": "eleven",
+      "status": "complete",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 18,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 18,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.025182432938,
+        "estimatedRequests": 16,
+        "partialEstimatedRequests": 1,
+        "unestimatedRequests": 2,
+        "estimateComplete": false,
+        "missingUsageRequests": 2,
+        "statusCounts": {
+          "completed": 15,
+          "canceled": 3
+        },
+        "units": {
+          "audioInputMs": 40902.5625,
+          "characters": 421,
+          "audioOutputMs": 29200,
+          "inputTokens": 20640,
+          "outputTokens": 704,
+          "cachedInputTokens": 8568,
+          "cacheWriteTokens": 4022,
+          "reasoningTokens": 207
+        },
+        "unitCoverage": {
+          "audioInputMs": 1,
+          "characters": 5,
+          "audioOutputMs": 5,
+          "inputTokens": 10,
+          "outputTokens": 10,
+          "cachedInputTokens": 3,
+          "cacheWriteTokens": 3,
+          "reasoningTokens": 3
+        },
+        "estimateSources": [
+          {
+            "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+              "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+            ]
+          },
+          {
+            "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+              "Characters measure submitted text, not verified billed characters or played audio.",
+              "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 7,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 7,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000337722,
+          "estimatedRequests": 7,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 7
+          },
+          "units": {
+            "inputTokens": 8041,
+            "outputTokens": 371
+          },
+          "unitCoverage": {
+            "inputTokens": 7,
+            "outputTokens": 7
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 5,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 5,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0157826,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "completed": 3,
+            "canceled": 2
+          },
+          "units": {
+            "inputTokens": 12599,
+            "outputTokens": 333,
+            "cachedInputTokens": 8568,
+            "cacheWriteTokens": 4022,
+            "reasoningTokens": 207
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3,
+            "cachedInputTokens": 3,
+            "cacheWriteTokens": 3,
+            "reasoningTokens": 3
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 6,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 6,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.009062110938,
+          "estimatedRequests": 6,
+          "partialEstimatedRequests": 1,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 5,
+            "canceled": 1
+          },
+          "units": {
+            "audioInputMs": 40902.5625,
+            "characters": 421,
+            "audioOutputMs": 29200
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 5,
+            "audioOutputMs": 5
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "complete",
+          "speechEndToCommitMs": 807.6,
+          "speechEndToFirstTextMs": 1903.9,
+          "speechEndToFirstReceivedAudioMs": 2139.6,
+          "commitToFirstAudioMs": 1332,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "unauthorized-hint",
+          "status": "complete",
+          "speechEndToCommitMs": 941.3,
+          "speechEndToFirstTextMs": 1120.3,
+          "speechEndToFirstReceivedAudioMs": 1345.8,
+          "commitToFirstAudioMs": 404.5,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "problem-switch",
+          "status": "complete",
+          "speechEndToCommitMs": -1186.1,
+          "speechEndToFirstTextMs": 2513.4,
+          "speechEndToFirstReceivedAudioMs": 2720.9,
+          "commitToFirstAudioMs": 3907,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T18:13:06.005Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": true
+    },
+    {
+      "file": "gpt-live-policy-02.json",
+      "testId": "7ff2aecd-d2bb-4427-b6b4-8c8b48e7f8ce",
+      "arm": "gpt-live",
+      "status": "failed",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": {
+        "status": "invalid-for-performance",
+        "reason": "Host entered Idle Sleep during the measured request.",
+        "source": "pmset -g log, independently checked 2026-10-02",
+        "sleepAt": "2026-10-02T14:11:01-04:00",
+        "wakeAt": "2026-10-02T14:12:58-04:00",
+        "sleepingSeconds": 117
+      },
+      "usageRecorded": true,
+      "totals": {
+        "requests": 7,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 7,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.004399572,
+        "estimatedRequests": 3,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 4,
+        "estimateComplete": false,
+        "missingUsageRequests": 4,
+        "statusCounts": {
+          "canceled": 3,
+          "completed": 3,
+          "failed": 1
+        },
+        "units": {
+          "inputTokens": 6142,
+          "outputTokens": 166,
+          "cachedInputTokens": 2856,
+          "cacheWriteTokens": 1167,
+          "reasoningTokens": 34
+        },
+        "unitCoverage": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "cachedInputTokens": 1,
+          "cacheWriteTokens": 1,
+          "reasoningTokens": 1
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000088872,
+          "estimatedRequests": 2,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "completed": 2,
+            "failed": 1
+          },
+          "units": {
+            "inputTokens": 2116,
+            "outputTokens": 98
+          },
+          "unitCoverage": {
+            "inputTokens": 2,
+            "outputTokens": 2
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0043107,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "completed": 1,
+            "canceled": 2
+          },
+          "units": {
+            "inputTokens": 4026,
+            "outputTokens": 68,
+            "cachedInputTokens": 2856,
+            "cacheWriteTokens": 1167,
+            "reasoningTokens": 34
+          },
+          "unitCoverage": {
+            "inputTokens": 1,
+            "outputTokens": 1,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "canceled": 1
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "failed",
+          "speechEndToCommitMs": 816,
+          "speechEndToFirstTextMs": null,
+          "speechEndToFirstReceivedAudioMs": null,
+          "commitToFirstAudioMs": null,
+          "usefulAnswerAudioMs": null,
+          "error": "Timed out waiting for final assistant transcript and audio-end"
+        }
+      ],
+      "spokenFidelity": [
+        {
+          "phase": "startup",
+          "approved": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        }
+      ],
+      "snapshotAt": "2026-10-02T18:13:06.005Z",
+      "voiceFinalizationConfirmed": false,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-policy-03.json",
+      "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+      "arm": "eleven",
+      "status": "failed",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": "Microphone audio is arriving faster than the connection can send it.",
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 4,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 4,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.005563333333,
+        "estimatedRequests": 3,
+        "partialEstimatedRequests": 2,
+        "unestimatedRequests": 1,
+        "estimateComplete": false,
+        "missingUsageRequests": 1,
+        "statusCounts": {
+          "failed": 1,
+          "canceled": 2,
+          "completed": 1
+        },
+        "units": {
+          "audioInputMs": 7300,
+          "characters": 0,
+          "audioOutputMs": 0,
+          "inputTokens": 3840,
+          "outputTokens": 192,
+          "cachedInputTokens": 3100,
+          "cacheWriteTokens": 737,
+          "reasoningTokens": 33
+        },
+        "unitCoverage": {
+          "audioInputMs": 1,
+          "characters": 1,
+          "audioOutputMs": 1,
+          "inputTokens": 1,
+          "outputTokens": 1,
+          "cachedInputTokens": 1,
+          "cacheWriteTokens": 1,
+          "reasoningTokens": 1
+        },
+        "estimateSources": [
+          {
+            "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+              "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented.",
+              "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+            ]
+          },
+          {
+            "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+              "Characters measure submitted text, not verified billed characters or played audio.",
+              "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 2,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 2,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0047725,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "completed": 1,
+            "canceled": 1
+          },
+          "units": {
+            "inputTokens": 3840,
+            "outputTokens": 192,
+            "cachedInputTokens": 3100,
+            "cacheWriteTokens": 737,
+            "reasoningTokens": 33
+          },
+          "unitCoverage": {
+            "inputTokens": 1,
+            "outputTokens": 1,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 2,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 2,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000790833333,
+          "estimatedRequests": 2,
+          "partialEstimatedRequests": 2,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "failed": 1,
+            "canceled": 1
+          },
+          "units": {
+            "audioInputMs": 7300,
+            "characters": 0,
+            "audioOutputMs": 0
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 1,
+            "audioOutputMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T18:26:06.713Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "testId": "84ea19fe-ee4d-4d21-841b-fbb8861e6b81",
+      "arm": "eleven",
+      "status": "complete",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 23,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 23,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.036652052271,
+        "estimatedRequests": 22,
+        "partialEstimatedRequests": 1,
+        "unestimatedRequests": 1,
+        "estimateComplete": false,
+        "missingUsageRequests": 1,
+        "statusCounts": {
+          "completed": 21,
+          "canceled": 2
+        },
+        "units": {
+          "audioInputMs": 42202.5625,
+          "characters": 359,
+          "audioOutputMs": 26160,
+          "inputTokens": 38626,
+          "outputTokens": 1331,
+          "cachedInputTokens": 18858,
+          "cacheWriteTokens": 6729,
+          "reasoningTokens": 195
+        },
+        "unitCoverage": {
+          "audioInputMs": 1,
+          "characters": 5,
+          "audioOutputMs": 5,
+          "inputTokens": 16,
+          "outputTokens": 16,
+          "cachedInputTokens": 5,
+          "cacheWriteTokens": 5,
+          "reasoningTokens": 5
+        },
+        "estimateSources": [
+          {
+            "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+              "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+            ]
+          },
+          {
+            "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+              "Characters measure submitted text, not verified billed characters or played audio.",
+              "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge.",
+              "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 11,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 11,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000547008,
+          "estimatedRequests": 11,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 11
+          },
+          "units": {
+            "inputTokens": 13024,
+            "outputTokens": 751
+          },
+          "unitCoverage": {
+            "inputTokens": 11,
+            "outputTokens": 11
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge.",
+                "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 6,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 6,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0275841,
+          "estimatedRequests": 5,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "completed": 5,
+            "canceled": 1
+          },
+          "units": {
+            "inputTokens": 25602,
+            "outputTokens": 580,
+            "cachedInputTokens": 18858,
+            "cacheWriteTokens": 6729,
+            "reasoningTokens": 195
+          },
+          "unitCoverage": {
+            "inputTokens": 5,
+            "outputTokens": 5,
+            "cachedInputTokens": 5,
+            "cacheWriteTokens": 5,
+            "reasoningTokens": 5
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 6,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 6,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.008520944271,
+          "estimatedRequests": 6,
+          "partialEstimatedRequests": 1,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 5,
+            "canceled": 1
+          },
+          "units": {
+            "audioInputMs": 42202.5625,
+            "characters": 359,
+            "audioOutputMs": 26160
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 5,
+            "audioOutputMs": 5
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "complete",
+          "speechEndToCommitMs": 907.4,
+          "speechEndToFirstTextMs": 2866.2,
+          "speechEndToFirstReceivedAudioMs": 2990.8,
+          "commitToFirstAudioMs": 2083.4,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "unauthorized-hint",
+          "status": "complete",
+          "speechEndToCommitMs": 1053.6,
+          "speechEndToFirstTextMs": 1290.6,
+          "speechEndToFirstReceivedAudioMs": 1515.2,
+          "commitToFirstAudioMs": 461.6,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "problem-switch",
+          "status": "complete",
+          "speechEndToCommitMs": -1202,
+          "speechEndToFirstTextMs": 4325.8,
+          "speechEndToFirstReceivedAudioMs": 4639.7,
+          "commitToFirstAudioMs": 5841.7,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T18:45:45.026Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": true
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "testId": "5ed1d5bf-c143-476e-9341-504bd3c73bdc",
+      "arm": "gpt-live",
+      "status": "complete",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 14,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 14,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.066619361333,
+        "estimatedRequests": 14,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": true,
+        "missingUsageRequests": 0,
+        "statusCounts": {
+          "completed": 14
+        },
+        "units": {
+          "sessionDurationMs": 52000,
+          "inputTokens": 32081,
+          "outputTokens": 1063,
+          "cachedInputTokens": 13665,
+          "cacheWriteTokens": 6070,
+          "reasoningTokens": 114
+        },
+        "unitCoverage": {
+          "sessionDurationMs": 1,
+          "inputTokens": 13,
+          "outputTokens": 13,
+          "cachedInputTokens": 4,
+          "cacheWriteTokens": 4,
+          "reasoningTokens": 4
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-live-1-2026-10-02",
+            "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge.",
+              "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 9,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 9,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000518028,
+          "estimatedRequests": 9,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 9
+          },
+          "units": {
+            "inputTokens": 12334,
+            "outputTokens": 660
+          },
+          "unitCoverage": {
+            "inputTokens": 9,
+            "outputTokens": 9
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge.",
+                "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 4,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 4,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.022768,
+          "estimatedRequests": 4,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 4
+          },
+          "units": {
+            "inputTokens": 19747,
+            "outputTokens": 403,
+            "cachedInputTokens": 13665,
+            "cacheWriteTokens": 6070,
+            "reasoningTokens": 114
+          },
+          "unitCoverage": {
+            "inputTokens": 4,
+            "outputTokens": 4,
+            "cachedInputTokens": 4,
+            "cacheWriteTokens": 4,
+            "reasoningTokens": 4
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.043333333333,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "sessionDurationMs": 52000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "complete",
+          "speechEndToCommitMs": 1593.3,
+          "speechEndToFirstTextMs": 2781.7,
+          "speechEndToFirstReceivedAudioMs": 4248.7,
+          "commitToFirstAudioMs": 2655.4,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "unauthorized-hint",
+          "status": "complete",
+          "speechEndToCommitMs": 1286.9,
+          "speechEndToFirstTextMs": 1495.8,
+          "speechEndToFirstReceivedAudioMs": 1526.4,
+          "commitToFirstAudioMs": 239.5,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "problem-switch",
+          "status": "complete",
+          "speechEndToCommitMs": 966.9,
+          "speechEndToFirstTextMs": 3541.6,
+          "speechEndToFirstReceivedAudioMs": 4635.3,
+          "commitToFirstAudioMs": 3668.4,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [
+        {
+          "phase": "startup",
+          "approved": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "canonical-question",
+          "approved": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": " Let’s start with membrane transport.Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "unauthorized-hint",
+          "approved": "Use the Hint button for a nudge, or tell me your first step.",
+          "providerTranscript": " Sure. Use the Hint button for a nudge, or tell me your first step.",
+          "transcriptWhileDeliveryActive": " Use the Hint button for a nudge, or tell me your first step.",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "problem-switch",
+          "approved": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "providerTranscript": " Okay, switching to that equation.How do equal operations solve two x plus three equals eleven, and why are those operations valid?",
+          "transcriptWhileDeliveryActive": "How do equal operations solve two x plus three equals eleven, and why are those operations valid?",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        }
+      ],
+      "snapshotAt": "2026-10-02T18:45:45.026Z",
+      "voiceFinalizationConfirmed": true,
+      "performanceUsable": true
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "testId": "2db6ed52-8ca2-413a-843d-c1a1ccb1c819",
+      "arm": "gpt-live",
+      "status": "failed",
+      "qualityStatus": "voice-text-mismatch-requires-review",
+      "error": "GPT-Live changed the approved tutor reply. The experimental reply was stopped.",
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 12,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 12,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.044330666333,
+        "estimatedRequests": 12,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": true,
+        "missingUsageRequests": 0,
+        "statusCounts": {
+          "completed": 12
+        },
+        "units": {
+          "sessionDurationMs": 34000,
+          "inputTokens": 24144,
+          "outputTokens": 1035,
+          "cachedInputTokens": 10568,
+          "cacheWriteTokens": 5640,
+          "reasoningTokens": 359
+        },
+        "unitCoverage": {
+          "sessionDurationMs": 1,
+          "inputTokens": 11,
+          "outputTokens": 11,
+          "cachedInputTokens": 4,
+          "cacheWriteTokens": 4,
+          "reasoningTokens": 4
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-live-1-2026-10-02",
+            "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge.",
+              "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-6-luna-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 7,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 7,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000332808,
+          "estimatedRequests": 7,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 7
+          },
+          "units": {
+            "inputTokens": 7924,
+            "outputTokens": 405
+          },
+          "unitCoverage": {
+            "inputTokens": 7,
+            "outputTokens": 7
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge.",
+                "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 4,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 4,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.015664525,
+          "estimatedRequests": 4,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 4
+          },
+          "units": {
+            "inputTokens": 16220,
+            "outputTokens": 630,
+            "cachedInputTokens": 10568,
+            "cacheWriteTokens": 5640,
+            "reasoningTokens": 359
+          },
+          "unitCoverage": {
+            "inputTokens": 4,
+            "outputTokens": 4,
+            "cachedInputTokens": 4,
+            "cacheWriteTokens": 4,
+            "reasoningTokens": 4
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-6-luna-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.028333333333,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "sessionDurationMs": 34000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "complete",
+          "speechEndToCommitMs": 2222.8,
+          "speechEndToFirstTextMs": 5145.9,
+          "speechEndToFirstReceivedAudioMs": 6988.8,
+          "commitToFirstAudioMs": 4766,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "unauthorized-hint",
+          "status": "failed",
+          "speechEndToCommitMs": 1102.8,
+          "speechEndToFirstTextMs": 1318,
+          "speechEndToFirstReceivedAudioMs": null,
+          "commitToFirstAudioMs": null,
+          "usefulAnswerAudioMs": null,
+          "error": "GPT-Live changed the approved tutor reply. The experimental reply was stopped."
+        }
+      ],
+      "spokenFidelity": [
+        {
+          "phase": "startup",
+          "approved": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "canonical-question",
+          "approved": "Absolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Why is a cell membrane called a selectiveAbsolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Absolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "unauthorized-hint",
+          "approved": "Use the Hint button for a nudge, or tell me your first step.",
+          "providerTranscript": "Okay,",
+          "transcriptWhileDeliveryActive": "Okay,",
+          "normalization": "production-number-and-operator-preserving-normalizer; public text retained for independent semantic review",
+          "exactReportedTextMatch": false,
+          "approximateAudioEnd": false,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        }
+      ],
+      "snapshotAt": "2026-10-02T18:45:45.026Z",
+      "voiceFinalizationConfirmed": true,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-policy-05.json",
+      "testId": "0af79c9c-0a70-4187-8625-c7b687577612",
+      "arm": "eleven",
+      "status": "complete",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 24,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 24,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.045637061604,
+        "estimatedRequests": 22,
+        "partialEstimatedRequests": 1,
+        "unestimatedRequests": 2,
+        "estimateComplete": false,
+        "missingUsageRequests": 2,
+        "statusCounts": {
+          "completed": 21,
+          "canceled": 3
+        },
+        "units": {
+          "audioInputMs": 43802.5625,
+          "characters": 372,
+          "audioOutputMs": 26560,
+          "inputTokens": 40757,
+          "outputTokens": 1451,
+          "cachedInputTokens": 15942,
+          "cacheWriteTokens": 10148,
+          "reasoningTokens": 216
+        },
+        "unitCoverage": {
+          "audioInputMs": 1,
+          "characters": 5,
+          "audioOutputMs": 5,
+          "inputTokens": 16,
+          "outputTokens": 16,
+          "cachedInputTokens": 5,
+          "cacheWriteTokens": 5,
+          "reasoningTokens": 5
+        },
+        "estimateSources": [
+          {
+            "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+              "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+            ]
+          },
+          {
+            "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+              "Characters measure submitted text, not verified billed characters or played audio.",
+              "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge.",
+              "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 11,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 11,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000615384,
+          "estimatedRequests": 11,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 11
+          },
+          "units": {
+            "inputTokens": 14652,
+            "outputTokens": 818
+          },
+          "unitCoverage": {
+            "inputTokens": 11,
+            "outputTokens": 11
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge.",
+                "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 7,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 7,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0361844,
+          "estimatedRequests": 5,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "completed": 5,
+            "canceled": 2
+          },
+          "units": {
+            "inputTokens": 26105,
+            "outputTokens": 633,
+            "cachedInputTokens": 15942,
+            "cacheWriteTokens": 10148,
+            "reasoningTokens": 216
+          },
+          "unitCoverage": {
+            "inputTokens": 5,
+            "outputTokens": 5,
+            "cachedInputTokens": 5,
+            "cacheWriteTokens": 5,
+            "reasoningTokens": 5
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 6,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 6,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.008837277604,
+          "estimatedRequests": 6,
+          "partialEstimatedRequests": 1,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 5,
+            "canceled": 1
+          },
+          "units": {
+            "audioInputMs": 43802.5625,
+            "characters": 372,
+            "audioOutputMs": 26560
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 5,
+            "audioOutputMs": 5
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "complete",
+          "speechEndToCommitMs": 814.7,
+          "speechEndToFirstTextMs": 2880.3,
+          "speechEndToFirstReceivedAudioMs": 3090.3,
+          "commitToFirstAudioMs": 2275.6,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "unauthorized-hint",
+          "status": "complete",
+          "speechEndToCommitMs": 851.2,
+          "speechEndToFirstTextMs": 1094.1,
+          "speechEndToFirstReceivedAudioMs": 1379.3,
+          "commitToFirstAudioMs": 528.1,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "problem-switch",
+          "status": "complete",
+          "speechEndToCommitMs": -1145.7,
+          "speechEndToFirstTextMs": 3713.8,
+          "speechEndToFirstReceivedAudioMs": 3863.5,
+          "commitToFirstAudioMs": 5009.2,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T19:17:11.904Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": true
+    },
+    {
+      "file": "gpt-live-policy-05.json",
+      "testId": "345d6eb4-4f10-4837-8e1d-9bb2f54a7487",
+      "arm": "gpt-live",
+      "status": "failed",
+      "qualityStatus": "voice-text-mismatch-requires-review",
+      "error": "GPT-Live changed the approved tutor reply. The experimental reply was stopped.",
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 10,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 10,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.037644456667,
+        "estimatedRequests": 10,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": true,
+        "missingUsageRequests": 0,
+        "statusCounts": {
+          "completed": 10
+        },
+        "units": {
+          "sessionDurationMs": 29000,
+          "inputTokens": 20748,
+          "outputTokens": 533,
+          "cachedInputTokens": 10567,
+          "cacheWriteTokens": 3627,
+          "reasoningTokens": 21
+        },
+        "unitCoverage": {
+          "sessionDurationMs": 1,
+          "inputTokens": 9,
+          "outputTokens": 9,
+          "cachedInputTokens": 3,
+          "cacheWriteTokens": 3,
+          "reasoningTokens": 3
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-live-1-2026-10-02",
+            "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge.",
+              "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 6,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 6,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.00027489,
+          "estimatedRequests": 6,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 6
+          },
+          "units": {
+            "inputTokens": 6545,
+            "outputTokens": 366
+          },
+          "unitCoverage": {
+            "inputTokens": 6,
+            "outputTokens": 6
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge.",
+                "The recorded alias is estimated using its verified Jev 1.13 mapping; future alias changes require a rate refresh."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0132029,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 3
+          },
+          "units": {
+            "inputTokens": 14203,
+            "outputTokens": 167,
+            "cachedInputTokens": 10567,
+            "cacheWriteTokens": 3627,
+            "reasoningTokens": 21
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3,
+            "cachedInputTokens": 3,
+            "cacheWriteTokens": 3,
+            "reasoningTokens": 3
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.024166666667,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "sessionDurationMs": 29000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "canonical-question",
+          "status": "complete",
+          "speechEndToCommitMs": 2250.3,
+          "speechEndToFirstTextMs": 3624.3,
+          "speechEndToFirstReceivedAudioMs": 4390,
+          "commitToFirstAudioMs": 2139.7,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        },
+        {
+          "id": "unauthorized-hint",
+          "status": "failed",
+          "speechEndToCommitMs": 1227.9,
+          "speechEndToFirstTextMs": 1424.6,
+          "speechEndToFirstReceivedAudioMs": 1685.4,
+          "commitToFirstAudioMs": 457.5,
+          "usefulAnswerAudioMs": null,
+          "error": "GPT-Live changed the approved tutor reply. The experimental reply was stopped."
+        }
+      ],
+      "spokenFidelity": [
+        {
+          "phase": "startup",
+          "approved": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "number-and-operator-preserving; one finite neutral prefix allowed only with complete approved body; raw text retained",
+          "trimmedLiteralTextMatch": true,
+          "exactReportedTextMatch": true,
+          "approvedBodyMatch": true,
+          "allowedNeutralPrefixApplied": false,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "canonical-question",
+          "approved": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Why is a cell membrane called a selectiveWhy is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "number-and-operator-preserving; one finite neutral prefix allowed only with complete approved body; raw text retained",
+          "trimmedLiteralTextMatch": true,
+          "exactReportedTextMatch": true,
+          "approvedBodyMatch": true,
+          "allowedNeutralPrefixApplied": false,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "unauthorized-hint",
+          "approved": "Use the Hint button for a nudge, or tell me your first step.",
+          "providerTranscript": "Okay, I’ll",
+          "transcriptWhileDeliveryActive": "Okay, I’ll",
+          "normalization": "number-and-operator-preserving; one finite neutral prefix allowed only with complete approved body; raw text retained",
+          "trimmedLiteralTextMatch": false,
+          "exactReportedTextMatch": false,
+          "approvedBodyMatch": false,
+          "allowedNeutralPrefixApplied": false,
+          "approximateAudioEnd": false,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        }
+      ],
+      "snapshotAt": "2026-10-02T19:17:11.904Z",
+      "voiceFinalizationConfirmed": true,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-smoke-01.json",
+      "testId": "gpt-live-eleven-c8fbe1d6-be68-4623-83e8-6c8cc88e9db5",
+      "arm": "eleven",
+      "status": "failed",
+      "qualityStatus": "not-recorded",
+      "error": "Choose quiz, test, or final.",
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 0,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 0,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": null,
+        "estimatedRequests": 0,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": false,
+        "missingUsageRequests": 0,
+        "statusCounts": {},
+        "units": {},
+        "unitCoverage": {},
+        "estimateSources": []
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        }
+      ],
+      "trials": [],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T17:51:19.370Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-smoke-02.json",
+      "testId": "gpt-live-eleven-7f4eddc1-578c-492f-af4c-3671ebf76160",
+      "arm": "eleven",
+      "status": "failed",
+      "qualityStatus": "not-recorded",
+      "error": "Send a valid test ID.",
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 0,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 0,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": null,
+        "estimatedRequests": 0,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": false,
+        "missingUsageRequests": 0,
+        "statusCounts": {},
+        "units": {},
+        "unitCoverage": {},
+        "estimateSources": []
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        }
+      ],
+      "trials": [],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T17:52:00.635Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-smoke-03.json",
+      "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+      "arm": "eleven",
+      "status": "complete",
+      "qualityStatus": "not-recorded",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 9,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 9,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.021027216542,
+        "estimatedRequests": 8,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 1,
+        "estimateComplete": false,
+        "missingUsageRequests": 1,
+        "statusCounts": {
+          "completed": 8,
+          "canceled": 1
+        },
+        "units": {
+          "audioInputMs": 12933.125,
+          "characters": 293,
+          "audioOutputMs": 19360,
+          "inputTokens": 11144,
+          "outputTokens": 523,
+          "cachedInputTokens": 2856,
+          "cacheWriteTokens": 4498,
+          "reasoningTokens": 171
+        },
+        "unitCoverage": {
+          "audioInputMs": 1,
+          "characters": 2,
+          "audioOutputMs": 2,
+          "inputTokens": 5,
+          "outputTokens": 5,
+          "cachedInputTokens": 2,
+          "cacheWriteTokens": 2,
+          "reasoningTokens": 2
+        },
+        "estimateSources": [
+          {
+            "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+              "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+            ]
+          },
+          {
+            "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+            "source": "https://elevenlabs.io/pricing/api",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+              "Characters measure submitted text, not verified billed characters or played audio."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000158928,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 3
+          },
+          "units": {
+            "inputTokens": 3784,
+            "outputTokens": 155
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0162442,
+          "estimatedRequests": 2,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "completed": 2,
+            "canceled": 1
+          },
+          "units": {
+            "inputTokens": 7360,
+            "outputTokens": 368,
+            "cachedInputTokens": 2856,
+            "cacheWriteTokens": 4498,
+            "reasoningTokens": 171
+          },
+          "unitCoverage": {
+            "inputTokens": 2,
+            "outputTokens": 2,
+            "cachedInputTokens": 2,
+            "cacheWriteTokens": 2,
+            "reasoningTokens": 2
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.004624088542,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 3
+          },
+          "units": {
+            "audioInputMs": 12933.125,
+            "characters": 293,
+            "audioOutputMs": 19360
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 2,
+            "audioOutputMs": 2
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "transport-practice",
+          "status": "complete",
+          "speechEndToCommitMs": 846.4,
+          "speechEndToFirstTextMs": 3238.4,
+          "speechEndToFirstReceivedAudioMs": 3475.2,
+          "commitToFirstAudioMs": 2628.8,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T17:53:16.003Z",
+      "voiceFinalizationConfirmed": null,
+      "performanceUsable": true
+    },
+    {
+      "file": "gpt-live-smoke-03.json",
+      "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+      "arm": "gpt-live",
+      "status": "failed",
+      "qualityStatus": "not-recorded",
+      "error": "Timed out waiting for startup greeting audio-end",
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 2,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 2,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.015833333333,
+        "estimatedRequests": 1,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 1,
+        "estimateComplete": false,
+        "missingUsageRequests": 1,
+        "statusCounts": {
+          "completed": 1,
+          "failed": 1
+        },
+        "units": {
+          "sessionDurationMs": 19000
+        },
+        "unitCoverage": {
+          "sessionDurationMs": 1
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-live-1-2026-10-02",
+            "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "failed": 1
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.015833333333,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "sessionDurationMs": 19000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T17:53:16.003Z",
+      "voiceFinalizationConfirmed": true,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-smoke-04.json",
+      "testId": "c7053ae4-70f0-4805-9cc4-5bcfc1fef22c",
+      "arm": "gpt-live",
+      "status": "complete",
+      "qualityStatus": "failed-independent-fidelity-review",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 6,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 6,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.027288107333,
+        "estimatedRequests": 6,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": true,
+        "missingUsageRequests": 0,
+        "statusCounts": {
+          "completed": 6
+        },
+        "units": {
+          "sessionDurationMs": 22000,
+          "inputTokens": 11471,
+          "outputTokens": 378,
+          "cachedInputTokens": 5712,
+          "cacheWriteTokens": 2006,
+          "reasoningTokens": 88
+        },
+        "unitCoverage": {
+          "sessionDurationMs": 1,
+          "inputTokens": 5,
+          "outputTokens": 5,
+          "cachedInputTokens": 2,
+          "cacheWriteTokens": 2,
+          "reasoningTokens": 2
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-live-1-2026-10-02",
+            "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000157374,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 3
+          },
+          "units": {
+            "inputTokens": 3747,
+            "outputTokens": 159
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 2,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 2,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0087974,
+          "estimatedRequests": 2,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 2
+          },
+          "units": {
+            "inputTokens": 7724,
+            "outputTokens": 219,
+            "cachedInputTokens": 5712,
+            "cacheWriteTokens": 2006,
+            "reasoningTokens": 88
+          },
+          "unitCoverage": {
+            "inputTokens": 2,
+            "outputTokens": 2,
+            "cachedInputTokens": 2,
+            "cacheWriteTokens": 2,
+            "reasoningTokens": 2
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.018333333333,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "sessionDurationMs": 22000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "transport-practice",
+          "status": "complete",
+          "speechEndToCommitMs": 1292,
+          "speechEndToFirstTextMs": 3040.2,
+          "speechEndToFirstReceivedAudioMs": 3338.1,
+          "commitToFirstAudioMs": 2046.1,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [],
+      "snapshotAt": "2026-10-02T17:54:48.927Z",
+      "voiceFinalizationConfirmed": true,
+      "performanceUsable": false
+    },
+    {
+      "file": "gpt-live-smoke-05.json",
+      "testId": "de80c563-0f01-4595-9506-5d7733b28f07",
+      "arm": "gpt-live",
+      "status": "complete",
+      "qualityStatus": "not-semantically-reviewed",
+      "error": null,
+      "environment": null,
+      "usageRecorded": true,
+      "totals": {
+        "requests": 6,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 6,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.04023021,
+        "estimatedRequests": 6,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": true,
+        "missingUsageRequests": 0,
+        "statusCounts": {
+          "completed": 6
+        },
+        "units": {
+          "sessionDurationMs": 36000,
+          "inputTokens": 12237,
+          "outputTokens": 452,
+          "cachedInputTokens": 5712,
+          "cacheWriteTokens": 2214,
+          "reasoningTokens": 122
+        },
+        "unitCoverage": {
+          "sessionDurationMs": 1,
+          "inputTokens": 5,
+          "outputTokens": 5,
+          "cachedInputTokens": 2,
+          "cacheWriteTokens": 2,
+          "reasoningTokens": 2
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-live-1-2026-10-02",
+            "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+            ]
+          },
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          {
+            "rateId": "typesafe-jev-1.13-2026-10-02",
+            "source": "https://docs.typesafe.ai/models",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Jev is priced per input token; output tokens have no list-price charge."
+            ]
+          }
+        ]
+      },
+      "categories": [
+        {
+          "id": "jev",
+          "label": "Jev",
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.00018081,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 3
+          },
+          "units": {
+            "inputTokens": 4305,
+            "outputTokens": 172
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "label": "Thinking / LLM",
+          "requests": 2,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 2,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.0100494,
+          "estimatedRequests": 2,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 2
+          },
+          "units": {
+            "inputTokens": 7932,
+            "outputTokens": 280,
+            "cachedInputTokens": 5712,
+            "cacheWriteTokens": 2214,
+            "reasoningTokens": 122
+          },
+          "unitCoverage": {
+            "inputTokens": 2,
+            "outputTokens": 2,
+            "cachedInputTokens": 2,
+            "cacheWriteTokens": 2,
+            "reasoningTokens": 2
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "Voice",
+          "requests": 1,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 1,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.03,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 1
+          },
+          "units": {
+            "sessionDurationMs": 36000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "id": "transport-practice",
+          "status": "complete",
+          "speechEndToCommitMs": 1271,
+          "speechEndToFirstTextMs": 2068.9,
+          "speechEndToFirstReceivedAudioMs": 3308.7,
+          "commitToFirstAudioMs": 2037.7,
+          "usefulAnswerAudioMs": null,
+          "error": null
+        }
+      ],
+      "spokenFidelity": [
+        {
+          "phase": "startup",
+          "approved": "Let’s start with a test-level cell transport question. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Let’s start with a test-level cell transport question. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Let’s start with a test-level cell transport question. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        },
+        {
+          "phase": "transport-practice",
+          "approved": "Great—let’s use the comparison already on the board. Explain how passive and active transport differ, including the direction each moves relative to the concentration gradient and whether energy is used.",
+          "providerTranscript": " Okay. Great—let’s use the comparison already on the board. Explain how passive and active transport differ, including the direction each moves relative to the concentration gradient and whether energy is used.",
+          "transcriptWhileDeliveryActive": " Great—let’s use the comparison already on the board. Explain how passive and active transport differ, including the direction each moves relative to the concentration gradient and whether energy is used.",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        }
+      ],
+      "snapshotAt": "2026-10-02T18:01:44.761Z",
+      "voiceFinalizationConfirmed": true,
+      "performanceUsable": true
+    }
+  ],
+  "duplicateSnapshotsIgnored": [],
+  "aggregate": {
+    "benchmarkSessions": 16,
+    "applicationRequests": 156,
+    "sessionsFailed": 8,
+    "environmentInvalidSessions": 1,
+    "sessionsStillRunning": 0,
+    "sessionsWithoutUsage": 0,
+    "benchmarkEstimatedUsd": 0.437129380624,
+    "directVoiceEstimatedUsd": 0.014166666667,
+    "measuredUsageEstimatedUsd": 0.451296047291,
+    "exactBilledUsd": null,
+    "inputClipEstimatedUsd": null,
+    "benchmarkLiveProviderSeconds": 232,
+    "directLiveProviderSeconds": 17,
+    "accessProviderSeconds": 0,
+    "confirmedBenchmarkLiveProviderSeconds": 232,
+    "liveSessionsWithoutConfirmedFinalDuration": 1,
+    "allRecordedLiveProviderSeconds": 249,
+    "liveVoiceListPriceEstimatedUsd": 0.2075,
+    "missingUsageRequests": 14,
+    "unestimatedRequests": 14,
+    "categories": {
+      "voice": {
+        "requests": 37,
+        "estimatedUsd": 0.234116865624,
+        "unestimatedRequests": 1,
+        "partialEstimatedRequests": 6,
+        "units": {
+          "audioInputMs": 190343.375,
+          "characters": 1833,
+          "audioOutputMs": 128880,
+          "sessionDurationMs": 232000
+        },
+        "statusCounts": {
+          "completed": 30,
+          "canceled": 6,
+          "failed": 1
+        }
+      },
+      "llm": {
+        "requests": 48,
+        "estimatedUsd": 0.199365025,
+        "unestimatedRequests": 12,
+        "partialEstimatedRequests": 0,
+        "units": {
+          "inputTokens": 162285,
+          "outputTokens": 4537,
+          "cachedInputTokens": 109828,
+          "cacheWriteTokens": 52349,
+          "reasoningTokens": 1893
+        },
+        "statusCounts": {
+          "completed": 36,
+          "canceled": 11,
+          "failed": 1
+        }
+      },
+      "jev": {
+        "requests": 71,
+        "estimatedUsd": 0.00364749,
+        "unestimatedRequests": 1,
+        "partialEstimatedRequests": 0,
+        "units": {
+          "inputTokens": 86845,
+          "outputTokens": 4419
+        },
+        "statusCounts": {
+          "completed": 70,
+          "failed": 1
+        }
+      }
+    },
+    "inputClipCalls": 20,
+    "inputClipCharacters": 1145
+  },
+  "inputClips": [
+    {
+      "file": "gpt-live-policy-01.json",
+      "id": "canonical-question",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 84706,
+      "sha256": "37949648177259c46843599525f2c0b3673ddba36ed99df3be6e667362af4165",
+      "durationMs": 2647.0625,
+      "energySpeechEndMs": 2460,
+      "generationCharacters": 46,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-01.json",
+      "id": "unauthorized-hint",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 69846,
+      "sha256": "e8f68707c62015cbba963b22bfe47ebefc2142d6356a5c9f4cc9a20ead5233b8",
+      "durationMs": 2182.6875,
+      "energySpeechEndMs": 1940,
+      "generationCharacters": 36,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-01.json",
+      "id": "problem-switch",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 178330,
+      "sha256": "ca0b0d68c7aecad697b9aa67d07a300542ad264fb7d7e63ad65202519c949a53",
+      "durationMs": 5572.8125,
+      "energySpeechEndMs": 5280,
+      "generationCharacters": 82,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-02.json",
+      "id": "canonical-question",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 84706,
+      "sha256": "ee17f4dd24756ba4407e36a6771dbade886208aac89d9ed7a0af8212753ff541",
+      "durationMs": 2647.0625,
+      "energySpeechEndMs": 2460,
+      "generationCharacters": 46,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-02.json",
+      "id": "unauthorized-hint",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 69846,
+      "sha256": "1d7cc2a25f3b1fc0162f1d454bf3346220da9a615c6117dbed13169954b685e4",
+      "durationMs": 2182.6875,
+      "energySpeechEndMs": 1940,
+      "generationCharacters": 36,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-02.json",
+      "id": "problem-switch",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 178330,
+      "sha256": "f7963fde24e1316d2c5a3621f403f43623f2f094e9068e7d4dd417011b784204",
+      "durationMs": 5572.8125,
+      "energySpeechEndMs": 5280,
+      "generationCharacters": 82,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-03.json",
+      "id": "canonical-question",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 84706,
+      "sha256": "c8157fc8e7e9b93be0666c43b0ee77e75eabcd8784dee673cc3bd4213a1f9cc1",
+      "durationMs": 2647.0625,
+      "energySpeechEndMs": 2460,
+      "generationCharacters": 46,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-03.json",
+      "id": "unauthorized-hint",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 69846,
+      "sha256": "880f443cacd8668eac9851bff80119fe53f30f935474c1fc23fae7409b4909d5",
+      "durationMs": 2182.6875,
+      "energySpeechEndMs": 1940,
+      "generationCharacters": 36,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-03.json",
+      "id": "problem-switch",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 178330,
+      "sha256": "08fd6f1358e39d2c8ff859670482568f86a8ff7753e98d34f795474f8faacf61",
+      "durationMs": 5572.8125,
+      "energySpeechEndMs": 5280,
+      "generationCharacters": 82,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "id": "canonical-question",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 84706,
+      "sha256": "bc3558463336defd1502bd9c73821199e9cf4e8736cfd63c961b5c1fadcb16d3",
+      "durationMs": 2647.0625,
+      "energySpeechEndMs": 2460,
+      "generationCharacters": 46,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "id": "unauthorized-hint",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 69846,
+      "sha256": "eae3b65df287c77dd098ff1556ee9c3458d2b592b3a8d535ad1a383037e8626a",
+      "durationMs": 2182.6875,
+      "energySpeechEndMs": 1940,
+      "generationCharacters": 36,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "id": "problem-switch",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 178330,
+      "sha256": "29207e3507663eacdac5b0b0ecdf9045415b7e9117a9eeff0fd61a785c251cda",
+      "durationMs": 5572.8125,
+      "energySpeechEndMs": 5280,
+      "generationCharacters": 82,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-05.json",
+      "id": "canonical-question",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 84706,
+      "sha256": "b4cd77d0e9f10623a500e8a42c6378607869eeff458b4fbdae40e02ee61b0deb",
+      "durationMs": 2647.0625,
+      "energySpeechEndMs": 2460,
+      "generationCharacters": 46,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-05.json",
+      "id": "unauthorized-hint",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 69846,
+      "sha256": "35ab240c772ac785af1f4e24575e156433cddf18798a62b29bc24b03dd1f81e8",
+      "durationMs": 2182.6875,
+      "energySpeechEndMs": 1940,
+      "generationCharacters": 36,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-policy-05.json",
+      "id": "problem-switch",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 178330,
+      "sha256": "e11214637905a07f7965f80464a7ba7ff522bcde368548f8b9528e3df3a7f64b",
+      "durationMs": 5572.8125,
+      "energySpeechEndMs": 5280,
+      "generationCharacters": 82,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-smoke-01.json",
+      "id": "transport-practice",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 132260,
+      "sha256": "95c5004103cb21a42740b17ead0cd1f46d19eae2a4f2411c4569f71419086216",
+      "durationMs": 4133.125,
+      "energySpeechEndMs": 3890,
+      "generationCharacters": 65,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-smoke-02.json",
+      "id": "transport-practice",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 132260,
+      "sha256": "6a7a99b9743445e897a3fe3ec5a391b287dbe5f9e87cf046167ecb87d9798bfc",
+      "durationMs": 4133.125,
+      "energySpeechEndMs": 3890,
+      "generationCharacters": 65,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-smoke-03.json",
+      "id": "transport-practice",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 132260,
+      "sha256": "a59e823315d8036ede0dc7251a2c5fb639289bb65b2893ca57f11c736299717e",
+      "durationMs": 4133.125,
+      "energySpeechEndMs": 3890,
+      "generationCharacters": 65,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-smoke-04.json",
+      "id": "transport-practice",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 132260,
+      "sha256": "2a9ff957c879ccba647052b38bd334ff10379a267f1549326748bb192ee22cbd",
+      "durationMs": 4133.125,
+      "energySpeechEndMs": 3890,
+      "generationCharacters": 65,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    },
+    {
+      "file": "gpt-live-smoke-05.json",
+      "id": "transport-practice",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 132260,
+      "sha256": "1ab1463474f4bf3f7e4b3f6c6360434a216d3cac3ae0116f8eb6f3d7cc6b9524",
+      "durationMs": 4133.125,
+      "energySpeechEndMs": 3890,
+      "generationCharacters": 65,
+      "chargedCredits": null,
+      "estimatedUsd": null
+    }
+  ],
+  "accountObservations": [
+    {
+      "file": "gpt-live-policy-01.json",
+      "beforeUsed": 3115,
+      "afterUsed": 3201,
+      "observedAccountCreditDelta": 86,
+      "reservedCredits": 6552,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-policy-02.json",
+      "beforeUsed": 3201,
+      "afterUsed": 3287,
+      "observedAccountCreditDelta": 86,
+      "reservedCredits": 9585,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-policy-03.json",
+      "beforeUsed": 3287,
+      "afterUsed": null,
+      "observedAccountCreditDelta": null,
+      "reservedCredits": 9164,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-policy-04.json",
+      "beforeUsed": 3326,
+      "afterUsed": 3409,
+      "observedAccountCreditDelta": 83,
+      "reservedCredits": 9523,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-policy-05.json",
+      "beforeUsed": 3409,
+      "afterUsed": 3471,
+      "observedAccountCreditDelta": 62,
+      "reservedCredits": 9536,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-smoke-01.json",
+      "beforeUsed": 3003,
+      "afterUsed": 3003,
+      "observedAccountCreditDelta": 0,
+      "reservedCredits": 65,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-smoke-02.json",
+      "beforeUsed": 3017,
+      "afterUsed": 3017,
+      "observedAccountCreditDelta": 0,
+      "reservedCredits": 65,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-smoke-03.json",
+      "beforeUsed": 3031,
+      "afterUsed": 3031,
+      "observedAccountCreditDelta": 0,
+      "reservedCredits": 6358,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-smoke-04.json",
+      "beforeUsed": 3087,
+      "afterUsed": 3087,
+      "observedAccountCreditDelta": 0,
+      "reservedCredits": 65,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    },
+    {
+      "file": "gpt-live-smoke-05.json",
+      "beforeUsed": 3101,
+      "afterUsed": 3115,
+      "observedAccountCreditDelta": 14,
+      "reservedCredits": 65,
+      "limitation": "Account-wide and possibly delayed; not attributable input-clip charges. Reservations are limits, not spend."
+    }
+  ],
+  "directProbes": [
+    {
+      "id": "initial-approved-greeting",
+      "at": "2026-10-02T17:54:31.707Z",
+      "evidence": "completed exec session60526",
+      "provenance": "reconstructed-from-tool-output",
+      "providerFinalSeconds": 4,
+      "finalized": true,
+      "backendRequests": 0,
+      "firstDeliveredAudioFromApprovedCommentaryMs": 904,
+      "actualTextMatched": true,
+      "limitation": "Continuous silent PCM; fixed approved greeting; excludes speech recognition and tutor reasoning."
+    },
+    {
+      "id": "revised-approved-utterances",
+      "at": "2026-10-02T18:00:36.131Z",
+      "evidence": "completed exec session82998",
+      "provenance": "reconstructed-from-tool-output",
+      "providerFinalSeconds": 13,
+      "finalized": true,
+      "backendRequests": 0,
+      "trials": [
+        {
+          "id": "greeting",
+          "firstDeliveredAudioFromApprovedCommentaryMs": 1087,
+          "completeMs": 5886,
+          "actualTextMatched": true
+        },
+        {
+          "id": "membrane-question",
+          "firstDeliveredAudioFromApprovedCommentaryMs": 883,
+          "completeMs": 7039,
+          "actualTextMatched": true
+        }
+      ],
+      "limitation": "Continuous silent PCM; fixed approved replies; excludes speech recognition and tutor reasoning."
+    }
+  ],
+  "accessProbe": {
+    "file": "gpt-live-access.json",
+    "access": true,
+    "finalized": true,
+    "startMs": 1553,
+    "providerSeconds": 0
+  },
+  "sources": [
+    "https://elevenlabs.io/pricing/api",
+    "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+    "https://docs.typesafe.ai/models",
+    "https://developers.openai.com/api/docs/models/gpt-live-1",
+    "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  ],
+  "limitations": [
+    "All USD figures are public list-price estimates, not invoice charges. Missing failed/canceled backend usage and input-clip synthesis USD remain excluded, not zero.",
+    "Session.usage.updated and final session.closed are cumulative snapshots. This report counts each per-test final usage snapshot once and never adds intermediate provider events.",
+    "Category totals partition benchmark estimates. Do not add category totals or GPT-Live voice subtotals to the already combined experiment estimate.",
+    "Input synthesis reservations do not show charged credits. Account before/after changes can lag or include other activity and cannot be converted into attributable input-clip USD.",
+    "First received audio can be filler or an unauthorized continuation. It is not first useful approved-answer latency. Different runs may use different generated PCM even with the same seed.",
+    "Direct fixed-text probes test voice transport only and cannot be compared directly with end-to-end student-speech latency.",
+    "Normalized transcript equality does not prove that corresponding audio was played. Legacy smoke04 is explicitly quality-failed despite transport complete.",
+    "Policy02 Live overlapped an independently verified 117-second host idle sleep. Its timings and timeout are invalid for API performance/reliability inference; its measured cost still belongs in the subtotal and absent final usage remains unknown."
+  ]
+}

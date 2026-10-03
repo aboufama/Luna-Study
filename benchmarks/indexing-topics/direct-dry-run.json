@@ -1,0 +1,690 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:46:42.093Z",
+  "liveProviders": false,
+  "model": "gpt-6-luna",
+  "budget": {
+    "maximumPaidRequests": 3,
+    "paidRequests": 0
+  },
+  "sources": [
+    {
+      "id": "econ2801-pset3",
+      "name": "Problem Set 3 Econ 2801 2026.pdf",
+      "pdfSha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+      "pdfBytes": 107943,
+      "pages": 2,
+      "characters": 4366,
+      "textSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset2-solutions",
+      "name": "Problem_Set_2_Detailed_Answer_Discussion_Fall_2026_ECON_2801.pdf",
+      "pdfSha256": "637afcb2362a123dd12012a6209a8299d01ef308ddbb413542509e7e56640f43",
+      "pdfBytes": 108259,
+      "pages": 5,
+      "characters": 10412,
+      "textSha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset5-solutions",
+      "name": "Solution_Problem_Set_5_Fall_2026_ECON_2801__Corrected_.pdf",
+      "pdfSha256": "949198239c729af4f88de8fbe2512fa368f62d489b999e5615c26f299a0d31cf",
+      "pdfBytes": 115074,
+      "pages": 6,
+      "characters": 10903,
+      "textSha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180",
+      "chunks": 1
+    }
+  ],
+  "totalCharacters": 25681,
+  "codeHashes": {
+    "server/indexing.mjs": "1d1b0434c3b675f7f6845a66dfe466466c8bd2708b4bd83bf91efa256d436992",
+    "server/index-citations.mjs": "c7f972ab1f7fe73788a29093df254d24c66394ee241b4998f5c4bf84c77c3bf1",
+    "server/api.mjs": "d5cca4acb0f84694860512a16a6ebe9491b5089ab97a2f8d7ad81d03bb477aa8",
+    "server/openai-luna.mjs": "10b77b58ade0f834c9c8b65de1aadf5e5b0be7d6cfc1a2627d1e70a34de7f7b5"
+  },
+  "settings": {
+    "concurrency": 5,
+    "directChars": 32000,
+    "chunkChars": 18000,
+    "batchChars": 22000
+  },
+  "trials": [
+    {
+      "round": 1,
+      "testId": "847bef68-fe32-4e0b-9e99-6c01407685db",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-direct",
+          "startedMs": 0.7,
+          "inputBytes": 26692,
+          "inputSha256": "34d3cf6ce1bb57e8dbf7691df7f0ba263adc1624814d102ae4c89fd0bba9df9d",
+          "instructionSha256": "62ef2e1b5d1745fd3b54da5a77d62f6df5b76780d062b8536a2c3136606c50fc",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 25681,
+          "status": "completed",
+          "result": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6.3,
+          "durationMs": 5.6
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.6,
+          "type": "index.direct.started",
+          "details": {
+            "requestId": "07b4d3d3-2518-4551-b61c-f1c670d71b6b",
+            "sourceCount": 3,
+            "characters": 25681
+          }
+        },
+        {
+          "atMs": 7.3,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "6c64edb0-71c5-4981-859b-edb6497f58a5",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.1,
+          "status": "ready",
+          "durationMs": 6.3,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 1,
+          "events": [
+            {
+              "atMs": 0.6,
+              "type": "index.direct.started",
+              "details": {
+                "requestId": "07b4d3d3-2518-4551-b61c-f1c670d71b6b",
+                "sourceCount": 3,
+                "characters": 25681
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 372,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 7.2,
+          "status": "ready",
+          "durationMs": 0.1,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 7.3,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "6c64edb0-71c5-4981-859b-edb6497f58a5",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 372,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 1
+    },
+    {
+      "round": 2,
+      "testId": "86325291-505e-43ed-a3c1-53fafbc072d0",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-direct",
+          "startedMs": 0.2,
+          "inputBytes": 26692,
+          "inputSha256": "ea62fa5fd8c47cffbe4683d416e88c983747eac374a7360474b52dadbfc189f3",
+          "instructionSha256": "62ef2e1b5d1745fd3b54da5a77d62f6df5b76780d062b8536a2c3136606c50fc",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 25681,
+          "status": "completed",
+          "result": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 5.3,
+          "durationMs": 5.1
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.2,
+          "type": "index.direct.started",
+          "details": {
+            "requestId": "bfb2159b-b6fc-46f7-9e2e-e7ff35f03a1a",
+            "sourceCount": 3,
+            "characters": 25681
+          }
+        },
+        {
+          "atMs": 5.7,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "3e0df470-5d06-4c74-90db-18c0e9b2a69d",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.1,
+          "status": "ready",
+          "durationMs": 5.2,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 1,
+          "events": [
+            {
+              "atMs": 0.2,
+              "type": "index.direct.started",
+              "details": {
+                "requestId": "bfb2159b-b6fc-46f7-9e2e-e7ff35f03a1a",
+                "sourceCount": 3,
+                "characters": 25681
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 372,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 5.7,
+          "status": "ready",
+          "durationMs": 0,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 5.7,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "3e0df470-5d06-4c74-90db-18c0e9b2a69d",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 372,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 1
+    },
+    {
+      "round": 3,
+      "testId": "6d52a8a1-a2b0-43f6-a86b-dc8c234db6cb",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-direct",
+          "startedMs": 0.2,
+          "inputBytes": 26692,
+          "inputSha256": "b9f4324e594487cba5af042fedf35a8cb29ffb2fb90628aa5f95f0d110569af3",
+          "instructionSha256": "62ef2e1b5d1745fd3b54da5a77d62f6df5b76780d062b8536a2c3136606c50fc",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 25681,
+          "status": "completed",
+          "result": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6.1,
+          "durationMs": 5.9
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.2,
+          "type": "index.direct.started",
+          "details": {
+            "requestId": "7073db0b-aa1f-44c3-81f8-ee8af98b9cd1",
+            "sourceCount": 3,
+            "characters": 25681
+          }
+        },
+        {
+          "atMs": 6.4,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "aad2211a-901b-4fb3-ad66-a5a311d4d389",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.1,
+          "status": "ready",
+          "durationMs": 6,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 1,
+          "events": [
+            {
+              "atMs": 0.2,
+              "type": "index.direct.started",
+              "details": {
+                "requestId": "7073db0b-aa1f-44c3-81f8-ee8af98b9cd1",
+                "sourceCount": 3,
+                "characters": 25681
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 372,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 6.4,
+          "status": "ready",
+          "durationMs": 0,
+          "topicOnly": true,
+          "topicCount": 3,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Offline topic-only fixture.",
+            "topics": [
+              {
+                "title": "econ2801-pset3",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "econ2801-pset2-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "econ2801-pset5-solutions",
+                "summary": "A source-linked topic.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 6.4,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "aad2211a-901b-4fb3-ad66-a5a311d4d389",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 372,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 1
+    }
+  ],
+  "method": "Three fresh production indexer instances. Each cold request is followed by exact same-test cached input on that instance. Provider slot is held across each cold+cached pair; acquisition excluded. The same already-extracted original PDF corpus is used. No question preparation, Jev, microphone or paid voice. Empty application cache does not imply cold provider prompt cache.",
+  "catalogFollowup": "Generic v6 concept/activity catalog; no solved conclusions, source attribution confined to structured sourceIds. Preserves all earlier raw outcomes; no subject-specific tuning.",
+  "followup": "Generic v5 topic-oriented description prompt; preserve assumptions and domain restrictions, no subject-specific tuning. Original direct three outputs remain unchanged.",
+  "comparison": "Explicit 32,000-character direct-path override; all original source text, no map stage. Production default unchanged during this experiment. This is an algorithm comparison, not a quote-repair-only timing change.",
+  "finishedAt": "2026-10-02T08:46:42.115Z",
+  "assessment": {
+    "readyCold": 3,
+    "underTenSeconds": 3,
+    "cachedWithoutProviderCalls": 3,
+    "allRequiredSourcesRepresented": 3,
+    "limitation": "Three samples of one real corpus, not latency percentiles or a guarantee. Source citation coverage is not exhaustive topic coverage; manual guide review is recorded separately."
+  }
+}

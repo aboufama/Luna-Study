@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <g id="tree-branches" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round">
+    <line id="branch-root-left" x1="400" y1="110" x2="220" y2="260"/>
+    <line id="branch-root-right" x1="400" y1="110" x2="580" y2="260"/>
+    <line id="branch-left-l" x1="220" y1="260" x2="120" y2="410"/>
+    <line id="branch-left-r" x1="220" y1="260" x2="320" y2="410"/>
+    <line id="branch-right-l" x1="580" y1="260" x2="480" y2="410"/>
+    <line id="branch-right-r" x1="580" y1="260" x2="680" y2="410"/>
+  </g>
+  <g id="action-labels" fill="#222222" font-family="sans-serif" font-size="18" text-anchor="middle">
+    <text id="action-L" x="300" y="173">L</text>
+    <text id="action-R" x="500" y="173">R</text>
+    <text id="action-left-l" x="155" y="332">l</text>
+    <text id="action-left-r" x="280" y="332">r</text>
+    <text id="action-right-l" x="520" y="332">l</text>
+    <text id="action-right-r" x="645" y="332">r</text>
+  </g>
+  <g id="decision-nodes">
+    <circle id="root" cx="400" cy="110" r="9" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+    <circle id="left" cx="220" cy="260" r="9" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+    <circle id="right" cx="580" cy="260" r="9" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+  </g>
+  <g id="player-labels" fill="#222222" font-family="sans-serif" font-size="20" text-anchor="middle">
+    <text id="player-root" x="400" y="76">P1</text>
+    <text id="player-left" x="220" y="226">P2</text>
+    <text id="player-right" x="580" y="226">P2</text>
+  </g>
+  <g id="terminal-nodes">
+    <circle id="ll" cx="120" cy="410" r="6" fill="#222222"/>
+    <circle id="lr" cx="320" cy="410" r="6" fill="#222222"/>
+    <circle id="rl" cx="480" cy="410" r="6" fill="#222222"/>
+    <circle id="rr" cx="680" cy="410" r="6" fill="#222222"/>
+  </g>
+  <g id="payoff-labels" fill="#222222" font-family="sans-serif" font-size="18" text-anchor="middle">
+    <text id="payoff-ll" x="120" y="450">(3,2)</text>
+    <text id="payoff-lr" x="320" y="450">(0,0)</text>
+    <text id="payoff-rl" x="480" y="450">(1,1)</text>
+    <text id="payoff-rr" x="680" y="450">(2,3)</text>
+  </g>
+</svg>

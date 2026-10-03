@@ -1,0 +1,3931 @@
+{
+  "version": 2,
+  "startedAt": "2026-10-02T07:35:15.769Z",
+  "liveProviders": true,
+  "baseline": "/Users/andreboufama/Documents/Luna-Study/benchmarks/baselines/tutor-before-retrieval",
+  "rounds": 3,
+  "productionBank": true,
+  "realGrading": true,
+  "realStudentIntent": true,
+  "source": {
+    "name": "Problem Set 3 Econ 2801 2026.pdf",
+    "sha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+    "pages": 2,
+    "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+    "corpus": [
+      {
+        "id": "econ2801-pset3",
+        "name": "Problem Set 3 Econ 2801 2026.pdf",
+        "characters": 4366,
+        "textSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b"
+      },
+      {
+        "id": "econ2801-pset2-solutions",
+        "name": "Problem_Set_2_Detailed_Answer_Discussion_Fall_2026_ECON_2801.pdf",
+        "characters": 10412,
+        "textSha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a"
+      },
+      {
+        "id": "econ2801-pset5-solutions",
+        "name": "Solution_Problem_Set_5_Fall_2026_ECON_2801__Corrected_.pdf",
+        "characters": 10903,
+        "textSha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180"
+      }
+    ],
+    "totalCharacters": 25681
+  },
+  "budget": {
+    "maxPaidHttpRequests": 32,
+    "maxPerProvider": {
+      "openai": 12,
+      "jev": 20
+    },
+    "used": 30,
+    "openai": 12,
+    "jev": 18
+  },
+  "boundaries": [
+    "Real loopback WebSocket client and selected production attachLiveVoice/adapter; live mode uses real OpenAI plus Jev retrieval and canvas decisions.",
+    "ElevenLabs STT is simulated using exact committed_transcript messages. A synthetic 100 ms delay produces counted silent PCM output; no microphone, speaker, voice provider, or audio file is used.",
+    "Greeting/history priming and tutor mastery-notice intent remain fixtures. Student intent is the production Jev classifier; grade verdicts are production checkedGrade with two independent Luna source-grounded requests. No claims about STT accuracy.",
+    "Synthetic audio latency is pipeline timing plus the fixed fixture delay, not an estimate or measurement of ElevenLabs latency.",
+    "3 trial(s) per source scenario/condition in fixed round → scenario → condition order; this is a small integrated case study, not a production percentile or counterbalanced experiment.",
+    "Question preparation is a deterministic fixture, but bank storage, revision, public resolution, exact consumption, and active-question grading eligibility use the production bank implementation.",
+    "No provider dollars are fabricated; reported token counts and billed dollars remain separate."
+  ],
+  "conditions": [
+    {
+      "id": "after-terra",
+      "model": "gpt-5.6-terra",
+      "root": "/Users/andreboufama/Documents/Luna-Study/",
+      "files": [
+        {
+          "file": "server/live-voice.mjs",
+          "sha256": "77908871b74436907543f7065c4b9678e4aa43bb1ba121c63f0f89bc39e0369d"
+        },
+        {
+          "file": "server/openai-luna.mjs",
+          "sha256": "10b77b58ade0f834c9c8b65de1aadf5e5b0be7d6cfc1a2627d1e70a34de7f7b5"
+        },
+        {
+          "file": "server/luna-fast.mjs",
+          "sha256": "1bd6c368156acf0c8e03aa624198fb89b277fdb3a1b5602dfed02197cada4bf3"
+        },
+        {
+          "file": "server/tutor-output.mjs",
+          "sha256": "89d342c2150a112492835527c9d4015c1d2779be42373fcd5e5bb8929118b830"
+        },
+        {
+          "file": "server/jev-intent.mjs",
+          "sha256": "67539593c757a2ddb07f47b12e03241b60b3af4768d268f0dfd0d68976a4cf68"
+        },
+        {
+          "file": "server/mastery.mjs",
+          "sha256": "2bacf6ba27fd79d89a9480ea8992f674c4f89e6304ef282310a819d76b01c449"
+        },
+        {
+          "file": "server/material-retrieval.mjs",
+          "sha256": "375708ff2d4e097760f64aa4480385a8af9d5434e5f9eb021e622056db19187f"
+        },
+        {
+          "file": "server/tutor-context.mjs",
+          "sha256": "c91731e8d4c17c8f25c164cb93e8df834685c1e85d3773fa163c0b8be35ce857"
+        },
+        {
+          "file": "server/model-config.mjs",
+          "sha256": "8fdffbc0e0a344f27f7d246307c3b937f6774e01cd1ad261675b2195a447f733"
+        },
+        {
+          "file": "server/question-bank.mjs",
+          "sha256": "e1ec345d9934502053a90fb4d89dad4fd57be61b461a2c8ae0d04fb9b196ae9b"
+        },
+        {
+          "file": "server/question-identity.mjs",
+          "sha256": "19a1e69f1ebff54b1cb8d5db00034c3024acedf647b90bfa031ad0a45199c757"
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "condition": "after-terra",
+      "model": "gpt-5.6-terra",
+      "backgroundModel": "gpt-6-luna",
+      "scenario": "blank-grid",
+      "round": 1,
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 0.2,
+          "status": 200,
+          "kind": "student-intent",
+          "questions": 3,
+          "headersMs": 205.1
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 6.9,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 256.6
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "phase": "scenario",
+          "startedMs": 259.7,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 17471,
+            "instructionBytes": 12001,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "386bc904-7d66-4dac-9a11-9c2d04419637",
+              "e9d61ea6-c9f7-46ff-9fa4-5b7c5b69e2c6",
+              "cf8bd09b-a9ab-4a2a-8f18-2f5972d4197b",
+              "14ae77a2-c7ee-4d84-aefd-cab54b6b16a1",
+              "414fe758-d8cf-4d00-b836-0e8282104029",
+              "1e4c1114-008c-43f4-84d8-9eceb02f992b"
+            ],
+            "bankSha256": "fec9ec8cdddb06f55457a6284ebf74ab4dd69fc2e6b738312e84d5ef3d80485b",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 791.5
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 2462.9,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 2632
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 2678.2,
+          "status": 200,
+          "kind": "student-intent",
+          "questions": 3,
+          "headersMs": 2972.6
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 2684.2,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 2895.3
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "phase": "answer-follow-up",
+          "startedMs": 2978.5,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 18310,
+            "instructionBytes": 12001,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "whiteboardContext",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 15,
+              "earlierTurns": 7,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "386bc904-7d66-4dac-9a11-9c2d04419637",
+              "e9d61ea6-c9f7-46ff-9fa4-5b7c5b69e2c6",
+              "cf8bd09b-a9ab-4a2a-8f18-2f5972d4197b",
+              "14ae77a2-c7ee-4d84-aefd-cab54b6b16a1",
+              "414fe758-d8cf-4d00-b836-0e8282104029"
+            ],
+            "bankSha256": "e1317bf705c49999e4ce483b1913f37c7334d1c13674414f2c2d52940f1d5d75",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": {
+              "id": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+              "hasAnswer": false,
+              "attempts": 1,
+              "assisted": true
+            },
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 3307.1
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 5660.8,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 2,
+          "headersMs": 5803
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "phase": "answer-follow-up",
+          "startedMs": 5662,
+          "status": 200,
+          "kind": "grading",
+          "context": {
+            "inputBytes": 7176,
+            "instructionBytes": 1120,
+            "inputKeys": [
+              "question",
+              "studentAnswer",
+              "materials",
+              "conversation"
+            ],
+            "conversationTurns": 16,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4366,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 7680
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "phase": "answer-follow-up",
+          "startedMs": 7737.4,
+          "status": 200,
+          "kind": "grading",
+          "context": {
+            "inputBytes": 7176,
+            "instructionBytes": 1120,
+            "inputKeys": [
+              "question",
+              "studentAnswer",
+              "materials",
+              "conversation"
+            ],
+            "conversationTurns": 16,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4366,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 12057.7
+        }
+      ],
+      "modelResults": [
+        {
+          "mode": "voice",
+          "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+          "canonicalReply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?"
+        },
+        {
+          "mode": "voice",
+          "questionId": null,
+          "canonicalReply": "Correct: the maximum is eight. A strict equilibrium needs a unique strict best response in its row and column, so no two can share either; eight disjoint row–column pairs can be constructed."
+        }
+      ],
+      "intentDecisions": [
+        {
+          "text": "Ask me the queued question about the maximum number of strict Nash equilibria in an 8-by-10 game, exactly as written. Show a blank 8-row, 10-column grid. Do not fill in payoffs, mark equilibrium cells, or reveal the answer yet.",
+          "requestsHelp": null,
+          "answerAttempt": false,
+          "examDeadline": false,
+          "source": "jev"
+        },
+        {
+          "text": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+          "requestsHelp": false,
+          "answerAttempt": true,
+          "examDeadline": false,
+          "source": "jev"
+        }
+      ],
+      "gradeChecks": [
+        {
+          "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "evidenceValidated": true
+        },
+        {
+          "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "evidenceValidated": true
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1925.7,
+        "modelReportedFirstTextMs": 1668,
+        "committedTranscriptToSyntheticAudioMs": 2027,
+        "committedTranscriptToTextCompleteMs": 2466,
+        "committedTranscriptToBoardMs": 2634.4,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "realIntentRecognizedUnassistedAnswer": true,
+        "twoIndependentRealGradesAgreed": true,
+        "masteryPersistedExactlyOnce": true
+      },
+      "bankInputExpectedIds": [
+        "386bc904-7d66-4dac-9a11-9c2d04419637",
+        "e9d61ea6-c9f7-46ff-9fa4-5b7c5b69e2c6",
+        "cf8bd09b-a9ab-4a2a-8f18-2f5972d4197b",
+        "14ae77a2-c7ee-4d84-aefd-cab54b6b16a1",
+        "414fe758-d8cf-4d00-b836-0e8282104029",
+        "1e4c1114-008c-43f4-84d8-9eceb02f992b"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 1,
+        "calls": [
+          {
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "answer": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+            "fullHistoryCount": 16,
+            "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+            "hasEarlyPreference": true,
+            "real": true,
+            "result": {
+              "verdict": "correct",
+              "unassisted": true,
+              "checked": true
+            }
+          }
+        ],
+        "records": [
+          {
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "attempt": 1,
+            "firstAttempt": true,
+            "unassisted": true,
+            "checked": true
+          }
+        ]
+      },
+      "voiceSimulated": true,
+      "questionIdentity": {
+        "canonicalQuestionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+        "canonicalQuestion": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "resolved": [
+          {
+            "id": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "found": true,
+            "canonicalQuestion": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "privateAnswerExposed": false
+          },
+          {
+            "id": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "found": false,
+            "privateAnswerExposed": false
+          }
+        ],
+        "consumed": [
+          {
+            "method": "id",
+            "requestedId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "consumedIds": [
+              "1e4c1114-008c-43f4-84d8-9eceb02f992b"
+            ],
+            "canonicalSpeechPresent": true
+          }
+        ]
+      },
+      "startedAt": "2026-10-02T07:35:15.833Z",
+      "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+      "board": {
+        "title": "8 by 10 game",
+        "revision": "f11c80e2-244e-4a10-b286-e4b6af03879c",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 13,
+          "board": {
+            "title": "8 by 10 game",
+            "revision": "f11c80e2-244e-4a10-b286-e4b6af03879c",
+            "blocks": [
+              {
+                "id": "game-grid",
+                "type": "matrix",
+                "rows": [
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 2634.4
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 5.9
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 252,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 257.2
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 257.7
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 17437,
+            "historyCharacters": 1192,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2446,
+            "reason": "selected"
+          },
+          "atMs": 258.5
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1668
+          },
+          "atMs": 1925.3
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1768
+          },
+          "atMs": 2026
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 2201
+          },
+          "atMs": 2458.6
+        },
+        {
+          "type": "question.tracked",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "tracked",
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b"
+          },
+          "atMs": 2459.5
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "boardJson": "{\"title\":\"8 by 10 game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 2460.2
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 97,
+            "outputAudioMs": 10
+          },
+          "atMs": 2464.9
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.73,
+            "latencyMs": 173,
+            "visible": false,
+            "hasBoard": true
+          },
+          "atMs": 2633.3
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "f11c80e2-244e-4a10-b286-e4b6af03879c",
+            "boardJson": "{\"title\":\"8 by 10 game\",\"revision\":\"f11c80e2-244e-4a10-b286-e4b6af03879c\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 2633.8
+        },
+        {
+          "type": "turn.interrupted",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 2677.4
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 2680.8
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 216,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 2897
+        },
+        {
+          "type": "grading.queued",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "attempt": 1,
+            "unassisted": true
+          },
+          "atMs": 2974.9
+        },
+        {
+          "type": "turn.started",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 2975.4
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 18276,
+            "historyCharacters": 1747,
+            "recentTurns": 8,
+            "olderTurns": 7,
+            "bankCharacters": 1928,
+            "reason": "selected"
+          },
+          "atMs": 2977.2
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 2156
+          },
+          "atMs": 5131.8
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 2350
+          },
+          "atMs": 5325.5
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "Correct: the maximum is eight. A strict equilibrium needs a unique strict best response in its row and column, so no two can share either; eight disjoint row–column pairs can be constructed.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 2684
+          },
+          "atMs": 5659.5
+        },
+        {
+          "type": "question.tracked",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "none"
+          },
+          "atMs": 5659.9
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "Correct: the maximum is eight. A strict equilibrium needs a unique strict best response in its row and column, so no two can share either; eight disjoint row–column pairs can be constructed."
+          },
+          "atMs": 5660
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 191,
+            "outputAudioMs": 10
+          },
+          "atMs": 5661.4
+        },
+        {
+          "type": "grading.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "model": "gpt-6-luna"
+          },
+          "atMs": 5661.6
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "reason": "uncertain",
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "source": "fallback",
+            "fallbackReason": "uncertain",
+            "latencyMs": 143,
+            "probability": 0.52,
+            "visible": true,
+            "hasBoard": false
+          },
+          "atMs": 5803.5
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "visual-requested-without-board"
+          },
+          "atMs": 5803.5
+        },
+        {
+          "type": "grading.check",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "validated-agreement",
+            "stage": "comparison",
+            "verdict": "correct",
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b"
+          },
+          "atMs": 12105
+        },
+        {
+          "type": "grading.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "verdict": "correct",
+            "firstAttempt": true,
+            "unassisted": true,
+            "applied": true
+          },
+          "atMs": 12107.8
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "student-intent",
+          "model": "jev-1.13.0",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 937,
+            "outputTokens": 57
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8194,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7695,
+            "outputTokens": 166,
+            "cachedInputTokens": 2609,
+            "cacheWriteTokens": 5083,
+            "reasoningTokens": 41
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1148,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "student-intent",
+          "model": "jev-1.13.0",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1148,
+            "outputTokens": 57
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8483,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8021,
+            "outputTokens": 156,
+            "cachedInputTokens": 2609,
+            "cacheWriteTokens": 5409,
+            "reasoningTokens": 105
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1749,
+            "outputTokens": 38
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "grading",
+          "model": "gpt-6-luna",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 2546,
+            "outputTokens": 155,
+            "cachedInputTokens": 0,
+            "cacheWriteTokens": 2543,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "grading",
+          "model": "gpt-6-luna",
+          "testId": "6b2953ec-198c-4153-ac17-42b745f7b3c1",
+          "status": "completed",
+          "units": {
+            "inputTokens": 2546,
+            "outputTokens": 328,
+            "cachedInputTokens": 2543,
+            "cacheWriteTokens": 0,
+            "reasoningTokens": 171
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        }
+      ],
+      "providerCalls": 1,
+      "followUp": {
+        "reply": "Correct: the maximum is eight. A strict equilibrium needs a unique strict best response in its row and column, so no two can share either; eight disjoint row–column pairs can be constructed.",
+        "masteryMessages": 3
+      },
+      "persistedMastery": {
+        "public": {
+          "overall": 3,
+          "topics": [
+            {
+              "id": "b104544d1f9c6babf0ef5dd6",
+              "title": "Three-player payoff games",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "f32f91a94b61c632320f85ed",
+              "title": "Traveler’s Dilemma",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "1d0696367616138abe66a259",
+              "title": "Cinema coordination",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "4428e53d969485889e15e9cb",
+              "title": "Spatial competition",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "12e81b4efab383c5dc7f3e01",
+              "title": "Two-player payoff games",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "7731478df957e21ba2d20d0d",
+              "title": "Strict Nash equilibria",
+              "score": 20,
+              "mastered": false
+            }
+          ]
+        },
+        "events": [
+          {
+            "id": "23051e89-bf6e-4ce1-9c80-df30dd0e30f3",
+            "questionId": "1e4c1114-008c-43f4-84d8-9eceb02f992b",
+            "questionKey": "2b8e5a1d31f9e2ce2a2b4a5939b521a9689a5fa0f28dac44222aefa7ef29bfa9",
+            "attempt": 1,
+            "topicId": "7731478df957e21ba2d20d0d",
+            "topicTitle": "Strict Nash equilibria",
+            "difficulty": "medium",
+            "verdict": "correct",
+            "firstAttempt": true,
+            "unassisted": true,
+            "checked": true
+          }
+        ],
+        "seenAttemptEntries": 1
+      },
+      "finishedAt": "2026-10-02T07:35:28.144Z"
+    },
+    {
+      "condition": "after-terra",
+      "model": "gpt-5.6-terra",
+      "backgroundModel": "gpt-6-luna",
+      "scenario": "blank-grid",
+      "round": 2,
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 0.3,
+          "status": 200,
+          "kind": "student-intent",
+          "questions": 3,
+          "headersMs": 230.2
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 3.3,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 243
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "phase": "scenario",
+          "startedMs": 249.1,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 17471,
+            "instructionBytes": 12001,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "1bb772ae-3620-4dfd-80b5-c2038573f6d4",
+              "861f8920-94d9-48a1-a623-5919960a9e47",
+              "3c7aad28-3b9e-47af-bb20-c31d89ac31d8",
+              "c9a6677a-4828-4be7-8a04-b05bc86499cf",
+              "3f68c454-9324-4371-a524-c61643c3b4f8",
+              "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d"
+            ],
+            "bankSha256": "389b39d0a55b3b38954fe27613b8cfe54cf14af5e2bdf6526a138356f180d44c",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 523.6
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 1854,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 2043.3
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 2088.7,
+          "status": 200,
+          "kind": "student-intent",
+          "questions": 3,
+          "headersMs": 2243.9
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 2092.8,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 2278.5
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "phase": "answer-follow-up",
+          "startedMs": 2283,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 18318,
+            "instructionBytes": 12001,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "whiteboardContext",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 15,
+              "earlierTurns": 7,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "1bb772ae-3620-4dfd-80b5-c2038573f6d4",
+              "861f8920-94d9-48a1-a623-5919960a9e47",
+              "3c7aad28-3b9e-47af-bb20-c31d89ac31d8",
+              "c9a6677a-4828-4be7-8a04-b05bc86499cf",
+              "3f68c454-9324-4371-a524-c61643c3b4f8"
+            ],
+            "bankSha256": "87e590bb779af30a446b68e50353dc7557c84c246eb8dd88fe0f55a80f6a4a45",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": {
+              "id": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+              "hasAnswer": false,
+              "attempts": 1,
+              "assisted": true
+            },
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 2604.6
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 4742.2,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 2,
+          "headersMs": 4901.4
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "phase": "answer-follow-up",
+          "startedMs": 4744.7,
+          "status": 200,
+          "kind": "grading",
+          "context": {
+            "inputBytes": 7176,
+            "instructionBytes": 1120,
+            "inputKeys": [
+              "question",
+              "studentAnswer",
+              "materials",
+              "conversation"
+            ],
+            "conversationTurns": 16,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4366,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 8405
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "phase": "answer-follow-up",
+          "startedMs": 8439.3,
+          "status": 200,
+          "kind": "grading",
+          "context": {
+            "inputBytes": 7176,
+            "instructionBytes": 1120,
+            "inputKeys": [
+              "question",
+              "studentAnswer",
+              "materials",
+              "conversation"
+            ],
+            "conversationTurns": 16,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4366,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 10609.3
+        }
+      ],
+      "modelResults": [
+        {
+          "mode": "voice",
+          "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+          "canonicalReply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?"
+        },
+        {
+          "mode": "voice",
+          "questionId": null,
+          "canonicalReply": "Correct: the maximum is 8. A strict equilibrium needs a unique strict best response in each row and column, so no two can share either; eight disjoint row–column pairs can achieve the bound."
+        }
+      ],
+      "intentDecisions": [
+        {
+          "text": "Ask me the queued question about the maximum number of strict Nash equilibria in an 8-by-10 game, exactly as written. Show a blank 8-row, 10-column grid. Do not fill in payoffs, mark equilibrium cells, or reveal the answer yet.",
+          "requestsHelp": null,
+          "answerAttempt": false,
+          "examDeadline": false,
+          "source": "jev"
+        },
+        {
+          "text": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+          "requestsHelp": false,
+          "answerAttempt": true,
+          "examDeadline": false,
+          "source": "jev"
+        }
+      ],
+      "gradeChecks": [
+        {
+          "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "evidenceValidated": true
+        },
+        {
+          "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "evidenceValidated": true
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1276,
+        "modelReportedFirstTextMs": 1028,
+        "committedTranscriptToSyntheticAudioMs": 1377.7,
+        "committedTranscriptToTextCompleteMs": 1856.2,
+        "committedTranscriptToBoardMs": 2045.4,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "realIntentRecognizedUnassistedAnswer": true,
+        "twoIndependentRealGradesAgreed": true,
+        "masteryPersistedExactlyOnce": true
+      },
+      "bankInputExpectedIds": [
+        "1bb772ae-3620-4dfd-80b5-c2038573f6d4",
+        "861f8920-94d9-48a1-a623-5919960a9e47",
+        "3c7aad28-3b9e-47af-bb20-c31d89ac31d8",
+        "c9a6677a-4828-4be7-8a04-b05bc86499cf",
+        "3f68c454-9324-4371-a524-c61643c3b4f8",
+        "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 1,
+        "calls": [
+          {
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "answer": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+            "fullHistoryCount": 16,
+            "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+            "hasEarlyPreference": true,
+            "real": true,
+            "result": {
+              "verdict": "correct",
+              "unassisted": true,
+              "checked": true
+            }
+          }
+        ],
+        "records": [
+          {
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "attempt": 1,
+            "firstAttempt": true,
+            "unassisted": true,
+            "checked": true
+          }
+        ]
+      },
+      "voiceSimulated": true,
+      "questionIdentity": {
+        "canonicalQuestionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+        "canonicalQuestion": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "resolved": [
+          {
+            "id": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "found": true,
+            "canonicalQuestion": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "privateAnswerExposed": false
+          },
+          {
+            "id": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "found": false,
+            "privateAnswerExposed": false
+          }
+        ],
+        "consumed": [
+          {
+            "method": "id",
+            "requestedId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "consumedIds": [
+              "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d"
+            ],
+            "canonicalSpeechPresent": true
+          }
+        ]
+      },
+      "startedAt": "2026-10-02T07:35:28.212Z",
+      "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+      "board": {
+        "title": "Normal-form game",
+        "revision": "2ae5e72f-f4bd-4a70-9d85-f2b939f42744",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 13,
+          "board": {
+            "title": "Normal-form game",
+            "revision": "2ae5e72f-f4bd-4a70-9d85-f2b939f42744",
+            "blocks": [
+              {
+                "id": "game-grid",
+                "type": "matrix",
+                "rows": [
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 2045.4
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.2
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 1.9
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 245,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 246.4
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 247
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 17437,
+            "historyCharacters": 1192,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2446,
+            "reason": "selected"
+          },
+          "atMs": 248.5
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1028
+          },
+          "atMs": 1275.5
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1130
+          },
+          "atMs": 1377.2
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 1605
+          },
+          "atMs": 1851.9
+        },
+        {
+          "type": "question.tracked",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "tracked",
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d"
+          },
+          "atMs": 1852.5
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "boardJson": "{\"title\":\"Normal-form game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 1853
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 97,
+            "outputAudioMs": 10
+          },
+          "atMs": 1855.2
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.74,
+            "latencyMs": 191,
+            "visible": false,
+            "hasBoard": true
+          },
+          "atMs": 2044.4
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "2ae5e72f-f4bd-4a70-9d85-f2b939f42744",
+            "boardJson": "{\"title\":\"Normal-form game\",\"revision\":\"2ae5e72f-f4bd-4a70-9d85-f2b939f42744\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 2044.7
+        },
+        {
+          "type": "turn.interrupted",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 2088.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 2090.5
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 190,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 2279.8
+        },
+        {
+          "type": "grading.queued",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "attempt": 1,
+            "unassisted": true
+          },
+          "atMs": 2280.2
+        },
+        {
+          "type": "turn.started",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 2280.5
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 18284,
+            "historyCharacters": 1747,
+            "recentTurns": 8,
+            "olderTurns": 7,
+            "bankCharacters": 1928,
+            "reason": "selected"
+          },
+          "atMs": 2281.9
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1796
+          },
+          "atMs": 4076.4
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1992
+          },
+          "atMs": 4272.2
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "Correct: the maximum is 8. A strict equilibrium needs a unique strict best response in each row and column, so no two can share either; eight disjoint row–column pairs can achieve the bound.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 2460
+          },
+          "atMs": 4740.3
+        },
+        {
+          "type": "question.tracked",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "none"
+          },
+          "atMs": 4741.3
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "Correct: the maximum is 8. A strict equilibrium needs a unique strict best response in each row and column, so no two can share either; eight disjoint row–column pairs can achieve the bound."
+          },
+          "atMs": 4741.7
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 191,
+            "outputAudioMs": 10
+          },
+          "atMs": 4743.7
+        },
+        {
+          "type": "grading.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "model": "gpt-6-luna"
+          },
+          "atMs": 4744.3
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "reason": "uncertain",
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "source": "fallback",
+            "fallbackReason": "uncertain",
+            "latencyMs": 160,
+            "probability": 0.49,
+            "visible": true,
+            "hasBoard": false
+          },
+          "atMs": 4902.4
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "visual-requested-without-board"
+          },
+          "atMs": 4902.4
+        },
+        {
+          "type": "grading.check",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "validated-agreement",
+            "stage": "comparison",
+            "verdict": "correct",
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d"
+          },
+          "atMs": 10644.2
+        },
+        {
+          "type": "grading.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "verdict": "correct",
+            "firstAttempt": true,
+            "unassisted": true,
+            "applied": true
+          },
+          "atMs": 10646.3
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "student-intent",
+          "model": "jev-1.13.0",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 937,
+            "outputTokens": 57
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8194,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7688,
+            "outputTokens": 149,
+            "cachedInputTokens": 2609,
+            "cacheWriteTokens": 5076,
+            "reasoningTokens": 27
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1148,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "student-intent",
+          "model": "jev-1.13.0",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1148,
+            "outputTokens": 57
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8483,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8012,
+            "outputTokens": 128,
+            "cachedInputTokens": 2609,
+            "cacheWriteTokens": 5400,
+            "reasoningTokens": 75
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1750,
+            "outputTokens": 38
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "grading",
+          "model": "gpt-6-luna",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 2544,
+            "outputTokens": 299,
+            "cachedInputTokens": 0,
+            "cacheWriteTokens": 2541,
+            "reasoningTokens": 117
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "grading",
+          "model": "gpt-6-luna",
+          "testId": "3715f404-56dc-4cc7-920b-44a510a7bccc",
+          "status": "completed",
+          "units": {
+            "inputTokens": 2544,
+            "outputTokens": 154,
+            "cachedInputTokens": 2541,
+            "cacheWriteTokens": 0,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        }
+      ],
+      "providerCalls": 1,
+      "followUp": {
+        "reply": "Correct: the maximum is 8. A strict equilibrium needs a unique strict best response in each row and column, so no two can share either; eight disjoint row–column pairs can achieve the bound.",
+        "masteryMessages": 3
+      },
+      "persistedMastery": {
+        "public": {
+          "overall": 3,
+          "topics": [
+            {
+              "id": "b104544d1f9c6babf0ef5dd6",
+              "title": "Three-player payoff games",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "f32f91a94b61c632320f85ed",
+              "title": "Traveler’s Dilemma",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "1d0696367616138abe66a259",
+              "title": "Cinema coordination",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "4428e53d969485889e15e9cb",
+              "title": "Spatial competition",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "12e81b4efab383c5dc7f3e01",
+              "title": "Two-player payoff games",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "7731478df957e21ba2d20d0d",
+              "title": "Strict Nash equilibria",
+              "score": 20,
+              "mastered": false
+            }
+          ]
+        },
+        "events": [
+          {
+            "id": "d756d79b-1c47-49be-951c-cdf67aacc82e",
+            "questionId": "d9fdd38e-8cee-4e72-b07c-cfa276a55b1d",
+            "questionKey": "2b8e5a1d31f9e2ce2a2b4a5939b521a9689a5fa0f28dac44222aefa7ef29bfa9",
+            "attempt": 1,
+            "topicId": "7731478df957e21ba2d20d0d",
+            "topicTitle": "Strict Nash equilibria",
+            "difficulty": "medium",
+            "verdict": "correct",
+            "firstAttempt": true,
+            "unassisted": true,
+            "checked": true
+          }
+        ],
+        "seenAttemptEntries": 1
+      },
+      "finishedAt": "2026-10-02T07:35:39.062Z"
+    },
+    {
+      "condition": "after-terra",
+      "model": "gpt-5.6-terra",
+      "backgroundModel": "gpt-6-luna",
+      "scenario": "blank-grid",
+      "round": 3,
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 0.2,
+          "status": 200,
+          "kind": "student-intent",
+          "questions": 3,
+          "headersMs": 198.2
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 2.8,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 266.8
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "phase": "scenario",
+          "startedMs": 268.9,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 17471,
+            "instructionBytes": 12001,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "3b5b6a63-1f94-4731-ad6e-e8ab5157fc4e",
+              "fbe345c3-c193-488c-b4ef-8e2254038bff",
+              "54ead26e-e8f9-4c20-8ac5-8c7d300c5198",
+              "84ea20ae-c5c9-4db6-8baa-6553319e7c82",
+              "b07ff077-6cee-4cd0-a376-b57c7d17e761",
+              "e6deb5ce-a604-48f3-a26a-2e2041aee10f"
+            ],
+            "bankSha256": "8e0a948a2204f9aca3ccde9960612463ad0b5b942c3f66ec9a3a392e47526726",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 561.3
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "scenario",
+          "startedMs": 1949.9,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 2130.7
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 2174.2,
+          "status": 200,
+          "kind": "student-intent",
+          "questions": 3,
+          "headersMs": 2340.1
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 2176.6,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 2382.9
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "phase": "answer-follow-up",
+          "startedMs": 2387.2,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 18310,
+            "instructionBytes": 12001,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "whiteboardContext",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 15,
+              "earlierTurns": 7,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "3b5b6a63-1f94-4731-ad6e-e8ab5157fc4e",
+              "fbe345c3-c193-488c-b4ef-8e2254038bff",
+              "54ead26e-e8f9-4c20-8ac5-8c7d300c5198",
+              "84ea20ae-c5c9-4db6-8baa-6553319e7c82",
+              "b07ff077-6cee-4cd0-a376-b57c7d17e761"
+            ],
+            "bankSha256": "ab11aded811c06f278eaf892be551877a6068af0ee9e1bbb81e26b9a692a94b2",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": {
+              "id": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+              "hasAnswer": false,
+              "attempts": 1,
+              "assisted": true
+            },
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 3381.5
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "phase": "answer-follow-up",
+          "startedMs": 4820.3,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 2,
+          "headersMs": 4966.1
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "phase": "answer-follow-up",
+          "startedMs": 4823.7,
+          "status": 200,
+          "kind": "grading",
+          "context": {
+            "inputBytes": 7176,
+            "instructionBytes": 1120,
+            "inputKeys": [
+              "question",
+              "studentAnswer",
+              "materials",
+              "conversation"
+            ],
+            "conversationTurns": 16,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4366,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 7374.4
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "phase": "answer-follow-up",
+          "startedMs": 7377.2,
+          "status": 200,
+          "kind": "grading",
+          "context": {
+            "inputBytes": 7176,
+            "instructionBytes": 1120,
+            "inputKeys": [
+              "question",
+              "studentAnswer",
+              "materials",
+              "conversation"
+            ],
+            "conversationTurns": 16,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4366,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 9191.2
+        }
+      ],
+      "modelResults": [
+        {
+          "mode": "voice",
+          "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+          "canonicalReply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?"
+        },
+        {
+          "mode": "voice",
+          "questionId": null,
+          "canonicalReply": "Correct: the maximum is eight. A strict equilibrium uses a unique strict best response in its row and column, so no two can share either; with only eight rows, eight is the cap, and eight disjoint pairs can achieve it."
+        }
+      ],
+      "intentDecisions": [
+        {
+          "text": "Ask me the queued question about the maximum number of strict Nash equilibria in an 8-by-10 game, exactly as written. Show a blank 8-row, 10-column grid. Do not fill in payoffs, mark equilibrium cells, or reveal the answer yet.",
+          "requestsHelp": null,
+          "answerAttempt": false,
+          "examDeadline": false,
+          "source": "jev"
+        },
+        {
+          "text": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+          "requestsHelp": false,
+          "answerAttempt": true,
+          "examDeadline": false,
+          "source": "jev"
+        }
+      ],
+      "gradeChecks": [
+        {
+          "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "evidenceValidated": true
+        },
+        {
+          "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "evidenceValidated": true
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1365.2,
+        "modelReportedFirstTextMs": 1097,
+        "committedTranscriptToSyntheticAudioMs": 1465.8,
+        "committedTranscriptToTextCompleteMs": 1953.8,
+        "committedTranscriptToBoardMs": 2132.4,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "realIntentRecognizedUnassistedAnswer": true,
+        "twoIndependentRealGradesAgreed": true,
+        "masteryPersistedExactlyOnce": true
+      },
+      "bankInputExpectedIds": [
+        "3b5b6a63-1f94-4731-ad6e-e8ab5157fc4e",
+        "fbe345c3-c193-488c-b4ef-8e2254038bff",
+        "54ead26e-e8f9-4c20-8ac5-8c7d300c5198",
+        "84ea20ae-c5c9-4db6-8baa-6553319e7c82",
+        "b07ff077-6cee-4cd0-a376-b57c7d17e761",
+        "e6deb5ce-a604-48f3-a26a-2e2041aee10f"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 1,
+        "calls": [
+          {
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "answer": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+            "fullHistoryCount": 16,
+            "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+            "hasEarlyPreference": true,
+            "real": true,
+            "result": {
+              "verdict": "correct",
+              "unassisted": true,
+              "checked": true
+            }
+          }
+        ],
+        "records": [
+          {
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "attempt": 1,
+            "firstAttempt": true,
+            "unassisted": true,
+            "checked": true
+          }
+        ]
+      },
+      "voiceSimulated": true,
+      "questionIdentity": {
+        "canonicalQuestionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+        "canonicalQuestion": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "resolved": [
+          {
+            "id": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "found": true,
+            "canonicalQuestion": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "privateAnswerExposed": false
+          },
+          {
+            "id": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "found": false,
+            "privateAnswerExposed": false
+          }
+        ],
+        "consumed": [
+          {
+            "method": "id",
+            "requestedId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "consumedIds": [
+              "e6deb5ce-a604-48f3-a26a-2e2041aee10f"
+            ],
+            "canonicalSpeechPresent": true
+          }
+        ]
+      },
+      "startedAt": "2026-10-02T07:35:39.111Z",
+      "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+      "board": {
+        "title": "8-by-10 game",
+        "revision": "b1504c27-51ed-474e-9e4c-9c82eb1b23b6",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 13,
+          "board": {
+            "title": "8-by-10 game",
+            "revision": "b1504c27-51ed-474e-9e4c-9c82eb1b23b6",
+            "blocks": [
+              {
+                "id": "game-grid",
+                "type": "matrix",
+                "rows": [
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 2132.4
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 1.2
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 266,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 267.3
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 267.6
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 17437,
+            "historyCharacters": 1192,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2446,
+            "reason": "selected"
+          },
+          "atMs": 268.4
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1097
+          },
+          "atMs": 1364.4
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1198
+          },
+          "atMs": 1465.2
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 1681
+          },
+          "atMs": 1948.8
+        },
+        {
+          "type": "question.tracked",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "tracked",
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f"
+          },
+          "atMs": 1949.3
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "boardJson": "{\"title\":\"8-by-10 game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 1949.7
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 97,
+            "outputAudioMs": 10
+          },
+          "atMs": 1952.4
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.73,
+            "latencyMs": 182,
+            "visible": false,
+            "hasBoard": true
+          },
+          "atMs": 2132
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "b1504c27-51ed-474e-9e4c-9c82eb1b23b6",
+            "boardJson": "{\"title\":\"8-by-10 game\",\"revision\":\"b1504c27-51ed-474e-9e4c-9c82eb1b23b6\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 2132.1
+        },
+        {
+          "type": "turn.interrupted",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 2173.9
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 2175.1
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 209,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 2383.8
+        },
+        {
+          "type": "grading.queued",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "attempt": 1,
+            "unassisted": true
+          },
+          "atMs": 2384.3
+        },
+        {
+          "type": "turn.started",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 2384.8
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 18276,
+            "historyCharacters": 1747,
+            "recentTurns": 8,
+            "olderTurns": 7,
+            "bankCharacters": 1928,
+            "reason": "selected"
+          },
+          "atMs": 2386.4
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 2060
+          },
+          "atMs": 4444.8
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 2199
+          },
+          "atMs": 4584.1
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "Correct: the maximum is eight. A strict equilibrium uses a unique strict best response in its row and column, so no two can share either; with only eight rows, eight is the cap, and eight disjoint pairs can achieve it.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 2434
+          },
+          "atMs": 4818.8
+        },
+        {
+          "type": "question.tracked",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "none"
+          },
+          "atMs": 4819.4
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "Correct: the maximum is eight. A strict equilibrium uses a unique strict best response in its row and column, so no two can share either; with only eight rows, eight is the cap, and eight disjoint pairs can achieve it."
+          },
+          "atMs": 4819.7
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 219,
+            "outputAudioMs": 10
+          },
+          "atMs": 4822.4
+        },
+        {
+          "type": "grading.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "model": "gpt-6-luna"
+          },
+          "atMs": 4823.2
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "reason": "uncertain",
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "source": "fallback",
+            "fallbackReason": "uncertain",
+            "latencyMs": 147,
+            "probability": 0.5,
+            "visible": true,
+            "hasBoard": false
+          },
+          "atMs": 4967.2
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "turnId": 15,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "visual-requested-without-board"
+          },
+          "atMs": 4967.2
+        },
+        {
+          "type": "grading.check",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "validated-agreement",
+            "stage": "comparison",
+            "verdict": "correct",
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f"
+          },
+          "atMs": 9196.8
+        },
+        {
+          "type": "grading.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "verdict": "correct",
+            "firstAttempt": true,
+            "unassisted": true,
+            "applied": true
+          },
+          "atMs": 9199.4
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "student-intent",
+          "model": "jev-1.13.0",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 937,
+            "outputTokens": 57
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8194,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7688,
+            "outputTokens": 159,
+            "cachedInputTokens": 2609,
+            "cacheWriteTokens": 5076,
+            "reasoningTokens": 36
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1148,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "student-intent",
+          "model": "jev-1.13.0",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1148,
+            "outputTokens": 57
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8483,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8020,
+            "outputTokens": 85,
+            "cachedInputTokens": 2609,
+            "cacheWriteTokens": 5408,
+            "reasoningTokens": 26
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1763,
+            "outputTokens": 38
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "grading",
+          "model": "gpt-6-luna",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 2542,
+            "outputTokens": 179,
+            "cachedInputTokens": 0,
+            "cacheWriteTokens": 2539,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "grading",
+          "model": "gpt-6-luna",
+          "testId": "cf7f6e9e-1251-4de6-9efd-fed7812818bb",
+          "status": "completed",
+          "units": {
+            "inputTokens": 2542,
+            "outputTokens": 183,
+            "cachedInputTokens": 2539,
+            "cacheWriteTokens": 0,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        }
+      ],
+      "providerCalls": 1,
+      "followUp": {
+        "reply": "Correct: the maximum is eight. A strict equilibrium uses a unique strict best response in its row and column, so no two can share either; with only eight rows, eight is the cap, and eight disjoint pairs can achieve it.",
+        "masteryMessages": 3
+      },
+      "persistedMastery": {
+        "public": {
+          "overall": 3,
+          "topics": [
+            {
+              "id": "b104544d1f9c6babf0ef5dd6",
+              "title": "Three-player payoff games",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "f32f91a94b61c632320f85ed",
+              "title": "Traveler’s Dilemma",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "1d0696367616138abe66a259",
+              "title": "Cinema coordination",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "4428e53d969485889e15e9cb",
+              "title": "Spatial competition",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "12e81b4efab383c5dc7f3e01",
+              "title": "Two-player payoff games",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "7731478df957e21ba2d20d0d",
+              "title": "Strict Nash equilibria",
+              "score": 20,
+              "mastered": false
+            }
+          ]
+        },
+        "events": [
+          {
+            "id": "1110c6df-d1d6-4c56-a68a-3ff6bd8b6a35",
+            "questionId": "e6deb5ce-a604-48f3-a26a-2e2041aee10f",
+            "questionKey": "2b8e5a1d31f9e2ce2a2b4a5939b521a9689a5fa0f28dac44222aefa7ef29bfa9",
+            "attempt": 1,
+            "topicId": "7731478df957e21ba2d20d0d",
+            "topicTitle": "Strict Nash equilibria",
+            "difficulty": "medium",
+            "verdict": "correct",
+            "firstAttempt": true,
+            "unassisted": true,
+            "checked": true
+          }
+        ],
+        "seenAttemptEntries": 1
+      },
+      "finishedAt": "2026-10-02T07:35:48.514Z"
+    }
+  ],
+  "finishedAt": "2026-10-02T07:35:48.517Z"
+}

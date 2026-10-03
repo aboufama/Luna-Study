@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:33:28.223Z",
+  "liveProviders": false,
+  "model": "gpt-6-luna",
+  "budget": {
+    "maximumPaidRequests": 5,
+    "paidRequests": 0
+  },
+  "testId": "b3549cc3-6123-4021-b7d5-2b6aa277a48e",
+  "sources": [
+    {
+      "id": "econ2801-pset3",
+      "name": "Problem Set 3 Econ 2801 2026.pdf",
+      "pdfSha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+      "pdfBytes": 107943,
+      "pages": 2,
+      "characters": 4366,
+      "textSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset2-solutions",
+      "name": "Problem_Set_2_Detailed_Answer_Discussion_Fall_2026_ECON_2801.pdf",
+      "pdfSha256": "637afcb2362a123dd12012a6209a8299d01ef308ddbb413542509e7e56640f43",
+      "pdfBytes": 108259,
+      "pages": 5,
+      "characters": 10412,
+      "textSha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset5-solutions",
+      "name": "Solution_Problem_Set_5_Fall_2026_ECON_2801__Corrected_.pdf",
+      "pdfSha256": "949198239c729af4f88de8fbe2512fa368f62d489b999e5615c26f299a0d31cf",
+      "pdfBytes": 115074,
+      "pages": 6,
+      "characters": 10903,
+      "textSha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180",
+      "chunks": 1
+    }
+  ],
+  "totalCharacters": 25681,
+  "sourcePreparation": "Already extracted PDF fixture, same page-label assembly as existing tutor benchmark; source PDF hashes rechecked. PDF extraction and UI/network upload are excluded from clock.",
+  "settings": {
+    "concurrency": 5,
+    "directChars": 24000,
+    "chunkChars": 18000,
+    "batchChars": 22000
+  },
+  "providerCalls": [
+    {
+      "id": 1,
+      "operation": "index-map",
+      "startedMs": 0.9,
+      "inputBytes": 15539,
+      "instructionsSha256": "c94734d5c0540f8e9f6f4163c8f472f1101bccefb0f0f16bc9fc4d0aa01cd356",
+      "schemaSha256": "c07d47fab85b38ecb334f4a28e3d5637132c2bae50927b54bc83d05ddb1025d7",
+      "sourceIds": [
+        "econ2801-pset3",
+        "econ2801-pset2-solutions"
+      ],
+      "chunkCount": 2,
+      "characters": 14778,
+      "status": "completed",
+      "finishedMs": 6.8,
+      "durationMs": 5.9
+    },
+    {
+      "id": 2,
+      "operation": "index-map",
+      "startedMs": 1,
+      "inputBytes": 11466,
+      "instructionsSha256": "c94734d5c0540f8e9f6f4163c8f472f1101bccefb0f0f16bc9fc4d0aa01cd356",
+      "schemaSha256": "e07fa64cae931fafd0322cdb6ce041ea05c98306316228551b7866c0aa1e60cd",
+      "sourceIds": [
+        "econ2801-pset5-solutions"
+      ],
+      "chunkCount": 1,
+      "characters": 10903,
+      "status": "completed",
+      "finishedMs": 7,
+      "durationMs": 6
+    },
+    {
+      "id": 3,
+      "operation": "index-merge",
+      "startedMs": 7.3,
+      "inputBytes": 6270,
+      "instructionsSha256": "fbdaa4a8742e41945af1e8ae5397920fb7f314aaf7f2254c72ae6ca0cd65d7fd",
+      "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+      "sourceIds": [
+        "econ2801-pset3",
+        "econ2801-pset2-solutions",
+        "econ2801-pset5-solutions"
+      ],
+      "characters": 5556,
+      "status": "completed",
+      "finishedMs": 12.9,
+      "durationMs": 5.6
+    }
+  ],
+  "events": [
+    {
+      "atMs": 0.9,
+      "type": "index.map.started",
+      "details": {
+        "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+        "sourceIds": [
+          "econ2801-pset3",
+          "econ2801-pset2-solutions"
+        ],
+        "total": 2,
+        "characters": 14778
+      }
+    },
+    {
+      "atMs": 1,
+      "type": "index.map.started",
+      "details": {
+        "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+        "sourceIds": [
+          "econ2801-pset5-solutions"
+        ],
+        "total": 1,
+        "characters": 10903
+      }
+    },
+    {
+      "atMs": 6.9,
+      "type": "index.map.ready",
+      "details": {
+        "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+        "sourceIds": [
+          "econ2801-pset3",
+          "econ2801-pset2-solutions"
+        ],
+        "total": 2,
+        "durationMs": 6,
+        "reason": "all-batch-quotes-verified"
+      }
+    },
+    {
+      "atMs": 7,
+      "type": "index.map.ready",
+      "details": {
+        "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+        "sourceIds": [
+          "econ2801-pset5-solutions"
+        ],
+        "total": 1,
+        "durationMs": 6,
+        "reason": "all-batch-quotes-verified"
+      }
+    },
+    {
+      "atMs": 7.2,
+      "type": "index.coverage.ready",
+      "details": {
+        "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+        "sourceCount": 3,
+        "sourceIds": [
+          "econ2801-pset3",
+          "econ2801-pset2-solutions",
+          "econ2801-pset5-solutions"
+        ],
+        "total": 3,
+        "characters": 25681,
+        "reason": "every-source-chunk-has-verified-evidence"
+      }
+    },
+    {
+      "atMs": 7.2,
+      "type": "index.merge.started",
+      "details": {
+        "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+        "sourceCount": 3,
+        "characters": 5556
+      }
+    },
+    {
+      "atMs": 13.1,
+      "type": "index.merge.ready",
+      "details": {
+        "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+        "sourceCount": 3,
+        "durationMs": 6
+      }
+    },
+    {
+      "atMs": 14.2,
+      "type": "index.cache.hit",
+      "details": {
+        "requestId": "34c4ae57-62dd-44b9-ae40-c84cfcf440aa",
+        "stage": "complete-guide",
+        "sourceCount": 3
+      }
+    }
+  ],
+  "runs": [
+    {
+      "label": "cold",
+      "startedMs": 0,
+      "status": "ready",
+      "durationMs": 13.2,
+      "topicOnly": true,
+      "topicCount": 3,
+      "sourceCoverage": [
+        {
+          "id": "econ2801-pset3",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset2-solutions",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset5-solutions",
+          "representedInTopics": true
+        }
+      ],
+      "guide": {
+        "overview": "Offline topic-only fixture.",
+        "topics": [
+          {
+            "title": "econ2801-pset3",
+            "summary": "A source-linked topic.",
+            "sourceIds": [
+              "econ2801-pset3"
+            ]
+          },
+          {
+            "title": "econ2801-pset2-solutions",
+            "summary": "A source-linked topic.",
+            "sourceIds": [
+              "econ2801-pset2-solutions"
+            ]
+          },
+          {
+            "title": "econ2801-pset5-solutions",
+            "summary": "A source-linked topic.",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ]
+          }
+        ]
+      },
+      "actualRequests": 3,
+      "events": [
+        {
+          "atMs": 0.9,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "characters": 14778
+          }
+        },
+        {
+          "atMs": 1,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "characters": 10903
+          }
+        },
+        {
+          "atMs": 6.9,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "durationMs": 6,
+            "reason": "all-batch-quotes-verified"
+          }
+        },
+        {
+          "atMs": 7,
+          "type": "index.map.ready",
+          "details": {
+            "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "durationMs": 6,
+            "reason": "all-batch-quotes-verified"
+          }
+        },
+        {
+          "atMs": 7.2,
+          "type": "index.coverage.ready",
+          "details": {
+            "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+            "sourceCount": 3,
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions",
+              "econ2801-pset5-solutions"
+            ],
+            "total": 3,
+            "characters": 25681,
+            "reason": "every-source-chunk-has-verified-evidence"
+          }
+        },
+        {
+          "atMs": 7.2,
+          "type": "index.merge.started",
+          "details": {
+            "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+            "sourceCount": 3,
+            "characters": 5556
+          }
+        },
+        {
+          "atMs": 13.1,
+          "type": "index.merge.ready",
+          "details": {
+            "requestId": "510817c4-7c6c-44d5-a17e-f8f698145694",
+            "sourceCount": 3,
+            "durationMs": 6
+          }
+        }
+      ],
+      "cacheStats": {
+        "cacheEntries": 4,
+        "cacheChars": 2447,
+        "inFlight": 0,
+        "active": 0,
+        "queued": 0
+      }
+    },
+    {
+      "label": "same-test-cached",
+      "startedMs": 14.1,
+      "status": "ready",
+      "durationMs": 0.1,
+      "topicOnly": true,
+      "topicCount": 3,
+      "sourceCoverage": [
+        {
+          "id": "econ2801-pset3",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset2-solutions",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset5-solutions",
+          "representedInTopics": true
+        }
+      ],
+      "guide": {
+        "overview": "Offline topic-only fixture.",
+        "topics": [
+          {
+            "title": "econ2801-pset3",
+            "summary": "A source-linked topic.",
+            "sourceIds": [
+              "econ2801-pset3"
+            ]
+          },
+          {
+            "title": "econ2801-pset2-solutions",
+            "summary": "A source-linked topic.",
+            "sourceIds": [
+              "econ2801-pset2-solutions"
+            ]
+          },
+          {
+            "title": "econ2801-pset5-solutions",
+            "summary": "A source-linked topic.",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ]
+          }
+        ]
+      },
+      "actualRequests": 0,
+      "events": [
+        {
+          "atMs": 14.2,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "34c4ae57-62dd-44b9-ae40-c84cfcf440aa",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "cacheStats": {
+        "cacheEntries": 4,
+        "cacheChars": 2447,
+        "inFlight": 0,
+        "active": 0,
+        "queued": 0
+      }
+    }
+  ],
+  "method": "Fresh production createMaterialIndexer, followed by identical input/testId on same in-memory instance. Shared provider slot held across both trials, but its acquisition excluded. Real production Luna organizer; no question-bank preparation, Jev or voice. Cold means empty application cache, not guaranteed cold provider prompt cache.",
+  "maxParallelRequests": 2,
+  "finishedAt": "2026-10-02T08:33:28.239Z",
+  "assessment": {
+    "underTenSecondsCold": true,
+    "cachedNoRequests": true,
+    "allSourcesRepresented": true,
+    "limitation": "One corpus and one cold run; not a latency distribution or guarantee. Topic citation coverage does not prove every source concept was indexed."
+  }
+}

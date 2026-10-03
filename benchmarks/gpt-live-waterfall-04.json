@@ -1,0 +1,42 @@
+{
+  "source": "benchmarks/gpt-live-policy-04.json",
+  "sourceSha256": "e18f2323db346f9b75b57d8353993cc9c29583d6fd4f21421ac757458f98b186",
+  "sessionIndex": 3,
+  "arm": "gpt-live",
+  "scenario": "canonical-question",
+  "stages": [
+    {
+      "stage": "Speech energy end to final ASR delta",
+      "ms": 1117.1
+    },
+    {
+      "stage": "Final ASR delta to committed transcript",
+      "ms": 1105.7
+    },
+    {
+      "stage": "Committed transcript to tutor-turn start",
+      "ms": 238.1
+    },
+    {
+      "stage": "Tutor-turn start to first backend text",
+      "ms": 2685
+    },
+    {
+      "stage": "First backend text to full approved reply",
+      "ms": 930.8
+    },
+    {
+      "stage": "Full approved reply to first received PCM",
+      "ms": 912.1
+    }
+  ],
+  "totalMs": 6988.8,
+  "firstUsefulAudioMs": null,
+  "notes": [
+    "The first audio speaks the introductory Absolutely clause; time to the actual question is unmeasured.",
+    "The application used transcript-idle fallback for this unpunctuated request.",
+    "Material prefetch supplied333characters; no retrieval tool round trip was made on this turn.",
+    "Backend output reported an invalid board candidate. Full approved reply completion includes remaining model text/output work, not separately measured board latency.",
+    "This describes one slow sample and is not a statistically stable latency breakdown."
+  ]
+}

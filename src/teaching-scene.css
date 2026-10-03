@@ -1,0 +1,20 @@
+.teaching-scene{position:relative;width:min(720px,var(--stage-content-max-width,750px));max-width:100%;margin:12px auto;overflow-x:auto;overflow-y:hidden;outline-offset:4px;color:#42474f;overscroll-behavior:contain}
+.teaching-scene-world{display:block;width:100%;min-width:600px;overflow:hidden;touch-action:pan-x pan-y}
+.teaching-scene.is-panning .teaching-scene-world{cursor:grab;touch-action:none}
+.teaching-scene.is-panning:active .teaching-scene-world{cursor:grabbing}
+.scene-object[role=button]{cursor:pointer;outline:none}
+.scene-object{transition:transform 160ms ease-out}
+.scene-object[role=button]:focus-visible{filter:drop-shadow(0 0 3px #7b98aa)}
+.scene-tone-muted{color:#717983}.scene-tone-accent{color:#3c7b8c}
+.scene-writing-box{overflow:hidden;pointer-events:all}
+.scene-writing-fit{transform-origin:top left}
+.scene-writing{line-height:1.25;white-space:pre-wrap;overflow-wrap:anywhere;text-wrap:pretty;font-family:inherit;text-align:left}
+.scene-math{white-space:nowrap}.scene-math .katex{font-size:1em}
+.scene-object:has(rect) .scene-writing,.scene-object:has(ellipse) .scene-writing{text-align:center}
+.scene-tools{position:sticky;left:calc(100% - 164px);bottom:0;width:max-content;display:flex;padding:2px;background:rgba(255,255,255,.88);border-radius:12px;box-shadow:0 1px 6px #0000000a;opacity:.62;transition:opacity 120ms ease}
+.scene-tools:hover,.scene-tools:focus-within{opacity:1}
+.scene-tools button{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:10px;background:transparent;color:inherit;cursor:pointer;transition:background-color 120ms ease,scale 120ms ease}
+.scene-tools button:hover,.scene-tools button[aria-pressed=true]{background:#87939e18}.scene-tools button:active{scale:.96}.scene-tools button:disabled{opacity:.35;cursor:default}
+@media(prefers-reduced-motion:reduce){.scene-object,.scene-tools,.scene-tools button{transition:none}}
+
+.scene-scroll-note{position:sticky;left:0;width:100%;margin:0 0 8px;color:#7b838c;font-size:12px;line-height:1.5;text-align:center}

@@ -1,0 +1,531 @@
+{
+  "source": "benchmarks/tutor-quality/live-paired-results.json",
+  "sourceSha256": "f7606aeae083d523af24b8e5c81fe8a43d9254beabfc0ab8b4d24cc4f70dac41",
+  "auditedAt": "2026-10-02T09:51:18.146Z",
+  "sessions": [
+    {
+      "arm": "before",
+      "status": "completed",
+      "voiceInstructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "simulatedMinutes": 30,
+      "actualWallMs": 49350,
+      "paidRequests": {
+        "openai": 16,
+        "jev": 23
+      },
+      "requestsWithMeasuredUsage": {
+        "openai": 16,
+        "jev": 23
+      },
+      "allPaidRequestsHaveUsage": true,
+      "tokenGroups": [
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "operation": "greeting",
+          "requests": 1,
+          "inputTokens": 2861,
+          "outputTokens": 158,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 468,
+          "reasoningTokens": 45,
+          "estimatedUsd": 0.00355,
+          "unpriced": 0
+        },
+        {
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "operation": "whiteboard-routing",
+          "requests": 12,
+          "inputTokens": 18321,
+          "outputTokens": 440,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 0,
+          "reasoningTokens": 0,
+          "estimatedUsd": 0.000769482,
+          "unpriced": 0
+        },
+        {
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "operation": "student-intent",
+          "requests": 11,
+          "inputTokens": 16790,
+          "outputTokens": 1027,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 0,
+          "reasoningTokens": 0,
+          "estimatedUsd": 0.00070518,
+          "unpriced": 0
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "operation": "tutor",
+          "requests": 11,
+          "inputTokens": 50295,
+          "outputTokens": 1131,
+          "cachedInputTokens": 26290,
+          "cacheWriteTokens": 23972,
+          "reasoningTokens": 173,
+          "estimatedUsd": 0.07882599999999998,
+          "unpriced": 0
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "operation": "grading",
+          "requests": 4,
+          "inputTokens": 6872,
+          "outputTokens": 551,
+          "cachedInputTokens": 3430,
+          "cacheWriteTokens": 3430,
+          "reasoningTokens": 75,
+          "estimatedUsd": 0.00073975,
+          "unpriced": 0
+        }
+      ],
+      "estimatedTotalUsd": 0.08459041199999998,
+      "estimateBasis": "Observed production-ledger units and repository verified public rates; excludes synthetic ElevenLabs, credits, taxes and account-specific billing. Reasoning is already included in output tokens.",
+      "observationCorrection": "Initial cloned SSE whole-body reads aborted after production had completed. The immutable raw request cost subtotal omitted streaming tutoring. This sidecar recomputes from the captured production usage callbacks, without altering raw results.",
+      "firstTextMs": {
+        "count": 12,
+        "median": 903.5
+      },
+      "firstSyntheticAudioMs": {
+        "count": 12,
+        "median": 1027
+      },
+      "syntheticAudioCaveat": "Fake TTS returns a tiny PCM packet immediately when the speech chunk is submitted. This measures the speech pipeline boundary, not ElevenLabs or human playback latency.",
+      "grades": {
+        "attempts": 2,
+        "accepted": 2,
+        "rejected": 0
+      },
+      "assistantReplies": [
+        {
+          "stepId": "welcome",
+          "text": "Welcome back—your test is on October 14, so let’s start with equations. Solve this by doing the same operation to both sides: 3y minus 6 equals 9."
+        },
+        {
+          "stepId": "start-equation",
+          "text": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+        },
+        {
+          "stepId": "answer-bypass",
+          "text": "Subtract 3 from both sides to get 2x = 8. Then divide both sides by 2, so x = 4. These steps are valid because performing the same operation on both sides preserves equality."
+        },
+        {
+          "stepId": "clarify-problem",
+          "text": "We’re on the equation 2x plus 3 equals 11. You asked for the solution, and we just finished it: x equals 4, using equal operations on both sides."
+        },
+        {
+          "stepId": "no-calculator",
+          "text": "Yes. You can do the first step mentally: subtract 3 from 11, giving 2x equals 8. No calculator is needed for these integer steps."
+        },
+        {
+          "stepId": "wrong-attempt",
+          "text": "Close—you correctly got 2x = 8, but that still has 2 times x. Divide both sides by 2, so x = 4; subtracting 3 alone does not make x equal 7."
+        },
+        {
+          "stepId": "reasoned-retry",
+          "text": "Exactly right. You isolated x by subtracting 3, then dividing by 2, and your explanation of why equal operations preserve the equation is correct."
+        },
+        {
+          "stepId": "topic-change",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+        },
+        {
+          "stepId": "reasoned-biology",
+          "text": "That’s correct. The membrane selectively controls what crosses between the cell and its surroundings; diffusion is passive movement down a concentration gradient, while active transport uses energy to move against it."
+        },
+        {
+          "stepId": "stop-for-break",
+          "text": "Of course—we’ll pause here. When you’re back, we can pick up with cell transport or switch topics."
+        },
+        {
+          "stepId": "return-without-solution",
+          "text": "Let’s switch to a new equation challenge. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+        },
+        {
+          "stepId": "decline-optional-planning",
+          "text": "No problem—we can keep practicing this equation without setting a date. Start by undoing the minus 6: what equal operation would you apply to both sides?"
+        }
+      ],
+      "hintStates": [
+        {
+          "step": "start-equation",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "answer-bypass",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "clarify-problem",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "no-calculator",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "hint-one",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "duplicate-hint",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "hint-two",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "hint-three",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "hint-cap",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "wrong-attempt",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "reasoned-retry",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "topic-change",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "reasoned-biology",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "stop-for-break",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "resume",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "return-without-solution",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "clear-optional-date",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        },
+        {
+          "step": "decline-optional-planning",
+          "questionId": null,
+          "remaining": null,
+          "reason": null
+        }
+      ]
+    },
+    {
+      "arm": "current",
+      "status": "completed",
+      "voiceInstructionSha256": "806fd8810e96ff4f44a4fec8833f59556516eb0e7851932b255454ac94267c26",
+      "simulatedMinutes": 30,
+      "actualWallMs": 55255,
+      "paidRequests": {
+        "openai": 14,
+        "jev": 24
+      },
+      "requestsWithMeasuredUsage": {
+        "openai": 14,
+        "jev": 24
+      },
+      "allPaidRequestsHaveUsage": true,
+      "tokenGroups": [
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "operation": "greeting",
+          "requests": 1,
+          "inputTokens": 3862,
+          "outputTokens": 123,
+          "cachedInputTokens": 2814,
+          "cacheWriteTokens": 1045,
+          "reasoningTokens": 20,
+          "estimatedUsd": 0.0046573,
+          "unpriced": 0
+        },
+        {
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "operation": "whiteboard-routing",
+          "requests": 12,
+          "inputTokens": 17349,
+          "outputTokens": 442,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 0,
+          "reasoningTokens": 0,
+          "estimatedUsd": 0.000728658,
+          "unpriced": 0
+        },
+        {
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "operation": "student-intent",
+          "requests": 12,
+          "inputTokens": 16262,
+          "outputTokens": 1068,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 0,
+          "reasoningTokens": 0,
+          "estimatedUsd": 0.000683004,
+          "unpriced": 0
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "operation": "tutor",
+          "requests": 11,
+          "inputTokens": 50853,
+          "outputTokens": 912,
+          "cachedInputTokens": 30954,
+          "cacheWriteTokens": 19866,
+          "reasoningTokens": 321,
+          "estimatedUsd": 0.0668658,
+          "unpriced": 0
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "operation": "grading",
+          "requests": 2,
+          "inputTokens": 3006,
+          "outputTokens": 416,
+          "cachedInputTokens": 1500,
+          "cacheWriteTokens": 1500,
+          "reasoningTokens": 186,
+          "estimatedUsd": 0.00041109999999999996,
+          "unpriced": 0
+        }
+      ],
+      "estimatedTotalUsd": 0.073345862,
+      "estimateBasis": "Observed production-ledger units and repository verified public rates; excludes synthetic ElevenLabs, credits, taxes and account-specific billing. Reasoning is already included in output tokens.",
+      "observationCorrection": "Initial cloned SSE whole-body reads aborted after production had completed. The immutable raw request cost subtotal omitted streaming tutoring. This sidecar recomputes from the captured production usage callbacks, without altering raw results.",
+      "firstTextMs": {
+        "count": 12,
+        "median": 1071
+      },
+      "firstSyntheticAudioMs": {
+        "count": 13,
+        "median": 1168
+      },
+      "syntheticAudioCaveat": "Fake TTS returns a tiny PCM packet immediately when the speech chunk is submitted. This measures the speech pipeline boundary, not ElevenLabs or human playback latency.",
+      "grades": {
+        "attempts": 1,
+        "accepted": 0,
+        "rejected": 1
+      },
+      "assistantReplies": [
+        {
+          "stepId": "welcome",
+          "text": "Let’s begin with a test-level equations question. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+        },
+        {
+          "stepId": "start-equation",
+          "text": "Start with 2x + 3 = 11. What equal operation would you try first, and what would the equation become?"
+        },
+        {
+          "stepId": "answer-bypass",
+          "text": "No problem—we can switch to an easier equation or try cell transport instead. Which would you prefer?"
+        },
+        {
+          "stepId": "clarify-problem",
+          "text": "We were on the equation 2x plus 3 equals 11. You chose not to solve it yet, so we can either try an easier equation or switch to cell transport."
+        },
+        {
+          "stepId": "no-calculator",
+          "text": "Yes—no calculator needed. Look for the number being added to 2x, then think of the opposite operation you could apply equally to both sides. What operation would undo “plus 3”?"
+        },
+        {
+          "stepId": "wrong-attempt",
+          "text": "You made a useful first move by subtracting 3 from both sides, but there’s still a coefficient attached to x. Use the Hint button for one next step, or try completing the equation yourself."
+        },
+        {
+          "stepId": "reasoned-retry",
+          "text": "Exactly right: each operation is applied to both sides, preserving equality. Let’s try the next equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+        },
+        {
+          "stepId": "topic-change",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+        },
+        {
+          "stepId": "reasoned-biology",
+          "text": "That’s correct. The membrane selectively controls what crosses, diffusion is passive and moves down the gradient, and active transport requires energy to move against it. One recall check: where is the nucleus located?"
+        },
+        {
+          "stepId": "stop-for-break",
+          "text": "Absolutely—we’ll pause here. When you’re back, we can pick up with cell biology or equations."
+        },
+        {
+          "stepId": "resume",
+          "text": "Are you still there?"
+        },
+        {
+          "stepId": "return-without-solution",
+          "text": "Welcome back—try this equation one step at a time. How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+        },
+        {
+          "stepId": "decline-optional-planning",
+          "text": "We’ll stay with 4z plus 8 equals 0. What operation could you apply to both sides first to undo the plus 8?"
+        }
+      ],
+      "hintStates": [
+        {
+          "step": "start-equation",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "answer-bypass",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "clarify-problem",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "no-calculator",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "hint-one",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "duplicate-hint",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "hint-two",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "hint-three",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "hint-cap",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "wrong-attempt",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "reasoned-retry",
+          "questionId": "1c44b8ea-7258-460a-87eb-065af53c62e9",
+          "remaining": 3,
+          "reason": "ready"
+        },
+        {
+          "step": "topic-change",
+          "questionId": "673f36d5-7b6e-453b-84c9-17458198cf7f",
+          "remaining": 3,
+          "reason": "ready"
+        },
+        {
+          "step": "reasoned-biology",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "stop-for-break",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "resume",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "return-without-solution",
+          "questionId": "fd5d4caa-1532-4254-bca4-344e809b472b",
+          "remaining": 3,
+          "reason": "ready"
+        },
+        {
+          "step": "clear-optional-date",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        },
+        {
+          "step": "decline-optional-planning",
+          "questionId": null,
+          "remaining": 0,
+          "reason": "no-question"
+        }
+      ]
+    }
+  ]
+}

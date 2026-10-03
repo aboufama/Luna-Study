@@ -1,0 +1,256 @@
+{
+  "startedAt": "2026-10-02T17:51:15.296Z",
+  "status": "incomplete",
+  "phrase": "My test is tomorrow. Let's practice active and passive transport.",
+  "sessions": [
+    {
+      "arm": "eleven",
+      "index": 1,
+      "testId": "gpt-live-eleven-c8fbe1d6-be68-4623-83e8-6c8cc88e9db5",
+      "status": "failed",
+      "diagnostics": [
+        {
+          "type": "session.failed",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "reason": "Choose quiz, test, or final."
+          }
+        },
+        {
+          "type": "session.closed",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "reason": "error",
+            "inputAudioMs": 0
+          }
+        }
+      ],
+      "error": "Choose quiz, test, or final.",
+      "usage": {
+        "testId": "gpt-live-eleven-c8fbe1d6-be68-4623-83e8-6c8cc88e9db5",
+        "trackingStartedAt": "2026-10-02T17:51:17.093Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": false
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    }
+  ],
+  "method": "Matched synthetic 16 kHz PCM replayed at real-time cadence into isolated production voice orchestration. Startup speech is drained before the one measured request. No microphone/speaker, no saved audio, no human learning claim. First received PCM can be filler; useful academic answer audio latency is unmeasured. GPT-Live audio-end may be a silence heuristic.",
+  "ceilings": {
+    "sessions": 2,
+    "sessionSeconds": 60,
+    "openaiBackendRequests": 24,
+    "jevRequests": 32
+  },
+  "source": {
+    "model": "eleven_flash_v2_5",
+    "pcmBytes": 132260,
+    "sha256": "95c5004103cb21a42740b17ead0cd1f46d19eae2a4f2411c4569f71419086216",
+    "durationMs": 4133.125,
+    "energySpeechEndMs": 3890,
+    "generationCharacters": 65
+  },
+  "providerRequests": {
+    "openai": 0,
+    "jev": 0
+  },
+  "models": {
+    "tutor": "gpt-5.6-terra",
+    "gptLive": "gpt-live-1",
+    "stt": "scribe_v2_realtime",
+    "tts": "eleven_v4_turbo"
+  },
+  "stoppedEarly": "Stopped on the first failed session. No automatic paid retry.",
+  "summary": [
+    {
+      "arm": "eleven",
+      "sessions": 1,
+      "completed": 0,
+      "firstAudio": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "firstText": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "estimatedUsd": 0,
+      "usageComplete": false
+    },
+    {
+      "arm": "gpt-live",
+      "sessions": 0,
+      "completed": 0,
+      "firstAudio": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "firstText": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "estimatedUsd": 0,
+      "usageComplete": true
+    }
+  ],
+  "elevenBudget": {
+    "name": "gpt-live-compare",
+    "provider": "ElevenLabs",
+    "maximumCredits": 14000,
+    "maximumProviderRequests": 16,
+    "before": {
+      "used": 3003,
+      "limit": 121009,
+      "remaining": 118006
+    },
+    "reservedCredits": 65,
+    "providerRequests": 1,
+    "ttsCharacters": 65,
+    "sttReservedSeconds": 0,
+    "modelCreditCeilings": {
+      "eleven_v4_turbo": 1,
+      "eleven_flash_v2_5": 1
+    },
+    "sttCreditsPerSecondReservation": 100,
+    "reservations": [
+      {
+        "credits": 65,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 65
+      }
+    ],
+    "limitation": "This enforces a local reservation ceiling using verified character pricing for premade voices and deliberately conservative STT duration reservations. Provider accounting can lag, and account balance changes may include other activity. It is not an account-wide billing limit.",
+    "after": {
+      "used": 3003,
+      "limit": 121009,
+      "remaining": 118006
+    },
+    "observedAccountCreditDelta": 0
+  },
+  "finishedAt": "2026-10-02T17:51:19.370Z"
+}

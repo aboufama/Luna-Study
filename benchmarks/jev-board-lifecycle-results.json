@@ -1,0 +1,5168 @@
+{
+  "startedAt": "2026-10-02T08:19:25.222Z",
+  "live": true,
+  "model": "gpt-5.6-terra",
+  "counts": {
+    "openai": 6,
+    "jev": 11
+  },
+  "caps": {
+    "openai": 6,
+    "jev": 12
+  },
+  "runs": [
+    {
+      "id": "biology-to-history-legacy",
+      "scenario": "biology-to-history",
+      "enabled": false,
+      "prompt": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+      "events": [
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 6.8,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "intent",
+          "atMs": 220.9,
+          "details": {
+            "requestsHelp": null,
+            "answerAttempt": false,
+            "examDeadline": false,
+            "shouldCloseBoard": null,
+            "source": "jev"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 221.4,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 222.2,
+          "details": {
+            "sourceRevision": "8b0e5db7fd145174f1ba42e66b8710a4e27745e7d6c3169a7a72d57b12a93cf3",
+            "sourceCharacters": 74,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2337,
+            "historyCharacters": 205,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 222.3,
+          "details": {}
+        },
+        {
+          "type": "main-text",
+          "atMs": 1286.4,
+          "details": {
+            "text": "For"
+          }
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 1286.4,
+          "details": {
+            "latencyMs": 1065
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1287.8,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1287.9,
+          "details": {
+            "text": " French"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1288,
+          "details": {
+            "text": " Revolution"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1300,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1304.1,
+          "details": {
+            "text": " add"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1305.4,
+          "details": {
+            "text": " your"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1305.5,
+          "details": {
+            "text": " class"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1345,
+          "details": {
+            "text": " notes"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1345.3,
+          "details": {
+            "text": " or"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1345.3,
+          "details": {
+            "text": " textbook"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1381,
+          "details": {
+            "text": " chapter"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1395.5,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1395.6,
+          "details": {
+            "text": " any"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1423.5,
+          "details": {
+            "text": " teacher"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1435.8,
+          "details": {
+            "text": " slides"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1435.8,
+          "details": {
+            "text": " or"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1464.1,
+          "details": {
+            "text": " study"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1475.6,
+          "details": {
+            "text": " guide"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1476.9,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1478.5,
+          "details": {
+            "text": " and"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1504.2,
+          "details": {
+            "text": " primary"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1515.3,
+          "details": {
+            "text": "-source"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1543.4,
+          "details": {
+            "text": " excerpts"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1586.2,
+          "details": {
+            "text": " such"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1601,
+          "details": {
+            "text": " as"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1602.3,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1602.6,
+          "details": {
+            "text": " Declaration"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1602.7,
+          "details": {
+            "text": " of"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1626.5,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1639.6,
+          "details": {
+            "text": " Rights"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1639.8,
+          "details": {
+            "text": " of"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1667.2,
+          "details": {
+            "text": " Man"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1710.9,
+          "details": {
+            "text": "."
+          }
+        },
+        {
+          "type": "simulated-first-audio",
+          "atMs": 1727.6,
+          "details": {}
+        },
+        {
+          "type": "voice.first-audio",
+          "atMs": 1728,
+          "details": {
+            "latencyMs": 1506
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1752,
+          "details": {
+            "text": " A"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1763.8,
+          "details": {
+            "text": " timeline"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1792,
+          "details": {
+            "text": " of"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1804.9,
+          "details": {
+            "text": " major"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1806.6,
+          "details": {
+            "text": " events"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1806.8,
+          "details": {
+            "text": " and"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1834.4,
+          "details": {
+            "text": " key"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1844.6,
+          "details": {
+            "text": " figures"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1876.7,
+          "details": {
+            "text": " would"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1886.2,
+          "details": {
+            "text": " also"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1890,
+          "details": {
+            "text": " help"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1898,
+          "details": {
+            "text": "."
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 2043.5,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 2043.6,
+          "details": {
+            "reply": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures would also help.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 1822
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 2043.9,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 2044.2,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures would also help."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 2183,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.93,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.13,
+            "latencyMs": 138
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 2183.1,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.93,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.13,
+            "latencyMs": 139,
+            "visible": true,
+            "hasBoard": false
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 2183.1,
+          "details": {
+            "reason": "scene-no-longer-relevant"
+          }
+        }
+      ],
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 0.4,
+          "operation": "requests_help,answer_attempt,exam_deadline",
+          "inputHash": "2d8f37e7de8bb210926a73760b28a15687f60d0172797ea8b188dcc91c8f8378",
+          "status": 200
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "atMs": 223.6,
+          "operation": "tutor",
+          "inputHash": "10aca5b3e02ccac5d21830582f8c149f24469cca0f2a89af1239461107a092f0",
+          "status": 200
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 2046.8,
+          "operation": "needs_canvas,close_canvas",
+          "inputHash": "39daace6facc1a1a8e31bf6ca8cf468b286ae7e1fb92fcf2c89eeaab0cb00827",
+          "status": 200
+        }
+      ],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 1065
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "state",
+          "state": "speaking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-audio",
+          "ms": 1507
+        },
+        {
+          "type": "audio",
+          "audio": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "sampleRate": 24000,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures would",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures would also",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures would also help",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures would also help.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook chapter, any teacher slides or study guide, and primary-source excerpts such as the Declaration of the Rights of Man. A timeline of major events and key figures would also help.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 1823
+        },
+        {
+          "type": "audio-end",
+          "turnId": 4
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 4
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 2183.1,
+      "closeReason": "scene-no-longer-relevant",
+      "firstTextMs": 1286.4,
+      "mainCompleteMs": 2043.5,
+      "simulatedFirstAudioMs": 1727.6,
+      "usage": {
+        "testId": "8288aefb-9df6-4add-b53b-572eb584fd83",
+        "trackingStartedAt": "2026-10-02T08:19:25.223Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 5,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 5,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.008752896,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 4
+          },
+          "units": {
+            "inputTokens": 5389,
+            "outputTokens": 150,
+            "cachedInputTokens": 0,
+            "cacheWriteTokens": 3198,
+            "reasoningTokens": 0
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000091896,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 2188,
+              "outputTokens": 95
+            },
+            "unitCoverage": {
+              "inputTokens": 2,
+              "outputTokens": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.008661,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 3201,
+              "outputTokens": 55,
+              "cachedInputTokens": 0,
+              "cacheWriteTokens": 3198,
+              "reasoningTokens": 0
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1,
+              "cachedInputTokens": 1,
+              "cacheWriteTokens": 1,
+              "reasoningTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "biology-to-history-early",
+      "scenario": "biology-to-history",
+      "enabled": true,
+      "prompt": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+      "events": [
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 1.7,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "intent",
+          "atMs": 137,
+          "details": {
+            "requestsHelp": null,
+            "answerAttempt": false,
+            "examDeadline": false,
+            "shouldCloseBoard": false,
+            "source": "jev"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 137.4,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 138.1,
+          "details": {
+            "sourceRevision": "8b0e5db7fd145174f1ba42e66b8710a4e27745e7d6c3169a7a72d57b12a93cf3",
+            "sourceCharacters": 74,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2338,
+            "historyCharacters": 205,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 138.1,
+          "details": {}
+        },
+        {
+          "type": "main-text",
+          "atMs": 927.3,
+          "details": {
+            "text": "For"
+          }
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 927.3,
+          "details": {
+            "latencyMs": 790
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 931.2,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 935.2,
+          "details": {
+            "text": " French"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 937.7,
+          "details": {
+            "text": " Revolution"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 940.2,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 949.2,
+          "details": {
+            "text": " add"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 949.4,
+          "details": {
+            "text": " your"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 949.5,
+          "details": {
+            "text": " class"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 982.3,
+          "details": {
+            "text": " notes"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 986,
+          "details": {
+            "text": " or"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1008.3,
+          "details": {
+            "text": " textbook"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1008.7,
+          "details": {
+            "text": " pages"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1008.9,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1009.5,
+          "details": {
+            "text": " any"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1025.6,
+          "details": {
+            "text": " timeline"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1033.6,
+          "details": {
+            "text": " or"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1071.9,
+          "details": {
+            "text": " study"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1082.3,
+          "details": {
+            "text": " guide"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1091.3,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1101.4,
+          "details": {
+            "text": " primary"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1112.1,
+          "details": {
+            "text": "-source"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1140.1,
+          "details": {
+            "text": " excerpts"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1188.9,
+          "details": {
+            "text": " your"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1229.9,
+          "details": {
+            "text": " course"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1230.1,
+          "details": {
+            "text": " uses"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1232.3,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1232.6,
+          "details": {
+            "text": " and"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1258.8,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1298,
+          "details": {
+            "text": " specific"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1342.8,
+          "details": {
+            "text": " people"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1358.8,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1359.1,
+          "details": {
+            "text": " events"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1362.9,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1364.6,
+          "details": {
+            "text": " and"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1384.8,
+          "details": {
+            "text": " vocabulary"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1390.5,
+          "details": {
+            "text": " your"
+          }
+        },
+        {
+          "type": "simulated-first-audio",
+          "atMs": 1443.9,
+          "details": {}
+        },
+        {
+          "type": "voice.first-audio",
+          "atMs": 1444.1,
+          "details": {
+            "latencyMs": 1307
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1449.3,
+          "details": {
+            "text": " test"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1452.8,
+          "details": {
+            "text": " covers"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1457.6,
+          "details": {
+            "text": "."
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 1603.2,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 1603.3,
+          "details": {
+            "reply": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary your test covers.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 1466
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 1603.6,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 1604,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary your test covers."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 1787.7,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.91,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.11,
+            "latencyMs": 183
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 1787.8,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.91,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.11,
+            "latencyMs": 184,
+            "visible": true,
+            "hasBoard": false
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 1787.8,
+          "details": {
+            "reason": "scene-no-longer-relevant"
+          }
+        }
+      ],
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 0.3,
+          "operation": "requests_help,answer_attempt,exam_deadline,should_close_board",
+          "inputHash": "986e04741c9eadfeccaf5718be04c69511045139ac051b06d1e46d3f46435bbd",
+          "status": 200
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "atMs": 138.5,
+          "operation": "tutor",
+          "inputHash": "e233b149041285f0cdef2c7be0be008d48d055c01fe07c92caa239b892a21231",
+          "status": 200
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 1606.4,
+          "operation": "needs_canvas,close_canvas",
+          "inputHash": "834ee97287ff3e93474b56887f078894c105709555c0ad5db31255d12d48d422",
+          "status": 200
+        }
+      ],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 790
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary your",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "state",
+          "state": "speaking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-audio",
+          "ms": 1307
+        },
+        {
+          "type": "audio",
+          "audio": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "sampleRate": 24000,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary your test",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary your test covers",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary your test covers.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For the French Revolution, add your class notes or textbook pages, any timeline or study guide, primary-source excerpts your course uses, and the specific people, events, and vocabulary your test covers.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 1466
+        },
+        {
+          "type": "audio-end",
+          "turnId": 4
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 4
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 1787.8,
+      "closeReason": "scene-no-longer-relevant",
+      "firstTextMs": 927.3,
+      "mainCompleteMs": 1603.2,
+      "simulatedFirstAudioMs": 1443.9,
+      "usage": {
+        "testId": "a361ee5b-6d20-4acf-8661-fabc89f848bb",
+        "trackingStartedAt": "2026-10-02T08:19:27.425Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 5,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 5,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.002888292,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 4
+          },
+          "units": {
+            "inputTokens": 5631,
+            "outputTokens": 161,
+            "cachedInputTokens": 2522,
+            "cacheWriteTokens": 680,
+            "reasoningTokens": 0
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000101892,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 2426,
+              "outputTokens": 113
+            },
+            "unitCoverage": {
+              "inputTokens": 2,
+              "outputTokens": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0027864,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 3205,
+              "outputTokens": 48,
+              "cachedInputTokens": 2522,
+              "cacheWriteTokens": 680,
+              "reasoningTokens": 0
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1,
+              "cachedInputTokens": 1,
+              "cacheWriteTokens": 1,
+              "reasoningTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "algebra-verbal-detour-early",
+      "scenario": "algebra-verbal-detour",
+      "enabled": true,
+      "prompt": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+      "events": [
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 3.1,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 2,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "intent",
+          "atMs": 132.2,
+          "details": {
+            "requestsHelp": null,
+            "answerAttempt": false,
+            "examDeadline": false,
+            "shouldCloseBoard": false,
+            "source": "jev"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 132.5,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 133.2,
+          "details": {
+            "sourceRevision": "b4df93cbb150d4dca2247fdfe5e6bad6ea8e32e5114ef702787be5890dfa3dfa",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2291,
+            "historyCharacters": 202,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 133.3,
+          "details": {}
+        },
+        {
+          "type": "main-text",
+          "atMs": 775.8,
+          "details": {
+            "text": "For"
+          }
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 775.8,
+          "details": {
+            "latencyMs": 643
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 776.3,
+          "details": {
+            "text": " this"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 776.8,
+          "details": {
+            "text": " week"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 798.6,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 802.9,
+          "details": {
+            "text": " split"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 803.1,
+          "details": {
+            "text": " revision"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 842.9,
+          "details": {
+            "text": " into"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 845.4,
+          "details": {
+            "text": " short"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 848.8,
+          "details": {
+            "text": " daily"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 850.2,
+          "details": {
+            "text": " sessions"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 850.3,
+          "details": {
+            "text": ":"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 891.3,
+          "details": {
+            "text": " review"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 917.3,
+          "details": {
+            "text": " one"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 957.9,
+          "details": {
+            "text": " algebra"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 998.6,
+          "details": {
+            "text": " skill"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1039.1,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1079,
+          "details": {
+            "text": " practise"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1094,
+          "details": {
+            "text": " a"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1094.9,
+          "details": {
+            "text": " few"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1095.9,
+          "details": {
+            "text": " questions"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1097.9,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1098.3,
+          "details": {
+            "text": " then"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1120.8,
+          "details": {
+            "text": " spend"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1133,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1133.1,
+          "details": {
+            "text": " final"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1159.8,
+          "details": {
+            "text": " session"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1201.6,
+          "details": {
+            "text": " before"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1214.7,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1216.3,
+          "details": {
+            "text": " test"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1216.4,
+          "details": {
+            "text": " checking"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1244.1,
+          "details": {
+            "text": " mistakes"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1256.3,
+          "details": {
+            "text": " and"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1282.4,
+          "details": {
+            "text": " weak"
+          }
+        },
+        {
+          "type": "simulated-first-audio",
+          "atMs": 1317.6,
+          "details": {}
+        },
+        {
+          "type": "voice.first-audio",
+          "atMs": 1317.6,
+          "details": {
+            "latencyMs": 1185
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1334.6,
+          "details": {
+            "text": " spots"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1336.6,
+          "details": {
+            "text": "."
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 1441,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 1441,
+          "details": {
+            "reply": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes and weak spots.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 1308
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 1441,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 1441.1,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes and weak spots."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 1580.8,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.88,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.11,
+            "latencyMs": 140
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 1580.9,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.88,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.11,
+            "latencyMs": 140,
+            "visible": true,
+            "hasBoard": false
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 1580.9,
+          "details": {
+            "reason": "scene-no-longer-relevant"
+          }
+        }
+      ],
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 0.3,
+          "operation": "requests_help,answer_attempt,exam_deadline,should_close_board",
+          "inputHash": "369e0fd50d6849ad8cc68f3f8380257586468f380f0ef73fd534d4e76ba1f78b",
+          "status": 200
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "atMs": 133.6,
+          "operation": "tutor",
+          "inputHash": "2a2bb0ba0572b0e81699135fc8c0987fff55173a3aa6aba9ef514af90b47d8aa",
+          "status": 200
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 1441.8,
+          "operation": "needs_canvas,close_canvas",
+          "inputHash": "7a9e254cc8a871d784e2eb86d4fb839cee86e2ad689b3b647c332d9d235a581d",
+          "status": 200
+        }
+      ],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 643
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions:",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes and",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes and weak",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "state",
+          "state": "speaking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-audio",
+          "ms": 1185
+        },
+        {
+          "type": "audio",
+          "audio": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "sampleRate": 24000,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes and weak spots",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes and weak spots.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "For this week, split revision into short daily sessions: review one algebra skill, practise a few questions, then spend the final session before the test checking mistakes and weak spots.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 1308
+        },
+        {
+          "type": "audio-end",
+          "turnId": 4
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 4
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 1580.9,
+      "closeReason": "scene-no-longer-relevant",
+      "firstTextMs": 775.8,
+      "mainCompleteMs": 1441,
+      "simulatedFirstAudioMs": 1317.6,
+      "usage": {
+        "testId": "baf889a1-5bda-4415-870d-02dd53a23f48",
+        "trackingStartedAt": "2026-10-02T08:19:29.223Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 5,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 5,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.002838002,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 4
+          },
+          "units": {
+            "inputTokens": 5635,
+            "outputTokens": 157,
+            "cachedInputTokens": 2522,
+            "cacheWriteTokens": 679,
+            "reasoningTokens": 0
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000102102,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 2431,
+              "outputTokens": 113
+            },
+            "unitCoverage": {
+              "inputTokens": 2,
+              "outputTokens": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0027359,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 3204,
+              "outputTokens": 44,
+              "cachedInputTokens": 2522,
+              "cacheWriteTokens": 679,
+              "reasoningTokens": 0
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1,
+              "cachedInputTokens": 1,
+              "cacheWriteTokens": 1,
+              "reasoningTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "algebra-verbal-detour-legacy",
+      "scenario": "algebra-verbal-detour",
+      "enabled": false,
+      "prompt": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+      "events": [
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.5,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "intent",
+          "atMs": 153,
+          "details": {
+            "requestsHelp": null,
+            "answerAttempt": false,
+            "examDeadline": false,
+            "shouldCloseBoard": null,
+            "source": "jev"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 153.1,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 153.3,
+          "details": {
+            "sourceRevision": "b4df93cbb150d4dca2247fdfe5e6bad6ea8e32e5114ef702787be5890dfa3dfa",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2290,
+            "historyCharacters": 202,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 153.3,
+          "details": {}
+        },
+        {
+          "type": "main-text",
+          "atMs": 831.6,
+          "details": {
+            "text": "Plan"
+          }
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 831.6,
+          "details": {
+            "latencyMs": 679
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 832.3,
+          "details": {
+            "text": " short"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 855,
+          "details": {
+            "text": " daily"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 896.3,
+          "details": {
+            "text": " blocks"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 937,
+          "details": {
+            "text": ":"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 941.2,
+          "details": {
+            "text": " review"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 977.4,
+          "details": {
+            "text": " one"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1018.7,
+          "details": {
+            "text": " algebra"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1057.7,
+          "details": {
+            "text": " skill"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1101.2,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1101.3,
+          "details": {
+            "text": " do"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1139.3,
+          "details": {
+            "text": " a"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1178.3,
+          "details": {
+            "text": " few"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1219.8,
+          "details": {
+            "text": " mixed"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1232.5,
+          "details": {
+            "text": " problems"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1232.6,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1259.8,
+          "details": {
+            "text": " check"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1272.2,
+          "details": {
+            "text": " mistakes"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1274.2,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1299.2,
+          "details": {
+            "text": " then"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1339.7,
+          "details": {
+            "text": " finish"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1351.5,
+          "details": {
+            "text": " with"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1380.1,
+          "details": {
+            "text": " a"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1422.1,
+          "details": {
+            "text": " quick"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1460,
+          "details": {
+            "text": " recap"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1470.5,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1501.7,
+          "details": {
+            "text": " leaving"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1515.7,
+          "details": {
+            "text": " the"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1517.8,
+          "details": {
+            "text": " final"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1519.3,
+          "details": {
+            "text": " day"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1541.1,
+          "details": {
+            "text": " for"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1550.2,
+          "details": {
+            "text": " a"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1581.5,
+          "details": {
+            "text": " timed"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1622.9,
+          "details": {
+            "text": " practice"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1661.7,
+          "details": {
+            "text": " and"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1701.9,
+          "details": {
+            "text": " weak"
+          }
+        },
+        {
+          "type": "simulated-first-audio",
+          "atMs": 1723.6,
+          "details": {}
+        },
+        {
+          "type": "voice.first-audio",
+          "atMs": 1723.6,
+          "details": {
+            "latencyMs": 1571
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1751.9,
+          "details": {
+            "text": " spots"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1760.3,
+          "details": {
+            "text": "."
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 1863.5,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 1863.7,
+          "details": {
+            "reply": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice and weak spots.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 1711
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 1863.8,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 1864,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice and weak spots."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 2025.3,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.89,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.16,
+            "latencyMs": 161
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 2025.4,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.89,
+            "reason": "visual-activity-finished",
+            "source": "jev",
+            "probability": 0.16,
+            "latencyMs": 161,
+            "visible": true,
+            "hasBoard": false
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 2025.4,
+          "details": {
+            "reason": "scene-no-longer-relevant"
+          }
+        }
+      ],
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 0.1,
+          "operation": "requests_help,answer_attempt,exam_deadline",
+          "inputHash": "c3cd4b6cddada4fbf92537b817e2d6dff4a6c01e34fddc59c40e72b7bf766b0b",
+          "status": 200
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "atMs": 153.5,
+          "operation": "tutor",
+          "inputHash": "a2cbe44d26c12db2ea0aa9ca81f6aaf7ea0891776496ee15494410066f606148",
+          "status": 200
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 1864.5,
+          "operation": "needs_canvas,close_canvas",
+          "inputHash": "9984210e39e19b9f7b4c35331521ab7d73b8a5b2828d2c4d6cb905f456693f0b",
+          "status": 200
+        }
+      ],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 679
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks:",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice and",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice and weak",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "state",
+          "state": "speaking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-audio",
+          "ms": 1571
+        },
+        {
+          "type": "audio",
+          "audio": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "sampleRate": 24000,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice and weak spots",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice and weak spots.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "Plan short daily blocks: review one algebra skill, do a few mixed problems, check mistakes, then finish with a quick recap, leaving the final day for a timed practice and weak spots.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 1711
+        },
+        {
+          "type": "audio-end",
+          "turnId": 4
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 4
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 2025.4,
+      "closeReason": "scene-no-longer-relevant",
+      "firstTextMs": 831.6,
+      "mainCompleteMs": 1863.5,
+      "simulatedFirstAudioMs": 1723.6,
+      "usage": {
+        "testId": "4f0c1223-f87a-435b-805b-4fdc61f76744",
+        "trackingStartedAt": "2026-10-02T08:19:30.812Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 5,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 5,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.00286346,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 4
+          },
+          "units": {
+            "inputTokens": 5384,
+            "outputTokens": 142,
+            "cachedInputTokens": 2522,
+            "cacheWriteTokens": 679,
+            "reasoningTokens": 0
+          },
+          "unitCoverage": {
+            "inputTokens": 3,
+            "outputTokens": 3,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.00009156,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 2180,
+              "outputTokens": 95
+            },
+            "unitCoverage": {
+              "inputTokens": 2,
+              "outputTokens": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0027719,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 3204,
+              "outputTokens": 47,
+              "cachedInputTokens": 2522,
+              "cacheWriteTokens": 679,
+              "reasoningTokens": 0
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1,
+              "cachedInputTokens": 1,
+              "cacheWriteTokens": 1,
+              "reasoningTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "grammar-to-forces-legacy",
+      "scenario": "grammar-to-forces",
+      "enabled": false,
+      "prompt": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+      "events": [
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 1.6,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "intent",
+          "atMs": 130.9,
+          "details": {
+            "requestsHelp": null,
+            "answerAttempt": false,
+            "examDeadline": false,
+            "shouldCloseBoard": null,
+            "source": "jev"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 132.4,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 133.6,
+          "details": {
+            "sourceRevision": "fd7062772f80a94392a2deec1a7cbdc7101967c3f03971ac061f119172021187",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2390,
+            "historyCharacters": 222,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 133.8,
+          "details": {}
+        },
+        {
+          "type": "retrieval.tool-read",
+          "atMs": 1324.2,
+          "details": {
+            "operation": "read_materials",
+            "sourceRevision": "fd7062772f80a94392a2deec1a7cbdc7101967c3f03971ac061f119172021187",
+            "chunkIds": [
+              "c_7848af49cdac6eb9c9702a36dd53"
+            ],
+            "reason": "selected",
+            "characters": 95,
+            "total": 1
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1903.2,
+          "details": {
+            "text": "No"
+          }
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 1903.2,
+          "details": {
+            "latencyMs": 1770
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1945.3,
+          "details": {
+            "text": "."
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1952,
+          "details": {
+            "text": " These"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1954.7,
+          "details": {
+            "text": " notes"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1954.9,
+          "details": {
+            "text": " cover"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1954.9,
+          "details": {
+            "text": " a"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1981.9,
+          "details": {
+            "text": " dependent"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1984.8,
+          "details": {
+            "text": " clause"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1987.4,
+          "details": {
+            "text": " in"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 1989.7,
+          "details": {
+            "text": " a"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2021.5,
+          "details": {
+            "text": " grammar"
+          }
+        },
+        {
+          "type": "simulated-first-audio",
+          "atMs": 2053.1,
+          "details": {}
+        },
+        {
+          "type": "voice.first-audio",
+          "atMs": 2053.2,
+          "details": {
+            "latencyMs": 1921
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2061,
+          "details": {
+            "text": " sentence"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2072.6,
+          "details": {
+            "text": ","
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2074.3,
+          "details": {
+            "text": " not"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2106,
+          "details": {
+            "text": " force"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2108.4,
+          "details": {
+            "text": " balance"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2121.1,
+          "details": {
+            "text": " on"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2124.8,
+          "details": {
+            "text": " a"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2131.5,
+          "details": {
+            "text": " block"
+          }
+        },
+        {
+          "type": "main-text",
+          "atMs": 2132.8,
+          "details": {
+            "text": "."
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 2216,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 2216.1,
+          "details": {
+            "reply": "No. These notes cover a dependent clause in a grammar sentence, not force balance on a block.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 2083
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 2216.1,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 2216.5,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "No. These notes cover a dependent clause in a grammar sentence, not force balance on a block."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 2349.5,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.76,
+            "reason": "verbal-explanation",
+            "source": "jev",
+            "probability": 0.07,
+            "latencyMs": 133
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 2349.6,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "closeProbability": 0.76,
+            "reason": "verbal-explanation",
+            "source": "jev",
+            "probability": 0.07,
+            "latencyMs": 133,
+            "visible": true,
+            "hasBoard": false
+          }
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "atMs": 2349.6,
+          "details": {
+            "reason": "no-new-visual"
+          }
+        }
+      ],
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 0.5,
+          "operation": "requests_help,answer_attempt,exam_deadline",
+          "inputHash": "2ab2fced122acabd6ffc0d63c312470995b18e2be3aa4692e0bb34f8d696e362",
+          "status": 200
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "atMs": 134.3,
+          "operation": "tutor",
+          "inputHash": "a13a86967c6722ce16d721a05a75969675e429a0f95dd52f23dd75b0f6d27f32",
+          "status": 200
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "atMs": 1324.4,
+          "operation": "tutor",
+          "inputHash": "05969354274b5f8b86c019af0b42446787953706a2b78822f229a6822660aafa",
+          "status": 200
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 2217,
+          "operation": "needs_canvas,close_canvas",
+          "inputHash": "829c3633003ce875ade11076f1104e8840cc1b528e14127dd181e1cd097652c3",
+          "status": 200
+        }
+      ],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 1771
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "state",
+          "state": "speaking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-audio",
+          "ms": 1921
+        },
+        {
+          "type": "audio",
+          "audio": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "sampleRate": 24000,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence,",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not force",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not force balance",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not force balance on",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not force balance on a",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not force balance on a block",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not force balance on a block.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "No. These notes cover a dependent clause in a grammar sentence, not force balance on a block.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 2084
+        },
+        {
+          "type": "audio-end",
+          "turnId": 4
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": null,
+      "closeReason": null,
+      "firstTextMs": 1903.2,
+      "mainCompleteMs": 2216,
+      "simulatedFirstAudioMs": 2053.1,
+      "usage": {
+        "testId": "1cee20de-7353-4cdf-a71d-92ebb4b9e0d9",
+        "trackingStartedAt": "2026-10-02T08:19:32.844Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 6,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 6,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.004918648,
+          "estimatedRequests": 4,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 5
+          },
+          "units": {
+            "inputTokens": 8838,
+            "outputTokens": 199,
+            "cachedInputTokens": 5718,
+            "cacheWriteTokens": 970,
+            "reasoningTokens": 0
+          },
+          "unitCoverage": {
+            "inputTokens": 4,
+            "outputTokens": 4,
+            "cachedInputTokens": 2,
+            "cacheWriteTokens": 2,
+            "reasoningTokens": 2
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000090048,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {
+              "inputTokens": 2144,
+              "outputTokens": 95
+            },
+            "unitCoverage": {
+              "inputTokens": 2,
+              "outputTokens": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 3,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 3,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0048286,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "completed": 3
+            },
+            "units": {
+              "inputTokens": 6694,
+              "outputTokens": 104,
+              "cachedInputTokens": 5718,
+              "cacheWriteTokens": 970,
+              "reasoningTokens": 0
+            },
+            "unitCoverage": {
+              "inputTokens": 2,
+              "outputTokens": 2,
+              "cachedInputTokens": 2,
+              "cacheWriteTokens": 2,
+              "reasoningTokens": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "grammar-to-forces-early",
+      "scenario": "grammar-to-forces",
+      "enabled": true,
+      "prompt": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+      "events": [
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.9,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "intent",
+          "atMs": 177.7,
+          "details": {
+            "requestsHelp": null,
+            "answerAttempt": false,
+            "examDeadline": false,
+            "shouldCloseBoard": false,
+            "source": "jev"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 177.9,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 178.5,
+          "details": {
+            "sourceRevision": "fd7062772f80a94392a2deec1a7cbdc7101967c3f03971ac061f119172021187",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2391,
+            "historyCharacters": 222,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 178.5,
+          "details": {}
+        },
+        {
+          "type": "main-complete",
+          "atMs": 178.9,
+          "details": {}
+        },
+        {
+          "type": "llm.failed",
+          "atMs": 178.9,
+          "details": {
+            "reason": "failed",
+            "errorCode": "502",
+            "latencyMs": 1
+          }
+        },
+        {
+          "type": "turn.failed",
+          "atMs": 178.9,
+          "details": {
+            "reason": "Luna could not answer that turn. Check the model connection and ask again."
+          }
+        },
+        {
+          "type": "turn.interrupted",
+          "atMs": 178.9,
+          "details": {
+            "reason": "interrupted"
+          }
+        }
+      ],
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "atMs": 0.3,
+          "operation": "requests_help,answer_attempt,exam_deadline,should_close_board",
+          "inputHash": "12a7543f377db23515bd5ec59afcf6d820fcf48b8455beeb836f4d310cd63116",
+          "status": 200
+        }
+      ],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "error",
+          "message": "Luna could not answer that turn. Check the model connection and ask again.",
+          "recoverable": true
+        }
+      ],
+      "status": "failed",
+      "closeAtMs": null,
+      "closeReason": null,
+      "firstTextMs": null,
+      "mainCompleteMs": 178.9,
+      "simulatedFirstAudioMs": null,
+      "usage": {
+        "testId": "20592f0f-805f-4fdc-8e4c-8f4bb9e6368b",
+        "trackingStartedAt": "2026-10-02T08:19:35.203Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 4,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 4,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.000042588,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 3,
+          "estimateComplete": false,
+          "missingUsageRequests": 3,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 2,
+            "failed": 1
+          },
+          "units": {
+            "inputTokens": 1014,
+            "outputTokens": 75
+          },
+          "unitCoverage": {
+            "inputTokens": 1,
+            "outputTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 1,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000042588,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 1
+            },
+            "units": {
+              "inputTokens": 1014,
+              "outputTokens": 75
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 1,
+              "failed": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "server/jev-intent.mjs": "257726cbeca7c4a4ae3426783dfeebd7c535c11749e70cc7103c65426e7257ba",
+    "server/live-voice.mjs": "8b2ef15bfd239f3d75e652754684baa94ca61410ced2e9901986985a14a15ac5",
+    "server/openai-luna.mjs": "10b77b58ade0f834c9c8b65de1aadf5e5b0be7d6cfc1a2627d1e70a34de7f7b5"
+  },
+  "scope": "Same current production live-voice adapter, with LUNA_EARLY_BOARD_HIDE off versus on. Three paired synthetic topic changes; condition order alternates. Real Terra and real Jev, local source lookup without semantic prefetch, no bank or grading. STT and TTS are deterministic doubles: first silent PCM100ms after first speech chunk; not actual ElevenLabs latency/cost. Complete trial holds shared provider lock. Tiny sample, not production percentiles.",
+  "finishedAt": "2026-10-02T08:19:35.390Z"
+}

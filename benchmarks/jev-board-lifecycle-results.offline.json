@@ -1,0 +1,2002 @@
+{
+  "startedAt": "2026-10-02T08:19:15.529Z",
+  "live": false,
+  "model": "gpt-5.6-terra",
+  "counts": {
+    "openai": 0,
+    "jev": 0
+  },
+  "caps": {
+    "openai": 6,
+    "jev": 12
+  },
+  "runs": [
+    {
+      "id": "biology-to-history-legacy",
+      "scenario": "biology-to-history",
+      "enabled": false,
+      "prompt": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+      "events": [
+        {
+          "type": "intent",
+          "atMs": 0.1,
+          "details": {
+            "answerAttempt": false,
+            "requestsHelp": false,
+            "shouldCloseBoard": false
+          }
+        },
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.6,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 0.7,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 0.9,
+          "details": {
+            "sourceRevision": "8b0e5db7fd145174f1ba42e66b8710a4e27745e7d6c3169a7a72d57b12a93cf3",
+            "sourceCharacters": 74,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2303,
+            "historyCharacters": 205,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 0.9,
+          "details": {}
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 0.9,
+          "details": {
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 1,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 1,
+          "details": {
+            "reply": "We can discuss that verbally.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 1,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 1.1,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "We can discuss that verbally."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 1.1,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 1.2,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "visible": true,
+            "hasBoard": false,
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 1.2,
+          "details": {
+            "reason": "scene-no-longer-relevant"
+          }
+        }
+      ],
+      "requests": [],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 0
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 0
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 4
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 1.2,
+      "closeReason": "scene-no-longer-relevant",
+      "firstTextMs": null,
+      "mainCompleteMs": 1,
+      "simulatedFirstAudioMs": null,
+      "usage": {
+        "testId": "1d16eda9-945b-40ce-818b-83ff6ca6585f",
+        "trackingStartedAt": "2026-10-02T08:19:15.530Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 3,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 3,
+          "estimateComplete": false,
+          "missingUsageRequests": 3,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 2
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "biology-to-history-early",
+      "scenario": "biology-to-history",
+      "enabled": true,
+      "prompt": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+      "events": [
+        {
+          "type": "intent",
+          "atMs": 0.1,
+          "details": {
+            "answerAttempt": false,
+            "requestsHelp": false,
+            "shouldCloseBoard": true
+          }
+        },
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.1,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 0.1,
+          "details": {
+            "reason": "student-topic-shift",
+            "boardRevision": "8b804d55-8cec-44f7-a115-d8517c5657d9"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 0.2,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 0.3,
+          "details": {
+            "sourceRevision": "8b0e5db7fd145174f1ba42e66b8710a4e27745e7d6c3169a7a72d57b12a93cf3",
+            "sourceCharacters": 74,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2304,
+            "historyCharacters": 205,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 0.3,
+          "details": {}
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 0.3,
+          "details": {
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 0.4,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 0.4,
+          "details": {
+            "reply": "We can discuss that verbally.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 0.4,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 0.4,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "We can discuss that verbally."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 0.4,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 0.5,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false,
+            "visible": false,
+            "hasBoard": false,
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "atMs": 0.5,
+          "details": {
+            "reason": "no-new-visual"
+          }
+        }
+      ],
+      "requests": [],
+      "visibleAtMainStart": false,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Put the cell diagram away. Let us switch to the French Revolution. Just tell me verbally which materials I should add for that topic.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 3
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 0
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 0
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 0.1,
+      "closeReason": "student-topic-shift",
+      "firstTextMs": null,
+      "mainCompleteMs": 0.4,
+      "simulatedFirstAudioMs": null,
+      "usage": {
+        "testId": "57a83df7-056c-4313-839d-699e7efa4af7",
+        "trackingStartedAt": "2026-10-02T08:19:15.544Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 3,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 3,
+          "estimateComplete": false,
+          "missingUsageRequests": 3,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 2
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "algebra-verbal-detour-early",
+      "scenario": "algebra-verbal-detour",
+      "enabled": true,
+      "prompt": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+      "events": [
+        {
+          "type": "intent",
+          "atMs": 0.1,
+          "details": {
+            "answerAttempt": false,
+            "requestsHelp": false,
+            "shouldCloseBoard": true
+          }
+        },
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.9,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 1,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 0.9,
+          "details": {
+            "reason": "student-topic-shift",
+            "boardRevision": "f58179f2-9b51-4c58-a5be-15847143e261"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 1,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 1.2,
+          "details": {
+            "sourceRevision": "b4df93cbb150d4dca2247fdfe5e6bad6ea8e32e5114ef702787be5890dfa3dfa",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2257,
+            "historyCharacters": 202,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 1.2,
+          "details": {}
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 1.2,
+          "details": {
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 1.2,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 1.3,
+          "details": {
+            "reply": "We can discuss that verbally.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 1.3,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 1.3,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "We can discuss that verbally."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 1.3,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 1.4,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false,
+            "visible": false,
+            "hasBoard": false,
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "atMs": 1.4,
+          "details": {
+            "reason": "no-new-visual"
+          }
+        }
+      ],
+      "requests": [],
+      "visibleAtMainStart": false,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 3
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 0
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 0
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 0.9,
+      "closeReason": "student-topic-shift",
+      "firstTextMs": null,
+      "mainCompleteMs": 1.2,
+      "simulatedFirstAudioMs": null,
+      "usage": {
+        "testId": "cf1cb1a8-2ba6-4961-9c36-43ef2dad2bca",
+        "trackingStartedAt": "2026-10-02T08:19:15.548Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 3,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 3,
+          "estimateComplete": false,
+          "missingUsageRequests": 3,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 2
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "algebra-verbal-detour-legacy",
+      "scenario": "algebra-verbal-detour",
+      "enabled": false,
+      "prompt": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+      "events": [
+        {
+          "type": "intent",
+          "atMs": 0.1,
+          "details": {
+            "answerAttempt": false,
+            "requestsHelp": false,
+            "shouldCloseBoard": false
+          }
+        },
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.1,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 0.1,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 0.3,
+          "details": {
+            "sourceRevision": "b4df93cbb150d4dca2247fdfe5e6bad6ea8e32e5114ef702787be5890dfa3dfa",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2256,
+            "historyCharacters": 202,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 0.3,
+          "details": {}
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 0.3,
+          "details": {
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 0.3,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 0.3,
+          "details": {
+            "reply": "We can discuss that verbally.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 0.3,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 0.3,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "We can discuss that verbally."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 0.3,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 0.4,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "visible": true,
+            "hasBoard": false,
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 0.4,
+          "details": {
+            "reason": "scene-no-longer-relevant"
+          }
+        }
+      ],
+      "requests": [],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "Hide the board for now; I want a short verbal overview of how to plan this week’s revision instead. Please just give one sentence.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 0
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 0
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 4
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 0.4,
+      "closeReason": "scene-no-longer-relevant",
+      "firstTextMs": null,
+      "mainCompleteMs": 0.3,
+      "simulatedFirstAudioMs": null,
+      "usage": {
+        "testId": "a964c67a-c5ac-4cbc-8973-d9245d48b26c",
+        "trackingStartedAt": "2026-10-02T08:19:15.551Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 3,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 3,
+          "estimateComplete": false,
+          "missingUsageRequests": 3,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 2
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "grammar-to-forces-legacy",
+      "scenario": "grammar-to-forces",
+      "enabled": false,
+      "prompt": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+      "events": [
+        {
+          "type": "intent",
+          "atMs": 0.1,
+          "details": {
+            "answerAttempt": false,
+            "requestsHelp": false,
+            "shouldCloseBoard": false
+          }
+        },
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.1,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 0.2,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 0.3,
+          "details": {
+            "sourceRevision": "fd7062772f80a94392a2deec1a7cbdc7101967c3f03971ac061f119172021187",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2356,
+            "historyCharacters": 222,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 0.3,
+          "details": {}
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 0.3,
+          "details": {
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 0.3,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 0.3,
+          "details": {
+            "reply": "We can discuss that verbally.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 0.3,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 0.3,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "We can discuss that verbally."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 0.4,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 0.5,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": true,
+            "visible": true,
+            "hasBoard": false,
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 0.5,
+          "details": {
+            "reason": "scene-no-longer-relevant"
+          }
+        }
+      ],
+      "requests": [],
+      "visibleAtMainStart": true,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 0
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 0
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 4
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 0.5,
+      "closeReason": "scene-no-longer-relevant",
+      "firstTextMs": null,
+      "mainCompleteMs": 0.3,
+      "simulatedFirstAudioMs": null,
+      "usage": {
+        "testId": "a29ab481-e241-473d-8fdf-edc631680a6e",
+        "trackingStartedAt": "2026-10-02T08:19:15.554Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 3,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 3,
+          "estimateComplete": false,
+          "missingUsageRequests": 3,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 2
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "id": "grammar-to-forces-early",
+      "scenario": "grammar-to-forces",
+      "enabled": true,
+      "prompt": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+      "events": [
+        {
+          "type": "intent",
+          "atMs": 0.1,
+          "details": {
+            "answerAttempt": false,
+            "requestsHelp": false,
+            "shouldCloseBoard": true
+          }
+        },
+        {
+          "type": "retrieval.prefetch-unresolved",
+          "atMs": 0.1,
+          "details": {
+            "reason": "missing-key",
+            "latencyMs": 0,
+            "sourceCount": 0,
+            "total": 0
+          }
+        },
+        {
+          "type": "whiteboard.closed",
+          "atMs": 0.1,
+          "details": {
+            "reason": "student-topic-shift",
+            "boardRevision": "093e572a-2ec5-41c1-8872-53b38ad990cd"
+          }
+        },
+        {
+          "type": "turn.started",
+          "atMs": 0.1,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "type": "tutor.context-built",
+          "atMs": 0.3,
+          "details": {
+            "sourceRevision": "fd7062772f80a94392a2deec1a7cbdc7101967c3f03971ac061f119172021187",
+            "sourceCharacters": 95,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2357,
+            "historyCharacters": 222,
+            "recentTurns": 2,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "type": "main-start",
+          "atMs": 0.3,
+          "details": {}
+        },
+        {
+          "type": "llm.first-text",
+          "atMs": 0.3,
+          "details": {
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "main-complete",
+          "atMs": 0.3,
+          "details": {}
+        },
+        {
+          "type": "llm.completed",
+          "atMs": 0.3,
+          "details": {
+            "reply": "We can discuss that verbally.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "question.tracked",
+          "atMs": 0.3,
+          "details": {
+            "reason": "none"
+          }
+        },
+        {
+          "type": "whiteboard.candidate",
+          "atMs": 0.3,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "We can discuss that verbally."
+          }
+        },
+        {
+          "type": "canvas-decision",
+          "atMs": 0.3,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false
+          }
+        },
+        {
+          "type": "whiteboard.decision",
+          "atMs": 0.4,
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false,
+            "visible": false,
+            "hasBoard": false,
+            "latencyMs": 0
+          }
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "atMs": 0.4,
+          "details": {
+            "reason": "no-new-visual"
+          }
+        }
+      ],
+      "requests": [],
+      "visibleAtMainStart": false,
+      "messages": [
+        {
+          "type": "transcript",
+          "role": "user",
+          "text": "We have finished this sentence. Move to the force balance on a block. Just tell me verbally whether these notes cover that topic, without drawing yet.",
+          "final": true,
+          "turnId": 2
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "canvas",
+          "visible": false,
+          "id": 3
+        },
+        {
+          "type": "interrupt"
+        },
+        {
+          "type": "state",
+          "state": "listening"
+        },
+        {
+          "type": "state",
+          "state": "thinking"
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "first-text",
+          "ms": 0
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": false,
+          "turnId": 4
+        },
+        {
+          "type": "transcript",
+          "role": "assistant",
+          "text": "We can discuss that verbally.",
+          "final": true,
+          "turnId": 4
+        },
+        {
+          "type": "latency",
+          "turnId": 4,
+          "stage": "text-complete",
+          "ms": 0
+        },
+        {
+          "type": "mastery",
+          "mastery": {
+            "overall": 0,
+            "topics": []
+          }
+        }
+      ],
+      "status": "completed",
+      "closeAtMs": 0.1,
+      "closeReason": "student-topic-shift",
+      "firstTextMs": null,
+      "mainCompleteMs": 0.3,
+      "simulatedFirstAudioMs": null,
+      "usage": {
+        "testId": "54c3c4f4-f8c5-4d18-b733-4a503133086a",
+        "trackingStartedAt": "2026-10-02T08:19:15.556Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 3,
+          "pendingRequests": 1,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 3,
+          "estimateComplete": false,
+          "missingUsageRequests": 3,
+          "statusCounts": {
+            "pending": 1,
+            "completed": 2
+          },
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 2
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 1,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "pending": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": true
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "server/jev-intent.mjs": "257726cbeca7c4a4ae3426783dfeebd7c535c11749e70cc7103c65426e7257ba",
+    "server/live-voice.mjs": "8b2ef15bfd239f3d75e652754684baa94ca61410ced2e9901986985a14a15ac5",
+    "server/openai-luna.mjs": "10b77b58ade0f834c9c8b65de1aadf5e5b0be7d6cfc1a2627d1e70a34de7f7b5"
+  },
+  "scope": "Same current production live-voice adapter, with LUNA_EARLY_BOARD_HIDE off versus on. Three paired synthetic topic changes; condition order alternates. Real Terra and real Jev, local source lookup without semantic prefetch, no bank or grading. STT and TTS are deterministic doubles: first silent PCM100ms after first speech chunk; not actual ElevenLabs latency/cost. Complete trial holds shared provider lock. Tiny sample, not production percentiles.",
+  "finishedAt": "2026-10-02T08:19:15.559Z"
+}

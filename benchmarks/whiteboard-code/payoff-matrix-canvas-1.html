@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'"><style>*{box-sizing:border-box}html,body{margin:0;width:800px;height:500px;overflow:hidden;font-family:Arial,sans-serif;background:white}#stage{position:relative;width:800px;height:500px}svg{overflow:visible}</style></head><body><main id="stage"><canvas width="800" height="500"></canvas></main><script>window.__done=false;window.__error=null;window.__texts=[];window.__hits=[];window.__draws=[];window.addEventListener('error',e=>window.__error=String(e.message).slice(0,180));
+
+function draw(ctx, hit) {
+	ctx.clearRect(0, 0, 800, 500);
+	ctx.fillStyle = "#ffffff";
+	ctx.fillRect(0, 0, 800, 500);
+	ctx.fillStyle = "#111111";
+	ctx.strokeStyle = "#111111";
+	ctx.lineWidth = 2;
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
+	ctx.font = "bold 20px Arial";
+	ctx.fillText("Player 3 (B)", 400, 65);
+	hit("player3-title", 320, 45, 160, 40);
+	const x = 250, y = 150, cw = 180, ch = 120;
+	ctx.font = "18px Arial";
+	["L", "R"].forEach((label, c) => {
+		const cx = x + c * cw + cw / 2;
+		ctx.fillText(label, cx, y - 30);
+		hit(`column-${label}`, cx - 35, y - 50, 70, 40);
+	});
+	["U", "D"].forEach((label, r) => {
+		const cy = y + r * ch + ch / 2;
+		ctx.fillText(label, x - 55, cy);
+		hit(`row-${label}`, x - 90, cy - 25, 70, 50);
+	});
+	ctx.beginPath();
+	ctx.moveTo(x, y);
+	ctx.lineTo(x + 2 * cw, y);
+	ctx.lineTo(x + 2 * cw, y + 2 * ch);
+	ctx.lineTo(x, y + 2 * ch);
+	ctx.closePath();
+	ctx.moveTo(x + cw, y);
+	ctx.lineTo(x + cw, y + 2 * ch);
+	ctx.moveTo(x, y + ch);
+	ctx.lineTo(x + 2 * cw, y + ch);
+	ctx.stroke();
+	const payoffs = [["7,7,0", "1,6,1"], ["6,1,1", "0,0,1"]];
+	ctx.font = "20px Arial";
+	payoffs.forEach((row, r) => {
+		row.forEach((value, c) => {
+			const cellX = x + c * cw;
+			const cellY = y + r * ch;
+			ctx.fillText(value, cellX + cw / 2, cellY + ch / 2);
+			hit(`cell-r${r}-c${c}`, cellX, cellY, cw, ch);
+		});
+	});
+}
+
+try{const canvas=document.querySelector('canvas'),native=canvas.getContext('2d');let count=0;
+ native.fillStyle='white';native.fillRect(0,0,800,500);native.fillStyle='#243544';native.strokeStyle='#243544';native.lineWidth=2;native.font='18px Arial';
+ const ctx=new Proxy(native,{get(target,key){const v=target[key];if(typeof v!=='function')return v;return(...args)=>{if(++count>12000)throw Error('Drawing call limit');if(key==='fillText'||key==='strokeText'){const [text,x,y]=args,m=target.measureText(String(text)),fontSize=parseFloat(target.font),transform=target.getTransform(),p=new DOMPoint(x,y).matrixTransform(transform);let left=p.x;if(target.textAlign==='center')left-=m.width/2;else if(['right','end'].includes(target.textAlign))left-=m.width;let y0=p.y-fontSize;if(target.textBaseline==='middle')y0=p.y-fontSize/2;else if(['top','hanging'].includes(target.textBaseline))y0=p.y;window.__texts.push({text:String(text),x:left,y:y0,width:m.width,height:fontSize,fontSize});}if(window.__draws.length<3000)window.__draws.push({op:key,args:args.map(v=>typeof v==='number'||typeof v==='string'?v:null)});return v.apply(target,args);};},set(target,key,value){target[key]=value;return true;}});
+ const hit=(id,x,y,width,height)=>{if(typeof id!=='string'||id.length>120||![x,y,width,height].every(Number.isFinite)||width<0||height<0||window.__hits.length>=2000)throw Error('Invalid hit region');window.__hits.push({id,x,y,width,height});};
+ draw(ctx,hit);window.__done=true;}catch(error){window.__error=String(error.message).slice(0,180);window.__done=true;}</script></body></html>

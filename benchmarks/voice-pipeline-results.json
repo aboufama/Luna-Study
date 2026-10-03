@@ -1,0 +1,337 @@
+{
+  "startedAt": "2026-10-02T03:47:31.198Z",
+  "phrase": "What is the difference between active and passive transport?",
+  "material": "Passive transport moves substances down a concentration gradient without energy. Active transport uses energy to move substances against the gradient.",
+  "microphoneUsed": false,
+  "playbackUsed": false,
+  "audioSaved": false,
+  "method": "Actual loopback WebSocket client -> attachLiveVoice -> Scribe -> Luna -> ElevenLabs TTS -> loopback client. One synthetic PCM clip is sent in real-time 100 ms chunks in each session. Silence follows until transcript commitment. All returned audio is counted and discarded. Primary latency is final input PCM chunk sent to first returned nonempty audio chunk. This excludes physical audio-device capture/playback latency. Baseline selects exec with 1.0 second VAD; optimized selects stream with 0.5 second VAD. The optimized process starts warming while the synthetic question streams.",
+  "perSessionTimeoutMs": 30000,
+  "runs": [
+    {
+      "trial": 1,
+      "mode": "exec",
+      "vadSilenceSeconds": 1,
+      "status": "complete",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 35200,
+      "outputAudioBytes": 683520,
+      "outputAudioChunks": 23,
+      "userTranscripts": [
+        "What is the difference between active and passive transport?"
+      ],
+      "assistantTranscripts": [
+        "Passive transport moves substances down a concentration gradient without using energy. Active transport uses energy to move substances against the concentration gradient. What does active transport require?"
+      ],
+      "latencyEvents": [
+        {
+          "stage": "text-complete",
+          "ms": 4007,
+          "turnId": 1,
+          "receivedAtMs": 8429.2
+        },
+        {
+          "stage": "first-audio",
+          "ms": 4230,
+          "turnId": 1,
+          "receivedAtMs": 8650.7
+        }
+      ],
+      "states": [
+        {
+          "state": "listening",
+          "atMs": 117.9
+        },
+        {
+          "state": "listening",
+          "atMs": 4421.4
+        },
+        {
+          "state": "thinking",
+          "atMs": 4421.4
+        },
+        {
+          "state": "speaking",
+          "atMs": 8650.7
+        }
+      ],
+      "readyMs": 117.8,
+      "assistantReplyMs": 8429.1,
+      "sessionElapsedMs": 10325.7,
+      "pcmEndMs": 3276.2,
+      "estimatedEnergySpeechEndMs": 3038.5,
+      "committedUserMs": 4421.4,
+      "firstAudioMs": 8650.7,
+      "audioEndMs": 10325.6,
+      "pcmEndToCommitMs": 1145.2,
+      "commitToFirstAudioMs": 4229.4,
+      "pcmEndToFirstAudioMs": 5374.6,
+      "energySpeechEndToFirstAudioMs": 5612.3,
+      "exactUserWords": true,
+      "replyChecks": {
+        "hasNonemptyReply": true,
+        "mentionsBothTransportTypes": true,
+        "mentionsEnergy": true,
+        "mentionsGradientDirection": true,
+        "note": "These are presence checks only. Read the saved synthetic reply to verify factual correctness and absence of contradictions."
+      }
+    },
+    {
+      "trial": 2,
+      "mode": "stream",
+      "vadSilenceSeconds": 0.5,
+      "status": "complete",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 22400,
+      "outputAudioBytes": 514560,
+      "outputAudioChunks": 25,
+      "userTranscripts": [
+        "What is the difference between active and passive transport?"
+      ],
+      "assistantTranscripts": [
+        "Passive transport moves substances down their concentration gradient without using energy. Active transport requires energy to move substances against the gradient."
+      ],
+      "latencyEvents": [
+        {
+          "stage": "first-text",
+          "ms": 4057,
+          "turnId": 1,
+          "receivedAtMs": 8031
+        },
+        {
+          "stage": "text-complete",
+          "ms": 4248,
+          "turnId": 1,
+          "receivedAtMs": 8221.7
+        },
+        {
+          "stage": "first-audio",
+          "ms": 4328,
+          "turnId": 1,
+          "receivedAtMs": 8301.7
+        }
+      ],
+      "states": [
+        {
+          "state": "listening",
+          "atMs": 97.4
+        },
+        {
+          "state": "listening",
+          "atMs": 3975.4
+        },
+        {
+          "state": "thinking",
+          "atMs": 3975.4
+        },
+        {
+          "state": "speaking",
+          "atMs": 8301.7
+        }
+      ],
+      "readyMs": 97.4,
+      "assistantReplyMs": 8221.7,
+      "sessionElapsedMs": 9667,
+      "pcmEndMs": 3254.7,
+      "estimatedEnergySpeechEndMs": 3016.8,
+      "committedUserMs": 3975.4,
+      "firstAudioMs": 8301.7,
+      "audioEndMs": 9667,
+      "pcmEndToCommitMs": 720.8,
+      "commitToFirstAudioMs": 4326.3,
+      "pcmEndToFirstAudioMs": 5047.1,
+      "energySpeechEndToFirstAudioMs": 5284.9,
+      "exactUserWords": true,
+      "replyChecks": {
+        "hasNonemptyReply": true,
+        "mentionsBothTransportTypes": true,
+        "mentionsEnergy": true,
+        "mentionsGradientDirection": true,
+        "note": "These are presence checks only. Read the saved synthetic reply to verify factual correctness and absence of contradictions."
+      }
+    },
+    {
+      "trial": 3,
+      "mode": "exec",
+      "vadSilenceSeconds": 1,
+      "status": "complete",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 32000,
+      "outputAudioBytes": 656640,
+      "outputAudioChunks": 22,
+      "userTranscripts": [
+        "What is the difference between active and passive transport?"
+      ],
+      "assistantTranscripts": [
+        "Passive transport moves substances down their concentration gradient without using energy. Active transport uses energy to move substances against the concentration gradient. Which type requires energy?"
+      ],
+      "latencyEvents": [
+        {
+          "stage": "text-complete",
+          "ms": 4361,
+          "turnId": 1,
+          "receivedAtMs": 8688.9
+        },
+        {
+          "stage": "first-audio",
+          "ms": 4614,
+          "turnId": 1,
+          "receivedAtMs": 8941.5
+        }
+      ],
+      "states": [
+        {
+          "state": "listening",
+          "atMs": 109.9
+        },
+        {
+          "state": "listening",
+          "atMs": 4327.3
+        },
+        {
+          "state": "thinking",
+          "atMs": 4327.3
+        },
+        {
+          "state": "speaking",
+          "atMs": 8941.4
+        }
+      ],
+      "readyMs": 109.8,
+      "assistantReplyMs": 8688.8,
+      "sessionElapsedMs": 10509.6,
+      "pcmEndMs": 3268,
+      "estimatedEnergySpeechEndMs": 3029.8,
+      "committedUserMs": 4327.3,
+      "firstAudioMs": 8941.5,
+      "audioEndMs": 10509.6,
+      "pcmEndToCommitMs": 1059.3,
+      "commitToFirstAudioMs": 4614.2,
+      "pcmEndToFirstAudioMs": 5673.5,
+      "energySpeechEndToFirstAudioMs": 5911.7,
+      "exactUserWords": true,
+      "replyChecks": {
+        "hasNonemptyReply": true,
+        "mentionsBothTransportTypes": true,
+        "mentionsEnergy": true,
+        "mentionsGradientDirection": true,
+        "note": "These are presence checks only. Read the saved synthetic reply to verify factual correctness and absence of contradictions."
+      }
+    },
+    {
+      "trial": 4,
+      "mode": "stream",
+      "vadSilenceSeconds": 0.5,
+      "status": "complete",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 19200,
+      "outputAudioBytes": 514560,
+      "outputAudioChunks": 20,
+      "userTranscripts": [
+        "What is the difference between active and passive transport?"
+      ],
+      "assistantTranscripts": [
+        "Passive transport moves substances down their concentration gradient without energy, while active transport uses energy to move substances against the gradient."
+      ],
+      "latencyEvents": [
+        {
+          "stage": "first-text",
+          "ms": 2144,
+          "turnId": 1,
+          "receivedAtMs": 6055.4
+        },
+        {
+          "stage": "text-complete",
+          "ms": 2645,
+          "turnId": 1,
+          "receivedAtMs": 6556.2
+        },
+        {
+          "stage": "first-audio",
+          "ms": 2785,
+          "turnId": 1,
+          "receivedAtMs": 6695.6
+        }
+      ],
+      "states": [
+        {
+          "state": "listening",
+          "atMs": 105.5
+        },
+        {
+          "state": "listening",
+          "atMs": 3912.8
+        },
+        {
+          "state": "thinking",
+          "atMs": 3912.9
+        },
+        {
+          "state": "speaking",
+          "atMs": 6695.6
+        }
+      ],
+      "readyMs": 105.5,
+      "assistantReplyMs": 6556.2,
+      "sessionElapsedMs": 7901.7,
+      "pcmEndMs": 3264.4,
+      "estimatedEnergySpeechEndMs": 3026.5,
+      "committedUserMs": 3912.8,
+      "firstAudioMs": 6695.6,
+      "audioEndMs": 7901.7,
+      "pcmEndToCommitMs": 648.3,
+      "commitToFirstAudioMs": 2782.8,
+      "pcmEndToFirstAudioMs": 3431.2,
+      "energySpeechEndToFirstAudioMs": 3669.1,
+      "exactUserWords": true,
+      "replyChecks": {
+        "hasNonemptyReply": true,
+        "mentionsBothTransportTypes": true,
+        "mentionsEnergy": true,
+        "mentionsGradientDirection": true,
+        "note": "These are presence checks only. Read the saved synthetic reply to verify factual correctness and absence of contradictions."
+      }
+    }
+  ],
+  "source": {
+    "model": "eleven_flash_v2_5",
+    "generationRequests": 1,
+    "pcmBytes": 101054,
+    "durationMs": 3157.9,
+    "energySpeechEndMs": 2920,
+    "generationMs": 366.7
+  },
+  "lunaModel": "gpt-5.6-luna",
+  "ttsModel": "eleven_v4_turbo",
+  "summary": [
+    {
+      "mode": "exec",
+      "runs": 2,
+      "completed": 2,
+      "exactTranscriptRuns": 2,
+      "meanPcmEndToFirstAudioMs": 5524.1,
+      "meanCommitToFirstAudioMs": 4421.8
+    },
+    {
+      "mode": "stream",
+      "runs": 2,
+      "completed": 2,
+      "exactTranscriptRuns": 2,
+      "meanPcmEndToFirstAudioMs": 4239.1,
+      "meanCommitToFirstAudioMs": 3554.6
+    }
+  ],
+  "finishedAt": "2026-10-02T03:48:10.622Z",
+  "factualReview": {
+    "method": "Assistant reviewed all four saved tutor replies against the exact synthetic source after the benchmark completed.",
+    "allRepliesSupported": true,
+    "contradictionsFound": false,
+    "details": "Each reply correctly described passive transport as moving down the gradient without energy and active transport as using energy against the gradient. The two baseline follow-up questions asked which process requires energy."
+  },
+  "limitations": [
+    "Only two sessions per condition and one short synthetic question; timings are not production percentiles.",
+    "No physical microphone, browser audio capture, speaker scheduling, or audible output was tested.",
+    "Reply lengths differ naturally between the exec and streamed tutor prompts.",
+    "Baseline uses the current shared TTS module with exec/VAD1.0; it is not a historical checkout of the previous complete app."
+  ]
+}

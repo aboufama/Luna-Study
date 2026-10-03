@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Horizontal city line from 0 to 1, with vendor A at 0.2 and vendor B at 0.8">
+  <title id="city-line-title">Horizontal city line with two vendor positions</title>
+  <desc id="city-line-desc">The line runs from endpoint 0 to endpoint 1. Vendor A is at 0.2 and vendor B is at 0.8.</desc>
+  <g id="city-line">
+    <line id="city-line-segment" x1="100" y1="250" x2="700" y2="250" stroke="#222222" stroke-width="3" stroke-linecap="round"/>
+    <line id="city-line-left-tick" x1="100" y1="238" x2="100" y2="262" stroke="#222222" stroke-width="3"/>
+    <line id="city-line-right-tick" x1="700" y1="238" x2="700" y2="262" stroke="#222222" stroke-width="3"/>
+    <text id="city-line-left-endpoint" x="100" y="300" fill="#222222" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">0</text>
+    <text id="city-line-right-endpoint" x="700" y="300" fill="#222222" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">1</text>
+  </g>
+  <g id="vendor-A">
+    <circle id="vendor-A-position" cx="220" cy="250" r="9" fill="#222222"/>
+    <text id="vendor-A-label" x="220" y="195" fill="#222222" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Vendor A</text>
+    <text id="vendor-A-numeric-position" x="220" y="224" fill="#222222" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">0.2</text>
+  </g>
+  <g id="vendor-B">
+    <circle id="vendor-B-position" cx="580" cy="250" r="9" fill="#222222"/>
+    <text id="vendor-B-label" x="580" y="195" fill="#222222" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Vendor B</text>
+    <text id="vendor-B-numeric-position" x="580" y="224" fill="#222222" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">0.8</text>
+  </g>
+</svg>

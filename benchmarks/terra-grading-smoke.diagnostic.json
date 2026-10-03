@@ -1,0 +1,82 @@
+{
+  "createdAt": "2026-10-02T07:30:19.480Z",
+  "model": "gpt-6-luna",
+  "mainModel": "gpt-5.6-terra",
+  "cases": [
+    {
+      "name": "correct",
+      "expected": "correct",
+      "verdict": null,
+      "pass": false
+    },
+    {
+      "name": "incorrect",
+      "expected": "incorrect",
+      "verdict": null,
+      "pass": false
+    },
+    {
+      "name": "assisted",
+      "expected": "correct",
+      "verdict": null,
+      "pass": false
+    }
+  ],
+  "requests": [
+    {
+      "status": 200,
+      "elapsedMs": 1897,
+      "model": "gpt-6-luna",
+      "usage": {
+        "input_tokens": 1782,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 1779
+        },
+        "output_tokens": 122,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1904
+      },
+      "publicGrade": "{\"questionId\":\"grade-payoffs\",\"topicId\":\"game-payoffs\",\"sourceIds\":[\"econ2801-pset3\"],\"verdict\":\"correct\",\"reasoningSufficient\":true,\"assistanceUsed\":false,\"answerQuotes\":[\"The payoffs are (1, 6, 1).\"],\"sourceQuotes\":[{\"sourceId\":\"econ2801-pset3\",\"quote\":\"Thus if 1 plays U, 2 plays R and 3 plays B, the payoffs they earn are (1, 6, 1).\"}]}"
+    },
+    {
+      "status": 200,
+      "elapsedMs": 1352,
+      "model": "gpt-6-luna",
+      "usage": {
+        "input_tokens": 1782,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 1779
+        },
+        "output_tokens": 122,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1904
+      },
+      "publicGrade": "{\"questionId\":\"grade-payoffs\",\"topicId\":\"game-payoffs\",\"sourceIds\":[\"econ2801-pset3\"],\"verdict\":\"incorrect\",\"reasoningSufficient\":true,\"assistanceUsed\":false,\"answerQuotes\":[\"The payoffs are (7, 7, 1).\"],\"sourceQuotes\":[{\"sourceId\":\"econ2801-pset3\",\"quote\":\"Thus if 1 plays U, 2 plays R and 3 plays B, the payoffs they earn are (1, 6, 1).\"}]}"
+    },
+    {
+      "status": 200,
+      "elapsedMs": 1542,
+      "model": "gpt-6-luna",
+      "usage": {
+        "input_tokens": 1802,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 1799
+        },
+        "output_tokens": 122,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1924
+      },
+      "publicGrade": "{\"questionId\":\"grade-payoffs\",\"topicId\":\"game-payoffs\",\"sourceIds\":[\"econ2801-pset3\"],\"verdict\":\"correct\",\"reasoningSufficient\":true,\"assistanceUsed\":true,\"answerQuotes\":[\"The payoffs are (1, 6, 1).\"],\"sourceQuotes\":[{\"sourceId\":\"econ2801-pset3\",\"quote\":\"Thus if 1 plays U, 2 plays R and 3 plays B, the payoffs they earn are (1, 6, 1).\"}]}"
+    }
+  ],
+  "passed": false
+}

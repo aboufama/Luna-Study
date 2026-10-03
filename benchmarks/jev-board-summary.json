@@ -1,0 +1,101 @@
+{
+  "classifierInitial": {
+    "correct": 23,
+    "total": 24,
+    "expectedClose": 8,
+    "expectedKeep": 16,
+    "falseHides": 0,
+    "missedHides": 1,
+    "unavailable": 0,
+    "medianMs": 171.65,
+    "minMs": 153,
+    "maxMs": 300.7,
+    "inputTokens": 23650,
+    "outputTokens": 1800,
+    "estimatedUsd": 0.0009933000000000001,
+    "unpricedRequests": 0,
+    "exactBilledUsd": null
+  },
+  "classifierFinal": {
+    "correct": 24,
+    "total": 24,
+    "expectedClose": 4,
+    "expectedKeep": 20,
+    "falseHides": 0,
+    "missedHides": 0,
+    "unavailable": 0,
+    "medianMs": 145.8,
+    "minMs": 126.3,
+    "maxMs": 227.2,
+    "inputTokens": 23565,
+    "outputTokens": 1800,
+    "estimatedUsd": 0.00098973,
+    "unpricedRequests": 0,
+    "exactBilledUsd": null
+  },
+  "pairs": [
+    {
+      "scenario": "biology-to-history",
+      "legacyCloseMs": 2218.2,
+      "earlyCloseMs": 135.6,
+      "earlyFirstTextMs": 816.7,
+      "earlyMainCompleteMs": 1996.5,
+      "closeReductionMs": 2082.6
+    },
+    {
+      "scenario": "algebra-verbal-detour",
+      "legacyCloseMs": 2028.8,
+      "earlyCloseMs": 315.8,
+      "earlyFirstTextMs": 1116.1,
+      "earlyMainCompleteMs": 1799.5,
+      "closeReductionMs": 1713
+    },
+    {
+      "scenario": "grammar-to-forces",
+      "legacyCloseMs": null,
+      "earlyCloseMs": 132.7,
+      "earlyFirstTextMs": 2463.6,
+      "earlyMainCompleteMs": 2772.6,
+      "closeReductionMs": null
+    }
+  ],
+  "experiments": [
+    {
+      "file": "jev-board-intent-results.json",
+      "counts": {
+        "openai": 0,
+        "jev": 24
+      },
+      "estimatedUsd": 0.0009933000000000001
+    },
+    {
+      "file": "jev-board-intent-results.final.json",
+      "counts": {
+        "openai": 0,
+        "jev": 24
+      },
+      "estimatedUsd": 0.00098973
+    },
+    {
+      "file": "jev-board-lifecycle-results.json",
+      "counts": {
+        "openai": 6,
+        "jev": 11
+      },
+      "estimatedUsd": 0.022303886000000002
+    },
+    {
+      "file": "jev-board-lifecycle-results.final.json",
+      "counts": {
+        "openai": 8,
+        "jev": 12
+      },
+      "estimatedUsd": 0.027952466000000002
+    }
+  ],
+  "totalPaidRequests": 85,
+  "totalOpenAI": 14,
+  "totalJev": 71,
+  "totalEstimatedUsd": 0.052239382,
+  "exactBilledUsd": null
+}

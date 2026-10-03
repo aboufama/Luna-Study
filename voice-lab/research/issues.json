@@ -1,0 +1,152 @@
+[
+  {
+    "repo": "openai/openai-realtime-agents",
+    "status": 200,
+    "issues": [
+      {
+        "title": "Realtime does not execute tool calls",
+        "url": "https://github.com/openai/openai-realtime-agents/issues/129",
+        "updatedAt": "2026-05-09T20:14:22Z",
+        "body": "I have connected my realtime sip app with twilio but it never does tool calls.\nCan you take a look at my code? I am sure that the mcp is working. I tested it with npx @modelcontextprotocol/inspector\nThe logs of the app only show my tool intro message from the instructions where it says \"one moment, let me take a look\"\n\n```\nfrom flask import Flask, request, Response\nfrom openai import OpenAI, InvalidWebhookSignatureError\nimport asyncio\nimport json\nimport os\nimport requests\nimport time\nimport threading\nimport websockets\n\napp = Flask(__name__)\nclient = OpenAI(\n    webhook_secret=os.environ[\"OPENAI_WEBHOOK_SECRET\"]\n)\n\nAUTH_HEADER = {\n    \"api-key\": os.getenv(\"OPENAI_API_KEY\")\n}\n\nAZURE_RESOURCE_NAME = os.getenv(\"AZURE_RESOURCE_NAME\")\nLANGFLOW_API_KEY = os.getenv(\"LANGFLOW_API_KEY\")\n\nresponse_create = {\n    \"type\": \"response.create\",\n    \"response\": {\n        \"instructions\": (\n            os.getenv(\"GREETING\")\n        )\n    },\n}\n\ncall_accept = {\n    \"type\": \"realtime\",\n    \"instructions\": os.getenv(\"INSTRUCTIONS\", \"You are a support agent.\"),\n    \"model\": os.getenv(\"REALTIME_MODEL\", \"gpt-realtime-1.5\"),\n    \"tools\": [\n            {\n                \"type\": \"mcp\",\n                \"server_label\": os.getenv(\"LANGFLOW_SERVER_LABEL\", \"lf-search\"),\n                \"server_url\": os.getenv(\"LANGFLOW_MCP_URL\"),\n                \"allowed_tools\": [\"search\"],\n                \"headers\": {\n                    \"x-api-key\": os.getenv(\"LANGFLOW_API_KEY\")\n                },\n                \"require_approval\": \"never\"\n            }\n    ]\n}\n\n\nasync def websocket_task(call_id):\n    try:\n        async with websockets.connect(\n            f\"wss://{AZURE_RESOURCE_NAME}.openai.azure.com/openai/v1/realtim"
+      }
+    ]
+  },
+  {
+    "repo": "pipecat-ai/pipecat",
+    "status": 200,
+    "issues": [
+      {
+        "title": "Severe latency and response desynchronization when multiple participants with active audio tracks connect to LiveKit transport",
+        "url": "https://github.com/pipecat-ai/pipecat/issues/3218",
+        "updatedAt": "2026-10-02T20:55:06Z",
+        "body": "### pipecat version\n\n0.0.97\n\n### Python version\n\n3.13.9\n\n### Operating System\n\nFedora 42\n\n### Issue description\n\nI am running a Pipecat pipeline acting as an agent within a LiveKit room. The pipeline consists of standard STT, LLM, and TTS components using the LiveKit transport.\n\nThe agent functions correctly when there is only one participant connected. However, as soon as a second participant joins the LiveKit room, the agent experiences severe performance degradation. This manifests as massive latency and a \"queueing\" effect where the agent answers the previous question rather than the current one.\n\n### Reproduction steps\n\n#### Steps\n- Connect a Pipecat agent (STT + LLM + TTS) to a LiveKit room (I used the Pipecat Agent script below for this).\n- Connect Participant A (I used livekit playground for this).\n- Ask questions; observe normal behavior.\n- Connect Participant B with an active audio track (I used the livekit participant script below for this).\n- Ask a sequence of questions.\n\n#### Code samples used to reproduce issue:\n##### Pipecat Agent script:\n```python\nimport os\n\nfrom dotenv import load_dotenv\nfrom loguru import logger\n\nlogger.info(\"Loading Local Smart Turn Analyzer V3...\")\nfrom pipecat.audio.turn.smart_turn.local_smart_turn_v3 import LocalSmartTurnAnalyzerV3\n\nlogger.info(\"✅ Local Smart Turn Analyzer V3 loaded\")\nlogger.info(\"Loading Silero VAD model...\")\nfrom pipecat.audio.vad.silero import SileroVADAnalyzer\n\nlogger.info(\"✅ Silero VAD model loaded\")\n\nfrom livekit import api\nfrom pipecat.audio.vad.vad_analyzer import VADParams\nfrom pipecat.frames.frames import LLMRunFrame\nfrom pipecat.pipeline.pipeline import Pipeline\nfrom pipecat.pipeline.runner import Pipeline"
+      },
+      {
+        "title": "GeminiLiveLLMService: connection failures never mark the service unusable, and a session that fails to open is only logged",
+        "url": "https://github.com/pipecat-ai/pipecat/issues/5997",
+        "updatedAt": "2026-10-02T18:21:58Z",
+        "body": "### pipecat version\n1.11.0 (also reproduced on 1.12.0 and on main at 49dea682f)\n\n### Python version\n3.14.7 (google-genai 2.25.0, websockets 16.0)\n\n### Operating System\nDebian 13 (Docker, aarch64)\n\n### Issue description\n\n`GeminiLiveLLMService` reports connection failures in ways the pipeline cannot act on.\n`GeminiLiveVertexLLMService` inherits the same methods.\n\n1. A session that fails to open is only logged.\n`_connection_task_handler` opens the session with `async with self._client.aio.live.connect(...)` outside its `try`, which only wraps the receive loop.\nWhen the server rejects the setup (google-genai raises `APIError`, for example 1008 when the model is not available for `bidiGenerateContent`, as in the log in #3348) or the socket cannot be opened, the exception escapes the connection task and the task manager logs `_connection_task_handler unexpected exception`.\nNo `ErrorFrame` is pushed, `_handle_connection_error` never runs, nothing retries, and `is_usable` stays True, so `on_pipeline_error` never fires and `ProcessorUnusablePolicy` never applies.\nThe bot is silent for the whole session.\n\n2. Giving up after `MAX_CONSECUTIVE_FAILURES` leaves the service usable.\n`_handle_connection_error` logs \"Max consecutive failures (3) reached, treating as fatal error\" and calls `push_error(error_msg=error_msg, exception=error)`.\ngoogle-genai's `APIError` has no HTTP status the classifier reads, so the category is `UNKNOWN`, the service stays usable, and the pipeline keeps running with no session and no further reconnect.\n\n3. A send-side error is not fatal either.\n`_handle_send_error` says \"let's just treat a send-side error as fatal\", but calls `push_error(error_msg=f\"Send error"
+      }
+    ]
+  },
+  {
+    "repo": "livekit/agents-js",
+    "status": 200,
+    "issues": [
+      {
+        "title": "Dependency Dashboard",
+        "url": "https://github.com/livekit/agents-js/issues/1236",
+        "updatedAt": "2026-10-03T00:31:33Z",
+        "body": "This issue lists Renovate updates and detected dependencies. Read the [Dependency Dashboard](https://docs.renovatebot.com/key-concepts/dashboard/) docs to learn more.<br>[View this repository on the Mend.io Web Portal](https://developer.mend.io/github/livekit/agents-js).\n\n## Deprecations / Replacements\n> [!WARNING]\nThe following dependencies are either deprecated or have replacements available.\n\n| Datasource | Package | Replacement PR? |\n|------------|------|--------------|\n| npm | [eslint-plugin-standard](https://redirect.github.com/standard/eslint-plugin-standard) | ![Unavailable](https://img.shields.io/badge/unavailable-orange?style=flat-square) |\n| npm | [fluent-ffmpeg](https://redirect.github.com/fluent-ffmpeg/node-fluent-ffmpeg) | ![Unavailable](https://img.shields.io/badge/unavailable-orange?style=flat-square) |\n\n## Awaiting Schedule\n\nThe following updates are awaiting their schedule. To get an update now, click on a checkbox below.\n\n - [ ] <!-- unschedule-branch=renovate/google-genai-2.x-lockfile -->chore(deps): update dependency @google/genai to v2.23.0\n - [ ] <!-- unschedule-branch=renovate/dotenv-17.x-lockfile -->chore(deps): update dependency dotenv to v17.4.2\n - [ ] <!-- unschedule-branch=renovate/google-auth-library-10.x-lockfile -->chore(deps): update dependency google-auth-library to v10.9.1\n - [ ] <!-- unschedule-branch=renovate/heap-js-2.x-lockfile -->chore(deps): update dependency heap-js to v2.7.1\n - [ ] <!-- unschedule-branch=renovate/jsonrepair-3.x-lockfile -->chore(deps): update dependency jsonrepair to v3.15.0\n - [ ] <!-- unschedule-branch=renovate/microsoft-cognitiveservices-speech-sdk-1.x-lockfile -->chore(deps): update dependency microsoft-cogni"
+      },
+      {
+        "title": "google realtime: content-free generationComplete after a toolCall interrupts the tool's own turn (tool result and FunctionToolsExecuted lost, toolBehavior unset)",
+        "url": "https://github.com/livekit/agents-js/issues/2615",
+        "updatedAt": "2026-10-02T20:04:13Z",
+        "body": "## Summary\n\nWith the Gemini Live `RealtimeModel` and `toolBehavior` **unset**, every function tool call on `gemini-3.8-live-extended-thinking` loses its result:\n\n- The tool's `execute()` runs to completion (side effects happen; in our case a SIP party is dialed in and answers).\n- `AgentSession` never emits `FunctionToolsExecuted` for it.\n- Gemini never receives the function response. When the tool fails fast, the model waits on the pending call and the conversation stalls.\n- The agent's spoken line in the same turn is cut mid-sentence.\n\nThe trigger is the content-free `generationComplete` that Gemini sends right **after** the `toolCall`. It opens a phantom agent-initiated generation, and that generation's `input_speech_started` interrupts the speech that owns the tool call.\n\nThis is the same mechanism as #2593, which that issue also names (\"On 3.8 the empty `generationComplete` that follows the call opens one too\"). But the fix in #2594 is gated on `hasPendingNonBlockingToolCall()` (`toolBehavior: NON_BLOCKING`) and states that unset `toolBehavior` is unchanged. So this case stays broken with #2594 merged.\n\n## Versions\n\n- `@livekit/agents` 1.9.0, `@livekit/agents-plugin-google` 1.9.0 (same code in 1.9.1)\n- Model `gemini-3.8-live-extended-thinking` (Gemini API), realtime mode (no STT/LLM/TTS pipeline)\n- `toolBehavior` and `toolResponseScheduling` not set\n\n## Reproduction\n\n1. `voice.AgentSession` with `new google.beta.realtime.RealtimeModel({ model: 'gemini-3.8-live-extended-thinking' })` (no `toolBehavior`) and one `llm.tool`.\n2. Trigger the tool while the user is silent.\n\nObserved on 3 of 3 runs, with the user not speaking (no `voiceActivity ACTIVITY_START` between the to"
+      },
+      {
+        "title": "`clearUserTurn()` does not cancel a pending `commitUserTurn()` — the stale commit fires inside the next turn and manual mode drops that turn's transcript",
+        "url": "https://github.com/livekit/agents-js/issues/2625",
+        "updatedAt": "2026-10-02T07:26:28Z",
+        "body": "### Summary\n\nWith `turnDetection: 'manual'`, calling `session.clearUserTurn()` shortly after `session.commitUserTurn()` does not discard the pending commit. The commit task keeps waiting and fires inside the *next* user turn. Depending on timing, that next turn is either committed empty, or its STT events are ignored entirely, so the user speaks, the transcript is recognised by the STT, and the agent never replies.\n\n### Version\n\n`@livekit/agents` 1.9.1 (also present on `main` at `52e3a04a`). Node 20.\n\n### How it happens\n\nPush-to-talk app: mic release calls `commitUserTurn()`, mic press calls `clearUserTurn()` (as in the manual turn control docs).\n\n1. Turn A is released with no final transcript in the last 500 ms (an accidental tap, or the STT was slow). `AudioRecognition.commitUserTurn()` starts `commitUserTurnTask`, which waits `delayDuration = 500` ms for a transcript.\n2. The user presses again within those 500 ms. `clearUserTurn()` resets `userTurnCommitted = false` and the transcripts, but leaves `commitUserTurnTask` (and `bounceEOUTask`) running.\n3. 500 ms after step 1, inside turn B, the stale task runs `runEOUDetection(chatCtx, 'manual')` and sets `userTurnCommitted = true`.\n4. Then one of:\n   - **The user starts speaking during the EOU bounce delay.** VAD `START_OF_SPEECH` calls `bounceEOUTask.cancel()`. The bounce task returns at `if (controller.signal.aborted) return;` without reaching `this.userTurnCommitted = false`. The flag is now stuck `true` with a finished bounce task, so the manual-mode guard in `onSTTEvent` (`turnDetectionMode === 'manual' && userTurnCommitted && (bounceEOUTask === undefined || bounceEOUTask.done || …)`) drops every STT event for turn B"
+      },
+      {
+        "title": "Feature Request: judges for agents-js",
+        "url": "https://github.com/livekit/agents-js/issues/2064",
+        "updatedAt": "2026-10-02T04:02:06Z",
+        "body": "### Your question\n\nPython version of Livekit has a lot of judges: https://docs.livekit.io/reference/python/livekit/agents/evals/judge.html\n\n\nHowever in the JS-version we still can eval only the intent of the response.\n\nPlease add adding custom judges alongside same built-in judges like in Python"
+      }
+    ]
+  },
+  {
+    "repo": "HumeAI/hume-react-sdk",
+    "status": 200,
+    "issues": [
+      {
+        "title": "Can we switch the microphone device without disconnecting and reconnecting?",
+        "url": "https://github.com/HumeAI/hume-react-sdk/issues/390",
+        "updatedAt": "2025-11-21T19:54:51Z",
+        "body": "## Context\nWe're integrating the `@humeai/voice-react` SDK and need to know if it's possible to switch microphone or speaker devices during an active session (after connect() has been called).\n\nCurrent Implementation\nWe're using the SDK like this:\n```\nimport { useVoice } from '@humeai/voice-react';\nconst client = useVoice();\n\n// Initial connection\nawait client.connect({\n  hostname: '...',\n  auth: { type: 'accessToken', value: '...' },\n  configId: '...',\n  sessionSettings: { ... },\n  // devices can be passed here during initial connect\n  devices: {\n    microphoneDeviceId: 'default',\n    speakerDeviceId: 'default'\n  }\n});\n```\n## Question\nAfter the connection is established and the session is active:\n\n- Can we switch the microphone device without disconnecting and reconnecting?\n- Can we switch the speaker device without disconnecting and reconnecting?"
+      },
+      {
+        "title": "BUG: ToolResponse doesn't show up in onMessage, messages, as well as toolStatusStore",
+        "url": "https://github.com/HumeAI/hume-react-sdk/issues/388",
+        "updatedAt": "2025-11-19T04:24:50Z",
+        "body": "Hi,\n\nRecently I discovered that ToolResponse message is not received with hume-react-sdk.\n\nSDK version: v0.2.8\n\nExpected behaviour:\nWhen tool calling happens, onMessage event will trigger with ToolResponse, useVoice().messages will include ToolResponse, and toolStatusStore[toolID].resolved will not be null.\n\nActual behaviour:\nHume React will receive the toolCall message, but not the toolResponse message. In the dashboard, however, I can see the ToolResponse in Chat History, and based on my conversation with EVI, EVI did receive the message in the backend. This indicates that the socket in Hume React didn't process the ToolResponse message.\n\n"
+      }
+    ]
+  },
+  {
+    "repo": "elevenlabs/packages",
+    "status": 200,
+    "issues": [
+      {
+        "title": "[@elevenlabs/client][@elevenlabs/react] Pending WebRTC start cannot be cancelled and can reject after teardown",
+        "url": "https://github.com/elevenlabs/packages/issues/1013",
+        "updatedAt": "2026-09-30T14:18:54Z",
+        "body": "### Summary\n\nThere are two related lifecycle gaps during WebRTC startup.\n\n1. **A publication rejection can remain unobserved.** `WebRTCConnection.create()` begins microphone publication from `RoomEvent.SignalConnected`, but does not observe the resulting `setMicrophoneEnabled()` promise (`micEnabled`) until after `room.connect()` and the connected-state wait finish. If publication rejects first—for example, when LiveKit's AddTrack request times out—the rejection can surface as a browser `unhandledrejection` while startup remains pending.\n2. **A pending start cannot be cancelled.** At the React layer, `endSession()` and provider unmount mark an in-flight `Conversation.startSession()` as ended and attach cleanup to its outer promise. The old LiveKit Room and microphone can therefore remain alive until that promise settles, while a replacement provider can start. A later stale failure may be omitted from application `onError` even if an earlier inner rejection has already escaped.\n\n### Source inspection\n\nThe ordering is present on `main` at [`effdd8abae4589cf717e11854d12c90fcea09961`](https://github.com/elevenlabs/packages/commit/effdd8abae4589cf717e11854d12c90fcea09961):\n\n- [`packages/client/src/utils/WebRTCConnection.ts`](https://github.com/elevenlabs/packages/blob/effdd8abae4589cf717e11854d12c90fcea09961/packages/client/src/utils/WebRTCConnection.ts) creates `micEnabled`, awaits `room.connect()`, and then awaits `micEnabled`.\n- [`packages/react/src/conversation/ConversationProvider.tsx`](https://github.com/elevenlabs/packages/blob/effdd8abae4589cf717e11854d12c90fcea09961/packages/react/src/conversation/ConversationProvider.tsx) retains only the outer start promise; pendin"
+      }
+    ]
+  },
+  {
+    "repo": "google-gemini/live-api-web-console",
+    "status": 200,
+    "issues": [
+      {
+        "title": "VAD configuration for short utterances - \"Yes\", \"No\", single names not triggering response",
+        "url": "https://github.com/google-gemini/live-api-web-console/issues/142",
+        "updatedAt": "2026-04-25T15:41:33Z",
+        "body": "### Description of the feature request:\n\n\n## Summary\n\n  When using Gemini 2.5 Flash Native Audio via the Multimodal Live API in a **server-side telephony scenario** (Twilio → WebSocket → Gemini Live), short utterances such as\n   \"Yes\", \"No\", \"John\", or other single-word responses frequently fail to trigger a model response.\n\n  Longer utterances (>2 seconds) work reliably, but brief responses that are common in natural phone conversations do not.\n\n  ## Environment\n\n  - **Model**: `gemini-2.5-flash-native-audio-preview-12-2025`\n  - **API**: Multimodal Live API (WebSocket)\n  - **Audio Input**: PCM 16-bit, 16kHz, mono from Twilio phone calls\n  - **Audio Chunk Size**: ~20ms per chunk (640 bytes)\n  - **Use Case**: Restaurant phone ordering system\n\n  ## Current Configuration\n\n  ```python\n  setup_message = {\n      \"setup\": {\n          \"model\": \"models/gemini-2.5-flash-native-audio-preview-12-2025\",\n          \"generation_config\": {\n              \"response_modalities\": [\"AUDIO\"],\n              \"thinking_config\": {\n                  \"thinking_budget\": 0\n              },\n              \"speech_config\": {\n                  \"voice_config\": {\n                      \"prebuilt_voice_config\": {\n                          \"voice_name\": \"Kore\"\n                      }\n                  }\n              }\n          },\n          \"system_instruction\": {\n              \"parts\": [{\"text\": \"You are a friendly restaurant assistant...\"}]\n          },\n          \"tools\": [...]\n      }\n  }\n  ```\n\n  ## Reproduction Steps\n\n  1. Customer calls Twilio phone number\n  2. Audio streams via WebSocket to our server\n  3. Server forwards PCM audio chunks to Gemini Live API via `realtimeInput.mediaChunks`\n  4. Customer "
+      }
+    ]
+  },
+  {
+    "repo": "xai-org/xai-cookbook",
+    "status": 200,
+    "issues": [
+      {
+        "title": "Community example: ACP desktop client for Grok Build (RongleCat/grok-app)",
+        "url": "https://github.com/xai-org/xai-cookbook/issues/53",
+        "updatedAt": "2026-09-20T06:41:18Z",
+        "body": "## Summary\nSharing an open-source desktop GUI built on Grok Build's official ACP (`grok agent stdio`), in case it is useful as a real-world community example alongside the cookbook.\n\n> Note: `xai-org/grok-build` has issues/PRs disabled and does not accept external patches, so posting here instead.\n\n- Product: **Grok App**\n- Site: https://grok-app.com\n- Repo: https://github.com/RongleCat/grok-app\n- Stack: Tauri 2 · macOS / Windows / Linux\n- Latest: v0.2.24 · ~1k GitHub stars\n\n## What it demonstrates\n- Multi-project workbench + parallel sessions on top of the local CLI\n- Permission UI (ask / allow / deny)\n- Media / file preview in-session\n- Automations\n- Session import / management\n\n## Protocol\nUses `grok agent stdio` over ACP. Auth, models, tools, MCP, and skills stay with the local Grok Build CLI.\n\n## Ask\nIf useful for cookbook readers learning ACP / agent integrations, happy to be linked as a community example. Feedback welcome on anything we should align with.\n\nThanks for the public Build/ACP surface — it made this possible."
+      },
+      {
+        "title": "Gatekeepers",
+        "url": "https://github.com/xai-org/xai-cookbook/issues/51",
+        "updatedAt": "2026-08-12T06:12:06Z",
+        "body": "The internet removed the gatekeeper between the creator and the audience.\nThe next step should remove the gatekeeper between talent and discovery.\nThat's where AI could change everything. 👀\n\nAnother:\nA creator shouldn't have to become famous before an algorithm decides they're worth discovering.\nDiscovery should create fame—not merely follow it."
+      }
+    ]
+  },
+  {
+    "repo": "VapiAI/client-sdk-web",
+    "status": 200,
+    "issues": [
+      {
+        "title": "increaseMicLevel() leaks a microphone stream and an AudioContext on every call",
+        "url": "https://github.com/VapiAI/client-sdk-web/issues/184",
+        "updatedAt": "2026-09-29T11:43:49Z",
+        "body": "## Describe the bug\n\n`increaseMicLevel(gain)` opens a new `getUserMedia` stream and a new `AudioContext` on each call. It keeps no reference to either, so neither is ever stopped or closed.\n\n- Calling it repeatedly, for example from a gain slider, leaves one live microphone capture and one running audio graph per call. Browsers cap the number of `AudioContext` instances, and the microphone indicator stays on after the call ends.\n- The microphone stream and the context outlive `stop()`, so the browser keeps the microphone open after the call has ended.\n- If `safeSetInputDevicesAsync` throws, the new stream and context leak as well.\n\n## Steps to reproduce\n\n1. Start a call.\n2. Call `vapi.increaseMicLevel(2)` several times.\n3. Call `vapi.stop()`.\n4. Inspect the page: each call left a live microphone track and an open `AudioContext`.\n\n## Expected behavior\n\nThe previous boost is released when a new one replaces it, and the active boost is released when the call stops. A failed boost releases what it opened."
+      },
+      {
+        "title": "Serialize local audio level observer startup with noise cancellation setup",
+        "url": "https://github.com/VapiAI/client-sdk-web/issues/181",
+        "updatedAt": "2026-09-22T15:15:55Z",
+        "body": "### Describe the issue\n\nIn `@vapi-ai/web`'s `vapi.js`, `this.call.startLocalAudioLevelObserver(100)` at line 502 is started without awaiting its AudioWorklet `addModule()`. The call then applies Krisp noise cancellation through `this.call.updateInputSettings(...)` around line 565. The track change can make Daily close the audio context while `addModule(blobURL)` is pending, producing an `AbortError`, `Error when starting local audio level observer!`, and an unhandled rejection. These errors occur before `call-start` is emitted at line 646.\n\n### Expected behavior\n\nSerialize the observer startup and Krisp apply so the observer does not race with audio processing teardown.\n\n### Possible fixes\n\n- Await `startLocalAudioLevelObserver(100)` before applying input settings.\n- Or apply the noise-cancellation input settings before starting the observer.\n\nThe application does not consume Daily's local volume observer; this currently surfaces as third-party console noise and failed observer startup."
+      },
+      {
+        "title": "`triggerResetMode` has incorrect type",
+        "url": "https://github.com/VapiAI/client-sdk-web/issues/167",
+        "updatedAt": "2026-07-30T22:49:26Z",
+        "body": "From the docs here: https://docs.vapi.ai/assistants/idle-messages, `triggerResetMode` should have type `never | 'onUserSpeech'`. The type in the code is `object` which is not compatible."
+      },
+      {
+        "title": "Provide event to access raw audio stream",
+        "url": "https://github.com/VapiAI/client-sdk-web/issues/37",
+        "updatedAt": "2026-07-27T21:01:26Z",
+        "body": "Would be great to have an audio event like this: https://docs.retellai.com/make-calls/web-call#listen-to-events"
+      }
+    ]
+  }
+]

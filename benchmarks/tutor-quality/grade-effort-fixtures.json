@@ -1,0 +1,1723 @@
+{
+  "createdAt": "2026-10-02T11:31:33.526Z",
+  "method": "Predeclared six synthetic cases and expected rubric, crossed with low/medium grader-only reasoning. Each condition gets two fresh independent requests. Effort order alternates by case; no other production request setting changes. Complete histories are reconstructed from the preserved repaired adaptive run.",
+  "source": "benchmarks/tutor-quality/grade-replay-fixtures.json",
+  "sourceSha256": "ef1ff9cabb5147af284711d334b88cb1221153c6e386b3bb1f7904724c5de199",
+  "expectedInterpretation": "Judge correctness, scope and assistance separately. Exact verdict matching is reported alongside credit-safety outcomes; a disagreement about partial versus incorrect must not be hidden. reasoningSufficient expectations on non-correct verdicts are diagnostic, not credit-grant criteria.",
+  "cases": [
+    {
+      "id": "z-complete-low",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "Correct subtraction/division, correct negative value, and stated equality-preservation principle.",
+      "baseId": "z-complete",
+      "effort": "low"
+    },
+    {
+      "id": "z-complete-medium",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "Correct subtraction/division, correct negative value, and stated equality-preservation principle.",
+      "baseId": "z-complete",
+      "effort": "medium"
+    },
+    {
+      "id": "w-complete-medium",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 5w - 10 = 20, and why are those operations valid?",
+          "answer": "Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "7ab97da9-d5d0-4fb6-b0d9-a53fc2707ae7",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is: Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Correct. You subtracted 8 on both sides, then divided both sides by 4, giving z = −2. Those operations preserve equality because each side is changed identically. Ready for another hard equation?"
+          },
+          {
+            "role": "user",
+            "content": "Let us switch to the hard membrane and transport question now."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s switch to cell transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+          },
+          {
+            "role": "user",
+            "content": "Could you restate what the question is asking, without answering it?"
+          },
+          {
+            "role": "assistant",
+            "content": "It asks you to explain two things: first, what “selective” means for the cell membrane; second, how passive transport and active transport differ, especially in direction of movement and energy use."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The membrane controls what crosses between the cell and its surroundings. I have not explained the two types of transport yet."
+          },
+          {
+            "role": "assistant",
+            "content": "That first part is accurate: “selective” means the membrane controls what crosses between the cell and its surroundings. Now complete your answer by comparing passive and active transport in terms of direction along the concentration gradient and energy use."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: It controls what enters and leaves the cell. Diffusion moves down a concentration gradient without energy input, while active transport uses energy to move against a gradient."
+          },
+          {
+            "role": "assistant",
+            "content": "That is accurate and complete: the membrane controls what crosses between the cell and its surroundings; diffusion moves down a concentration gradient without energy, while active transport uses energy to move against it. Nice comparison."
+          },
+          {
+            "role": "user",
+            "content": "I need a short break. Please pause here."
+          },
+          {
+            "role": "assistant",
+            "content": "Of course—we’ll pause here. Take your break, and we can pick up whenever you’re ready."
+          },
+          {
+            "role": "user",
+            "content": "I am back. Ask me a new hard equation, and give me time to try it."
+          },
+          {
+            "role": "assistant",
+            "content": "Welcome back—here’s a new hard equation. Take your time and show the equal operations you choose. How do equal operations solve 5w - 10 = 20, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "Correct addition/division, correct value, and stated equality-preservation principle.",
+      "baseId": "w-complete",
+      "effort": "medium"
+    },
+    {
+      "id": "w-complete-low",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 5w - 10 = 20, and why are those operations valid?",
+          "answer": "Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "7ab97da9-d5d0-4fb6-b0d9-a53fc2707ae7",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is: Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Correct. You subtracted 8 on both sides, then divided both sides by 4, giving z = −2. Those operations preserve equality because each side is changed identically. Ready for another hard equation?"
+          },
+          {
+            "role": "user",
+            "content": "Let us switch to the hard membrane and transport question now."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s switch to cell transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+          },
+          {
+            "role": "user",
+            "content": "Could you restate what the question is asking, without answering it?"
+          },
+          {
+            "role": "assistant",
+            "content": "It asks you to explain two things: first, what “selective” means for the cell membrane; second, how passive transport and active transport differ, especially in direction of movement and energy use."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The membrane controls what crosses between the cell and its surroundings. I have not explained the two types of transport yet."
+          },
+          {
+            "role": "assistant",
+            "content": "That first part is accurate: “selective” means the membrane controls what crosses between the cell and its surroundings. Now complete your answer by comparing passive and active transport in terms of direction along the concentration gradient and energy use."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: It controls what enters and leaves the cell. Diffusion moves down a concentration gradient without energy input, while active transport uses energy to move against a gradient."
+          },
+          {
+            "role": "assistant",
+            "content": "That is accurate and complete: the membrane controls what crosses between the cell and its surroundings; diffusion moves down a concentration gradient without energy, while active transport uses energy to move against it. Nice comparison."
+          },
+          {
+            "role": "user",
+            "content": "I need a short break. Please pause here."
+          },
+          {
+            "role": "assistant",
+            "content": "Of course—we’ll pause here. Take your break, and we can pick up whenever you’re ready."
+          },
+          {
+            "role": "user",
+            "content": "I am back. Ask me a new hard equation, and give me time to try it."
+          },
+          {
+            "role": "assistant",
+            "content": "Welcome back—here’s a new hard equation. Take your time and show the equal operations you choose. How do equal operations solve 5w - 10 = 20, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "Correct addition/division, correct value, and stated equality-preservation principle.",
+      "baseId": "w-complete",
+      "effort": "low"
+    },
+    {
+      "id": "z-bare-result-low",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is z = -2.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is z = -2."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "partial",
+        "reasoningSufficient": false,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "Correct result, but the hard question explicitly asks how and why; no method or reasoning is supplied.",
+      "baseId": "z-bare-result",
+      "effort": "low"
+    },
+    {
+      "id": "z-bare-result-medium",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is z = -2.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is z = -2."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "partial",
+        "reasoningSufficient": false,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "Correct result, but the hard question explicitly asks how and why; no method or reasoning is supplied.",
+      "baseId": "z-bare-result",
+      "effort": "medium"
+    },
+    {
+      "id": "z-sign-error-medium",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is z = 2. Subtracting 8 from both sides gives 4z = 8, and dividing both sides by 4 gives z = 2. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is z = 2. Subtracting 8 from both sides gives 4z = 8, and dividing both sides by 4 gives z = 2. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "reasoningSufficient": false,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "The asserted intermediate equation and final answer contradict the original equation: 0 minus 8 is -8. The identity claim does not repair the sign error.",
+      "baseId": "z-sign-error",
+      "effort": "medium"
+    },
+    {
+      "id": "z-sign-error-low",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is z = 2. Subtracting 8 from both sides gives 4z = 8, and dividing both sides by 4 gives z = 2. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is z = 2. Subtracting 8 from both sides gives 4z = 8, and dividing both sides by 4 gives z = 2. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "reasoningSufficient": false,
+        "assistanceUsed": false,
+        "targetAttempt": null
+      },
+      "rationale": "The asserted intermediate equation and final answer contradict the original equation: 0 minus 8 is -8. The identity claim does not repair the sign error.",
+      "baseId": "z-sign-error",
+      "effort": "low"
+    },
+    {
+      "id": "z-assisted-complete-low",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Here is the worked solution to this exact problem: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": true,
+        "targetAttempt": null
+      },
+      "rationale": "The same correct answer follows an explicit exact-target worked solution; correctness must not imply unassisted credit.",
+      "baseId": "z-assisted-complete",
+      "effort": "low"
+    },
+    {
+      "id": "z-assisted-complete-medium",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Here is the worked solution to this exact problem: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality."
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": true,
+        "targetAttempt": null
+      },
+      "rationale": "The same correct answer follows an explicit exact-target worked solution; correctness must not imply unassisted credit.",
+      "baseId": "z-assisted-complete",
+      "effort": "medium"
+    },
+    {
+      "id": "z-no-target-medium",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "Can we stop here? I do not have a date for the exam.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Can we stop here? I do not have a date for the exam."
+          }
+        ],
+        "attemptContext": {
+          "provisional": true,
+          "latestPromptIsCanonical": true,
+          "previousAssistant": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+        }
+      },
+      "expected": {
+        "verdict": "unclear",
+        "reasoningSufficient": null,
+        "assistanceUsed": false,
+        "targetAttempt": false
+      },
+      "rationale": "This is logistics with no assessable original-target answer; two valid negative target judgments must consume no attempt.",
+      "baseId": "z-no-target",
+      "effort": "medium"
+    },
+    {
+      "id": "z-no-target-low",
+      "input": {
+        "question": {
+          "difficulty": "hard",
+          "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?",
+          "answer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "id": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations"
+        },
+        "answer": "Can we stop here? I do not have a date for the exam.",
+        "materials": [
+          {
+            "id": "equation-notes",
+            "name": "Original algebra notes",
+            "text": "Equal operations on both sides preserve an equation. For 2x + 3 = 11, subtract 3 from both sides to obtain 2x = 8, then divide both sides by 2: x = 4. For 3y - 6 = 9, add 6 to both sides and divide by 3: y = 5. For 4z + 8 = 0, subtract 8 from both sides and divide by 4: z = -2. For 5w - 10 = 20, add 10 to both sides and divide by 5: w = 6. These integer operations can be reasoned through without a calculator."
+          },
+          {
+            "id": "biology-notes",
+            "name": "Original cell notes",
+            "text": "A cell membrane is a selectively permeable boundary: it controls which substances cross between the cell and its surroundings. Diffusion is passive movement down a concentration gradient; active transport uses energy to move substances against a concentration gradient. The nucleus contains genetic material and lies inside the cell."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "Let’s start with an equation and focus on why each move keeps it balanced. How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Please start with the hard equation question about 2x + 3 = 11. Ask me without solving it."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know. Could you solve it for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "user",
+            "content": "Wait, which complete problem are we working on?"
+          },
+          {
+            "role": "assistant",
+            "content": "We’re working on this complete problem: How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          },
+          {
+            "role": "assistant",
+            "content": "Think of the equation as a balance: begin by choosing the operation that removes the added 3, and apply that same operation to both sides. What equation do you get after that move?"
+          },
+          {
+            "role": "user",
+            "content": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet."
+          },
+          {
+            "role": "assistant",
+            "content": "Your principle is correct: applying the same reversible operation to both sides preserves equality. To complete your answer, write the next equation you get after your first equal operation."
+          },
+          {
+            "role": "user",
+            "content": "I do not have a calculator. Please keep this doable mentally, and let me do the operations myself."
+          },
+          {
+            "role": "assistant",
+            "content": "Absolutely—no calculator needed, and you’ll do each operation yourself. Start from 2x + 3 = 11 and tell me the equation after your first equal operation."
+          },
+          {
+            "role": "assistant",
+            "content": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?"
+          },
+          {
+            "role": "user",
+            "content": "Can you just tell me the final answer instead of waiting for me?"
+          },
+          {
+            "role": "assistant",
+            "content": "Use the Hint button for a nudge, or tell me your first step."
+          },
+          {
+            "role": "assistant",
+            "content": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient."
+          },
+          {
+            "role": "assistant",
+            "content": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for."
+          },
+          {
+            "role": "user",
+            "content": "My answer is: Subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4. Applying the same operation to both sides preserves equality."
+          },
+          {
+            "role": "assistant",
+            "content": "Exactly right. Your two equal operations give x = 4, and applying each operation to both sides preserves equality. Let’s try another equation. How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Choose another hard equation from the notes. Let me solve it before giving feedback."
+          },
+          {
+            "role": "assistant",
+            "content": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+          },
+          {
+            "role": "user",
+            "content": "Can we stop here? I do not have a date for the exam."
+          }
+        ],
+        "attemptContext": {
+          "provisional": true,
+          "latestPromptIsCanonical": true,
+          "previousAssistant": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+        }
+      },
+      "expected": {
+        "verdict": "unclear",
+        "reasoningSufficient": null,
+        "assistanceUsed": false,
+        "targetAttempt": false
+      },
+      "rationale": "This is logistics with no assessable original-target answer; two valid negative target judgments must consume no attempt.",
+      "baseId": "z-no-target",
+      "effort": "low"
+    }
+  ]
+}

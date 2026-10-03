@@ -1,0 +1,562 @@
+{
+  "startedAt": "2026-10-02T12:06:46.390Z",
+  "live": true,
+  "method": "Actual checkedGrade invokes the unmodified production organizer and operation-specific model selector. One original PNG and two independent public grading judgments; the original notes and private reference deliberately contradict the pixels. Same public fixture as the earlier seven-call image benchmark, no model/effort payload override. No mastery score, import, tutoring, Jev, voice, or persistent usage writes.",
+  "maximumPaidRequests": 2,
+  "providerCalls": 2,
+  "sourceImage": {
+    "file": "benchmarks/screenshot-vision/symbol-key.png",
+    "sourceId": "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+    "sha256": "91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+    "bytes": 52039,
+    "mimeType": "image/png"
+  },
+  "cases": [
+    {
+      "id": "original-pixels-over-wrong-derived-and-reference",
+      "input": {
+        "testId": "4726c520-ad95-4c3f-8795-87655d526cab",
+        "question": {
+          "id": "q-image-symbol",
+          "topicId": "hydraulic-symbols",
+          "topicTitle": "Hydraulic symbols",
+          "difficulty": "easy",
+          "sourceIds": [
+            "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+          ],
+          "question": "In the original symbol key, what does Q represent?",
+          "answer": "Q is heat flux (deliberately incorrect reference answer)."
+        },
+        "answer": "Q represents volume flow rate.",
+        "materials": [
+          {
+            "id": "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+            "name": "symbol-key.png",
+            "text": "Derived notes incorrectly say Q is heat flux and H is a temperature.",
+            "type": "png",
+            "size": 52039,
+            "fingerprint": "91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+            "extraction": {
+              "kind": "vision",
+              "textOrigin": "model-derived",
+              "mimeType": "image/png",
+              "width": 1400,
+              "height": 760,
+              "uncertainties": "",
+              "model": "gpt-6-luna"
+            }
+          }
+        ],
+        "conversation": [
+          {
+            "role": "assistant",
+            "content": "In the original symbol key, what does Q represent?"
+          }
+        ]
+      },
+      "expected": {
+        "verdict": "correct",
+        "unassisted": true,
+        "checked": true
+      },
+      "requests": [
+        {
+          "attempt": 1,
+          "startedAt": "2026-10-02T12:06:46.393Z",
+          "requestedModel": "gpt-5.6-terra",
+          "effort": "low",
+          "operation": "grading",
+          "images": [
+            {
+              "sha256": "91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+              "bytes": 52039,
+              "mimeType": "image/png",
+              "detail": "high"
+            }
+          ],
+          "input": {
+            "question": {
+              "id": "q-image-symbol",
+              "topicId": "hydraulic-symbols",
+              "topicTitle": "Hydraulic symbols",
+              "difficulty": "easy",
+              "sourceIds": [
+                "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+              ],
+              "question": "In the original symbol key, what does Q represent?",
+              "answer": "Q is heat flux (deliberately incorrect reference answer)."
+            },
+            "studentAnswer": "Q represents volume flow rate.",
+            "answerExcerpts": [
+              {
+                "id": "a-8f2e9af0f78f554c-0",
+                "text": "Q represents volume flow rate."
+              }
+            ],
+            "materials": [
+              {
+                "id": "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+                "name": "symbol-key.png",
+                "excerpts": [],
+                "derivedText": "Derived notes incorrectly say Q is heat flux and H is a temperature.",
+                "textOrigin": "derived-image-text",
+                "imageEvidence": {
+                  "id": "image:img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+                  "type": "image",
+                  "sourceId": "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+                  "sha256": "91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+                }
+              }
+            ],
+            "conversation": [
+              {
+                "role": "assistant",
+                "content": "In the original symbol key, what does Q represent?"
+              }
+            ],
+            "assistanceEvidence": [
+              {
+                "id": "h-61795b8910380145",
+                "turnIndex": 0,
+                "assistanceEligible": false,
+                "excerpts": [
+                  {
+                    "id": "h-61795b8910380145-0",
+                    "text": "In the original symbol key, what does Q represent?"
+                  }
+                ]
+              }
+            ]
+          },
+          "instructionSha256": "e0e5fa8207b8fe596f94158207406f3f73604f3b861a29c45023a602dbc961be",
+          "schemaSha256": "1b1d69678fc557c146a1df3e1c04671654d6514c2faa01eddd398242c8c0a25f",
+          "status": "completed",
+          "httpStatus": 200,
+          "model": "gpt-5.6-terra",
+          "serviceTier": "default",
+          "usage": {
+            "inputTokens": 2859,
+            "outputTokens": 167,
+            "cachedInputTokens": 0,
+            "cacheWriteTokens": 2856,
+            "reasoningTokens": 0
+          },
+          "rawUsage": {
+            "input_tokens": 2859,
+            "input_tokens_details": {
+              "cache_write_tokens": 2856,
+              "cached_tokens": 0
+            },
+            "output_tokens": 167,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 3026
+          },
+          "structuredOutput": {
+            "questionId": "q-image-symbol",
+            "topicId": "hydraulic-symbols",
+            "sourceIds": [
+              "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+            ],
+            "verdict": "correct",
+            "reasoningSufficient": true,
+            "assistanceUsed": false,
+            "answerCitationIds": [
+              "a-8f2e9af0f78f554c-0"
+            ],
+            "sourceCitationIds": [
+              "image:img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+            ],
+            "assistanceCitationIds": []
+          },
+          "estimatedCost": {
+            "usd": 0.00915,
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "durationMs": 2144
+        },
+        {
+          "attempt": 2,
+          "startedAt": "2026-10-02T12:06:48.542Z",
+          "requestedModel": "gpt-5.6-terra",
+          "effort": "low",
+          "operation": "grading",
+          "images": [
+            {
+              "sha256": "91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+              "bytes": 52039,
+              "mimeType": "image/png",
+              "detail": "high"
+            }
+          ],
+          "input": {
+            "question": {
+              "id": "q-image-symbol",
+              "topicId": "hydraulic-symbols",
+              "topicTitle": "Hydraulic symbols",
+              "difficulty": "easy",
+              "sourceIds": [
+                "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+              ],
+              "question": "In the original symbol key, what does Q represent?",
+              "answer": "Q is heat flux (deliberately incorrect reference answer)."
+            },
+            "studentAnswer": "Q represents volume flow rate.",
+            "answerExcerpts": [
+              {
+                "id": "a-8f2e9af0f78f554c-0",
+                "text": "Q represents volume flow rate."
+              }
+            ],
+            "materials": [
+              {
+                "id": "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+                "name": "symbol-key.png",
+                "excerpts": [],
+                "derivedText": "Derived notes incorrectly say Q is heat flux and H is a temperature.",
+                "textOrigin": "derived-image-text",
+                "imageEvidence": {
+                  "id": "image:img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+                  "type": "image",
+                  "sourceId": "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0",
+                  "sha256": "91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+                }
+              }
+            ],
+            "conversation": [
+              {
+                "role": "assistant",
+                "content": "In the original symbol key, what does Q represent?"
+              }
+            ],
+            "assistanceEvidence": [
+              {
+                "id": "h-61795b8910380145",
+                "turnIndex": 0,
+                "assistanceEligible": false,
+                "excerpts": [
+                  {
+                    "id": "h-61795b8910380145-0",
+                    "text": "In the original symbol key, what does Q represent?"
+                  }
+                ]
+              }
+            ]
+          },
+          "instructionSha256": "e0e5fa8207b8fe596f94158207406f3f73604f3b861a29c45023a602dbc961be",
+          "schemaSha256": "1b1d69678fc557c146a1df3e1c04671654d6514c2faa01eddd398242c8c0a25f",
+          "status": "completed",
+          "httpStatus": 200,
+          "model": "gpt-5.6-terra",
+          "serviceTier": "default",
+          "usage": {
+            "inputTokens": 2859,
+            "outputTokens": 167,
+            "cachedInputTokens": 2856,
+            "cacheWriteTokens": 0,
+            "reasoningTokens": 0
+          },
+          "rawUsage": {
+            "input_tokens": 2859,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 2856
+            },
+            "output_tokens": 167,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 3026
+          },
+          "structuredOutput": {
+            "questionId": "q-image-symbol",
+            "topicId": "hydraulic-symbols",
+            "sourceIds": [
+              "img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+            ],
+            "verdict": "correct",
+            "reasoningSufficient": true,
+            "assistanceUsed": false,
+            "answerCitationIds": [
+              "a-8f2e9af0f78f554c-0"
+            ],
+            "sourceCitationIds": [
+              "image:img-91fe21d77e82a1c02a83f27735c4de65c29189e82ebeb13e3ab341d4ca6a0af0"
+            ],
+            "assistanceCitationIds": []
+          },
+          "estimatedCost": {
+            "usd": 0.0025812,
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "durationMs": 2057
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "assistance-evidence",
+          "stage": "first-check",
+          "assistanceUsed": false,
+          "assistanceCitationIds": [],
+          "assistanceEvidence": []
+        },
+        {
+          "reason": "assistance-evidence",
+          "stage": "second-check",
+          "assistanceUsed": false,
+          "assistanceCitationIds": [],
+          "assistanceEvidence": []
+        },
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "correct"
+        }
+      ],
+      "result": {
+        "verdict": "correct",
+        "unassisted": true,
+        "checked": true
+      },
+      "status": "completed",
+      "pass": true,
+      "durationMs": 4210
+    }
+  ],
+  "codeHashes": {
+    "server/model-config.mjs": "678aa80146b59ed65e2f684107e6ca888d76b6173ba049abbe0b3f03f4b932de",
+    "server/openai-luna.mjs": "2553cfa8772934609611f2994bd8648c38763a2f6f248bd196c57f5aca33177b",
+    "server/mastery.mjs": "9e8042cccbfb2d8172ad8f4bfc3001c18172f66648ac4e41e0640e0fb66c0040",
+    "server/grade-citations.mjs": "7031237b819f0a8db6db77ef387ad06056f8bcbdc2736b12da6b6c70d1e2a8f1",
+    "server/material-images.mjs": "0e37cdf2d5c66a9f9c15dd45ef719649cebaedb0d5f84b3f861e982d08f5d70f",
+    "server/usage-pricing.mjs": "21c125e3b2454f308e94960a3e6179ec38fa46dfa510c64eb33adcbf563a291d",
+    "benchmarks/screenshot-grading-terra.mjs": "6fc0114765dedf6a0ed0a836b153e4d54131ae921d2c439688e99c87e3c02d54"
+  },
+  "billing": {
+    "providerReportedUsd": null,
+    "exactUsd": null,
+    "explanation": "Provider responses expose measured usage, not actual billed dollars."
+  },
+  "selectedModel": "gpt-5.6-terra",
+  "ledger": {
+    "testId": "4726c520-ad95-4c3f-8795-87655d526cab",
+    "trackingStartedAt": "2026-10-02T12:06:46.390Z",
+    "scope": "since-tracking-started",
+    "currency": "USD",
+    "totals": {
+      "requests": 2,
+      "pendingRequests": 0,
+      "reportedCostRequests": 0,
+      "unpricedRequests": 2,
+      "providerReportedUsd": null,
+      "exactUsd": null,
+      "complete": false,
+      "estimatedUsd": 0.0117312,
+      "estimatedRequests": 2,
+      "partialEstimatedRequests": 0,
+      "unestimatedRequests": 0,
+      "estimateComplete": true,
+      "missingUsageRequests": 0,
+      "statusCounts": {
+        "completed": 2
+      },
+      "units": {
+        "inputTokens": 5718,
+        "outputTokens": 334,
+        "cachedInputTokens": 2856,
+        "cacheWriteTokens": 2856,
+        "reasoningTokens": 0
+      },
+      "unitCoverage": {
+        "inputTokens": 2,
+        "outputTokens": 2,
+        "cachedInputTokens": 2,
+        "cacheWriteTokens": 2,
+        "reasoningTokens": 2
+      },
+      "estimateSources": [
+        {
+          "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+          "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+          "verifiedAt": "2026-10-02",
+          "notes": [
+            "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+            "Uses global processing rates; any regional processing premium is excluded.",
+            "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+          ]
+        }
+      ]
+    },
+    "categories": [
+      {
+        "id": "jev",
+        "label": "Jev",
+        "requests": 0,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 0,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": null,
+        "estimatedRequests": 0,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": false,
+        "missingUsageRequests": 0,
+        "statusCounts": {},
+        "units": {},
+        "unitCoverage": {},
+        "estimateSources": []
+      },
+      {
+        "id": "llm",
+        "label": "Thinking / LLM",
+        "requests": 2,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 2,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": 0.0117312,
+        "estimatedRequests": 2,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": true,
+        "missingUsageRequests": 0,
+        "statusCounts": {
+          "completed": 2
+        },
+        "units": {
+          "inputTokens": 5718,
+          "outputTokens": 334,
+          "cachedInputTokens": 2856,
+          "cacheWriteTokens": 2856,
+          "reasoningTokens": 0
+        },
+        "unitCoverage": {
+          "inputTokens": 2,
+          "outputTokens": 2,
+          "cachedInputTokens": 2,
+          "cacheWriteTokens": 2,
+          "reasoningTokens": 2
+        },
+        "estimateSources": [
+          {
+            "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+            "verifiedAt": "2026-10-02",
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "voice",
+        "label": "Voice",
+        "requests": 0,
+        "pendingRequests": 0,
+        "reportedCostRequests": 0,
+        "unpricedRequests": 0,
+        "providerReportedUsd": null,
+        "exactUsd": null,
+        "complete": false,
+        "estimatedUsd": null,
+        "estimatedRequests": 0,
+        "partialEstimatedRequests": 0,
+        "unestimatedRequests": 0,
+        "estimateComplete": false,
+        "missingUsageRequests": 0,
+        "statusCounts": {},
+        "units": {},
+        "unitCoverage": {},
+        "estimateSources": []
+      }
+    ],
+    "unattributed": {
+      "requests": 0,
+      "pendingRequests": 0,
+      "reportedCostRequests": 0,
+      "unpricedRequests": 0,
+      "providerReportedUsd": null,
+      "exactUsd": null,
+      "complete": false,
+      "estimatedUsd": null,
+      "estimatedRequests": 0,
+      "partialEstimatedRequests": 0,
+      "unestimatedRequests": 0,
+      "estimateComplete": false,
+      "missingUsageRequests": 0,
+      "statusCounts": {},
+      "units": {},
+      "unitCoverage": {},
+      "estimateSources": []
+    },
+    "storage": {
+      "status": "memory",
+      "lastSavedAt": null,
+      "pendingWrite": false
+    },
+    "notes": [
+      "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+      "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+      "Jev responses report token counts without a dollar charge field.",
+      "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+      "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+    ]
+  },
+  "finishedAt": "2026-10-02T12:06:50.603Z",
+  "accounting": {
+    "paidRequests": {
+      "openai": 2,
+      "jev": 0
+    },
+    "allPaidRequestsHaveUsage": true,
+    "tokenGroups": [
+      {
+        "provider": "openai",
+        "model": "gpt-5.6-terra",
+        "operation": "grading",
+        "effort": "low",
+        "requests": 2,
+        "estimatedUsd": 0.0117312,
+        "unpriced": 0,
+        "inputTokens": 5718,
+        "outputTokens": 334,
+        "cachedInputTokens": 2856,
+        "cacheWriteTokens": 2856,
+        "reasoningTokens": 0
+      }
+    ],
+    "estimatedTotalUsd": 0.0117312,
+    "estimateBasis": "Observed provider usage and verified repository public-rate pricing; actual billed dollars unavailable. No paid voice, Jev, extraction or tutoring."
+  },
+  "passed": true,
+  "limits": [
+    "One clear synthetic symbol-key image and one two-judgment pair; not a screenshot accuracy estimate.",
+    "Wrong derived notes and reference are deliberate; only original pixels can establish the expected Q meaning.",
+    "The fixture is read from the existing private image store, without re-importing or mutating it.",
+    "Raw images/base64, credentials, hidden reasoning and provider failure bodies are never written into this report."
+  ]
+}

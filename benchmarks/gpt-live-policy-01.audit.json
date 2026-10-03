@@ -1,0 +1,462 @@
+{
+  "source": "benchmarks/gpt-live-policy-01.json",
+  "sourceSha256": "43a33d1357fbf84ce8ad870f4e44d0160599f31113a6f1df1fd6c95e67d5e849",
+  "status": "incomplete",
+  "method": {
+    "inputPcmSampleRate": 16000,
+    "inputChunkMs": 100,
+    "continuousSilenceChunkMs": 100,
+    "simulatedPlaybackDrain": true,
+    "browserMicrophoneBatchingTested": false,
+    "physicalPlaybackTested": false,
+    "firstUsefulAudioMeasured": false,
+    "pairedPcm": "One in-memory synthetic clip per scenario reused across all arms within this report; original per-scenario hashes are in the source report.",
+    "normalizerSha256": "ad82784b1768d7273aaec1133ee8b53efea2b00c7add6630790ee3f2c0b8bd2a"
+  },
+  "requestedSessions": 4,
+  "completedSessions": 1,
+  "phases": [
+    {
+      "arm": "eleven",
+      "index": 1,
+      "status": "complete",
+      "trialFailures": [],
+      "fidelity": [],
+      "spokenFidelityEvents": [],
+      "applicationFallbacks": [],
+      "modelDelegations": 0,
+      "finalHints": {
+        "type": "hint-state",
+        "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+        "remaining": 3,
+        "cooldownUntil": null,
+        "retryAfterMs": 0,
+        "available": false,
+        "busy": true,
+        "suggested": false,
+        "reason": "busy",
+        "atMs": 43795.5,
+        "phase": "problem-switch"
+      },
+      "finalMastery": {
+        "type": "mastery",
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "ab81b36a0fe1c5e22af968d9",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "2698bf943df528125ed0a836",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        },
+        "atMs": 40861.4,
+        "phase": "problem-switch"
+      },
+      "finalPractice": {
+        "type": "practice-state",
+        "current": {
+          "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+          "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "topicTitle": "Equations",
+          "attempts": 0,
+          "assisted": false,
+          "status": "set-aside"
+        },
+        "recent": [
+          {
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "topicTitle": "Cell transport",
+            "attempts": 0,
+            "assisted": false,
+            "status": "set-aside"
+          }
+        ],
+        "atMs": 42764.5,
+        "phase": "problem-switch"
+      },
+      "boards": [
+        {
+          "phase": "startup",
+          "atMs": 6014.6,
+          "visible": true,
+          "title": "Cell transport",
+          "board": {
+            "title": "Cell transport",
+            "revision": "ad0916f7-745c-4aa5-8f59-2ffe6bddcd61",
+            "blocks": [
+              {
+                "id": "transport-compare",
+                "type": "matrix",
+                "columnLabels": [
+                  "Process",
+                  "Energy used?",
+                  "Direction vs. concentration gradient"
+                ],
+                "rows": [
+                  [
+                    "Diffusion",
+                    "",
+                    ""
+                  ],
+                  [
+                    "Active transport",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "phase": "canonical-question",
+          "atMs": 20826.2,
+          "visible": false
+        }
+      ],
+      "deliveredWords": [
+        {
+          "phase": "startup",
+          "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+          "source": "approved-backend",
+          "turnId": 1,
+          "atMs": 5816.7
+        },
+        {
+          "phase": "canonical-question",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 4,
+          "atMs": 20826
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "Use the Hint button for a nudge, or tell me your first step.",
+          "source": "approved-backend",
+          "turnId": 7,
+          "atMs": 30444.2
+        },
+        {
+          "phase": "problem-switch",
+          "text": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "source": "approved-backend",
+          "turnId": 13,
+          "atMs": 42764.5
+        }
+      ],
+      "recognizedWords": [
+        {
+          "phase": "canonical-question",
+          "text": "Please ask me the membrane transport question.",
+          "turnId": 2,
+          "atMs": 18619.9
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "I don't know. Please give me a hint.",
+          "turnId": 5,
+          "atMs": 30256
+        },
+        {
+          "phase": "problem-switch",
+          "text": "Let's switch to solving 2x plus 3 equals 11.",
+          "turnId": 8,
+          "atMs": 38670.7
+        },
+        {
+          "phase": "problem-switch",
+          "text": "Ask me without solving it.",
+          "turnId": 11,
+          "atMs": 40716.2
+        }
+      ],
+      "sessionElapsedMs": 43796.5,
+      "costEstimateUsd": 0.027431019604,
+      "estimateComplete": false,
+      "missingUsageRequests": 2,
+      "liveProviderSeconds": 0
+    },
+    {
+      "arm": "gpt-live",
+      "index": 2,
+      "status": "failed",
+      "trialFailures": [
+        {
+          "id": "canonical-question",
+          "error": "Timed out waiting for final assistant transcript and audio-end"
+        }
+      ],
+      "fidelity": [
+        {
+          "phase": "startup",
+          "approved": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": true
+        }
+      ],
+      "spokenFidelityEvents": [
+        {
+          "atMs": 12862.1,
+          "phase": "startup",
+          "matched": true,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        }
+      ],
+      "applicationFallbacks": [],
+      "modelDelegations": 0,
+      "finalHints": {
+        "type": "hint-state",
+        "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+        "remaining": 3,
+        "cooldownUntil": null,
+        "retryAfterMs": 0,
+        "available": false,
+        "busy": true,
+        "suggested": false,
+        "reason": "busy",
+        "atMs": 16853.6,
+        "phase": "canonical-question"
+      },
+      "finalMastery": {
+        "type": "mastery",
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "ab81b36a0fe1c5e22af968d9",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "2698bf943df528125ed0a836",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        },
+        "atMs": 611.9,
+        "phase": "startup"
+      },
+      "finalPractice": {
+        "type": "practice-state",
+        "current": {
+          "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+          "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "topicTitle": "Cell transport",
+          "attempts": 0,
+          "assisted": false,
+          "status": "set-aside"
+        },
+        "recent": [],
+        "atMs": 3516.9,
+        "phase": "startup"
+      },
+      "boards": [],
+      "deliveredWords": [
+        {
+          "phase": "startup",
+          "text": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 1,
+          "atMs": 3321.8
+        },
+        {
+          "phase": "startup",
+          "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "gpt-live-spoken",
+          "turnId": 1,
+          "atMs": 12862
+        }
+      ],
+      "recognizedWords": [],
+      "sessionElapsedMs": 40909.2,
+      "costEstimateUsd": 0.039290557333,
+      "estimateComplete": true,
+      "missingUsageRequests": 0,
+      "liveProviderSeconds": 40
+    }
+  ],
+  "byScenario": [
+    {
+      "id": "canonical-question",
+      "arms": [
+        {
+          "arm": "eleven",
+          "attempted": 1,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 3012.4,
+            "minimum": 3012.4,
+            "maximum": 3012.4
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 2890.5,
+            "minimum": 2890.5,
+            "maximum": 2890.5
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 2213.3,
+            "minimum": 2213.3,
+            "maximum": 2213.3
+          }
+        },
+        {
+          "arm": "gpt-live",
+          "attempted": 1,
+          "complete": 0,
+          "firstAudioMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          },
+          "firstTextMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          },
+          "commitToAudioMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "unauthorized-hint",
+      "arms": [
+        {
+          "arm": "eleven",
+          "attempted": 1,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 1180.4,
+            "minimum": 1180.4,
+            "maximum": 1180.4
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 948.2,
+            "minimum": 948.2,
+            "maximum": 948.2
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 420.4,
+            "minimum": 420.4,
+            "maximum": 420.4
+          }
+        },
+        {
+          "arm": "gpt-live",
+          "attempted": 0,
+          "complete": 0,
+          "firstAudioMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          },
+          "firstTextMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          },
+          "commitToAudioMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "problem-switch",
+      "arms": [
+        {
+          "arm": "eleven",
+          "attempted": 1,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 2887.4,
+            "minimum": 2887.4,
+            "maximum": 2887.4
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 2762.6,
+            "minimum": 2762.6,
+            "maximum": 2762.6
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 4177.2,
+            "minimum": 4177.2,
+            "maximum": 4177.2
+          }
+        },
+        {
+          "arm": "gpt-live",
+          "attempted": 0,
+          "complete": 0,
+          "firstAudioMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          },
+          "firstTextMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          },
+          "commitToAudioMs": {
+            "n": 0,
+            "median": null,
+            "minimum": null,
+            "maximum": null
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Tiny exploratory sample; no stable p95, no learning-outcome claim.",
+    "Comparative latency requires successful paired trials and reviewed spoken fidelity; failures stay in the denominator.",
+    "Backend captions and native spoken transcripts are separate evidence.",
+    "A normalizer match is not an independent semantic quality score; public text remains reviewable.",
+    "Application cost estimates exclude unpriced source-synthesis requests and any missing provider counters; they are not billed account charges."
+  ]
+}

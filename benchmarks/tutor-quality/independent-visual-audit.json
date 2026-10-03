@@ -1,0 +1,304 @@
+{
+  "finishedAt": "2026-10-02T09:51:35.354Z",
+  "reviewer": "Independent visual inspection by relevance_design",
+  "providerCalls": 0,
+  "rubric": {
+    "semantics": "Required source facts have correct spatial relationships, directions, numerical coordinates or cell placement.",
+    "legibility": "All required labels can be read at the captured size; math renders and prose retains spacing.",
+    "overlap": "No clipping or crossing strokes conceal meaningful labels or change the represented relation.",
+    "redundancy": "Writing supports the visual and does not repeat a requested sentence in multiple boxes or add a transcript wall."
+  },
+  "method": "Offline replay of selected existing model outputs through current production read-only renderer. Mixed final/repaired/initial-current artifacts; not ten fresh model successes and not a matched latency comparison.",
+  "scope": "Ten selected existing outputs from the final, repaired and initial-current runs. All ten were independently re-rendered and visually inspected. This is not a new ten-request success rate, not blinded, and not a statistical estimate of all-subject reliability.",
+  "results": [
+    {
+      "scenario": "hydraulic-legend",
+      "source": "boards-final-results.json",
+      "sourceRun": "hydraulic-legend-current",
+      "boardSha256": "1d02ad38efc23a048f103469d081d06689995bde78d4cbcf68b814a07da096ea",
+      "screenshot": "renders/audit-latest-hydraulic-legend.png",
+      "screenshotSha256": "bbfd9295f7a3932cbe7bea39e18f7a67f7f7e3723e4e8d707f82fb4793bd0537",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "P=ρgHQ\nSymbol\tMeaning\n\nP\n\t\nhydraulic power\n\n\nρ\n\t\nfluid density\n\n\ng\n\t\ngravitational acceleration\n\n\nH\n\t\nhead: vertical height difference\n\n\nQ\n\t\nvolume flow rate"
+      },
+      "manual": {
+        "baseline": "Fail: the legend exposed literal \\rho; the first current matrix concatenated prose in math mode.",
+        "latest": "Formula and all five symbol meanings are correct. Prose preserves spaces; symbols remain mathematical.",
+        "status": "pass"
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "biology-process",
+      "source": "boards-repaired-results.json",
+      "sourceRun": "biology-process-current",
+      "boardSha256": "0a3fedc86a6aface88c9b084c4cfe0c8e7ec67a6610847dad38f1cfca62e0694",
+      "screenshot": "renders/audit-latest-biology-process.png",
+      "screenshotSha256": "83f4cd29f7894dba287aecf584c8d8564b05b30da26c04a4bda52784f90f9efd",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "transcription\ntranslation\nDNA\nRNA\nProtein"
+      },
+      "manual": {
+        "baseline": "Qualified: named processes and direction are correct, but arrow captions overlap node outlines.",
+        "latest": "DNA → RNA → Protein, with transcription and translation attached to separate visible directed connectors. No repeated paragraph.",
+        "status": "pass"
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "chemistry-process",
+      "source": "boards-results.json",
+      "sourceRun": "chemistry-process-current",
+      "boardSha256": "e75a57b5abc271f328affe731aa7fe531e2ffbd56fb3fd20b919fe4c157777b8",
+      "screenshot": "renders/audit-latest-chemistry-process.png",
+      "screenshotSha256": "72b2315fd301cb2cb453cff08fa6613fb2c462b80e1e909bad30e85f9c2d086c",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "melting\nvaporization\nSolid\nLiquid\nGas"
+      },
+      "manual": {
+        "baseline": "Pass for the original scene. The first current typed flow clipped the Gas box.",
+        "latest": "All three complete nodes fit. Solid → Liquid → Gas and melting/vaporization map to the correct transitions.",
+        "status": "pass"
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "programming-branch",
+      "source": "boards-final-results.json",
+      "sourceRun": "programming-branch-current",
+      "boardSha256": "25a0f101c2440262e6900e8654d3ea35c6d74d83958b70714e9fa3e40f660bd9",
+      "screenshot": "renders/audit-latest-programming-branch.png",
+      "screenshotSha256": "7fd74fdf8ca1967443d8577b45a7bb63ecb38eeb6a614066edacf6cf361e388d",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "equal\nsmaller\nlarger\nCompare target with middle value\nEqual → found\nTarget smaller → keep left half\nTarget larger → keep right half"
+      },
+      "manual": {
+        "baseline": "Qualified: return and outgoing arrows share routes and make the older scene hard to scan; intermediate repair interrupted the shared crossbar.",
+        "latest": "Shared crossbar is continuous. Three labeled target branches correctly map equal to found, smaller to left and larger to right.",
+        "status": "pass",
+        "limit": "This is the explicitly permitted single decision step, not a complete looping binary-search algorithm."
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "grammar-annotation",
+      "source": "boards-final-results.json",
+      "sourceRun": "grammar-annotation-current",
+      "boardSha256": "5a8c001f2f2b9b371623ca68643affcbc61d1475480be8c47b379cf8b7304767",
+      "screenshot": "renders/audit-latest-grammar-annotation.png",
+      "screenshotSha256": "5fa1a0900bea72f9453dc0f394131dca313b7f19f31a92e98a3ef3fdab2549ed",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "After\nSubordinating conjunction\n the rain stopped\nDependent clause\n, \nMaya\nMain-clause subject\n walked to class\nMain clause\n."
+      },
+      "manual": {
+        "baseline": "Fail for visual targeting: approximate brackets/arrows do not attach precisely to the words. First current output repeats both clauses in boxes against the request.",
+        "latest": "One exact sentence; nested labels distinguish After, Maya, dependent clause and main clause without crossing labels or duplicated sentence text.",
+        "status": "pass"
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "history-timeline",
+      "source": "boards-results.json",
+      "sourceRun": "history-timeline-current",
+      "boardSha256": "b5fc2eb611e69df9ef4ddcb397d2d2a1dff0f4c4bd7162ca442d0ccdbaa6bcae",
+      "screenshot": "renders/audit-latest-history-timeline.png",
+      "screenshotSha256": "b99330c30062330c15974086822d4b7790f85d36393feaa86b813d331c5ad32b",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "Declaration of\nIndependence\n1776\nConstitution\nsigned\n1787\nBill of Rights\nratified\n1791\n11 years\n4 years"
+      },
+      "manual": {
+        "baseline": "Pass: correct order, dates and approximately proportional gaps.",
+        "latest": "1776,1787,1791 are in order. Horizontal distances400:145 approximate11:4 within0.4%; labels and tick targets remain separate.",
+        "status": "pass"
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "physics-forces",
+      "source": "boards-results.json",
+      "sourceRun": "physics-forces-current",
+      "boardSha256": "084203d5b69ec1c739cc93440f361e7dd8d7c118d34df7a0ae48c65d68f19988",
+      "screenshot": "renders/audit-latest-physics-forces.png",
+      "screenshotSha256": "15e4ae75ee556ab6c7634caa0c2c6237c831cfbace936a59bb3f103ae6563703",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "mg\nN\nF\nf\nk\n\t​\n"
+      },
+      "manual": {
+        "baseline": "Fail: the original response did not produce an accepted board.",
+        "latest": "Weight mg downward, normal N upward, applied F right and friction f_k left. Labels do not cross arrow strokes; no invented numerical values.",
+        "status": "pass",
+        "limit": "Arrow lengths are schematic, not a quantitative force-scale claim."
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "math-parabola",
+      "source": "boards-final-results.json",
+      "sourceRun": "math-parabola-current",
+      "boardSha256": "0a006a25eee90391b0a66f265962c30db2f713ec86c7efed42336ca39bd1ed61",
+      "screenshot": "renders/audit-latest-math-parabola.png",
+      "screenshotSha256": "8204944b8f982b6f76eea58943d4f842b13529477515943dcf8c50dde3e953bc",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "−2\n−1\n0\n1\n2\n0\n1\n2\n3\n4\nx\ny\ny = x²"
+      },
+      "manual": {
+        "baseline": "Fail: old tick labels were misplaced and several point markers did not lie on the graph. First current scene still misaligned numeric ticks.",
+        "latest": "Typed plot correctly locates all five supplied points, origin and tick values; symmetric smooth interpolation has a minimum at the vertex.",
+        "status": "qualified",
+        "limit": "Monotone interpolation between five samples is an illustrative curve, not symbolic evaluation of x² at every x. The supplied points are exact."
+      },
+      "rubric": {
+        "semantics": "qualified",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "probability-tree",
+      "source": "boards-results.json",
+      "sourceRun": "probability-tree-current",
+      "boardSha256": "b950b4b0c251f05ad06a586da74dd2d5e09392205e07ac07ef759fa1b1732251",
+      "screenshot": "renders/audit-latest-probability-tree.png",
+      "screenshotSha256": "6a48aab5b29894aed523fc07f1307cb79a348eb87f905a62296edfc3333981db",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "Start\nH\nT\nHH  (1/4)\nHT  (1/4)\nTH  (1/4)\nTT  (1/4)\nH, 1/2\nT, 1/2\nH, 1/2\nT, 1/2\nH, 1/2\nT, 1/2\nEach outcome path has probability: (1/2)(1/2) = 1/4"
+      },
+      "manual": {
+        "baseline": "Pass: two levels, readable branch probabilities and four correct outcomes.",
+        "latest": "H/T branching at each level has1/2 labels; HH,HT,TH,TT each carry1/4. No connector-label collision obscures a path.",
+        "status": "pass"
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    },
+    {
+      "scenario": "game-table",
+      "source": "boards-results.json",
+      "sourceRun": "game-table-current",
+      "boardSha256": "f1ca8326aea6d3e2e031b5735be8f4792b476362e561ea425f7078b6f7a69315",
+      "screenshot": "renders/audit-latest-game-table.png",
+      "screenshotSha256": "92d42fb36a33cd48a91263cfad447453661607405d15074fc981370b5fd1d5f2",
+      "measured": {
+        "buttons": 1,
+        "selectionTargets": 0,
+        "mathErrors": 0,
+        "closeCenterError": 0,
+        "text": "\tLeft\tRight\nUp\t\n(3,2)\n\t\n(0,1)\n\nDown\t\n(1,0)\n\t\n(2,3)\nRow player chooses Up or Down. Column player chooses Left or Right.\nPayoffs: (row player, column player)."
+      },
+      "manual": {
+        "baseline": "Pass: all four values and row/column labels are in correct order.",
+        "latest": "2×2 grid preserves (3,2),(0,1),(1,0),(2,3), row/column strategy names and no marked equilibrium. Short payoff-order key is useful rather than a transcript wall.",
+        "status": "pass"
+      },
+      "rubric": {
+        "semantics": "pass",
+        "legibility": "pass",
+        "overlap": "pass",
+        "redundancy": "pass"
+      }
+    }
+  ],
+  "additional": [
+    {
+      "id": "exact-user-latex",
+      "status": "pass",
+      "evidence": "renders/final-reported-latex-regression.png and renders/reported-latex-mobile.png",
+      "note": "All five mathematical spans render; inline symbol definitions stay readable on390px mobile."
+    },
+    {
+      "id": "literature-annotation",
+      "status": "pass",
+      "evidence": "renders/repaired-literature-annotation-current.png",
+      "note": "One sentence with phrase-linked subject and metaphor labels. Extra explanation is short and readable."
+    },
+    {
+      "id": "negative-slope",
+      "status": "pass",
+      "evidence": "renders/repaired-math-negative-slope-current.png",
+      "note": "Points from(0,10)to(5,0), Quantity/Price axes and ticks align."
+    }
+  ],
+  "limitations": [
+    "The before/current saved screenshots use the renderer version at capture time; improvements combine prompt/protocol and renderer changes.",
+    "Generic scene composition remains model-authored and is not guaranteed by schema validity.",
+    "These static ten-scenario captures do not prove arbitrary multi-turn content, every viewport, voice behavior, grading or mastery.",
+    "The mobile app verification is a separate mocked session check; it never accesses a microphone or provider."
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "reviewedAt": "2026-10-02T12:01:27.944Z",
+  "reviewer": "independent relevance_design agent",
+  "source": "live-adaptive-final.json",
+  "sourceSha256": "a21282087e57ff1c438943937693b4c4cea7be23cbcc94a2f55b124600aeb0ab",
+  "providerCallsByReview": 0,
+  "method": "Read exact public replies, current-turn hint/task inputs, both independent judgments and saved state. Visually inspected all8accepted desktop boards and key mobile views; automated16viewport checks cover every accepted board. Live providers with scripted student and synthetic ElevenLabs; not human learning evidence.",
+  "providerCounts": {
+    "openai": 55,
+    "jev": 56
+  },
+  "errors": [],
+  "budgetBlocked": 0,
+  "rubric": [
+    {
+      "criterion": "proactive-lead",
+      "verdict": "pass-in-this-run",
+      "evidence": "After wrong or correct academic feedback, replies invite a repair step, teach-back or next canonical problem. No final bare-praise stall in the tested sequence."
+    },
+    {
+      "criterion": "same-problem-continuity",
+      "verdict": "pass-with-late-repetition",
+      "evidence": "x stays anchored through all hints and wrong/revised work. Previously consumed w and y IDs restore. No adaptive answer falls back for missing question identity. Late y questions repeatedly probe the same first operation."
+    },
+    {
+      "criterion": "truthful-feedback",
+      "verdict": "pass-for-spoken-facts/qualified-grading",
+      "evidence": "Wrong x feedback identifies unremoved coefficient without invented successful work. Spoken z/y solutions are mathematically correct; independent grades still sometimes disagree."
+    },
+    {
+      "criterion": "no-unauthorized-solution-or-hint",
+      "verdict": "pass-within-tested-shortcuts-and-hints",
+      "evidence": "Both unattempted answer shortcuts stay gated. Three grants produce orientation, strategy and one actual subtraction step, without supplying x4 or assuming the learner already reached2x8. Wrong-answer repair asks for the intermediate equation rather than revealing x4."
+    },
+    {
+      "criterion": "respectful-clarification",
+      "verdict": "pass",
+      "evidence": "No-calculator acknowledged neutrally; givens/requirements restated without blaming uncertainty. Pause request is respected."
+    },
+    {
+      "criterion": "optional-planning",
+      "verdict": "not-retested",
+      "evidence": "Date was already supplied. Earlier date-refusal cohort remains the evidence for optional planning."
+    },
+    {
+      "criterion": "useful-progression",
+      "verdict": "qualified",
+      "evidence": "Fresh canonical questions and historical revisits work, final recap completes and prioritizes less-practiced biology. Late y drill repeats; two correct y submissions lack a checked grade in this realization."
+    }
+  ],
+  "hintEvidence": [
+    {
+      "id": "hint-one",
+      "reply": "Look at the +3 attached to 2x: focus first on what that term is doing to the left side. What operation affects that +3?",
+      "request": {
+        "sourceIds": [
+          "equation-notes",
+          "biology-notes"
+        ],
+        "activeQuestionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+        "hintContext": {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "maxHints": 3,
+          "hintsUsed": 0,
+          "hintsRemaining": 3,
+          "hintAllowed": true,
+          "hintNumber": 1,
+          "hintLevel": "orientation",
+          "hintAvailable": false,
+          "retryAfterMs": 0,
+          "allowAnswerReview": false,
+          "requiresAttempt": false,
+          "answerAttemptReceived": false,
+          "answerReviewPending": false,
+          "setupClarification": false
+        },
+        "bankQuestions": [
+          {
+            "id": "bc3c6786-88e8-4536-9d9d-7507828cf95f",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "84c4b1e6-1597-4702-b6b8-f2f32b642422",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "083ab454-574c-48c9-8bcc-13ae74305857",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "130bab90-cfa6-411c-8e93-5f17ae6f6172",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+            "hasReferenceAnswer": false
+          }
+        ],
+        "workingProblem": {
+          "id": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations",
+          "difficulty": "hard",
+          "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "attempts": 0,
+          "assisted": false
+        },
+        "gradingContext": {
+          "canonicalPromptActive": true,
+          "workingProblemConfirmed": true
+        },
+        "turnTask": {
+          "kind": "deliver-authorized-hint",
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "hintNumber": 1,
+          "hintLevel": "orientation",
+          "levelGoal": "Focus attention on one relevant given or relationship; do not prescribe the solution method yet.",
+          "instruction": "The student clicked Hint NOW. Deliver this granted hint for the working problem at levelGoal. Earlier conversation has already been answered: do not repeat its last reply. Never give the final answer or assume the learner completed an earlier suggested step. This grant remains valid even when no later hints remain. Then invite one student step; do not advertise another hint during cooldown."
+        },
+        "encounteredQuestions": [
+          {
+            "id": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+            "topicId": "7fafcd4cb67a69bee132bb17",
+            "topicTitle": "Equations",
+            "difficulty": "hard",
+            "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+            "sourceIds": [
+              "equation-notes"
+            ],
+            "attempts": 0,
+            "assisted": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "hint-two",
+      "reply": "Use inverse operations in reverse order: first undo the added constant with the same operation on both sides, then undo the coefficient of x the same way. Equal operations preserve equality because both sides are changed equally. What is your first operation?",
+      "request": {
+        "sourceIds": [
+          "equation-notes",
+          "biology-notes"
+        ],
+        "activeQuestionId": null,
+        "hintContext": {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "maxHints": 3,
+          "hintsUsed": 1,
+          "hintsRemaining": 2,
+          "hintAllowed": true,
+          "hintNumber": 2,
+          "hintLevel": "strategy",
+          "hintAvailable": false,
+          "retryAfterMs": 0,
+          "allowAnswerReview": false,
+          "requiresAttempt": false,
+          "answerAttemptReceived": false,
+          "answerReviewPending": true,
+          "setupClarification": false
+        },
+        "bankQuestions": [
+          {
+            "id": "bc3c6786-88e8-4536-9d9d-7507828cf95f",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "84c4b1e6-1597-4702-b6b8-f2f32b642422",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "083ab454-574c-48c9-8bcc-13ae74305857",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "130bab90-cfa6-411c-8e93-5f17ae6f6172",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+            "hasReferenceAnswer": false
+          }
+        ],
+        "workingProblem": {
+          "id": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations",
+          "difficulty": "hard",
+          "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "attempts": 0,
+          "assisted": true
+        },
+        "gradingContext": {
+          "canonicalPromptActive": false,
+          "workingProblemConfirmed": true
+        },
+        "turnTask": {
+          "kind": "deliver-authorized-hint",
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "hintNumber": 2,
+          "hintLevel": "strategy",
+          "levelGoal": "Name a useful method and why it applies, without executing the complete solution.",
+          "instruction": "The student clicked Hint NOW. Deliver this granted hint for the working problem at levelGoal. Earlier conversation has already been answered: do not repeat its last reply. Never give the final answer or assume the learner completed an earlier suggested step. This grant remains valid even when no later hints remain. Then invite one student step; do not advertise another hint during cooldown."
+        },
+        "encounteredQuestions": [
+          {
+            "id": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+            "topicId": "7fafcd4cb67a69bee132bb17",
+            "topicTitle": "Equations",
+            "difficulty": "hard",
+            "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+            "sourceIds": [
+              "equation-notes"
+            ],
+            "attempts": 0,
+            "assisted": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "hint-three",
+      "reply": "Subtract 3 from both sides to undo the added 3. Write the new equation you get.",
+      "request": {
+        "sourceIds": [
+          "equation-notes",
+          "biology-notes"
+        ],
+        "activeQuestionId": null,
+        "hintContext": {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "maxHints": 3,
+          "hintsUsed": 2,
+          "hintsRemaining": 1,
+          "hintAllowed": true,
+          "hintNumber": 3,
+          "hintLevel": "next-step",
+          "hintAvailable": false,
+          "retryAfterMs": 0,
+          "allowAnswerReview": false,
+          "requiresAttempt": false,
+          "answerAttemptReceived": false,
+          "answerReviewPending": true,
+          "setupClarification": false
+        },
+        "bankQuestions": [
+          {
+            "id": "bc3c6786-88e8-4536-9d9d-7507828cf95f",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "84c4b1e6-1597-4702-b6b8-f2f32b642422",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "083ab454-574c-48c9-8bcc-13ae74305857",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "130bab90-cfa6-411c-8e93-5f17ae6f6172",
+            "hasReferenceAnswer": false
+          },
+          {
+            "id": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+            "hasReferenceAnswer": false
+          }
+        ],
+        "workingProblem": {
+          "id": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "topicTitle": "Equations",
+          "difficulty": "hard",
+          "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "attempts": 0,
+          "assisted": true
+        },
+        "gradingContext": {
+          "canonicalPromptActive": false,
+          "workingProblemConfirmed": true
+        },
+        "turnTask": {
+          "kind": "deliver-authorized-hint",
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "hintNumber": 3,
+          "hintLevel": "next-step",
+          "levelGoal": "Give one concrete step from the last work the student actually supplied, or from the original givens if they have supplied no step. Earlier hints are proposals, not completed student work.",
+          "instruction": "The student clicked Hint NOW. Deliver this granted hint for the working problem at levelGoal. Earlier conversation has already been answered: do not repeat its last reply. Never give the final answer or assume the learner completed an earlier suggested step. This grant remains valid even when no later hints remain. Then invite one student step; do not advertise another hint during cooldown."
+        },
+        "encounteredQuestions": [
+          {
+            "id": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+            "topicId": "7fafcd4cb67a69bee132bb17",
+            "topicTitle": "Equations",
+            "difficulty": "hard",
+            "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+            "sourceIds": [
+              "equation-notes"
+            ],
+            "attempts": 0,
+            "assisted": true
+          }
+        ]
+      }
+    }
+  ],
+  "wrongAnswer": {
+    "input": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient.",
+    "reply": "Not quite: subtracting the constant does not remove the coefficient on x, so the variable is not isolated yet. What equation remains after subtracting 3 from both sides?"
+  },
+  "finalReply": "Next, prioritize cell transport: you gave one strong explanation, but it has had less practice. Then do a brief equations teach-back focused on why dividing by the coefficient isolates the variable—not just the calculation. I’m not treating either topic as complete.",
+  "grading": {
+    "summary": {
+      "reviewJobs": 12,
+      "providerRequests": 24,
+      "recognizedAttempts": 9,
+      "acceptedCheckedGrades": 7,
+      "rejectedReviews": 5,
+      "targetRejectedReviews": 2,
+      "persistedGradeEvents": 7
+    },
+    "z": [
+      {
+        "questionId": "7bca7240-b3fc-461f-84e3-6726ff57b5eb",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": false,
+        "answerCitationIds": [
+          "a-61e563d507ed5285-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      },
+      {
+        "questionId": "7bca7240-b3fc-461f-84e3-6726ff57b5eb",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": false,
+        "answerCitationIds": [
+          "a-61e563d507ed5285-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      }
+    ],
+    "w": [
+      {
+        "questionId": "98c48deb-d40a-4c77-9d2d-4932e0c6eefa",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-793e500df9493c4f-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      },
+      {
+        "questionId": "98c48deb-d40a-4c77-9d2d-4932e0c6eefa",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-793e500df9493c4f-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      }
+    ],
+    "yFirst": [
+      {
+        "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-1e371fe56e252a67-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      },
+      {
+        "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": false,
+        "answerCitationIds": [
+          "a-1e371fe56e252a67-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      }
+    ],
+    "yThird": [
+      {
+        "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "correct",
+        "reasoningSufficient": true,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-1e371fe56e252a67-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      },
+      {
+        "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "partial",
+        "reasoningSufficient": false,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-1e371fe56e252a67-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ]
+      }
+    ],
+    "scaffold": [
+      {
+        "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "unclear",
+        "reasoningSufficient": false,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-d9238d9d7b0ad0a9-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ],
+        "targetAttempt": false
+      },
+      {
+        "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "partial",
+        "reasoningSufficient": false,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-d9238d9d7b0ad0a9-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ],
+        "targetAttempt": true
+      }
+    ],
+    "pendingMarkers": [
+      {
+        "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+        "questionKey": "8fc6cb16ae848e072e4b2b448fecd231fa52e36a10863968cfcf5c5f15283828",
+        "provisional": true,
+        "order": 1
+      }
+    ],
+    "assessment": "No unsafe first-attempt win or fabricated completion observed. z receives checked unassisted credit this time; that does not erase earlier variability. w both graders mark assisted despite only neutral problem repetition/unsolved board before its first answer. y first reviewers agree correct but disagree assistance; y third disagree correctness. These remain reliability/fairness limits. The local scaffold has false/true scope disagreement, so remains a persisted unresolved marker without an attempt; later x firstness conservatively blocked for that key. Restatement policy clarification was investigated separately after this immutable session.",
+    "restatementFollowUp": {
+      "source": "grade-restatement-results.json",
+      "sha256": "97e5e7ae8146feaa1154214c0c00b8e4ea8c5f7345167362a91c6ecb718ff9eb",
+      "providerCalls": 16,
+      "assessment": "The narrow restatement wording clarification did not repair neutral w/y assistance failures: both remained falsely assisted after the change. All4positive/negative help controls behaved as expected. Exact captured before/after inputs match per target. One pair per condition, so this identifies a remaining failure rather than measuring reliability. Later assistance-citation changes require their own evidence.",
+      "cases": [
+        {
+          "id": "before-neutral-w",
+          "inputSha256": "3da790fedb4e9705defff6a651a85e94532332fb3aa86df90cae447208aab6b8",
+          "result": {
+            "verdict": "correct",
+            "unassisted": false,
+            "checked": true
+          },
+          "expectedJudgmentMatches": [
+            false,
+            false
+          ]
+        },
+        {
+          "id": "before-neutral-y",
+          "inputSha256": "87552fe90f823dc2a5f15b88b6b450c30e083029c23c6ac86c5bc9ce2b419e26",
+          "result": null,
+          "expectedJudgmentMatches": [
+            false,
+            true
+          ]
+        },
+        {
+          "id": "after-neutral-w",
+          "inputSha256": "3da790fedb4e9705defff6a651a85e94532332fb3aa86df90cae447208aab6b8",
+          "result": {
+            "verdict": "correct",
+            "unassisted": false,
+            "checked": true
+          },
+          "expectedJudgmentMatches": [
+            false,
+            false
+          ]
+        },
+        {
+          "id": "after-neutral-y",
+          "inputSha256": "87552fe90f823dc2a5f15b88b6b450c30e083029c23c6ac86c5bc9ce2b419e26",
+          "result": {
+            "verdict": "correct",
+            "unassisted": false,
+            "checked": true
+          },
+          "expectedJudgmentMatches": [
+            false,
+            false
+          ]
+        },
+        {
+          "id": "after-same-id-hint",
+          "inputSha256": "63bfac0dc347b44f198af52b409d346efc0534797050ebbdc6bb635d46063ff9",
+          "result": {
+            "verdict": "correct",
+            "unassisted": false,
+            "checked": true
+          },
+          "expectedJudgmentMatches": [
+            true,
+            true
+          ]
+        },
+        {
+          "id": "after-renamed-target-hint",
+          "inputSha256": "e2b6009193f1c90fdbaaf5c870767aa4e0bc9abd9d5f452215155c7e6ff30a86",
+          "result": {
+            "verdict": "correct",
+            "unassisted": false,
+            "checked": true
+          },
+          "expectedJudgmentMatches": [
+            true,
+            true
+          ]
+        },
+        {
+          "id": "after-unrelated-teaching",
+          "inputSha256": "b8eb278f3f97fe589122c0f91c6bafe723c3d150d1ca459e501c5bd3decf9978",
+          "result": {
+            "verdict": "correct",
+            "unassisted": true,
+            "checked": true
+          },
+          "expectedJudgmentMatches": [
+            true,
+            true
+          ]
+        },
+        {
+          "id": "after-worked-then-restated",
+          "inputSha256": "fa5b48cfc14868923f0f87fa16d33492f2af1b015bcc91a3b22837e084ae293a",
+          "result": {
+            "verdict": "correct",
+            "unassisted": false,
+            "checked": true
+          },
+          "expectedJudgmentMatches": [
+            true,
+            true
+          ]
+        }
+      ]
+    }
+  },
+  "boards": {
+    "acceptedPackets": 8,
+    "viewports": 16,
+    "evidence": "final-board-audit.json",
+    "verdict": "After renderer-only mobile reflow, all accepted boards fit and remain readable. No browser/math errors or selectable regions.",
+    "targetTransition": "At x→y, old x board is hidden and the mismatched candidate is rejected. New z and w requests receive matching unsolved equations. w→biology and biology→w hide old boards before replacement. No stale or mixed target board is accepted.",
+    "semanticContent": "Accepted biology is a correct branching flow: membrane control, diffusion down gradient/no energy, active transport against gradient/uses energy. No malformed comparison-table heading in this accepted output.",
+    "rendererRepair": "A first mobile replay exposed cropped biology branches. Narrow semantic layout now grows boxes vertically at readable type while preserving topology and exact labels. Large graphs retain keyboard-accessible native scrolling. Exact raw provider outputs unchanged.",
+    "fullAppEvidence": "../../artifacts/hint-presence/results.json",
+    "fullAppAssessment": "Exact accepted biology replayed through full study UI at390×844. Actual258px frame uses stacked sibling branches with original edges; all5labels stay inside at16–18px, dock/X are hit-test reachable, normal vertical scrolling works. Screenshot flow-mobile-top.png.",
+    "limits": "All8boards have current component replays; only the actual biology flow also has this full-app mobile regression. This does not prove historical pixel appearance. Wider subject coverage comes from separate visual cohorts, not this algebra/biology session."
+  },
+  "limits": [
+    "One final scripted realization cannot establish a general teaching or grading accuracy rate.",
+    "The adaptive student repeatedly supplies full y solutions to narrower reasoning prompts; repetition is partly a harness mismatch, but the tutor could vary its diagnostic question more effectively.",
+    "The final session had no provider/cap error. Earlier failed cohorts and blocked final-turn experiment remain unchanged.",
+    "Final app scores and topic completion flags are policy state, not a learning-gain or quality percentage.",
+    "No hidden reasoning or actual human audio was inspected."
+  ]
+}

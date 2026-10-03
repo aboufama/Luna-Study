@@ -1,0 +1,154 @@
+{
+  "finishedAt": "2026-10-02T10:43:05.213Z",
+  "reviewer": "independent relevance_design agent",
+  "method": "Read-only production audit plus deterministic synthetic organizer responses and temporary persistence. No model inference, live speech, user history, or existing store writes.",
+  "command": "node benchmarks/tutor-quality/review-provisional-grading.mjs",
+  "workingDirectory": "/Users/andreboufama/Documents/Luna-Study/",
+  "providerCalls": 0,
+  "productionEdits": 0,
+  "codeHashes": {
+    "server/mastery.mjs": "0739b340871d39e346688575be62d207754b0b18de588873168d249a9755092d",
+    "server/live-voice.mjs": "495b8fdbe9b22e0cd5f0ba435ea06df39b4094ff292b27aaf0172f762426d894",
+    "server/grade-citations.mjs": "fa1bb06e5c80d78004d300225ed7e94270992c1581659377dc757e2b25e33763",
+    "server/jev-intent.mjs": "9680884671834686135d14f5de7791b8f2e0188ca0fa45b1a86fe1e577d12d14",
+    "benchmarks/tutor-quality/review-provisional-grading.mjs": "e6d9dca70efaaa1de8e55e91e8f7099c3ff0014355b241e0ff27273de95abde1"
+  },
+  "cases": [
+    {
+      "id": "target-agrees-grade-disagrees",
+      "passed": true,
+      "organizerDoubleCalls": 2,
+      "expected": {
+        "checked": false,
+        "targetAttempt": true
+      },
+      "actual": {
+        "checked": false,
+        "targetAttempt": true
+      }
+    },
+    {
+      "id": "target-agrees-grade-unclear",
+      "passed": true,
+      "organizerDoubleCalls": 2,
+      "expected": {
+        "checked": false,
+        "targetAttempt": true
+      },
+      "actual": {
+        "checked": false,
+        "targetAttempt": true
+      }
+    },
+    {
+      "id": "scaffold-rejected-by-both",
+      "passed": true,
+      "organizerDoubleCalls": 2,
+      "expected": {
+        "checked": false,
+        "targetAttempt": false
+      },
+      "actual": {
+        "checked": false,
+        "targetAttempt": false
+      }
+    },
+    {
+      "id": "target-judgments-disagree",
+      "passed": true,
+      "organizerDoubleCalls": 2,
+      "expected": null,
+      "actual": null
+    },
+    {
+      "id": "target-identity-unknown",
+      "passed": true,
+      "organizerDoubleCalls": 2,
+      "expected": null,
+      "actual": null
+    },
+    {
+      "id": "contradictory-nonattempt-correct",
+      "passed": true,
+      "organizerDoubleCalls": 1,
+      "expected": null,
+      "actual": null
+    },
+    {
+      "id": "foreign-source-citation",
+      "passed": true,
+      "organizerDoubleCalls": 1,
+      "expected": null,
+      "actual": null
+    },
+    {
+      "id": "missing-target-judgment",
+      "passed": true,
+      "organizerDoubleCalls": 1,
+      "expected": null,
+      "actual": null
+    },
+    {
+      "id": "dismissed-scaffold-does-not-consume-first-attempt",
+      "passed": true,
+      "actual": {
+        "targetAttempt": true,
+        "attempt": 1,
+        "firstAttempt": true
+      }
+    },
+    {
+      "id": "unresolved-key-survives-reopen-and-blocks-false-firstness",
+      "passed": true,
+      "actual": {
+        "targetAttempt": true,
+        "attempt": 1,
+        "firstAttempt": false
+      }
+    },
+    {
+      "id": "canceled-resolution-retains-pending-marker",
+      "passed": true
+    },
+    {
+      "id": "canceled-store-record-does-not-score",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "passed": 12,
+    "total": 12
+  },
+  "manualReview": [
+    "Jev thresholds remain 0.80 for canonical prompts and 0.90 for target attempts after scaffolds. Only a finite Jev abstention-band probability enters provisional review; outages, explicit no, clear help/setup and deadlines do not.",
+    "Every job snapshots question identity, original materials, public conversation, source epoch and assistance before its feedback. The grader schema fixes question/topic/source IDs and resolves immutable citation IDs.",
+    "Confirmed and provisional jobs enter one FIFO. Valid agreed target recognition allocates an attempt even when no grade can be agreed. Valid agreed non-attempts remove only their own pending marker.",
+    "Source changes and cleanup abort active review. Store guards run inside the serial queue and before atomic rename; committed historical results are not rolled back. Hint results remain scoped to the old question identity when the current question changes."
+  ],
+  "limits": [
+    "These 12 checks do not replace WebSocket integration tests or live-provider teaching evaluation. Assistance timing and loopback source-change races require the separate integration suite.",
+    "An unresolved candidate conservatively suppresses later first-attempt eligibility for that same question key across reconnect; it adds no attempt or score itself. There is no automatic reconciliation of permanently unresolved markers.",
+    "At 1,024 unresolved markers per test, a persistent overflow hold blocks additional registrations and first-attempt qualification rather than evicting uncertainty. This exceptional fallback is broader than the ordinary per-key hold.",
+    "The atomic rename invocation is the persistence commit boundary. Cancellation after commit does not undo a previously committed score.",
+    "This audit records exact code hashes. Re-run if relevant implementation changes."
+  ],
+  "integrationVerification": {
+    "command": "node --test tests/provisional-grading.test.mjs",
+    "runSeparatelyByIndependentReviewer": true,
+    "verifiedAt": "2026-10-02T10:46:01.402Z",
+    "tests": 21,
+    "passed": 21,
+    "failed": 0,
+    "providerCalls": 0,
+    "testFileSha256": "d81c5128a9ee5f4ba345c8eff2b553d58573c4b5ba55eb95aab86f94c88eb393",
+    "coverage": [
+      "FIFO across provisional and confirmed jobs",
+      "Rejected local scaffold preserves genuine first attempt",
+      "Post-submission delivered hint does not retroactively mark earlier answer assisted",
+      "Source change aborts grade, prevents result and retains pending marker",
+      "Restart and unrelated-question firstness",
+      "Queued storage cancellation guard"
+    ],
+    "limits": "Deterministic organizer/Jev/speech doubles in loopback tests. These are not live-provider results."
+  }
+}

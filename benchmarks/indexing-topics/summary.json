@@ -1,0 +1,108 @@
+{
+  "model": "gpt-6-luna",
+  "paidRequests": 9,
+  "coldMedianMs": 12629.7,
+  "underTenSeconds": 0,
+  "ready": 3,
+  "cachedProviderRequests": 0,
+  "rows": [
+    {
+      "round": 1,
+      "coldMs": 11824.1,
+      "cachedMs": 0.5,
+      "ready": true,
+      "topics": 5,
+      "requests": 3,
+      "maxParallel": 2,
+      "mapCriticalMs": 5718.9,
+      "mergeMs": 6100.6,
+      "mergeCharacters": 23993,
+      "coldCoverage": [
+        {
+          "id": "econ2801-pset3",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset2-solutions",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset5-solutions",
+          "representedInTopics": true
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "coldMs": 12924.5,
+      "cachedMs": 0.5,
+      "ready": true,
+      "topics": 5,
+      "requests": 3,
+      "maxParallel": 2,
+      "mapCriticalMs": 6532.7,
+      "mergeMs": 6389.5,
+      "mergeCharacters": 23616,
+      "coldCoverage": [
+        {
+          "id": "econ2801-pset3",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset2-solutions",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset5-solutions",
+          "representedInTopics": true
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "coldMs": 12629.7,
+      "cachedMs": 0.3,
+      "ready": true,
+      "topics": 5,
+      "requests": 3,
+      "maxParallel": 2,
+      "mapCriticalMs": 5368,
+      "mergeMs": 7259.8,
+      "mergeCharacters": 23617,
+      "coldCoverage": [
+        {
+          "id": "econ2801-pset3",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset2-solutions",
+          "representedInTopics": true
+        },
+        {
+          "id": "econ2801-pset5-solutions",
+          "representedInTopics": true
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input": 52843,
+    "output": 5266,
+    "cachedInput": 0,
+    "estimatedUsd": 0.009237700000000001
+  },
+  "manualReview": {
+    "reviewer": "Independent usage_debug_ui agent",
+    "providerCalls": 0,
+    "rounds": [
+      1,
+      2,
+      3
+    ],
+    "sourceContent": "All three completed guides checked against all three original PDF texts. No unsupported numeric or conceptual claim found. Each five-topic index reasonably represents all three files but is not exhaustive; chess/zero-sum and some individual exercise variants are omitted.",
+    "citationEvidence": "All nine original chunk catalogs recomputed losslessly. All 51 selected IDs checked against exact source and chunk identity. All same-test cached guides identical to their cold guide.",
+    "sourceAttribution": "Some Pset2 source references are broader than specific Pset5 sequential/repeated-game examples; no false source identity was found.",
+    "readiness": "3/3 cold trials returned validated topic-only guides. 0/3 completed under 10 seconds. No semantic blocker found in these three outputs.",
+    "limitation": "Manual review is a bounded audit of these outputs, not proof of exhaustive coverage or future correctness."
+  }
+}

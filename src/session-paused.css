@@ -1,0 +1,14 @@
+.session-paused-overlay{position:absolute;inset:0;z-index:20;display:grid;place-items:center;padding:24px;background:#f5f6f8a6;backdrop-filter:blur(13px) saturate(.65);-webkit-backdrop-filter:blur(13px) saturate(.65)}
+.session-paused-card{max-width:355px;width:100%;padding:30px 24px;text-align:center;border-radius:22px;background:#ffffffc9;box-shadow:0 1px 3px #31435708,0 16px 55px #3143570a}
+.session-paused-mark{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 19px;color:#83949d;background:#eaf0f1;border-radius:15px}
+.session-paused-card h2{font-size:19px;font-weight:500;letter-spacing:-.3px;color:#4a545d;margin:0 0 13px}
+.session-paused-card p{font-size:12px;line-height:1.85;color:#859099;margin:0}
+.session-resume{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:44px;min-width:132px;margin-top:23px;padding:10px 20px;background:#5b6e78;color:white;border-radius:11px;font-size:12px;transition:background-color 150ms ease,scale 150ms ease}
+.session-resume:hover{background:#475e6a}.session-resume:active{scale:.98}.session-resume[aria-disabled=true]{opacity:.65;cursor:wait}
+.session-paused-card .session-paused-error{margin-top:15px;color:#a57462}
+@media(prefers-reduced-motion:reduce){.session-resume{transition:none}}
+/* A long rigid board must not push the explicit resume action below the viewport. */
+.app{--study-header-height:72px}
+.session-paused-overlay{position:fixed;top:var(--study-header-height);bottom:0;overflow:auto;padding-bottom:max(24px,env(safe-area-inset-bottom))}
+@media(max-width:520px){.app{--study-header-height:64px}}
+@media(max-height:500px){.session-paused-card{padding:18px 24px}.session-paused-mark{display:none}.session-resume{margin-top:16px}}

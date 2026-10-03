@@ -1,0 +1,62 @@
+{
+  "recordedAt": "2026-10-02T03:49:02.689Z",
+  "model": "gpt-5.6-luna",
+  "synthetic": true,
+  "samples": 2,
+  "results": [
+    {
+      "standalone": {
+        "reply": "Mitochondria produce ATP through cellular respiration.",
+        "timings": {
+          "firstDeltaMs": 2119,
+          "totalMs": 2405
+        }
+      },
+      "concurrent": {
+        "experiment": "concurrent-low-plus-high",
+        "voice": {
+          "reply": "Mitochondria produce ATP through cellular respiration.",
+          "timings": {
+            "firstDeltaMs": 1900,
+            "totalMs": 2200
+          }
+        },
+        "hint": {
+          "reply": "Useful next point: Reinforce that mitochondria produce ATP through cellular respiration, supplying usable energy for the cell.  \nRecall question: “Which organelle produces ATP through cellular respiration?”",
+          "timings": {
+            "firstDeltaMs": 3612,
+            "totalMs": 4322
+          }
+        },
+        "totalMs": 4322
+      }
+    },
+    {
+      "standalone": {
+        "reply": "Mitochondria produce ATP through cellular respiration.",
+        "timings": {
+          "firstDeltaMs": 3573,
+          "totalMs": 3856
+        }
+      },
+      "concurrent": {
+        "experiment": "concurrent-low-plus-high",
+        "voice": {
+          "reply": "Mitochondria produce ATP through cellular respiration.",
+          "timings": {
+            "firstDeltaMs": 3013,
+            "totalMs": 3278
+          }
+        },
+        "hint": {
+          "reply": "Student asks about mitochondria. Emphasize that mitochondria produce ATP through cellular respiration. Recall question: “What molecule do mitochondria produce?”",
+          "timings": {
+            "firstDeltaMs": 2372,
+            "totalMs": 2976
+          }
+        },
+        "totalMs": 3279
+      }
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+[
+  {
+    "repo": "livekit/agents-js",
+    "url": "https://raw.githubusercontent.com/livekit/agents-js/main/README.md",
+    "status": 200,
+    "evidence": [
+      "- **Extensive WebRTC clients**: Build client applications using LiveKit's open-source SDK ecosystem, supporting all major platforms.",
+      "- **Semantic turn detection**: Uses a transformer model to detect when a user is done with their turn, helps to reduce interruptions.",
+      "- **Open-source**: Fully open-source, allowing you to run the entire stack on your own servers, including [LiveKit server](https://github.com/livekit/livekit), one of the most widely used WebRTC media servers.",
+      "It includes a ready-made assistant, multilingual turn detection, background noise cancellation, metrics/logging, and a production-ready Dockerfile. Start fast, then tailor it with your preferred models and plugins.",
+      "      // VAD and turn detection are used to determine when the user is speaking and when the agent should respond",
+      "No third-party API keys are required for this example. It runs out of the box via the [LiveKit Inference Gateway](https://docs.livekit.io/agents/models/#inference).",
+      "- `LIVEKIT_API_KEY`",
+      "- any additional provider API keys (e.g. `OPENAI_API_KEY`)",
+      "called \"playground\". You can use or modify this app to suit your specific requirements. It can also",
+      "- [Hosted playground](https://agents-playground.livekit.io)",
+      "1. Go to the [LiveKit dashboard sandbox section](https://cloud.livekit.io/projects/<your-project-id>/sandbox)",
+      "3. Run your agent and make sure all LiveKit API keys are configured correctly"
+    ]
+  },
+  {
+    "repo": "livekit-examples/agent-starter-node",
+    "url": "https://raw.githubusercontent.com/livekit-examples/agent-starter-node/main/README.md",
+    "status": 200,
+    "evidence": [
+      "A starter project for building voice AI apps with [LiveKit Agents for Node.js](https://github.com/livekit/agents-js) and [LiveKit Cloud](https://cloud.livekit.io/).",
+      "  - The default LLM is Gemma 4 31B, an open-weight model [hosted by LiveKit](https://docs.livekit.io/agents/models/llm/livekit/) and tuned for voice AI.",
+      "- [LiveKit Turn Detector](https://docs.livekit.io/agents/logic/turns/turn-detector/), which knows when the user has finished speaking, in 14 languages.",
+      "- [Adaptive interruption handling](https://docs.livekit.io/agents/logic/turns/adaptive-interruption-handling/), which tells a real interruption from an \"uh-huh\" or background noise, so your agent doesn't stop talking when it shouldn't.",
+      "- [Background voice cancellation](https://docs.livekit.io/transport/media/noise-cancellation/).",
+      "- A `Dockerfile` for [deploying to LiveKit Cloud](https://docs.livekit.io/deploy/agents/).",
+      "lk cloud auth",
+      "Sign up for [LiveKit Cloud](https://cloud.livekit.io/), then copy `.env.example` to `.env.local` and fill it in. To have the CLI write your project's URL and API keys into the file instead, run:",
+      "lk cloud auth",
+      "To connect it to LiveKit Cloud so a frontend, a phone call, or the [Agent Console](https://docs.livekit.io/testing/agent-console/) can reach it:",
+      "Simulations run full multi-turn conversations between a simulated user and your agent on LiveKit Cloud, then judge each transcript. The scenarios live in [`scenarios.yaml`](scenarios.yaml). Run them locally with the CLI:",
+      "To debug a running agent, open it in the [Agent Console](https://docs.livekit.io/testing/agent-console/). It shows events, tool calls, and model timing as you talk to the agent. To stream logs from a deployed agent, run `lk agent logs`."
+    ]
+  },
+  {
+    "repo": "TEN-framework/ten-framework",
+    "url": "https://raw.githubusercontent.com/TEN-framework/ten-framework/main/README.md",
+    "status": 200,
+    "evidence": [
+      "  - [Deploying with Docker][deploying-with-docker]",
+      "  - [Deploying with other cloud services][deploying-with-other-cloud-services]",
+      "[TEN Ecosystem][ten-ecosystem-anchor] includes [TEN Framework][ten-framework], [Agent Examples][agent-examples-repo], [VAD][ten-vad], [Turn Detection][ten-turn-detection] and [Portal][ten-portal].",
+      "<strong>Multi-Purpose Voice Assistant</strong> — This low-latency, high-quality real-time assistant supports both RTC and [WebSocket][websocket-example] connections, and you can extend it with [Memory][memory-example], [VAD][voice-assistant-vad-example], [Turn",
+      "| Category | Requirements |",
+      "| **Keys** | • Agora [App ID][agora-app-id] and [App Certificate][agora-app-certificate]<br>• [OpenAI][openai-api] API key<br>• [Deepgram][deepgram] ASR <br>• [ElevenLabs][elevenlabs] TTS  |",
+      "| **Minimum System Requirements** | • CPU >= 2 cores<br>• RAM >= 4 GB |",
+      "> Uncheck \"Use Rosetta for x86/amd64 emulation\" in Docker settings, it may result in slower build times on ARM, but performance will be normal when deployed to x64 servers. -->",
+      "# Deepgram (required for speech-to-text)",
+      "DEEPGRAM_API_KEY=",
+      "# OpenAI (required for language model)",
+      "OPENAI_API_KEY="
+    ]
+  },
+  {
+    "repo": "pipecat-ai/pipecat",
+    "url": "https://raw.githubusercontent.com/pipecat-ai/pipecat/main/README.md",
+    "status": 200,
+    "evidence": [
+      "- **Multi-Agent Ready**: Each pipeline is an agent. Compose them with handoff, parallel fan-out, sidecar workers, or distributed deployments",
+      "- **Real-Time**: Ultra-low latency interaction with different transports (e.g. WebSockets or WebRTC)",
+      "### 🛠️ Create and deploy projects",
+      "The [Pipecat CLI](https://docs.pipecat.ai/api-reference/cli/overview) ships with `pipecat-ai` — install it with `uv tool install \"pipecat-ai[cli]\"`. Run `pipecat init` to start a project: it sets you up so an AI coding assistant (Claude Code, Codex) builds it ",
+      "Use [Pipecat Skills](https://github.com/pipecat-ai/skills) with [Claude Code](https://claude.ai/code) to scaffold projects, deploy to Pipecat Cloud, and more. Install the marketplace with:",
+      "| Transport           | [Daily (WebRTC)](https://docs.pipecat.ai/api-reference/server/services/transport/daily), [FastAPI Websocket](https://docs.pipecat.ai/api-reference/server/services/transport/fastapi-websocket), [LiveKit (WebRTC)](https://docs.pipecat.ai/",
+      "Run Pipecat on your local machine, then move your agent processes to the cloud when you're ready. Either way, you'll need [uv](https://docs.astral.sh/uv/getting-started/installation/) — install it first:",
+      "> **Note**: Some extras (local, gstreamer) require system dependencies. See documentation if you encounter build errors."
+    ]
+  },
+  {
+    "repo": "langchain-ai/voice-demo",
+    "url": "https://raw.githubusercontent.com/langchain-ai/voice-demo/main/README.md",
+    "status": 200,
+    "evidence": [
+      "Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).",
+      "cp .env.example .env      # then fill in the keys below",
+      "Fill in `.env` with your own API keys.",
+      "> The LiveKit API keys are not required in console mode — the dummy values in `.env.example` will work fine.",
+      "- Interrupt the agent while it's talking — watch it stop and listen.",
+      "├── weather.py     # shared Open-Meteo lookup (no API key)"
+    ]
+  },
+  {
+    "repo": "gradio-app/fastrtc",
+    "url": "https://raw.githubusercontent.com/gradio-app/fastrtc/main/README.md",
+    "status": 200,
+    "evidence": [
+      "Turn any python function into a real-time audio and video stream over WebRTC or WebSockets.",
+      "## Key Features",
+      "- 💻 Automatic UI - Use the `.ui.launch()` method to launch the webRTC-enabled built-in Gradio UI.",
+      "- 🔌 Automatic WebRTC Support - Use the `.mount(app)` method to mount the stream on a FastAPI app and get a webRTC endpoint for your own frontend! ",
+      "This is a shortened version of the official [usage guide](https://freddyaboulton.github.io/gradio-webrtc/user-guide/). ",
+      "- `.fastphone()`: Get a free temporary phone number to call into your stream. Hugging Face token required."
+    ]
+  },
+  {
+    "repo": "elevenlabs/packages",
+    "url": "https://raw.githubusercontent.com/elevenlabs/packages/main/README.md",
+    "status": 200,
+    "evidence": [
+      "- **Real-time Communication**: WebRTC-based audio streaming for low-latency agent interactions",
+      "npm install @livekit/react-native @livekit/react-native-webrtc livekit-client",
+      "<key>NSMicrophoneUsageDescription</key>"
+    ]
+  },
+  {
+    "repo": "openai/openai-realtime-agents",
+    "url": "https://raw.githubusercontent.com/openai/openai-realtime-agents/main/README.md",
+    "status": 200,
+    "evidence": [
+      "This project uses the [OpenAI Agents SDK](https://github.com/openai/openai-agents-js), a toolkit for building, managing, and deploying advanced AI agents. The SDK provides:",
+      "- Easy integration with the OpenAI Realtime API for low-latency, streaming interactions.",
+      "1. **Chat-Supervisor:** A realtime-based chat agent interacts with the user and handles basic tasks, while a more intelligent, text-based supervisor model (e.g., `gpt-4.1`) is used extensively for tool calls and more complex responses. This approach provides a",
+      "- Add your `OPENAI_API_KEY` to your env. Either add it to your `.bash_profile` or equivalent, or copy `.env.sample` to `.env` and add it there.",
+      "    else Requires higher intelligence and/or tool call",
+      "- **Simple ramp to a full realtime agent**: Rather than switching your whole agent to the realtime api, you can move one task at a time, taking time to validate and build trust for each before deploying to production.",
+      "- **User experience**: It's a more natural conversational experience than using a stitched model architecture, where response latency is often 1.5s or longer after a user has finished speaking. In this architecture, the model responds to the user right away, e",
+      "3. To reduce cost, try using `gpt-4o-mini-realtime` for the chatAgent and/or `gpt-4.1-mini` for the supervisor model. To maximize intelligence on particularly difficult or high-stakes tasks, consider trading off latency and adding chain-of-thought to your supe",
+      "    WebClient->>RealtimeAPI: Offer SDP (WebRTC)"
+    ]
+  },
+  {
+    "repo": "google-gemini/live-api-web-console",
+    "url": "https://raw.githubusercontent.com/google-gemini/live-api-web-console/main/README.md",
+    "status": 200,
+    "evidence": [
+      "To get started, [create a free Gemini API key](https://aistudio.google.com/apikey) and add it to the `.env` file. Then:",
+      "    required: [\"json_graph\"],",
+      "Your app is ready to be deployed!",
+      "See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information."
+    ]
+  },
+  {
+    "repo": "HumeAI/hume-react-sdk",
+    "url": "https://raw.githubusercontent.com/HumeAI/hume-react-sdk/main/README.md",
+    "status": 200,
+    "evidence": [
+      "## One-click deploy templates",
+      "If you have questions or require assistance pertaining to this package, [reach out to us on Discord](https://hume.ai/discord)!"
+    ]
+  },
+  {
+    "repo": "xai-org/xai-cookbook",
+    "url": "https://raw.githubusercontent.com/xai-org/xai-cookbook/main/README.md",
+    "status": 200,
+    "evidence": [
+      "New to the API? Start with the [quickstart](https://docs.x.ai/developers/quickstart) in the xAI docs, browse the [models](https://docs.x.ai/developers/models), and get an API key from the [xAI Console](https://console.x.ai).",
+      "| [WebRTC Voice Agent](examples/voice-agent-webrtc/) | A low-latency browser voice agent that uses WebRTC between the browser and a server, which connects to xAI over WebSocket. | Advanced | [TypeScript](examples/voice-agent-webrtc/) |",
+      "Each app in a `typescript/` folder is its own npm project built on the [xAI TypeScript SDK](https://www.npmjs.com/package/@xai-official/sdk). You'll need Node.js 22.13 or newer and an API key from the [xAI Console](https://console.x.ai). Copy `.env.example` to",
+      "You'll need Python 3.12 or newer, [uv](https://github.com/astral-sh/uv), and an API key from the [xAI Console](https://console.x.ai).",
+      "3. Copy `.env.example` to `.env` and add your API key. The repo ignores `.env`, so it won't be committed.",
+      "## Keep your API key safe",
+      "Never put your key directly in code, even while experimenting, because it's easy to commit by accident. Keep it in `.env` and load it like this:",
+      "XAI_API_KEY = os.getenv(\"XAI_API_KEY\")",
+      "If a key ever leaks, revoke it in the xAI Console and create a new one.",
+      "- Scan for API keys with Gitleaks. This isn't foolproof, so if you ever commit a key, revoke it right away."
+    ]
+  },
+  {
+    "repo": "elevenlabs/examples",
+    "url": "https://raw.githubusercontent.com/elevenlabs/examples/main/README.md",
+    "status": 200,
+    "evidence": [
+      "> The legacy `examples/` folder is being deprecated and can be ignored for new work."
+    ]
+  },
+  {
+    "repo": "HumeAI/hume-api-examples",
+    "url": "https://raw.githubusercontent.com/HumeAI/hume-api-examples/main/README.md",
+    "status": 200,
+    "evidence": [
+      "    <a href=\"https://dev.hume.ai/docs/introduction/api-key\">🔐 Getting your API Keys</a>",
+      " You must authenticate to use the Hume API. Your API key can be retrieved from the [Hume AI platform](https://app.hume.ai/keys). For detailed instructions, see our documentation on [getting your api keys](https://dev.hume.ai/docs/introduction/api-key).",
+      " - Setting your API key (usually via environment variables)"
+    ]
+  },
+  {
+    "repo": "deepgram-starters/node-voice-agent",
+    "url": "https://raw.githubusercontent.com/deepgram-starters/node-voice-agent/main/README.md",
+    "status": 200,
+    "evidence": [
+      "cp sample.env .env  # Add your DEEPGRAM_API_KEY",
+      "cp sample.env .env  # Add your DEEPGRAM_API_KEY"
+    ]
+  },
+  {
+    "repo": "fixie-ai/ultravox-client-sdk-js",
+    "url": "https://raw.githubusercontent.com/fixie-ai/ultravox-client-sdk-js/main/README.md",
+    "status": 200,
+    "evidence": [
+      "port 443 at the cost of slightly higher latency:",
+      "| thinking      | The client is connected and the server is considering its response. The user can still interrupt.   |",
+      "| speaking      | The client is connected and the server is playing response audio. The user can interrupt as needed. |",
+      "// Urgency controls how soon the agent responds: IMMEDIATE (interrupt the agent if it is"
+    ]
+  },
+  {
+    "repo": "fixie-ai/ultravox",
+    "url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/README.md",
+    "status": 200,
+    "evidence": [
+      "_Key Links_",
+      "After creating a virtual environment, install required packages using `just` and `poetry`:",
+      "    a. We suggest to either use RAG on the fly (no training needed), or fine-tune the LLM backbone instead. Fine-tuning the LLM backbone does not require re-training Ultravox (i.e., the existing adapter will work)."
+    ]
+  },
+  {
+    "repo": "RetellAI/retell-client-js-sdk",
+    "url": "https://raw.githubusercontent.com/RetellAI/retell-client-js-sdk/main/README.md",
+    "status": 200,
+    "evidence": [
+      "See the [Retell AI Web Call Guide](https://docs.retellai.com/deploy/web-call)",
+      "const client = new RetellClient({ key: \"public_key_...\" });",
+      "The key is checked against its allowed domains; scope it to what the page",
+      "    // Mic denied, key rejected, connection lost: all arrive here.",
+      "nothing about the conversation — see [Events](#events). It needs a key with",
+      "`Call.Write`, which a public key",
+      "Monitoring needs a wider key than a web call does, so keep it somewhere you",
+      "control: a public key with tight allowed domains and reCAPTCHA, a page behind",
+      "your own auth, or a proxy that keeps the key on your server:",
+      "  key: \"unused\", // your proxy sets the real Authorization header",
+      "That route holds the real key. A minimal Express example:",
+      "      Authorization: `Bearer ${process.env.RETELL_API_KEY}`,"
+    ]
+  },
+  {
+    "repo": "deepgram-devs/deepgram-voice-agent-demo",
+    "url": "https://raw.githubusercontent.com/deepgram-devs/deepgram-voice-agent-demo/main/README.md",
+    "status": 200,
+    "evidence": [
+      "## Getting an API Key",
+      "🔑 To access the Deepgram API you will need a [free Deepgram API Key](https://console.deepgram.com/signup?jump=keys).",
+      "Assuming you want to develop \"locally\", i.e. bring-your-own-key, just set a `DEEPGRAM_API_KEY`",
+      "environment variable and run the `dev` command. Any DG key will do, it just needs `usage:write`.",
+      "DEEPGRAM_API_KEY=<your-deepgram-api-key>",
+      "> **_Note_ ℹ️**: When creating the API Key make sure to select \"Member\" as the role and not \"Default\" so that the API Key has permissions to create new API Keys.",
+      "**Remember:** use minimally-privileged keys, avoid sending them in shell commands, and avoid saving",
+      "DEEPGRAM_API_KEY=$(pass deepgram/my-key) yarn dev"
+    ]
+  },
+  {
+    "repo": "VapiAI/client-sdk-web",
+    "url": "https://raw.githubusercontent.com/VapiAI/client-sdk-web/main/README.md",
+    "status": 200,
+    "evidence": [
+      "Then, create a new instance of the Vapi class, passing your Public Key as a parameter to the constructor:",
+      "const vapi = new Vapi('your-public-key');",
+      "When video recording is enabled on the call's artifact plan, Vapi starts a recording automatically when the call begins. When the server provides a meeting token for the call (`call.transport.callToken`), the SDK joins with it and Daily auto-starts the cloud r"
+    ]
+  },
+  {
+    "repo": "cartesia-ai/line",
+    "url": "https://raw.githubusercontent.com/cartesia-ai/line/main/README.md",
+    "status": 200,
+    "evidence": [
+      "Build intelligent, low-latency voice agents with Line.",
+      "Line brings voice to your text agents with Cartesia's state-of-the-art speech models. We handle audio orchestration, deployment, and observability so you can focus on your agent's reasoning.",
+      "- **Real-time interruption support** — Handles audio interruptions and turn-taking out-of-the-box",
+      "- **Instant deployment** — Build, deploy, and start talking in minutes",
+      "GEMINI_API_KEY=your-key uv run python main.py",
+      "        api_key=os.getenv(\"GEMINI_API_KEY\"),",
+      "GEMINI_API_KEY=your-key uv run python main.py",
+      "See the [CLI documentation](https://docs.cartesia.ai/line/cli) for deployment and management commands.",
+      "    api_key=os.getenv(\"ANTHROPIC_API_KEY\"),",
+      "voicemail(message=\"Sorry we missed you.\")  # speak the message (uninterruptible), then end",
+      "voicemail(interruptible=True)              # allow the message/hangup to be interrupted",
+      "        \"required\": [\"subject\", \"priority\"],"
+    ]
+  },
+  {
+    "repo": "inworld-ai/inworld-api-examples",
+    "url": "https://raw.githubusercontent.com/inworld-ai/inworld-api-examples/main/README.md",
+    "status": 200,
+    "evidence": [
+      "| | Requirement |",
+      "| **API key** | [Get one at inworld.ai](https://platform.inworld.ai/api-keys) |",
+      "Covers synthesis, HTTP & WebSocket streaming, word/phoneme timestamps, long-text chunking, low-latency benchmarks, voice cloning, and voice design.",
+      "Covers WebSocket and WebRTC-based real-time voice agents with both basic and JWT authentication.",
+      "- **[iOS](./realtime/ios/)** — Native SwiftUI WebRTC voice-agent app"
+    ]
+  },
+  {
+    "repo": "aws-samples/amazon-nova-samples",
+    "url": "https://raw.githubusercontent.com/aws-samples/amazon-nova-samples/main/README.md",
+    "status": 200,
+    "evidence": []
+  },
+  {
+    "repo": "bolna-ai/bolna",
+    "url": "https://raw.githubusercontent.com/bolna-ai/bolna/master/README.md",
+    "status": 200,
+    "evidence": [
+      "  <a href=\"https://docs.bolna.ai\">Hosted Docs</a> |",
+      "2. Hosted APIs (https://docs.bolna.ai/api-reference/introduction) built on top of this orchestration platform [currently closed source]",
+      "3. No-code UI playground at https://platform.bolna.ai/ using the hosted APIs + tailwind CSS [currently closed source]",
+      "1. Any integration, enhancement or feature initially lands on this open source package since it forms the backbone of our Hosted APIs and dashboard",
+      "2. Post that we expose APIs or make changes to existing APIs as required for the same",
+      "    A[Bolna open source] -->B[Hosted APIs];",
+      "    B[Hosted APIs] --> C[Hosted Playground]",
+      "export OPENAI_API_KEY=...",
+      "export ELEVENLABS_API_KEY=...",
+      "Expected output shape: `assistant.execute()` is an async generator yielding per-task result dicts (event-like chunks). The exact keys depend on configured tools/providers; treat it as a stream and process incrementally.",
+      "export OPENAI_API_KEY=...",
+      "You can populate the `.env` file to use your own keys for providers."
+    ]
+  },
+  {
+    "repo": "openbenchmarks-labs/voice-agent-latency",
+    "url": "https://raw.githubusercontent.com/openbenchmarks-labs/voice-agent-latency/main/README.md",
+    "status": 200,
+    "evidence": [
+      "# OpenBenchmarks Voice Agent Latency Benchmark",
+      "Published and maintained by **[OpenBenchmarks Labs](https://openbenchmarks.com)**.",
+      "**Live benchmark:** https://openbenchmarks.com/voice-agent-latency",
+      "- **Live benchmark UI** — https://openbenchmarks.com/voice-agent-latency",
+      "- **JSON API** — https://openbenchmarks.com/api/benchmarks/voice-agent-latency",
+      "- **Markdown agent docs** — https://openbenchmarks.com/llms.txt",
+      "- **OpenAPI 3.1 spec** — https://openbenchmarks.com/openapi.json",
+      "- **MCP server discovery** — https://openbenchmarks.com/.well-known/mcp.json",
+      "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
+      "## Running the benchmark yourself",
+      "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
+      "You will need your own Plivo account and your own agent on whichever platform you are measuring; the ids in `config/vendors.yaml` are ours and are inert without our keys."
+    ]
+  }
+]

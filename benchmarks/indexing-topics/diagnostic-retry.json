@@ -1,0 +1,460 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:34:35.882Z",
+  "liveProviders": true,
+  "model": "gpt-6-luna",
+  "budget": {
+    "maximumPaidRequests": 3,
+    "paidRequests": 2
+  },
+  "testId": "c84120aa-a046-4e77-b592-af70a0b84b21",
+  "sources": [
+    {
+      "id": "econ2801-pset3",
+      "name": "Problem Set 3 Econ 2801 2026.pdf",
+      "pdfSha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+      "pdfBytes": 107943,
+      "pages": 2,
+      "characters": 4366,
+      "textSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset2-solutions",
+      "name": "Problem_Set_2_Detailed_Answer_Discussion_Fall_2026_ECON_2801.pdf",
+      "pdfSha256": "637afcb2362a123dd12012a6209a8299d01ef308ddbb413542509e7e56640f43",
+      "pdfBytes": 108259,
+      "pages": 5,
+      "characters": 10412,
+      "textSha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset5-solutions",
+      "name": "Solution_Problem_Set_5_Fall_2026_ECON_2801__Corrected_.pdf",
+      "pdfSha256": "949198239c729af4f88de8fbe2512fa368f62d489b999e5615c26f299a0d31cf",
+      "pdfBytes": 115074,
+      "pages": 6,
+      "characters": 10903,
+      "textSha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180",
+      "chunks": 1
+    }
+  ],
+  "totalCharacters": 25681,
+  "sourcePreparation": "Already extracted PDF fixture, same page-label assembly as existing tutor benchmark; source PDF hashes rechecked. PDF extraction and UI/network upload are excluded from clock.",
+  "settings": {
+    "concurrency": 5,
+    "directChars": 24000,
+    "chunkChars": 18000,
+    "batchChars": 22000
+  },
+  "providerCalls": [
+    {
+      "id": 1,
+      "operation": "index-map",
+      "startedMs": 1,
+      "inputBytes": 15539,
+      "instructionsSha256": "c94734d5c0540f8e9f6f4163c8f472f1101bccefb0f0f16bc9fc4d0aa01cd356",
+      "schemaSha256": "e3e4d52d6552c454febe695be82860af994b0470b5df7c32ac9cd96ac543aec1",
+      "sourceIds": [
+        "econ2801-pset3",
+        "econ2801-pset2-solutions"
+      ],
+      "chunkCount": 2,
+      "characters": 14778,
+      "status": "failed",
+      "error": {
+        "code": 499,
+        "message": "The Luna request was canceled."
+      },
+      "finishedMs": 9726.4,
+      "durationMs": 9725.4
+    },
+    {
+      "id": 2,
+      "operation": "index-map",
+      "startedMs": 9.8,
+      "inputBytes": 11466,
+      "instructionsSha256": "c94734d5c0540f8e9f6f4163c8f472f1101bccefb0f0f16bc9fc4d0aa01cd356",
+      "schemaSha256": "86cf40018a9604d6323b867558279d03271c698f7a84bc1aea0cb054ce736953",
+      "sourceIds": [
+        "econ2801-pset5-solutions"
+      ],
+      "chunkCount": 1,
+      "characters": 10903,
+      "status": "completed",
+      "usage": {
+        "units": {
+          "inputTokens": 3255,
+          "outputTokens": 1667,
+          "cachedInputTokens": 3252,
+          "cacheWriteTokens": 0,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-6-luna",
+        "serviceTier": "default"
+      },
+      "estimatedCost": {
+        "usd": 0.00086632,
+        "rateId": "openai-gpt-6-luna-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      },
+      "result": {
+        "chunks": [
+          {
+            "chunkId": "6a18051bfda52bcf59b4ea7e4f139a74d8b34b6a4d474e0627bfae2b45288b13",
+            "topics": [
+              {
+                "title": "Payoff transformations and Nash equilibria",
+                "quotes": [
+                  "Answer: True.\nIf a strategy pair is Nash, it must be that for a given player they have no\nstrict incentive to deviate. If we simply multiply every payoff by a set positive\nconstant, the greater than relations are unchanged; this also works in the inverse\nfor multiplying by the reciprocal. Thus, the Nashes are the same.",
+                  "Answer: True\nHere, once again, we can imagine any Nash outcome in the game. By def-\ninition, the payoff for a given player for their strategy is at least as good for\nany other   P   ( s i , s ′ \ni )   ≥   P   ( s − i , s ′ \ni ), this relation remains true no matte what we\nadd, subtract, or multiply each side by, so long as we do not multiply by zero\nor a negative value. Thus, any pre-existing Nash remains Nash. Moreover, we\ncan also consider multiplying the outcome game by the reciprocal constant, or\nadding the negative offset coefficient; thus, any Nash in the outcome game must\nalso be Nash in the first game."
+                ]
+              },
+              {
+                "title": "Spatial vendor games, chess, and zero-sum games",
+                "quotes": [
+                  "Answer: True\nA simple proof by contradiction:   Let us assume this is a Nash.   If this is\na Nash, no one should have incentive to deviate. However, any of the vendors\nat the end can do strictly better by moving towards the midpoint of the line.\nThus, it cannot be that the proposed outcome is a Nash Equilibrium",
+                  "Proof by contradiction.   Let us assume that, with perfect information, the\noutcome is unknown.   In that case, at least two of three end states must be\npossible and occur with non-zero probability:   white wins, black wins, or the\ngame draws. We should be able to work backwards from each state to the start\nof the game. There must, thus, be some point of departure in the order of play\nthat reaches each of the two or more potential final outcomes. The last player\nwho plays has strict preferences on which outcome they want (win¿draw¿loss).\nThus, the last player who decides which path the game goes down has a strict\npreference and thus would not randomize. Therefore, the outcome of the game\nmust be certain.",
+                  "Proof by counterexample: A zero sum game requires only that the payoffs\nin each cell adds to zero.   Thus, trivially, we can have a game where all cells\nare identical, let’s say they contain (0,0) for simplicity. In this case all strategy\npairs are Nash equilibria."
+                ]
+              },
+              {
+                "title": "Hawk-Dove game and sequential play",
+                "quotes": [
+                  "Answer: The two Nash equilibria are (H,D) and (D,H)",
+                  "Answer:   We would expect the first player to always play Hawk and the\nsecond dove.   We find this by backwards induction on the game tree.   If the\nfirst player played Hawk, the second player would always prefer dove (0¿-1),\nconversely, if the first player played Dove, the second player would prefer Hawk\n(4¿2). The first player; thus, would prefer to play Hawk to get 4 instead of 0 in\nthe subgame perfect equilibrium.",
+                  "This question is open ended, but one formulation of the answer is as follows:\nThe US took advantage of the Hawk-Dove structure of nuclear brinkmanship\nto gain an advantage. By playing a more aggressive, threatening stance first, the\nonly truly viable strategy for the USSR was to back down or risk the destruction\nof the world. In essence, by threatening escalation first, the USSR can respond\nby escalating leading to nuclear war or backing down and losing their strategic\nposition in Cuba."
+                ]
+              },
+              {
+                "title": "Sequential incentives, assurance-game punishments, and spatial equilibrium",
+                "quotes": [
+                  "Answer: It is not possible: the maximum punishment the subsequent assur-\nance game can generate is 1 (playing (B,B) in case of any deviation compared\nto (A,A) for cooperating). However, the incentive to deviate from cooperation\nis 2. Thus, a collaborative outcome of (C,C) in the fist game is impossible.",
+                  "This game does not have a Nash equilibrium.   A Nash equilibrium in this\nstyle of vendor game requires that they converge to a point where they split the\narea or population exactly in half in every conceivable way to cut the shape. In\nother words, we need a centrally symmetric point, where every line that cuts\nthe shape in half intersects. Such a point does not exist for a trapezoid. Thus,\na Nash equilibrium does not exist.   A player can deviate at any given point\ntowards one of the bisecting lines and do better, since not all bisecting lines\nmeet at one point."
+                ]
+              },
+              {
+                "title": "Repeated Prisoner’s Dilemma and discounting",
+                "quotes": [
+                  "When the discount rate equals to zero, neither player cares for the next day.\nThus, we can treat the sequence of games as games being played independently.\nConsequently, the only Nash equilibrium is (D,D) in every period.",
+                  "PV   = 4 + 4 δ   + 4 δ 2   + 4 δ 3   +   ... \n=   4\n1   −   δ \nNext look at the discounted value of deviation for the deviator: \nP V   = 5\nNow we can implement the condition for non-deviation and solve for   δ \n4\n1   −   δ   ≥   5\n4   ≥   5(1   −   δ )\n5 δ   ≥   1 \nδ   ≥   1\n5",
+                  "Answer: A player knowing there is a finite number of repetition recognizes\nthat the last game only has one possible Nash outcome: (D,D). Since the last\n5 \n\ngame’s outcome is known we can treat the game as repeating 999 times, since\nthe last game’s outcome is known. We then repeat this analysis backwards to\ndetermine that players would play (D,D) in every period yielding a zero return."
+                ]
+              },
+              {
+                "title": "Commonsense and infinite Centipede equilibria",
+                "quotes": [
+                  "Players seeing a long pattern of repetition may seek to minimize regret, and,\nthus, choose some degree of early cooperation rather than accepting an outcome\nof zero. More practically, a random individual when faced with this game may\nnot think so pessimistically as to assume cooperation will immediately break\ndown even if it is rational. In such a case, believing there is a chance for some\nlength of cooperation may lead to a different outcome if the belief is mutual.",
+                  "Let us assume that both players choosing Pass every time is not a Nash\nEquilibrium. Thus, one of the players must take at some period. However, this\nplayer knows that if they Pass on this period and take the next time they have\na turn will yield strictly more for them.   Thus, they would delay taking.   As\nthe game is infinite, this logic does not break down due to the end of the game;\nthus, always Passing is a Nash Equilibrium.",
+                  "If both players always play Keep, no one player benefit from deviating. Any\ndeviation past the first period does not change payoffs, since the first player\nalready took. However, on the first turn, choosing to Pas will yield strictly less,\nas player two will then immediately take.   Thus, both players choosing Keep\nevery time is likewise a Nash Equilibrium."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "quoteValidation": {
+        "pass": false,
+        "chunks": [
+          {
+            "chunkId": "6a18051bfda52bcf59b4ea7e4f139a74d8b34b6a4d474e0627bfae2b45288b13",
+            "known": true,
+            "uniqueQuoteCharacters": 6209,
+            "quotes": [
+              {
+                "characters": 320,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 617,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 312,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 713,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 265,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 51,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 421,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 491,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 304,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 568,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 221,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 277,
+                "exact": false,
+                "whitespaceEquivalent": false
+              },
+              {
+                "characters": 387,
+                "exact": false,
+                "whitespaceEquivalent": false
+              },
+              {
+                "characters": 471,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 432,
+                "exact": true,
+                "whitespaceEquivalent": true
+              },
+              {
+                "characters": 359,
+                "exact": true,
+                "whitespaceEquivalent": true
+              }
+            ]
+          }
+        ]
+      },
+      "finishedMs": 9725.1,
+      "durationMs": 9715.3
+    }
+  ],
+  "events": [
+    {
+      "atMs": 1,
+      "type": "index.map.started",
+      "details": {
+        "requestId": "9b1794bc-6b11-4d44-ab25-1662bea87e67",
+        "sourceIds": [
+          "econ2801-pset3",
+          "econ2801-pset2-solutions"
+        ],
+        "total": 2,
+        "characters": 14778
+      }
+    },
+    {
+      "atMs": 1.2,
+      "type": "llm.background-started",
+      "details": {
+        "requestId": "3eba1744-eda9-4b3e-95b8-b05aba741d7b",
+        "operation": "index-map",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "atMs": 9.8,
+      "type": "index.map.started",
+      "details": {
+        "requestId": "9b1794bc-6b11-4d44-ab25-1662bea87e67",
+        "sourceIds": [
+          "econ2801-pset5-solutions"
+        ],
+        "total": 1,
+        "characters": 10903
+      }
+    },
+    {
+      "atMs": 9.9,
+      "type": "llm.background-started",
+      "details": {
+        "requestId": "ff7c427e-9815-40c0-8c56-5bf93c768800",
+        "operation": "index-map",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "atMs": 9718.9,
+      "type": "llm.background-completed",
+      "details": {
+        "requestId": "ff7c427e-9815-40c0-8c56-5bf93c768800",
+        "operation": "index-map",
+        "model": "gpt-6-luna",
+        "latencyMs": 9709
+      }
+    },
+    {
+      "atMs": 9725.3,
+      "type": "index.map.failed",
+      "details": {
+        "requestId": "9b1794bc-6b11-4d44-ab25-1662bea87e67",
+        "total": 1,
+        "durationMs": 9725,
+        "reason": "map-or-evidence-failed"
+      }
+    },
+    {
+      "atMs": 9726.4,
+      "type": "llm.background-failed",
+      "details": {
+        "requestId": "3eba1744-eda9-4b3e-95b8-b05aba741d7b",
+        "operation": "index-map",
+        "model": "gpt-6-luna",
+        "reason": "canceled",
+        "errorCode": "499",
+        "latencyMs": 9725
+      }
+    },
+    {
+      "atMs": 9727.1,
+      "type": "index.map.failed",
+      "details": {
+        "requestId": "9b1794bc-6b11-4d44-ab25-1662bea87e67",
+        "total": 2,
+        "durationMs": 9727,
+        "reason": "canceled"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "label": "cold",
+      "startedMs": 0,
+      "status": "failed",
+      "durationMs": 9726.6,
+      "error": {
+        "status": 502,
+        "message": "Luna could not verify all source excerpts. Retry indexing."
+      },
+      "actualRequests": 2,
+      "events": [
+        {
+          "atMs": 1,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "9b1794bc-6b11-4d44-ab25-1662bea87e67",
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "total": 2,
+            "characters": 14778
+          }
+        },
+        {
+          "atMs": 1.2,
+          "type": "llm.background-started",
+          "details": {
+            "requestId": "3eba1744-eda9-4b3e-95b8-b05aba741d7b",
+            "operation": "index-map",
+            "model": "gpt-6-luna"
+          }
+        },
+        {
+          "atMs": 9.8,
+          "type": "index.map.started",
+          "details": {
+            "requestId": "9b1794bc-6b11-4d44-ab25-1662bea87e67",
+            "sourceIds": [
+              "econ2801-pset5-solutions"
+            ],
+            "total": 1,
+            "characters": 10903
+          }
+        },
+        {
+          "atMs": 9.9,
+          "type": "llm.background-started",
+          "details": {
+            "requestId": "ff7c427e-9815-40c0-8c56-5bf93c768800",
+            "operation": "index-map",
+            "model": "gpt-6-luna"
+          }
+        },
+        {
+          "atMs": 9718.9,
+          "type": "llm.background-completed",
+          "details": {
+            "requestId": "ff7c427e-9815-40c0-8c56-5bf93c768800",
+            "operation": "index-map",
+            "model": "gpt-6-luna",
+            "latencyMs": 9709
+          }
+        },
+        {
+          "atMs": 9725.3,
+          "type": "index.map.failed",
+          "details": {
+            "requestId": "9b1794bc-6b11-4d44-ab25-1662bea87e67",
+            "total": 1,
+            "durationMs": 9725,
+            "reason": "map-or-evidence-failed"
+          }
+        },
+        {
+          "atMs": 9726.4,
+          "type": "llm.background-failed",
+          "details": {
+            "requestId": "3eba1744-eda9-4b3e-95b8-b05aba741d7b",
+            "operation": "index-map",
+            "model": "gpt-6-luna",
+            "reason": "canceled",
+            "errorCode": "499",
+            "latencyMs": 9725
+          }
+        }
+      ],
+      "cacheStats": {
+        "cacheEntries": 0,
+        "cacheChars": 0,
+        "inFlight": 0,
+        "active": 1,
+        "queued": 0
+      }
+    }
+  ],
+  "method": "Fresh production createMaterialIndexer, followed by identical input/testId on same in-memory instance. Shared provider slot held across both trials, but its acquisition excluded. Real production Luna organizer; no question-bank preparation, Jev or voice. Cold means empty application cache, not guaranteed cold provider prompt cache.",
+  "diagnosticRetry": {
+    "prior": "results.json",
+    "priorPaidRequests": 2,
+    "totalBudget": 5,
+    "unchangedInput": true,
+    "reason": "One unchanged-input retry after map evidence verification failure; this run retains returned map JSON for offline diagnosis."
+  },
+  "maxParallelRequests": 2,
+  "finishedAt": "2026-10-02T08:34:45.612Z",
+  "assessment": {
+    "underTenSecondsCold": false,
+    "cachedNoRequests": false,
+    "allSourcesRepresented": false,
+    "limitation": "One corpus and one cold run; not a latency distribution or guarantee. Topic citation coverage does not prove every source concept was indexed."
+  }
+}

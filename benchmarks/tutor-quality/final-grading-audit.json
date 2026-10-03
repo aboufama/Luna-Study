@@ -1,0 +1,791 @@
+{
+  "source": "benchmarks/tutor-quality/live-adaptive-final.json",
+  "sourceSha256": "a21282087e57ff1c438943937693b4c4cea7be23cbcc94a2f55b124600aeb0ab",
+  "auditedAt": "2026-10-02T11:41:32.585Z",
+  "providerCalls": 0,
+  "checks": [
+    {
+      "stepId": "partial-step",
+      "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+      "grade": null,
+      "rawJudgments": [
+        {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "unclear",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-d9238d9d7b0ad0a9-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": false
+        },
+        {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "partial",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-d9238d9d7b0ad0a9-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": true
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "target-identity-disagrees",
+          "stage": "comparison"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "incorrect-full-target",
+      "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+      "grade": {
+        "verdict": "incorrect",
+        "unassisted": false,
+        "checked": true,
+        "targetAttempt": true
+      },
+      "rawJudgments": [
+        {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "incorrect",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-9dd2147dd412df6e-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": true
+        },
+        {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "incorrect",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-9dd2147dd412df6e-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": true
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "incorrect"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "revised-full-target",
+      "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+      "grade": {
+        "verdict": "correct",
+        "unassisted": false,
+        "checked": true
+      },
+      "rawJudgments": [
+        {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-f27721a5a0d46c43-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        },
+        {
+          "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-f27721a5a0d46c43-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "correct"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "independent-equation",
+      "questionId": "7bca7240-b3fc-461f-84e3-6726ff57b5eb",
+      "grade": {
+        "verdict": "correct",
+        "unassisted": true,
+        "checked": true
+      },
+      "rawJudgments": [
+        {
+          "questionId": "7bca7240-b3fc-461f-84e3-6726ff57b5eb",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "answerCitationIds": [
+            "a-61e563d507ed5285-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        },
+        {
+          "questionId": "7bca7240-b3fc-461f-84e3-6726ff57b5eb",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "answerCitationIds": [
+            "a-61e563d507ed5285-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "correct"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "biology-partial",
+      "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+      "grade": {
+        "verdict": "partial",
+        "unassisted": false,
+        "checked": true
+      },
+      "rawJudgments": [
+        {
+          "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+          "topicId": "590da97ebea25bdca1ead597",
+          "sourceIds": [
+            "biology-notes"
+          ],
+          "verdict": "partial",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-1290c5be71033f21-0"
+          ],
+          "sourceCitationIds": [
+            "s-e002a8426334d341-0"
+          ]
+        },
+        {
+          "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+          "topicId": "590da97ebea25bdca1ead597",
+          "sourceIds": [
+            "biology-notes"
+          ],
+          "verdict": "partial",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-1290c5be71033f21-0"
+          ],
+          "sourceCitationIds": [
+            "s-e002a8426334d341-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "partial"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "biology-full",
+      "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+      "grade": {
+        "verdict": "correct",
+        "unassisted": false,
+        "checked": true
+      },
+      "rawJudgments": [
+        {
+          "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+          "topicId": "590da97ebea25bdca1ead597",
+          "sourceIds": [
+            "biology-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-3f745096d725a487-0"
+          ],
+          "sourceCitationIds": [
+            "s-e002a8426334d341-0"
+          ]
+        },
+        {
+          "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+          "topicId": "590da97ebea25bdca1ead597",
+          "sourceIds": [
+            "biology-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-3f745096d725a487-0"
+          ],
+          "sourceCitationIds": [
+            "s-e002a8426334d341-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "correct"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "third-equation",
+      "questionId": "98c48deb-d40a-4c77-9d2d-4932e0c6eefa",
+      "grade": {
+        "verdict": "correct",
+        "unassisted": false,
+        "checked": true
+      },
+      "rawJudgments": [
+        {
+          "questionId": "98c48deb-d40a-4c77-9d2d-4932e0c6eefa",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-793e500df9493c4f-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        },
+        {
+          "questionId": "98c48deb-d40a-4c77-9d2d-4932e0c6eefa",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-793e500df9493c4f-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "correct"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "fourth-equation",
+      "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+      "grade": null,
+      "rawJudgments": [
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-1e371fe56e252a67-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        },
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": false,
+          "answerCitationIds": [
+            "a-1e371fe56e252a67-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "independent-checks-disagree",
+          "stage": "comparison"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "explain-back",
+      "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+      "grade": {
+        "verdict": "correct",
+        "unassisted": false,
+        "checked": true
+      },
+      "rawJudgments": [
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-1e371fe56e252a67-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        },
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-1e371fe56e252a67-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "validated-agreement",
+          "stage": "comparison",
+          "verdict": "correct"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "method-recap",
+      "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+      "grade": {
+        "checked": false,
+        "targetAttempt": false
+      },
+      "rawJudgments": [
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "unclear",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-4978e0f474d2c81d-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": false
+        },
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "unclear",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-4978e0f474d2c81d-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": false
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "not-original-target-attempt",
+          "stage": "comparison"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "ask-transfer-check",
+      "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+      "grade": {
+        "checked": false,
+        "targetAttempt": false
+      },
+      "rawJudgments": [
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "unclear",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-5ef096d1240f7290-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": false
+        },
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "unclear",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-5ef096d1240f7290-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "targetAttempt": false
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "not-original-target-attempt",
+          "stage": "comparison"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    },
+    {
+      "stepId": "transfer-response",
+      "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+      "grade": null,
+      "rawJudgments": [
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "correct",
+          "reasoningSufficient": true,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-1e371fe56e252a67-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        },
+        {
+          "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "partial",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-1e371fe56e252a67-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "reason": "independent-checks-disagree",
+          "stage": "comparison"
+        }
+      ],
+      "exactCapturedInputReplayed": true,
+      "providerCalls": 0
+    }
+  ],
+  "attemptGroups": {
+    "84cdf758-e7db-4e15-a076-651ce5bd811d": [
+      1,
+      2
+    ],
+    "8064965c-f3fe-4f02-8618-f60bd77c6512": [
+      1,
+      2,
+      3
+    ],
+    "7bca7240-b3fc-461f-84e3-6726ff57b5eb": [
+      1
+    ],
+    "98c48deb-d40a-4c77-9d2d-4932e0c6eefa": [
+      1
+    ],
+    "cd72acdc-6983-4573-adaa-de2b9abfe561": [
+      1,
+      2
+    ]
+  },
+  "ledgerEvents": [
+    {
+      "id": "78fdea7f-1c77-49d2-8e2e-edadaebd8e26",
+      "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+      "questionKey": "8fc6cb16ae848e072e4b2b448fecd231fa52e36a10863968cfcf5c5f15283828",
+      "attempt": 1,
+      "topicId": "7fafcd4cb67a69bee132bb17",
+      "topicTitle": "Equations",
+      "difficulty": "hard",
+      "verdict": "incorrect",
+      "firstAttempt": false,
+      "unassisted": false,
+      "checked": true
+    },
+    {
+      "id": "d2283eae-a277-48a9-adc0-7b7837850b74",
+      "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+      "questionKey": "8fc6cb16ae848e072e4b2b448fecd231fa52e36a10863968cfcf5c5f15283828",
+      "attempt": 2,
+      "topicId": "7fafcd4cb67a69bee132bb17",
+      "topicTitle": "Equations",
+      "difficulty": "hard",
+      "verdict": "correct",
+      "firstAttempt": false,
+      "unassisted": false,
+      "checked": true
+    },
+    {
+      "id": "f1b09d21-9983-4b4e-8f7f-2324ef6a2c22",
+      "questionId": "7bca7240-b3fc-461f-84e3-6726ff57b5eb",
+      "questionKey": "44cd573c73c731fd9aac674071dcb3a7064ad8e6e1c36d6d5be74ee2a29194e6",
+      "attempt": 1,
+      "topicId": "7fafcd4cb67a69bee132bb17",
+      "topicTitle": "Equations",
+      "difficulty": "hard",
+      "verdict": "correct",
+      "firstAttempt": true,
+      "unassisted": true,
+      "checked": true
+    },
+    {
+      "id": "53b8bbc6-fe0d-448f-a151-7bb05140b31a",
+      "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+      "questionKey": "04db22fbb6551ad92258771807e30628129eba55bc2cde22652cc2a1299a7282",
+      "attempt": 1,
+      "topicId": "590da97ebea25bdca1ead597",
+      "topicTitle": "Cell transport",
+      "difficulty": "hard",
+      "verdict": "partial",
+      "firstAttempt": true,
+      "unassisted": false,
+      "checked": true
+    },
+    {
+      "id": "0c53f083-2cbe-41a0-b2e3-782db5108c08",
+      "questionId": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+      "questionKey": "04db22fbb6551ad92258771807e30628129eba55bc2cde22652cc2a1299a7282",
+      "attempt": 2,
+      "topicId": "590da97ebea25bdca1ead597",
+      "topicTitle": "Cell transport",
+      "difficulty": "hard",
+      "verdict": "correct",
+      "firstAttempt": false,
+      "unassisted": false,
+      "checked": true
+    },
+    {
+      "id": "f80994d3-10e1-4138-b29c-c21f46387d64",
+      "questionId": "98c48deb-d40a-4c77-9d2d-4932e0c6eefa",
+      "questionKey": "3610d9c211e072aa44d107455356bc0c992156802725f990dc1f68e9160c1251",
+      "attempt": 1,
+      "topicId": "7fafcd4cb67a69bee132bb17",
+      "topicTitle": "Equations",
+      "difficulty": "hard",
+      "verdict": "correct",
+      "firstAttempt": true,
+      "unassisted": false,
+      "checked": true
+    },
+    {
+      "id": "b781cd4c-a699-4ead-b008-3d086f8d711d",
+      "questionId": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+      "questionKey": "766e7fc8b8d8ebb63a754ba38a3c9cc47509923eb49497c45d1d0b5e01266030",
+      "attempt": 2,
+      "topicId": "7fafcd4cb67a69bee132bb17",
+      "topicTitle": "Equations",
+      "difficulty": "hard",
+      "verdict": "correct",
+      "firstAttempt": false,
+      "unassisted": false,
+      "checked": true
+    }
+  ],
+  "unresolvedPending": {
+    "7b5de236-2b62-41dd-9bfc-7540e1f2b937": {
+      "questionId": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+      "questionKey": "8fc6cb16ae848e072e4b2b448fecd231fa52e36a10863968cfcf5c5f15283828",
+      "provisional": true,
+      "order": 1
+    }
+  },
+  "budget": {
+    "limits": {
+      "openai": 65,
+      "jev": 70,
+      "scope": "shared-across-scenarios"
+    },
+    "counts": {
+      "openai": 55,
+      "jev": 56
+    },
+    "blocked": 0
+  },
+  "historicalIds": [
+    {
+      "step": "welcome",
+      "id": "84cdf758-e7db-4e15-a076-651ce5bd811d",
+      "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+    },
+    {
+      "step": "revised-full-target",
+      "id": "8064965c-f3fe-4f02-8618-f60bd77c6512",
+      "question": "How do equal operations solve 3y - 6 = 9, and why are those operations valid?"
+    },
+    {
+      "step": "next-equation",
+      "id": "7bca7240-b3fc-461f-84e3-6726ff57b5eb",
+      "question": "How do equal operations solve 4z + 8 = 0, and why are those operations valid?"
+    },
+    {
+      "step": "independent-equation",
+      "id": "98c48deb-d40a-4c77-9d2d-4932e0c6eefa",
+      "question": "How do equal operations solve 5w - 10 = 20, and why are those operations valid?"
+    },
+    {
+      "step": "switch-biology",
+      "id": "cd72acdc-6983-4573-adaa-de2b9abfe561",
+      "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+    }
+  ],
+  "notes": [
+    "All12 exact captured grading inputs and public outputs replay through the production citation/schema/agreement code without provider calls.",
+    "Recognized attempt ordinals are contiguous percanonicalID; rejected non-target jobs add no attempt. Pending first x scaffold identity disagreement remains metadata-only and conservatively blocks later firstness.",
+    "The z answer qualified for one hard win; neither topic was marked mastered (scores90/33).",
+    "w is correct but both graders incorrectly mark prior neutral restatement/unsolvedgivens as assistance; no w hint or solution appears before submission. Serverqueued eligibility was unassisted:true, so this is model assistance judgment, not server allocation.",
+    "y first answer was correct/sufficient in both judgments but assistance disagreed; later repeat correctness also varied. These unresolved semantic results remain preserved.",
+    "GRADING phrase including a prior restatement is ambiguous and is being separately clarified/tested, without overwriting this run."
+  ]
+}

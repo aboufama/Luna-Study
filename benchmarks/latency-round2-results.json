@@ -1,0 +1,3649 @@
+{
+  "startedAt": "2026-10-02T04:31:13.634Z",
+  "model": "gpt-5.6-luna",
+  "effort": "low",
+  "microphone": false,
+  "playback": false,
+  "audioSaved": false,
+  "providerRequests": 24,
+  "experiments": [
+    {
+      "name": "current-persistent-board-profile",
+      "samples": [
+        {
+          "index": 0,
+          "condition": "current",
+          "firstTextMs": 3998.8,
+          "firstMeaningfulTextMs": 4072.3,
+          "firstWriteMs": 4319.6,
+          "firstPcmMs": 4443.1,
+          "modelCompleteMs": 6183.3,
+          "boardReadyMs": 6183.3,
+          "completeAudioMs": 6228.2,
+          "generatedAudioMs": 11920,
+          "reply": "Against Cooperate, Defect gives the row player 5 instead of 3. Against Defect, Defect gives 1 instead of 0, so Defect is best in both cases.",
+          "board": {
+            "title": "Row-player best responses",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare-coop",
+                "type": "text",
+                "content": "Column Cooperate: 5 > 3, so choose Defect"
+              },
+              {
+                "id": "compare-defect",
+                "type": "text",
+                "content": "Column Defect: 1 > 0, so choose Defect"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 3992,
+            "totalMs": 6177,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 90,
+            "firstAudioMs": 4443,
+            "completeMs": 6227
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 6.6,
+              "durationMs": 65.3,
+              "inputBytes": 6138
+            },
+            {
+              "method": "turn/start",
+              "atMs": 72.2,
+              "durationMs": 4,
+              "inputBytes": 3368
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 6183.1,
+              "durationMs": 0.6,
+              "inputBytes": 100
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4319.6,
+              "text": "Against Cooperate, Defect gives the row player 5 instead of 3. "
+            },
+            {
+              "atMs": 4750.7,
+              "text": "Against Defect, Defect gives 1 instead of 0, so Defect is best in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 3998.8,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4072.3,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 4072.6,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 4072.6,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4085.2,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4086.1,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4108.5,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4128.3,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4148.4,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4169.6,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4190.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4208.4,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4210.2,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4230.8,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4251.5,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4276.2,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4295.2,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4319.4,
+              "text": " Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4337.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4338,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4370.7,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4384.3,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4401.6,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4465.8,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4465.9,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4466.5,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4472.3,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4501,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4522,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4553.6,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4567.6,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4567.7,
+              "text": " so"
+            },
+            {
+              "type": "text",
+              "atMs": 4586.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4607.3,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4630.4,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 4630.5,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 4658.3,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4672.5,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 4750.6,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 4750.6,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4750.7
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "condition": "current",
+          "firstTextMs": 4198.1,
+          "firstMeaningfulTextMs": 4280.1,
+          "firstWriteMs": 4267,
+          "firstPcmMs": 4491.5,
+          "modelCompleteMs": 6370.5,
+          "boardReadyMs": 6370.5,
+          "completeAudioMs": 6508,
+          "generatedAudioMs": 13120,
+          "reply": "Consider this. Against Cooperate, Defect gives 5 versus 3; against Defect, it gives 1 versus 0. So Defect is the row player’s best response in both columns.",
+          "board": {
+            "title": "Row-player best responses",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare-coop",
+                "type": "text",
+                "content": "Against Cooperate: Defect 5 > Cooperate 3"
+              },
+              {
+                "id": "compare-defect",
+                "type": "text",
+                "content": "Against Defect: Defect 1 > Cooperate 0"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 4197,
+            "totalMs": 6369,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 161,
+            "firstAudioMs": 4491,
+            "completeMs": 6508
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 1.6,
+              "durationMs": 60.3,
+              "inputBytes": 6138
+            },
+            {
+              "method": "turn/start",
+              "atMs": 62.2,
+              "durationMs": 1.4,
+              "inputBytes": 3368
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 6370.4,
+              "durationMs": 0.1,
+              "inputBytes": 100
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4267,
+              "text": "Consider this. "
+            },
+            {
+              "atMs": 4723.8,
+              "text": "Against Cooperate, Defect gives 5 versus 3; against Defect, it gives 1 versus 0. "
+            },
+            {
+              "atMs": 4980.2,
+              "text": "So Defect is the row player’s best response in both columns. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 4198.1,
+              "text": "Consider"
+            },
+            {
+              "type": "text",
+              "atMs": 4222.7,
+              "text": " this"
+            },
+            {
+              "type": "text",
+              "atMs": 4258.7,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4266.9,
+              "text": " Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4280.1,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 4310,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 4330.4,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4330.4,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4344.5,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4368.4,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4389.5,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4444,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4444.1,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 4444.1,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4451.2,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4483.5,
+              "text": ";"
+            },
+            {
+              "type": "text",
+              "atMs": 4500.2,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 4515.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4537.7,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4542,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4559.4,
+              "text": " it"
+            },
+            {
+              "type": "text",
+              "atMs": 4577.1,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4598.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4627.1,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4641.8,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 4672,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4672,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4723.7,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4723.8,
+              "text": " So"
+            },
+            {
+              "type": "text",
+              "atMs": 4732.3,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4753.6,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4753.7,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 4793.3,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4797.7,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4821.4,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4839.7,
+              "text": "’s"
+            },
+            {
+              "type": "text",
+              "atMs": 4861.3,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 4861.6,
+              "text": " response"
+            },
+            {
+              "type": "text",
+              "atMs": 4890.5,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4909.3,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 4950,
+              "text": " columns"
+            },
+            {
+              "type": "text",
+              "atMs": 4950.1,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4980.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fresh-thread-prewarm",
+      "samples": [
+        {
+          "index": 0,
+          "condition": "current",
+          "firstTextMs": 4969.7,
+          "firstMeaningfulTextMs": 5065.8,
+          "firstWriteMs": 5009.6,
+          "firstPcmMs": 5164.9,
+          "modelCompleteMs": 7199.5,
+          "boardReadyMs": 7199.5,
+          "completeAudioMs": 7291.4,
+          "generatedAudioMs": 12320,
+          "reply": "Consider this. For each fixed column choice, compare the row player’s payoffs: Defect gives 5 instead of 3 against Cooperate, and 1 instead of 0 against Defect.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare-cooperate",
+                "type": "text",
+                "content": "Column: Cooperate → row payoffs 3 vs 5 → Defect"
+              },
+              {
+                "id": "compare-defect",
+                "type": "text",
+                "content": "Column: Defect → row payoffs 0 vs 1 → Defect"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 4962,
+            "totalMs": 7192,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 95,
+            "firstAudioMs": 5165,
+            "completeMs": 7291
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 7.4,
+              "durationMs": 55.8,
+              "inputBytes": 6138
+            },
+            {
+              "method": "turn/start",
+              "atMs": 63.3,
+              "durationMs": 4.6,
+              "inputBytes": 3368
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 7199.4,
+              "durationMs": 0.7,
+              "inputBytes": 100
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 5009.6,
+              "text": "Consider this. "
+            },
+            {
+              "atMs": 5727.7,
+              "text": "For each fixed column choice, compare the row player’s payoffs: Defect gives 5 instead of 3 against Cooperate, and 1 instead of 0 against Defect. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 4969.7,
+              "text": "Consider"
+            },
+            {
+              "type": "text",
+              "atMs": 5007,
+              "text": " this"
+            },
+            {
+              "type": "text",
+              "atMs": 5007.2,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 5009.4,
+              "text": " For"
+            },
+            {
+              "type": "text",
+              "atMs": 5039.5,
+              "text": " each"
+            },
+            {
+              "type": "text",
+              "atMs": 5065.8,
+              "text": " fixed"
+            },
+            {
+              "type": "text",
+              "atMs": 5079.9,
+              "text": " column"
+            },
+            {
+              "type": "text",
+              "atMs": 5098.6,
+              "text": " choice"
+            },
+            {
+              "type": "text",
+              "atMs": 5103.8,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 5132.1,
+              "text": " compare"
+            },
+            {
+              "type": "text",
+              "atMs": 5143.6,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 5165.3,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 5191.7,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 5191.8,
+              "text": "’s"
+            },
+            {
+              "type": "text",
+              "atMs": 5228.7,
+              "text": " pay"
+            },
+            {
+              "type": "text",
+              "atMs": 5237.4,
+              "text": "offs"
+            },
+            {
+              "type": "text",
+              "atMs": 5258,
+              "text": ":"
+            },
+            {
+              "type": "text",
+              "atMs": 5276.5,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 5301.2,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 5301.3,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 5316.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 5338.5,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 5359.3,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 5375.9,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 5426,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 5452.6,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 5456.1,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 5458.3,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 5458.4,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 5510.5,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 5512.7,
+              "text": " and"
+            },
+            {
+              "type": "text",
+              "atMs": 5518,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 5538.2,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 5576.5,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 5576.6,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 5606.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 5622,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 5624.6,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 5648.8,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 5678.3,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 5686.9,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 5727.6
+            }
+          ]
+        },
+        {
+          "index": 0,
+          "condition": "prewarmed",
+          "firstTextMs": 2597.5,
+          "firstMeaningfulTextMs": 2631.3,
+          "firstWriteMs": 2897.9,
+          "firstPcmMs": 3038.7,
+          "modelCompleteMs": 5135.8,
+          "boardReadyMs": 5135.8,
+          "completeAudioMs": 5185.7,
+          "generatedAudioMs": 13040,
+          "reply": "Against Cooperate, Defect gives the row player 5 instead of 3. Against Defect, Defect gives 1 instead of 0. So Defect is the best response in both columns.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare-coop",
+                "type": "text",
+                "content": "Column: Cooperate → row payoffs: Cooperate 3, Defect 5 → choose Defect"
+              },
+              {
+                "id": "compare-defect",
+                "type": "text",
+                "content": "Column: Defect → row payoffs: Cooperate 0, Defect 1 → choose Defect"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 2596,
+            "totalMs": 5135,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 92,
+            "firstAudioMs": 3039,
+            "completeMs": 5185
+          },
+          "rpc": [
+            {
+              "method": "turn/start",
+              "atMs": 1.3,
+              "durationMs": 2,
+              "inputBytes": 3368
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 5135.5,
+              "durationMs": 0.8,
+              "inputBytes": 100
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 2897.9,
+              "text": "Against Cooperate, Defect gives the row player 5 instead of 3. "
+            },
+            {
+              "atMs": 3159.4,
+              "text": "Against Defect, Defect gives 1 instead of 0. "
+            },
+            {
+              "atMs": 3375.9,
+              "text": "So Defect is the best response in both columns. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 2597.5,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 2631.3,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 2649.5,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 2670.1,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 2670.1,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 2685.6,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 2707.9,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 2734.2,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 2750.7,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 2769.9,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 2770.4,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 2800.6,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 2815.9,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 2844.9,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 2863.2,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 2875.2,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 2897.1,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 2897.9,
+              "text": " Against"
+            },
+            {
+              "type": "text",
+              "atMs": 2919,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 2942.3,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 2974.9,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 2994.6,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3013.2,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 3013.3,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 3033.8,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3050.5,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 3071.5,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 3098.7,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 3113.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3113.9,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 3140.6,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 3159.4,
+              "text": " So"
+            },
+            {
+              "type": "text",
+              "atMs": 3180.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3207.3,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 3219.8,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 3220.8,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 3251.9,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 3264,
+              "text": " response"
+            },
+            {
+              "type": "text",
+              "atMs": 3286.2,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 3311.5,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 3329.6,
+              "text": " columns"
+            },
+            {
+              "type": "text",
+              "atMs": 3330.3,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 3375.8
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "condition": "prewarmed",
+          "firstTextMs": 4133.2,
+          "firstMeaningfulTextMs": 4158.6,
+          "firstWriteMs": 4446.5,
+          "firstPcmMs": 4586.8,
+          "modelCompleteMs": 5976.5,
+          "boardReadyMs": 5976.5,
+          "completeAudioMs": 6212.9,
+          "generatedAudioMs": 11920,
+          "reply": "Against Cooperate, Defect gives the row player 5 instead of 3. Against Defect, Defect gives 1 instead of 0, so Defect is best in both cases.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare",
+                "type": "text",
+                "content": "Row-player payoffs: vs Cooperate, 5 > 3; vs Defect, 1 > 0"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 4132,
+            "totalMs": 5975,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 96,
+            "firstAudioMs": 4587,
+            "completeMs": 6213
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 5135.7,
+              "durationMs": 66.2,
+              "inputBytes": 6138
+            },
+            {
+              "method": "turn/start",
+              "atMs": 15.1,
+              "durationMs": 1.1,
+              "inputBytes": 3368
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 5976.2,
+              "durationMs": 1.2,
+              "inputBytes": 100
+            },
+            {
+              "method": "thread/start",
+              "atMs": 5976.4,
+              "durationMs": 67.5,
+              "inputBytes": 6138
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4446.5,
+              "text": "Against Cooperate, Defect gives the row player 5 instead of 3. "
+            },
+            {
+              "atMs": 4895.6,
+              "text": "Against Defect, Defect gives 1 instead of 0, so Defect is best in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 4133.2,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4158.6,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 4174.8,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 4197.3,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4220,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4234.7,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4259.5,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4275.9,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4276.6,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4298,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4326.4,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4341,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4361.8,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4382.2,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4403.4,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4422.7,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4422.9,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4446.4,
+              "text": " Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4465.2,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4488.9,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4509.5,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4526.9,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4547.5,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4551.4,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4571.5,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4592.1,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4613.6,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4637,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4658.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4658.4,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4680.1,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4702.5,
+              "text": " so"
+            },
+            {
+              "type": "text",
+              "atMs": 4720.4,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4744.5,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4763.6,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 4785.5,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 4785.6,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4807.7,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 4828.4,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 4849.5,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4895.6
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "condition": "current",
+          "firstTextMs": 4232.7,
+          "firstMeaningfulTextMs": 4253.4,
+          "firstWriteMs": 4990.1,
+          "firstPcmMs": 5120.1,
+          "modelCompleteMs": 6650.7,
+          "boardReadyMs": 6650.7,
+          "completeAudioMs": 7181.4,
+          "generatedAudioMs": 15200,
+          "reply": "For the row player, compare the first number in each column: against Cooperate, Defect gives 5 instead of 3; against Defect, it gives 1 instead of 0. So Defect is the best response in both cases.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare-c",
+                "type": "text",
+                "content": "Against Cooperate: 5 (Defect) > 3 (Cooperate)"
+              },
+              {
+                "id": "compare-d",
+                "type": "text",
+                "content": "Against Defect: 1 (Defect) > 0 (Cooperate)"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 4232,
+            "totalMs": 6650,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 87,
+            "firstAudioMs": 5120,
+            "completeMs": 7181
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 0.7,
+              "durationMs": 57.7,
+              "inputBytes": 6138
+            },
+            {
+              "method": "turn/start",
+              "atMs": 58.5,
+              "durationMs": 0.9,
+              "inputBytes": 3368
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 6650.6,
+              "durationMs": 0.5,
+              "inputBytes": 100
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4990.1,
+              "text": "For the row player, compare the first number in each column: against Cooperate, Defect gives 5 instead of 3; against Defect, it gives 1 instead of 0. "
+            },
+            {
+              "atMs": 5150.5,
+              "text": "So Defect is the best response in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 4232.7,
+              "text": "For"
+            },
+            {
+              "type": "text",
+              "atMs": 4234.6,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4253.4,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4274.7,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4293.4,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4315.7,
+              "text": " compare"
+            },
+            {
+              "type": "text",
+              "atMs": 4348.6,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4358.2,
+              "text": " first"
+            },
+            {
+              "type": "text",
+              "atMs": 4374.2,
+              "text": " number"
+            },
+            {
+              "type": "text",
+              "atMs": 4397.3,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4397.4,
+              "text": " each"
+            },
+            {
+              "type": "text",
+              "atMs": 4414.3,
+              "text": " column"
+            },
+            {
+              "type": "text",
+              "atMs": 4436.4,
+              "text": ":"
+            },
+            {
+              "type": "text",
+              "atMs": 4460.5,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 4478.8,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 4491.7,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 4514.2,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4530.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4550.5,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4574.5,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4591.5,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4591.8,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4622.4,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4645.8,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4659.6,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4675.2,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4695.4,
+              "text": ";"
+            },
+            {
+              "type": "text",
+              "atMs": 4771.7,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 4771.8,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4771.9,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4771.9,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4790.2,
+              "text": " it"
+            },
+            {
+              "type": "text",
+              "atMs": 4796.2,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4824.5,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4839.7,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4863.1,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4879.3,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4879.4,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4903.1,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4927.3,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4990,
+              "text": " So"
+            },
+            {
+              "type": "text",
+              "atMs": 4990.8,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4990.8,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 5043.7,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 5044.2,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 5057.1,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 5057.3,
+              "text": " response"
+            },
+            {
+              "type": "text",
+              "atMs": 5067.2,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 5085.5,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 5124.5,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 5128.8,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 5150.5
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "condition": "current",
+          "firstTextMs": 3546.2,
+          "firstMeaningfulTextMs": 3578.3,
+          "firstWriteMs": 3781,
+          "firstPcmMs": 3910,
+          "modelCompleteMs": 5570.7,
+          "boardReadyMs": 5570.7,
+          "completeAudioMs": 5616.5,
+          "generatedAudioMs": 11040,
+          "reply": "Compare the row player’s payoff—the first number—in each column. Defect gives 5 versus 3 against Cooperate, and 1 versus 0 against Defect.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare1",
+                "type": "text",
+                "content": "Against column Cooperate: Defect 5 > Cooperate 3"
+              },
+              {
+                "id": "compare2",
+                "type": "text",
+                "content": "Against column Defect: Defect 1 > Cooperate 0"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 3545,
+            "totalMs": 5570,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 88,
+            "firstAudioMs": 3910,
+            "completeMs": 5616
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 0.9,
+              "durationMs": 55,
+              "inputBytes": 6138
+            },
+            {
+              "method": "turn/start",
+              "atMs": 56,
+              "durationMs": 0.7,
+              "inputBytes": 3369
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 5570.5,
+              "durationMs": 0.5,
+              "inputBytes": 101
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 3781,
+              "text": "Compare the row player’s payoff—the first number—in each column. "
+            },
+            {
+              "atMs": 4188.3,
+              "text": "Defect gives 5 versus 3 against Cooperate, and 1 versus 0 against Defect. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 3546.2,
+              "text": "Compare"
+            },
+            {
+              "type": "text",
+              "atMs": 3578.3,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 3578.5,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 3589.8,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 3665.7,
+              "text": "’s"
+            },
+            {
+              "type": "text",
+              "atMs": 3665.8,
+              "text": " payoff"
+            },
+            {
+              "type": "text",
+              "atMs": 3665.8,
+              "text": "—the"
+            },
+            {
+              "type": "text",
+              "atMs": 3675.4,
+              "text": " first"
+            },
+            {
+              "type": "text",
+              "atMs": 3696.5,
+              "text": " number"
+            },
+            {
+              "type": "text",
+              "atMs": 3696.5,
+              "text": "—in"
+            },
+            {
+              "type": "text",
+              "atMs": 3720.6,
+              "text": " each"
+            },
+            {
+              "type": "text",
+              "atMs": 3737.7,
+              "text": " column"
+            },
+            {
+              "type": "text",
+              "atMs": 3760.1,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 3780.9,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3804,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 3804.1,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 3826.8,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3854.8,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 3874.4,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 3891.4,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3911.7,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 3915.7,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 3944.5,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 3965.4,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 3985.3,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4002.4,
+              "text": " and"
+            },
+            {
+              "type": "text",
+              "atMs": 4003.9,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4028.4,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4050.5,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 4072.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4098.4,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4098.5,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 4118.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4135.7,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4161.6,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4188.3
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "condition": "prewarmed",
+          "firstTextMs": 3455.3,
+          "firstMeaningfulTextMs": 3455.4,
+          "firstWriteMs": 3892,
+          "firstPcmMs": 4022.8,
+          "modelCompleteMs": 5778.9,
+          "boardReadyMs": 5778.9,
+          "completeAudioMs": 5831.6,
+          "generatedAudioMs": 12800,
+          "reply": "Against Cooperate, Defect gives the row player 5 versus 3. Against Defect, Defect gives 1 versus 0. So Defect is the best response in both cases.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare-coop",
+                "type": "text",
+                "content": "Column: Cooperate → row payoffs: Cooperate 3, Defect 5"
+              },
+              {
+                "id": "compare-defect",
+                "type": "text",
+                "content": "Column: Defect → row payoffs: Cooperate 0, Defect 1"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 3453,
+            "totalMs": 5777,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 90,
+            "firstAudioMs": 4022,
+            "completeMs": 5831
+          },
+          "rpc": [
+            {
+              "method": "turn/start",
+              "atMs": 2.3,
+              "durationMs": 3.9,
+              "inputBytes": 3369
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 5778.7,
+              "durationMs": 0.4,
+              "inputBytes": 101
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 3892,
+              "text": "Against Cooperate, Defect gives the row player 5 versus 3. "
+            },
+            {
+              "atMs": 3941.5,
+              "text": "Against Defect, Defect gives 1 versus 0. "
+            },
+            {
+              "atMs": 4165,
+              "text": "So Defect is the best response in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 3455.3,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 3455.4,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 3458.8,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 3476,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 3476.1,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3486.9,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 3513.6,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 3527.9,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 3550.7,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 3572.5,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 3591.2,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3592.5,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 3615,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 3639.5,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3666.3,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 3891.4,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 3891.9,
+              "text": " Against"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.3,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.4,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.4,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 3892.4,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.4,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.7,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.8,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3892.8,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.8,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 3892.8,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 3892.8,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 3910.5,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 3941.4,
+              "text": " So"
+            },
+            {
+              "type": "text",
+              "atMs": 3956.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3956.8,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4009.8,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 4009.9,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4023.8,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 4055.5,
+              "text": " response"
+            },
+            {
+              "type": "text",
+              "atMs": 4056,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4064.6,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 4097.6,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 4107.3,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4164.9
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "condition": "prewarmed",
+          "firstTextMs": 3929.9,
+          "firstMeaningfulTextMs": 3952.4,
+          "firstWriteMs": 4427.5,
+          "firstPcmMs": 4562.4,
+          "modelCompleteMs": 5917.7,
+          "boardReadyMs": 5917.7,
+          "completeAudioMs": 6317.2,
+          "generatedAudioMs": 12480,
+          "reply": "Against Cooperate, Defect gives the row player 5 versus 3; against Defect, it gives 1 versus 0. So Defect is the row player’s best response in both cases.",
+          "board": {
+            "title": "Row-player comparison",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "reasoning",
+                "type": "text",
+                "content": "Row player: vs Cooperate, Defect 5 > Cooperate 3; vs Defect, Defect 1 > Cooperate 0."
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 3929,
+            "totalMs": 5916,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 97,
+            "firstAudioMs": 4562,
+            "completeMs": 6317
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 5778.8,
+              "durationMs": 522,
+              "inputBytes": 6139
+            },
+            {
+              "method": "turn/start",
+              "atMs": 467.4,
+              "durationMs": 1.6,
+              "inputBytes": 3369
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 5917.4,
+              "durationMs": 0.5,
+              "inputBytes": 101
+            },
+            {
+              "method": "thread/start",
+              "atMs": 5917.6,
+              "durationMs": 65.8,
+              "inputBytes": 6139
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4427.5,
+              "text": "Against Cooperate, Defect gives the row player 5 versus 3; against Defect, it gives 1 versus 0. "
+            },
+            {
+              "atMs": 4711.6,
+              "text": "So Defect is the row player’s best response in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 3929.9,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 3952.4,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 3972.4,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 3993.1,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 3993.1,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4014.5,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4035.4,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4057.2,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4079,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4101.5,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4130.8,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4131,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4144.4,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 4165.2,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4203,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4207.6,
+              "text": ";"
+            },
+            {
+              "type": "text",
+              "atMs": 4233.5,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 4233.5,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4254.4,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4314,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4314.2,
+              "text": " it"
+            },
+            {
+              "type": "text",
+              "atMs": 4321,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4321.1,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4346.5,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4369.2,
+              "text": " versus"
+            },
+            {
+              "type": "text",
+              "atMs": 4398.5,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4410.3,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4426.1,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4427.5,
+              "text": " So"
+            },
+            {
+              "type": "text",
+              "atMs": 4454.3,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4470,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4490.6,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 4512.1,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4533.9,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4552.9,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4556,
+              "text": "’s"
+            },
+            {
+              "type": "text",
+              "atMs": 4577.3,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 4600.9,
+              "text": " response"
+            },
+            {
+              "type": "text",
+              "atMs": 4620.8,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4645.1,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 4648.1,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 4670.9,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4711.6
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "condition": "current",
+          "firstTextMs": 4401.3,
+          "firstMeaningfulTextMs": 4422.8,
+          "firstWriteMs": 4804.6,
+          "firstPcmMs": 4934.4,
+          "modelCompleteMs": 6580.1,
+          "boardReadyMs": 6580.1,
+          "completeAudioMs": 6622.8,
+          "generatedAudioMs": 11120,
+          "reply": "Against Cooperate, compare 3 with 5; against Defect, compare 0 with 1. Defect gives the row player the higher payoff in both cases.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare-cooperate",
+                "type": "text",
+                "content": "Column Cooperate: Row Cooperate 3 vs Row Defect 5 → Defect"
+              },
+              {
+                "id": "compare-defect",
+                "type": "text",
+                "content": "Column Defect: Row Cooperate 0 vs Row Defect 1 → Defect"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 4400,
+            "totalMs": 6579,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 87,
+            "firstAudioMs": 4934,
+            "completeMs": 6622
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 1.6,
+              "durationMs": 65.3,
+              "inputBytes": 6139
+            },
+            {
+              "method": "turn/start",
+              "atMs": 67.2,
+              "durationMs": 1.7,
+              "inputBytes": 3369
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 6580,
+              "durationMs": 0.5,
+              "inputBytes": 101
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4804.6,
+              "text": "Against Cooperate, compare 3 with 5; against Defect, compare 0 with 1. "
+            },
+            {
+              "atMs": 5045.8,
+              "text": "Defect gives the row player the higher payoff in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 4401.3,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4422.8,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 4426.1,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 4445.4,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4466.7,
+              "text": " compare"
+            },
+            {
+              "type": "text",
+              "atMs": 4484.9,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4507.5,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4527.1,
+              "text": " with"
+            },
+            {
+              "type": "text",
+              "atMs": 4552.4,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4552.4,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4571,
+              "text": ";"
+            },
+            {
+              "type": "text",
+              "atMs": 4597.1,
+              "text": " against"
+            },
+            {
+              "type": "text",
+              "atMs": 4648.6,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4648.7,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4662.4,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4676.3,
+              "text": " compare"
+            },
+            {
+              "type": "text",
+              "atMs": 4683.8,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4698.6,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4731.9,
+              "text": " with"
+            },
+            {
+              "type": "text",
+              "atMs": 4744,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4764.1,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4804.4,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4804.5,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4816.7,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4825.6,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4865,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4907.1,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4955.5,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4955.5,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4955.5,
+              "text": " higher"
+            },
+            {
+              "type": "text",
+              "atMs": 4955.5,
+              "text": " payoff"
+            },
+            {
+              "type": "text",
+              "atMs": 4955.6,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4981.2,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 5000.1,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 5025.8,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 5045.8
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "condition": "current",
+          "firstTextMs": 4181.7,
+          "firstMeaningfulTextMs": 4188.2,
+          "firstWriteMs": 4500,
+          "firstPcmMs": 4635.6,
+          "modelCompleteMs": 8494.6,
+          "boardReadyMs": 8494.6,
+          "completeAudioMs": 8542.2,
+          "generatedAudioMs": 12400,
+          "reply": "Against Cooperate, Defect gives 5 instead of 3. Against Defect, Defect gives 1 instead of 0, so Defect is the best row-player choice in both cases.",
+          "board": {
+            "title": "Row-player best responses",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "reason-cooperate",
+                "type": "text",
+                "content": "Column Cooperate: 5 > 3 → Defect"
+              },
+              {
+                "id": "reason-defect",
+                "type": "text",
+                "content": "Column Defect: 1 > 0 → Defect"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 4180,
+            "totalMs": 8493,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 96,
+            "firstAudioMs": 4636,
+            "completeMs": 8542
+          },
+          "rpc": [
+            {
+              "method": "thread/start",
+              "atMs": 1.6,
+              "durationMs": 67.5,
+              "inputBytes": 6139
+            },
+            {
+              "method": "turn/start",
+              "atMs": 69.2,
+              "durationMs": 0.9,
+              "inputBytes": 3369
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 8494.5,
+              "durationMs": 0.3,
+              "inputBytes": 101
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4500,
+              "text": "Against Cooperate, Defect gives 5 instead of 3. "
+            },
+            {
+              "atMs": 4943.3,
+              "text": "Against Defect, Defect gives 1 instead of 0, so Defect is the best row-player choice in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 4181.7,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4188.2,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 4222.6,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 4250.4,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4257.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4259.9,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4282.8,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4342.9,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4358.8,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4377.3,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4499.8,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4499.8,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4500,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4500,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4500,
+              "text": " Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4500.2,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4500.3,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4500.3,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4515.6,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4531.5,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4531.6,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4632.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4632.4,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4632.4,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4658.1,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4658.2,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4658.2,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4683.5,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4686.7,
+              "text": " so"
+            },
+            {
+              "type": "text",
+              "atMs": 4705.5,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4730.6,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4754.1,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 4754.1,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4767.6,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 4789.3,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4814.3,
+              "text": "-player"
+            },
+            {
+              "type": "text",
+              "atMs": 4835.8,
+              "text": " choice"
+            },
+            {
+              "type": "text",
+              "atMs": 4858.8,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4878.3,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 4878.4,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 4894.2,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4943.3
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "condition": "prewarmed",
+          "firstTextMs": 3852.6,
+          "firstMeaningfulTextMs": 3875.1,
+          "firstWriteMs": 4162.1,
+          "firstPcmMs": 4289.2,
+          "modelCompleteMs": 6051.7,
+          "boardReadyMs": 6051.7,
+          "completeAudioMs": 6099,
+          "generatedAudioMs": 11920,
+          "reply": "Against Cooperate, Defect gives the row player 5 instead of 3. Against Defect, Defect gives 1 instead of 0, so Defect is best in both cases.",
+          "board": {
+            "title": "Row-player comparisons",
+            "mode": "patch",
+            "blocks": [
+              {
+                "id": "compare1",
+                "type": "text",
+                "content": "Column Cooperate: 5 (Defect) > 3 (Cooperate)"
+              },
+              {
+                "id": "compare2",
+                "type": "text",
+                "content": "Column Defect: 1 (Defect) > 0 (Cooperate)"
+              }
+            ]
+          },
+          "timings": {
+            "firstDeltaMs": 3852,
+            "totalMs": 6051,
+            "reusedThread": false
+          },
+          "ttsTimings": {
+            "connectMs": 91,
+            "firstAudioMs": 4289,
+            "completeMs": 6099
+          },
+          "rpc": [
+            {
+              "method": "turn/start",
+              "atMs": 0.6,
+              "durationMs": 0.9,
+              "inputBytes": 3369
+            },
+            {
+              "method": "thread/unsubscribe",
+              "atMs": 6051.3,
+              "durationMs": 1.2,
+              "inputBytes": 101
+            }
+          ],
+          "writes": [
+            {
+              "atMs": 4162.1,
+              "text": "Against Cooperate, Defect gives the row player 5 instead of 3. "
+            },
+            {
+              "atMs": 4584,
+              "text": "Against Defect, Defect gives 1 instead of 0, so Defect is best in both cases. "
+            }
+          ],
+          "events": [
+            {
+              "type": "text",
+              "atMs": 3852.6,
+              "text": "Against"
+            },
+            {
+              "type": "text",
+              "atMs": 3875.1,
+              "text": " Cooper"
+            },
+            {
+              "type": "text",
+              "atMs": 3919.8,
+              "text": "ate"
+            },
+            {
+              "type": "text",
+              "atMs": 3919.8,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 3920.2,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 3940.8,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 3960.8,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 3984,
+              "text": " the"
+            },
+            {
+              "type": "text",
+              "atMs": 4020,
+              "text": " row"
+            },
+            {
+              "type": "text",
+              "atMs": 4020,
+              "text": " player"
+            },
+            {
+              "type": "text",
+              "atMs": 4036,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4048.5,
+              "text": "5"
+            },
+            {
+              "type": "text",
+              "atMs": 4068.9,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4090.3,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4112.3,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4112.3,
+              "text": "3"
+            },
+            {
+              "type": "text",
+              "atMs": 4158.3,
+              "text": "."
+            },
+            {
+              "type": "text",
+              "atMs": 4162.1,
+              "text": " Against"
+            },
+            {
+              "type": "text",
+              "atMs": 4181.2,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4207.8,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4259.7,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4259.7,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4259.8,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4314.2,
+              "text": " gives"
+            },
+            {
+              "type": "text",
+              "atMs": 4314.2,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4314.2,
+              "text": "1"
+            },
+            {
+              "type": "text",
+              "atMs": 4318.8,
+              "text": " instead"
+            },
+            {
+              "type": "text",
+              "atMs": 4336.6,
+              "text": " of"
+            },
+            {
+              "type": "text",
+              "atMs": 4360.7,
+              "text": " "
+            },
+            {
+              "type": "text",
+              "atMs": 4401.7,
+              "text": "0"
+            },
+            {
+              "type": "text",
+              "atMs": 4401.8,
+              "text": ","
+            },
+            {
+              "type": "text",
+              "atMs": 4407.5,
+              "text": " so"
+            },
+            {
+              "type": "text",
+              "atMs": 4429.8,
+              "text": " Def"
+            },
+            {
+              "type": "text",
+              "atMs": 4444.8,
+              "text": "ect"
+            },
+            {
+              "type": "text",
+              "atMs": 4468.8,
+              "text": " is"
+            },
+            {
+              "type": "text",
+              "atMs": 4496.4,
+              "text": " best"
+            },
+            {
+              "type": "text",
+              "atMs": 4497.9,
+              "text": " in"
+            },
+            {
+              "type": "text",
+              "atMs": 4528.3,
+              "text": " both"
+            },
+            {
+              "type": "text",
+              "atMs": 4540.5,
+              "text": " cases"
+            },
+            {
+              "type": "text",
+              "atMs": 4568.5,
+              "text": "."
+            },
+            {
+              "type": "say-end",
+              "atMs": 4584
+            }
+          ]
+        }
+      ],
+      "startup": [
+        {
+          "condition": "current",
+          "ms": 287.8
+        },
+        {
+          "condition": "prewarmed",
+          "ms": 717.6
+        }
+      ],
+      "summary": [
+        {
+          "metric": "firstTextMs",
+          "nPerCondition": 5,
+          "baselineMean": 4266.3,
+          "candidateMean": 3593.7,
+          "observedMeanReductionMs": 672.6,
+          "observedMeanReductionPercent": 15.8,
+          "baselineMedian": 4232.7,
+          "candidateMedian": 3852.6,
+          "pairedDifferences": [
+            2372.2,
+            99.5,
+            90.9,
+            471.4,
+            329.1
+          ],
+          "candidateWins": 5,
+          "excludingFirstPair": {
+            "baselineMean": 4090.5,
+            "candidateMean": 3842.8,
+            "meanReductionMs": 247.7,
+            "meanReductionPercent": 6.1
+          }
+        },
+        {
+          "metric": "firstMeaningfulTextMs",
+          "nPerCondition": 5,
+          "baselineMean": 4301.7,
+          "candidateMean": 3614.6,
+          "observedMeanReductionMs": 687.1,
+          "observedMeanReductionPercent": 16,
+          "baselineMedian": 4253.4,
+          "candidateMedian": 3875.1,
+          "pairedDifferences": [
+            2434.5,
+            94.8,
+            122.9,
+            470.4,
+            313.1
+          ],
+          "candidateWins": 5,
+          "excludingFirstPair": {
+            "baselineMean": 4110.7,
+            "candidateMean": 3860.4,
+            "meanReductionMs": 250.3,
+            "meanReductionPercent": 6.1
+          }
+        },
+        {
+          "metric": "firstPcmMs",
+          "nPerCondition": 5,
+          "baselineMean": 4753,
+          "candidateMean": 4100,
+          "observedMeanReductionMs": 653,
+          "observedMeanReductionPercent": 13.7,
+          "baselineMedian": 4934.4,
+          "candidateMedian": 4289.2,
+          "pairedDifferences": [
+            2126.2,
+            533.3,
+            -112.8,
+            372,
+            346.4
+          ],
+          "candidateWins": 4,
+          "excludingFirstPair": {
+            "baselineMean": 4650,
+            "candidateMean": 4365.3,
+            "meanReductionMs": 284.7,
+            "meanReductionPercent": 6.1
+          }
+        },
+        {
+          "metric": "modelCompleteMs",
+          "nPerCondition": 5,
+          "baselineMean": 6899.1,
+          "candidateMean": 5772.1,
+          "observedMeanReductionMs": 1127,
+          "observedMeanReductionPercent": 16.3,
+          "baselineMedian": 6650.7,
+          "candidateMedian": 5917.7,
+          "pairedDifferences": [
+            2063.7,
+            674.2,
+            -208.2,
+            662.4,
+            2442.9
+          ],
+          "candidateWins": 4,
+          "excludingFirstPair": {
+            "baselineMean": 6824,
+            "candidateMean": 5931.2,
+            "meanReductionMs": 892.8,
+            "meanReductionPercent": 13.1
+          }
+        },
+        {
+          "metric": "completeAudioMs",
+          "nPerCondition": 5,
+          "baselineMean": 7050.9,
+          "candidateMean": 5929.3,
+          "observedMeanReductionMs": 1121.6,
+          "observedMeanReductionPercent": 15.9,
+          "baselineMedian": 7181.4,
+          "candidateMedian": 6099,
+          "pairedDifferences": [
+            2105.7,
+            968.5,
+            -215.1,
+            305.6,
+            2443.2
+          ],
+          "candidateWins": 4,
+          "excludingFirstPair": {
+            "baselineMean": 6990.7,
+            "candidateMean": 6115.2,
+            "meanReductionMs": 875.6,
+            "meanReductionPercent": 12.5
+          }
+        }
+      ]
+    }
+  ],
+  "method": "Current persistent-board Luna app-server and production speech buffering/TTS. Full identical synthetic materials, history, private bank, mastery and board context preserved. Profile transport RPC boundaries separately from model deltas and first returned PCM. No STT or browser/physical-device latency measured.",
+  "startupMs": 53.5,
+  "startupRpc": [
+    {
+      "method": "initialize",
+      "atMs": 2.4,
+      "durationMs": 48.2,
+      "inputBytes": 168
+    },
+    {
+      "method": "config/read",
+      "atMs": 50.9,
+      "durationMs": 2.5,
+      "inputBytes": 140
+    }
+  ],
+  "input": {
+    "testId": "synthetic-round2",
+    "title": "Synthetic game theory test",
+    "date": "2026-10-10",
+    "localToday": "2026-10-02",
+    "difficulty": "test",
+    "materials": [
+      {
+        "id": "game",
+        "name": "Synthetic prisoner game notes",
+        "text": "Two players simultaneously choose Cooperate or Defect. Payoffs are ordered row player first, column player second. If both Cooperate, payoffs are 3,3. Row Cooperate and column Defect gives 0,5. Row Defect and column Cooperate gives 5,0. Both Defect gives 1,1. A best response maximizes one player's own payoff holding the other player's choice fixed. Against column Cooperate, the row player gets 3 by Cooperating and 5 by Defecting, so Defect is better. Against column Defect, the row player gets 0 by Cooperating and 1 by Defecting, so Defect is better. Thus Defect strictly dominates Cooperate for the row player. By symmetry Defect also strictly dominates for the column player, and Defect,Defect is the unique Nash equilibrium."
+      }
+    ],
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Show the payoff matrix so I can compare the row player choices."
+      },
+      {
+        "role": "assistant",
+        "content": "Consider this. Which choice is best for the row player against each column?"
+      },
+      {
+        "role": "user",
+        "content": "Which row is best against each column? Use the board to show your reasoning without changing the payoff entries."
+      }
+    ],
+    "whiteboardContext": {
+      "board": {
+        "title": "Synthetic prisoner game",
+        "revision": "574c4235-38f2-448f-aacd-c30530d5b9d8",
+        "blocks": [
+          {
+            "id": "payoffs",
+            "type": "matrix",
+            "rows": [
+              [
+                "3,3",
+                "0,5"
+              ],
+              [
+                "5,0",
+                "1,1"
+              ]
+            ],
+            "rowLabels": [
+              "Cooperate",
+              "Defect"
+            ],
+            "columnLabels": [
+              "Cooperate",
+              "Defect"
+            ],
+            "label": "Payoffs: row player, column player"
+          },
+          {
+            "id": "question",
+            "type": "text",
+            "content": "Which choice is best for the row player against each column?"
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "574c4235-38f2-448f-aacd-c30530d5b9d8",
+        "blockId": "payoffs",
+        "type": "matrix",
+        "cell": {
+          "row": 1,
+          "col": 0
+        },
+        "content": "5,0",
+        "rowLabel": "Defect",
+        "columnLabel": "Cooperate"
+      }
+    },
+    "masteryContext": {
+      "topics": [
+        {
+          "id": "best-response",
+          "title": "Best responses",
+          "score": 0,
+          "mastered": false
+        }
+      ],
+      "overall": 0
+    },
+    "privateQuestionBank": {
+      "topics": [
+        {
+          "topicId": "best-response",
+          "title": "Best responses",
+          "questions": [
+            {
+              "id": "q-easy",
+              "topicId": "best-response",
+              "difficulty": "easy",
+              "question": "What does a best response maximize?",
+              "answer": "The player's own payoff for a fixed choice by the other player.",
+              "sourceIds": [
+                "game"
+              ]
+            },
+            {
+              "id": "q-medium",
+              "topicId": "best-response",
+              "difficulty": "medium",
+              "question": "Which choice is best for the row player against each column?",
+              "answer": "Defect gives 5 instead of 3 against Cooperate, and 1 instead of 0 against Defect.",
+              "sourceIds": [
+                "game"
+              ]
+            },
+            {
+              "id": "q-hard",
+              "topicId": "best-response",
+              "difficulty": "hard",
+              "question": "Why is Defect,Defect a Nash equilibrium in this game?",
+              "answer": "Neither player can improve their own payoff by deviating alone from Defect while the other stays at Defect.",
+              "sourceIds": [
+                "game"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "finishedAt": "2026-10-02T04:34:00.644Z",
+  "decision": {
+    "retained": false,
+    "reason": "Model output/timing variance prevents confident causal attribution. Fresh local thread/start removes about60ms, while model and sentence variation dominate observed firstPCM differences. One immediately consecutive candidate turn still waited on preparation. Experimental code preserved only under benchmarks; production adapter unchanged.",
+    "semanticReview": "All10 comparative replies correctly say Defect is best against both columns and retain5>3 and1>0. Original payoff matrix unchanged after each valid patch. Wording and board patch length vary, so board completion and firstPCM differences cannot be wholly attributed to setup.",
+    "meaningfulAudioCaveat": "firstMeaningfulTextMs is a text-side heuristic beyond Consider this, not time when meaningful words are heard. TTS chunks have no retained word/audio alignment; firstPCM may be introductory speech. No physical playback tested.",
+    "rpcCaveat": "Asynchronous next-thread preparation can finish after a following sample starts. Such thread/start log atMs values refer to its original send sample; only thread/start before that sample turn/start is foreground setup. This does not change text/PCM/model completion timestamps.",
+    "requests": 24,
+    "lunaGenerations": 12,
+    "ttsConnections": 12,
+    "matrixPreservationCheckedRuns": 12
+  }
+}

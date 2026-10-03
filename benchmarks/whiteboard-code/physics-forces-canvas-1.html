@@ -1,0 +1,58 @@
+<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'"><style>*{box-sizing:border-box}html,body{margin:0;width:800px;height:500px;overflow:hidden;font-family:Arial,sans-serif;background:white}#stage{position:relative;width:800px;height:500px}svg{overflow:visible}</style></head><body><main id="stage"><canvas width="800" height="500"></canvas></main><script>window.__done=false;window.__error=null;window.__texts=[];window.__hits=[];window.__draws=[];window.addEventListener('error',e=>window.__error=String(e.message).slice(0,180));
+
+function draw(ctx, hit) {
+	ctx.clearRect(0, 0, 800, 500);
+	ctx.fillStyle = "#ffffff";
+	ctx.fillRect(0, 0, 800, 500);
+	ctx.strokeStyle = "#111111";
+	ctx.fillStyle = "#111111";
+	ctx.lineWidth = 2;
+	ctx.lineCap = "round";
+	ctx.lineJoin = "round";
+	ctx.font = "18px Arial";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
+	function arrow(id, x1, y1, x2, y2, label, lx, ly, hx, hy, hw, hh) {
+		ctx.beginPath();
+		ctx.moveTo(x1, y1);
+		ctx.lineTo(x2, y2);
+		ctx.stroke();
+		const a = Math.atan2(y2 - y1, x2 - x1);
+		const len = 11;
+		ctx.beginPath();
+		ctx.moveTo(x2, y2);
+		ctx.lineTo(x2 - len * Math.cos(a - Math.PI / 6), y2 - len * Math.sin(a - Math.PI / 6));
+		ctx.moveTo(x2, y2);
+		ctx.lineTo(x2 - len * Math.cos(a + Math.PI / 6), y2 - len * Math.sin(a + Math.PI / 6));
+		ctx.stroke();
+		ctx.fillText(label, lx, ly);
+		hit(id, hx, hy, hw, hh);
+	}
+	// Horizontal surface
+	ctx.beginPath();
+	ctx.moveTo(220, 310);
+	ctx.lineTo(580, 310);
+	ctx.stroke();
+	hit("horizontal-surface", 220, 301, 360, 18);
+	// Block
+	ctx.fillStyle = "#ffffff";
+	ctx.fillRect(325, 225, 150, 70);
+	ctx.strokeRect(325, 225, 150, 70);
+	hit("block", 325, 225, 150, 70);
+	arrow("force-N", 400, 225, 400, 135, "N", 423, 170, 385, 125, 50, 105);
+	arrow("force-mg", 400, 295, 400, 375, "mg", 425, 350, 385, 290, 55, 100);
+	arrow("force-F", 475, 260, 565, 260, "F", 535, 237, 470, 220, 110, 55);
+	arrow("force-f", 325, 260, 235, 260, "f", 265, 237, 220, 220, 110, 55);
+	ctx.textAlign = "left";
+	ctx.font = "20px Arial";
+	ctx.fillText("ΣFᵧ = N − mg = 0", 220, 414);
+	hit("equation-y", 210, 394, 380, 40);
+	ctx.fillText("ΣFₓ = F − f = ma", 220, 458);
+	hit("equation-x", 210, 438, 380, 40);
+}
+
+try{const canvas=document.querySelector('canvas'),native=canvas.getContext('2d');let count=0;
+ native.fillStyle='white';native.fillRect(0,0,800,500);native.fillStyle='#243544';native.strokeStyle='#243544';native.lineWidth=2;native.font='18px Arial';
+ const ctx=new Proxy(native,{get(target,key){const v=target[key];if(typeof v!=='function')return v;return(...args)=>{if(++count>12000)throw Error('Drawing call limit');if(key==='fillText'||key==='strokeText'){const [text,x,y]=args,m=target.measureText(String(text)),fontSize=Number(target.font.match(/([0-9.]+)px/)?.[1]),transform=target.getTransform(),points=[[x-m.actualBoundingBoxLeft,y-m.actualBoundingBoxAscent],[x+m.actualBoundingBoxRight,y-m.actualBoundingBoxAscent],[x-m.actualBoundingBoxLeft,y+m.actualBoundingBoxDescent],[x+m.actualBoundingBoxRight,y+m.actualBoundingBoxDescent]].map(([x,y])=>new DOMPoint(x,y).matrixTransform(transform)),left=Math.min(...points.map(p=>p.x)),top=Math.min(...points.map(p=>p.y)),right=Math.max(...points.map(p=>p.x)),bottom=Math.max(...points.map(p=>p.y));window.__texts.push({text:String(text),x:left,y:top,width:right-left,height:bottom-top,fontSize:fontSize*Math.hypot(transform.a,transform.b)});}if(window.__draws.length<3000)window.__draws.push({op:key,args:args.map(v=>typeof v==='number'||typeof v==='string'?v:null)});return v.apply(target,args);};},set(target,key,value){target[key]=value;return true;}});
+ const hit=(id,x,y,width,height)=>{if(typeof id!=='string'||id.length>120||![x,y,width,height].every(Number.isFinite)||width<0||height<0||window.__hits.length>=2000)throw Error('Invalid hit region');window.__hits.push({id,x,y,width,height});};
+ draw(ctx,hit);window.__done=true;}catch(error){window.__error=String(error.message).slice(0,180);window.__done=true;}</script></body></html>

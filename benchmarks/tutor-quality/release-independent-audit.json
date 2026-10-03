@@ -1,0 +1,336 @@
+{
+  "reviewedAt": "2026-10-02T12:37:30.129Z",
+  "reviewer": "Independent relevance_design audit",
+  "source": "live-adaptive-release.json",
+  "sourceSha256": "786c3b10d603a3f48d86dfef557e8fd53db27917e283dd0f5a275e8f6b84f21b",
+  "providerCallsByReview": 0,
+  "productionEditsByReview": 0,
+  "providerCounts": {
+    "openai": 51,
+    "jev": 56
+  },
+  "errors": [],
+  "codeStability": {
+    "unchanged": true,
+    "inferenceFilesUnchanged": true,
+    "changedPaths": [],
+    "note": "Start/end file hashes detect net changes in the listed files; they do not prove no transient edits or loaded-module equality. The voice instruction string is frozen once per run. Browser renderer files are provenance only: the speech harness does not render UI."
+  },
+  "verdict": "Core release scenarios pass with explicit coaching and layout limitations; not an overall quality percentage.",
+  "scope": "Completed immutable synthetic tutoring session using real tutor/grading/Jev with fake STT/TTS and a fixed question bank. Exact accepted canvas packets only for visual review, not all generated candidates.",
+  "rubric": [
+    {
+      "criterion": "Proactive lead",
+      "verdict": "pass within this script",
+      "evidence": [
+        "Welcome starts a canonical question.",
+        "After submitted academic work, replies request a concrete repair or next canonical question.",
+        "Final recap identifies cell transport as the next practice priority."
+      ]
+    },
+    {
+      "criterion": "Same-problem continuity",
+      "verdict": "pass for tested switches, revisits and pause",
+      "evidence": [
+        "No missing canonical ID in adaptive answer slots.",
+        "Accepted boards track current x/z/w/y/biology targets; no old solution persists across target changes."
+      ]
+    },
+    {
+      "criterion": "Truthful feedback",
+      "verdict": "pass with independent-review limitation",
+      "evidence": [
+        "x=7 gets repair-first feedback without announcing x=4.",
+        "z, w and y complete submissions receive checked correct/unassisted grades.",
+        "One method-recap review disagrees on assistance and records no score."
+      ]
+    },
+    {
+      "criterion": "No unauthorized solution or hint",
+      "verdict": "core shortcut/hint cases pass; general-cue caveat",
+      "evidence": [
+        "After checked partial principle, answer-shortcut is server-blocked: one Jev call, zero OpenAI and no new solution board.",
+        "Three reserved hints progress from orientation to inverse-operation strategy to subtracting 3; none states the final answer or assumes the intermediate result.",
+        "The welcome board already says to use the same operation on both sides; do not claim absolutely no instructional support before a hint."
+      ]
+    },
+    {
+      "criterion": "Respectful clarification",
+      "verdict": "pass",
+      "evidence": [
+        "No-calculator request acknowledged without introducing a worked method.",
+        "Biology clarification restates task scope without giving gradient/energy criteria before the first attempt."
+      ]
+    },
+    {
+      "criterion": "Optional planning",
+      "verdict": "pass in separate narrow smoke",
+      "evidence": [
+        "Date asked once at welcome; unknown-date/weak-topic request leads straight to canonical cell practice.",
+        "Explicit refusal of more planning receives a neutral invitation to answer; no date write or repeated intake."
+      ]
+    },
+    {
+      "criterion": "Useful progression",
+      "verdict": "mixed",
+      "evidence": [
+        "Specific repair and cross-topic next steps are useful.",
+        "Late y equation and cell comparison are repeated even after successful answers; a finite fixture bank and scripted revisits constrain the test.",
+        "No bare academic acknowledgement dead-end, but this is not rich adaptive curriculum progression."
+      ]
+    }
+  ],
+  "grading": {
+    "reviewJobs": 11,
+    "providerRequests": 22,
+    "recognizedAttempts": 11,
+    "acceptedCheckedGrades": 10,
+    "rejectedReviews": 1,
+    "targetRejectedReviews": 0,
+    "persistedGradeEvents": 10,
+    "rejectedReview": {
+      "stepId": "method-recap",
+      "reason": "Both graders agree targetAttempt=true, verdict partial and reasoningSufficient=false; assistanceUsed true versus false disagrees. Recognized attempt remains, no score is awarded.",
+      "judgments": [
+        {
+          "questionId": "0cdb64a9-07b6-4222-ba14-bc16611e2727",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "partial",
+          "reasoningSufficient": false,
+          "assistanceUsed": true,
+          "answerCitationIds": [
+            "a-4978e0f474d2c81d-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "assistanceCitationIds": [
+            "h-faa95b6ea55f278b-0"
+          ],
+          "targetAttempt": true
+        },
+        {
+          "questionId": "0cdb64a9-07b6-4222-ba14-bc16611e2727",
+          "topicId": "7fafcd4cb67a69bee132bb17",
+          "sourceIds": [
+            "equation-notes"
+          ],
+          "verdict": "partial",
+          "reasoningSufficient": false,
+          "assistanceUsed": false,
+          "answerCitationIds": [
+            "a-4978e0f474d2c81d-0"
+          ],
+          "sourceCitationIds": [
+            "s-697fcd0044d150c6-0"
+          ],
+          "assistanceCitationIds": [],
+          "targetAttempt": true
+        }
+      ]
+    },
+    "finalApplicationState": {
+      "overall": 82,
+      "topics": [
+        {
+          "id": "7fafcd4cb67a69bee132bb17",
+          "title": "Equations",
+          "score": 100,
+          "mastered": true
+        },
+        {
+          "id": "590da97ebea25bdca1ead597",
+          "title": "Cell transport",
+          "score": 63,
+          "mastered": false
+        }
+      ]
+    },
+    "interpretation": "Application policy scores are not teaching quality percentages, independent learning measurements, or proof of durable mastery."
+  },
+  "boards": {
+    "acceptedPackets": 13,
+    "viewportReplays": 26,
+    "renderErrors": [],
+    "readOnly": true,
+    "manualImagesInspected": 30,
+    "manualVerdict": "All 13 accepted updates are factually consistent with the synthetic materials and current public target. All desktop/mobile views are readable without malformed math or overlapping content. Four tables intentionally need horizontal scrolling; all 36 cells retain whole ordinary words and 16px body text.",
+    "packets": [
+      {
+        "index": 1,
+        "stepId": "welcome",
+        "boardSha256": "8079e8860ca0f27819ef7853da33b989b8fe25923c5ae3481d40a3c8add42d01",
+        "verdict": "usable",
+        "notes": "Correct unsolved equation and a general equality cue. The cue is arguably instructional support before the Hint button, but gives no operation sequence or answer.",
+        "desktop": "renders/release-accepted-desktop-01-welcome.png",
+        "mobile": "renders/release-accepted-mobile-01-welcome.png"
+      },
+      {
+        "index": 2,
+        "stepId": "partial-step",
+        "boardSha256": "51c486f47840f81ef12a182575ad91cf6a7e413b83e4189f73498cd9decddd0a",
+        "verdict": "usable",
+        "notes": "Correct unchanged unsolved equation plus an actionable revision prompt; no solution.",
+        "desktop": "renders/release-accepted-desktop-02-partial-step.png",
+        "mobile": "renders/release-accepted-mobile-02-partial-step.png"
+      },
+      {
+        "index": 3,
+        "stepId": "next-equation",
+        "boardSha256": "c959a12ad92ba059859cea33b032441c6675e5973f4a0e9ef4e6f2a5d292c2ac",
+        "verdict": "usable",
+        "notes": "Correct unsolved z equation; corresponds to current canonical question.",
+        "desktop": "renders/release-accepted-desktop-03-next-equation.png",
+        "mobile": "renders/release-accepted-mobile-03-next-equation.png"
+      },
+      {
+        "index": 4,
+        "stepId": "independent-equation",
+        "boardSha256": "67e9a315d940ba90ce705be7ac36420286b85454f61157a3270fb0bb105752bd",
+        "verdict": "usable",
+        "notes": "Correct unsolved w equation after feedback on z; prior solution is absent.",
+        "desktop": "renders/release-accepted-desktop-04-independent-equation.png",
+        "mobile": "renders/release-accepted-mobile-04-independent-equation.png"
+      },
+      {
+        "index": 5,
+        "stepId": "biology-partial",
+        "boardSha256": "1906a907f5cdeeb5b831bbd6f8a0293d10e476cd02d6716e476e7371a762361c",
+        "verdict": "usable",
+        "notes": "Sparse three-row comparison records only the membrane idea already submitted by the student; remaining comparison cells intentionally blank.",
+        "desktop": "renders/release-accepted-desktop-05-biology-partial.png",
+        "mobile": "renders/release-accepted-mobile-05-biology-partial.png"
+      },
+      {
+        "index": 6,
+        "stepId": "biology-full",
+        "boardSha256": "6072caf2c4d2c8c2c684a09dd9590efd6fbb36ce723f1f00b050fd82080e36ee",
+        "verdict": "usable",
+        "notes": "Correct unsolved y equation matching the newly asked question.",
+        "desktop": "renders/release-accepted-desktop-06-biology-full.png",
+        "mobile": "renders/release-accepted-mobile-06-biology-full.png"
+      },
+      {
+        "index": 7,
+        "stepId": "resume-study",
+        "boardSha256": "33997e372955d2b59167b55d1faa7c52c8c802f5b693c1006deca85f63f1f453",
+        "verdict": "usable",
+        "notes": "Correct unsolved w equation matching the explicit resumed target.",
+        "desktop": "renders/release-accepted-desktop-07-resume-study.png",
+        "mobile": "renders/release-accepted-mobile-07-resume-study.png"
+      },
+      {
+        "index": 8,
+        "stepId": "third-equation",
+        "boardSha256": "72a9b3d402daba6de92080063537b42fc6afe9165573aa04f1960f3fb20004bf",
+        "verdict": "usable",
+        "notes": "Correct unsolved y equation matching the next question.",
+        "desktop": "renders/release-accepted-desktop-08-third-equation.png",
+        "mobile": "renders/release-accepted-mobile-08-third-equation.png"
+      },
+      {
+        "index": 9,
+        "stepId": "ask-next",
+        "boardSha256": "4afb66ecc85d76fff7fce475ee670e11f0e9927cca7958f1ebd30fdf2fcf7afe",
+        "verdict": "usable",
+        "notes": "Same unsolved y equation; no stale w or x solution.",
+        "desktop": "renders/release-accepted-desktop-09-ask-next.png",
+        "mobile": "renders/release-accepted-mobile-09-ask-next.png"
+      },
+      {
+        "index": 10,
+        "stepId": "fourth-equation",
+        "boardSha256": "5e2ebb0afffaf1c73e4f094090e7176b62c73d4016c4c5af32e875f002835601",
+        "verdict": "usable",
+        "notes": "Biology table matches the resumed biology question. Membrane role and detail are factual but redundant; this topic was already attempted.",
+        "desktop": "renders/release-accepted-desktop-10-fourth-equation.png",
+        "mobile": "renders/release-accepted-mobile-10-fourth-equation.png"
+      },
+      {
+        "index": 11,
+        "stepId": "explain-back",
+        "boardSha256": "5a02f9ecc72e79e5856cb287a1a71c31ba10a95a85da8741036efb109960ac0f",
+        "verdict": "usable",
+        "notes": "Correct unsolved y equation matching the next canonical question.",
+        "desktop": "renders/release-accepted-desktop-11-explain-back.png",
+        "mobile": "renders/release-accepted-mobile-11-explain-back.png"
+      },
+      {
+        "index": 12,
+        "stepId": "transfer-response",
+        "boardSha256": "13ca9e96ff8313351c29894cbd99cf3a1d016f687676099b37ea9f9e1c34cad0",
+        "verdict": "usable",
+        "notes": "Blank comparison for the newly resumed cell question. Long column header and all cells remain available by native horizontal scrolling.",
+        "desktop": "renders/release-accepted-desktop-12-transfer-response.png",
+        "mobile": "renders/release-accepted-mobile-12-transfer-response.png"
+      },
+      {
+        "index": 13,
+        "stepId": "final-review",
+        "boardSha256": "1871f82e8bed07492f5fa1647adc081c69628b3b886cce87371fdc577f910e44",
+        "verdict": "usable",
+        "notes": "Factual completed comparison: passive diffusion down the gradient without energy input; active transport against the gradient using energy; membrane controls crossing. Role/process rows make some blank cells appropriate. Final paragraph is wordy and desktop energy column narrow, but content remains legible.",
+        "desktop": "renders/release-accepted-desktop-13-final-review.png",
+        "mobile": "renders/release-accepted-mobile-13-final-review.png"
+      }
+    ],
+    "componentEvidence": "release-board-audit.json",
+    "scrollEvidence": "release-matrix-scroll-audit.json",
+    "matrixCount": 4,
+    "matrixCellCount": 36,
+    "minimumMatrixBodyFont": 16,
+    "wholeWordFragments": true,
+    "fullAppEvidence": "../../artifacts/hint-presence/results.json",
+    "fullAppNamedCheckGroups": 18,
+    "fullAppScope": "Existing exact accepted matrices from the prior verified cohort in the actual 258px study frame, plus numeric 8x10, hint/presence/dock/close controls; not a new live conversation. Release component replay uses its own exact four tables at 390px.",
+    "qualifications": [
+      "Horizontal navigation is necessary to compare wide tables on a phone; row labels move off screen rather than stay sticky.",
+      "The completed final table is sparse and wordy, with a narrow desktop energy column. Legibility passes; this is not exemplary information design.",
+      "Headers are secondary small muted labels; body text remains 16px on mobile.",
+      "Accepted-board review does not imply every generated candidate is usable: the captured session includes one invalid candidate that was not displayed."
+    ]
+  },
+  "planning": {
+    "source": "live-planning-release.json",
+    "sha256": "ec363e620d24eb94816899fa2f07aa01fb349b9bc6e84cff6883d23db935c1b6",
+    "providerCounts": {
+      "openai": 3,
+      "jev": 5
+    },
+    "replies": [
+      {
+        "stepId": "welcome",
+        "text": "We can jump into quiz practice. When is your test?"
+      },
+      {
+        "stepId": "unknown-date-priority",
+        "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+      },
+      {
+        "stepId": "decline-more-planning",
+        "text": "Absolutely—go ahead and answer the cell transport question in your own words. Take your time."
+      }
+    ],
+    "manualCriteria": "No repeated intake/date demand after unknown date; respects weak-topic priority and planning refusal; no answer giveaway. All pass for these two student requests.",
+    "limit": "One short smoke, not a sustained planning or calendar study."
+  },
+  "limits": [
+    "Synthetic student and accelerated virtual clock; no human learning outcome, real microphone recognition, or actual ElevenLabs playback measured.",
+    "Fixed synthetic sources and small canonical question bank limit subject and curriculum breadth.",
+    "Earlier failed cohorts remain preserved and are not overwritten by this successful checkpoint.",
+    "Two independent graders can still disagree semantically; no score is awarded on this captured disagreement.",
+    "A pass on these cases does not establish universal grounding, hint usefulness or mastery fairness."
+  ],
+  "codeHashes": {
+    "src/Whiteboard.jsx": "d1c1d0b2416a599499c4e025d8e97c12f68afeb8d771d49619646850973439ca",
+    "src/board-reading.css": "ff3b104ed17d76c1f690014a1a4caaa1eb867cebe5c8142750d69eeaa7b433c0",
+    "shared/equation-chain.mjs": "e81cbd322bba45365a5fa38f20825e3e75e6811f2346530eff0a4f9fbea7d572",
+    "shared/flow-layout.mjs": "acd14a26c34a4af1dd706d77730e6d967bac36f35f28ed62633c9ccce7b8d1e7",
+    "src/TeachingScene.jsx": "b37ca1366e3156f68a03a961c2ceeb5085dfab33612d062c268f2cfbea384912",
+    "src/teaching-scene.css": "d6877fff839ef8c45780ffffc5aa273751d1df8102ac15701379361f39e8cc64",
+    "shared/board-rich-text.mjs": "2a34f08252dd15f81e7eaff1137085f5ca999e11e5e35fafa2ca9d79355f95cf"
+  }
+}

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Extensive-form game tree with P1 at root, P2 at each second-level node, and four payoff pairs">
+  <title>Game tree</title>
+  <desc>P1 chooses left or right. Each resulting P2 node chooses l or r, leading to the specified payoff pairs.</desc>
+  <g id="game-tree" fill="none" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g id="branch-left">
+      <line id="branch-left-line" x1="400" y1="86" x2="220" y2="204"/>
+      <text id="branch-left-label" x="300" y="139" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">left</text>
+    </g>
+    <g id="branch-right">
+      <line id="branch-right-line" x1="400" y1="86" x2="580" y2="204"/>
+      <text id="branch-right-label" x="500" y="139" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">right</text>
+    </g>
+    <g id="left-action-l">
+      <line id="left-action-l-line" x1="212" y1="236" x2="120" y2="366"/>
+      <text id="left-action-l-label" x="153" y="302" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">l</text>
+    </g>
+    <g id="left-action-r">
+      <line id="left-action-r-line" x1="228" y1="236" x2="320" y2="366"/>
+      <text id="left-action-r-label" x="287" y="302" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">r</text>
+    </g>
+    <g id="right-action-l">
+      <line id="right-action-l-line" x1="572" y1="236" x2="480" y2="366"/>
+      <text id="right-action-l-label" x="513" y="302" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">l</text>
+    </g>
+    <g id="right-action-r">
+      <line id="right-action-r-line" x1="588" y1="236" x2="680" y2="366"/>
+      <text id="right-action-r-label" x="647" y="302" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">r</text>
+    </g>
+    <g id="root" fill="#ffffff">
+      <circle id="root-node" cx="400" cy="70" r="16"/>
+      <text id="root-player" x="400" y="39" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">P1</text>
+    </g>
+    <g id="left" fill="#ffffff">
+      <circle id="left-node" cx="220" cy="220" r="16"/>
+      <text id="left-player" x="220" y="260" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">P2</text>
+    </g>
+    <g id="right" fill="#ffffff">
+      <circle id="right-node" cx="580" cy="220" r="16"/>
+      <text id="right-player" x="580" y="260" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">P2</text>
+    </g>
+    <g id="ll" fill="#ffffff">
+      <circle id="ll-node" cx="120" cy="382" r="8"/>
+      <text id="ll-payoff" x="120" y="414" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">(3,2)</text>
+    </g>
+    <g id="lr" fill="#ffffff">
+      <circle id="lr-node" cx="320" cy="382" r="8"/>
+      <text id="lr-payoff" x="320" y="414" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">(0,0)</text>
+    </g>
+    <g id="rl" fill="#ffffff">
+      <circle id="rl-node" cx="480" cy="382" r="8"/>
+      <text id="rl-payoff" x="480" y="414" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">(1,1)</text>
+    </g>
+    <g id="rr" fill="#ffffff">
+      <circle id="rr-node" cx="680" cy="382" r="8"/>
+      <text id="rr-payoff" x="680" y="414" fill="#202020" stroke="none" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">(2,3)</text>
+    </g>
+  </g>
+</svg>

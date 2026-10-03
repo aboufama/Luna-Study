@@ -1,0 +1,25 @@
+.board-embedded-math{display:inline-block;max-width:100%;vertical-align:baseline;white-space:normal}
+.board-embedded-math .katex{font-size:1.08em}
+.board-embedded-math.is-display{display:block;overflow-x:auto}
+.whiteboard.is-readonly .board-block,.whiteboard.is-readonly .board-cell,.whiteboard.is-readonly .board-shape{cursor:default}
+.whiteboard.is-readonly .board-content{user-select:text}
+.whiteboard.is-readonly .board-math,.whiteboard.is-readonly .board-inline-math,.whiteboard.is-readonly .board-label,.whiteboard.is-readonly .board-axis-text{pointer-events:auto}
+.whiteboard.is-readonly .board-shape:hover{color:inherit}
+.whiteboard .board-close{display:grid;place-items:center;padding:0;line-height:1;aspect-ratio:1;border-radius:50%;flex-shrink:0}
+.whiteboard .board-close>svg{display:block;margin:0;transform:none;flex-shrink:0}
+.board-flow-diagram .scene-object[data-scene-object^="edge-label-"] .scene-writing{background:white;padding:3px 5px;text-align:center;border-radius:4px}
+.board-flow-diagram .scene-object[data-scene-object^="node-"] rect{fill:#fff;stroke:#d8dfe4;stroke-width:1.2px}
+.board-flow-diagram .scene-object[data-scene-object^="node-"] .scene-writing{font-weight:450}
+.board-flow-diagram .scene-tone-accent rect{fill:#f1f7f7;stroke:#a9c6cc}
+.board-flow-diagram{margin:0 auto;width:min(var(--flow-natural-width),var(--stage-content-max-width,750px));max-width:100%}
+.board-flow-diagram .teaching-scene-world{min-width:min(var(--flow-world-width),640px)}
+/* Long worked chains retain readable type and wrap between complete steps. */
+.board-equation-chain{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 12px;max-width:100%}
+.board-equation-step{display:block;min-width:0;max-width:100%;overflow-x:auto}
+.board-matrix-scroll{outline-offset:3px}
+.board-matrix-scroll-note{position:sticky;left:0;width:100%;margin:0 0 10px;font-size:12px;color:#858d96;text-align:center}
+@media(max-width:520px){
+  .board-matrix .is-prose-column .board-cell{min-width:180px;width:180px}
+  .board-matrix .is-prose-column .board-label{overflow-wrap:break-word;word-break:normal}
+}
+.board-equation-step>.katex-display{margin:0}

@@ -1,0 +1,77 @@
+{
+  "title": "Forces on a block",
+  "revision": "db8db8d4-b043-426a-918f-010533e4f264",
+  "blocks": [
+    {
+      "id": "world",
+      "type": "scene",
+      "width": 800,
+      "height": 500,
+      "objects": [
+        {
+          "id": "surface",
+          "type": "line",
+          "x1": 120,
+          "y1": 300,
+          "x2": 680,
+          "y2": 300
+        },
+        {
+          "id": "block",
+          "type": "rect",
+          "x": 340,
+          "y": 220,
+          "width": 120,
+          "height": 80,
+          "label": "block"
+        },
+        {
+          "id": "force-N",
+          "type": "arrow",
+          "x1": 400,
+          "y1": 220,
+          "x2": 400,
+          "y2": 120,
+          "label": "N"
+        },
+        {
+          "id": "force-mg",
+          "type": "arrow",
+          "x1": 400,
+          "y1": 300,
+          "x2": 400,
+          "y2": 400,
+          "label": "mg"
+        },
+        {
+          "id": "force-F",
+          "type": "arrow",
+          "x1": 460,
+          "y1": 260,
+          "x2": 590,
+          "y2": 260,
+          "label": "F"
+        },
+        {
+          "id": "force-f",
+          "type": "arrow",
+          "x1": 340,
+          "y1": 260,
+          "x2": 210,
+          "y2": 260,
+          "label": "f"
+        }
+      ]
+    },
+    {
+      "id": "eq-y",
+      "type": "latex",
+      "content": "\\Sigma F_y = N - mg = 0"
+    },
+    {
+      "id": "eq-x",
+      "type": "latex",
+      "content": "\\Sigma F_x = F - f = ma"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "startedAt": "2026-10-02T07:32:48.751Z",
+  "finishedAt": "2026-10-02T07:33:17.372Z",
+  "budget": {
+    "maxPaidHttpRequests": 32,
+    "maxPerProvider": {
+      "openai": 12,
+      "jev": 20
+    },
+    "used": 20,
+    "openai": 8,
+    "jev": 12
+  },
+  "runs": [
+    {
+      "round": 1,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "realIntentRecognizedUnassistedAnswer": true,
+        "twoIndependentRealGradesAgreed": true,
+        "masteryPersistedExactlyOnce": true
+      },
+      "failedChecks": [],
+      "decision": {
+        "reason": "validated-agreement",
+        "stage": "comparison",
+        "verdict": "correct",
+        "questionId": "1f20f83b-b437-4f1e-9d92-e7d575183f40",
+        "atMs": 13539.8
+      },
+      "initialTextMs": 1541.9,
+      "initialBoardMs": 2313.9,
+      "gradeAppliedFromInitialRequestMs": 13542,
+      "trialElapsedMs": 13748,
+      "gradeCalls": [
+        {
+          "questionId": "1f20f83b-b437-4f1e-9d92-e7d575183f40",
+          "answer": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+          "fullHistoryCount": 16,
+          "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+          "hasEarlyPreference": true,
+          "real": true,
+          "result": {
+            "verdict": "correct",
+            "unassisted": true,
+            "checked": true
+          }
+        }
+      ],
+      "storedEvents": [
+        {
+          "id": "f5080639-7719-4cd5-bb33-f090c1cb21b6",
+          "questionId": "1f20f83b-b437-4f1e-9d92-e7d575183f40",
+          "questionKey": "2b8e5a1d31f9e2ce2a2b4a5939b521a9689a5fa0f28dac44222aefa7ef29bfa9",
+          "attempt": 1,
+          "topicId": "7731478df957e21ba2d20d0d",
+          "topicTitle": "Strict Nash equilibria",
+          "difficulty": "medium",
+          "verdict": "correct",
+          "firstAttempt": true,
+          "unassisted": true,
+          "checked": true
+        }
+      ],
+      "strictNashScore": 20,
+      "publicOverallScore": 3,
+      "estimatedUsd": 0.0322121,
+      "estimatePartial": false,
+      "exactBilledUsd": null
+    },
+    {
+      "round": 2,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": false,
+        "firstAttemptUnassisted": false,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "realIntentRecognizedUnassistedAnswer": true,
+        "twoIndependentRealGradesAgreed": false,
+        "masteryPersistedExactlyOnce": false
+      },
+      "failedChecks": [
+        "answerEligibleExactlyOnce",
+        "firstAttemptUnassisted",
+        "twoIndependentRealGradesAgreed",
+        "masteryPersistedExactlyOnce"
+      ],
+      "decision": {
+        "reason": "identity-mismatch",
+        "stage": "second-check",
+        "questionId": "d93dc7e0-17f0-45ac-868f-aa265d0f8e99",
+        "atMs": 14569.1
+      },
+      "initialTextMs": 1645.9,
+      "initialBoardMs": 2575,
+      "gradeAppliedFromInitialRequestMs": null,
+      "trialElapsedMs": 14775,
+      "gradeCalls": [
+        {
+          "questionId": "d93dc7e0-17f0-45ac-868f-aa265d0f8e99",
+          "answer": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+          "fullHistoryCount": 16,
+          "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+          "hasEarlyPreference": true,
+          "real": true,
+          "result": null
+        }
+      ],
+      "storedEvents": [],
+      "strictNashScore": 0,
+      "publicOverallScore": 0,
+      "estimatedUsd": 0.032439852,
+      "estimatePartial": false,
+      "exactBilledUsd": null
+    }
+  ],
+  "passed": 1,
+  "total": 2,
+  "estimatedUsd": 0.064651952,
+  "estimatePartial": false,
+  "exactBilledUsd": null
+}

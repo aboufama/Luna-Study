@@ -1,0 +1,1904 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:22:04.794Z",
+  "liveProviders": false,
+  "model": "gpt-5.6-terra",
+  "reasoning": "low",
+  "budget": {
+    "maximumPaidRequests": 10,
+    "paidRequests": 0
+  },
+  "instructions": {
+    "baseline": {
+      "chars": 11945,
+      "sha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc"
+    },
+    "formatOnly": {
+      "chars": 11999,
+      "sha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "replacements": [
+        [
+          "{\"type\":\"matrix\",\"rows\":[[\"cell LaTeX\"]],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}",
+          "{\"type\":\"matrix\",\"size\":[1,1],\"cells\":[{\"row\":0,\"col\":0,\"value\":\"cell LaTeX\"}],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}"
+        ],
+        [
+          "for an 8-by-10 game, provide exactly 8 rows of 10 empty cells. Use \"\" for unspecified cells;",
+          "for an 8-by-10 game, provide size:[8,10] and cells:[]. Omit unspecified cells from the required cells array;"
+        ]
+      ]
+    },
+    "production": {
+      "chars": 11955,
+      "sha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b"
+    }
+  },
+  "runs": [
+    {
+      "id": "biology-cell-production-final-1",
+      "scenario": "biology-cell",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-biology-cell",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit biology rendering fixture\",\"compartments\":[\"cell membrane\",\"cytoplasm\",\"nucleus\"],\"containment\":\"nucleus inside cytoplasm, cytoplasm inside cell membrane\",\"note\":\"Membrane: selective boundary\"}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "biology-cell",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-biology-cell"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+          }
+        ],
+        "currentProblem": {
+          "title": "biology-cell",
+          "request": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "a572e1987563b2c95b76253dbd759b7b9cb784d69e4e9a2a9eabb0ac0748eeda",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"biology-cell\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 7.3,
+        "firstSpokenMs": 7.5,
+        "generationCompleteMs": 8,
+        "boardReadyMs": 9.3,
+        "firstSyntheticAudioMs": 108.7
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1602,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "biology-cell",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 7,
+          "totalMs": 9,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "biology-cell",
+        "revision": "d18b7b69-745d-4b17-b7f8-f39a0e5236e9",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "biology-cell",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 342,
+      "wireBoardBytes": 288,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:04.906Z"
+    },
+    {
+      "id": "algebra-steps-production-final-1",
+      "scenario": "algebra-steps",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-algebra-steps",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit requested worked example\",\"steps\":[\"2x + 3 = 11\",\"2x = 8\",\"x = 4\"],\"operations\":[\"subtract 3 from both sides\",\"divide both sides by 2\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "algebra-steps",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-algebra-steps"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+          }
+        ],
+        "currentProblem": {
+          "title": "algebra-steps",
+          "request": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "2300666b8285e216bf7bde2f435e29eab92866ddc4de4fc60404403c42e0135f",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"algebra-steps\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.5,
+        "firstSpokenMs": 0.6,
+        "generationCompleteMs": 0.7,
+        "boardReadyMs": 0.9,
+        "firstSyntheticAudioMs": 102.2
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1609,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "algebra-steps",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 0,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "algebra-steps",
+        "revision": "e0fbcb51-4c37-4b61-abc1-e50ebbc81d83",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "algebra-steps",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 343,
+      "wireBoardBytes": 289,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:05.010Z"
+    },
+    {
+      "id": "physics-forces-production-final-1",
+      "scenario": "physics-forces",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-physics-forces",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit mechanics rendering fixture\",\"objects\":[\"block\",\"horizontal surface\"],\"forces\":{\"N\":\"up\",\"mg\":\"down\",\"F\":\"right\",\"f\":\"left\"},\"equations\":[\"ΣFᵧ = N − mg = 0\",\"ΣFₓ = F − f = ma\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "physics-forces",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-physics-forces"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+          }
+        ],
+        "currentProblem": {
+          "title": "physics-forces",
+          "request": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "e7ec799b4dcea0972f97e43f8cab618ab222bdc31f6ae280e4b9e9fa37447011",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"physics-forces\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.5,
+        "firstSpokenMs": 0.5,
+        "generationCompleteMs": 0.6,
+        "boardReadyMs": 0.8,
+        "firstSyntheticAudioMs": 102
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1604,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "physics-forces",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 0,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "physics-forces",
+        "revision": "c2217bad-94f6-4c13-b1d5-955455683b18",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "physics-forces",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 344,
+      "wireBoardBytes": 290,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:05.113Z"
+    },
+    {
+      "id": "grammar-annotation-production-final-1",
+      "scenario": "grammar-annotation",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grammar-annotation",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit grammar rendering fixture\",\"sentence\":\"Although it was raining, Maya walked to class.\",\"clauses\":[{\"id\":\"dependent\",\"text\":\"Although it was raining\",\"label\":\"dependent clause\"},{\"id\":\"main\",\"text\":\"Maya walked to class.\",\"label\":\"main clause\"}]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "grammar-annotation",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grammar-annotation"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+          }
+        ],
+        "currentProblem": {
+          "title": "grammar-annotation",
+          "request": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "22d8e4e0a5eecdae34f1c8e00f265683a32da4394928a401c7c2c7fb5e951941",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"grammar-annotation\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.7,
+        "firstSpokenMs": 0.7,
+        "generationCompleteMs": 0.8,
+        "boardReadyMs": 1,
+        "firstSyntheticAudioMs": 102.3
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1840,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "grammar-annotation",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "grammar-annotation",
+        "revision": "363274f2-5421-4898-8939-20b5729de12a",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "grammar-annotation",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 348,
+      "wireBoardBytes": 294,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:05.217Z"
+    },
+    {
+      "id": "object-patch-production-final-1",
+      "scenario": "object-patch",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-object-patch",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Same established scene\",\"targetId\":\"note\",\"currentObject\":{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},\"change\":{\"y\":52}}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "object-patch",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-object-patch"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Keep this exact physics board visible. Change only object note: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+          }
+        ],
+        "currentProblem": {
+          "title": "object-patch",
+          "request": "Keep this exact physics board visible. Change only object note: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+        },
+        "whiteboardContext": {
+          "visible": true,
+          "board": {
+            "title": "physics-forces",
+            "revision": "c2217bad-94f6-4c13-b1d5-955455683b18",
+            "blocks": [
+              {
+                "id": "scene",
+                "type": "scene",
+                "width": 800,
+                "height": 500,
+                "objects": [
+                  {
+                    "id": "note",
+                    "type": "text",
+                    "x": 40,
+                    "y": 40,
+                    "width": 700,
+                    "height": 80,
+                    "text": "Offline rendering fixture"
+                  },
+                  {
+                    "id": "frame",
+                    "type": "rect",
+                    "x": 30,
+                    "y": 30,
+                    "width": 740,
+                    "height": 110
+                  }
+                ]
+              }
+            ]
+          },
+          "title": "physics-forces",
+          "text": "Offline rendering fixture"
+        }
+      },
+      "inputSha256": "5592d2fab71e59c2c87b5a2cbc85fd498f947d1e79e7c135a24c1a7f1ae91b2d",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"physics-forces\",\"mode\":\"patch\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":52,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1,
+        "firstSpokenMs": 1.1,
+        "generationCompleteMs": 1.2,
+        "boardReadyMs": 1.8,
+        "firstSyntheticAudioMs": 102.4
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true,
+        "priorObjectIdsRetained": true,
+        "onlyTargetChanged": true,
+        "patchNotReplacement": true,
+        "requestedPosition": true,
+        "patchIsSparse": true
+      },
+      "inputBytes": 1746,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "physics-forces",
+          "mode": "patch",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 52,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "physics-forces",
+        "revision": "8f814962-4b46-411f-8b4e-81406f728cb6",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 52,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "physics-forces",
+        "mode": "patch",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 52,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 274,
+      "wireBoardBytes": 220,
+      "requiresManualVisualReview": true,
+      "objectDiff": [
+        {
+          "id": "note",
+          "preserved": true,
+          "unchanged": false
+        },
+        {
+          "id": "frame",
+          "preserved": true,
+          "unchanged": true
+        }
+      ],
+      "finishedAt": "2026-10-02T08:22:05.325Z"
+    },
+    {
+      "id": "biology-cell-production-final-2",
+      "scenario": "biology-cell",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-biology-cell",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit biology rendering fixture\",\"compartments\":[\"cell membrane\",\"cytoplasm\",\"nucleus\"],\"containment\":\"nucleus inside cytoplasm, cytoplasm inside cell membrane\",\"note\":\"Membrane: selective boundary\"}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "biology-cell",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-biology-cell"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+          }
+        ],
+        "currentProblem": {
+          "title": "biology-cell",
+          "request": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "a572e1987563b2c95b76253dbd759b7b9cb784d69e4e9a2a9eabb0ac0748eeda",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"biology-cell\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1.3,
+        "firstSpokenMs": 1.3,
+        "generationCompleteMs": 1.6,
+        "boardReadyMs": 2,
+        "firstSyntheticAudioMs": 102.2
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1602,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "biology-cell",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 2,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "biology-cell",
+        "revision": "dfc7b140-e43d-4b0c-a27e-bae1ef080335",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "biology-cell",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 342,
+      "wireBoardBytes": 288,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:05.432Z"
+    },
+    {
+      "id": "algebra-steps-production-final-2",
+      "scenario": "algebra-steps",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-algebra-steps",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit requested worked example\",\"steps\":[\"2x + 3 = 11\",\"2x = 8\",\"x = 4\"],\"operations\":[\"subtract 3 from both sides\",\"divide both sides by 2\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "algebra-steps",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-algebra-steps"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+          }
+        ],
+        "currentProblem": {
+          "title": "algebra-steps",
+          "request": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "2300666b8285e216bf7bde2f435e29eab92866ddc4de4fc60404403c42e0135f",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"algebra-steps\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1,
+        "firstSpokenMs": 1.1,
+        "generationCompleteMs": 1.2,
+        "boardReadyMs": 1.5,
+        "firstSyntheticAudioMs": 101.8
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1609,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "algebra-steps",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "algebra-steps",
+        "revision": "2f0c62f0-6163-4d0a-8c79-dfadfac911db",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "algebra-steps",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 343,
+      "wireBoardBytes": 289,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:05.536Z"
+    },
+    {
+      "id": "physics-forces-production-final-2",
+      "scenario": "physics-forces",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-physics-forces",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit mechanics rendering fixture\",\"objects\":[\"block\",\"horizontal surface\"],\"forces\":{\"N\":\"up\",\"mg\":\"down\",\"F\":\"right\",\"f\":\"left\"},\"equations\":[\"ΣFᵧ = N − mg = 0\",\"ΣFₓ = F − f = ma\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "physics-forces",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-physics-forces"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+          }
+        ],
+        "currentProblem": {
+          "title": "physics-forces",
+          "request": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "e7ec799b4dcea0972f97e43f8cab618ab222bdc31f6ae280e4b9e9fa37447011",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"physics-forces\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1.2,
+        "firstSpokenMs": 1.2,
+        "generationCompleteMs": 1.4,
+        "boardReadyMs": 1.8,
+        "firstSyntheticAudioMs": 102.6
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1604,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "physics-forces",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "physics-forces",
+        "revision": "2229f784-f028-4a53-b38e-5640915367e5",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "physics-forces",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 344,
+      "wireBoardBytes": 290,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:05.642Z"
+    },
+    {
+      "id": "grammar-annotation-production-final-2",
+      "scenario": "grammar-annotation",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grammar-annotation",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit grammar rendering fixture\",\"sentence\":\"Although it was raining, Maya walked to class.\",\"clauses\":[{\"id\":\"dependent\",\"text\":\"Although it was raining\",\"label\":\"dependent clause\"},{\"id\":\"main\",\"text\":\"Maya walked to class.\",\"label\":\"main clause\"}]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "grammar-annotation",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grammar-annotation"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+          }
+        ],
+        "currentProblem": {
+          "title": "grammar-annotation",
+          "request": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "22d8e4e0a5eecdae34f1c8e00f265683a32da4394928a401c7c2c7fb5e951941",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"grammar-annotation\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1.9,
+        "firstSpokenMs": 1.9,
+        "generationCompleteMs": 2.1,
+        "boardReadyMs": 2.7,
+        "firstSyntheticAudioMs": 102.7
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1840,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "grammar-annotation",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 2,
+          "totalMs": 2,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "grammar-annotation",
+        "revision": "de77a65d-f277-4e24-853b-444a967467a4",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "grammar-annotation",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 348,
+      "wireBoardBytes": 294,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:05.749Z"
+    },
+    {
+      "id": "object-patch-production-final-2",
+      "scenario": "object-patch",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-object-patch",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Same established scene\",\"targetId\":\"note\",\"currentObject\":{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},\"change\":{\"y\":52}}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "object-patch",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-object-patch"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Keep this exact physics board visible. Change only object note: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+          }
+        ],
+        "currentProblem": {
+          "title": "object-patch",
+          "request": "Keep this exact physics board visible. Change only object note: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+        },
+        "whiteboardContext": {
+          "visible": true,
+          "board": {
+            "title": "physics-forces",
+            "revision": "2229f784-f028-4a53-b38e-5640915367e5",
+            "blocks": [
+              {
+                "id": "scene",
+                "type": "scene",
+                "width": 800,
+                "height": 500,
+                "objects": [
+                  {
+                    "id": "note",
+                    "type": "text",
+                    "x": 40,
+                    "y": 40,
+                    "width": 700,
+                    "height": 80,
+                    "text": "Offline rendering fixture"
+                  },
+                  {
+                    "id": "frame",
+                    "type": "rect",
+                    "x": 30,
+                    "y": 30,
+                    "width": 740,
+                    "height": 110
+                  }
+                ]
+              }
+            ]
+          },
+          "title": "physics-forces",
+          "text": "Offline rendering fixture"
+        }
+      },
+      "inputSha256": "ab520865c85e66c805475e14e32cc030def7c4519420e823be9b288c1e2b6f18",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"physics-forces\",\"mode\":\"patch\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":52,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 3.1,
+        "firstSpokenMs": 3.3,
+        "generationCompleteMs": 4,
+        "boardReadyMs": 4.6,
+        "firstSyntheticAudioMs": 104.8
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true,
+        "priorObjectIdsRetained": true,
+        "onlyTargetChanged": true,
+        "patchNotReplacement": true,
+        "requestedPosition": true,
+        "patchIsSparse": true
+      },
+      "inputBytes": 1746,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "physics-forces",
+          "mode": "patch",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 52,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 2,
+          "totalMs": 3,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "physics-forces",
+        "revision": "3759600d-fe5f-4c56-8cf1-1bffc003c652",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 52,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "physics-forces",
+        "mode": "patch",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 52,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 274,
+      "wireBoardBytes": 220,
+      "requiresManualVisualReview": true,
+      "objectDiff": [
+        {
+          "id": "note",
+          "preserved": true,
+          "unchanged": false
+        },
+        {
+          "id": "frame",
+          "preserved": true,
+          "unchanged": true
+        }
+      ],
+      "finishedAt": "2026-10-02T08:22:05.858Z"
+    }
+  ],
+  "methodology": {
+    "pairs": "Three paired identical-input blank8×10 requests. Alternating baseline/compact order. Both use the full saved baseline instructions; only two matrix wire-syntax fragments change. Current production prompt is used only for separate generic scene cases.",
+    "clock": "Prepared context through production OpenAI streaming adapter/decoder and canonical board merge. Shared provider lock acquisition excluded. Browser render is measured separately offline. No STT, Jev, retrieval or actual ElevenLabs request.",
+    "syntheticAudio": "Production speech text buffer plus fixed100ms timer. This is a synthetic dispatch marker, not an estimate of real ElevenLabs latency.",
+    "continuity": "Canonical question ID and exact spoken wording are checked; no grade is inferred from drawing. Full live routing, grading and cancellation are verified by separate production lifecycle tests.",
+    "patch": "One real object-update request on the previously generated physics scene; unchanged object IDs/content are compared after production merging.",
+    "finalFollowup": "Two rounds of the same four public subject fixtures and same sparse physics-object edit after prompt and schema fixes. Original eleven requests remain immutable; no matrix pairs rerun."
+  },
+  "finishedAt": "2026-10-02T08:22:05.858Z"
+}

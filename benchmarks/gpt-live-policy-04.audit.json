@@ -1,0 +1,793 @@
+{
+  "source": "benchmarks/gpt-live-policy-04.json",
+  "sourceSha256": "e18f2323db346f9b75b57d8353993cc9c29583d6fd4f21421ac757458f98b186",
+  "status": "incomplete",
+  "environment": null,
+  "timingEnvironment": {
+    "inputChunkMs": 100,
+    "continuousSilenceChunkMs": 100,
+    "browserMicrophoneBatchingTested": false,
+    "maxEventLoopLagMs": 81,
+    "valid": true
+  },
+  "validForComparativeLatency": false,
+  "method": {
+    "inputPcmSampleRate": 16000,
+    "inputChunkMs": 100,
+    "continuousSilenceChunkMs": 100,
+    "simulatedPlaybackDrain": true,
+    "browserMicrophoneBatchingTested": false,
+    "physicalPlaybackTested": false,
+    "firstUsefulAudioMeasured": false,
+    "pairedPcm": "One in-memory synthetic clip per scenario reused across all arms within this report; original per-scenario hashes are in the source report.",
+    "normalizerSha256": "54cc0ce74e55338893d3b77b762886bbf92aac5e1d1da65a791e10f351db2b69"
+  },
+  "requestedSessions": 4,
+  "completedSessions": 2,
+  "phases": [
+    {
+      "arm": "eleven",
+      "index": 1,
+      "status": "complete",
+      "trialFailures": [],
+      "fidelity": [],
+      "spokenFidelityEvents": [],
+      "applicationFallbacks": [],
+      "modelDelegations": 0,
+      "finalHints": {
+        "type": "hint-state",
+        "questionId": "e06403bf-6b8e-4b30-a916-2f21159906c4",
+        "remaining": 3,
+        "cooldownUntil": null,
+        "retryAfterMs": 0,
+        "available": false,
+        "busy": true,
+        "suggested": false,
+        "reason": "unconfirmed-problem",
+        "atMs": 42822.2,
+        "phase": "problem-switch"
+      },
+      "finalMastery": {
+        "type": "mastery",
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "ab81b36a0fe1c5e22af968d9",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "2698bf943df528125ed0a836",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        },
+        "atMs": 37968.3,
+        "phase": "problem-switch"
+      },
+      "finalPractice": {
+        "type": "practice-state",
+        "current": {
+          "questionId": "e06403bf-6b8e-4b30-a916-2f21159906c4",
+          "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "topicTitle": "Cell transport",
+          "attempts": 0,
+          "assisted": false,
+          "status": "set-aside"
+        },
+        "recent": [],
+        "atMs": 42305.1,
+        "phase": "problem-switch"
+      },
+      "boards": [],
+      "deliveredWords": [
+        {
+          "phase": "startup",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 1,
+          "atMs": 4852.7
+        },
+        {
+          "phase": "canonical-question",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 4,
+          "atMs": 17398.4
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "Use the Hint button for a nudge, or tell me your first step.",
+          "source": "approved-backend",
+          "turnId": 7,
+          "atMs": 27383.8
+        },
+        {
+          "phase": "problem-switch",
+          "text": "Solve \\(2x + 3 = 11\\). Show your steps and explain why each operation keeps the equation balanced.",
+          "source": "approved-backend",
+          "turnId": 13,
+          "atMs": 42088.7
+        }
+      ],
+      "recognizedWords": [
+        {
+          "phase": "canonical-question",
+          "text": "Please ask me the membrane transport question.",
+          "turnId": 2,
+          "atMs": 15346.7
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "I don't know. Please give me a hint.",
+          "turnId": 5,
+          "atMs": 27146.8
+        },
+        {
+          "phase": "problem-switch",
+          "text": "Let's switch to solving 2x plus 3 equals 11.",
+          "turnId": 8,
+          "atMs": 35772.5
+        },
+        {
+          "phase": "problem-switch",
+          "text": "Ask me without solving it.",
+          "turnId": 11,
+          "atMs": 37701.4
+        }
+      ],
+      "sessionElapsedMs": 42828,
+      "costEstimateUsd": 0.036652052271,
+      "estimateComplete": false,
+      "missingUsageRequests": 1,
+      "liveProviderSeconds": 0
+    },
+    {
+      "arm": "gpt-live",
+      "index": 2,
+      "status": "complete",
+      "trialFailures": [],
+      "fidelity": [
+        {
+          "phase": "startup",
+          "approved": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": true
+        },
+        {
+          "phase": "canonical-question",
+          "approved": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": " Let’s start with membrane transport.Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": true
+        },
+        {
+          "phase": "unauthorized-hint",
+          "approved": "Use the Hint button for a nudge, or tell me your first step.",
+          "providerTranscript": " Sure. Use the Hint button for a nudge, or tell me your first step.",
+          "transcriptWhileDeliveryActive": " Use the Hint button for a nudge, or tell me your first step.",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": true
+        },
+        {
+          "phase": "problem-switch",
+          "approved": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "providerTranscript": " Okay, switching to that equation.How do equal operations solve two x plus three equals eleven, and why are those operations valid?",
+          "transcriptWhileDeliveryActive": "How do equal operations solve two x plus three equals eleven, and why are those operations valid?",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": false
+        }
+      ],
+      "spokenFidelityEvents": [
+        {
+          "atMs": 13280.1,
+          "phase": "startup",
+          "matched": true,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        },
+        {
+          "atMs": 27103.4,
+          "phase": "canonical-question",
+          "matched": true,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        },
+        {
+          "atMs": 35897.5,
+          "phase": "unauthorized-hint",
+          "matched": true,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        },
+        {
+          "atMs": 53454.5,
+          "phase": "problem-switch",
+          "matched": true,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        }
+      ],
+      "applicationFallbacks": [
+        {
+          "atMs": 17725.3,
+          "phase": "canonical-question",
+          "transcriptCharacters": 47
+        }
+      ],
+      "modelDelegations": 2,
+      "finalHints": {
+        "type": "hint-state",
+        "questionId": "574b2b08-24b8-47d8-8b1b-2f286bdc542c",
+        "remaining": 3,
+        "cooldownUntil": null,
+        "retryAfterMs": 0,
+        "available": false,
+        "busy": true,
+        "suggested": false,
+        "reason": "busy",
+        "atMs": 53454.6,
+        "phase": "problem-switch"
+      },
+      "finalMastery": {
+        "type": "mastery",
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "ab81b36a0fe1c5e22af968d9",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "2698bf943df528125ed0a836",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        },
+        "atMs": 42477.7,
+        "phase": "problem-switch"
+      },
+      "finalPractice": {
+        "type": "practice-state",
+        "current": {
+          "questionId": "574b2b08-24b8-47d8-8b1b-2f286bdc542c",
+          "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "topicTitle": "Equations",
+          "attempts": 0,
+          "assisted": false,
+          "status": "set-aside"
+        },
+        "recent": [
+          {
+            "questionId": "d6a02afc-65c6-4920-b8bc-61c24ec45328",
+            "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "topicTitle": "Cell transport",
+            "attempts": 0,
+            "assisted": false,
+            "status": "set-aside"
+          }
+        ],
+        "atMs": 45302.1,
+        "phase": "problem-switch"
+      },
+      "boards": [
+        {
+          "phase": "canonical-question",
+          "atMs": 19926,
+          "visible": true,
+          "title": "Membrane transport",
+          "board": {
+            "title": "Membrane transport",
+            "revision": "ccf1ede0-13f9-428a-bd0e-2beecb29181d",
+            "blocks": [
+              {
+                "id": "transport-grid",
+                "type": "matrix",
+                "rowLabels": [
+                  "Cell membrane",
+                  "Passive transport",
+                  "Active transport"
+                ],
+                "columnLabels": [
+                  "What it does",
+                  "Energy?",
+                  "Direction relative to concentration gradient"
+                ],
+                "rows": [
+                  [
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "phase": "problem-switch",
+          "atMs": 42477.6,
+          "visible": false
+        },
+        {
+          "phase": "problem-switch",
+          "atMs": 45302,
+          "visible": true,
+          "title": "Equation",
+          "board": {
+            "title": "Equation",
+            "revision": "7f3529cb-a15c-42bf-975c-5066fd2fb992",
+            "blocks": [
+              {
+                "id": "equation",
+                "type": "latex",
+                "content": "2x + 3 = 11"
+              }
+            ]
+          }
+        }
+      ],
+      "deliveredWords": [
+        {
+          "phase": "startup",
+          "text": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 1,
+          "atMs": 3913.9
+        },
+        {
+          "phase": "startup",
+          "text": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "gpt-live-spoken",
+          "turnId": 1,
+          "atMs": 13280.1
+        },
+        {
+          "phase": "canonical-question",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 4,
+          "atMs": 19764.3
+        },
+        {
+          "phase": "canonical-question",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "gpt-live-spoken",
+          "turnId": 4,
+          "atMs": 27103.3
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "Use the Hint button for a nudge, or tell me your first step.",
+          "source": "approved-backend",
+          "turnId": 7,
+          "atMs": 30549
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": " Use the Hint button for a nudge, or tell me your first step.",
+          "source": "gpt-live-spoken",
+          "turnId": 7,
+          "atMs": 35897.5
+        },
+        {
+          "phase": "problem-switch",
+          "text": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "source": "approved-backend",
+          "turnId": 10,
+          "atMs": 45096.9
+        },
+        {
+          "phase": "problem-switch",
+          "text": "How do equal operations solve two x plus three equals eleven, and why are those operations valid?",
+          "source": "gpt-live-spoken",
+          "turnId": 10,
+          "atMs": 53454.5
+        }
+      ],
+      "recognizedWords": [
+        {
+          "phase": "canonical-question",
+          "text": "Please ask me the membrane transport question.",
+          "turnId": 2,
+          "atMs": 17725.3
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "I don't know. Please give me a hint",
+          "turnId": 5,
+          "atMs": 30340.1
+        },
+        {
+          "phase": "problem-switch",
+          "text": "Let's switch to solving 2x plus 3 equals 11 . Ask me without solving it",
+          "turnId": 8,
+          "atMs": 42210.5
+        }
+      ],
+      "sessionElapsedMs": 53455.2,
+      "costEstimateUsd": 0.066619361333,
+      "estimateComplete": true,
+      "missingUsageRequests": 0,
+      "liveProviderSeconds": 52
+    },
+    {
+      "arm": "gpt-live",
+      "index": 3,
+      "status": "failed",
+      "trialFailures": [
+        {
+          "id": "unauthorized-hint",
+          "error": "GPT-Live changed the approved tutor reply. The experimental reply was stopped."
+        }
+      ],
+      "fidelity": [
+        {
+          "phase": "startup",
+          "approved": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": true
+        },
+        {
+          "phase": "canonical-question",
+          "approved": "Absolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": "Why is a cell membrane called a selectiveAbsolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": "Absolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": true
+        },
+        {
+          "phase": "unauthorized-hint",
+          "approved": "Use the Hint button for a nudge, or tell me your first step.",
+          "providerTranscript": "Okay,",
+          "transcriptWhileDeliveryActive": "Okay,",
+          "normalization": "number-and-operator-preserving",
+          "exactReportedTextMatch": false,
+          "approximateAudioEnd": false,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score.",
+          "trimmedLiteralTextMatch": false
+        }
+      ],
+      "spokenFidelityEvents": [
+        {
+          "atMs": 11485.5,
+          "phase": "startup",
+          "matched": true,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        },
+        {
+          "atMs": 31926.9,
+          "phase": "canonical-question",
+          "matched": true,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        },
+        {
+          "atMs": 35423.2,
+          "phase": "unauthorized-hint",
+          "matched": false,
+          "audioBinding": "active-stream-only-not-provider-turn-id"
+        }
+      ],
+      "applicationFallbacks": [
+        {
+          "atMs": 16558.8,
+          "phase": "canonical-question",
+          "transcriptCharacters": 46
+        }
+      ],
+      "modelDelegations": 1,
+      "finalHints": {
+        "type": "hint-state",
+        "questionId": "4109959a-6ed4-4ec5-a704-b5f4b7358cb7",
+        "remaining": 3,
+        "cooldownUntil": null,
+        "retryAfterMs": 0,
+        "available": true,
+        "busy": false,
+        "suggested": true,
+        "reason": "ready",
+        "atMs": 35423.3,
+        "phase": "unauthorized-hint"
+      },
+      "finalMastery": {
+        "type": "mastery",
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "ab81b36a0fe1c5e22af968d9",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "2698bf943df528125ed0a836",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        },
+        "atMs": 16802,
+        "phase": "canonical-question"
+      },
+      "finalPractice": {
+        "type": "practice-state",
+        "current": {
+          "questionId": "4109959a-6ed4-4ec5-a704-b5f4b7358cb7",
+          "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "topicTitle": "Cell transport",
+          "attempts": 0,
+          "assisted": false,
+          "status": "set-aside"
+        },
+        "recent": [],
+        "atMs": 25359.8,
+        "phase": "canonical-question"
+      },
+      "boards": [],
+      "deliveredWords": [
+        {
+          "phase": "startup",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 1,
+          "atMs": 3594.8
+        },
+        {
+          "phase": "startup",
+          "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "gpt-live-spoken",
+          "turnId": 1,
+          "atMs": 11485.5
+        },
+        {
+          "phase": "canonical-question",
+          "text": "Absolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "approved-backend",
+          "turnId": 4,
+          "atMs": 20412.8
+        },
+        {
+          "phase": "canonical-question",
+          "text": "Absolutely—take your time and explain it in your own words. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "source": "gpt-live-spoken",
+          "turnId": 4,
+          "atMs": 31926.7
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "Use the Hint button for a nudge, or tell me your first step.",
+          "source": "approved-backend",
+          "turnId": 7,
+          "atMs": 35271.8
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "Okay,",
+          "source": "gpt-live-spoken",
+          "turnId": 7,
+          "atMs": 35423.2
+        }
+      ],
+      "recognizedWords": [
+        {
+          "phase": "canonical-question",
+          "text": "Please ask me the membrane transport question",
+          "turnId": 2,
+          "atMs": 16558.9
+        },
+        {
+          "phase": "unauthorized-hint",
+          "text": "I don't know, please give me a hint",
+          "turnId": 5,
+          "atMs": 35056.6
+        }
+      ],
+      "sessionElapsedMs": 35424,
+      "costEstimateUsd": 0.044330666333,
+      "estimateComplete": true,
+      "missingUsageRequests": 0,
+      "liveProviderSeconds": 34
+    }
+  ],
+  "byScenario": [
+    {
+      "id": "canonical-question",
+      "arms": [
+        {
+          "arm": "eleven",
+          "attempted": 1,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 2990.8,
+            "minimum": 2990.8,
+            "maximum": 2990.8
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 2866.2,
+            "minimum": 2866.2,
+            "maximum": 2866.2
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 2083.4,
+            "minimum": 2083.4,
+            "maximum": 2083.4
+          }
+        },
+        {
+          "arm": "gpt-live",
+          "attempted": 2,
+          "complete": 2,
+          "firstAudioMs": {
+            "n": 2,
+            "median": 5618.8,
+            "minimum": 4248.7,
+            "maximum": 6988.8
+          },
+          "firstTextMs": {
+            "n": 2,
+            "median": 3963.8,
+            "minimum": 2781.7,
+            "maximum": 5145.9
+          },
+          "commitToAudioMs": {
+            "n": 2,
+            "median": 3710.7,
+            "minimum": 2655.4,
+            "maximum": 4766
+          }
+        }
+      ]
+    },
+    {
+      "id": "unauthorized-hint",
+      "arms": [
+        {
+          "arm": "eleven",
+          "attempted": 1,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 1515.2,
+            "minimum": 1515.2,
+            "maximum": 1515.2
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 1290.6,
+            "minimum": 1290.6,
+            "maximum": 1290.6
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 461.6,
+            "minimum": 461.6,
+            "maximum": 461.6
+          }
+        },
+        {
+          "arm": "gpt-live",
+          "attempted": 2,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 1526.4,
+            "minimum": 1526.4,
+            "maximum": 1526.4
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 1495.8,
+            "minimum": 1495.8,
+            "maximum": 1495.8
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 239.5,
+            "minimum": 239.5,
+            "maximum": 239.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "problem-switch",
+      "arms": [
+        {
+          "arm": "eleven",
+          "attempted": 1,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 4639.7,
+            "minimum": 4639.7,
+            "maximum": 4639.7
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 4325.8,
+            "minimum": 4325.8,
+            "maximum": 4325.8
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 5841.7,
+            "minimum": 5841.7,
+            "maximum": 5841.7
+          }
+        },
+        {
+          "arm": "gpt-live",
+          "attempted": 1,
+          "complete": 1,
+          "firstAudioMs": {
+            "n": 1,
+            "median": 4635.3,
+            "minimum": 4635.3,
+            "maximum": 4635.3
+          },
+          "firstTextMs": {
+            "n": 1,
+            "median": 3541.6,
+            "minimum": 3541.6,
+            "maximum": 3541.6
+          },
+          "commitToAudioMs": {
+            "n": 1,
+            "median": 3668.4,
+            "minimum": 3668.4,
+            "maximum": 3668.4
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Tiny exploratory sample; no stable p95, no learning-outcome claim.",
+    "Comparative latency requires successful paired trials and reviewed spoken fidelity; failures stay in the denominator.",
+    "Backend captions and native spoken transcripts are separate evidence.",
+    "A normalizer match is not an independent semantic quality score; public text remains reviewable.",
+    "Application cost estimates exclude unpriced source-synthesis requests and any missing provider counters; they are not billed account charges."
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "startedAt": "2026-10-02T18:25:31.722Z",
+  "status": "incomplete",
+  "scenario": "policy",
+  "script": [
+    {
+      "id": "canonical-question",
+      "text": "Please ask me the membrane transport question."
+    },
+    {
+      "id": "unauthorized-hint",
+      "text": "I don't know. Please give me a hint."
+    },
+    {
+      "id": "problem-switch",
+      "text": "Let's switch to solving two x plus three equals eleven. Ask me without solving it."
+    }
+  ],
+  "codeHashes": {
+    "../server/gpt-live-transport.mjs": "54cc0ce74e55338893d3b77b762886bbf92aac5e1d1da65a791e10f351db2b69",
+    "../server/live-voice.mjs": "1771b75a7d704e1c875c960dfffde73448e909a34c7cd533a1bc64f22cb9e828",
+    "../server/openai-luna.mjs": "2553cfa8772934609611f2994bd8648c38763a2f6f248bd196c57f5aca33177b",
+    "../server/material-retrieval.mjs": "375708ff2d4e097760f64aa4480385a8af9d5434e5f9eb021e622056db19187f",
+    "./gpt-live-audio-probe.mjs": "c2b32ea92f9bb19aee67e3b3c410e1d62d4cbb6e8e9317f91a2185d55c32ad63",
+    "./gpt-live-compare.mjs": "e3732f2e7876159810eecf1c5e212a212784c2ebb6428865302baf941a46ff78"
+  },
+  "sessions": [
+    {
+      "arm": "eleven",
+      "index": 1,
+      "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+      "status": "failed",
+      "diagnostics": [
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "session.started",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "turn.started",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "tutor.context-built",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "encounteredCount": 0,
+            "sourceRevision": "ab36ab2bb2e6b9829da03491561c64f49c0f53cc12696debcbfcf543906804a0",
+            "sourceCharacters": 745,
+            "retrievedCharacters": 0,
+            "contextCharacters": 2647,
+            "historyCharacters": 2,
+            "recentTurns": 0,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "unresolved"
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "retrieval.tool-read",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "operation": "search_materials",
+            "sourceRevision": "ab36ab2bb2e6b9829da03491561c64f49c0f53cc12696debcbfcf543906804a0",
+            "chunkIds": [
+              "c_5c853a6d66d76939b81b17cd24bd"
+            ],
+            "reason": "selected",
+            "characters": 333,
+            "total": 1
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "retrieval.tool-read",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "operation": "search_materials",
+            "sourceRevision": "ab36ab2bb2e6b9829da03491561c64f49c0f53cc12696debcbfcf543906804a0",
+            "chunkIds": [
+              "c_ad93bc9f454d68eaeadaa8135e4e"
+            ],
+            "reason": "selected",
+            "characters": 412,
+            "total": 1
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "session.failed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "Microphone audio is arriving faster than the connection can send it."
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "session.closed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "error",
+            "inputAudioMs": 7300
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "voice.finished",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 0,
+            "outputAudioMs": 0
+          }
+        },
+        {
+          "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+          "type": "benchmark.backend-error",
+          "message": "The Luna request was canceled."
+        },
+        {
+          "type": "llm.failed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "canceled",
+            "errorCode": "499",
+            "latencyMs": 19852
+          }
+        }
+      ],
+      "probe": {
+        "origin": "http://127.0.0.1:57267",
+        "path": "/api/live-voice",
+        "timeoutMs": 90000,
+        "microphoneUsed": false,
+        "playbackUsed": false,
+        "audioSaved": false,
+        "events": [
+          {
+            "type": "connected",
+            "atMs": 6.7,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 12.8,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 12.8,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": []
+            },
+            "atMs": 13.2,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 14.2,
+            "phase": "startup"
+          },
+          {
+            "type": "ready",
+            "sampleRate": 16000,
+            "greetingSuppressed": false,
+            "atMs": 226.9,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 227,
+            "phase": "startup"
+          },
+          {
+            "type": "error",
+            "message": "Microphone audio is arriving faster than the connection can send it.",
+            "atMs": 20077,
+            "phase": "startup"
+          }
+        ],
+        "trials": [],
+        "startedAt": "2026-10-02T18:25:35.426Z",
+        "finishedAt": "2026-10-02T18:25:55.504Z",
+        "sessionElapsedMs": 20077.9,
+        "failure": "Microphone audio is arriving faster than the connection can send it.",
+        "receivedAudioBytes": 0
+      },
+      "error": "Microphone audio is arriving faster than the connection can send it.",
+      "usage": {
+        "testId": "0761e91f-573f-401c-89dd-1c3b366291d5",
+        "trackingStartedAt": "2026-10-02T18:25:35.421Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 4,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 4,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.005563333333,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 2,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "failed": 1,
+            "canceled": 2,
+            "completed": 1
+          },
+          "units": {
+            "audioInputMs": 7300,
+            "characters": 0,
+            "audioOutputMs": 0,
+            "inputTokens": 3840,
+            "outputTokens": 192,
+            "cachedInputTokens": 3100,
+            "cacheWriteTokens": 737,
+            "reasoningTokens": 33
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 1,
+            "audioOutputMs": 1,
+            "inputTokens": 1,
+            "outputTokens": 1,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0047725,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "completed": 1,
+              "canceled": 1
+            },
+            "units": {
+              "inputTokens": 3840,
+              "outputTokens": 192,
+              "cachedInputTokens": 3100,
+              "cacheWriteTokens": 737,
+              "reasoningTokens": 33
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1,
+              "cachedInputTokens": 1,
+              "cacheWriteTokens": 1,
+              "reasoningTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 2,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 2,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000790833333,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 2,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "failed": 1,
+              "canceled": 1
+            },
+            "units": {
+              "audioInputMs": 7300,
+              "characters": 0,
+              "audioOutputMs": 0
+            },
+            "unitCoverage": {
+              "audioInputMs": 1,
+              "characters": 1,
+              "audioOutputMs": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+                "source": "https://elevenlabs.io/pricing/api",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                  "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented.",
+                  "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+                ]
+              },
+              {
+                "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+                "source": "https://elevenlabs.io/pricing/api",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                  "Characters measure submitted text, not verified billed characters or played audio.",
+                  "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+                ]
+              }
+            ]
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": false
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      },
+      "spokenFidelity": [],
+      "qualityStatus": "not-semantically-reviewed"
+    }
+  ],
+  "method": "Matched synthetic 16 kHz PCM replayed at real-time cadence into isolated production voice orchestration. Startup speech is drained before measured requests. No microphone/speaker, no saved audio, no human learning claim. First received PCM can be filler; useful academic answer audio latency is unmeasured. GPT-Live audio-end may be a silence heuristic. Stop for manual review at the first native voice/backend text mismatch.",
+  "configuration": {
+    "retrieval": "production Jev prefetch and bounded retrieval tools enabled",
+    "questionBank": "fixed fixture preparation; production bank identity, masking and consumption",
+    "mastery": "isolated production store and production checked grading",
+    "studySources": "original synthetic text fixtures; no screenshot or import-indexing benchmark in this cohort"
+  },
+  "ceilings": {
+    "sessions": 4,
+    "sessionSeconds": 90,
+    "wholeRunSeconds": 480,
+    "openaiBackendRequests": 40,
+    "jevRequests": 96
+  },
+  "sources": [
+    {
+      "id": "canonical-question",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 84706,
+      "sha256": "c8157fc8e7e9b93be0666c43b0ee77e75eabcd8784dee673cc3bd4213a1f9cc1",
+      "durationMs": 2647.0625,
+      "energySpeechEndMs": 2460,
+      "generationCharacters": 46
+    },
+    {
+      "id": "unauthorized-hint",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 69846,
+      "sha256": "880f443cacd8668eac9851bff80119fe53f30f935474c1fc23fae7409b4909d5",
+      "durationMs": 2182.6875,
+      "energySpeechEndMs": 1940,
+      "generationCharacters": 36
+    },
+    {
+      "id": "problem-switch",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 178330,
+      "sha256": "08fd6f1358e39d2c8ff859670482568f86a8ff7753e98d34f795474f8faacf61",
+      "durationMs": 5572.8125,
+      "energySpeechEndMs": 5280,
+      "generationCharacters": 82
+    }
+  ],
+  "providerRequests": {
+    "openai": 2,
+    "jev": 0
+  },
+  "models": {
+    "tutor": "gpt-5.6-terra",
+    "gptLive": "gpt-live-1",
+    "stt": "scribe_v2_realtime",
+    "tts": "eleven_v4_turbo"
+  },
+  "timingEnvironment": {
+    "inputChunkMs": 100,
+    "continuousSilenceChunkMs": 100,
+    "browserMicrophoneBatchingTested": false,
+    "maxEventLoopLagMs": 3,
+    "valid": true
+  },
+  "stoppedEarly": "Stopped on the first failed session. No automatic paid retry.",
+  "summary": [
+    {
+      "arm": "eleven",
+      "sessions": 1,
+      "completed": 0,
+      "firstAudio": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "firstText": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "estimatedUsd": 0.005563333333,
+      "usageComplete": false
+    },
+    {
+      "arm": "gpt-live",
+      "sessions": 0,
+      "completed": 0,
+      "firstAudio": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "firstText": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "estimatedUsd": 0,
+      "usageComplete": true
+    }
+  ],
+  "elevenBudget": {
+    "name": "gpt-live-compare",
+    "provider": "ElevenLabs",
+    "maximumCredits": 20000,
+    "maximumProviderRequests": 24,
+    "before": {
+      "used": 3287,
+      "limit": 121009,
+      "remaining": 117722
+    },
+    "reservedCredits": 9164,
+    "providerRequests": 5,
+    "ttsCharacters": 164,
+    "sttReservedSeconds": 90,
+    "modelCreditCeilings": {
+      "eleven_v4_turbo": 1,
+      "eleven_flash_v2_5": 1
+    },
+    "sttCreditsPerSecondReservation": 100,
+    "reservations": [
+      {
+        "credits": 46,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 46
+      },
+      {
+        "credits": 36,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 36
+      },
+      {
+        "credits": 82,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 82
+      },
+      {
+        "credits": 9000,
+        "kind": "stt-session",
+        "seconds": 90
+      }
+    ],
+    "limitation": "This enforces a local reservation ceiling using verified character pricing for premade voices and deliberately conservative STT duration reservations. Provider accounting can lag, and account balance changes may include other activity. It is not an account-wide billing limit.",
+    "balanceAfterUnavailable": true
+  },
+  "finishedAt": "2026-10-02T18:26:06.713Z"
+}

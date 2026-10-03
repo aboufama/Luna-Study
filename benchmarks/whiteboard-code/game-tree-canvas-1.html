@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'"><style>*{box-sizing:border-box}html,body{margin:0;width:800px;height:500px;overflow:hidden;font-family:Arial,sans-serif;background:white}#stage{position:relative;width:800px;height:500px}svg{overflow:visible}</style></head><body><main id="stage"><canvas width="800" height="500"></canvas></main><script>window.__done=false;window.__error=null;window.__texts=[];window.__hits=[];window.__draws=[];window.addEventListener('error',e=>window.__error=String(e.message).slice(0,180));
+
+function draw(ctx, hit) {
+	ctx.fillStyle = "#ffffff";
+	ctx.fillRect(0, 0, 800, 500);
+	ctx.strokeStyle = "#222222";
+	ctx.fillStyle = "#111111";
+	ctx.lineWidth = 2;
+	ctx.font = "16px Arial";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
+	function line(x1, y1, x2, y2) {
+		ctx.beginPath();
+		ctx.moveTo(x1, y1);
+		ctx.lineTo(x2, y2);
+		ctx.stroke();
+	}
+	function label(text, x, y, id, w, h) {
+		ctx.fillStyle = "#ffffff";
+		ctx.fillRect(x - w / 2, y - h / 2, w, h);
+		ctx.fillStyle = "#111111";
+		ctx.fillText(text, x, y);
+		hit(id, x - w / 2, y - h / 2, w, h);
+	}
+	function node(x, y, player, id) {
+		ctx.beginPath();
+		ctx.arc(x, y, 6, 0, Math.PI * 2);
+		ctx.fillStyle = "#111111";
+		ctx.fill();
+		label(player, x, y - 27, id, 48, 22);
+		hit(id, x - 13, y - 13, 26, 26);
+	}
+	function terminal(x, y, payoff, id) {
+		ctx.beginPath();
+		ctx.arc(x, y, 5, 0, Math.PI * 2);
+		ctx.fillStyle = "#111111";
+		ctx.fill();
+		label(payoff, x, y + 27, id, 64, 24);
+		hit(id, x - 12, y - 12, 24, 24);
+	}
+	line(400, 91, 220, 225);
+	line(400, 91, 580, 225);
+	line(220, 241, 120, 385);
+	line(220, 241, 320, 385);
+	line(580, 241, 480, 385);
+	line(580, 241, 680, 385);
+	node(400, 85, "P1", "root");
+	node(220, 235, "P2", "left");
+	node(580, 235, "P2", "right");
+	label("L", 302, 139, "action-root-L", 30, 24);
+	label("R", 498, 139, "action-root-R", 30, 24);
+	label("l", 161, 303, "action-left-l", 30, 24);
+	label("r", 279, 303, "action-left-r", 30, 24);
+	label("l", 521, 303, "action-right-l", 30, 24);
+	label("r", 639, 303, "action-right-r", 30, 24);
+	terminal(120, 385, "(3,2)", "ll");
+	terminal(320, 385, "(0,0)", "lr");
+	terminal(480, 385, "(1,1)", "rl");
+	terminal(680, 385, "(2,3)", "rr");
+}
+
+try{const canvas=document.querySelector('canvas'),native=canvas.getContext('2d');let count=0;
+ native.fillStyle='white';native.fillRect(0,0,800,500);native.fillStyle='#243544';native.strokeStyle='#243544';native.lineWidth=2;native.font='18px Arial';
+ const ctx=new Proxy(native,{get(target,key){const v=target[key];if(typeof v!=='function')return v;return(...args)=>{if(++count>12000)throw Error('Drawing call limit');if(key==='fillText'||key==='strokeText'){const [text,x,y]=args,m=target.measureText(String(text)),fontSize=parseFloat(target.font),transform=target.getTransform(),p=new DOMPoint(x,y).matrixTransform(transform);let left=p.x;if(target.textAlign==='center')left-=m.width/2;else if(['right','end'].includes(target.textAlign))left-=m.width;let y0=p.y-fontSize;if(target.textBaseline==='middle')y0=p.y-fontSize/2;else if(['top','hanging'].includes(target.textBaseline))y0=p.y;window.__texts.push({text:String(text),x:left,y:y0,width:m.width,height:fontSize,fontSize});}if(window.__draws.length<3000)window.__draws.push({op:key,args:args.map(v=>typeof v==='number'||typeof v==='string'?v:null)});return v.apply(target,args);};},set(target,key,value){target[key]=value;return true;}});
+ const hit=(id,x,y,width,height)=>{if(typeof id!=='string'||id.length>120||![x,y,width,height].every(Number.isFinite)||width<0||height<0||window.__hits.length>=2000)throw Error('Invalid hit region');window.__hits.push({id,x,y,width,height});};
+ draw(ctx,hit);window.__done=true;}catch(error){window.__error=String(error.message).slice(0,180);window.__done=true;}</script></body></html>

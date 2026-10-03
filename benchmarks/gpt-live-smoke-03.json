@@ -1,0 +1,2771 @@
+{
+  "startedAt": "2026-10-02T17:52:36.886Z",
+  "status": "incomplete",
+  "phrase": "My test is tomorrow. Let's practice active and passive transport.",
+  "sessions": [
+    {
+      "arm": "eleven",
+      "index": 1,
+      "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+      "status": "complete",
+      "diagnostics": [
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "session.started",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "turn.started",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "tutor.context-built",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "encounteredCount": 0,
+            "sourceCharacters": 333,
+            "retrievedCharacters": 333,
+            "contextCharacters": 1685,
+            "historyCharacters": 2,
+            "recentTurns": 0,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "llm.first-text",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 2359
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "voice.first-audio",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 2549
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "llm.completed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reply": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 3419
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.candidate",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "boardJson": "{\"title\":\"Cell transport\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"grid\",\"type\":\"matrix\",\"rowLabels\":[\"Diffusion\",\"Active transport\"],\"columnLabels\":[\"Energy used?\",\"Movement relative to concentration gradient\",\"Key idea\"],\"rows\":[[\"\",\"\",\"\"],[\"\",\"\",\"\"]]}]}"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.decision",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.73,
+            "latencyMs": 211,
+            "visible": false,
+            "hasBoard": true
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.shown",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "structured-visual",
+            "boardObjectCount": 1,
+            "addedObjects": 1,
+            "changedObjects": 0,
+            "preservedObjects": 0,
+            "removedObjects": 0,
+            "boardCharacters": 282,
+            "latencyMs": 212,
+            "boardRevision": "9297f4a9-f051-4d05-b520-61422a3798ed",
+            "boardJson": "{\"title\":\"Cell transport\",\"revision\":\"9297f4a9-f051-4d05-b520-61422a3798ed\",\"blocks\":[{\"id\":\"grid\",\"type\":\"matrix\",\"rowLabels\":[\"Diffusion\",\"Active transport\"],\"columnLabels\":[\"Energy used?\",\"Movement relative to concentration gradient\",\"Key idea\"],\"rows\":[[\"\",\"\",\"\"],[\"\",\"\",\"\"]]}]}"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "voice.finished",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 149,
+            "outputAudioMs": 10080
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "turn.interrupted",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "interrupted"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "grading.eligibility",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "reason": "not-an-attempt",
+            "canonicalPromptActive": false,
+            "workingRelation": "none",
+            "attemptIntent": "no",
+            "helpIntent": "unknown",
+            "deadlineIntent": "unknown",
+            "answerAttemptProbability": 0.05,
+            "answerAttemptThreshold": 0.8,
+            "provisional": false,
+            "intentSource": "jev"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "turn.started",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "tutor.context-built",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "taskKind": "respond-to-student",
+            "encounteredCount": 0,
+            "sourceCharacters": 333,
+            "retrievedCharacters": 333,
+            "contextCharacters": 4946,
+            "historyCharacters": 452,
+            "recentTurns": 3,
+            "olderTurns": 0,
+            "bankCharacters": 804,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "llm.first-text",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 2194
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "voice.first-audio",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 2431
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "llm.completed",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reply": "Let’s sharpen that comparison for tomorrow. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "hasBoard": false,
+            "candidateStatus": "invalid",
+            "latencyMs": 3071
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "question.tracked",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "tracked",
+            "questionId": "2756d819-a57d-4964-b85f-68e366921960"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.closed",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "canonical-target-changed",
+            "questionId": "2756d819-a57d-4964-b85f-68e366921960"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.candidate",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "Let’s sharpen that comparison for tomorrow. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.decision",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "needsCanvas": false,
+            "reason": "uncertain",
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "source": "fallback",
+            "fallbackReason": "uncertain",
+            "latencyMs": 208,
+            "probability": 0.53,
+            "reopenProbability": 0.68,
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.not-shown",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "no-new-visual"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "whiteboard.recovery-started",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "invalid-or-incomplete-visual",
+            "model": "gpt-6-luna"
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "voice.finished",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 144,
+            "outputAudioMs": 9280
+          }
+        },
+        {
+          "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+          "type": "session.closed",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": 1006,
+            "inputAudioMs": 12933.125
+          }
+        },
+        {
+          "type": "whiteboard.recovery-failed",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "canceled",
+            "latencyMs": 529
+          }
+        }
+      ],
+      "probe": {
+        "origin": "http://127.0.0.1:52823",
+        "path": "/api/live-voice",
+        "timeoutMs": 60000,
+        "microphoneUsed": false,
+        "playbackUsed": false,
+        "audioSaved": false,
+        "events": [
+          {
+            "type": "connected",
+            "atMs": 6.4,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 10.3,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 10.3,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": []
+            },
+            "atMs": 10.7,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "597450c06d9cd22b1c4d0ae5",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 12,
+            "phase": "startup"
+          },
+          {
+            "type": "ready",
+            "sampleRate": 16000,
+            "greetingSuppressed": false,
+            "atMs": 109.4,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 109.5,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 109.5,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 109.5,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 109.5,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 109.6,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 109.6,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 109.6,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 109.6,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "597450c06d9cd22b1c4d0ae5",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 109.6,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "first-text",
+            "ms": 2359,
+            "atMs": 2462.7,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2462.8,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2463.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2463.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2464,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2464,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2511.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport.",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2521.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2526.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2539.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2539.3,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2540,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2540,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2555.1,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2560.7,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2579.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2621,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "speaking",
+            "atMs": 2652.4,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "first-audio",
+            "ms": 2549,
+            "atMs": 2652.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 2652.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 2667.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2682.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2687,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 2690.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2691.8,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2692.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 2701.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 2726,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2752.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2756.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to a",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2758.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to a concentration",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2762.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to a concentration gradient",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2768.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2776.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 27324,
+            "sampleRate": 24000,
+            "atMs": 2861.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 2861.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 50094,
+            "sampleRate": 24000,
+            "atMs": 2995.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 2995.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 546,
+            "sampleRate": 24000,
+            "atMs": 2995.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 3065.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 3073.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 3099.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 3121.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 3143.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 3238.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 47058,
+            "sampleRate": 24000,
+            "atMs": 3376.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 15180,
+            "sampleRate": 24000,
+            "atMs": 3397.6,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 3532.4,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 3532.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport. How do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "final": true,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 3532.5,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "text-complete",
+            "ms": 3419,
+            "atMs": 3532.5,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 3532.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 37950,
+            "sampleRate": 24000,
+            "atMs": 3533.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 45540,
+            "sampleRate": 24000,
+            "atMs": 3680.4,
+            "phase": "startup"
+          },
+          {
+            "type": "canvas",
+            "visible": true,
+            "id": 1,
+            "board": {
+              "title": "Cell transport",
+              "revision": "9297f4a9-f051-4d05-b520-61422a3798ed",
+              "blocks": [
+                {
+                  "id": "grid",
+                  "type": "matrix",
+                  "rowLabels": [
+                    "Diffusion",
+                    "Active transport"
+                  ],
+                  "columnLabels": [
+                    "Energy used?",
+                    "Movement relative to concentration gradient",
+                    "Key idea"
+                  ],
+                  "rows": [
+                    [
+                      "",
+                      "",
+                      ""
+                    ],
+                    [
+                      "",
+                      "",
+                      ""
+                    ]
+                  ]
+                }
+              ]
+            },
+            "selection": null,
+            "atMs": 3741.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 3741.3,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 3741.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 39468,
+            "sampleRate": 24000,
+            "atMs": 3782.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 45540,
+            "sampleRate": 24000,
+            "atMs": 3897.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 27324,
+            "sampleRate": 24000,
+            "atMs": 3979.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 50094,
+            "sampleRate": 24000,
+            "atMs": 4094.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 4098.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 570,
+            "sampleRate": 24000,
+            "atMs": 4103.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio-end",
+            "turnId": 1,
+            "atMs": 4103.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 4103.3,
+            "phase": "startup"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 5133.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 5133.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 5133.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "My test-",
+            "final": false,
+            "turnId": 2,
+            "atMs": 5133.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 5133.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "My test is tomorrow.",
+            "final": false,
+            "turnId": 2,
+            "atMs": 6138.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 6138.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "My test is tomorrow. Let's practice",
+            "final": false,
+            "turnId": 2,
+            "atMs": 7144.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 7144.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "My test is tomorrow. Let's practice active and passive",
+            "final": false,
+            "turnId": 2,
+            "atMs": 8150.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 8150.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "My test is tomorrow. Let's practice active and passive transport.",
+            "final": true,
+            "turnId": 2,
+            "atMs": 9143.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 9143.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 9143.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 9143.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 9143.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 9345.7,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 9345.7,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 9345.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 9345.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 9345.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 9345.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "597450c06d9cd22b1c4d0ae5",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 9345.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "latency",
+            "turnId": 4,
+            "stage": "first-text",
+            "ms": 2194,
+            "atMs": 11535.7,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11535.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11535.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11535.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen that",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11572.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen that comparison",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11633.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen that comparison for",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11633.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen that comparison for tomorrow",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11636.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen that comparison for tomorrow.",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11639.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "state",
+            "state": "speaking",
+            "atMs": 11772.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "latency",
+            "turnId": 4,
+            "stage": "first-audio",
+            "ms": 2431,
+            "atMs": 11772.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 11772.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 11786.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 11804.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen that comparison for tomorrow. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": false,
+            "turnId": 4,
+            "atMs": 11804.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 11816.4,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 11853.4,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 11968,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 12067,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 31878,
+            "sampleRate": 24000,
+            "atMs": 12130.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 1440,
+            "sampleRate": 24000,
+            "atMs": 12138.6,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 12225.4,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 12233.5,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 12249,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 12261.7,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 12306.3,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "2756d819-a57d-4964-b85f-68e366921960",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 12418.8,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "2756d819-a57d-4964-b85f-68e366921960",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 12418.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "2756d819-a57d-4964-b85f-68e366921960",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 12418.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "2756d819-a57d-4964-b85f-68e366921960",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 12418.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s sharpen that comparison for tomorrow. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": true,
+            "turnId": 4,
+            "atMs": 12419.1,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "latency",
+            "turnId": 4,
+            "stage": "text-complete",
+            "ms": 3072,
+            "atMs": 12419.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "canvas",
+            "visible": false,
+            "id": 4,
+            "atMs": 12419.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "2756d819-a57d-4964-b85f-68e366921960",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 12419.3,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 12419.3,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 39468,
+            "sampleRate": 24000,
+            "atMs": 12524.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 22770,
+            "sampleRate": 24000,
+            "atMs": 12544.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 50094,
+            "sampleRate": 24000,
+            "atMs": 12682.1,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 12778.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 42504,
+            "sampleRate": 24000,
+            "atMs": 12942.1,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 40986,
+            "sampleRate": 24000,
+            "atMs": 13049.9,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 36432,
+            "sampleRate": 24000,
+            "atMs": 13149.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 744,
+            "sampleRate": 24000,
+            "atMs": 13149.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "audio-end",
+            "turnId": 4,
+            "atMs": 13149.2,
+            "phase": "transport-practice"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "2756d819-a57d-4964-b85f-68e366921960",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 13149.2,
+            "phase": "transport-practice"
+          }
+        ],
+        "trials": [
+          {
+            "id": "transport-practice",
+            "expectedUserText": "My test is tomorrow. Let's practice active and passive transport.",
+            "status": "complete",
+            "startedAtMs": 4405.2,
+            "inputPcmBytes": 132260,
+            "sampleRate": 16000,
+            "pcmEndAtMs": 8539.9,
+            "energySpeechEndAtMs": 8297.4,
+            "committedUserMs": 9143.8,
+            "firstAssistantTextMs": 11535.8,
+            "firstAudioMs": 11772.6,
+            "finalAssistantTextMs": 12419.1,
+            "audioEndMs": 13149.2,
+            "energySpeechEndToCommitMs": 846.4,
+            "energySpeechEndToFirstTextMs": 3238.4,
+            "energySpeechEndToFirstAudioMs": 3475.2,
+            "pcmEndToFirstAudioMs": 3232.7,
+            "commitToFirstAudioMs": 2628.8,
+            "outputAudioBytes": 445440,
+            "outputAudioChunks": 23,
+            "userTranscripts": [
+              "My test is tomorrow. Let's practice active and passive transport."
+            ],
+            "assistantTranscripts": [
+              "Let’s sharpen that comparison for tomorrow. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+            ],
+            "firstUsefulAudioMs": null,
+            "usefulAudioAnnotation": "Not inferable from packet arrival alone; annotate aligned public transcript/audio before claiming a useful-answer latency.",
+            "outputOverlapsInput": false,
+            "finishedAtMs": 13149.6
+          }
+        ],
+        "startedAt": "2026-10-02T17:52:38.446Z",
+        "greetingEndMs": 4103.2,
+        "finishedAt": "2026-10-02T17:52:51.596Z",
+        "sessionElapsedMs": 13149.8,
+        "failure": null,
+        "receivedAudioBytes": 929280
+      },
+      "usage": {
+        "testId": "177488ed-970f-45f4-ae17-078d065fd50c",
+        "trackingStartedAt": "2026-10-02T17:52:38.441Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 9,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 9,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.021027216542,
+          "estimatedRequests": 8,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "completed": 8,
+            "canceled": 1
+          },
+          "units": {
+            "audioInputMs": 12933.125,
+            "characters": 293,
+            "audioOutputMs": 19360,
+            "inputTokens": 11144,
+            "outputTokens": 523,
+            "cachedInputTokens": 2856,
+            "cacheWriteTokens": 4498,
+            "reasoningTokens": 171
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 2,
+            "audioOutputMs": 2,
+            "inputTokens": 5,
+            "outputTokens": 5,
+            "cachedInputTokens": 2,
+            "cacheWriteTokens": 2,
+            "reasoningTokens": 2
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            },
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 3,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 3,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000158928,
+            "estimatedRequests": 3,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 3
+            },
+            "units": {
+              "inputTokens": 3784,
+              "outputTokens": 155
+            },
+            "unitCoverage": {
+              "inputTokens": 3,
+              "outputTokens": 3
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 3,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 3,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0162442,
+            "estimatedRequests": 2,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "completed": 2,
+              "canceled": 1
+            },
+            "units": {
+              "inputTokens": 7360,
+              "outputTokens": 368,
+              "cachedInputTokens": 2856,
+              "cacheWriteTokens": 4498,
+              "reasoningTokens": 171
+            },
+            "unitCoverage": {
+              "inputTokens": 2,
+              "outputTokens": 2,
+              "cachedInputTokens": 2,
+              "cacheWriteTokens": 2,
+              "reasoningTokens": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 3,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 3,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.004624088542,
+            "estimatedRequests": 3,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 3
+            },
+            "units": {
+              "audioInputMs": 12933.125,
+              "characters": 293,
+              "audioOutputMs": 19360
+            },
+            "unitCoverage": {
+              "audioInputMs": 1,
+              "characters": 2,
+              "audioOutputMs": 2
+            },
+            "estimateSources": [
+              {
+                "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+                "source": "https://elevenlabs.io/pricing/api",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                  "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+                ]
+              },
+              {
+                "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+                "source": "https://elevenlabs.io/pricing/api",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                  "Characters measure submitted text, not verified billed characters or played audio."
+                ]
+              }
+            ]
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": false
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    },
+    {
+      "arm": "gpt-live",
+      "index": 2,
+      "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+      "status": "failed",
+      "diagnostics": [
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "session.started",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "voice.live-event",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "stage": "live-session-started"
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "turn.started",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 1,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "tutor.context-built",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "encounteredCount": 0,
+            "sourceCharacters": 333,
+            "retrievedCharacters": 333,
+            "contextCharacters": 2512,
+            "historyCharacters": 2,
+            "recentTurns": 0,
+            "olderTurns": 0,
+            "bankCharacters": 804,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "llm.first-text",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 999
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "llm.failed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "failed",
+            "errorCode": "502",
+            "latencyMs": 1292
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "turn.failed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "Luna could not answer that turn. Check the model connection and ask again."
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "turn.interrupted",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "interrupted"
+          }
+        },
+        {
+          "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+          "type": "session.closed",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "reason": 1006,
+            "inputAudioMs": 19800
+          }
+        },
+        {
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-session-closed",
+            "reason": "close_requested"
+          }
+        },
+        {
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-session-finalized",
+            "durationMs": 19000
+          }
+        }
+      ],
+      "probe": {
+        "origin": "http://127.0.0.1:52838",
+        "path": "/api/gpt-live",
+        "timeoutMs": 60000,
+        "microphoneUsed": false,
+        "playbackUsed": false,
+        "audioSaved": false,
+        "events": [
+          {
+            "type": "connected",
+            "atMs": 2.1,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 4.5,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 4.5,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": []
+            },
+            "atMs": 5.4,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "597450c06d9cd22b1c4d0ae5",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 7.2,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "model": "gpt-live-1",
+            "sampleRate": 16000,
+            "eventType": "live-session-started",
+            "atMs": 683.1,
+            "phase": "startup"
+          },
+          {
+            "type": "ready",
+            "sampleRate": 16000,
+            "greetingSuppressed": false,
+            "atMs": 683.1,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "597450c06d9cd22b1c4d0ae5",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 683.2,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "first-text",
+            "ms": 999,
+            "atMs": 1679.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1679.3,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1679.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1679.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1698.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with a",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1698.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with a test",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1744,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with a test-style",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1748.3,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with a test-style transport",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1748.3,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with a test-style transport question",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1748.3,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with a test-style transport question.",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 1753.9,
+            "phase": "startup"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 1973.5,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 1973.6,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 1973.6,
+            "phase": "startup"
+          },
+          {
+            "type": "error",
+            "message": "Luna could not answer that turn. Check the model connection and ask again.",
+            "recoverable": true,
+            "atMs": 1973.6,
+            "phase": "startup"
+          }
+        ],
+        "trials": [],
+        "startedAt": "2026-10-02T17:52:52.807Z",
+        "finishedAt": "2026-10-02T17:53:13.491Z",
+        "sessionElapsedMs": 20684.5,
+        "failure": null,
+        "receivedAudioBytes": 0
+      },
+      "error": "Timed out waiting for startup greeting audio-end",
+      "usage": {
+        "testId": "283fd018-b2ff-43f2-b447-86f76c70333c",
+        "trackingStartedAt": "2026-10-02T17:52:52.804Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 2,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 2,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.015833333333,
+          "estimatedRequests": 1,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 1,
+          "estimateComplete": false,
+          "missingUsageRequests": 1,
+          "statusCounts": {
+            "completed": 1,
+            "failed": 1
+          },
+          "units": {
+            "sessionDurationMs": 19000
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 0,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 0,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {},
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 1,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": null,
+            "estimatedRequests": 0,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 1,
+            "estimateComplete": false,
+            "missingUsageRequests": 1,
+            "statusCounts": {
+              "failed": 1
+            },
+            "units": {},
+            "unitCoverage": {},
+            "estimateSources": []
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.015833333333,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 1
+            },
+            "units": {
+              "sessionDurationMs": 19000
+            },
+            "unitCoverage": {
+              "sessionDurationMs": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-live-1-2026-10-02",
+                "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+                ]
+              }
+            ]
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": false
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      }
+    }
+  ],
+  "method": "Matched synthetic 16 kHz PCM replayed at real-time cadence into isolated production voice orchestration. Startup speech is drained before the one measured request. No microphone/speaker, no saved audio, no human learning claim. First received PCM can be filler; useful academic answer audio latency is unmeasured. GPT-Live audio-end may be a silence heuristic.",
+  "ceilings": {
+    "sessions": 2,
+    "sessionSeconds": 60,
+    "openaiBackendRequests": 24,
+    "jevRequests": 32
+  },
+  "source": {
+    "model": "eleven_flash_v2_5",
+    "pcmBytes": 132260,
+    "sha256": "a59e823315d8036ede0dc7251a2c5fb639289bb65b2893ca57f11c736299717e",
+    "durationMs": 4133.125,
+    "energySpeechEndMs": 3890,
+    "generationCharacters": 65
+  },
+  "providerRequests": {
+    "openai": 4,
+    "jev": 3
+  },
+  "models": {
+    "tutor": "gpt-5.6-terra",
+    "gptLive": "gpt-live-1",
+    "stt": "scribe_v2_realtime",
+    "tts": "eleven_v4_turbo"
+  },
+  "stoppedEarly": "Stopped on the first failed session. No automatic paid retry.",
+  "summary": [
+    {
+      "arm": "eleven",
+      "sessions": 1,
+      "completed": 1,
+      "firstAudio": {
+        "n": 1,
+        "median": 3475.2,
+        "minimum": 3475.2,
+        "maximum": 3475.2
+      },
+      "firstText": {
+        "n": 1,
+        "median": 3238.4,
+        "minimum": 3238.4,
+        "maximum": 3238.4
+      },
+      "estimatedUsd": 0.021027216542,
+      "usageComplete": false
+    },
+    {
+      "arm": "gpt-live",
+      "sessions": 1,
+      "completed": 0,
+      "firstAudio": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "firstText": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "estimatedUsd": 0.015833333333,
+      "usageComplete": false
+    }
+  ],
+  "elevenBudget": {
+    "name": "gpt-live-compare",
+    "provider": "ElevenLabs",
+    "maximumCredits": 14000,
+    "maximumProviderRequests": 16,
+    "before": {
+      "used": 3031,
+      "limit": 121009,
+      "remaining": 117978
+    },
+    "reservedCredits": 6358,
+    "providerRequests": 4,
+    "ttsCharacters": 358,
+    "sttReservedSeconds": 60,
+    "modelCreditCeilings": {
+      "eleven_v4_turbo": 1,
+      "eleven_flash_v2_5": 1
+    },
+    "sttCreditsPerSecondReservation": 100,
+    "reservations": [
+      {
+        "credits": 65,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 65
+      },
+      {
+        "credits": 6000,
+        "kind": "stt-session",
+        "seconds": 60
+      },
+      {
+        "credits": 33,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 33
+      },
+      {
+        "credits": 116,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 116
+      },
+      {
+        "credits": 44,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 44
+      },
+      {
+        "credits": 100,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 100
+      }
+    ],
+    "limitation": "This enforces a local reservation ceiling using verified character pricing for premade voices and deliberately conservative STT duration reservations. Provider accounting can lag, and account balance changes may include other activity. It is not an account-wide billing limit.",
+    "after": {
+      "used": 3031,
+      "limit": 121009,
+      "remaining": 117978
+    },
+    "observedAccountCreditDelta": 0
+  },
+  "finishedAt": "2026-10-02T17:53:16.003Z"
+}

@@ -1,0 +1,89 @@
+<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'"><style>*{box-sizing:border-box}html,body{margin:0;width:800px;height:500px;overflow:hidden;font-family:Arial,sans-serif;background:white}#stage{position:relative;width:800px;height:500px}svg{overflow:visible}</style></head><body><main id="stage"><canvas width="800" height="500"></canvas></main><script>window.__done=false;window.__error=null;window.__texts=[];window.__hits=[];window.__draws=[];window.addEventListener('error',e=>window.__error=String(e.message).slice(0,180));
+
+function draw(ctx, hit) {
+	ctx.clearRect(0, 0, 800, 500);
+	ctx.fillStyle = "#ffffff";
+	ctx.fillRect(0, 0, 800, 500);
+	ctx.fillStyle = "#111111";
+	ctx.strokeStyle = "#111111";
+	ctx.textAlign = "left";
+	ctx.textBaseline = "alphabetic";
+	ctx.font = "30px Arial";
+	// 2H₂ + O₂ → 2H₂O
+	ctx.fillText("2", 200, 105);
+	ctx.fillText("H", 224, 105);
+	ctx.font = "20px Arial";
+	ctx.fillText("2", 244, 111);
+	ctx.font = "30px Arial";
+	ctx.fillText("+", 270, 105);
+	ctx.fillText("O", 305, 105);
+	ctx.font = "20px Arial";
+	ctx.fillText("2", 325, 111);
+	ctx.font = "30px Arial";
+	ctx.fillText("→", 355, 105);
+	ctx.fillText("2", 398, 105);
+	ctx.fillText("H", 422, 105);
+	ctx.font = "20px Arial";
+	ctx.fillText("2", 442, 111);
+	ctx.font = "30px Arial";
+	ctx.fillText("O", 454, 105);
+	hit("equation", 190, 65, 290, 55);
+	function atom(label, x, y) {
+		ctx.font = "28px Arial";
+		ctx.textAlign = "center";
+		ctx.textBaseline = "middle";
+		ctx.fillText(label, x, y);
+	}
+	function singleBond(x1, y1, x2, y2) {
+		ctx.beginPath();
+		ctx.moveTo(x1, y1);
+		ctx.lineTo(x2, y2);
+		ctx.lineWidth = 2;
+		ctx.stroke();
+	}
+	function doubleBond(x1, y1, x2, y2) {
+		ctx.lineWidth = 2;
+		ctx.beginPath();
+		ctx.moveTo(x1, y1 - 3);
+		ctx.lineTo(x2, y2 - 3);
+		ctx.moveTo(x1, y1 + 3);
+		ctx.lineTo(x2, y2 + 3);
+		ctx.stroke();
+	}
+	function hydrogenMolecule(id, x, y) {
+		singleBond(x + 19, y, x + 51, y);
+		atom("H", x, y);
+		atom("H", x + 70, y);
+		hit(id, x - 20, y - 24, 110, 48);
+	}
+	function oxygenMolecule(id, x, y) {
+		doubleBond(x + 20, y, x + 58, y);
+		atom("O", x, y);
+		atom("O", x + 78, y);
+		hit(id, x - 20, y - 24, 120, 48);
+	}
+	function waterMolecule(id, x, y) {
+		singleBond(x + 19, y, x + 50, y);
+		singleBond(x + 70, y, x + 101, y);
+		atom("H", x, y);
+		atom("O", x + 60, y);
+		atom("H", x + 120, y);
+		hit(id, x - 20, y - 24, 160, 48);
+	}
+	hydrogenMolecule("reactant-h2-1", 75, 235);
+	hydrogenMolecule("reactant-h2-2", 75, 315);
+	oxygenMolecule("reactant-o2", 250, 275);
+	waterMolecule("product-h2o-1", 495, 235);
+	waterMolecule("product-h2o-2", 495, 315);
+	ctx.font = "18px Arial";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "alphabetic";
+	ctx.fillText("Atoms conserved", 400, 410);
+	hit("note-atoms-conserved", 320, 382, 160, 36);
+}
+
+try{const canvas=document.querySelector('canvas'),native=canvas.getContext('2d');let count=0;
+ native.fillStyle='white';native.fillRect(0,0,800,500);native.fillStyle='#243544';native.strokeStyle='#243544';native.lineWidth=2;native.font='18px Arial';
+ const ctx=new Proxy(native,{get(target,key){const v=target[key];if(typeof v!=='function')return v;return(...args)=>{if(++count>12000)throw Error('Drawing call limit');if(key==='fillText'||key==='strokeText'){const [text,x,y]=args,m=target.measureText(String(text)),fontSize=Number(target.font.match(/([0-9.]+)px/)?.[1]),transform=target.getTransform(),points=[[x-m.actualBoundingBoxLeft,y-m.actualBoundingBoxAscent],[x+m.actualBoundingBoxRight,y-m.actualBoundingBoxAscent],[x-m.actualBoundingBoxLeft,y+m.actualBoundingBoxDescent],[x+m.actualBoundingBoxRight,y+m.actualBoundingBoxDescent]].map(([x,y])=>new DOMPoint(x,y).matrixTransform(transform)),left=Math.min(...points.map(p=>p.x)),top=Math.min(...points.map(p=>p.y)),right=Math.max(...points.map(p=>p.x)),bottom=Math.max(...points.map(p=>p.y));window.__texts.push({text:String(text),x:left,y:top,width:right-left,height:bottom-top,fontSize:fontSize*Math.hypot(transform.a,transform.b)});}if(window.__draws.length<3000)window.__draws.push({op:key,args:args.map(v=>typeof v==='number'||typeof v==='string'?v:null)});return v.apply(target,args);};},set(target,key,value){target[key]=value;return true;}});
+ const hit=(id,x,y,width,height)=>{if(typeof id!=='string'||id.length>120||![x,y,width,height].every(Number.isFinite)||width<0||height<0||window.__hits.length>=2000)throw Error('Invalid hit region');window.__hits.push({id,x,y,width,height});};
+ draw(ctx,hit);window.__done=true;}catch(error){window.__error=String(error.message).slice(0,180);window.__done=true;}</script></body></html>

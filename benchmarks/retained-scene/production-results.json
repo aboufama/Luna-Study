@@ -1,0 +1,4293 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:16:53.831Z",
+  "liveProviders": true,
+  "model": "gpt-5.6-terra",
+  "reasoning": "low",
+  "budget": {
+    "maximumPaidRequests": 11,
+    "paidRequests": 11
+  },
+  "instructions": {
+    "baseline": {
+      "chars": 11945,
+      "sha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc"
+    },
+    "formatOnly": {
+      "chars": 11999,
+      "sha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "replacements": [
+        [
+          "{\"type\":\"matrix\",\"rows\":[[\"cell LaTeX\"]],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}",
+          "{\"type\":\"matrix\",\"size\":[1,1],\"cells\":[{\"row\":0,\"col\":0,\"value\":\"cell LaTeX\"}],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}"
+        ],
+        [
+          "for an 8-by-10 game, provide exactly 8 rows of 10 empty cells. Use \"\" for unspecified cells;",
+          "for an 8-by-10 game, provide size:[8,10] and cells:[]. Omit unspecified cells from the required cells array;"
+        ]
+      ]
+    },
+    "production": {
+      "chars": 11550,
+      "sha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d"
+    }
+  },
+  "runs": [
+    {
+      "id": "blank-grid-baseline-1",
+      "scenario": "blank-grid",
+      "condition": "baseline",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Payoff grid\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"payoff-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}</board>",
+      "usage": {
+        "input_tokens": 2705,
+        "input_tokens_details": {
+          "cache_write_tokens": 2702,
+          "cached_tokens": 0
+        },
+        "output_tokens": 138,
+        "output_tokens_details": {
+          "reasoning_tokens": 37
+        },
+        "total_tokens": 2843
+      },
+      "latencies": {
+        "firstRawOutputMs": 1770.1,
+        "firstSpokenMs": 1838.8,
+        "firstSyntheticAudioMs": 1939.8,
+        "generationCompleteMs": 2503.1,
+        "boardReadyMs": 2514.6
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 11947,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Payoff grid",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "payoff-grid",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1770,
+          "totalMs": 2508,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff grid",
+        "revision": "2d420266-4707-4ec3-84f4-206381b3812b",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Payoff grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "outputBytes": 385,
+      "wireBoardBytes": 353,
+      "finishedAt": "2026-10-02T08:16:56.351Z"
+    },
+    {
+      "id": "blank-grid-compact-1",
+      "scenario": "blank-grid",
+      "condition": "compact",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Payoff grid\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"payoff-grid\",\"type\":\"matrix\",\"size\":[8,10],\"cells\":[]}]}</board>",
+      "usage": {
+        "input_tokens": 2725,
+        "input_tokens_details": {
+          "cache_write_tokens": 2722,
+          "cached_tokens": 0
+        },
+        "output_tokens": 81,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 2806
+      },
+      "latencies": {
+        "firstRawOutputMs": 1157.2,
+        "firstSpokenMs": 1226.3,
+        "firstSyntheticAudioMs": 1327,
+        "generationCompleteMs": 1583.7,
+        "boardReadyMs": 1584.9
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 12001,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Payoff grid",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "payoff-grid",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1157,
+          "totalMs": 1584,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff grid",
+        "revision": "52b95345-cca6-4209-8d3e-74d83bf180a1",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Payoff grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "size": [
+              8,
+              10
+            ],
+            "cells": []
+          }
+        ]
+      },
+      "outputBytes": 145,
+      "wireBoardBytes": 113,
+      "finishedAt": "2026-10-02T08:16:57.941Z"
+    },
+    {
+      "id": "blank-grid-compact-2",
+      "scenario": "blank-grid",
+      "condition": "compact",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Payoff grid\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"payoff-grid\",\"type\":\"matrix\",\"size\":[8,10],\"cells\":[],\"rowLabels\":[\"P1-1\",\"P1-2\",\"P1-3\",\"P1-4\",\"P1-5\",\"P1-6\",\"P1-7\",\"P1-8\"],\"columnLabels\":[\"P2-1\",\"P2-2\",\"P2-3\",\"P2-4\",\"P2-5\",\"P2-6\",\"P2-7\",\"P2-8\",\"P2-9\",\"P2-10\"],\"label\":\"Player 1 rows; Player 2 columns\"}]}</board>",
+      "usage": {
+        "input_tokens": 2725,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2722
+        },
+        "output_tokens": 187,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 2912
+      },
+      "latencies": {
+        "firstRawOutputMs": 815.5,
+        "firstSpokenMs": 909.7,
+        "firstSyntheticAudioMs": 1010.2,
+        "generationCompleteMs": 1767,
+        "boardReadyMs": 1768
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 12001,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Payoff grid",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "payoff-grid",
+              "type": "matrix",
+              "rowLabels": [
+                "P1-1",
+                "P1-2",
+                "P1-3",
+                "P1-4",
+                "P1-5",
+                "P1-6",
+                "P1-7",
+                "P1-8"
+              ],
+              "columnLabels": [
+                "P2-1",
+                "P2-2",
+                "P2-3",
+                "P2-4",
+                "P2-5",
+                "P2-6",
+                "P2-7",
+                "P2-8",
+                "P2-9",
+                "P2-10"
+              ],
+              "label": "Player 1 rows; Player 2 columns",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 815,
+          "totalMs": 1767,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff grid",
+        "revision": "fa03b5f7-46ad-4d35-a877-d4d6a71c3234",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rowLabels": [
+              "P1-1",
+              "P1-2",
+              "P1-3",
+              "P1-4",
+              "P1-5",
+              "P1-6",
+              "P1-7",
+              "P1-8"
+            ],
+            "columnLabels": [
+              "P2-1",
+              "P2-2",
+              "P2-3",
+              "P2-4",
+              "P2-5",
+              "P2-6",
+              "P2-7",
+              "P2-8",
+              "P2-9",
+              "P2-10"
+            ],
+            "label": "Player 1 rows; Player 2 columns",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Payoff grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "size": [
+              8,
+              10
+            ],
+            "cells": [],
+            "rowLabels": [
+              "P1-1",
+              "P1-2",
+              "P1-3",
+              "P1-4",
+              "P1-5",
+              "P1-6",
+              "P1-7",
+              "P1-8"
+            ],
+            "columnLabels": [
+              "P2-1",
+              "P2-2",
+              "P2-3",
+              "P2-4",
+              "P2-5",
+              "P2-6",
+              "P2-7",
+              "P2-8",
+              "P2-9",
+              "P2-10"
+            ],
+            "label": "Player 1 rows; Player 2 columns"
+          }
+        ]
+      },
+      "outputBytes": 345,
+      "wireBoardBytes": 313,
+      "finishedAt": "2026-10-02T08:16:59.712Z"
+    },
+    {
+      "id": "blank-grid-baseline-2",
+      "scenario": "blank-grid",
+      "condition": "baseline",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Payoff grid\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"payoff-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]],\"rowLabels\":[\"P1 1\",\"P1 2\",\"P1 3\",\"P1 4\",\"P1 5\",\"P1 6\",\"P1 7\",\"P1 8\"],\"columnLabels\":[\"P2 1\",\"P2 2\",\"P2 3\",\"P2 4\",\"P2 5\",\"P2 6\",\"P2 7\",\"P2 8\",\"P2 9\",\"P2 10\"],\"label\":\"P1 strategies by P2 strategies\"}]}</board>",
+      "usage": {
+        "input_tokens": 2705,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2702
+        },
+        "output_tokens": 228,
+        "output_tokens_details": {
+          "reasoning_tokens": 19
+        },
+        "total_tokens": 2933
+      },
+      "latencies": {
+        "firstRawOutputMs": 1079.3,
+        "firstSpokenMs": 1124.2,
+        "firstSyntheticAudioMs": 1225.3,
+        "generationCompleteMs": 2416.8,
+        "boardReadyMs": 2418.2
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 11947,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Payoff grid",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "payoff-grid",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "rowLabels": [
+                "P1 1",
+                "P1 2",
+                "P1 3",
+                "P1 4",
+                "P1 5",
+                "P1 6",
+                "P1 7",
+                "P1 8"
+              ],
+              "columnLabels": [
+                "P2 1",
+                "P2 2",
+                "P2 3",
+                "P2 4",
+                "P2 5",
+                "P2 6",
+                "P2 7",
+                "P2 8",
+                "P2 9",
+                "P2 10"
+              ],
+              "label": "P1 strategies by P2 strategies"
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1079,
+          "totalMs": 2417,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff grid",
+        "revision": "52b0f5ad-5396-4f40-b194-79256eee7120",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "rowLabels": [
+              "P1 1",
+              "P1 2",
+              "P1 3",
+              "P1 4",
+              "P1 5",
+              "P1 6",
+              "P1 7",
+              "P1 8"
+            ],
+            "columnLabels": [
+              "P2 1",
+              "P2 2",
+              "P2 3",
+              "P2 4",
+              "P2 5",
+              "P2 6",
+              "P2 7",
+              "P2 8",
+              "P2 9",
+              "P2 10"
+            ],
+            "label": "P1 strategies by P2 strategies"
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Payoff grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "rowLabels": [
+              "P1 1",
+              "P1 2",
+              "P1 3",
+              "P1 4",
+              "P1 5",
+              "P1 6",
+              "P1 7",
+              "P1 8"
+            ],
+            "columnLabels": [
+              "P2 1",
+              "P2 2",
+              "P2 3",
+              "P2 4",
+              "P2 5",
+              "P2 6",
+              "P2 7",
+              "P2 8",
+              "P2 9",
+              "P2 10"
+            ],
+            "label": "P1 strategies by P2 strategies"
+          }
+        ]
+      },
+      "outputBytes": 584,
+      "wireBoardBytes": 552,
+      "finishedAt": "2026-10-02T08:17:02.134Z"
+    },
+    {
+      "id": "blank-grid-baseline-3",
+      "scenario": "blank-grid",
+      "condition": "baseline",
+      "round": 3,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc",
+      "raw": "<ask>q-grid</ask>\n<board>{\"title\":\"Payoff grid\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"payoff-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]],\"rowLabels\":[\"P1 1\",\"P1 2\",\"P1 3\",\"P1 4\",\"P1 5\",\"P1 6\",\"P1 7\",\"P1 8\"],\"columnLabels\":[\"P2 1\",\"P2 2\",\"P2 3\",\"P2 4\",\"P2 5\",\"P2 6\",\"P2 7\",\"P2 8\",\"P2 9\",\"P2 10\"],\"label\":\"Payoffs\"}]}</board>",
+      "usage": {
+        "input_tokens": 2705,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2702
+        },
+        "output_tokens": 235,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 2940
+      },
+      "latencies": {
+        "firstRawOutputMs": 952,
+        "firstSpokenMs": 976.9,
+        "firstSyntheticAudioMs": 1077.5,
+        "generationCompleteMs": 2312.5,
+        "boardReadyMs": 2315
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 11947,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Payoff grid",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "payoff-grid",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "rowLabels": [
+                "P1 1",
+                "P1 2",
+                "P1 3",
+                "P1 4",
+                "P1 5",
+                "P1 6",
+                "P1 7",
+                "P1 8"
+              ],
+              "columnLabels": [
+                "P2 1",
+                "P2 2",
+                "P2 3",
+                "P2 4",
+                "P2 5",
+                "P2 6",
+                "P2 7",
+                "P2 8",
+                "P2 9",
+                "P2 10"
+              ],
+              "label": "Payoffs"
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 952,
+          "totalMs": 2313,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff grid",
+        "revision": "01c04335-044d-4363-8db3-398f909f9432",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "rowLabels": [
+              "P1 1",
+              "P1 2",
+              "P1 3",
+              "P1 4",
+              "P1 5",
+              "P1 6",
+              "P1 7",
+              "P1 8"
+            ],
+            "columnLabels": [
+              "P2 1",
+              "P2 2",
+              "P2 3",
+              "P2 4",
+              "P2 5",
+              "P2 6",
+              "P2 7",
+              "P2 8",
+              "P2 9",
+              "P2 10"
+            ],
+            "label": "Payoffs"
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Payoff grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "rowLabels": [
+              "P1 1",
+              "P1 2",
+              "P1 3",
+              "P1 4",
+              "P1 5",
+              "P1 6",
+              "P1 7",
+              "P1 8"
+            ],
+            "columnLabels": [
+              "P2 1",
+              "P2 2",
+              "P2 3",
+              "P2 4",
+              "P2 5",
+              "P2 6",
+              "P2 7",
+              "P2 8",
+              "P2 9",
+              "P2 10"
+            ],
+            "label": "Payoffs"
+          }
+        ]
+      },
+      "outputBytes": 562,
+      "wireBoardBytes": 529,
+      "finishedAt": "2026-10-02T08:17:04.452Z"
+    },
+    {
+      "id": "blank-grid-compact-3",
+      "scenario": "blank-grid",
+      "condition": "compact",
+      "round": 3,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "raw": "<ask>q-grid</ask>\n<board>{\"title\":\"Payoff grid\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"payoff-grid\",\"type\":\"matrix\",\"size\":[8,10],\"cells\":[],\"rowLabels\":[\"P1 1\",\"P1 2\",\"P1 3\",\"P1 4\",\"P1 5\",\"P1 6\",\"P1 7\",\"P1 8\"],\"columnLabels\":[\"P2 1\",\"P2 2\",\"P2 3\",\"P2 4\",\"P2 5\",\"P2 6\",\"P2 7\",\"P2 8\",\"P2 9\",\"P2 10\"],\"label\":\"Player 1 rows; Player 2 columns\"}]}</board>",
+      "usage": {
+        "input_tokens": 2725,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2722
+        },
+        "output_tokens": 187,
+        "output_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "total_tokens": 2912
+      },
+      "latencies": {
+        "firstRawOutputMs": 1148.9,
+        "firstSpokenMs": 1181.7,
+        "firstSyntheticAudioMs": 1282,
+        "generationCompleteMs": 2181.3,
+        "boardReadyMs": 2182.6
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 12001,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Payoff grid",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "payoff-grid",
+              "type": "matrix",
+              "rowLabels": [
+                "P1 1",
+                "P1 2",
+                "P1 3",
+                "P1 4",
+                "P1 5",
+                "P1 6",
+                "P1 7",
+                "P1 8"
+              ],
+              "columnLabels": [
+                "P2 1",
+                "P2 2",
+                "P2 3",
+                "P2 4",
+                "P2 5",
+                "P2 6",
+                "P2 7",
+                "P2 8",
+                "P2 9",
+                "P2 10"
+              ],
+              "label": "Player 1 rows; Player 2 columns",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1149,
+          "totalMs": 2181,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff grid",
+        "revision": "dfe0b4d8-81b8-4339-9665-efae9302cfb0",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "rowLabels": [
+              "P1 1",
+              "P1 2",
+              "P1 3",
+              "P1 4",
+              "P1 5",
+              "P1 6",
+              "P1 7",
+              "P1 8"
+            ],
+            "columnLabels": [
+              "P2 1",
+              "P2 2",
+              "P2 3",
+              "P2 4",
+              "P2 5",
+              "P2 6",
+              "P2 7",
+              "P2 8",
+              "P2 9",
+              "P2 10"
+            ],
+            "label": "Player 1 rows; Player 2 columns",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Payoff grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "payoff-grid",
+            "type": "matrix",
+            "size": [
+              8,
+              10
+            ],
+            "cells": [],
+            "rowLabels": [
+              "P1 1",
+              "P1 2",
+              "P1 3",
+              "P1 4",
+              "P1 5",
+              "P1 6",
+              "P1 7",
+              "P1 8"
+            ],
+            "columnLabels": [
+              "P2 1",
+              "P2 2",
+              "P2 3",
+              "P2 4",
+              "P2 5",
+              "P2 6",
+              "P2 7",
+              "P2 8",
+              "P2 9",
+              "P2 10"
+            ],
+            "label": "Player 1 rows; Player 2 columns"
+          }
+        ]
+      },
+      "outputBytes": 346,
+      "wireBoardBytes": 313,
+      "finishedAt": "2026-10-02T08:17:06.639Z"
+    },
+    {
+      "id": "biology-cell-production-1",
+      "scenario": "biology-cell",
+      "condition": "production",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-biology-cell",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit biology rendering fixture\",\"compartments\":[\"cell membrane\",\"cytoplasm\",\"nucleus\"],\"containment\":\"nucleus inside cytoplasm, cytoplasm inside cell membrane\",\"note\":\"Membrane: selective boundary\"}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "biology-cell",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-biology-cell"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+          }
+        ],
+        "currentProblem": {
+          "title": "biology-cell",
+          "request": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "a572e1987563b2c95b76253dbd759b7b9cb784d69e4e9a2a9eabb0ac0748eeda",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here’s a simple cell diagram with the compartments nested in order.</say><board>{\"title\":\"Animal cell\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"cell-membrane\",\"type\":\"ellipse\",\"x\":150,\"y\":80,\"width\":410,\"height\":300,\"label\":\"Cell membrane\",\"tone\":\"ink\"},{\"id\":\"cytoplasm\",\"type\":\"ellipse\",\"x\":175,\"y\":105,\"width\":360,\"height\":250,\"label\":\"Cytoplasm\",\"tone\":\"muted\"},{\"id\":\"nucleus\",\"type\":\"ellipse\",\"x\":300,\"y\":170,\"width\":120,\"height\":105,\"label\":\"Nucleus\",\"tone\":\"accent\"},{\"id\":\"membrane-leader\",\"type\":\"line\",\"x1\":160,\"y1\":150,\"x2\":80,\"y2\":115,\"tone\":\"ink\"},{\"id\":\"membrane-label\",\"type\":\"text\",\"x\":20,\"y\":80,\"width\":145,\"height\":32,\"text\":\"Cell membrane\",\"fontSize\":22,\"tone\":\"ink\"},{\"id\":\"cytoplasm-leader\",\"type\":\"line\",\"x1\":525,\"y1\":285,\"x2\":660,\"y2\":315,\"tone\":\"ink\"},{\"id\":\"cytoplasm-label\",\"type\":\"text\",\"x\":660,\"y\":300,\"width\":130,\"height\":32,\"text\":\"Cytoplasm\",\"fontSize\":22,\"tone\":\"ink\"},{\"id\":\"nucleus-leader\",\"type\":\"line\",\"x1\":420,\"y1\":185,\"x2\":625,\"y2\":130,\"tone\":\"ink\"},{\"id\":\"nucleus-label\",\"type\":\"text\",\"x\":625,\"y\":105,\"width\":115,\"height\":32,\"text\":\"Nucleus\",\"fontSize\":22,\"tone\":\"ink\"},{\"id\":\"membrane-note\",\"type\":\"text\",\"x\":245,\"y\":420,\"width\":320,\"height\":32,\"text\":\"Membrane: selective boundary\",\"fontSize\":22,\"tone\":\"accent\"}],\"zones\":[{\"id\":\"select-membrane\",\"label\":\"cell membrane\",\"anchor\":{\"kind\":\"object\",\"id\":\"cell-membrane\"}},{\"id\":\"select-cytoplasm\",\"label\":\"cytoplasm\",\"anchor\":{\"kind\":\"object\",\"id\":\"cytoplasm\"}},{\"id\":\"select-nucleus\",\"label\":\"nucleus\",\"anchor\":{\"kind\":\"object\",\"id\":\"nucleus\"}},{\"id\":\"select-note\",\"label\":\"membrane teaching note\",\"anchor\":{\"kind\":\"object\",\"id\":\"membrane-note\"}}]}]}</board>",
+      "usage": {
+        "input_tokens": 2591,
+        "input_tokens_details": {
+          "cache_write_tokens": 2588,
+          "cached_tokens": 0
+        },
+        "output_tokens": 601,
+        "output_tokens_details": {
+          "reasoning_tokens": 54
+        },
+        "total_tokens": 3192
+      },
+      "latencies": {
+        "firstRawOutputMs": 1201.5,
+        "firstSpokenMs": 1286.3,
+        "firstSyntheticAudioMs": 1500,
+        "generationCompleteMs": 5394.3,
+        "boardReadyMs": 5396.6
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1602,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s a simple cell diagram with the compartments nested in order.",
+        "board": {
+          "title": "Animal cell",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "cell-membrane",
+                  "type": "ellipse",
+                  "x": 150,
+                  "y": 80,
+                  "width": 410,
+                  "height": 300,
+                  "label": "Cell membrane",
+                  "tone": "ink"
+                },
+                {
+                  "id": "cytoplasm",
+                  "type": "ellipse",
+                  "x": 175,
+                  "y": 105,
+                  "width": 360,
+                  "height": 250,
+                  "label": "Cytoplasm",
+                  "tone": "muted"
+                },
+                {
+                  "id": "nucleus",
+                  "type": "ellipse",
+                  "x": 300,
+                  "y": 170,
+                  "width": 120,
+                  "height": 105,
+                  "label": "Nucleus",
+                  "tone": "accent"
+                },
+                {
+                  "id": "membrane-leader",
+                  "type": "line",
+                  "x1": 160,
+                  "y1": 150,
+                  "x2": 80,
+                  "y2": 115,
+                  "tone": "ink"
+                },
+                {
+                  "id": "membrane-label",
+                  "type": "text",
+                  "x": 20,
+                  "y": 80,
+                  "width": 145,
+                  "height": 32,
+                  "text": "Cell membrane",
+                  "fontSize": 22,
+                  "tone": "ink"
+                },
+                {
+                  "id": "cytoplasm-leader",
+                  "type": "line",
+                  "x1": 525,
+                  "y1": 285,
+                  "x2": 660,
+                  "y2": 315,
+                  "tone": "ink"
+                },
+                {
+                  "id": "cytoplasm-label",
+                  "type": "text",
+                  "x": 660,
+                  "y": 300,
+                  "width": 130,
+                  "height": 32,
+                  "text": "Cytoplasm",
+                  "fontSize": 22,
+                  "tone": "ink"
+                },
+                {
+                  "id": "nucleus-leader",
+                  "type": "line",
+                  "x1": 420,
+                  "y1": 185,
+                  "x2": 625,
+                  "y2": 130,
+                  "tone": "ink"
+                },
+                {
+                  "id": "nucleus-label",
+                  "type": "text",
+                  "x": 625,
+                  "y": 105,
+                  "width": 115,
+                  "height": 32,
+                  "text": "Nucleus",
+                  "fontSize": 22,
+                  "tone": "ink"
+                },
+                {
+                  "id": "membrane-note",
+                  "type": "text",
+                  "x": 245,
+                  "y": 420,
+                  "width": 320,
+                  "height": 32,
+                  "text": "Membrane: selective boundary",
+                  "fontSize": 22,
+                  "tone": "accent"
+                }
+              ],
+              "zones": [
+                {
+                  "id": "select-membrane",
+                  "label": "cell membrane",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "cell-membrane"
+                  }
+                },
+                {
+                  "id": "select-cytoplasm",
+                  "label": "cytoplasm",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "cytoplasm"
+                  }
+                },
+                {
+                  "id": "select-nucleus",
+                  "label": "nucleus",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "nucleus"
+                  }
+                },
+                {
+                  "id": "select-note",
+                  "label": "membrane teaching note",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "membrane-note"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1201,
+          "totalMs": 5394,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Animal cell",
+        "revision": "ab8db41d-dc84-4fa3-b953-caa696392604",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 150,
+                "y": 80,
+                "width": 410,
+                "height": 300,
+                "label": "Cell membrane",
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 175,
+                "y": 105,
+                "width": 360,
+                "height": 250,
+                "label": "Cytoplasm",
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 300,
+                "y": 170,
+                "width": 120,
+                "height": 105,
+                "label": "Nucleus",
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-leader",
+                "type": "line",
+                "x1": 160,
+                "y1": 150,
+                "x2": 80,
+                "y2": 115,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 20,
+                "y": 80,
+                "width": 145,
+                "height": 32,
+                "text": "Cell membrane",
+                "fontSize": 22,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-leader",
+                "type": "line",
+                "x1": 525,
+                "y1": 285,
+                "x2": 660,
+                "y2": 315,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 660,
+                "y": 300,
+                "width": 130,
+                "height": 32,
+                "text": "Cytoplasm",
+                "fontSize": 22,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-leader",
+                "type": "line",
+                "x1": 420,
+                "y1": 185,
+                "x2": 625,
+                "y2": 130,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 625,
+                "y": 105,
+                "width": 115,
+                "height": 32,
+                "text": "Nucleus",
+                "fontSize": 22,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-note",
+                "type": "text",
+                "x": 245,
+                "y": 420,
+                "width": 320,
+                "height": 32,
+                "text": "Membrane: selective boundary",
+                "fontSize": 22,
+                "tone": "accent"
+              }
+            ],
+            "zones": [
+              {
+                "id": "select-membrane",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "select-cytoplasm",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "select-nucleus",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "select-note",
+                "label": "membrane teaching note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "membrane-note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Animal cell",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 150,
+                "y": 80,
+                "width": 410,
+                "height": 300,
+                "label": "Cell membrane",
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 175,
+                "y": 105,
+                "width": 360,
+                "height": 250,
+                "label": "Cytoplasm",
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 300,
+                "y": 170,
+                "width": 120,
+                "height": 105,
+                "label": "Nucleus",
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-leader",
+                "type": "line",
+                "x1": 160,
+                "y1": 150,
+                "x2": 80,
+                "y2": 115,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 20,
+                "y": 80,
+                "width": 145,
+                "height": 32,
+                "text": "Cell membrane",
+                "fontSize": 22,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-leader",
+                "type": "line",
+                "x1": 525,
+                "y1": 285,
+                "x2": 660,
+                "y2": 315,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 660,
+                "y": 300,
+                "width": 130,
+                "height": 32,
+                "text": "Cytoplasm",
+                "fontSize": 22,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-leader",
+                "type": "line",
+                "x1": 420,
+                "y1": 185,
+                "x2": 625,
+                "y2": 130,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 625,
+                "y": 105,
+                "width": 115,
+                "height": 32,
+                "text": "Nucleus",
+                "fontSize": 22,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-note",
+                "type": "text",
+                "x": 245,
+                "y": 420,
+                "width": 320,
+                "height": 32,
+                "text": "Membrane: selective boundary",
+                "fontSize": 22,
+                "tone": "accent"
+              }
+            ],
+            "zones": [
+              {
+                "id": "select-membrane",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "select-cytoplasm",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "select-nucleus",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "select-note",
+                "label": "membrane teaching note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "membrane-note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 1714,
+      "wireBoardBytes": 1619,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:17:12.039Z"
+    },
+    {
+      "id": "algebra-steps-production-1",
+      "scenario": "algebra-steps",
+      "condition": "production",
+      "round": 1,
+      "status": "no-board",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-algebra-steps",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit requested worked example\",\"steps\":[\"2x + 3 = 11\",\"2x = 8\",\"x = 4\"],\"operations\":[\"subtract 3 from both sides\",\"divide both sides by 2\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "algebra-steps",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-algebra-steps"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+          }
+        ],
+        "currentProblem": {
+          "title": "algebra-steps",
+          "request": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "2300666b8285e216bf7bde2f435e29eab92866ddc4de4fc60404403c42e0135f",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here’s the worked example, with each operation shown between the aligned equations.</say><board>{\"title\":\"Solve for x\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"algebra-scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"eq1\",\"type\":\"math\",\"x\":120,\"y\":55,\"width\":330,\"height\":48,\"text\":\"2x + 3 = 11\",\"fontSize\":30},{\"id\":\"arrow1\",\"type\":\"arrow\",\"x1\":285,\"y1\":112,\"x2\":285,\"y2\":162,\"label\":\"subtract 3 from both sides\",\"tone\":\"muted\"},{\"id\":\"eq2\",\"type\":\"math\",\"x\":120,\"y\":190,\"width\":330,\"height\":48,\"text\":\"2x = 8\",\"fontSize\":30},{\"id\":\"arrow2\",\"type\":\"arrow\",\"x1\":285,\"y1\":247,\"x2\":285,\"y2\":297,\"label\":\"divide both sides by 2\",\"tone\":\"muted\"},{\"id\":\"answer-box\",\"type\":\"rect\",\"x\":105,\"y\":330,\"width\":360,\"height\":82,\"label\":\"\",\"tone\":\"accent\"},{\"id\":\"eq3\",\"type\":\"math\",\"x\":150,\"y\":348,\"width\":260,\"height\":48,\"text\":\"x = 4\",\"fontSize\":32}]}]}</board>",
+      "usage": {
+        "input_tokens": 2643,
+        "input_tokens_details": {
+          "cache_write_tokens": 362,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 346,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 2989
+      },
+      "latencies": {
+        "firstRawOutputMs": 1369.9,
+        "firstSpokenMs": 1413.6,
+        "firstSyntheticAudioMs": 1724,
+        "generationCompleteMs": 3662.5,
+        "boardReadyMs": null
+      },
+      "checks": {
+        "validCanonicalBoard": false,
+        "spokenPresent": true,
+        "retainedScene": false
+      },
+      "inputBytes": 1609,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the worked example, with each operation shown between the aligned equations.",
+        "boardStatus": "invalid",
+        "timings": {
+          "firstDeltaMs": 1370,
+          "totalMs": 3663,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "wireBoard": {
+        "title": "Solve for x",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "algebra-scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "eq1",
+                "type": "math",
+                "x": 120,
+                "y": 55,
+                "width": 330,
+                "height": 48,
+                "text": "2x + 3 = 11",
+                "fontSize": 30
+              },
+              {
+                "id": "arrow1",
+                "type": "arrow",
+                "x1": 285,
+                "y1": 112,
+                "x2": 285,
+                "y2": 162,
+                "label": "subtract 3 from both sides",
+                "tone": "muted"
+              },
+              {
+                "id": "eq2",
+                "type": "math",
+                "x": 120,
+                "y": 190,
+                "width": 330,
+                "height": 48,
+                "text": "2x = 8",
+                "fontSize": 30
+              },
+              {
+                "id": "arrow2",
+                "type": "arrow",
+                "x1": 285,
+                "y1": 247,
+                "x2": 285,
+                "y2": 297,
+                "label": "divide both sides by 2",
+                "tone": "muted"
+              },
+              {
+                "id": "answer-box",
+                "type": "rect",
+                "x": 105,
+                "y": 330,
+                "width": 360,
+                "height": 82,
+                "label": "",
+                "tone": "accent"
+              },
+              {
+                "id": "eq3",
+                "type": "math",
+                "x": 150,
+                "y": 348,
+                "width": 260,
+                "height": 48,
+                "text": "x = 4",
+                "fontSize": 32
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 866,
+      "wireBoardBytes": 755,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:17:15.706Z"
+    },
+    {
+      "id": "physics-forces-production-1",
+      "scenario": "physics-forces",
+      "condition": "production",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-physics-forces",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit mechanics rendering fixture\",\"objects\":[\"block\",\"horizontal surface\"],\"forces\":{\"N\":\"up\",\"mg\":\"down\",\"F\":\"right\",\"f\":\"left\"},\"equations\":[\"ΣFᵧ = N − mg = 0\",\"ΣFₓ = F − f = ma\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "physics-forces",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-physics-forces"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+          }
+        ],
+        "currentProblem": {
+          "title": "physics-forces",
+          "request": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "e7ec799b4dcea0972f97e43f8cab618ab222bdc31f6ae280e4b9e9fa37447011",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here’s the free-body diagram with the supplied force relationships.</say><board>{\"title\":\"forces\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"surface\",\"type\":\"line\",\"x1\":120,\"y1\":280,\"x2\":680,\"y2\":280,\"label\":\"horizontal surface\",\"tone\":\"ink\"},{\"id\":\"block\",\"type\":\"rect\",\"x\":350,\"y\":200,\"width\":120,\"height\":80,\"label\":\"block\",\"tone\":\"ink\"},{\"id\":\"force-N\",\"type\":\"arrow\",\"x1\":410,\"y1\":200,\"x2\":410,\"y2\":105,\"label\":\"N\",\"tone\":\"accent\"},{\"id\":\"force-mg\",\"type\":\"arrow\",\"x1\":410,\"y1\":260,\"x2\":410,\"y2\":340,\"label\":\"mg\",\"tone\":\"accent\"},{\"id\":\"force-F\",\"type\":\"arrow\",\"x1\":470,\"y1\":240,\"x2\":610,\"y2\":240,\"label\":\"F\",\"tone\":\"accent\"},{\"id\":\"force-f\",\"type\":\"arrow\",\"x1\":350,\"y1\":240,\"x2\":210,\"y2\":240,\"label\":\"f\",\"tone\":\"accent\"},{\"id\":\"eq-y\",\"type\":\"math\",\"x\":190,\"y\":390,\"width\":420,\"height\":35,\"text\":\"\\\\Sigma F_y = N - mg = 0\",\"fontSize\":26},{\"id\":\"eq-x\",\"type\":\"math\",\"x\":190,\"y\":440,\"width\":420,\"height\":35,\"text\":\"\\\\Sigma F_x = F - f = ma\",\"fontSize\":26}],\"zones\":[{\"id\":\"select-N\",\"label\":\"normal force N\",\"anchor\":{\"kind\":\"object\",\"id\":\"force-N\"}},{\"id\":\"select-mg\",\"label\":\"weight mg\",\"anchor\":{\"kind\":\"object\",\"id\":\"force-mg\"}},{\"id\":\"select-F\",\"label\":\"applied force F\",\"anchor\":{\"kind\":\"object\",\"id\":\"force-F\"}},{\"id\":\"select-f\",\"label\":\"friction force f\",\"anchor\":{\"kind\":\"object\",\"id\":\"force-f\"}},{\"id\":\"select-eq-y\",\"label\":\"vertical force equation\",\"anchor\":{\"kind\":\"object\",\"id\":\"eq-y\"}},{\"id\":\"select-eq-x\",\"label\":\"horizontal force equation\",\"anchor\":{\"kind\":\"object\",\"id\":\"eq-x\"}}]}]}</board>",
+      "usage": {
+        "input_tokens": 2645,
+        "input_tokens_details": {
+          "cache_write_tokens": 364,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 629,
+        "output_tokens_details": {
+          "reasoning_tokens": 117
+        },
+        "total_tokens": 3274
+      },
+      "latencies": {
+        "firstRawOutputMs": 1918,
+        "firstSpokenMs": 1952.7,
+        "firstSyntheticAudioMs": 2201.5,
+        "generationCompleteMs": 4945,
+        "boardReadyMs": 4950.5
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1604,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the free-body diagram with the supplied force relationships.",
+        "board": {
+          "title": "forces",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "surface",
+                  "type": "line",
+                  "x1": 120,
+                  "y1": 280,
+                  "x2": 680,
+                  "y2": 280,
+                  "label": "horizontal surface",
+                  "tone": "ink"
+                },
+                {
+                  "id": "block",
+                  "type": "rect",
+                  "x": 350,
+                  "y": 200,
+                  "width": 120,
+                  "height": 80,
+                  "label": "block",
+                  "tone": "ink"
+                },
+                {
+                  "id": "force-N",
+                  "type": "arrow",
+                  "x1": 410,
+                  "y1": 200,
+                  "x2": 410,
+                  "y2": 105,
+                  "label": "N",
+                  "tone": "accent"
+                },
+                {
+                  "id": "force-mg",
+                  "type": "arrow",
+                  "x1": 410,
+                  "y1": 260,
+                  "x2": 410,
+                  "y2": 340,
+                  "label": "mg",
+                  "tone": "accent"
+                },
+                {
+                  "id": "force-F",
+                  "type": "arrow",
+                  "x1": 470,
+                  "y1": 240,
+                  "x2": 610,
+                  "y2": 240,
+                  "label": "F",
+                  "tone": "accent"
+                },
+                {
+                  "id": "force-f",
+                  "type": "arrow",
+                  "x1": 350,
+                  "y1": 240,
+                  "x2": 210,
+                  "y2": 240,
+                  "label": "f",
+                  "tone": "accent"
+                },
+                {
+                  "id": "eq-y",
+                  "type": "math",
+                  "x": 190,
+                  "y": 390,
+                  "width": 420,
+                  "height": 35,
+                  "text": "\\Sigma F_y = N - mg = 0",
+                  "fontSize": 26
+                },
+                {
+                  "id": "eq-x",
+                  "type": "math",
+                  "x": 190,
+                  "y": 440,
+                  "width": 420,
+                  "height": 35,
+                  "text": "\\Sigma F_x = F - f = ma",
+                  "fontSize": 26
+                }
+              ],
+              "zones": [
+                {
+                  "id": "select-N",
+                  "label": "normal force N",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "force-N"
+                  }
+                },
+                {
+                  "id": "select-mg",
+                  "label": "weight mg",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "force-mg"
+                  }
+                },
+                {
+                  "id": "select-F",
+                  "label": "applied force F",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "force-F"
+                  }
+                },
+                {
+                  "id": "select-f",
+                  "label": "friction force f",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "force-f"
+                  }
+                },
+                {
+                  "id": "select-eq-y",
+                  "label": "vertical force equation",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "eq-y"
+                  }
+                },
+                {
+                  "id": "select-eq-x",
+                  "label": "horizontal force equation",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "eq-x"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1918,
+          "totalMs": 4945,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "forces",
+        "revision": "9e8e81b5-b5c0-47e9-ac59-e54e0d212ab1",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 280,
+                "x2": 680,
+                "y2": 280,
+                "label": "horizontal surface",
+                "tone": "ink"
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 350,
+                "y": 200,
+                "width": 120,
+                "height": 80,
+                "label": "block",
+                "tone": "ink"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 410,
+                "y1": 200,
+                "x2": 410,
+                "y2": 105,
+                "label": "N",
+                "tone": "accent"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 410,
+                "y1": 260,
+                "x2": 410,
+                "y2": 340,
+                "label": "mg",
+                "tone": "accent"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 470,
+                "y1": 240,
+                "x2": 610,
+                "y2": 240,
+                "label": "F",
+                "tone": "accent"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 350,
+                "y1": 240,
+                "x2": 210,
+                "y2": 240,
+                "label": "f",
+                "tone": "accent"
+              },
+              {
+                "id": "eq-y",
+                "type": "math",
+                "x": 190,
+                "y": 390,
+                "width": 420,
+                "height": 35,
+                "text": "\\Sigma F_y = N - mg = 0",
+                "fontSize": 26
+              },
+              {
+                "id": "eq-x",
+                "type": "math",
+                "x": 190,
+                "y": 440,
+                "width": 420,
+                "height": 35,
+                "text": "\\Sigma F_x = F - f = ma",
+                "fontSize": 26
+              }
+            ],
+            "zones": [
+              {
+                "id": "select-N",
+                "label": "normal force N",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-N"
+                }
+              },
+              {
+                "id": "select-mg",
+                "label": "weight mg",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-mg"
+                }
+              },
+              {
+                "id": "select-F",
+                "label": "applied force F",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-F"
+                }
+              },
+              {
+                "id": "select-f",
+                "label": "friction force f",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-f"
+                }
+              },
+              {
+                "id": "select-eq-y",
+                "label": "vertical force equation",
+                "anchor": {
+                  "kind": "object",
+                  "id": "eq-y"
+                }
+              },
+              {
+                "id": "select-eq-x",
+                "label": "horizontal force equation",
+                "anchor": {
+                  "kind": "object",
+                  "id": "eq-x"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "forces",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 280,
+                "x2": 680,
+                "y2": 280,
+                "label": "horizontal surface",
+                "tone": "ink"
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 350,
+                "y": 200,
+                "width": 120,
+                "height": 80,
+                "label": "block",
+                "tone": "ink"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 410,
+                "y1": 200,
+                "x2": 410,
+                "y2": 105,
+                "label": "N",
+                "tone": "accent"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 410,
+                "y1": 260,
+                "x2": 410,
+                "y2": 340,
+                "label": "mg",
+                "tone": "accent"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 470,
+                "y1": 240,
+                "x2": 610,
+                "y2": 240,
+                "label": "F",
+                "tone": "accent"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 350,
+                "y1": 240,
+                "x2": 210,
+                "y2": 240,
+                "label": "f",
+                "tone": "accent"
+              },
+              {
+                "id": "eq-y",
+                "type": "math",
+                "x": 190,
+                "y": 390,
+                "width": 420,
+                "height": 35,
+                "text": "\\Sigma F_y = N - mg = 0",
+                "fontSize": 26
+              },
+              {
+                "id": "eq-x",
+                "type": "math",
+                "x": 190,
+                "y": 440,
+                "width": 420,
+                "height": 35,
+                "text": "\\Sigma F_x = F - f = ma",
+                "fontSize": 26
+              }
+            ],
+            "zones": [
+              {
+                "id": "select-N",
+                "label": "normal force N",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-N"
+                }
+              },
+              {
+                "id": "select-mg",
+                "label": "weight mg",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-mg"
+                }
+              },
+              {
+                "id": "select-F",
+                "label": "applied force F",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-F"
+                }
+              },
+              {
+                "id": "select-f",
+                "label": "friction force f",
+                "anchor": {
+                  "kind": "object",
+                  "id": "force-f"
+                }
+              },
+              {
+                "id": "select-eq-y",
+                "label": "vertical force equation",
+                "anchor": {
+                  "kind": "object",
+                  "id": "eq-y"
+                }
+              },
+              {
+                "id": "select-eq-x",
+                "label": "horizontal force equation",
+                "anchor": {
+                  "kind": "object",
+                  "id": "eq-x"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 1573,
+      "wireBoardBytes": 1478,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:17:20.665Z"
+    },
+    {
+      "id": "grammar-annotation-production-1",
+      "scenario": "grammar-annotation",
+      "condition": "production",
+      "round": 1,
+      "status": "no-board",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grammar-annotation",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit grammar rendering fixture\",\"sentence\":\"Although it was raining, Maya walked to class.\",\"clauses\":[{\"id\":\"dependent\",\"text\":\"Although it was raining\",\"label\":\"dependent clause\"},{\"id\":\"main\",\"text\":\"Maya walked to class.\",\"label\":\"main clause\"}]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "grammar-annotation",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grammar-annotation"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+          }
+        ],
+        "currentProblem": {
+          "title": "grammar-annotation",
+          "request": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "22d8e4e0a5eecdae34f1c8e00f265683a32da4394928a401c7c2c7fb5e951941",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here’s the clause structure in reading order.</say><board>{\"title\":\"Clause structure\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"sentence\",\"type\":\"text\",\"content\":\"Although it was raining, Maya walked to class.\",\"zones\":[{\"id\":\"dependent-clause\",\"label\":\"dependent clause\",\"anchor\":{\"kind\":\"content\"},\"quote\":\"Although it was raining\",\"occurrence\":0},{\"id\":\"main-clause\",\"label\":\"main clause\",\"anchor\":{\"kind\":\"content\"},\"quote\":\"Maya walked to class.\",\"occurrence\":0}]},{\"id\":\"labels\",\"type\":\"text\",\"content\":\"[ Although it was raining ] — dependent clause\\n[ Maya walked to class. ] — main clause\"}]}</board>",
+      "usage": {
+        "input_tokens": 2632,
+        "input_tokens_details": {
+          "cache_write_tokens": 351,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 282,
+        "output_tokens_details": {
+          "reasoning_tokens": 129
+        },
+        "total_tokens": 2914
+      },
+      "latencies": {
+        "firstRawOutputMs": 2208.1,
+        "firstSpokenMs": 2216.5,
+        "firstSyntheticAudioMs": 2432.9,
+        "generationCompleteMs": 3273.5,
+        "boardReadyMs": null
+      },
+      "checks": {
+        "validCanonicalBoard": false,
+        "spokenPresent": true,
+        "retainedScene": false
+      },
+      "inputBytes": 1840,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the clause structure in reading order.",
+        "boardStatus": "invalid",
+        "timings": {
+          "firstDeltaMs": 2208,
+          "totalMs": 3274,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "wireBoard": {
+        "title": "Clause structure",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "text",
+            "content": "Although it was raining, Maya walked to class.",
+            "zones": [
+              {
+                "id": "dependent-clause",
+                "label": "dependent clause",
+                "anchor": {
+                  "kind": "content"
+                },
+                "quote": "Although it was raining",
+                "occurrence": 0
+              },
+              {
+                "id": "main-clause",
+                "label": "main clause",
+                "anchor": {
+                  "kind": "content"
+                },
+                "quote": "Maya walked to class.",
+                "occurrence": 0
+              }
+            ]
+          },
+          {
+            "id": "labels",
+            "type": "text",
+            "content": "[ Although it was raining ] — dependent clause\n[ Maya walked to class. ] — main clause"
+          }
+        ]
+      },
+      "outputBytes": 612,
+      "wireBoardBytes": 539,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:17:23.946Z"
+    },
+    {
+      "id": "object-patch-production-1",
+      "scenario": "object-patch",
+      "condition": "production",
+      "round": 1,
+      "status": "failed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-object-patch",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Same established scene\",\"targetId\":\"eq-y\",\"currentObject\":{\"id\":\"eq-y\",\"type\":\"math\",\"x\":190,\"y\":390,\"width\":420,\"height\":35,\"text\":\"\\\\Sigma F_y = N - mg = 0\",\"fontSize\":26},\"change\":{\"y\":402}}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "object-patch",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-object-patch"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Keep this exact physics board visible. Change only object eq-y: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+          }
+        ],
+        "currentProblem": {
+          "title": "object-patch",
+          "request": "Keep this exact physics board visible. Change only object eq-y: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+        },
+        "whiteboardContext": {
+          "visible": true,
+          "board": {
+            "title": "forces",
+            "revision": "9e8e81b5-b5c0-47e9-ac59-e54e0d212ab1",
+            "blocks": [
+              {
+                "id": "world",
+                "type": "scene",
+                "width": 800,
+                "height": 500,
+                "objects": [
+                  {
+                    "id": "surface",
+                    "type": "line",
+                    "x1": 120,
+                    "y1": 280,
+                    "x2": 680,
+                    "y2": 280,
+                    "label": "horizontal surface",
+                    "tone": "ink"
+                  },
+                  {
+                    "id": "block",
+                    "type": "rect",
+                    "x": 350,
+                    "y": 200,
+                    "width": 120,
+                    "height": 80,
+                    "label": "block",
+                    "tone": "ink"
+                  },
+                  {
+                    "id": "force-N",
+                    "type": "arrow",
+                    "x1": 410,
+                    "y1": 200,
+                    "x2": 410,
+                    "y2": 105,
+                    "label": "N",
+                    "tone": "accent"
+                  },
+                  {
+                    "id": "force-mg",
+                    "type": "arrow",
+                    "x1": 410,
+                    "y1": 260,
+                    "x2": 410,
+                    "y2": 340,
+                    "label": "mg",
+                    "tone": "accent"
+                  },
+                  {
+                    "id": "force-F",
+                    "type": "arrow",
+                    "x1": 470,
+                    "y1": 240,
+                    "x2": 610,
+                    "y2": 240,
+                    "label": "F",
+                    "tone": "accent"
+                  },
+                  {
+                    "id": "force-f",
+                    "type": "arrow",
+                    "x1": 350,
+                    "y1": 240,
+                    "x2": 210,
+                    "y2": 240,
+                    "label": "f",
+                    "tone": "accent"
+                  },
+                  {
+                    "id": "eq-y",
+                    "type": "math",
+                    "x": 190,
+                    "y": 390,
+                    "width": 420,
+                    "height": 35,
+                    "text": "\\Sigma F_y = N - mg = 0",
+                    "fontSize": 26
+                  },
+                  {
+                    "id": "eq-x",
+                    "type": "math",
+                    "x": 190,
+                    "y": 440,
+                    "width": 420,
+                    "height": 35,
+                    "text": "\\Sigma F_x = F - f = ma",
+                    "fontSize": 26
+                  }
+                ],
+                "zones": [
+                  {
+                    "id": "select-N",
+                    "label": "normal force N",
+                    "anchor": {
+                      "kind": "object",
+                      "id": "force-N"
+                    }
+                  },
+                  {
+                    "id": "select-mg",
+                    "label": "weight mg",
+                    "anchor": {
+                      "kind": "object",
+                      "id": "force-mg"
+                    }
+                  },
+                  {
+                    "id": "select-F",
+                    "label": "applied force F",
+                    "anchor": {
+                      "kind": "object",
+                      "id": "force-F"
+                    }
+                  },
+                  {
+                    "id": "select-f",
+                    "label": "friction force f",
+                    "anchor": {
+                      "kind": "object",
+                      "id": "force-f"
+                    }
+                  },
+                  {
+                    "id": "select-eq-y",
+                    "label": "vertical force equation",
+                    "anchor": {
+                      "kind": "object",
+                      "id": "eq-y"
+                    }
+                  },
+                  {
+                    "id": "select-eq-x",
+                    "label": "horizontal force equation",
+                    "anchor": {
+                      "kind": "object",
+                      "id": "eq-x"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "title": "forces",
+          "text": "horizontal surface\nblock\nN\nmg\nF\nf\n\\Sigma F_y = N - mg = 0\n\\Sigma F_x = F - f = ma"
+        }
+      },
+      "inputSha256": "d7c8bba4ab5b01dbb2b2709bf3e0b83cf7240a8d91277baeff1bfe1b8d064986",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<board>{\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"eq-y\",\"type\":\"math\",\"x\":190,\"y\":402,\"width\":420,\"height\":35,\"text\":\"\\\\Sigma F_y = N - mg = 0\",\"fontSize\":26}]}]}</board>",
+      "usage": {
+        "input_tokens": 3109,
+        "input_tokens_details": {
+          "cache_write_tokens": 828,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3186
+      },
+      "latencies": {
+        "firstRawOutputMs": 1088.6,
+        "generationCompleteMs": 1611.4
+      },
+      "checks": {},
+      "inputBytes": 3296,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "error": {
+        "status": 502,
+        "message": "Luna returned an empty spoken response."
+      },
+      "finishedAt": "2026-10-02T08:17:25.567Z"
+    }
+  ],
+  "methodology": {
+    "pairs": "Three paired identical-input blank8×10 requests. Alternating baseline/compact order. Both use the full saved baseline instructions; only two matrix wire-syntax fragments change. Current production prompt is used only for separate generic scene cases.",
+    "clock": "Prepared context through production OpenAI streaming adapter/decoder and canonical board merge. Shared provider lock acquisition excluded. Browser render is measured separately offline. No STT, Jev, retrieval or actual ElevenLabs request.",
+    "syntheticAudio": "Production speech text buffer plus fixed100ms timer. This is a synthetic dispatch marker, not an estimate of real ElevenLabs latency.",
+    "continuity": "Canonical question ID and exact spoken wording are checked; no grade is inferred from drawing. Full live routing, grading and cancellation are verified by separate production lifecycle tests.",
+    "patch": "One real object-update request on the previously generated physics scene; unchanged object IDs/content are compared after production merging."
+  },
+  "finishedAt": "2026-10-02T08:17:25.571Z"
+}

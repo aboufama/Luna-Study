@@ -1,0 +1,644 @@
+{
+  "startedAt": "2026-10-02T04:20:52.092Z",
+  "location": "New York, USA",
+  "microphoneUsed": false,
+  "playbackUsed": false,
+  "audioSaved": false,
+  "method": "Capture actual Luna decoded text delta timing with synthetic study inputs. Replay identical trace timing through real ElevenLabs TTS, opened concurrently at turn start. Measure request-start-to-first-returned-PCM; this isolates buffering and excludes STT, physical audio capture/playback, onboarding and Jev. Baseline ignores parsed say-end event; candidate flushes text buffer when say closes. Later cycles vary word-boundary chunk threshold only. Two trials per condition in ABBA order. No raw provider messages, credentials or audio are saved.",
+  "traces": [
+    {
+      "id": "visual-tail",
+      "input": {
+        "examTitle": "Synthetic linear algebra quiz",
+        "materials": [
+          {
+            "name": "Synthetic matrix notes",
+            "text": "Practice matrix A has first row 1, 2 and second row 3, 4. For a two by two matrix with rows a, b and c, d, the determinant is a times d minus b times c."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Show the practice matrix on the board without its answer. For the spoken part, just say Consider this."
+          }
+        ]
+      },
+      "reply": "Consider this.",
+      "board": {
+        "title": "Practice matrix",
+        "blocks": [
+          {
+            "type": "latex",
+            "content": "A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}"
+          }
+        ]
+      },
+      "timings": {
+        "firstDeltaMs": 2527,
+        "totalMs": 4218,
+        "reusedThread": false
+      },
+      "events": [
+        {
+          "type": "text",
+          "atMs": 2527.5,
+          "text": "Consider"
+        },
+        {
+          "type": "text",
+          "atMs": 2539.9,
+          "text": " this"
+        },
+        {
+          "type": "text",
+          "atMs": 2555.7,
+          "text": "."
+        },
+        {
+          "type": "say-end",
+          "atMs": 2581.1
+        },
+        {
+          "type": "complete",
+          "atMs": 4218.2
+        }
+      ]
+    },
+    {
+      "id": "long-sentence",
+      "input": {
+        "examTitle": "Synthetic transport quiz",
+        "materials": [
+          {
+            "name": "Synthetic transport notes",
+            "text": "Passive transport moves substances down a concentration gradient without energy. Active transport uses energy to move substances against the concentration gradient, including from a lower concentration to a higher concentration."
+          }
+        ],
+        "conversation": [
+          {
+            "role": "user",
+            "content": "In one sentence, explain the difference between passive and active transport including energy use and direction."
+          }
+        ]
+      },
+      "reply": "Passive transport moves substances down their concentration gradient without energy, whereas active transport uses energy to move substances against the gradient, from lower to higher concentration.",
+      "board": null,
+      "timings": {
+        "firstDeltaMs": 2730,
+        "totalMs": 3409,
+        "reusedThread": false
+      },
+      "events": [
+        {
+          "type": "text",
+          "atMs": 2730.4,
+          "text": "Passive"
+        },
+        {
+          "type": "text",
+          "atMs": 2748.5,
+          "text": " transport"
+        },
+        {
+          "type": "text",
+          "atMs": 2775.2,
+          "text": " moves"
+        },
+        {
+          "type": "text",
+          "atMs": 2791.7,
+          "text": " substances"
+        },
+        {
+          "type": "text",
+          "atMs": 2813.5,
+          "text": " down"
+        },
+        {
+          "type": "text",
+          "atMs": 2819.3,
+          "text": " their"
+        },
+        {
+          "type": "text",
+          "atMs": 2836.5,
+          "text": " concentration"
+        },
+        {
+          "type": "text",
+          "atMs": 2905.4,
+          "text": " gradient"
+        },
+        {
+          "type": "text",
+          "atMs": 2905.5,
+          "text": " without"
+        },
+        {
+          "type": "text",
+          "atMs": 2906.7,
+          "text": " energy"
+        },
+        {
+          "type": "text",
+          "atMs": 2920.2,
+          "text": ","
+        },
+        {
+          "type": "text",
+          "atMs": 2936.4,
+          "text": " whereas"
+        },
+        {
+          "type": "text",
+          "atMs": 2946.7,
+          "text": " active"
+        },
+        {
+          "type": "text",
+          "atMs": 2967.2,
+          "text": " transport"
+        },
+        {
+          "type": "text",
+          "atMs": 2994.3,
+          "text": " uses"
+        },
+        {
+          "type": "text",
+          "atMs": 3009.6,
+          "text": " energy"
+        },
+        {
+          "type": "text",
+          "atMs": 3011.5,
+          "text": " to"
+        },
+        {
+          "type": "text",
+          "atMs": 3033.4,
+          "text": " move"
+        },
+        {
+          "type": "text",
+          "atMs": 3054.4,
+          "text": " substances"
+        },
+        {
+          "type": "text",
+          "atMs": 3074.5,
+          "text": " against"
+        },
+        {
+          "type": "text",
+          "atMs": 3095.9,
+          "text": " the"
+        },
+        {
+          "type": "text",
+          "atMs": 3123.7,
+          "text": " gradient"
+        },
+        {
+          "type": "text",
+          "atMs": 3135.5,
+          "text": ","
+        },
+        {
+          "type": "text",
+          "atMs": 3139.6,
+          "text": " from"
+        },
+        {
+          "type": "text",
+          "atMs": 3171.9,
+          "text": " lower"
+        },
+        {
+          "type": "text",
+          "atMs": 3183.5,
+          "text": " to"
+        },
+        {
+          "type": "text",
+          "atMs": 3207.4,
+          "text": " higher"
+        },
+        {
+          "type": "text",
+          "atMs": 3224.9,
+          "text": " concentration"
+        },
+        {
+          "type": "text",
+          "atMs": 3228.3,
+          "text": "."
+        },
+        {
+          "type": "say-end",
+          "atMs": 3279.5
+        },
+        {
+          "type": "complete",
+          "atMs": 3409.2
+        }
+      ]
+    }
+  ],
+  "cycles": [
+    {
+      "number": 1,
+      "traceId": "visual-tail",
+      "runs": [
+        {
+          "variant": "baseline-complete-flush",
+          "firstAudioMs": 4363.8,
+          "firstWriteMs": 4219.4,
+          "firstWriteToAudioMs": 144.4,
+          "outputAudioBytes": 57600,
+          "ttsTiming": {
+            "connectMs": 116,
+            "firstAudioMs": 4363,
+            "completeMs": 4518
+          },
+          "writes": [
+            {
+              "atMs": 4219.4,
+              "text": "Consider this. "
+            }
+          ]
+        },
+        {
+          "variant": "say-end-flush",
+          "firstAudioMs": 2757.4,
+          "firstWriteMs": 2582.3,
+          "firstWriteToAudioMs": 175.1,
+          "outputAudioBytes": 53760,
+          "ttsTiming": {
+            "connectMs": 92,
+            "firstAudioMs": 2757,
+            "completeMs": 4263
+          },
+          "writes": [
+            {
+              "atMs": 2582.3,
+              "text": "Consider this. "
+            }
+          ]
+        },
+        {
+          "variant": "say-end-flush",
+          "firstAudioMs": 2747.2,
+          "firstWriteMs": 2581.6,
+          "firstWriteToAudioMs": 165.6,
+          "outputAudioBytes": 53760,
+          "ttsTiming": {
+            "connectMs": 97,
+            "firstAudioMs": 2747,
+            "completeMs": 4270
+          },
+          "writes": [
+            {
+              "atMs": 2581.6,
+              "text": "Consider this. "
+            }
+          ]
+        },
+        {
+          "variant": "baseline-complete-flush",
+          "firstAudioMs": 4376.7,
+          "firstWriteMs": 4219.3,
+          "firstWriteToAudioMs": 157.4,
+          "outputAudioBytes": 53760,
+          "ttsTiming": {
+            "connectMs": 94,
+            "firstAudioMs": 4377,
+            "completeMs": 4517
+          },
+          "writes": [
+            {
+              "atMs": 4219.3,
+              "text": "Consider this. "
+            }
+          ]
+        }
+      ],
+      "summary": [
+        {
+          "variant": "baseline-complete-flush",
+          "trials": 2,
+          "medianFirstAudioMs": 4370.3,
+          "medianFirstWriteMs": 4219.4
+        },
+        {
+          "variant": "say-end-flush",
+          "trials": 2,
+          "medianFirstAudioMs": 2752.3,
+          "medianFirstWriteMs": 2582
+        }
+      ],
+      "medianReductionMs": 1618
+    },
+    {
+      "number": 2,
+      "traceId": "long-sentence",
+      "runs": [
+        {
+          "variant": "say-end-flush",
+          "firstAudioMs": 3265.6,
+          "firstWriteMs": 3124.9,
+          "firstWriteToAudioMs": 140.7,
+          "outputAudioBytes": 645120,
+          "ttsTiming": {
+            "connectMs": 101,
+            "firstAudioMs": 3265,
+            "completeMs": 4931
+          },
+          "writes": [
+            {
+              "atMs": 3124.9,
+              "text": "Passive transport moves substances down their concentration gradient without energy, whereas active transport uses energy to move substances against the "
+            },
+            {
+              "atMs": 3280.6,
+              "text": "gradient, from lower to higher concentration. "
+            }
+          ]
+        },
+        {
+          "variant": "60-character-word-boundary",
+          "firstAudioMs": 3043.2,
+          "firstWriteMs": 2905.7,
+          "firstWriteToAudioMs": 137.5,
+          "outputAudioBytes": 683520,
+          "ttsTiming": {
+            "connectMs": 90,
+            "firstAudioMs": 3043,
+            "completeMs": 5091
+          },
+          "writes": [
+            {
+              "atMs": 2905.7,
+              "text": "Passive transport moves substances down their concentration "
+            },
+            {
+              "atMs": 3010.8,
+              "text": "gradient without energy, whereas active transport uses "
+            },
+            {
+              "atMs": 3184.3,
+              "text": "energy to move substances against the gradient, from lower "
+            },
+            {
+              "atMs": 3279.2,
+              "text": "to higher concentration. "
+            }
+          ]
+        },
+        {
+          "variant": "60-character-word-boundary",
+          "firstAudioMs": 3038,
+          "firstWriteMs": 2906.6,
+          "firstWriteToAudioMs": 131.4,
+          "outputAudioBytes": 687360,
+          "ttsTiming": {
+            "connectMs": 95,
+            "firstAudioMs": 3038,
+            "completeMs": 5195
+          },
+          "writes": [
+            {
+              "atMs": 2906.6,
+              "text": "Passive transport moves substances down their concentration "
+            },
+            {
+              "atMs": 3009.9,
+              "text": "gradient without energy, whereas active transport uses "
+            },
+            {
+              "atMs": 3183.4,
+              "text": "energy to move substances against the gradient, from lower "
+            },
+            {
+              "atMs": 3279.3,
+              "text": "to higher concentration. "
+            }
+          ]
+        },
+        {
+          "variant": "say-end-flush",
+          "firstAudioMs": 3256.7,
+          "firstWriteMs": 3123.9,
+          "firstWriteToAudioMs": 132.8,
+          "outputAudioBytes": 641280,
+          "ttsTiming": {
+            "connectMs": 87,
+            "firstAudioMs": 3257,
+            "completeMs": 4954
+          },
+          "writes": [
+            {
+              "atMs": 3123.9,
+              "text": "Passive transport moves substances down their concentration gradient without energy, whereas active transport uses energy to move substances against the "
+            },
+            {
+              "atMs": 3278.7,
+              "text": "gradient, from lower to higher concentration. "
+            }
+          ]
+        }
+      ],
+      "summary": [
+        {
+          "variant": "say-end-flush",
+          "trials": 2,
+          "medianFirstAudioMs": 3261.1,
+          "medianFirstWriteMs": 3124.4
+        },
+        {
+          "variant": "60-character-word-boundary",
+          "trials": 2,
+          "medianFirstAudioMs": 3040.6,
+          "medianFirstWriteMs": 2906.1
+        }
+      ],
+      "medianReductionMs": 220.5
+    },
+    {
+      "number": 3,
+      "traceId": "long-sentence",
+      "runs": [
+        {
+          "variant": "60-character-word-boundary",
+          "firstAudioMs": 3046.7,
+          "firstWriteMs": 2906.6,
+          "firstWriteToAudioMs": 140.1,
+          "outputAudioBytes": 679680,
+          "ttsTiming": {
+            "connectMs": 95,
+            "firstAudioMs": 3047,
+            "completeMs": 5026
+          },
+          "writes": [
+            {
+              "atMs": 2906.6,
+              "text": "Passive transport moves substances down their concentration "
+            },
+            {
+              "atMs": 3009.8,
+              "text": "gradient without energy, whereas active transport uses "
+            },
+            {
+              "atMs": 3184.5,
+              "text": "energy to move substances against the gradient, from lower "
+            },
+            {
+              "atMs": 3280.3,
+              "text": "to higher concentration. "
+            }
+          ]
+        },
+        {
+          "variant": "32-character-word-boundary",
+          "firstAudioMs": 2938.9,
+          "firstWriteMs": 2792.1,
+          "firstWriteToAudioMs": 146.8,
+          "outputAudioBytes": 760320,
+          "ttsTiming": {
+            "connectMs": 93,
+            "firstAudioMs": 2939,
+            "completeMs": 5558
+          },
+          "writes": [
+            {
+              "atMs": 2792.1,
+              "text": "Passive transport moves "
+            },
+            {
+              "atMs": 2837,
+              "text": "substances down their "
+            },
+            {
+              "atMs": 2907.9,
+              "text": "concentration gradient without "
+            },
+            {
+              "atMs": 2994.6,
+              "text": "energy, whereas active transport "
+            },
+            {
+              "atMs": 3073.8,
+              "text": "uses energy to move substances "
+            },
+            {
+              "atMs": 3184.1,
+              "text": "against the gradient, from lower "
+            },
+            {
+              "atMs": 3280.3,
+              "text": "to higher concentration. "
+            }
+          ]
+        },
+        {
+          "variant": "32-character-word-boundary",
+          "firstAudioMs": 2929.8,
+          "firstWriteMs": 2792.3,
+          "firstWriteToAudioMs": 137.5,
+          "outputAudioBytes": 775680,
+          "ttsTiming": {
+            "connectMs": 96,
+            "firstAudioMs": 2930,
+            "completeMs": 5443
+          },
+          "writes": [
+            {
+              "atMs": 2792.3,
+              "text": "Passive transport moves "
+            },
+            {
+              "atMs": 2836.5,
+              "text": "substances down their "
+            },
+            {
+              "atMs": 2908.9,
+              "text": "concentration gradient without "
+            },
+            {
+              "atMs": 2995.4,
+              "text": "energy, whereas active transport "
+            },
+            {
+              "atMs": 3075.5,
+              "text": "uses energy to move substances "
+            },
+            {
+              "atMs": 3184.7,
+              "text": "against the gradient, from lower "
+            },
+            {
+              "atMs": 3280.1,
+              "text": "to higher concentration. "
+            }
+          ]
+        },
+        {
+          "variant": "60-character-word-boundary",
+          "firstAudioMs": 3040.2,
+          "firstWriteMs": 2906,
+          "firstWriteToAudioMs": 134.2,
+          "outputAudioBytes": 679680,
+          "ttsTiming": {
+            "connectMs": 152,
+            "firstAudioMs": 3040,
+            "completeMs": 5239
+          },
+          "writes": [
+            {
+              "atMs": 2906,
+              "text": "Passive transport moves substances down their concentration "
+            },
+            {
+              "atMs": 3010.3,
+              "text": "gradient without energy, whereas active transport uses "
+            },
+            {
+              "atMs": 3183.7,
+              "text": "energy to move substances against the gradient, from lower "
+            },
+            {
+              "atMs": 3280.5,
+              "text": "to higher concentration. "
+            }
+          ]
+        }
+      ],
+      "summary": [
+        {
+          "variant": "60-character-word-boundary",
+          "trials": 2,
+          "medianFirstAudioMs": 3043.5,
+          "medianFirstWriteMs": 2906.3
+        },
+        {
+          "variant": "32-character-word-boundary",
+          "trials": 2,
+          "medianFirstAudioMs": 2934.4,
+          "medianFirstWriteMs": 2792.2
+        }
+      ],
+      "medianReductionMs": 109.1
+    }
+  ],
+  "startupMs": 118,
+  "lunaModel": "gpt-5.6-luna",
+  "ttsModel": "eleven_v4_turbo",
+  "finishedAt": "2026-10-02T04:21:58.875Z",
+  "decisions": {
+    "retained": "Flush pending decoded spoken text at a parsed closing say tag; do not close TTS while board generation continues.",
+    "notRetained": "60- and 32-character word-boundary fragmenting. Gains diminished and audible prosody was not tested.",
+    "stopReason": "Three bounded cycles completed; diminishing gains beyond safe completion-boundary fix.",
+    "visualReadinessCaveat": "The visual trace returned a validated board only at 4218 ms; early say-end flush does not accelerate board generation, Jev classification, or client paint. Earlier Consider this audio is not an earlier ready-to-solve visual problem.",
+    "generalization": "Two model-generated traces and two TTS replays per condition. Request-start-to-first-returned-PCM, not actual end-of-speech-to-speaker latency. Excludes Scribe, onboarding, Jev and browser audio scheduling."
+  }
+}

@@ -1,0 +1,17 @@
+.practice-trail{position:absolute;left:22px;top:108px;z-index:7;width:196px;color:#747b7b}
+.practice-trail-toggle{display:flex;align-items:center;gap:9px;min-height:38px;padding:0 9px;background:rgba(255,255,255,.94);border:1px solid transparent;border-radius:9px;font-size:11px;color:#8b9292}
+.practice-trail-toggle>svg:last-child{margin-left:auto}.practice-trail-toggle:hover{background:#f5f7f6;color:#4b6260}
+.practice-trail-content{max-height:calc(100svh - 252px);overflow:auto;padding:14px 6px 16px 10px;scrollbar-width:thin}
+.practice-trail ol{list-style:none;margin:0;padding:0}.practice-problem{position:relative;display:flex;gap:12px;margin:0;padding:0 0 23px}
+.practice-problem:not(:last-child):before{content:'';position:absolute;left:3px;top:11px;bottom:4px;border-left:1px solid #e5eae8}
+.practice-problem-dot{display:block;flex-shrink:0;width:7px;height:7px;margin-top:4px;border-radius:50%;border:1px solid #cbd4d0;background:white}
+.practice-problem.is-current .practice-problem-dot{border-color:#749a8d;background:#8bae9f;box-shadow:0 0 0 3px #f0f5f2}
+.practice-problem.is-completed .practice-problem-dot{background:#c1d3c9;border-color:#c1d3c9}
+.practice-problem-state{display:block;font-size:9px;line-height:1.7;color:#a0a7a3}.practice-problem.is-current .practice-problem-state{color:#769488}
+.practice-problem h3{font-size:10px;font-weight:500;line-height:1.5;margin:5px 0;color:#687b72}
+.practice-problem p{font-size:11px;line-height:1.7;margin:5px 0 0;overflow-wrap:anywhere;white-space:pre-wrap;color:#a0a6a3}
+.practice-problem.is-current p{color:#58655f}
+@media(max-width:1279px){.practice-trail{top:90px;left:16px;width:auto;max-width:260px}.practice-trail.is-open{width:260px;background:rgba(255,255,255,.97);border:1px solid #e6ebe7;border-radius:14px;box-shadow:0 5px 25px #263b3020}.practice-trail-toggle{min-height:40px;padding:0 11px}.practice-trail-content{padding:12px 16px 5px;max-height:calc(100svh - 240px)}}
+@media(prefers-reduced-motion:reduce){.practice-trail *{animation:none;transition:none}}
+.practice-trail-toggle{min-height:44px}
+@media(max-width:600px){.practice-trail{max-width:calc(100vw - 96px)}.practice-trail.is-open{width:260px;max-width:calc(100vw - 96px)}.practice-trail-content{max-height:calc(100svh - 310px)}}

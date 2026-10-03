@@ -1,0 +1,14 @@
+{
+  "sourceReport": "gpt-live-policy-02.json",
+  "classification": "invalid-environmental-interruption",
+  "evidenceSource": "macOS pmset -g log, inspected after the run",
+  "hostIdleSleepLocal": "2026-10-02 14:11:01 -0400",
+  "hostWakeLocal": "2026-10-02 14:12:58 -0400",
+  "reportedSleepSeconds": 117,
+  "gptLiveSessionStartedAt": "2026-10-02T18:10:48.321Z",
+  "gptLiveSessionFinishedAt": "2026-10-02T18:12:58.569Z",
+  "gptLiveObservedElapsedMs": 130250.9,
+  "configuredSessionCeilingMs": 90000,
+  "implication": "Process timers, microphone-silence streaming and network reads suspended during host sleep. The timeout and absent provider final-usage event are not valid evidence of GPT-Live latency or API reliability. The earlier control sample finished before sleep, but there is no valid matched native arm.",
+  "nextRunControl": "Run the bounded benchmark command under caffeinate -i to prevent idle system sleep for the command lifetime."
+}

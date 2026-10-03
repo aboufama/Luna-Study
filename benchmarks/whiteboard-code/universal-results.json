@@ -1,0 +1,3788 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:02:53.304Z",
+  "model": "gpt-6-luna",
+  "reasoning": "low",
+  "live": true,
+  "budget": {
+    "limit": 12,
+    "calls": 12
+  },
+  "runs": [
+    {
+      "id": "biology-cell-canvas-1",
+      "scenario": "biology-cell",
+      "format": "canvas",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "8a3eca914b07e4f0654ac6cea079de1f1e604c035212696d21b4f578cf3b1ea9",
+      "instructionBytes": 1485,
+      "inputBytes": 586,
+      "raw": "function draw(ctx, hit) {\n  ctx.clearRect(0, 0, 800, 500);\n  ctx.fillStyle = \"#ffffff\";\n  ctx.fillRect(0, 0, 800, 500);\n  ctx.strokeStyle = \"#17212b\";\n  ctx.fillStyle = \"#17212b\";\n  ctx.lineWidth = 3;\n  ctx.lineCap = \"round\";\n  ctx.lineJoin = \"round\";\n  ctx.font = \"18px Arial\";\n  ctx.textBaseline = \"middle\";\n\n  // Cell membrane and cytoplasm\n  ctx.beginPath();\n  ctx.ellipse(290, 245, 220, 155, 0, 0, Math.PI * 2);\n  ctx.stroke();\n  hit(\"cell-membrane\", 70, 90, 440, 310);\n  hit(\"cytoplasm\", 80, 100, 420, 290);\n\n  // Nucleus\n  ctx.beginPath();\n  ctx.ellipse(290, 245, 66, 53, 0, 0, Math.PI * 2);\n  ctx.stroke();\n  hit(\"nucleus\", 224, 192, 132, 106);\n\n  // Labels and leader lines\n  ctx.beginPath();\n  ctx.moveTo(250, 54);\n  ctx.lineTo(250, 90);\n  ctx.stroke();\n  ctx.fillText(\"cell membrane\", 165, 34);\n  hit(\"label-cell-membrane\", 160, 18, 150, 28);\n\n  ctx.beginPath();\n  ctx.moveTo(440, 172);\n  ctx.lineTo(510, 172);\n  ctx.stroke();\n  ctx.fillText(\"cytoplasm\", 525, 172);\n  hit(\"label-cytoplasm\", 520, 157, 120, 30);\n\n  ctx.beginPath();\n  ctx.moveTo(356, 245);\n  ctx.lineTo(510, 245);\n  ctx.stroke();\n  ctx.fillText(\"nucleus\", 525, 245);\n  hit(\"label-nucleus\", 520, 230, 100, 30);\n\n  // Separate teaching note\n  ctx.fillText(\"Membrane: selective boundary\", 525, 350);\n  hit(\"teaching-note\", 520, 330, 265, 40);\n}",
+      "ttftMs": 4415.3,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 426,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 794,
+        "output_tokens_details": {
+          "reasoning_tokens": 294
+        },
+        "total_tokens": 1220
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 8007.8,
+      "compiled": "function draw(ctx, hit) {\n\tctx.clearRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#ffffff\";\n\tctx.fillRect(0, 0, 800, 500);\n\tctx.strokeStyle = \"#17212b\";\n\tctx.fillStyle = \"#17212b\";\n\tctx.lineWidth = 3;\n\tctx.lineCap = \"round\";\n\tctx.lineJoin = \"round\";\n\tctx.font = \"18px Arial\";\n\tctx.textBaseline = \"middle\";\n\t// Cell membrane and cytoplasm\n\tctx.beginPath();\n\tctx.ellipse(290, 245, 220, 155, 0, 0, Math.PI * 2);\n\tctx.stroke();\n\thit(\"cell-membrane\", 70, 90, 440, 310);\n\thit(\"cytoplasm\", 80, 100, 420, 290);\n\t// Nucleus\n\tctx.beginPath();\n\tctx.ellipse(290, 245, 66, 53, 0, 0, Math.PI * 2);\n\tctx.stroke();\n\thit(\"nucleus\", 224, 192, 132, 106);\n\t// Labels and leader lines\n\tctx.beginPath();\n\tctx.moveTo(250, 54);\n\tctx.lineTo(250, 90);\n\tctx.stroke();\n\tctx.fillText(\"cell membrane\", 165, 34);\n\thit(\"label-cell-membrane\", 160, 18, 150, 28);\n\tctx.beginPath();\n\tctx.moveTo(440, 172);\n\tctx.lineTo(510, 172);\n\tctx.stroke();\n\tctx.fillText(\"cytoplasm\", 525, 172);\n\thit(\"label-cytoplasm\", 520, 157, 120, 30);\n\tctx.beginPath();\n\tctx.moveTo(356, 245);\n\tctx.lineTo(510, 245);\n\tctx.stroke();\n\tctx.fillText(\"nucleus\", 525, 245);\n\thit(\"label-nucleus\", 520, 230, 100, 30);\n\t// Separate teaching note\n\tctx.fillText(\"Membrane: selective boundary\", 525, 350);\n\thit(\"teaching-note\", 520, 330, 265, 40);\n}\n",
+      "compilationMs": 1.035874999999578,
+      "renderReadyAt": 8797.274584,
+      "render": {
+        "texts": [
+          {
+            "text": "cell membrane",
+            "x": 165.703125,
+            "y": 26.083984375,
+            "width": 116.595703125,
+            "height": 13.095703125,
+            "fontSize": 18
+          },
+          {
+            "text": "cytoplasm",
+            "x": 525.703125,
+            "y": 164.083984375,
+            "width": 79.1630859375,
+            "height": 16.6728515625,
+            "fontSize": 18
+          },
+          {
+            "text": "nucleus",
+            "x": 526.1865234375,
+            "y": 237.083984375,
+            "width": 60.1611328125,
+            "height": 13.095703125,
+            "fontSize": 18
+          },
+          {
+            "text": "Membrane: selective boundary",
+            "x": 526.3359375,
+            "y": 342.083984375,
+            "width": 244.634765625,
+            "height": 16.6728515625,
+            "fontSize": 18
+          }
+        ],
+        "hits": [
+          {
+            "id": "cell-membrane",
+            "x": 70,
+            "y": 90,
+            "width": 440,
+            "height": 310
+          },
+          {
+            "id": "cytoplasm",
+            "x": 80,
+            "y": 100,
+            "width": 420,
+            "height": 290
+          },
+          {
+            "id": "nucleus",
+            "x": 224,
+            "y": 192,
+            "width": 132,
+            "height": 106
+          },
+          {
+            "id": "label-cell-membrane",
+            "x": 160,
+            "y": 18,
+            "width": 150,
+            "height": 28
+          },
+          {
+            "id": "label-cytoplasm",
+            "x": 520,
+            "y": 157,
+            "width": 120,
+            "height": 30
+          },
+          {
+            "id": "label-nucleus",
+            "x": 520,
+            "y": 230,
+            "width": 100,
+            "height": 30
+          },
+          {
+            "id": "teaching-note",
+            "x": 520,
+            "y": 330,
+            "width": 265,
+            "height": 40
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "cell-membrane",
+          "cytoplasm",
+          "nucleus",
+          "label-cell-membrane",
+          "label-cytoplasm",
+          "label-nucleus",
+          "teaching-note"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [
+          {
+            "op": "clearRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "ellipse",
+            "args": [
+              290,
+              245,
+              220,
+              155,
+              0,
+              0,
+              6.283185307179586
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "ellipse",
+            "args": [
+              290,
+              245,
+              66,
+              53,
+              0,
+              0,
+              6.283185307179586
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              250,
+              54
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              250,
+              90
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "cell membrane",
+              165,
+              34
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              440,
+              172
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              510,
+              172
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "cytoplasm",
+              525,
+              172
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              356,
+              245
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              510,
+              245
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "nucleus",
+              525,
+              245
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "Membrane: selective boundary",
+              525,
+              350
+            ]
+          }
+        ],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": true,
+        "domElements": 1
+      },
+      "blockedRequests": [],
+      "renderMs": 423.9,
+      "validRenderMs": 8348.3,
+      "outputBytes": 1317,
+      "requiresManualContainment": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "labels": true,
+        "teachingNote": true
+      }
+    },
+    {
+      "id": "biology-cell-react-1",
+      "scenario": "biology-cell",
+      "format": "react",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "8a3eca914b07e4f0654ac6cea079de1f1e604c035212696d21b4f578cf3b1ea9",
+      "instructionBytes": 1395,
+      "inputBytes": 586,
+      "raw": "function Board() {\n  const ink = \"#17212b\";\n  const line = { stroke: ink, strokeWidth: 2, fill: \"none\", strokeLinecap: \"round\" };\n\n  return (\n    <div\n      data-id=\"board\"\n      style={{\n        width: 800,\n        height: 500,\n        boxSizing: \"border-box\",\n        background: \"#ffffff\",\n        color: ink,\n        fontFamily: \"Arial, sans-serif\",\n        position: \"relative\"\n      }}\n    >\n      <svg\n        data-id=\"animal-cell-diagram\"\n        width=\"800\"\n        height=\"500\"\n        viewBox=\"0 0 800 500\"\n        role=\"img\"\n        aria-label=\"Animal cell with labeled cell membrane, cytoplasm, and nucleus\"\n      >\n        <ellipse data-id=\"cell-membrane\" cx=\"382\" cy=\"240\" rx=\"245\" ry=\"160\" {...line} />\n        <circle data-id=\"nucleus\" cx=\"382\" cy=\"240\" r=\"52\" {...line} />\n\n        <path data-id=\"leader-membrane\" d=\"M 142 128 L 202 128 L 217 139\" {...line} />\n        <circle data-id=\"leader-dot-membrane\" cx=\"217\" cy=\"139\" r=\"3\" fill={ink} />\n\n        <path data-id=\"leader-cytoplasm\" d=\"M 551 141 L 516 141 L 500 168\" {...line} />\n        <circle data-id=\"leader-dot-cytoplasm\" cx=\"500\" cy=\"168\" r=\"3\" fill={ink} />\n\n        <path data-id=\"leader-nucleus\" d=\"M 150 354 L 270 354 L 344 278\" {...line} />\n        <circle data-id=\"leader-dot-nucleus\" cx=\"344\" cy=\"278\" r=\"3\" fill={ink} />\n\n        <text data-id=\"label-cell-membrane\" x=\"42\" y=\"134\" fill={ink} fontSize=\"18\">\n          cell membrane\n        </text>\n        <text data-id=\"label-cytoplasm\" x=\"558\" y=\"147\" fill={ink} fontSize=\"18\">\n          cytoplasm\n        </text>\n        <text data-id=\"label-nucleus\" x=\"46\" y=\"361\" fill={ink} fontSize=\"18\">\n          nucleus\n        </text>\n      </svg>\n\n      <div\n        data-id=\"teaching-note\"\n        style={{\n          position: \"absolute\",\n          left: 524,\n          top: 420,\n          fontSize: 18,\n          lineHeight: \"24px\",\n          whiteSpace: \"nowrap\"\n        }}\n      >\n        Membrane: selective boundary\n      </div>\n    </div>\n  );\n}",
+      "ttftMs": 4855.7,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 408,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 913,
+        "output_tokens_details": {
+          "reasoning_tokens": 313
+        },
+        "total_tokens": 1321
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 9424.7,
+      "compiled": "function Board() {\n\tconst ink = \"#17212b\";\n\tconst line = {\n\t\tstroke: ink,\n\t\tstrokeWidth: 2,\n\t\tfill: \"none\",\n\t\tstrokeLinecap: \"round\"\n\t};\n\treturn /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"board\",\n\t\tstyle: {\n\t\t\twidth: 800,\n\t\t\theight: 500,\n\t\t\tboxSizing: \"border-box\",\n\t\t\tbackground: \"#ffffff\",\n\t\t\tcolor: ink,\n\t\t\tfontFamily: \"Arial, sans-serif\",\n\t\t\tposition: \"relative\"\n\t\t}\n\t}, /* @__PURE__ */ React.createElement(\"svg\", {\n\t\t\"data-id\": \"animal-cell-diagram\",\n\t\twidth: \"800\",\n\t\theight: \"500\",\n\t\tviewBox: \"0 0 800 500\",\n\t\trole: \"img\",\n\t\t\"aria-label\": \"Animal cell with labeled cell membrane, cytoplasm, and nucleus\"\n\t}, /* @__PURE__ */ React.createElement(\"ellipse\", {\n\t\t\"data-id\": \"cell-membrane\",\n\t\tcx: \"382\",\n\t\tcy: \"240\",\n\t\trx: \"245\",\n\t\try: \"160\",\n\t\t...line\n\t}), /* @__PURE__ */ React.createElement(\"circle\", {\n\t\t\"data-id\": \"nucleus\",\n\t\tcx: \"382\",\n\t\tcy: \"240\",\n\t\tr: \"52\",\n\t\t...line\n\t}), /* @__PURE__ */ React.createElement(\"path\", {\n\t\t\"data-id\": \"leader-membrane\",\n\t\td: \"M 142 128 L 202 128 L 217 139\",\n\t\t...line\n\t}), /* @__PURE__ */ React.createElement(\"circle\", {\n\t\t\"data-id\": \"leader-dot-membrane\",\n\t\tcx: \"217\",\n\t\tcy: \"139\",\n\t\tr: \"3\",\n\t\tfill: ink\n\t}), /* @__PURE__ */ React.createElement(\"path\", {\n\t\t\"data-id\": \"leader-cytoplasm\",\n\t\td: \"M 551 141 L 516 141 L 500 168\",\n\t\t...line\n\t}), /* @__PURE__ */ React.createElement(\"circle\", {\n\t\t\"data-id\": \"leader-dot-cytoplasm\",\n\t\tcx: \"500\",\n\t\tcy: \"168\",\n\t\tr: \"3\",\n\t\tfill: ink\n\t}), /* @__PURE__ */ React.createElement(\"path\", {\n\t\t\"data-id\": \"leader-nucleus\",\n\t\td: \"M 150 354 L 270 354 L 344 278\",\n\t\t...line\n\t}), /* @__PURE__ */ React.createElement(\"circle\", {\n\t\t\"data-id\": \"leader-dot-nucleus\",\n\t\tcx: \"344\",\n\t\tcy: \"278\",\n\t\tr: \"3\",\n\t\tfill: ink\n\t}), /* @__PURE__ */ React.createElement(\"text\", {\n\t\t\"data-id\": \"label-cell-membrane\",\n\t\tx: \"42\",\n\t\ty: \"134\",\n\t\tfill: ink,\n\t\tfontSize: \"18\"\n\t}, \"cell membrane\"), /* @__PURE__ */ React.createElement(\"text\", {\n\t\t\"data-id\": \"label-cytoplasm\",\n\t\tx: \"558\",\n\t\ty: \"147\",\n\t\tfill: ink,\n\t\tfontSize: \"18\"\n\t}, \"cytoplasm\"), /* @__PURE__ */ React.createElement(\"text\", {\n\t\t\"data-id\": \"label-nucleus\",\n\t\tx: \"46\",\n\t\ty: \"361\",\n\t\tfill: ink,\n\t\tfontSize: \"18\"\n\t}, \"nucleus\")), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"teaching-note\",\n\t\tstyle: {\n\t\t\tposition: \"absolute\",\n\t\t\tleft: 524,\n\t\t\ttop: 420,\n\t\t\tfontSize: 18,\n\t\t\tlineHeight: \"24px\",\n\t\t\twhiteSpace: \"nowrap\"\n\t\t}\n\t}, \"Membrane: selective boundary\"));\n}\n",
+      "compilationMs": 0.356208000001061,
+      "renderReadyAt": 18448.842584,
+      "render": {
+        "texts": [
+          {
+            "text": "cell membrane",
+            "id": "label-cell-membrane",
+            "x": 42,
+            "y": 118,
+            "width": 118.046875,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "cytoplasm",
+            "id": "label-cytoplasm",
+            "x": 558,
+            "y": 131,
+            "width": 81.03125,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "nucleus",
+            "id": "label-nucleus",
+            "x": 46,
+            "y": 345,
+            "width": 62.046875,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "Membrane: selective boundary",
+            "id": "teaching-note",
+            "x": 524,
+            "y": 422,
+            "width": 246.140625,
+            "height": 20,
+            "fontSize": 18
+          }
+        ],
+        "hits": [
+          {
+            "id": "board",
+            "tag": "DIV",
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 500
+          },
+          {
+            "id": "animal-cell-diagram",
+            "tag": "svg",
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 500
+          },
+          {
+            "id": "cell-membrane",
+            "tag": "ellipse",
+            "x": 137,
+            "y": 80,
+            "width": 490,
+            "height": 320
+          },
+          {
+            "id": "nucleus",
+            "tag": "circle",
+            "x": 330,
+            "y": 188,
+            "width": 104,
+            "height": 104
+          },
+          {
+            "id": "leader-membrane",
+            "tag": "path",
+            "x": 142,
+            "y": 128,
+            "width": 75,
+            "height": 11
+          },
+          {
+            "id": "leader-dot-membrane",
+            "tag": "circle",
+            "x": 214,
+            "y": 136,
+            "width": 6,
+            "height": 6
+          },
+          {
+            "id": "leader-cytoplasm",
+            "tag": "path",
+            "x": 500,
+            "y": 141,
+            "width": 51,
+            "height": 27
+          },
+          {
+            "id": "leader-dot-cytoplasm",
+            "tag": "circle",
+            "x": 497,
+            "y": 165,
+            "width": 6,
+            "height": 6
+          },
+          {
+            "id": "leader-nucleus",
+            "tag": "path",
+            "x": 150,
+            "y": 278,
+            "width": 194,
+            "height": 76
+          },
+          {
+            "id": "leader-dot-nucleus",
+            "tag": "circle",
+            "x": 341,
+            "y": 275,
+            "width": 6,
+            "height": 6
+          },
+          {
+            "id": "label-cell-membrane",
+            "tag": "text",
+            "x": 42,
+            "y": 118,
+            "width": 118.046875,
+            "height": 20
+          },
+          {
+            "id": "label-cytoplasm",
+            "tag": "text",
+            "x": 558,
+            "y": 131,
+            "width": 81.03125,
+            "height": 20
+          },
+          {
+            "id": "label-nucleus",
+            "tag": "text",
+            "x": 46,
+            "y": 345,
+            "width": 62.046875,
+            "height": 20
+          },
+          {
+            "id": "teaching-note",
+            "tag": "DIV",
+            "x": 524,
+            "y": 420,
+            "width": 246.140625,
+            "height": 24
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "board",
+          "animal-cell-diagram",
+          "cell-membrane",
+          "nucleus",
+          "leader-membrane",
+          "leader-dot-membrane",
+          "leader-cytoplasm",
+          "leader-dot-cytoplasm",
+          "leader-nucleus",
+          "leader-dot-nucleus",
+          "label-cell-membrane",
+          "label-cytoplasm",
+          "label-nucleus",
+          "teaching-note"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [],
+        "hasSvg": true,
+        "hasHtmlTable": false,
+        "hasCanvas": false,
+        "domElements": 14
+      },
+      "blockedRequests": [],
+      "renderMs": 213.8,
+      "validRenderMs": 9566,
+      "outputBytes": 1982,
+      "requiresManualContainment": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "labels": true,
+        "teachingNote": true
+      }
+    },
+    {
+      "id": "chemistry-equation-react-1",
+      "scenario": "chemistry-equation",
+      "format": "react",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "937e906c6e10ec8110b4830d27bf4268e9efa4095d4bf1a9b96338823cfce2ce",
+      "instructionBytes": 1395,
+      "inputBytes": 584,
+      "raw": "function Board() {\n  const ink = \"#111\";\n  const atom = (id, x, y, label) => (\n    <text data-id={id} x={x} y={y} textAnchor=\"middle\" dominantBaseline=\"middle\"\n      fontFamily=\"Arial, sans-serif\" fontSize=\"28\" fill={ink}>{label}</text>\n  );\n  const bond = (id, x1, y1, x2, y2, width = 3) => (\n    <line data-id={id} x1={x1} y1={y1} x2={x2} y2={y2}\n      stroke={ink} strokeWidth={width} strokeLinecap=\"round\" />\n  );\n\n  return (\n    <div data-id=\"board\" style={{ width: 800, height: 500, background: \"#fff\", color: ink }}>\n      <svg width=\"800\" height=\"500\" viewBox=\"0 0 800 500\" role=\"img\"\n        aria-label=\"Balanced reaction 2H₂ plus O₂ yields 2H₂O, shown with molecule diagrams\">\n        <text data-id=\"equation\" x=\"400\" y=\"102\" textAnchor=\"middle\"\n          fontFamily=\"Arial, sans-serif\" fontSize=\"34\" fill={ink}>\n          <tspan>2H</tspan><tspan fontSize=\"23\" baselineShift=\"sub\">2</tspan>\n          <tspan> + O</tspan><tspan fontSize=\"23\" baselineShift=\"sub\">2</tspan>\n          <tspan> → 2H</tspan><tspan fontSize=\"23\" baselineShift=\"sub\">2</tspan>\n          <tspan>O</tspan>\n        </text>\n\n        <g data-id=\"reactant-h2-1\">\n          {bond(\"reactant-h2-1-bond\", 105, 235, 145, 235)}\n          {atom(\"reactant-h2-1-h-1\", 95, 235, \"H\")}\n          {atom(\"reactant-h2-1-h-2\", 155, 235, \"H\")}\n        </g>\n        <g data-id=\"reactant-h2-2\">\n          {bond(\"reactant-h2-2-bond\", 260, 235, 300, 235)}\n          {atom(\"reactant-h2-2-h-1\", 250, 235, \"H\")}\n          {atom(\"reactant-h2-2-h-2\", 310, 235, \"H\")}\n        </g>\n        <g data-id=\"reactant-o2\">\n          {bond(\"reactant-o2-bond-1\", 410, 230, 450, 230)}\n          {bond(\"reactant-o2-bond-2\", 410, 240, 450, 240)}\n          {atom(\"reactant-o2-o-1\", 400, 235, \"O\")}\n          {atom(\"reactant-o2-o-2\", 460, 235, \"O\")}\n        </g>\n\n        <g data-id=\"product-h2o-1\">\n          {bond(\"product-h2o-1-bond-left\", 580, 235, 605, 235)}\n          {bond(\"product-h2o-1-bond-right\", 635, 235, 660, 235)}\n          {atom(\"product-h2o-1-h-left\", 570, 235, \"H\")}\n          {atom(\"product-h2o-1-o\", 620, 235, \"O\")}\n          {atom(\"product-h2o-1-h-right\", 670, 235, \"H\")}\n        </g>\n        <g data-id=\"product-h2o-2\">\n          {bond(\"product-h2o-2-bond-left\", 700, 235, 725, 235)}\n          {bond(\"product-h2o-2-bond-right\", 755, 235, 780, 235)}\n          {atom(\"product-h2o-2-h-left\", 690, 235, \"H\")}\n          {atom(\"product-h2o-2-o\", 740, 235, \"O\")}\n          {atom(\"product-h2o-2-h-right\", 790, 235, \"H\")}\n        </g>\n\n        <text data-id=\"note\" x=\"400\" y=\"340\" textAnchor=\"middle\"\n          fontFamily=\"Arial, sans-serif\" fontSize=\"20\" fill={ink}>Atoms conserved</text>\n      </svg>\n    </div>\n  );\n}",
+      "ttftMs": 5510.4,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 441,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1314,
+        "output_tokens_details": {
+          "reasoning_tokens": 327
+        },
+        "total_tokens": 1755
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 12875.2,
+      "compiled": "function Board() {\n\tconst ink = \"#111\";\n\tconst atom = (id, x, y, label) => /* @__PURE__ */ React.createElement(\"text\", {\n\t\t\"data-id\": id,\n\t\tx,\n\t\ty,\n\t\ttextAnchor: \"middle\",\n\t\tdominantBaseline: \"middle\",\n\t\tfontFamily: \"Arial, sans-serif\",\n\t\tfontSize: \"28\",\n\t\tfill: ink\n\t}, label);\n\tconst bond = (id, x1, y1, x2, y2, width = 3) => /* @__PURE__ */ React.createElement(\"line\", {\n\t\t\"data-id\": id,\n\t\tx1,\n\t\ty1,\n\t\tx2,\n\t\ty2,\n\t\tstroke: ink,\n\t\tstrokeWidth: width,\n\t\tstrokeLinecap: \"round\"\n\t});\n\treturn /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"board\",\n\t\tstyle: {\n\t\t\twidth: 800,\n\t\t\theight: 500,\n\t\t\tbackground: \"#fff\",\n\t\t\tcolor: ink\n\t\t}\n\t}, /* @__PURE__ */ React.createElement(\"svg\", {\n\t\twidth: \"800\",\n\t\theight: \"500\",\n\t\tviewBox: \"0 0 800 500\",\n\t\trole: \"img\",\n\t\t\"aria-label\": \"Balanced reaction 2H₂ plus O₂ yields 2H₂O, shown with molecule diagrams\"\n\t}, /* @__PURE__ */ React.createElement(\"text\", {\n\t\t\"data-id\": \"equation\",\n\t\tx: \"400\",\n\t\ty: \"102\",\n\t\ttextAnchor: \"middle\",\n\t\tfontFamily: \"Arial, sans-serif\",\n\t\tfontSize: \"34\",\n\t\tfill: ink\n\t}, /* @__PURE__ */ React.createElement(\"tspan\", null, \"2H\"), /* @__PURE__ */ React.createElement(\"tspan\", {\n\t\tfontSize: \"23\",\n\t\tbaselineShift: \"sub\"\n\t}, \"2\"), /* @__PURE__ */ React.createElement(\"tspan\", null, \" + O\"), /* @__PURE__ */ React.createElement(\"tspan\", {\n\t\tfontSize: \"23\",\n\t\tbaselineShift: \"sub\"\n\t}, \"2\"), /* @__PURE__ */ React.createElement(\"tspan\", null, \" → 2H\"), /* @__PURE__ */ React.createElement(\"tspan\", {\n\t\tfontSize: \"23\",\n\t\tbaselineShift: \"sub\"\n\t}, \"2\"), /* @__PURE__ */ React.createElement(\"tspan\", null, \"O\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"reactant-h2-1\" }, bond(\"reactant-h2-1-bond\", 105, 235, 145, 235), atom(\"reactant-h2-1-h-1\", 95, 235, \"H\"), atom(\"reactant-h2-1-h-2\", 155, 235, \"H\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"reactant-h2-2\" }, bond(\"reactant-h2-2-bond\", 260, 235, 300, 235), atom(\"reactant-h2-2-h-1\", 250, 235, \"H\"), atom(\"reactant-h2-2-h-2\", 310, 235, \"H\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"reactant-o2\" }, bond(\"reactant-o2-bond-1\", 410, 230, 450, 230), bond(\"reactant-o2-bond-2\", 410, 240, 450, 240), atom(\"reactant-o2-o-1\", 400, 235, \"O\"), atom(\"reactant-o2-o-2\", 460, 235, \"O\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"product-h2o-1\" }, bond(\"product-h2o-1-bond-left\", 580, 235, 605, 235), bond(\"product-h2o-1-bond-right\", 635, 235, 660, 235), atom(\"product-h2o-1-h-left\", 570, 235, \"H\"), atom(\"product-h2o-1-o\", 620, 235, \"O\"), atom(\"product-h2o-1-h-right\", 670, 235, \"H\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"product-h2o-2\" }, bond(\"product-h2o-2-bond-left\", 700, 235, 725, 235), bond(\"product-h2o-2-bond-right\", 755, 235, 780, 235), atom(\"product-h2o-2-h-left\", 690, 235, \"H\"), atom(\"product-h2o-2-o\", 740, 235, \"O\"), atom(\"product-h2o-2-h-right\", 790, 235, \"H\")), /* @__PURE__ */ React.createElement(\"text\", {\n\t\t\"data-id\": \"note\",\n\t\tx: \"400\",\n\t\ty: \"340\",\n\t\ttextAnchor: \"middle\",\n\t\tfontFamily: \"Arial, sans-serif\",\n\t\tfontSize: \"20\",\n\t\tfill: ink\n\t}, \"Atoms conserved\")));\n}\n",
+      "compilationMs": 2.645042000000103,
+      "renderReadyAt": 31546.144417,
+      "render": {
+        "texts": [
+          {
+            "text": "2H",
+            "id": "equation",
+            "x": 265.0625,
+            "y": 71,
+            "width": 43.46875,
+            "height": 38,
+            "fontSize": 34
+          },
+          {
+            "text": "2",
+            "id": "equation",
+            "x": 308.53125,
+            "y": 94,
+            "width": 12.796875,
+            "height": 26,
+            "fontSize": 23
+          },
+          {
+            "text": "+ O",
+            "id": "equation",
+            "x": 321.328125,
+            "y": 71,
+            "width": 65.203125,
+            "height": 38,
+            "fontSize": 34
+          },
+          {
+            "text": "2",
+            "id": "equation",
+            "x": 386.53125,
+            "y": 94,
+            "width": 12.796875,
+            "height": 26,
+            "fontSize": 23
+          },
+          {
+            "text": "→ 2H",
+            "id": "equation",
+            "x": 399.328125,
+            "y": 71,
+            "width": 96.359375,
+            "height": 38,
+            "fontSize": 34
+          },
+          {
+            "text": "2",
+            "id": "equation",
+            "x": 495.6875,
+            "y": 94,
+            "width": 12.796875,
+            "height": 26,
+            "fontSize": 23
+          },
+          {
+            "text": "O",
+            "id": "equation",
+            "x": 508.484375,
+            "y": 71,
+            "width": 26.453125,
+            "height": 38,
+            "fontSize": 34
+          },
+          {
+            "text": "H",
+            "id": "reactant-h2-1-h-1",
+            "x": 84.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "id": "reactant-h2-1-h-2",
+            "x": 144.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "id": "reactant-h2-2-h-1",
+            "x": 239.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "id": "reactant-h2-2-h-2",
+            "x": 299.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "id": "reactant-o2-o-1",
+            "x": 389.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "id": "reactant-o2-o-2",
+            "x": 449.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "id": "product-h2o-1-h-left",
+            "x": 559.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "id": "product-h2o-1-o",
+            "x": 609.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "id": "product-h2o-1-h-right",
+            "x": 659.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "id": "product-h2o-2-h-left",
+            "x": 679.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "id": "product-h2o-2-o",
+            "x": 729.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "id": "product-h2o-2-h-right",
+            "x": 779.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31,
+            "fontSize": 28
+          },
+          {
+            "text": "Atoms conserved",
+            "id": "note",
+            "x": 322.7421875,
+            "y": 322,
+            "width": 154.515625,
+            "height": 22,
+            "fontSize": 20
+          }
+        ],
+        "hits": [
+          {
+            "id": "board",
+            "tag": "DIV",
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 500
+          },
+          {
+            "id": "equation",
+            "tag": "text",
+            "x": 265.0625,
+            "y": 71,
+            "width": 269.875,
+            "height": 49
+          },
+          {
+            "id": "reactant-h2-1",
+            "tag": "g",
+            "x": 84.8828125,
+            "y": 217.265625,
+            "width": 80.234375,
+            "height": 31
+          },
+          {
+            "id": "reactant-h2-1-bond",
+            "tag": "line",
+            "x": 105,
+            "y": 235,
+            "width": 40,
+            "height": 0
+          },
+          {
+            "id": "reactant-h2-1-h-1",
+            "tag": "text",
+            "x": 84.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "reactant-h2-1-h-2",
+            "tag": "text",
+            "x": 144.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "reactant-h2-2",
+            "tag": "g",
+            "x": 239.8828125,
+            "y": 217.265625,
+            "width": 80.234375,
+            "height": 31
+          },
+          {
+            "id": "reactant-h2-2-bond",
+            "tag": "line",
+            "x": 260,
+            "y": 235,
+            "width": 40,
+            "height": 0
+          },
+          {
+            "id": "reactant-h2-2-h-1",
+            "tag": "text",
+            "x": 239.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "reactant-h2-2-h-2",
+            "tag": "text",
+            "x": 299.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "reactant-o2",
+            "tag": "g",
+            "x": 389.109375,
+            "y": 217.265625,
+            "width": 81.78125,
+            "height": 31
+          },
+          {
+            "id": "reactant-o2-bond-1",
+            "tag": "line",
+            "x": 410,
+            "y": 230,
+            "width": 40,
+            "height": 0
+          },
+          {
+            "id": "reactant-o2-bond-2",
+            "tag": "line",
+            "x": 410,
+            "y": 240,
+            "width": 40,
+            "height": 0
+          },
+          {
+            "id": "reactant-o2-o-1",
+            "tag": "text",
+            "x": 389.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31
+          },
+          {
+            "id": "reactant-o2-o-2",
+            "tag": "text",
+            "x": 449.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-1",
+            "tag": "g",
+            "x": 559.8828125,
+            "y": 217.265625,
+            "width": 120.234375,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-1-bond-left",
+            "tag": "line",
+            "x": 580,
+            "y": 235,
+            "width": 25,
+            "height": 0
+          },
+          {
+            "id": "product-h2o-1-bond-right",
+            "tag": "line",
+            "x": 635,
+            "y": 235,
+            "width": 25,
+            "height": 0
+          },
+          {
+            "id": "product-h2o-1-h-left",
+            "tag": "text",
+            "x": 559.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-1-o",
+            "tag": "text",
+            "x": 609.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-1-h-right",
+            "tag": "text",
+            "x": 659.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-2",
+            "tag": "g",
+            "x": 679.8828125,
+            "y": 217.265625,
+            "width": 120.234375,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-2-bond-left",
+            "tag": "line",
+            "x": 700,
+            "y": 235,
+            "width": 25,
+            "height": 0
+          },
+          {
+            "id": "product-h2o-2-bond-right",
+            "tag": "line",
+            "x": 755,
+            "y": 235,
+            "width": 25,
+            "height": 0
+          },
+          {
+            "id": "product-h2o-2-h-left",
+            "tag": "text",
+            "x": 679.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-2-o",
+            "tag": "text",
+            "x": 729.109375,
+            "y": 217.265625,
+            "width": 21.78125,
+            "height": 31
+          },
+          {
+            "id": "product-h2o-2-h-right",
+            "tag": "text",
+            "x": 779.8828125,
+            "y": 217.265625,
+            "width": 20.234375,
+            "height": 31
+          },
+          {
+            "id": "note",
+            "tag": "text",
+            "x": 322.712890625,
+            "y": 322,
+            "width": 154.544921875,
+            "height": 22
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "board",
+          "equation",
+          "reactant-h2-1",
+          "reactant-h2-1-bond",
+          "reactant-h2-1-h-1",
+          "reactant-h2-1-h-2",
+          "reactant-h2-2",
+          "reactant-h2-2-bond",
+          "reactant-h2-2-h-1",
+          "reactant-h2-2-h-2",
+          "reactant-o2",
+          "reactant-o2-bond-1",
+          "reactant-o2-bond-2",
+          "reactant-o2-o-1",
+          "reactant-o2-o-2",
+          "product-h2o-1",
+          "product-h2o-1-bond-left",
+          "product-h2o-1-bond-right",
+          "product-h2o-1-h-left",
+          "product-h2o-1-o",
+          "product-h2o-1-h-right",
+          "product-h2o-2",
+          "product-h2o-2-bond-left",
+          "product-h2o-2-bond-right",
+          "product-h2o-2-h-left",
+          "product-h2o-2-o",
+          "product-h2o-2-h-right",
+          "note"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [],
+        "hasSvg": true,
+        "hasHtmlTable": false,
+        "hasCanvas": false,
+        "domElements": 36
+      },
+      "blockedRequests": [],
+      "renderMs": 216.4,
+      "validRenderMs": 13023.8,
+      "outputBytes": 2678,
+      "requiresManualStoichiometry": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "note": true,
+        "chemicalElements": true
+      }
+    },
+    {
+      "id": "chemistry-equation-canvas-1",
+      "scenario": "chemistry-equation",
+      "format": "canvas",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "937e906c6e10ec8110b4830d27bf4268e9efa4095d4bf1a9b96338823cfce2ce",
+      "instructionBytes": 1485,
+      "inputBytes": 584,
+      "raw": "function draw(ctx, hit) {\n  ctx.clearRect(0, 0, 800, 500);\n  ctx.fillStyle = \"#ffffff\";\n  ctx.fillRect(0, 0, 800, 500);\n\n  ctx.fillStyle = \"#111111\";\n  ctx.strokeStyle = \"#111111\";\n  ctx.textAlign = \"left\";\n  ctx.textBaseline = \"alphabetic\";\n  ctx.font = \"30px Arial\";\n\n  // 2H₂ + O₂ → 2H₂O\n  ctx.fillText(\"2\", 200, 105);\n  ctx.fillText(\"H\", 224, 105);\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"2\", 244, 111);\n\n  ctx.font = \"30px Arial\";\n  ctx.fillText(\"+\", 270, 105);\n  ctx.fillText(\"O\", 305, 105);\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"2\", 325, 111);\n\n  ctx.font = \"30px Arial\";\n  ctx.fillText(\"→\", 355, 105);\n  ctx.fillText(\"2\", 398, 105);\n  ctx.fillText(\"H\", 422, 105);\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"2\", 442, 111);\n  ctx.font = \"30px Arial\";\n  ctx.fillText(\"O\", 454, 105);\n\n  hit(\"equation\", 190, 65, 290, 55);\n\n  function atom(label, x, y) {\n    ctx.font = \"28px Arial\";\n    ctx.textAlign = \"center\";\n    ctx.textBaseline = \"middle\";\n    ctx.fillText(label, x, y);\n  }\n\n  function singleBond(x1, y1, x2, y2) {\n    ctx.beginPath();\n    ctx.moveTo(x1, y1);\n    ctx.lineTo(x2, y2);\n    ctx.lineWidth = 2;\n    ctx.stroke();\n  }\n\n  function doubleBond(x1, y1, x2, y2) {\n    ctx.lineWidth = 2;\n    ctx.beginPath();\n    ctx.moveTo(x1, y1 - 3);\n    ctx.lineTo(x2, y2 - 3);\n    ctx.moveTo(x1, y1 + 3);\n    ctx.lineTo(x2, y2 + 3);\n    ctx.stroke();\n  }\n\n  function hydrogenMolecule(id, x, y) {\n    singleBond(x + 19, y, x + 51, y);\n    atom(\"H\", x, y);\n    atom(\"H\", x + 70, y);\n    hit(id, x - 20, y - 24, 110, 48);\n  }\n\n  function oxygenMolecule(id, x, y) {\n    doubleBond(x + 20, y, x + 58, y);\n    atom(\"O\", x, y);\n    atom(\"O\", x + 78, y);\n    hit(id, x - 20, y - 24, 120, 48);\n  }\n\n  function waterMolecule(id, x, y) {\n    singleBond(x + 19, y, x + 50, y);\n    singleBond(x + 70, y, x + 101, y);\n    atom(\"H\", x, y);\n    atom(\"O\", x + 60, y);\n    atom(\"H\", x + 120, y);\n    hit(id, x - 20, y - 24, 160, 48);\n  }\n\n  hydrogenMolecule(\"reactant-h2-1\", 75, 235);\n  hydrogenMolecule(\"reactant-h2-2\", 75, 315);\n  oxygenMolecule(\"reactant-o2\", 250, 275);\n\n  waterMolecule(\"product-h2o-1\", 495, 235);\n  waterMolecule(\"product-h2o-2\", 495, 315);\n\n  ctx.font = \"18px Arial\";\n  ctx.textAlign = \"center\";\n  ctx.textBaseline = \"alphabetic\";\n  ctx.fillText(\"Atoms conserved\", 400, 410);\n  hit(\"note-atoms-conserved\", 320, 382, 160, 36);\n}",
+      "ttftMs": 4267.9,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 459,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1239,
+        "output_tokens_details": {
+          "reasoning_tokens": 326
+        },
+        "total_tokens": 1698
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 10114.5,
+      "compiled": "function draw(ctx, hit) {\n\tctx.clearRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#ffffff\";\n\tctx.fillRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#111111\";\n\tctx.strokeStyle = \"#111111\";\n\tctx.textAlign = \"left\";\n\tctx.textBaseline = \"alphabetic\";\n\tctx.font = \"30px Arial\";\n\t// 2H₂ + O₂ → 2H₂O\n\tctx.fillText(\"2\", 200, 105);\n\tctx.fillText(\"H\", 224, 105);\n\tctx.font = \"20px Arial\";\n\tctx.fillText(\"2\", 244, 111);\n\tctx.font = \"30px Arial\";\n\tctx.fillText(\"+\", 270, 105);\n\tctx.fillText(\"O\", 305, 105);\n\tctx.font = \"20px Arial\";\n\tctx.fillText(\"2\", 325, 111);\n\tctx.font = \"30px Arial\";\n\tctx.fillText(\"→\", 355, 105);\n\tctx.fillText(\"2\", 398, 105);\n\tctx.fillText(\"H\", 422, 105);\n\tctx.font = \"20px Arial\";\n\tctx.fillText(\"2\", 442, 111);\n\tctx.font = \"30px Arial\";\n\tctx.fillText(\"O\", 454, 105);\n\thit(\"equation\", 190, 65, 290, 55);\n\tfunction atom(label, x, y) {\n\t\tctx.font = \"28px Arial\";\n\t\tctx.textAlign = \"center\";\n\t\tctx.textBaseline = \"middle\";\n\t\tctx.fillText(label, x, y);\n\t}\n\tfunction singleBond(x1, y1, x2, y2) {\n\t\tctx.beginPath();\n\t\tctx.moveTo(x1, y1);\n\t\tctx.lineTo(x2, y2);\n\t\tctx.lineWidth = 2;\n\t\tctx.stroke();\n\t}\n\tfunction doubleBond(x1, y1, x2, y2) {\n\t\tctx.lineWidth = 2;\n\t\tctx.beginPath();\n\t\tctx.moveTo(x1, y1 - 3);\n\t\tctx.lineTo(x2, y2 - 3);\n\t\tctx.moveTo(x1, y1 + 3);\n\t\tctx.lineTo(x2, y2 + 3);\n\t\tctx.stroke();\n\t}\n\tfunction hydrogenMolecule(id, x, y) {\n\t\tsingleBond(x + 19, y, x + 51, y);\n\t\tatom(\"H\", x, y);\n\t\tatom(\"H\", x + 70, y);\n\t\thit(id, x - 20, y - 24, 110, 48);\n\t}\n\tfunction oxygenMolecule(id, x, y) {\n\t\tdoubleBond(x + 20, y, x + 58, y);\n\t\tatom(\"O\", x, y);\n\t\tatom(\"O\", x + 78, y);\n\t\thit(id, x - 20, y - 24, 120, 48);\n\t}\n\tfunction waterMolecule(id, x, y) {\n\t\tsingleBond(x + 19, y, x + 50, y);\n\t\tsingleBond(x + 70, y, x + 101, y);\n\t\tatom(\"H\", x, y);\n\t\tatom(\"O\", x + 60, y);\n\t\tatom(\"H\", x + 120, y);\n\t\thit(id, x - 20, y - 24, 160, 48);\n\t}\n\thydrogenMolecule(\"reactant-h2-1\", 75, 235);\n\thydrogenMolecule(\"reactant-h2-2\", 75, 315);\n\toxygenMolecule(\"reactant-o2\", 250, 275);\n\twaterMolecule(\"product-h2o-1\", 495, 235);\n\twaterMolecule(\"product-h2o-2\", 495, 315);\n\tctx.font = \"18px Arial\";\n\tctx.textAlign = \"center\";\n\tctx.textBaseline = \"alphabetic\";\n\tctx.fillText(\"Atoms conserved\", 400, 410);\n\thit(\"note-atoms-conserved\", 320, 382, 160, 36);\n}\n",
+      "compilationMs": 1.2076249999954598,
+      "renderReadyAt": 41877.340959,
+      "render": {
+        "texts": [
+          {
+            "text": "2",
+            "x": 200.87890625,
+            "y": 83.4375,
+            "width": 14.2236328125,
+            "height": 21.5625,
+            "fontSize": 30
+          },
+          {
+            "text": "H",
+            "x": 226.40234375,
+            "y": 83.525390625,
+            "width": 16.845703125,
+            "height": 21.474609375,
+            "fontSize": 30
+          },
+          {
+            "text": "2",
+            "x": 244.5859375,
+            "y": 96.625,
+            "width": 9.482421875,
+            "height": 14.375,
+            "fontSize": 20
+          },
+          {
+            "text": "+",
+            "x": 271.669921875,
+            "y": 87.333984375,
+            "width": 14.1796875,
+            "height": 14.1943359375,
+            "fontSize": 30
+          },
+          {
+            "text": "O",
+            "x": 306.4501953125,
+            "y": 83.14453125,
+            "width": 20.537109375,
+            "height": 22.2216796875,
+            "fontSize": 30
+          },
+          {
+            "text": "2",
+            "x": 325.5859375,
+            "y": 96.625,
+            "width": 9.482421875,
+            "height": 14.375,
+            "fontSize": 20
+          },
+          {
+            "text": "→",
+            "x": 356.1572265625,
+            "y": 92.16796875,
+            "width": 27.6708984375,
+            "height": 10.5322265625,
+            "fontSize": 30
+          },
+          {
+            "text": "2",
+            "x": 398.87890625,
+            "y": 83.4375,
+            "width": 14.2236328125,
+            "height": 21.5625,
+            "fontSize": 30
+          },
+          {
+            "text": "H",
+            "x": 424.40234375,
+            "y": 83.525390625,
+            "width": 16.845703125,
+            "height": 21.474609375,
+            "fontSize": 30
+          },
+          {
+            "text": "2",
+            "x": 442.5859375,
+            "y": 96.625,
+            "width": 9.482421875,
+            "height": 14.375,
+            "fontSize": 20
+          },
+          {
+            "text": "O",
+            "x": 455.4501953125,
+            "y": 83.14453125,
+            "width": 20.537109375,
+            "height": 22.2216796875,
+            "fontSize": 30
+          },
+          {
+            "text": "H",
+            "x": 67.1318359375,
+            "y": 222.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "x": 137.1318359375,
+            "y": 222.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "x": 67.1318359375,
+            "y": 302.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "x": 137.1318359375,
+            "y": 302.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "x": 240.4638671875,
+            "y": 262.3203125,
+            "width": 19.16796875,
+            "height": 20.740234375,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "x": 318.4638671875,
+            "y": 262.3203125,
+            "width": 19.16796875,
+            "height": 20.740234375,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "x": 487.1318359375,
+            "y": 222.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "x": 545.4638671875,
+            "y": 222.3203125,
+            "width": 19.16796875,
+            "height": 20.740234375,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "x": 607.1318359375,
+            "y": 222.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "x": 487.1318359375,
+            "y": 302.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "O",
+            "x": 545.4638671875,
+            "y": 302.3203125,
+            "width": 19.16796875,
+            "height": 20.740234375,
+            "fontSize": 28
+          },
+          {
+            "text": "H",
+            "x": 607.1318359375,
+            "y": 302.67578125,
+            "width": 15.72265625,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "Atoms conserved",
+            "x": 330.443359375,
+            "y": 397.115234375,
+            "width": 137.7861328125,
+            "height": 13.095703125,
+            "fontSize": 18
+          }
+        ],
+        "hits": [
+          {
+            "id": "equation",
+            "x": 190,
+            "y": 65,
+            "width": 290,
+            "height": 55
+          },
+          {
+            "id": "reactant-h2-1",
+            "x": 55,
+            "y": 211,
+            "width": 110,
+            "height": 48
+          },
+          {
+            "id": "reactant-h2-2",
+            "x": 55,
+            "y": 291,
+            "width": 110,
+            "height": 48
+          },
+          {
+            "id": "reactant-o2",
+            "x": 230,
+            "y": 251,
+            "width": 120,
+            "height": 48
+          },
+          {
+            "id": "product-h2o-1",
+            "x": 475,
+            "y": 211,
+            "width": 160,
+            "height": 48
+          },
+          {
+            "id": "product-h2o-2",
+            "x": 475,
+            "y": 291,
+            "width": 160,
+            "height": 48
+          },
+          {
+            "id": "note-atoms-conserved",
+            "x": 320,
+            "y": 382,
+            "width": 160,
+            "height": 36
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "equation",
+          "reactant-h2-1",
+          "reactant-h2-2",
+          "reactant-o2",
+          "product-h2o-1",
+          "product-h2o-2",
+          "note-atoms-conserved"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [
+          {
+            "op": "clearRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "2",
+              200,
+              105
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              224,
+              105
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "2",
+              244,
+              111
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "+",
+              270,
+              105
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "O",
+              305,
+              105
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "2",
+              325,
+              111
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "→",
+              355,
+              105
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "2",
+              398,
+              105
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              422,
+              105
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "2",
+              442,
+              111
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "O",
+              454,
+              105
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              94,
+              235
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              126,
+              235
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              75,
+              235
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              145,
+              235
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              94,
+              315
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              126,
+              315
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              75,
+              315
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              145,
+              315
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              270,
+              272
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              308,
+              272
+            ]
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              270,
+              278
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              308,
+              278
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "O",
+              250,
+              275
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "O",
+              328,
+              275
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              514,
+              235
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              545,
+              235
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              565,
+              235
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              596,
+              235
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              495,
+              235
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "O",
+              555,
+              235
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              615,
+              235
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              514,
+              315
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              545,
+              315
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              565,
+              315
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              596,
+              315
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              495,
+              315
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "O",
+              555,
+              315
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "H",
+              615,
+              315
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "Atoms conserved",
+              400,
+              410
+            ]
+          }
+        ],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": true,
+        "domElements": 1
+      },
+      "blockedRequests": [],
+      "renderMs": 217.7,
+      "validRenderMs": 10261.2,
+      "outputBytes": 2354,
+      "requiresManualStoichiometry": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "note": true,
+        "chemicalElements": true
+      }
+    },
+    {
+      "id": "algebra-steps-canvas-1",
+      "scenario": "algebra-steps",
+      "format": "canvas",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "299bce28442be1b98fc13af897a73c5906f3520f2646c86adde077ef28da0b1e",
+      "instructionBytes": 1485,
+      "inputBytes": 558,
+      "raw": "function draw(ctx, hit) {\n  ctx.fillStyle = \"#ffffff\";\n  ctx.fillRect(0, 0, 800, 500);\n\n  ctx.fillStyle = \"#111111\";\n  ctx.textBaseline = \"middle\";\n  ctx.textAlign = \"left\";\n\n  ctx.font = \"28px Arial\";\n  ctx.fillText(\"2x + 3 = 11\", 190, 130);\n  hit(\"equation-1\", 180, 108, 220, 44);\n\n  ctx.fillText(\"2x = 8\", 190, 245);\n  hit(\"equation-2\", 180, 223, 220, 44);\n\n  ctx.fillText(\"x = 4\", 190, 360);\n  ctx.strokeStyle = \"#111111\";\n  ctx.lineWidth = 2;\n  ctx.strokeRect(178, 336, 135, 48);\n  hit(\"final-result\", 178, 336, 135, 48);\n\n  ctx.font = \"18px Arial\";\n  ctx.fillText(\"subtract 3 from both sides\", 370, 188);\n  hit(\"annotation-subtract-3\", 360, 168, 330, 40);\n\n  ctx.fillText(\"divide both sides by 2\", 370, 303);\n  hit(\"annotation-divide-by-2\", 360, 283, 330, 40);\n}",
+      "ttftMs": 2146.6,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 449,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 424,
+        "output_tokens_details": {
+          "reasoning_tokens": 120
+        },
+        "total_tokens": 873
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 4044.1,
+      "compiled": "function draw(ctx, hit) {\n\tctx.fillStyle = \"#ffffff\";\n\tctx.fillRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#111111\";\n\tctx.textBaseline = \"middle\";\n\tctx.textAlign = \"left\";\n\tctx.font = \"28px Arial\";\n\tctx.fillText(\"2x + 3 = 11\", 190, 130);\n\thit(\"equation-1\", 180, 108, 220, 44);\n\tctx.fillText(\"2x = 8\", 190, 245);\n\thit(\"equation-2\", 180, 223, 220, 44);\n\tctx.fillText(\"x = 4\", 190, 360);\n\tctx.strokeStyle = \"#111111\";\n\tctx.lineWidth = 2;\n\tctx.strokeRect(178, 336, 135, 48);\n\thit(\"final-result\", 178, 336, 135, 48);\n\tctx.font = \"18px Arial\";\n\tctx.fillText(\"subtract 3 from both sides\", 370, 188);\n\thit(\"annotation-subtract-3\", 360, 168, 330, 40);\n\tctx.fillText(\"divide both sides by 2\", 370, 303);\n\thit(\"annotation-divide-by-2\", 360, 283, 330, 40);\n}\n",
+      "compilationMs": 0.6892910000024131,
+      "renderReadyAt": 46106.980584,
+      "render": {
+        "texts": [
+          {
+            "text": "2x + 3 = 11",
+            "x": 190.8203125,
+            "y": 117.59375,
+            "width": 132.0703125,
+            "height": 20.48046875,
+            "fontSize": 28
+          },
+          {
+            "text": "2x = 8",
+            "x": 190.8203125,
+            "y": 232.59375,
+            "width": 75.00390625,
+            "height": 20.466796875,
+            "fontSize": 28
+          },
+          {
+            "text": "x = 4",
+            "x": 190.205078125,
+            "y": 347.67578125,
+            "width": 59.923828125,
+            "height": 20.04296875,
+            "fontSize": 28
+          },
+          {
+            "text": "subtract 3 from both sides",
+            "x": 370.5537109375,
+            "y": 179.8642578125,
+            "width": 205.8486328125,
+            "height": 13.3330078125,
+            "fontSize": 18
+          },
+          {
+            "text": "divide both sides by 2",
+            "x": 370.615234375,
+            "y": 295.03125,
+            "width": 171.544921875,
+            "height": 16.7255859375,
+            "fontSize": 18
+          }
+        ],
+        "hits": [
+          {
+            "id": "equation-1",
+            "x": 180,
+            "y": 108,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "id": "equation-2",
+            "x": 180,
+            "y": 223,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "id": "final-result",
+            "x": 178,
+            "y": 336,
+            "width": 135,
+            "height": 48
+          },
+          {
+            "id": "annotation-subtract-3",
+            "x": 360,
+            "y": 168,
+            "width": 330,
+            "height": 40
+          },
+          {
+            "id": "annotation-divide-by-2",
+            "x": 360,
+            "y": 283,
+            "width": 330,
+            "height": 40
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "equation-1",
+          "equation-2",
+          "final-result",
+          "annotation-subtract-3",
+          "annotation-divide-by-2"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [
+          {
+            "op": "fillRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "2x + 3 = 11",
+              190,
+              130
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "2x = 8",
+              190,
+              245
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "x = 4",
+              190,
+              360
+            ]
+          },
+          {
+            "op": "strokeRect",
+            "args": [
+              178,
+              336,
+              135,
+              48
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "subtract 3 from both sides",
+              370,
+              188
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "divide both sides by 2",
+              370,
+              303
+            ]
+          }
+        ],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": true,
+        "domElements": 1
+      },
+      "blockedRequests": [],
+      "renderMs": 185.1,
+      "validRenderMs": 4156.5,
+      "outputBytes": 768,
+      "requiresManualAlignment": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "exactEquations": true,
+        "operations": true
+      }
+    },
+    {
+      "id": "algebra-steps-react-1",
+      "scenario": "algebra-steps",
+      "format": "react",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "299bce28442be1b98fc13af897a73c5906f3520f2646c86adde077ef28da0b1e",
+      "instructionBytes": 1395,
+      "inputBytes": 558,
+      "raw": "function Board() {\n  const stage = {\n    position: \"relative\",\n    width: 800,\n    height: 500,\n    overflow: \"hidden\",\n    background: \"#ffffff\",\n    color: \"#111111\",\n    fontFamily: \"Arial, sans-serif\",\n    boxSizing: \"border-box\"\n  };\n\n  const equationStyle = {\n    position: \"absolute\",\n    left: 220,\n    width: 220,\n    height: 48,\n    display: \"flex\",\n    alignItems: \"center\",\n    justifyContent: \"center\",\n    fontSize: 32,\n    lineHeight: \"40px\",\n    letterSpacing: \"0.5px\",\n    boxSizing: \"border-box\"\n  };\n\n  const annotationStyle = {\n    position: \"absolute\",\n    left: 470,\n    width: 270,\n    height: 42,\n    display: \"flex\",\n    alignItems: \"center\",\n    fontSize: 18,\n    lineHeight: \"24px\",\n    boxSizing: \"border-box\"\n  };\n\n  return (\n    <div data-id=\"algebra-example-board\" style={stage}>\n      <div data-id=\"equation-1\" style={{ ...equationStyle, top: 86 }}>\n        2x + 3 = 11\n      </div>\n      <div data-id=\"annotation-1\" style={{ ...annotationStyle, top: 151 }}>\n        subtract 3 from both sides\n      </div>\n      <div data-id=\"equation-2\" style={{ ...equationStyle, top: 204 }}>\n        2x = 8\n      </div>\n      <div data-id=\"annotation-2\" style={{ ...annotationStyle, top: 269 }}>\n        divide both sides by 2\n      </div>\n      <div\n        data-id=\"final-result-box\"\n        style={{\n          position: \"absolute\",\n          left: 263,\n          top: 322,\n          width: 134,\n          height: 58,\n          border: \"2px solid #111111\",\n          borderRadius: 4,\n          boxSizing: \"border-box\"\n        }}\n      />\n      <div\n        data-id=\"equation-3\"\n        style={{\n          ...equationStyle,\n          top: 327,\n          left: 220,\n          width: 220,\n          fontWeight: 700\n        }}\n      >\n        x = 4\n      </div>\n    </div>\n  );\n}",
+      "ttftMs": 4734.4,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 431,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 794,
+        "output_tokens_details": {
+          "reasoning_tokens": 269
+        },
+        "total_tokens": 1225
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 8802.7,
+      "compiled": "function Board() {\n\tconst stage = {\n\t\tposition: \"relative\",\n\t\twidth: 800,\n\t\theight: 500,\n\t\toverflow: \"hidden\",\n\t\tbackground: \"#ffffff\",\n\t\tcolor: \"#111111\",\n\t\tfontFamily: \"Arial, sans-serif\",\n\t\tboxSizing: \"border-box\"\n\t};\n\tconst equationStyle = {\n\t\tposition: \"absolute\",\n\t\tleft: 220,\n\t\twidth: 220,\n\t\theight: 48,\n\t\tdisplay: \"flex\",\n\t\talignItems: \"center\",\n\t\tjustifyContent: \"center\",\n\t\tfontSize: 32,\n\t\tlineHeight: \"40px\",\n\t\tletterSpacing: \"0.5px\",\n\t\tboxSizing: \"border-box\"\n\t};\n\tconst annotationStyle = {\n\t\tposition: \"absolute\",\n\t\tleft: 470,\n\t\twidth: 270,\n\t\theight: 42,\n\t\tdisplay: \"flex\",\n\t\talignItems: \"center\",\n\t\tfontSize: 18,\n\t\tlineHeight: \"24px\",\n\t\tboxSizing: \"border-box\"\n\t};\n\treturn /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"algebra-example-board\",\n\t\tstyle: stage\n\t}, /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"equation-1\",\n\t\tstyle: {\n\t\t\t...equationStyle,\n\t\t\ttop: 86\n\t\t}\n\t}, \"2x + 3 = 11\"), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"annotation-1\",\n\t\tstyle: {\n\t\t\t...annotationStyle,\n\t\t\ttop: 151\n\t\t}\n\t}, \"subtract 3 from both sides\"), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"equation-2\",\n\t\tstyle: {\n\t\t\t...equationStyle,\n\t\t\ttop: 204\n\t\t}\n\t}, \"2x = 8\"), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"annotation-2\",\n\t\tstyle: {\n\t\t\t...annotationStyle,\n\t\t\ttop: 269\n\t\t}\n\t}, \"divide both sides by 2\"), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"final-result-box\",\n\t\tstyle: {\n\t\t\tposition: \"absolute\",\n\t\t\tleft: 263,\n\t\t\ttop: 322,\n\t\t\twidth: 134,\n\t\t\theight: 58,\n\t\t\tborder: \"2px solid #111111\",\n\t\t\tborderRadius: 4,\n\t\t\tboxSizing: \"border-box\"\n\t\t}\n\t}), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"equation-3\",\n\t\tstyle: {\n\t\t\t...equationStyle,\n\t\t\ttop: 327,\n\t\t\tleft: 220,\n\t\t\twidth: 220,\n\t\t\tfontWeight: 700\n\t\t}\n\t}, \"x = 4\"));\n}\n",
+      "compilationMs": 1.0993339999986347,
+      "renderReadyAt": 55146.784625,
+      "render": {
+        "texts": [
+          {
+            "text": "2x + 3 = 11",
+            "id": "equation-1",
+            "x": 248.375,
+            "y": 92,
+            "width": 163.25,
+            "height": 36,
+            "fontSize": 32
+          },
+          {
+            "text": "subtract 3 from both sides",
+            "id": "annotation-1",
+            "x": 470,
+            "y": 162,
+            "width": 207.109375,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "2x = 8",
+            "id": "equation-2",
+            "x": 284.46875,
+            "y": 210,
+            "width": 91.0625,
+            "height": 36,
+            "fontSize": 32
+          },
+          {
+            "text": "divide both sides by 2",
+            "id": "annotation-2",
+            "x": 470,
+            "y": 280,
+            "width": 173.109375,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "x = 4",
+            "id": "equation-3",
+            "x": 292.71875,
+            "y": 333,
+            "width": 74.5625,
+            "height": 36,
+            "fontSize": 32
+          }
+        ],
+        "hits": [
+          {
+            "id": "algebra-example-board",
+            "tag": "DIV",
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 500
+          },
+          {
+            "id": "equation-1",
+            "tag": "DIV",
+            "x": 220,
+            "y": 86,
+            "width": 220,
+            "height": 48
+          },
+          {
+            "id": "annotation-1",
+            "tag": "DIV",
+            "x": 470,
+            "y": 151,
+            "width": 270,
+            "height": 42
+          },
+          {
+            "id": "equation-2",
+            "tag": "DIV",
+            "x": 220,
+            "y": 204,
+            "width": 220,
+            "height": 48
+          },
+          {
+            "id": "annotation-2",
+            "tag": "DIV",
+            "x": 470,
+            "y": 269,
+            "width": 270,
+            "height": 42
+          },
+          {
+            "id": "final-result-box",
+            "tag": "DIV",
+            "x": 263,
+            "y": 322,
+            "width": 134,
+            "height": 58
+          },
+          {
+            "id": "equation-3",
+            "tag": "DIV",
+            "x": 220,
+            "y": 327,
+            "width": 220,
+            "height": 48
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "algebra-example-board",
+          "equation-1",
+          "annotation-1",
+          "equation-2",
+          "annotation-2",
+          "final-result-box",
+          "equation-3"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": false,
+        "domElements": 7
+      },
+      "blockedRequests": [],
+      "renderMs": 232.8,
+      "validRenderMs": 8964.8,
+      "outputBytes": 1796,
+      "requiresManualAlignment": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "exactEquations": true,
+        "operations": true
+      }
+    },
+    {
+      "id": "physics-forces-react-1",
+      "scenario": "physics-forces",
+      "format": "react",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "be880e475fe126af0f6879660d962af59f99ec59d2c99bcc7fb255bf641c3a23",
+      "instructionBytes": 1395,
+      "inputBytes": 563,
+      "raw": "function Board() {\n  const ink = \"#17212b\";\n  const arrow = {\n    stroke: ink,\n    strokeWidth: 3,\n    fill: \"none\",\n    markerEnd: \"url(#force-arrow)\",\n  };\n\n  return (\n    <div style={{ width: 800, height: 500, background: \"#fff\", color: ink }}>\n      <svg\n        width=\"800\"\n        height=\"500\"\n        viewBox=\"0 0 800 500\"\n        role=\"img\"\n        aria-label=\"Block on a horizontal surface with four labeled forces and two equations\"\n        style={{ display: \"block\", fontFamily: \"Arial, sans-serif\" }}\n      >\n        <defs>\n          <marker\n            id=\"force-arrow\"\n            markerWidth=\"10\"\n            markerHeight=\"10\"\n            refX=\"8\"\n            refY=\"5\"\n            orient=\"auto\"\n            markerUnits=\"strokeWidth\"\n          >\n            <path d=\"M0,0 L10,5 L0,10 Z\" fill={ink} />\n          </marker>\n        </defs>\n\n        <g data-id=\"horizontal-surface\" stroke={ink} strokeWidth=\"3\">\n          <line x1=\"235\" y1=\"300\" x2=\"565\" y2=\"300\" />\n        </g>\n\n        <g data-id=\"block\">\n          <rect\n            x=\"340\"\n            y=\"185\"\n            width=\"120\"\n            height=\"90\"\n            fill=\"#fff\"\n            stroke={ink}\n            strokeWidth=\"3\"\n          />\n        </g>\n\n        <g data-id=\"force-N\">\n          <line x1=\"400\" y1=\"185\" x2=\"400\" y2=\"105\" {...arrow} />\n          <text x=\"414\" y=\"125\" fontSize=\"20\" fill={ink}>N</text>\n        </g>\n        <g data-id=\"force-mg\">\n          <line x1=\"400\" y1=\"275\" x2=\"400\" y2=\"355\" {...arrow} />\n          <text x=\"414\" y=\"344\" fontSize=\"20\" fill={ink}>mg</text>\n        </g>\n        <g data-id=\"force-F\">\n          <line x1=\"460\" y1=\"230\" x2=\"545\" y2=\"230\" {...arrow} />\n          <text x=\"505\" y=\"215\" fontSize=\"20\" fill={ink}>F</text>\n        </g>\n        <g data-id=\"force-f\">\n          <line x1=\"340\" y1=\"230\" x2=\"255\" y2=\"230\" {...arrow} />\n          <text x=\"285\" y=\"215\" fontSize=\"20\" fill={ink}>f</text>\n        </g>\n\n        <g data-id=\"equation-y\">\n          <text x=\"225\" y=\"405\" fontSize=\"22\" fill={ink}>\n            ΣFᵧ = N − mg = 0\n          </text>\n        </g>\n        <g data-id=\"equation-x\">\n          <text x=\"225\" y=\"450\" fontSize=\"22\" fill={ink}>\n            ΣFₓ = F − f = ma\n          </text>\n        </g>\n      </svg>\n    </div>\n  );\n}",
+      "ttftMs": 3521.1,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 440,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 912,
+        "output_tokens_details": {
+          "reasoning_tokens": 208
+        },
+        "total_tokens": 1352
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 8306.7,
+      "compiled": "function Board() {\n\tconst ink = \"#17212b\";\n\tconst arrow = {\n\t\tstroke: ink,\n\t\tstrokeWidth: 3,\n\t\tfill: \"none\",\n\t\tmarkerEnd: \"url(#force-arrow)\"\n\t};\n\treturn /* @__PURE__ */ React.createElement(\"div\", { style: {\n\t\twidth: 800,\n\t\theight: 500,\n\t\tbackground: \"#fff\",\n\t\tcolor: ink\n\t} }, /* @__PURE__ */ React.createElement(\"svg\", {\n\t\twidth: \"800\",\n\t\theight: \"500\",\n\t\tviewBox: \"0 0 800 500\",\n\t\trole: \"img\",\n\t\t\"aria-label\": \"Block on a horizontal surface with four labeled forces and two equations\",\n\t\tstyle: {\n\t\t\tdisplay: \"block\",\n\t\t\tfontFamily: \"Arial, sans-serif\"\n\t\t}\n\t}, /* @__PURE__ */ React.createElement(\"defs\", null, /* @__PURE__ */ React.createElement(\"marker\", {\n\t\tid: \"force-arrow\",\n\t\tmarkerWidth: \"10\",\n\t\tmarkerHeight: \"10\",\n\t\trefX: \"8\",\n\t\trefY: \"5\",\n\t\torient: \"auto\",\n\t\tmarkerUnits: \"strokeWidth\"\n\t}, /* @__PURE__ */ React.createElement(\"path\", {\n\t\td: \"M0,0 L10,5 L0,10 Z\",\n\t\tfill: ink\n\t}))), /* @__PURE__ */ React.createElement(\"g\", {\n\t\t\"data-id\": \"horizontal-surface\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"3\"\n\t}, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: \"235\",\n\t\ty1: \"300\",\n\t\tx2: \"565\",\n\t\ty2: \"300\"\n\t})), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"block\" }, /* @__PURE__ */ React.createElement(\"rect\", {\n\t\tx: \"340\",\n\t\ty: \"185\",\n\t\twidth: \"120\",\n\t\theight: \"90\",\n\t\tfill: \"#fff\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"3\"\n\t})), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"force-N\" }, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: \"400\",\n\t\ty1: \"185\",\n\t\tx2: \"400\",\n\t\ty2: \"105\",\n\t\t...arrow\n\t}), /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: \"414\",\n\t\ty: \"125\",\n\t\tfontSize: \"20\",\n\t\tfill: ink\n\t}, \"N\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"force-mg\" }, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: \"400\",\n\t\ty1: \"275\",\n\t\tx2: \"400\",\n\t\ty2: \"355\",\n\t\t...arrow\n\t}), /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: \"414\",\n\t\ty: \"344\",\n\t\tfontSize: \"20\",\n\t\tfill: ink\n\t}, \"mg\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"force-F\" }, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: \"460\",\n\t\ty1: \"230\",\n\t\tx2: \"545\",\n\t\ty2: \"230\",\n\t\t...arrow\n\t}), /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: \"505\",\n\t\ty: \"215\",\n\t\tfontSize: \"20\",\n\t\tfill: ink\n\t}, \"F\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"force-f\" }, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: \"340\",\n\t\ty1: \"230\",\n\t\tx2: \"255\",\n\t\ty2: \"230\",\n\t\t...arrow\n\t}), /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: \"285\",\n\t\ty: \"215\",\n\t\tfontSize: \"20\",\n\t\tfill: ink\n\t}, \"f\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"equation-y\" }, /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: \"225\",\n\t\ty: \"405\",\n\t\tfontSize: \"22\",\n\t\tfill: ink\n\t}, \"ΣFᵧ = N − mg = 0\")), /* @__PURE__ */ React.createElement(\"g\", { \"data-id\": \"equation-x\" }, /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: \"225\",\n\t\ty: \"450\",\n\t\tfontSize: \"22\",\n\t\tfill: ink\n\t}, \"ΣFₓ = F − f = ma\"))));\n}\n",
+      "compilationMs": 0.6285419999985606,
+      "renderReadyAt": 63702.844542,
+      "render": {
+        "texts": [
+          {
+            "text": "N",
+            "id": "force-N",
+            "x": 414,
+            "y": 107,
+            "width": 14.453125,
+            "height": 22,
+            "fontSize": 20
+          },
+          {
+            "text": "mg",
+            "id": "force-mg",
+            "x": 414,
+            "y": 326,
+            "width": 27.796875,
+            "height": 22,
+            "fontSize": 20
+          },
+          {
+            "text": "F",
+            "id": "force-F",
+            "x": 505,
+            "y": 197,
+            "width": 12.21875,
+            "height": 22,
+            "fontSize": 20
+          },
+          {
+            "text": "f",
+            "id": "force-f",
+            "x": 285,
+            "y": 197,
+            "width": 5.5625,
+            "height": 22,
+            "fontSize": 20
+          },
+          {
+            "text": "ΣFᵧ = N − mg = 0",
+            "id": "equation-y",
+            "x": 225,
+            "y": 385,
+            "width": 168.015625,
+            "height": 25,
+            "fontSize": 22
+          },
+          {
+            "text": "ΣFₓ = F − f = ma",
+            "id": "equation-x",
+            "x": 225,
+            "y": 430,
+            "width": 159.59375,
+            "height": 25,
+            "fontSize": 22
+          }
+        ],
+        "hits": [
+          {
+            "id": "force-arrow",
+            "tag": "marker",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "id": "horizontal-surface",
+            "tag": "g",
+            "x": 235,
+            "y": 300,
+            "width": 330,
+            "height": 0
+          },
+          {
+            "id": "block",
+            "tag": "g",
+            "x": 340,
+            "y": 185,
+            "width": 120,
+            "height": 90
+          },
+          {
+            "id": "force-N",
+            "tag": "g",
+            "x": 400,
+            "y": 105,
+            "width": 28.453125,
+            "height": 80
+          },
+          {
+            "id": "force-mg",
+            "tag": "g",
+            "x": 400,
+            "y": 275,
+            "width": 41.796875,
+            "height": 80
+          },
+          {
+            "id": "force-F",
+            "tag": "g",
+            "x": 460,
+            "y": 197,
+            "width": 85,
+            "height": 33
+          },
+          {
+            "id": "force-f",
+            "tag": "g",
+            "x": 255,
+            "y": 197,
+            "width": 85,
+            "height": 33
+          },
+          {
+            "id": "equation-y",
+            "tag": "g",
+            "x": 225,
+            "y": 385,
+            "width": 168.015625,
+            "height": 25
+          },
+          {
+            "id": "equation-x",
+            "tag": "g",
+            "x": 225,
+            "y": 430,
+            "width": 159.59375,
+            "height": 25
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "force-arrow",
+          "horizontal-surface",
+          "block",
+          "force-N",
+          "force-mg",
+          "force-F",
+          "force-f",
+          "equation-y",
+          "equation-x"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [],
+        "hasSvg": true,
+        "hasHtmlTable": false,
+        "hasCanvas": false,
+        "domElements": 25
+      },
+      "blockedRequests": [],
+      "renderMs": 248.2,
+      "validRenderMs": 8483.3,
+      "outputBytes": 2272,
+      "requiresManualForceDirections": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "forceLabels": true,
+        "equationsPresent": true
+      }
+    },
+    {
+      "id": "physics-forces-canvas-1",
+      "scenario": "physics-forces",
+      "format": "canvas",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "be880e475fe126af0f6879660d962af59f99ec59d2c99bcc7fb255bf641c3a23",
+      "instructionBytes": 1485,
+      "inputBytes": 563,
+      "raw": "function draw(ctx, hit) {\n  ctx.clearRect(0, 0, 800, 500);\n  ctx.fillStyle = \"#ffffff\";\n  ctx.fillRect(0, 0, 800, 500);\n  ctx.strokeStyle = \"#111111\";\n  ctx.fillStyle = \"#111111\";\n  ctx.lineWidth = 2;\n  ctx.lineCap = \"round\";\n  ctx.lineJoin = \"round\";\n  ctx.font = \"18px Arial\";\n  ctx.textAlign = \"center\";\n  ctx.textBaseline = \"middle\";\n\n  function arrow(id, x1, y1, x2, y2, label, lx, ly, hx, hy, hw, hh) {\n    ctx.beginPath();\n    ctx.moveTo(x1, y1);\n    ctx.lineTo(x2, y2);\n    ctx.stroke();\n    const a = Math.atan2(y2 - y1, x2 - x1);\n    const len = 11;\n    ctx.beginPath();\n    ctx.moveTo(x2, y2);\n    ctx.lineTo(x2 - len * Math.cos(a - Math.PI / 6), y2 - len * Math.sin(a - Math.PI / 6));\n    ctx.moveTo(x2, y2);\n    ctx.lineTo(x2 - len * Math.cos(a + Math.PI / 6), y2 - len * Math.sin(a + Math.PI / 6));\n    ctx.stroke();\n    ctx.fillText(label, lx, ly);\n    hit(id, hx, hy, hw, hh);\n  }\n\n  // Horizontal surface\n  ctx.beginPath();\n  ctx.moveTo(220, 310);\n  ctx.lineTo(580, 310);\n  ctx.stroke();\n  hit(\"horizontal-surface\", 220, 301, 360, 18);\n\n  // Block\n  ctx.fillStyle = \"#ffffff\";\n  ctx.fillRect(325, 225, 150, 70);\n  ctx.strokeRect(325, 225, 150, 70);\n  hit(\"block\", 325, 225, 150, 70);\n\n  arrow(\"force-N\", 400, 225, 400, 135, \"N\", 423, 170, 385, 125, 50, 105);\n  arrow(\"force-mg\", 400, 295, 400, 375, \"mg\", 425, 350, 385, 290, 55, 100);\n  arrow(\"force-F\", 475, 260, 565, 260, \"F\", 535, 237, 470, 220, 110, 55);\n  arrow(\"force-f\", 325, 260, 235, 260, \"f\", 265, 237, 220, 220, 110, 55);\n\n  ctx.textAlign = \"left\";\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"ΣFᵧ = N − mg = 0\", 220, 414);\n  hit(\"equation-y\", 210, 394, 380, 40);\n  ctx.fillText(\"ΣFₓ = F − f = ma\", 220, 458);\n  hit(\"equation-x\", 210, 438, 380, 40);\n}",
+      "ttftMs": 3766.8,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 458,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 968,
+        "output_tokens_details": {
+          "reasoning_tokens": 267
+        },
+        "total_tokens": 1426
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 8062.7,
+      "compiled": "function draw(ctx, hit) {\n\tctx.clearRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#ffffff\";\n\tctx.fillRect(0, 0, 800, 500);\n\tctx.strokeStyle = \"#111111\";\n\tctx.fillStyle = \"#111111\";\n\tctx.lineWidth = 2;\n\tctx.lineCap = \"round\";\n\tctx.lineJoin = \"round\";\n\tctx.font = \"18px Arial\";\n\tctx.textAlign = \"center\";\n\tctx.textBaseline = \"middle\";\n\tfunction arrow(id, x1, y1, x2, y2, label, lx, ly, hx, hy, hw, hh) {\n\t\tctx.beginPath();\n\t\tctx.moveTo(x1, y1);\n\t\tctx.lineTo(x2, y2);\n\t\tctx.stroke();\n\t\tconst a = Math.atan2(y2 - y1, x2 - x1);\n\t\tconst len = 11;\n\t\tctx.beginPath();\n\t\tctx.moveTo(x2, y2);\n\t\tctx.lineTo(x2 - len * Math.cos(a - Math.PI / 6), y2 - len * Math.sin(a - Math.PI / 6));\n\t\tctx.moveTo(x2, y2);\n\t\tctx.lineTo(x2 - len * Math.cos(a + Math.PI / 6), y2 - len * Math.sin(a + Math.PI / 6));\n\t\tctx.stroke();\n\t\tctx.fillText(label, lx, ly);\n\t\thit(id, hx, hy, hw, hh);\n\t}\n\t// Horizontal surface\n\tctx.beginPath();\n\tctx.moveTo(220, 310);\n\tctx.lineTo(580, 310);\n\tctx.stroke();\n\thit(\"horizontal-surface\", 220, 301, 360, 18);\n\t// Block\n\tctx.fillStyle = \"#ffffff\";\n\tctx.fillRect(325, 225, 150, 70);\n\tctx.strokeRect(325, 225, 150, 70);\n\thit(\"block\", 325, 225, 150, 70);\n\tarrow(\"force-N\", 400, 225, 400, 135, \"N\", 423, 170, 385, 125, 50, 105);\n\tarrow(\"force-mg\", 400, 295, 400, 375, \"mg\", 425, 350, 385, 290, 55, 100);\n\tarrow(\"force-F\", 475, 260, 565, 260, \"F\", 535, 237, 470, 220, 110, 55);\n\tarrow(\"force-f\", 325, 260, 235, 260, \"f\", 265, 237, 220, 220, 110, 55);\n\tctx.textAlign = \"left\";\n\tctx.font = \"20px Arial\";\n\tctx.fillText(\"ΣFᵧ = N − mg = 0\", 220, 414);\n\thit(\"equation-y\", 210, 394, 380, 40);\n\tctx.fillText(\"ΣFₓ = F − f = ma\", 220, 458);\n\thit(\"equation-x\", 210, 438, 380, 40);\n}\n",
+      "compilationMs": 0.8665000000037253,
+      "renderReadyAt": 71968.929,
+      "render": {
+        "texts": [
+          {
+            "text": "N",
+            "x": 417.87158203125,
+            "y": 162.083984375,
+            "width": 10.1513671875,
+            "height": 12.884765625,
+            "fontSize": 18
+          },
+          {
+            "text": "mg",
+            "x": 413.68408203125,
+            "y": 345.423828125,
+            "width": 22.6142578125,
+            "height": 13.3330078125,
+            "fontSize": 18
+          },
+          {
+            "text": "F",
+            "x": 530.97900390625,
+            "y": 229.083984375,
+            "width": 8.6923828125,
+            "height": 12.884765625,
+            "fontSize": 18
+          },
+          {
+            "text": "f",
+            "x": 262.66650390625,
+            "y": 228.8642578125,
+            "width": 5.4580078125,
+            "height": 13.1044921875,
+            "fontSize": 18
+          },
+          {
+            "text": "ΣFᵧ = N − mg = 0",
+            "x": 221.4453125,
+            "y": 405.140625,
+            "width": 150.33203125,
+            "height": 18.583984375,
+            "fontSize": 20
+          },
+          {
+            "text": "ΣFₓ = F − f = ma",
+            "x": 221.4453125,
+            "y": 448.955078125,
+            "width": 142.783203125,
+            "height": 15.849609375,
+            "fontSize": 20
+          }
+        ],
+        "hits": [
+          {
+            "id": "horizontal-surface",
+            "x": 220,
+            "y": 301,
+            "width": 360,
+            "height": 18
+          },
+          {
+            "id": "block",
+            "x": 325,
+            "y": 225,
+            "width": 150,
+            "height": 70
+          },
+          {
+            "id": "force-N",
+            "x": 385,
+            "y": 125,
+            "width": 50,
+            "height": 105
+          },
+          {
+            "id": "force-mg",
+            "x": 385,
+            "y": 290,
+            "width": 55,
+            "height": 100
+          },
+          {
+            "id": "force-F",
+            "x": 470,
+            "y": 220,
+            "width": 110,
+            "height": 55
+          },
+          {
+            "id": "force-f",
+            "x": 220,
+            "y": 220,
+            "width": 110,
+            "height": 55
+          },
+          {
+            "id": "equation-y",
+            "x": 210,
+            "y": 394,
+            "width": 380,
+            "height": 40
+          },
+          {
+            "id": "equation-x",
+            "x": 210,
+            "y": 438,
+            "width": 380,
+            "height": 40
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "horizontal-surface",
+          "block",
+          "force-N",
+          "force-mg",
+          "force-F",
+          "force-f",
+          "equation-y",
+          "equation-x"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [
+          {
+            "op": "clearRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              220,
+              310
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              580,
+              310
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillRect",
+            "args": [
+              325,
+              225,
+              150,
+              70
+            ]
+          },
+          {
+            "op": "strokeRect",
+            "args": [
+              325,
+              225,
+              150,
+              70
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              400,
+              225
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              400,
+              135
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              400,
+              135
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              405.5,
+              144.52627944162882
+            ]
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              400,
+              135
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              394.5,
+              144.52627944162882
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "N",
+              423,
+              170
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              400,
+              295
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              400,
+              375
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              400,
+              375
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              394.5,
+              365.47372055837116
+            ]
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              400,
+              375
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              405.5,
+              365.47372055837116
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "mg",
+              425,
+              350
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              475,
+              260
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              565,
+              260
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              565,
+              260
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              555.4737205583712,
+              265.5
+            ]
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              565,
+              260
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              555.4737205583712,
+              254.5
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "F",
+              535,
+              237
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              325,
+              260
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              235,
+              260
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              235,
+              260
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              244.52627944162882,
+              254.5
+            ]
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              235,
+              260
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              244.52627944162882,
+              265.5
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "f",
+              265,
+              237
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "ΣFᵧ = N − mg = 0",
+              220,
+              414
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "ΣFₓ = F − f = ma",
+              220,
+              458
+            ]
+          }
+        ],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": true,
+        "domElements": 1
+      },
+      "blockedRequests": [],
+      "renderMs": 201.2,
+      "validRenderMs": 8192,
+      "outputBytes": 1737,
+      "requiresManualForceDirections": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "forceLabels": true,
+        "equationsPresent": true
+      }
+    },
+    {
+      "id": "history-timeline-canvas-1",
+      "scenario": "history-timeline",
+      "format": "canvas",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "4b3504c55a8bf0b4792ff0a83f93a333df00f089140b5056459fe780207a53dc",
+      "instructionBytes": 1485,
+      "inputBytes": 553,
+      "raw": "function draw(ctx, hit) {\n  ctx.clearRect(0, 0, 800, 500);\n  ctx.fillStyle = \"#ffffff\";\n  ctx.fillRect(0, 0, 800, 500);\n\n  ctx.fillStyle = \"#111111\";\n  ctx.font = \"bold 24px Arial\";\n  ctx.textAlign = \"center\";\n  ctx.textBaseline = \"middle\";\n  ctx.fillText(\"Milestones in science\", 400, 48);\n  hit(\"heading\", 250, 30, 300, 36);\n\n  const y = 250;\n  const x0 = 80;\n  const x1 = 720;\n  const minYear = 1859;\n  const maxYear = 1969;\n\n  ctx.strokeStyle = \"#111111\";\n  ctx.lineWidth = 2;\n  ctx.beginPath();\n  ctx.moveTo(x0, y);\n  ctx.lineTo(x1, y);\n  ctx.stroke();\n  hit(\"timeline\", x0, y - 8, x1 - x0, 16);\n\n  const events = [\n    { id: \"darwin\", year: 1859, label: \"On the Origin of Species\", x: x0, above: true, tx: 48, ty: 142, tw: 250, align: \"left\" },\n    { id: \"einstein\", year: 1905, label: \"Special relativity\", x: x0 + (1905 - minYear) / (maxYear - minYear) * (x1 - x0), above: false, tx: 265, ty: 337, tw: 210, align: \"center\" },\n    { id: \"moon\", year: 1969, label: \"First Moon landing\", x: x1, above: true, tx: 520, ty: 142, tw: 200, align: \"right\" }\n  ];\n\n  for (const e of events) {\n    const stemEnd = e.above ? 194 : 306;\n    ctx.strokeStyle = \"#111111\";\n    ctx.lineWidth = 2;\n    ctx.beginPath();\n    ctx.moveTo(e.x, y);\n    ctx.lineTo(e.x, stemEnd);\n    ctx.stroke();\n\n    ctx.fillStyle = \"#111111\";\n    ctx.beginPath();\n    ctx.arc(e.x, y, 6, 0, Math.PI * 2);\n    ctx.fill();\n\n    ctx.textAlign = e.align;\n    ctx.textBaseline = \"middle\";\n    ctx.font = \"16px Arial\";\n    const labelY = e.above ? e.ty : e.ty;\n    const yearY = e.above ? e.ty + 27 : e.ty + 27;\n    ctx.fillText(e.label, e.align === \"left\" ? e.tx : e.align === \"right\" ? e.tx + e.tw : e.tx + e.tw / 2, labelY);\n    ctx.fillText(String(e.year), e.align === \"left\" ? e.tx : e.align === \"right\" ? e.tx + e.tw : e.tx + e.tw / 2, yearY);\n\n    hit(e.id, e.tx, e.ty - 14, e.tw, 48);\n  }\n}",
+      "ttftMs": 3852.1,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 429,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 948,
+        "output_tokens_details": {
+          "reasoning_tokens": 259
+        },
+        "total_tokens": 1377
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 7803.8,
+      "compiled": "function draw(ctx, hit) {\n\tctx.clearRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#ffffff\";\n\tctx.fillRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#111111\";\n\tctx.font = \"bold 24px Arial\";\n\tctx.textAlign = \"center\";\n\tctx.textBaseline = \"middle\";\n\tctx.fillText(\"Milestones in science\", 400, 48);\n\thit(\"heading\", 250, 30, 300, 36);\n\tconst y = 250;\n\tconst x0 = 80;\n\tconst x1 = 720;\n\tconst minYear = 1859;\n\tconst maxYear = 1969;\n\tctx.strokeStyle = \"#111111\";\n\tctx.lineWidth = 2;\n\tctx.beginPath();\n\tctx.moveTo(x0, y);\n\tctx.lineTo(x1, y);\n\tctx.stroke();\n\thit(\"timeline\", x0, y - 8, x1 - x0, 16);\n\tconst events = [\n\t\t{\n\t\t\tid: \"darwin\",\n\t\t\tyear: 1859,\n\t\t\tlabel: \"On the Origin of Species\",\n\t\t\tx: x0,\n\t\t\tabove: true,\n\t\t\ttx: 48,\n\t\t\tty: 142,\n\t\t\ttw: 250,\n\t\t\talign: \"left\"\n\t\t},\n\t\t{\n\t\t\tid: \"einstein\",\n\t\t\tyear: 1905,\n\t\t\tlabel: \"Special relativity\",\n\t\t\tx: x0 + (1905 - minYear) / (maxYear - minYear) * (x1 - x0),\n\t\t\tabove: false,\n\t\t\ttx: 265,\n\t\t\tty: 337,\n\t\t\ttw: 210,\n\t\t\talign: \"center\"\n\t\t},\n\t\t{\n\t\t\tid: \"moon\",\n\t\t\tyear: 1969,\n\t\t\tlabel: \"First Moon landing\",\n\t\t\tx: x1,\n\t\t\tabove: true,\n\t\t\ttx: 520,\n\t\t\tty: 142,\n\t\t\ttw: 200,\n\t\t\talign: \"right\"\n\t\t}\n\t];\n\tfor (const e of events) {\n\t\tconst stemEnd = e.above ? 194 : 306;\n\t\tctx.strokeStyle = \"#111111\";\n\t\tctx.lineWidth = 2;\n\t\tctx.beginPath();\n\t\tctx.moveTo(e.x, y);\n\t\tctx.lineTo(e.x, stemEnd);\n\t\tctx.stroke();\n\t\tctx.fillStyle = \"#111111\";\n\t\tctx.beginPath();\n\t\tctx.arc(e.x, y, 6, 0, Math.PI * 2);\n\t\tctx.fill();\n\t\tctx.textAlign = e.align;\n\t\tctx.textBaseline = \"middle\";\n\t\tctx.font = \"16px Arial\";\n\t\tconst labelY = e.above ? e.ty : e.ty;\n\t\tconst yearY = e.above ? e.ty + 27 : e.ty + 27;\n\t\tctx.fillText(e.label, e.align === \"left\" ? e.tx : e.align === \"right\" ? e.tx + e.tw : e.tx + e.tw / 2, labelY);\n\t\tctx.fillText(String(e.year), e.align === \"left\" ? e.tx : e.align === \"right\" ? e.tx + e.tw : e.tx + e.tw / 2, yearY);\n\t\thit(e.id, e.tx, e.ty - 14, e.tw, 48);\n\t}\n}\n",
+      "compilationMs": 1.2155839999904856,
+      "renderReadyAt": 79962.245917,
+      "render": {
+        "texts": [
+          {
+            "text": "Milestones in science",
+            "x": 278.318359375,
+            "y": 37.4453125,
+            "width": 244.171875,
+            "height": 17.4609375,
+            "fontSize": 24
+          },
+          {
+            "text": "On the Origin of Species",
+            "x": 48.7734375,
+            "y": 134.75,
+            "width": 172.921875,
+            "height": 15.0234375,
+            "fontSize": 16
+          },
+          {
+            "text": "1859",
+            "x": 49.7421875,
+            "y": 161.90625,
+            "width": 33.1484375,
+            "height": 11.6953125,
+            "fontSize": 16
+          },
+          {
+            "text": "Special relativity",
+            "x": 312.91796875,
+            "y": 329.7578125,
+            "width": 114.7421875,
+            "height": 15.015625,
+            "fontSize": 16
+          },
+          {
+            "text": "1905",
+            "x": 353.9453125,
+            "y": 356.90625,
+            "width": 33.2109375,
+            "height": 11.6953125,
+            "fontSize": 16
+          },
+          {
+            "text": "First Moon landing",
+            "x": 589.6953125,
+            "y": 134.953125,
+            "width": 129.234375,
+            "height": 14.8203125,
+            "fontSize": 16
+          },
+          {
+            "text": "1969",
+            "x": 686.1484375,
+            "y": 161.90625,
+            "width": 33.1484375,
+            "height": 11.6953125,
+            "fontSize": 16
+          }
+        ],
+        "hits": [
+          {
+            "id": "heading",
+            "x": 250,
+            "y": 30,
+            "width": 300,
+            "height": 36
+          },
+          {
+            "id": "timeline",
+            "x": 80,
+            "y": 242,
+            "width": 640,
+            "height": 16
+          },
+          {
+            "id": "darwin",
+            "x": 48,
+            "y": 128,
+            "width": 250,
+            "height": 48
+          },
+          {
+            "id": "einstein",
+            "x": 265,
+            "y": 323,
+            "width": 210,
+            "height": 48
+          },
+          {
+            "id": "moon",
+            "x": 520,
+            "y": 128,
+            "width": 200,
+            "height": 48
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "heading",
+          "timeline",
+          "darwin",
+          "einstein",
+          "moon"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [
+          {
+            "op": "clearRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "Milestones in science",
+              400,
+              48
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              80,
+              250
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              720,
+              250
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              80,
+              250
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              80,
+              194
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "arc",
+            "args": [
+              80,
+              250,
+              6,
+              0,
+              6.283185307179586
+            ]
+          },
+          {
+            "op": "fill",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "On the Origin of Species",
+              48,
+              142
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "1859",
+              48,
+              169
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              347.6363636363636,
+              250
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              347.6363636363636,
+              306
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "arc",
+            "args": [
+              347.6363636363636,
+              250,
+              6,
+              0,
+              6.283185307179586
+            ]
+          },
+          {
+            "op": "fill",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "Special relativity",
+              370,
+              337
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "1905",
+              370,
+              364
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              720,
+              250
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              720,
+              194
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "arc",
+            "args": [
+              720,
+              250,
+              6,
+              0,
+              6.283185307179586
+            ]
+          },
+          {
+            "op": "fill",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "First Moon landing",
+              720,
+              142
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "1969",
+              720,
+              169
+            ]
+          }
+        ],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": true,
+        "domElements": 1
+      },
+      "blockedRequests": [],
+      "renderMs": 187.9,
+      "validRenderMs": 7919.2,
+      "outputBytes": 1861,
+      "requiresManualProportionalSpacing": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "events": true
+      }
+    },
+    {
+      "id": "history-timeline-react-1",
+      "scenario": "history-timeline",
+      "format": "react",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "4b3504c55a8bf0b4792ff0a83f93a333df00f089140b5056459fe780207a53dc",
+      "instructionBytes": 1395,
+      "inputBytes": 553,
+      "raw": "function Board() {\n  const ink = \"#17212b\";\n  const events = [\n    { id: \"darwin\", year: 1859, x: 100, label: \"On the Origin of Species\", side: \"above\", boxX: 22, boxY: 72, boxW: 220 },\n    { id: \"einstein\", year: 1905, x: 348, label: \"Special relativity\", side: \"below\", boxX: 257, boxY: 354, boxW: 182 },\n    { id: \"moon\", year: 1969, x: 694, label: \"First Moon landing\", side: \"above\", boxX: 582, boxY: 72, boxW: 224 }\n  ];\n\n  return (\n    <div data-id=\"stage\" style={{ width: 800, height: 500, background: \"#fff\", color: ink, fontFamily: \"Arial, sans-serif\", position: \"relative\" }}>\n      <svg width=\"800\" height=\"500\" viewBox=\"0 0 800 500\" role=\"img\" aria-label=\"Milestones in science timeline\">\n        <text data-id=\"heading\" x=\"400\" y=\"42\" textAnchor=\"middle\" fontSize=\"24\" fontWeight=\"700\" fill={ink}>Milestones in science</text>\n\n        <line data-id=\"timeline\" x1=\"72\" y1=\"250\" x2=\"748\" y2=\"250\" stroke={ink} strokeWidth=\"3\" />\n        {events.map((event) => (\n          <g key={event.id} data-id={event.id}>\n            <line x1={event.x} y1=\"239\" x2={event.x} y2=\"261\" stroke={ink} strokeWidth=\"3\" />\n            <circle cx={event.x} cy=\"250\" r=\"7\" fill=\"#fff\" stroke={ink} strokeWidth=\"3\" />\n            <text x={event.x} y=\"286\" textAnchor=\"middle\" fontSize=\"18\" fill={ink}>{event.year}</text>\n            {event.side === \"above\" ? (\n              <>\n                <line x1={event.x} y1=\"239\" x2={event.x} y2=\"162\" stroke={ink} strokeWidth=\"2\" />\n                <line x1={event.x} y1=\"162\" x2={event.boxX + event.boxW / 2} y2=\"162\" stroke={ink} strokeWidth=\"2\" />\n                <line x1={event.boxX + event.boxW / 2} y1=\"162\" x2={event.boxX + event.boxW / 2} y2={event.boxY + 66} stroke={ink} strokeWidth=\"2\" />\n              </>\n            ) : (\n              <>\n                <line x1={event.x} y1=\"261\" x2={event.x} y2=\"333\" stroke={ink} strokeWidth=\"2\" />\n                <line x1={event.x} y1=\"333\" x2={event.boxX + event.boxW / 2} y2=\"333\" stroke={ink} strokeWidth=\"2\" />\n                <line x1={event.boxX + event.boxW / 2} y1=\"333\" x2={event.boxX + event.boxW / 2} y2={event.boxY} stroke={ink} strokeWidth=\"2\" />\n              </>\n            )}\n            <rect x={event.boxX} y={event.boxY} width={event.boxW} height=\"68\" rx=\"4\" fill=\"#fff\" stroke={ink} strokeWidth=\"2\" />\n            <text x={event.boxX + event.boxW / 2} y={event.boxY + 40} textAnchor=\"middle\" fontSize=\"18\" fill={ink}>{event.label}</text>\n          </g>\n        ))}\n      </svg>\n    </div>\n  );\n}",
+      "ttftMs": 7637.5,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 411,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1297,
+        "output_tokens_details": {
+          "reasoning_tokens": 449
+        },
+        "total_tokens": 1708
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 13277.5,
+      "compiled": "function Board() {\n\tconst ink = \"#17212b\";\n\tconst events = [\n\t\t{\n\t\t\tid: \"darwin\",\n\t\t\tyear: 1859,\n\t\t\tx: 100,\n\t\t\tlabel: \"On the Origin of Species\",\n\t\t\tside: \"above\",\n\t\t\tboxX: 22,\n\t\t\tboxY: 72,\n\t\t\tboxW: 220\n\t\t},\n\t\t{\n\t\t\tid: \"einstein\",\n\t\t\tyear: 1905,\n\t\t\tx: 348,\n\t\t\tlabel: \"Special relativity\",\n\t\t\tside: \"below\",\n\t\t\tboxX: 257,\n\t\t\tboxY: 354,\n\t\t\tboxW: 182\n\t\t},\n\t\t{\n\t\t\tid: \"moon\",\n\t\t\tyear: 1969,\n\t\t\tx: 694,\n\t\t\tlabel: \"First Moon landing\",\n\t\t\tside: \"above\",\n\t\t\tboxX: 582,\n\t\t\tboxY: 72,\n\t\t\tboxW: 224\n\t\t}\n\t];\n\treturn /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"stage\",\n\t\tstyle: {\n\t\t\twidth: 800,\n\t\t\theight: 500,\n\t\t\tbackground: \"#fff\",\n\t\t\tcolor: ink,\n\t\t\tfontFamily: \"Arial, sans-serif\",\n\t\t\tposition: \"relative\"\n\t\t}\n\t}, /* @__PURE__ */ React.createElement(\"svg\", {\n\t\twidth: \"800\",\n\t\theight: \"500\",\n\t\tviewBox: \"0 0 800 500\",\n\t\trole: \"img\",\n\t\t\"aria-label\": \"Milestones in science timeline\"\n\t}, /* @__PURE__ */ React.createElement(\"text\", {\n\t\t\"data-id\": \"heading\",\n\t\tx: \"400\",\n\t\ty: \"42\",\n\t\ttextAnchor: \"middle\",\n\t\tfontSize: \"24\",\n\t\tfontWeight: \"700\",\n\t\tfill: ink\n\t}, \"Milestones in science\"), /* @__PURE__ */ React.createElement(\"line\", {\n\t\t\"data-id\": \"timeline\",\n\t\tx1: \"72\",\n\t\ty1: \"250\",\n\t\tx2: \"748\",\n\t\ty2: \"250\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"3\"\n\t}), events.map((event) => /* @__PURE__ */ React.createElement(\"g\", {\n\t\tkey: event.id,\n\t\t\"data-id\": event.id\n\t}, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: event.x,\n\t\ty1: \"239\",\n\t\tx2: event.x,\n\t\ty2: \"261\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"3\"\n\t}), /* @__PURE__ */ React.createElement(\"circle\", {\n\t\tcx: event.x,\n\t\tcy: \"250\",\n\t\tr: \"7\",\n\t\tfill: \"#fff\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"3\"\n\t}), /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: event.x,\n\t\ty: \"286\",\n\t\ttextAnchor: \"middle\",\n\t\tfontSize: \"18\",\n\t\tfill: ink\n\t}, event.year), event.side === \"above\" ? /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: event.x,\n\t\ty1: \"239\",\n\t\tx2: event.x,\n\t\ty2: \"162\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"2\"\n\t}), /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: event.x,\n\t\ty1: \"162\",\n\t\tx2: event.boxX + event.boxW / 2,\n\t\ty2: \"162\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"2\"\n\t}), /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: event.boxX + event.boxW / 2,\n\t\ty1: \"162\",\n\t\tx2: event.boxX + event.boxW / 2,\n\t\ty2: event.boxY + 66,\n\t\tstroke: ink,\n\t\tstrokeWidth: \"2\"\n\t})) : /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: event.x,\n\t\ty1: \"261\",\n\t\tx2: event.x,\n\t\ty2: \"333\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"2\"\n\t}), /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: event.x,\n\t\ty1: \"333\",\n\t\tx2: event.boxX + event.boxW / 2,\n\t\ty2: \"333\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"2\"\n\t}), /* @__PURE__ */ React.createElement(\"line\", {\n\t\tx1: event.boxX + event.boxW / 2,\n\t\ty1: \"333\",\n\t\tx2: event.boxX + event.boxW / 2,\n\t\ty2: event.boxY,\n\t\tstroke: ink,\n\t\tstrokeWidth: \"2\"\n\t})), /* @__PURE__ */ React.createElement(\"rect\", {\n\t\tx: event.boxX,\n\t\ty: event.boxY,\n\t\twidth: event.boxW,\n\t\theight: \"68\",\n\t\trx: \"4\",\n\t\tfill: \"#fff\",\n\t\tstroke: ink,\n\t\tstrokeWidth: \"2\"\n\t}), /* @__PURE__ */ React.createElement(\"text\", {\n\t\tx: event.boxX + event.boxW / 2,\n\t\ty: event.boxY + 40,\n\t\ttextAnchor: \"middle\",\n\t\tfontSize: \"18\",\n\t\tfill: ink\n\t}, event.label)))));\n}\n",
+      "compilationMs": 0.3275419999990845,
+      "renderReadyAt": 93438.409625,
+      "render": {
+        "texts": [
+          {
+            "text": "Milestones in science",
+            "id": "heading",
+            "x": 276.6171875,
+            "y": 20,
+            "width": 246.765625,
+            "height": 27,
+            "fontSize": 24
+          },
+          {
+            "text": "1859",
+            "id": "darwin",
+            "x": 79.9765625,
+            "y": 270,
+            "width": 40.046875,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "On the Origin of Species",
+            "id": "darwin",
+            "x": 33.9453125,
+            "y": 96,
+            "width": 196.109375,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "1905",
+            "id": "einstein",
+            "x": 327.9765625,
+            "y": 270,
+            "width": 40.046875,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "Special relativity",
+            "id": "einstein",
+            "x": 282.96875,
+            "y": 378,
+            "width": 130.0625,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "1969",
+            "id": "moon",
+            "x": 673.9765625,
+            "y": 270,
+            "width": 40.046875,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "First Moon landing",
+            "id": "moon",
+            "x": 619.9609375,
+            "y": 96,
+            "width": 148.078125,
+            "height": 20,
+            "fontSize": 18
+          }
+        ],
+        "hits": [
+          {
+            "id": "stage",
+            "tag": "DIV",
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 500
+          },
+          {
+            "id": "heading",
+            "tag": "text",
+            "x": 276.6171875,
+            "y": 20,
+            "width": 246.765625,
+            "height": 27
+          },
+          {
+            "id": "timeline",
+            "tag": "line",
+            "x": 72,
+            "y": 250,
+            "width": 676,
+            "height": 0
+          },
+          {
+            "id": "darwin",
+            "tag": "g",
+            "x": 22,
+            "y": 72,
+            "width": 220,
+            "height": 218
+          },
+          {
+            "id": "einstein",
+            "tag": "g",
+            "x": 257,
+            "y": 239,
+            "width": 182,
+            "height": 183
+          },
+          {
+            "id": "moon",
+            "tag": "g",
+            "x": 582,
+            "y": 72,
+            "width": 224,
+            "height": 218
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "stage",
+          "heading",
+          "timeline",
+          "darwin",
+          "einstein",
+          "moon"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [],
+        "hasSvg": true,
+        "hasHtmlTable": false,
+        "hasCanvas": false,
+        "domElements": 31
+      },
+      "blockedRequests": [],
+      "renderMs": 194.5,
+      "validRenderMs": 13400.3,
+      "outputBytes": 2504,
+      "requiresManualProportionalSpacing": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "events": true
+      }
+    },
+    {
+      "id": "grammar-annotation-react-1",
+      "scenario": "grammar-annotation",
+      "format": "react",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "e3ba31b9302d2cac259d4a2a076f13fe33a6639db4820af7ae2e187497e22193",
+      "instructionBytes": 1395,
+      "inputBytes": 690,
+      "raw": "function Board() {\n  const stage = {\n    width: 800,\n    height: 500,\n    boxSizing: \"border-box\",\n    background: \"#fff\",\n    color: \"#111\",\n    fontFamily: \"Arial, Helvetica, sans-serif\",\n    position: \"relative\",\n    padding: \"0\"\n  };\n\n  return (\n    <div style={stage} data-id=\"board\">\n      <div\n        data-id=\"sentence\"\n        style={{\n          position: \"absolute\",\n          left: 68,\n          top: 160,\n          display: \"flex\",\n          alignItems: \"baseline\",\n          whiteSpace: \"nowrap\",\n          fontSize: 25,\n          lineHeight: 1.5\n        }}\n      >\n        <span\n          data-id=\"dependent\"\n          style={{ borderBottom: \"2px solid #111\", paddingBottom: 4 }}\n        >\n          Although it was raining\n        </span>\n        <span data-id=\"sentence-comma\">, </span>\n        <span\n          data-id=\"main\"\n          style={{ borderBottom: \"2px solid #111\", paddingBottom: 4 }}\n        >\n          Maya walked to class.\n        </span>\n      </div>\n\n      <div\n        data-id=\"dependent-label\"\n        style={{\n          position: \"absolute\",\n          left: 68,\n          top: 220,\n          fontSize: 18\n        }}\n      >\n        dependent clause\n      </div>\n\n      <div\n        data-id=\"main-label\"\n        style={{\n          position: \"absolute\",\n          left: 407,\n          top: 220,\n          fontSize: 18\n        }}\n      >\n        main clause\n      </div>\n    </div>\n  );\n}",
+      "ttftMs": 4269.1,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 431,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 645,
+        "output_tokens_details": {
+          "reasoning_tokens": 277
+        },
+        "total_tokens": 1076
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 6833.1,
+      "compiled": "function Board() {\n\tconst stage = {\n\t\twidth: 800,\n\t\theight: 500,\n\t\tboxSizing: \"border-box\",\n\t\tbackground: \"#fff\",\n\t\tcolor: \"#111\",\n\t\tfontFamily: \"Arial, Helvetica, sans-serif\",\n\t\tposition: \"relative\",\n\t\tpadding: \"0\"\n\t};\n\treturn /* @__PURE__ */ React.createElement(\"div\", {\n\t\tstyle: stage,\n\t\t\"data-id\": \"board\"\n\t}, /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"sentence\",\n\t\tstyle: {\n\t\t\tposition: \"absolute\",\n\t\t\tleft: 68,\n\t\t\ttop: 160,\n\t\t\tdisplay: \"flex\",\n\t\t\talignItems: \"baseline\",\n\t\t\twhiteSpace: \"nowrap\",\n\t\t\tfontSize: 25,\n\t\t\tlineHeight: 1.5\n\t\t}\n\t}, /* @__PURE__ */ React.createElement(\"span\", {\n\t\t\"data-id\": \"dependent\",\n\t\tstyle: {\n\t\t\tborderBottom: \"2px solid #111\",\n\t\t\tpaddingBottom: 4\n\t\t}\n\t}, \"Although it was raining\"), /* @__PURE__ */ React.createElement(\"span\", { \"data-id\": \"sentence-comma\" }, \", \"), /* @__PURE__ */ React.createElement(\"span\", {\n\t\t\"data-id\": \"main\",\n\t\tstyle: {\n\t\t\tborderBottom: \"2px solid #111\",\n\t\t\tpaddingBottom: 4\n\t\t}\n\t}, \"Maya walked to class.\")), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"dependent-label\",\n\t\tstyle: {\n\t\t\tposition: \"absolute\",\n\t\t\tleft: 68,\n\t\t\ttop: 220,\n\t\t\tfontSize: 18\n\t\t}\n\t}, \"dependent clause\"), /* @__PURE__ */ React.createElement(\"div\", {\n\t\t\"data-id\": \"main-label\",\n\t\tstyle: {\n\t\t\tposition: \"absolute\",\n\t\t\tleft: 407,\n\t\t\ttop: 220,\n\t\t\tfontSize: 18\n\t\t}\n\t}, \"main clause\"));\n}\n",
+      "compilationMs": 0.5906249999970896,
+      "renderReadyAt": 100503.521709,
+      "render": {
+        "texts": [
+          {
+            "text": "Although it was raining",
+            "id": "dependent",
+            "x": 68,
+            "y": 164,
+            "width": 251.546875,
+            "height": 28,
+            "fontSize": 25
+          },
+          {
+            "text": ",",
+            "id": "sentence-comma",
+            "x": 319.546875,
+            "y": 164,
+            "width": 6.953125,
+            "height": 28,
+            "fontSize": 25
+          },
+          {
+            "text": "Maya walked to class.",
+            "id": "main",
+            "x": 326.5,
+            "y": 164,
+            "width": 244.546875,
+            "height": 28,
+            "fontSize": 25
+          },
+          {
+            "text": "dependent clause",
+            "id": "dependent-label",
+            "x": 68,
+            "y": 220,
+            "width": 142.125,
+            "height": 20,
+            "fontSize": 18
+          },
+          {
+            "text": "main clause",
+            "id": "main-label",
+            "x": 407,
+            "y": 220,
+            "width": 96.046875,
+            "height": 20,
+            "fontSize": 18
+          }
+        ],
+        "hits": [
+          {
+            "id": "board",
+            "tag": "DIV",
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 500
+          },
+          {
+            "id": "sentence",
+            "tag": "DIV",
+            "x": 68,
+            "y": 160,
+            "width": 503.046875,
+            "height": 43.5
+          },
+          {
+            "id": "dependent",
+            "tag": "SPAN",
+            "x": 68,
+            "y": 160,
+            "width": 251.546875,
+            "height": 43.5
+          },
+          {
+            "id": "sentence-comma",
+            "tag": "SPAN",
+            "x": 319.546875,
+            "y": 160,
+            "width": 6.953125,
+            "height": 37.5
+          },
+          {
+            "id": "main",
+            "tag": "SPAN",
+            "x": 326.5,
+            "y": 160,
+            "width": 244.546875,
+            "height": 43.5
+          },
+          {
+            "id": "dependent-label",
+            "tag": "DIV",
+            "x": 68,
+            "y": 220,
+            "width": 142.125,
+            "height": 21
+          },
+          {
+            "id": "main-label",
+            "tag": "DIV",
+            "x": 407,
+            "y": 220,
+            "width": 96.046875,
+            "height": 21
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "board",
+          "sentence",
+          "dependent",
+          "sentence-comma",
+          "main",
+          "dependent-label",
+          "main-label"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": false,
+        "domElements": 7
+      },
+      "blockedRequests": [],
+      "renderMs": 228.8,
+      "validRenderMs": 6991.9,
+      "outputBytes": 1422,
+      "requiresManualAnnotation": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "sentence": true,
+        "clauseLabels": true
+      }
+    },
+    {
+      "id": "grammar-annotation-canvas-1",
+      "scenario": "grammar-annotation",
+      "format": "canvas",
+      "round": 1,
+      "status": "rendered",
+      "sourceFactsSha256": "e3ba31b9302d2cac259d4a2a076f13fe33a6639db4820af7ae2e187497e22193",
+      "instructionBytes": 1485,
+      "inputBytes": 690,
+      "raw": "function draw(ctx, hit) {\n  ctx.clearRect(0, 0, 800, 500);\n  ctx.fillStyle = \"#ffffff\";\n  ctx.fillRect(0, 0, 800, 500);\n\n  ctx.font = \"24px Arial\";\n  ctx.textBaseline = \"alphabetic\";\n  const dependentText = \"Although it was raining\";\n  const commaAndSpace = \", \";\n  const mainText = \"Maya walked to class.\";\n  const dependentWidth = ctx.measureText(dependentText).width;\n  const commaWidth = ctx.measureText(commaAndSpace).width;\n  const mainWidth = ctx.measureText(mainText).width;\n  const totalWidth = dependentWidth + commaWidth + mainWidth;\n  const startX = (800 - totalWidth) / 2;\n  const baseline = 238;\n  const dependentX = startX;\n  const mainX = startX + dependentWidth + commaWidth;\n\n  ctx.fillStyle = \"#17212b\";\n  ctx.fillText(dependentText, dependentX, baseline);\n  ctx.fillText(commaAndSpace, dependentX + dependentWidth, baseline);\n  ctx.fillText(mainText, mainX, baseline);\n\n  ctx.strokeStyle = \"#17212b\";\n  ctx.lineWidth = 2;\n  ctx.beginPath();\n  ctx.moveTo(dependentX, baseline + 8);\n  ctx.lineTo(dependentX + dependentWidth, baseline + 8);\n  ctx.stroke();\n\n  ctx.beginPath();\n  ctx.moveTo(mainX, baseline + 8);\n  ctx.lineTo(mainX + mainWidth, baseline + 8);\n  ctx.stroke();\n\n  ctx.font = \"18px Arial\";\n  ctx.textAlign = \"center\";\n  ctx.fillStyle = \"#17212b\";\n  const labelY = 292;\n  ctx.fillText(\"dependent clause\", dependentX + dependentWidth / 2, labelY);\n  ctx.fillText(\"main clause\", mainX + mainWidth / 2, labelY);\n\n  hit(\"dependent\", dependentX - 4, baseline - 29, dependentWidth + 8, 72);\n  hit(\"main\", mainX - 4, baseline - 29, mainWidth + 8, 72);\n}",
+      "ttftMs": 3986.2,
+      "httpStatus": 200,
+      "usage": {
+        "input_tokens": 449,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 780,
+        "output_tokens_details": {
+          "reasoning_tokens": 308
+        },
+        "total_tokens": 1229
+      },
+      "providerModel": "gpt-6-luna",
+      "serviceTier": "default",
+      "generationMs": 6810.9,
+      "compiled": "function draw(ctx, hit) {\n\tctx.clearRect(0, 0, 800, 500);\n\tctx.fillStyle = \"#ffffff\";\n\tctx.fillRect(0, 0, 800, 500);\n\tctx.font = \"24px Arial\";\n\tctx.textBaseline = \"alphabetic\";\n\tconst dependentText = \"Although it was raining\";\n\tconst commaAndSpace = \", \";\n\tconst mainText = \"Maya walked to class.\";\n\tconst dependentWidth = ctx.measureText(dependentText).width;\n\tconst commaWidth = ctx.measureText(commaAndSpace).width;\n\tconst mainWidth = ctx.measureText(mainText).width;\n\tconst totalWidth = dependentWidth + commaWidth + mainWidth;\n\tconst startX = (800 - totalWidth) / 2;\n\tconst baseline = 238;\n\tconst dependentX = startX;\n\tconst mainX = startX + dependentWidth + commaWidth;\n\tctx.fillStyle = \"#17212b\";\n\tctx.fillText(dependentText, dependentX, baseline);\n\tctx.fillText(commaAndSpace, dependentX + dependentWidth, baseline);\n\tctx.fillText(mainText, mainX, baseline);\n\tctx.strokeStyle = \"#17212b\";\n\tctx.lineWidth = 2;\n\tctx.beginPath();\n\tctx.moveTo(dependentX, baseline + 8);\n\tctx.lineTo(dependentX + dependentWidth, baseline + 8);\n\tctx.stroke();\n\tctx.beginPath();\n\tctx.moveTo(mainX, baseline + 8);\n\tctx.lineTo(mainX + mainWidth, baseline + 8);\n\tctx.stroke();\n\tctx.font = \"18px Arial\";\n\tctx.textAlign = \"center\";\n\tctx.fillStyle = \"#17212b\";\n\tconst labelY = 292;\n\tctx.fillText(\"dependent clause\", dependentX + dependentWidth / 2, labelY);\n\tctx.fillText(\"main clause\", mainX + mainWidth / 2, labelY);\n\thit(\"dependent\", dependentX - 4, baseline - 29, dependentWidth + 8, 72);\n\thit(\"main\", mainX - 4, baseline - 29, mainWidth + 8, 72);\n}\n",
+      "compilationMs": 0.702833000003011,
+      "renderReadyAt": 107481.311125,
+      "render": {
+        "texts": [
+          {
+            "text": "Although it was raining",
+            "x": 155.177734375,
+            "y": 220.8203125,
+            "width": 239.90625,
+            "height": 22.23046875,
+            "fontSize": 24
+          },
+          {
+            "text": ", ",
+            "x": 398.681640625,
+            "y": 235.59765625,
+            "width": 2.54296875,
+            "height": 5.80078125,
+            "fontSize": 24
+          },
+          {
+            "text": "Maya walked to class.",
+            "x": 411.806640625,
+            "y": 220.8203125,
+            "width": 230.89453125,
+            "height": 22.23046875,
+            "fontSize": 24
+          },
+          {
+            "text": "dependent clause",
+            "x": 205.5068359375,
+            "y": 279.115234375,
+            "width": 140.7568359375,
+            "height": 16.4619140625,
+            "fontSize": 18
+          },
+          {
+            "text": "main clause",
+            "x": 480.5693359375,
+            "y": 279.115234375,
+            "width": 94.11328125,
+            "height": 13.095703125,
+            "fontSize": 18
+          }
+        ],
+        "hits": [
+          {
+            "id": "dependent",
+            "x": 151.212890625,
+            "y": 209,
+            "width": 249.4765625,
+            "height": 72
+          },
+          {
+            "id": "main",
+            "x": 406.025390625,
+            "y": 209,
+            "width": 242.76171875,
+            "height": 72
+          }
+        ],
+        "cells": [],
+        "ids": [
+          "dependent",
+          "main"
+        ],
+        "duplicateIds": [],
+        "clippedLabels": [],
+        "smallLabels": [],
+        "draws": [
+          {
+            "op": "clearRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "fillRect",
+            "args": [
+              0,
+              0,
+              800,
+              500
+            ]
+          },
+          {
+            "op": "measureText",
+            "args": [
+              "Although it was raining"
+            ]
+          },
+          {
+            "op": "measureText",
+            "args": [
+              ", "
+            ]
+          },
+          {
+            "op": "measureText",
+            "args": [
+              "Maya walked to class."
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "Although it was raining",
+              155.212890625,
+              238
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              ", ",
+              396.689453125,
+              238
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "Maya walked to class.",
+              410.025390625,
+              238
+            ]
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              155.212890625,
+              246
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              396.689453125,
+              246
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "beginPath",
+            "args": []
+          },
+          {
+            "op": "moveTo",
+            "args": [
+              410.025390625,
+              246
+            ]
+          },
+          {
+            "op": "lineTo",
+            "args": [
+              644.787109375,
+              246
+            ]
+          },
+          {
+            "op": "stroke",
+            "args": []
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "dependent clause",
+              275.951171875,
+              292
+            ]
+          },
+          {
+            "op": "fillText",
+            "args": [
+              "main clause",
+              527.40625,
+              292
+            ]
+          }
+        ],
+        "hasSvg": false,
+        "hasHtmlTable": false,
+        "hasCanvas": true,
+        "domElements": 1
+      },
+      "blockedRequests": [],
+      "renderMs": 164.4,
+      "validRenderMs": 6904.1,
+      "outputBytes": 1575,
+      "requiresManualAnnotation": true,
+      "checks": {
+        "uniqueIds": true,
+        "selectableObjects": true,
+        "noClippedLabels": true,
+        "readableLabels": true,
+        "noExternalRequests": true,
+        "sentence": true,
+        "clauseLabels": true
+      }
+    }
+  ],
+  "method": "Same seven source-fact cases. Static drawing-request to complete, compiled, isolated browser rendering; excludes voice, retrieval and Jev. React library preloaded/bundled, browser startup excluded. Fresh800x500 opaque iframe per drawing; generated code has no network, app state or credentials. Whole-scene redraw updates preserve registered semanticIDs; this does not implement a retained production world.",
+  "libraries": {
+    "react": "19.3.0"
+  },
+  "sources": [
+    "https://react.dev/reference/react-dom/client/createRoot",
+    "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D"
+  ],
+  "promptMetadata": {
+    "canvas": {
+      "sha256": "40456f26915278330ecade28dbbb3cc73d9d03fd4eb42a89e625725d6daa0cee",
+      "bytes": 1485
+    },
+    "react": {
+      "sha256": "5a1ee176e70b4ae974572df89733829099842831c20b5b05b041c1f9de80dbac",
+      "bytes": 1395
+    }
+  },
+  "finishedAt": "2026-10-02T08:04:40.657Z"
+}

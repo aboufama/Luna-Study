@@ -1,0 +1,18 @@
+.hint-control{display:inline-flex;align-items:center;position:relative}
+.hint-button{gap:6px}
+.hint-button:disabled{opacity:.48;cursor:default}
+.hint-button:disabled:hover{background:transparent;color:#919191}
+.hint-count{font-size:9px;font-variant-numeric:tabular-nums;min-width:13px;line-height:18px;text-align:center;color:inherit}
+.hint-button.is-suggested{background:#f8f2e7;color:#8a7047;box-shadow:0 0 0 1px #d6c6a655;animation:hint-arrives 1.8s ease-out 2}
+.hint-button.is-suggested:not(:disabled):hover{background:#f0e6d1;color:#6c542f}
+.hint-sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.dock-left{display:flex;align-items:center;gap:4px}
+@keyframes hint-arrives{0%,100%{box-shadow:0 0 0 1px #d6c6a655}50%{box-shadow:0 0 0 4px #d6c6a622}}
+@media(max-width:600px){.study-dock{flex-wrap:wrap;gap:3px}.dock-left{gap:0}.hint-label{display:none}.hint-button{padding:8px;gap:2px}.hint-count{font-size:9px}.study-dock .dock-right{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){.hint-button.is-suggested{animation:none}}
+/* The rigid mosaic may scroll on narrow screens; session controls stay reachable. */
+@media(max-width:600px){
+  .study-screen{margin-bottom:96px;scroll-margin-bottom:100px}
+  .study-screen .study-dock{position:fixed;bottom:max(10px,env(safe-area-inset-bottom));left:10px;right:10px;z-index:9;min-height:48px;padding:5px 7px;border-radius:14px;background:rgba(255,255,255,.96);box-shadow:0 1px 4px #3143570a,0 5px 24px #3143570c;backdrop-filter:blur(12px)}
+}
+@media(max-width:600px){.study-screen .study-dock .dock-button{min-width:40px;padding-inline:4px}.study-dock .library-count{display:none}}

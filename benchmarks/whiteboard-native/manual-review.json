@@ -1,0 +1,50 @@
+{
+  "payoff-matrix-excalidraw-1": {
+    "pass": true,
+    "note": "Saved PNG shows all four three-player payoff tuples in the requested U/D rows and L/R columns, with readable labels. Native cell rectangles exist; native SVG export does not carry semantic DOM IDs."
+  },
+  "blank-grid-excalidraw-1": {
+    "pass": true,
+    "note": "Saved PNG shows eight physical rows, ten columns, all eighteen axis labels and eighty blank native cell rectangles. No marked solution or invented payoff."
+  },
+  "line-city-excalidraw-1": {
+    "pass": true,
+    "note": "Saved PNG shows A at 0.2 and B at 0.8 on the shared zero-to-one line, with both names and numeric labels legible."
+  },
+  "game-tree-excalidraw-1": {
+    "pass": false,
+    "note": "Native tree has the right structure and payoff leaves, but root action labels were changed from exact L/R to left/right. Lower l/r labels are preserved. This is a real content mismatch, not a parser failure."
+  },
+  "function-plot-excalidraw-1": {
+    "pass": true,
+    "note": "Saved PNG correctly places all five supplied samples and connects them by a polyline, with readable axes/ticks. This is the requested sampled polyline, not a demonstration of smooth calculus plotting."
+  },
+  "process-excalidraw-1": {
+    "pass": true,
+    "note": "Saved PNG has Observe \u2192 Hypothesize \u2192 Test with visible arrowheads, plus a directed return to Observe labeled Revise. Arrows do not obscure labels."
+  },
+  "patch-city-excalidraw-1": {
+    "pass": true,
+    "note": "Saved PNG correctly moves A to 0.3 while B stays at 0.8. Offline native-element comparison corrects an evaluator naming assumption: only vendor-a-marker x and vendor-a-label x/text changed; all other checked coordinates/text and all IDs remain unchanged. The original raw false check is preserved."
+  },
+  "function-plot-vega-1": {
+    "pass": true,
+    "note": "Saved PNG has the five exact samples, a connected sampled polyline and correct axes. Actual native datum clicks succeed at all five points."
+  },
+  "function-plot-vega-2": {
+    "pass": true,
+    "note": "Saved PNG preserves all five points, axes and readable labels; all five native point-center clicks identify the expected datum."
+  },
+  "function-plot-vega-3": {
+    "pass": true,
+    "note": "Saved PNG preserves all five points, axes and readable labels; all five native point-center clicks identify the expected datum."
+  },
+  "biology-cell-excalidraw-1": {
+    "pass": true,
+    "note": "Saved PNG shows nucleus inside the cell, with leader lines landing on membrane, cytoplasm and nucleus and no text crossings. The exact teaching note is separate and readable. Content passes, but the cytoplasm has label/leader IDs and no independently modeled compartment region; compartment selection is not established."
+  },
+  "multiseries-chart-vega-1": {
+    "pass": true,
+    "note": "Saved PNG preserves all six values, A/B lines and legend, exact Trial ticks and 0\u20133 Score range. Native center clicks identify five of six requested data IDs; A-1 and B-1 coincide, so clicking A-1 selects topmost B-1. This is an interaction limitation, not a value error."
+  }
+}

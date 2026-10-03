@@ -1,0 +1,3646 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:22:09.486Z",
+  "liveProviders": true,
+  "model": "gpt-5.6-terra",
+  "reasoning": "low",
+  "budget": {
+    "maximumPaidRequests": 10,
+    "paidRequests": 10
+  },
+  "instructions": {
+    "baseline": {
+      "chars": 11945,
+      "sha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc"
+    },
+    "formatOnly": {
+      "chars": 11999,
+      "sha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "replacements": [
+        [
+          "{\"type\":\"matrix\",\"rows\":[[\"cell LaTeX\"]],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}",
+          "{\"type\":\"matrix\",\"size\":[1,1],\"cells\":[{\"row\":0,\"col\":0,\"value\":\"cell LaTeX\"}],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}"
+        ],
+        [
+          "for an 8-by-10 game, provide exactly 8 rows of 10 empty cells. Use \"\" for unspecified cells;",
+          "for an 8-by-10 game, provide size:[8,10] and cells:[]. Omit unspecified cells from the required cells array;"
+        ]
+      ]
+    },
+    "production": {
+      "chars": 11955,
+      "sha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b"
+    }
+  },
+  "runs": [
+    {
+      "id": "biology-cell-production-final-1",
+      "scenario": "biology-cell",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-biology-cell",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit biology rendering fixture\",\"compartments\":[\"cell membrane\",\"cytoplasm\",\"nucleus\"],\"containment\":\"nucleus inside cytoplasm, cytoplasm inside cell membrane\",\"note\":\"Membrane: selective boundary\"}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "biology-cell",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-biology-cell"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+          }
+        ],
+        "currentProblem": {
+          "title": "biology-cell",
+          "request": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "a572e1987563b2c95b76253dbd759b7b9cb784d69e4e9a2a9eabb0ac0748eeda",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s the cell layout with each compartment clearly labeled.</say><board>{\"title\":\"Animal cell\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"cell-membrane\",\"type\":\"ellipse\",\"x\":150,\"y\":70,\"width\":410,\"height\":330,\"tone\":\"ink\"},{\"id\":\"cytoplasm\",\"type\":\"ellipse\",\"x\":170,\"y\":90,\"width\":370,\"height\":290,\"tone\":\"muted\"},{\"id\":\"nucleus\",\"type\":\"ellipse\",\"x\":300,\"y\":175,\"width\":120,\"height\":100,\"tone\":\"accent\"},{\"id\":\"membrane-leader\",\"type\":\"line\",\"x1\":175,\"y1\":135,\"x2\":75,\"y2\":100,\"tone\":\"ink\"},{\"id\":\"cytoplasm-leader\",\"type\":\"line\",\"x1\":205,\"y1\":315,\"x2\":75,\"y2\":350,\"tone\":\"ink\"},{\"id\":\"nucleus-leader\",\"type\":\"line\",\"x1\":420,\"y1\":210,\"x2\":650,\"y2\":150,\"tone\":\"ink\"},{\"id\":\"membrane-label\",\"type\":\"text\",\"x\":25,\"y\":65,\"width\":150,\"height\":35,\"text\":\"Cell membrane\",\"fontSize\":22},{\"id\":\"cytoplasm-label\",\"type\":\"text\",\"x\":25,\"y\":350,\"width\":145,\"height\":35,\"text\":\"Cytoplasm\",\"fontSize\":22},{\"id\":\"nucleus-label\",\"type\":\"text\",\"x\":650,\"y\":115,\"width\":120,\"height\":35,\"text\":\"Nucleus\",\"fontSize\":22},{\"id\":\"teaching-note\",\"type\":\"text\",\"x\":590,\"y\":350,\"width\":190,\"height\":70,\"text\":\"Membrane: selective boundary\",\"fontSize\":20,\"tone\":\"accent\"}],\"zones\":[{\"id\":\"select-membrane\",\"label\":\"cell membrane\",\"anchor\":{\"kind\":\"object\",\"id\":\"cell-membrane\"}},{\"id\":\"select-cytoplasm\",\"label\":\"cytoplasm\",\"anchor\":{\"kind\":\"object\",\"id\":\"cytoplasm\"}},{\"id\":\"select-nucleus\",\"label\":\"nucleus\",\"anchor\":{\"kind\":\"object\",\"id\":\"nucleus\"}},{\"id\":\"select-note\",\"label\":\"teaching note\",\"anchor\":{\"kind\":\"object\",\"id\":\"teaching-note\"}}]}]}</board>",
+      "usage": {
+        "input_tokens": 2703,
+        "input_tokens_details": {
+          "cache_write_tokens": 2700,
+          "cached_tokens": 0
+        },
+        "output_tokens": 585,
+        "output_tokens_details": {
+          "reasoning_tokens": 69
+        },
+        "total_tokens": 3288
+      },
+      "latencies": {
+        "firstRawOutputMs": 1711,
+        "firstSpokenMs": 1804.4,
+        "firstSyntheticAudioMs": 2126.4,
+        "generationCompleteMs": 6615.6,
+        "boardReadyMs": 6621.2
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1602,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the cell layout with each compartment clearly labeled.",
+        "board": {
+          "title": "Animal cell",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "cell-membrane",
+                  "type": "ellipse",
+                  "x": 150,
+                  "y": 70,
+                  "width": 410,
+                  "height": 330,
+                  "tone": "ink"
+                },
+                {
+                  "id": "cytoplasm",
+                  "type": "ellipse",
+                  "x": 170,
+                  "y": 90,
+                  "width": 370,
+                  "height": 290,
+                  "tone": "muted"
+                },
+                {
+                  "id": "nucleus",
+                  "type": "ellipse",
+                  "x": 300,
+                  "y": 175,
+                  "width": 120,
+                  "height": 100,
+                  "tone": "accent"
+                },
+                {
+                  "id": "membrane-leader",
+                  "type": "line",
+                  "x1": 175,
+                  "y1": 135,
+                  "x2": 75,
+                  "y2": 100,
+                  "tone": "ink"
+                },
+                {
+                  "id": "cytoplasm-leader",
+                  "type": "line",
+                  "x1": 205,
+                  "y1": 315,
+                  "x2": 75,
+                  "y2": 350,
+                  "tone": "ink"
+                },
+                {
+                  "id": "nucleus-leader",
+                  "type": "line",
+                  "x1": 420,
+                  "y1": 210,
+                  "x2": 650,
+                  "y2": 150,
+                  "tone": "ink"
+                },
+                {
+                  "id": "membrane-label",
+                  "type": "text",
+                  "x": 25,
+                  "y": 65,
+                  "width": 150,
+                  "height": 35,
+                  "text": "Cell membrane",
+                  "fontSize": 22
+                },
+                {
+                  "id": "cytoplasm-label",
+                  "type": "text",
+                  "x": 25,
+                  "y": 350,
+                  "width": 145,
+                  "height": 35,
+                  "text": "Cytoplasm",
+                  "fontSize": 22
+                },
+                {
+                  "id": "nucleus-label",
+                  "type": "text",
+                  "x": 650,
+                  "y": 115,
+                  "width": 120,
+                  "height": 35,
+                  "text": "Nucleus",
+                  "fontSize": 22
+                },
+                {
+                  "id": "teaching-note",
+                  "type": "text",
+                  "x": 590,
+                  "y": 350,
+                  "width": 190,
+                  "height": 70,
+                  "text": "Membrane: selective boundary",
+                  "fontSize": 20,
+                  "tone": "accent"
+                }
+              ],
+              "zones": [
+                {
+                  "id": "select-membrane",
+                  "label": "cell membrane",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "cell-membrane"
+                  }
+                },
+                {
+                  "id": "select-cytoplasm",
+                  "label": "cytoplasm",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "cytoplasm"
+                  }
+                },
+                {
+                  "id": "select-nucleus",
+                  "label": "nucleus",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "nucleus"
+                  }
+                },
+                {
+                  "id": "select-note",
+                  "label": "teaching note",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "teaching-note"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1711,
+          "totalMs": 6618,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Animal cell",
+        "revision": "1c2bf241-d39b-4309-8ef8-e770b9df81cd",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 150,
+                "y": 70,
+                "width": 410,
+                "height": 330,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 170,
+                "y": 90,
+                "width": 370,
+                "height": 290,
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 300,
+                "y": 175,
+                "width": 120,
+                "height": 100,
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-leader",
+                "type": "line",
+                "x1": 175,
+                "y1": 135,
+                "x2": 75,
+                "y2": 100,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-leader",
+                "type": "line",
+                "x1": 205,
+                "y1": 315,
+                "x2": 75,
+                "y2": 350,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-leader",
+                "type": "line",
+                "x1": 420,
+                "y1": 210,
+                "x2": 650,
+                "y2": 150,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 25,
+                "y": 65,
+                "width": 150,
+                "height": 35,
+                "text": "Cell membrane",
+                "fontSize": 22
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 25,
+                "y": 350,
+                "width": 145,
+                "height": 35,
+                "text": "Cytoplasm",
+                "fontSize": 22
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 650,
+                "y": 115,
+                "width": 120,
+                "height": 35,
+                "text": "Nucleus",
+                "fontSize": 22
+              },
+              {
+                "id": "teaching-note",
+                "type": "text",
+                "x": 590,
+                "y": 350,
+                "width": 190,
+                "height": 70,
+                "text": "Membrane: selective boundary",
+                "fontSize": 20,
+                "tone": "accent"
+              }
+            ],
+            "zones": [
+              {
+                "id": "select-membrane",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "select-cytoplasm",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "select-nucleus",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "select-note",
+                "label": "teaching note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "teaching-note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Animal cell",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 150,
+                "y": 70,
+                "width": 410,
+                "height": 330,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 170,
+                "y": 90,
+                "width": 370,
+                "height": 290,
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 300,
+                "y": 175,
+                "width": 120,
+                "height": 100,
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-leader",
+                "type": "line",
+                "x1": 175,
+                "y1": 135,
+                "x2": 75,
+                "y2": 100,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-leader",
+                "type": "line",
+                "x1": 205,
+                "y1": 315,
+                "x2": 75,
+                "y2": 350,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-leader",
+                "type": "line",
+                "x1": 420,
+                "y1": 210,
+                "x2": 650,
+                "y2": 150,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 25,
+                "y": 65,
+                "width": 150,
+                "height": 35,
+                "text": "Cell membrane",
+                "fontSize": 22
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 25,
+                "y": 350,
+                "width": 145,
+                "height": 35,
+                "text": "Cytoplasm",
+                "fontSize": 22
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 650,
+                "y": 115,
+                "width": 120,
+                "height": 35,
+                "text": "Nucleus",
+                "fontSize": 22
+              },
+              {
+                "id": "teaching-note",
+                "type": "text",
+                "x": 590,
+                "y": 350,
+                "width": 190,
+                "height": 70,
+                "text": "Membrane: selective boundary",
+                "fontSize": 20,
+                "tone": "accent"
+              }
+            ],
+            "zones": [
+              {
+                "id": "select-membrane",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "select-cytoplasm",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "select-nucleus",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "select-note",
+                "label": "teaching note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "teaching-note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 1595,
+      "wireBoardBytes": 1506,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:16.112Z"
+    },
+    {
+      "id": "algebra-steps-production-final-1",
+      "scenario": "algebra-steps",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-algebra-steps",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit requested worked example\",\"steps\":[\"2x + 3 = 11\",\"2x = 8\",\"x = 4\"],\"operations\":[\"subtract 3 from both sides\",\"divide both sides by 2\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "algebra-steps",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-algebra-steps"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+          }
+        ],
+        "currentProblem": {
+          "title": "algebra-steps",
+          "request": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "2300666b8285e216bf7bde2f435e29eab92866ddc4de4fc60404403c42e0135f",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s the worked solution, with each operation shown between the equations.</say>\n<board>{\"title\":\"Solve for x\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"work\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"eq1\",\"type\":\"math\",\"x\":130,\"y\":60,\"width\":360,\"height\":55,\"text\":\"2x+3=11\",\"fontSize\":32},{\"id\":\"arrow1\",\"type\":\"arrow\",\"x1\":310,\"y1\":125,\"x2\":310,\"y2\":175,\"label\":\"subtract 3 from both sides\",\"tone\":\"muted\"},{\"id\":\"eq2\",\"type\":\"math\",\"x\":130,\"y\":200,\"width\":360,\"height\":55,\"text\":\"2x=8\",\"fontSize\":32},{\"id\":\"arrow2\",\"type\":\"arrow\",\"x1\":310,\"y1\":265,\"x2\":310,\"y2\":315,\"label\":\"divide both sides by 2\",\"tone\":\"muted\"},{\"id\":\"finalBox\",\"type\":\"rect\",\"x\":110,\"y\":350,\"width\":400,\"height\":85,\"tone\":\"accent\"},{\"id\":\"eq3\",\"type\":\"math\",\"x\":150,\"y\":365,\"width\":320,\"height\":52,\"text\":\"x=4\",\"fontSize\":36}]}]}</board>",
+      "usage": {
+        "input_tokens": 2755,
+        "input_tokens_details": {
+          "cache_write_tokens": 362,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 315,
+        "output_tokens_details": {
+          "reasoning_tokens": 24
+        },
+        "total_tokens": 3070
+      },
+      "latencies": {
+        "firstRawOutputMs": 1634.6,
+        "firstSpokenMs": 1662,
+        "firstSyntheticAudioMs": 1909.5,
+        "generationCompleteMs": 3725,
+        "boardReadyMs": 3726.8
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1609,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the worked solution, with each operation shown between the equations.",
+        "board": {
+          "title": "Solve for x",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "work",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "eq1",
+                  "type": "math",
+                  "x": 130,
+                  "y": 60,
+                  "width": 360,
+                  "height": 55,
+                  "text": "2x+3=11",
+                  "fontSize": 32
+                },
+                {
+                  "id": "arrow1",
+                  "type": "arrow",
+                  "x1": 310,
+                  "y1": 125,
+                  "x2": 310,
+                  "y2": 175,
+                  "label": "subtract 3 from both sides",
+                  "tone": "muted"
+                },
+                {
+                  "id": "eq2",
+                  "type": "math",
+                  "x": 130,
+                  "y": 200,
+                  "width": 360,
+                  "height": 55,
+                  "text": "2x=8",
+                  "fontSize": 32
+                },
+                {
+                  "id": "arrow2",
+                  "type": "arrow",
+                  "x1": 310,
+                  "y1": 265,
+                  "x2": 310,
+                  "y2": 315,
+                  "label": "divide both sides by 2",
+                  "tone": "muted"
+                },
+                {
+                  "id": "finalBox",
+                  "type": "rect",
+                  "x": 110,
+                  "y": 350,
+                  "width": 400,
+                  "height": 85,
+                  "tone": "accent"
+                },
+                {
+                  "id": "eq3",
+                  "type": "math",
+                  "x": 150,
+                  "y": 365,
+                  "width": 320,
+                  "height": 52,
+                  "text": "x=4",
+                  "fontSize": 36
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1635,
+          "totalMs": 3725,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Solve for x",
+        "revision": "da6a0baa-e1a3-4c2f-b3b3-aae0cc69681a",
+        "blocks": [
+          {
+            "id": "work",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "eq1",
+                "type": "math",
+                "x": 130,
+                "y": 60,
+                "width": 360,
+                "height": 55,
+                "text": "2x+3=11",
+                "fontSize": 32
+              },
+              {
+                "id": "arrow1",
+                "type": "arrow",
+                "x1": 310,
+                "y1": 125,
+                "x2": 310,
+                "y2": 175,
+                "label": "subtract 3 from both sides",
+                "tone": "muted"
+              },
+              {
+                "id": "eq2",
+                "type": "math",
+                "x": 130,
+                "y": 200,
+                "width": 360,
+                "height": 55,
+                "text": "2x=8",
+                "fontSize": 32
+              },
+              {
+                "id": "arrow2",
+                "type": "arrow",
+                "x1": 310,
+                "y1": 265,
+                "x2": 310,
+                "y2": 315,
+                "label": "divide both sides by 2",
+                "tone": "muted"
+              },
+              {
+                "id": "finalBox",
+                "type": "rect",
+                "x": 110,
+                "y": 350,
+                "width": 400,
+                "height": 85,
+                "tone": "accent"
+              },
+              {
+                "id": "eq3",
+                "type": "math",
+                "x": 150,
+                "y": 365,
+                "width": 320,
+                "height": 52,
+                "text": "x=4",
+                "fontSize": 36
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Solve for x",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "work",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "eq1",
+                "type": "math",
+                "x": 130,
+                "y": 60,
+                "width": 360,
+                "height": 55,
+                "text": "2x+3=11",
+                "fontSize": 32
+              },
+              {
+                "id": "arrow1",
+                "type": "arrow",
+                "x1": 310,
+                "y1": 125,
+                "x2": 310,
+                "y2": 175,
+                "label": "subtract 3 from both sides",
+                "tone": "muted"
+              },
+              {
+                "id": "eq2",
+                "type": "math",
+                "x": 130,
+                "y": 200,
+                "width": 360,
+                "height": 55,
+                "text": "2x=8",
+                "fontSize": 32
+              },
+              {
+                "id": "arrow2",
+                "type": "arrow",
+                "x1": 310,
+                "y1": 265,
+                "x2": 310,
+                "y2": 315,
+                "label": "divide both sides by 2",
+                "tone": "muted"
+              },
+              {
+                "id": "finalBox",
+                "type": "rect",
+                "x": 110,
+                "y": 350,
+                "width": 400,
+                "height": 85,
+                "tone": "accent"
+              },
+              {
+                "id": "eq3",
+                "type": "math",
+                "x": 150,
+                "y": 365,
+                "width": 320,
+                "height": 52,
+                "text": "x=4",
+                "fontSize": 36
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 830,
+      "wireBoardBytes": 725,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:19.841Z"
+    },
+    {
+      "id": "physics-forces-production-final-1",
+      "scenario": "physics-forces",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-physics-forces",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit mechanics rendering fixture\",\"objects\":[\"block\",\"horizontal surface\"],\"forces\":{\"N\":\"up\",\"mg\":\"down\",\"F\":\"right\",\"f\":\"left\"},\"equations\":[\"ΣFᵧ = N − mg = 0\",\"ΣFₓ = F − f = ma\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "physics-forces",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-physics-forces"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+          }
+        ],
+        "currentProblem": {
+          "title": "physics-forces",
+          "request": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "e7ec799b4dcea0972f97e43f8cab618ab222bdc31f6ae280e4b9e9fa37447011",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s the free-body diagram using the supplied force directions.</say><board>{\"title\":\"Forces on a block\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"surface\",\"type\":\"line\",\"x1\":120,\"y1\":300,\"x2\":680,\"y2\":300},{\"id\":\"block\",\"type\":\"rect\",\"x\":340,\"y\":220,\"width\":120,\"height\":80,\"label\":\"block\"},{\"id\":\"force-N\",\"type\":\"arrow\",\"x1\":400,\"y1\":220,\"x2\":400,\"y2\":120,\"label\":\"N\"},{\"id\":\"force-mg\",\"type\":\"arrow\",\"x1\":400,\"y1\":300,\"x2\":400,\"y2\":400,\"label\":\"mg\"},{\"id\":\"force-F\",\"type\":\"arrow\",\"x1\":460,\"y1\":260,\"x2\":590,\"y2\":260,\"label\":\"F\"},{\"id\":\"force-f\",\"type\":\"arrow\",\"x1\":340,\"y1\":260,\"x2\":210,\"y2\":260,\"label\":\"f\"}]},{\"id\":\"eq-y\",\"type\":\"latex\",\"content\":\"\\\\Sigma F_y = N - mg = 0\"},{\"id\":\"eq-x\",\"type\":\"latex\",\"content\":\"\\\\Sigma F_x = F - f = ma\"}]}</board>",
+      "usage": {
+        "input_tokens": 2757,
+        "input_tokens_details": {
+          "cache_write_tokens": 364,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 353,
+        "output_tokens_details": {
+          "reasoning_tokens": 55
+        },
+        "total_tokens": 3110
+      },
+      "latencies": {
+        "firstRawOutputMs": 1732.3,
+        "firstSpokenMs": 1774.6,
+        "firstSyntheticAudioMs": 2038.1,
+        "generationCompleteMs": 3754.5,
+        "boardReadyMs": 3756.2
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1604,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the free-body diagram using the supplied force directions.",
+        "board": {
+          "title": "Forces on a block",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "surface",
+                  "type": "line",
+                  "x1": 120,
+                  "y1": 300,
+                  "x2": 680,
+                  "y2": 300
+                },
+                {
+                  "id": "block",
+                  "type": "rect",
+                  "x": 340,
+                  "y": 220,
+                  "width": 120,
+                  "height": 80,
+                  "label": "block"
+                },
+                {
+                  "id": "force-N",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 220,
+                  "x2": 400,
+                  "y2": 120,
+                  "label": "N"
+                },
+                {
+                  "id": "force-mg",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 300,
+                  "x2": 400,
+                  "y2": 400,
+                  "label": "mg"
+                },
+                {
+                  "id": "force-F",
+                  "type": "arrow",
+                  "x1": 460,
+                  "y1": 260,
+                  "x2": 590,
+                  "y2": 260,
+                  "label": "F"
+                },
+                {
+                  "id": "force-f",
+                  "type": "arrow",
+                  "x1": 340,
+                  "y1": 260,
+                  "x2": 210,
+                  "y2": 260,
+                  "label": "f"
+                }
+              ]
+            },
+            {
+              "id": "eq-y",
+              "type": "latex",
+              "content": "\\Sigma F_y = N - mg = 0"
+            },
+            {
+              "id": "eq-x",
+              "type": "latex",
+              "content": "\\Sigma F_x = F - f = ma"
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1732,
+          "totalMs": 3755,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Forces on a block",
+        "revision": "db8db8d4-b043-426a-918f-010533e4f264",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 300,
+                "x2": 680,
+                "y2": 300
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 220,
+                "width": 120,
+                "height": 80,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 220,
+                "x2": 400,
+                "y2": 120,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 300,
+                "x2": 400,
+                "y2": 400,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 460,
+                "y1": 260,
+                "x2": 590,
+                "y2": 260,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 340,
+                "y1": 260,
+                "x2": 210,
+                "y2": 260,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Forces on a block",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 300,
+                "x2": 680,
+                "y2": 300
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 220,
+                "width": 120,
+                "height": 80,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 220,
+                "x2": 400,
+                "y2": 120,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 300,
+                "x2": 400,
+                "y2": 400,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 460,
+                "y1": 260,
+                "x2": 590,
+                "y2": 260,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 340,
+                "y1": 260,
+                "x2": 210,
+                "y2": 260,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "outputBytes": 823,
+      "wireBoardBytes": 730,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:23.601Z"
+    },
+    {
+      "id": "grammar-annotation-production-final-1",
+      "scenario": "grammar-annotation",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grammar-annotation",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit grammar rendering fixture\",\"sentence\":\"Although it was raining, Maya walked to class.\",\"clauses\":[{\"id\":\"dependent\",\"text\":\"Although it was raining\",\"label\":\"dependent clause\"},{\"id\":\"main\",\"text\":\"Maya walked to class.\",\"label\":\"main clause\"}]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "grammar-annotation",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grammar-annotation"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+          }
+        ],
+        "currentProblem": {
+          "title": "grammar-annotation",
+          "request": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "22d8e4e0a5eecdae34f1c8e00f265683a32da4394928a401c7c2c7fb5e951941",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s the sentence with each clause marked.</say><board>{\"title\":\"Clause annotation\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":300,\"objects\":[{\"id\":\"sentence\",\"type\":\"text\",\"x\":55,\"y\":80,\"width\":690,\"height\":45,\"text\":\"Although it was raining, Maya walked to class.\",\"fontSize\":28},{\"id\":\"dependent-underline\",\"type\":\"line\",\"x1\":55,\"y1\":132,\"x2\":365,\"y2\":132,\"label\":\"dependent clause\"},{\"id\":\"main-underline\",\"type\":\"line\",\"x1\":382,\"y1\":132,\"x2\":700,\"y2\":132,\"label\":\"main clause\"},{\"id\":\"dependent-label\",\"type\":\"text\",\"x\":105,\"y\":175,\"width\":220,\"height\":30,\"text\":\"dependent clause\",\"fontSize\":22},{\"id\":\"main-label\",\"type\":\"text\",\"x\":450,\"y\":175,\"width\":180,\"height\":30,\"text\":\"main clause\",\"fontSize\":22}],\"zones\":[{\"id\":\"dependent-clause\",\"label\":\"dependent clause\",\"anchor\":{\"kind\":\"object\",\"id\":\"sentence\",\"quote\":\"Although it was raining\",\"occurrence\":0}},{\"id\":\"main-clause\",\"label\":\"main clause\",\"anchor\":{\"kind\":\"object\",\"id\":\"sentence\",\"quote\":\"Maya walked to class.\",\"occurrence\":0}}]}]}</board>",
+      "usage": {
+        "input_tokens": 2744,
+        "input_tokens_details": {
+          "cache_write_tokens": 351,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 409,
+        "output_tokens_details": {
+          "reasoning_tokens": 99
+        },
+        "total_tokens": 3153
+      },
+      "latencies": {
+        "firstRawOutputMs": 1719.2,
+        "firstSpokenMs": 1720.1,
+        "firstSyntheticAudioMs": 1937.7,
+        "generationCompleteMs": 3990.2,
+        "boardReadyMs": 3992.3
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1840,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the sentence with each clause marked.",
+        "board": {
+          "title": "Clause annotation",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 300,
+              "objects": [
+                {
+                  "id": "sentence",
+                  "type": "text",
+                  "x": 55,
+                  "y": 80,
+                  "width": 690,
+                  "height": 45,
+                  "text": "Although it was raining, Maya walked to class.",
+                  "fontSize": 28
+                },
+                {
+                  "id": "dependent-underline",
+                  "type": "line",
+                  "x1": 55,
+                  "y1": 132,
+                  "x2": 365,
+                  "y2": 132,
+                  "label": "dependent clause"
+                },
+                {
+                  "id": "main-underline",
+                  "type": "line",
+                  "x1": 382,
+                  "y1": 132,
+                  "x2": 700,
+                  "y2": 132,
+                  "label": "main clause"
+                },
+                {
+                  "id": "dependent-label",
+                  "type": "text",
+                  "x": 105,
+                  "y": 175,
+                  "width": 220,
+                  "height": 30,
+                  "text": "dependent clause",
+                  "fontSize": 22
+                },
+                {
+                  "id": "main-label",
+                  "type": "text",
+                  "x": 450,
+                  "y": 175,
+                  "width": 180,
+                  "height": 30,
+                  "text": "main clause",
+                  "fontSize": 22
+                }
+              ],
+              "zones": [
+                {
+                  "id": "dependent-clause",
+                  "label": "dependent clause",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "sentence",
+                    "quote": "Although it was raining",
+                    "occurrence": 0
+                  }
+                },
+                {
+                  "id": "main-clause",
+                  "label": "main clause",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "sentence",
+                    "quote": "Maya walked to class.",
+                    "occurrence": 0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1719,
+          "totalMs": 3991,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Clause annotation",
+        "revision": "907f26ae-32d7-46b8-889c-66c4ce493b5e",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 300,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 55,
+                "y": 80,
+                "width": 690,
+                "height": 45,
+                "text": "Although it was raining, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dependent-underline",
+                "type": "line",
+                "x1": 55,
+                "y1": 132,
+                "x2": 365,
+                "y2": 132,
+                "label": "dependent clause"
+              },
+              {
+                "id": "main-underline",
+                "type": "line",
+                "x1": 382,
+                "y1": 132,
+                "x2": 700,
+                "y2": 132,
+                "label": "main clause"
+              },
+              {
+                "id": "dependent-label",
+                "type": "text",
+                "x": 105,
+                "y": 175,
+                "width": 220,
+                "height": 30,
+                "text": "dependent clause",
+                "fontSize": 22
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 450,
+                "y": 175,
+                "width": 180,
+                "height": 30,
+                "text": "main clause",
+                "fontSize": 22
+              }
+            ],
+            "zones": [
+              {
+                "id": "dependent-clause",
+                "label": "dependent clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Although it was raining",
+                  "occurrence": 0
+                }
+              },
+              {
+                "id": "main-clause",
+                "label": "main clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Maya walked to class.",
+                  "occurrence": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Clause annotation",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 300,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 55,
+                "y": 80,
+                "width": 690,
+                "height": 45,
+                "text": "Although it was raining, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dependent-underline",
+                "type": "line",
+                "x1": 55,
+                "y1": 132,
+                "x2": 365,
+                "y2": 132,
+                "label": "dependent clause"
+              },
+              {
+                "id": "main-underline",
+                "type": "line",
+                "x1": 382,
+                "y1": 132,
+                "x2": 700,
+                "y2": 132,
+                "label": "main clause"
+              },
+              {
+                "id": "dependent-label",
+                "type": "text",
+                "x": 105,
+                "y": 175,
+                "width": 220,
+                "height": 30,
+                "text": "dependent clause",
+                "fontSize": 22
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 450,
+                "y": 175,
+                "width": 180,
+                "height": 30,
+                "text": "main clause",
+                "fontSize": 22
+              }
+            ],
+            "zones": [
+              {
+                "id": "dependent-clause",
+                "label": "dependent clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Although it was raining",
+                  "occurrence": 0
+                }
+              },
+              {
+                "id": "main-clause",
+                "label": "main clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Maya walked to class.",
+                  "occurrence": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 1053,
+      "wireBoardBytes": 981,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:27.597Z"
+    },
+    {
+      "id": "biology-cell-production-final-2",
+      "scenario": "biology-cell",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-biology-cell",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit biology rendering fixture\",\"compartments\":[\"cell membrane\",\"cytoplasm\",\"nucleus\"],\"containment\":\"nucleus inside cytoplasm, cytoplasm inside cell membrane\",\"note\":\"Membrane: selective boundary\"}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "biology-cell",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-biology-cell"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+          }
+        ],
+        "currentProblem": {
+          "title": "biology-cell",
+          "request": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "a572e1987563b2c95b76253dbd759b7b9cb784d69e4e9a2a9eabb0ac0748eeda",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s a simple cell layout with the three compartments and the membrane note.</say><board>{\"title\":\"Animal cell\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"cell-membrane\",\"type\":\"ellipse\",\"x\":180,\"y\":90,\"width\":390,\"height\":300,\"tone\":\"ink\"},{\"id\":\"cytoplasm\",\"type\":\"ellipse\",\"x\":200,\"y\":110,\"width\":350,\"height\":260,\"tone\":\"muted\"},{\"id\":\"nucleus\",\"type\":\"ellipse\",\"x\":330,\"y\":190,\"width\":110,\"height\":90,\"tone\":\"accent\"},{\"id\":\"membrane-line\",\"type\":\"line\",\"x1\":190,\"y1\":135,\"x2\":95,\"y2\":85,\"tone\":\"ink\"},{\"id\":\"membrane-label\",\"type\":\"text\",\"x\":20,\"y\":50,\"width\":160,\"height\":35,\"text\":\"cell membrane\",\"fontSize\":22},{\"id\":\"cytoplasm-line\",\"type\":\"line\",\"x1\":535,\"y1\":170,\"x2\":680,\"y2\":115,\"tone\":\"ink\"},{\"id\":\"cytoplasm-label\",\"type\":\"text\",\"x\":600,\"y\":75,\"width\":175,\"height\":35,\"text\":\"cytoplasm\",\"fontSize\":22},{\"id\":\"nucleus-line\",\"type\":\"line\",\"x1\":440,\"y1\":235,\"x2\":670,\"y2\":260,\"tone\":\"ink\"},{\"id\":\"nucleus-label\",\"type\":\"text\",\"x\":680,\"y\":242,\"width\":110,\"height\":35,\"text\":\"nucleus\",\"fontSize\":22},{\"id\":\"note\",\"type\":\"text\",\"x\":235,\"y\":420,\"width\":330,\"height\":35,\"text\":\"Membrane: selective boundary\",\"fontSize\":24}],\"zones\":[{\"id\":\"cell-membrane-zone\",\"label\":\"cell membrane\",\"anchor\":{\"kind\":\"object\",\"id\":\"cell-membrane\"}},{\"id\":\"cytoplasm-zone\",\"label\":\"cytoplasm\",\"anchor\":{\"kind\":\"object\",\"id\":\"cytoplasm\"}},{\"id\":\"nucleus-zone\",\"label\":\"nucleus\",\"anchor\":{\"kind\":\"object\",\"id\":\"nucleus\"}},{\"id\":\"membrane-note-zone\",\"label\":\"Membrane note\",\"anchor\":{\"kind\":\"object\",\"id\":\"note\"}}]}]}</board>",
+      "usage": {
+        "input_tokens": 2703,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2700
+        },
+        "output_tokens": 573,
+        "output_tokens_details": {
+          "reasoning_tokens": 59
+        },
+        "total_tokens": 3276
+      },
+      "latencies": {
+        "firstRawOutputMs": 1167.4,
+        "firstSpokenMs": 1193.9,
+        "firstSyntheticAudioMs": 1525,
+        "generationCompleteMs": 4847.3,
+        "boardReadyMs": 4849.8
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1602,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s a simple cell layout with the three compartments and the membrane note.",
+        "board": {
+          "title": "Animal cell",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "cell-membrane",
+                  "type": "ellipse",
+                  "x": 180,
+                  "y": 90,
+                  "width": 390,
+                  "height": 300,
+                  "tone": "ink"
+                },
+                {
+                  "id": "cytoplasm",
+                  "type": "ellipse",
+                  "x": 200,
+                  "y": 110,
+                  "width": 350,
+                  "height": 260,
+                  "tone": "muted"
+                },
+                {
+                  "id": "nucleus",
+                  "type": "ellipse",
+                  "x": 330,
+                  "y": 190,
+                  "width": 110,
+                  "height": 90,
+                  "tone": "accent"
+                },
+                {
+                  "id": "membrane-line",
+                  "type": "line",
+                  "x1": 190,
+                  "y1": 135,
+                  "x2": 95,
+                  "y2": 85,
+                  "tone": "ink"
+                },
+                {
+                  "id": "membrane-label",
+                  "type": "text",
+                  "x": 20,
+                  "y": 50,
+                  "width": 160,
+                  "height": 35,
+                  "text": "cell membrane",
+                  "fontSize": 22
+                },
+                {
+                  "id": "cytoplasm-line",
+                  "type": "line",
+                  "x1": 535,
+                  "y1": 170,
+                  "x2": 680,
+                  "y2": 115,
+                  "tone": "ink"
+                },
+                {
+                  "id": "cytoplasm-label",
+                  "type": "text",
+                  "x": 600,
+                  "y": 75,
+                  "width": 175,
+                  "height": 35,
+                  "text": "cytoplasm",
+                  "fontSize": 22
+                },
+                {
+                  "id": "nucleus-line",
+                  "type": "line",
+                  "x1": 440,
+                  "y1": 235,
+                  "x2": 670,
+                  "y2": 260,
+                  "tone": "ink"
+                },
+                {
+                  "id": "nucleus-label",
+                  "type": "text",
+                  "x": 680,
+                  "y": 242,
+                  "width": 110,
+                  "height": 35,
+                  "text": "nucleus",
+                  "fontSize": 22
+                },
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 235,
+                  "y": 420,
+                  "width": 330,
+                  "height": 35,
+                  "text": "Membrane: selective boundary",
+                  "fontSize": 24
+                }
+              ],
+              "zones": [
+                {
+                  "id": "cell-membrane-zone",
+                  "label": "cell membrane",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "cell-membrane"
+                  }
+                },
+                {
+                  "id": "cytoplasm-zone",
+                  "label": "cytoplasm",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "cytoplasm"
+                  }
+                },
+                {
+                  "id": "nucleus-zone",
+                  "label": "nucleus",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "nucleus"
+                  }
+                },
+                {
+                  "id": "membrane-note-zone",
+                  "label": "Membrane note",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "note"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1167,
+          "totalMs": 4848,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Animal cell",
+        "revision": "789c0d6f-4cfe-4d41-9232-9edacc18b460",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 180,
+                "y": 90,
+                "width": 390,
+                "height": 300,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 200,
+                "y": 110,
+                "width": 350,
+                "height": 260,
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 330,
+                "y": 190,
+                "width": 110,
+                "height": 90,
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-line",
+                "type": "line",
+                "x1": 190,
+                "y1": 135,
+                "x2": 95,
+                "y2": 85,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 20,
+                "y": 50,
+                "width": 160,
+                "height": 35,
+                "text": "cell membrane",
+                "fontSize": 22
+              },
+              {
+                "id": "cytoplasm-line",
+                "type": "line",
+                "x1": 535,
+                "y1": 170,
+                "x2": 680,
+                "y2": 115,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 600,
+                "y": 75,
+                "width": 175,
+                "height": 35,
+                "text": "cytoplasm",
+                "fontSize": 22
+              },
+              {
+                "id": "nucleus-line",
+                "type": "line",
+                "x1": 440,
+                "y1": 235,
+                "x2": 670,
+                "y2": 260,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 680,
+                "y": 242,
+                "width": 110,
+                "height": 35,
+                "text": "nucleus",
+                "fontSize": 22
+              },
+              {
+                "id": "note",
+                "type": "text",
+                "x": 235,
+                "y": 420,
+                "width": 330,
+                "height": 35,
+                "text": "Membrane: selective boundary",
+                "fontSize": 24
+              }
+            ],
+            "zones": [
+              {
+                "id": "cell-membrane-zone",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "cytoplasm-zone",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "nucleus-zone",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "membrane-note-zone",
+                "label": "Membrane note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Animal cell",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 180,
+                "y": 90,
+                "width": 390,
+                "height": 300,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 200,
+                "y": 110,
+                "width": 350,
+                "height": 260,
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 330,
+                "y": 190,
+                "width": 110,
+                "height": 90,
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-line",
+                "type": "line",
+                "x1": 190,
+                "y1": 135,
+                "x2": 95,
+                "y2": 85,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 20,
+                "y": 50,
+                "width": 160,
+                "height": 35,
+                "text": "cell membrane",
+                "fontSize": 22
+              },
+              {
+                "id": "cytoplasm-line",
+                "type": "line",
+                "x1": 535,
+                "y1": 170,
+                "x2": 680,
+                "y2": 115,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 600,
+                "y": 75,
+                "width": 175,
+                "height": 35,
+                "text": "cytoplasm",
+                "fontSize": 22
+              },
+              {
+                "id": "nucleus-line",
+                "type": "line",
+                "x1": 440,
+                "y1": 235,
+                "x2": 670,
+                "y2": 260,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 680,
+                "y": 242,
+                "width": 110,
+                "height": 35,
+                "text": "nucleus",
+                "fontSize": 22
+              },
+              {
+                "id": "note",
+                "type": "text",
+                "x": 235,
+                "y": 420,
+                "width": 330,
+                "height": 35,
+                "text": "Membrane: selective boundary",
+                "fontSize": 24
+              }
+            ],
+            "zones": [
+              {
+                "id": "cell-membrane-zone",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "cytoplasm-zone",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "nucleus-zone",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "membrane-note-zone",
+                "label": "Membrane note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 1578,
+      "wireBoardBytes": 1472,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:32.450Z"
+    },
+    {
+      "id": "algebra-steps-production-final-2",
+      "scenario": "algebra-steps",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-algebra-steps",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit requested worked example\",\"steps\":[\"2x + 3 = 11\",\"2x = 8\",\"x = 4\"],\"operations\":[\"subtract 3 from both sides\",\"divide both sides by 2\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "algebra-steps",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-algebra-steps"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+          }
+        ],
+        "currentProblem": {
+          "title": "algebra-steps",
+          "request": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "2300666b8285e216bf7bde2f435e29eab92866ddc4de4fc60404403c42e0135f",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s the worked sequence, with each operation shown between the equations.</say><board>{\"title\":\"Solve for x\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"eq1\",\"type\":\"latex\",\"content\":\"2x+3=11\"},{\"id\":\"note1\",\"type\":\"text\",\"content\":\"subtract 3 from both sides\"},{\"id\":\"eq2\",\"type\":\"latex\",\"content\":\"2x=8\"},{\"id\":\"note2\",\"type\":\"text\",\"content\":\"divide both sides by 2\"},{\"id\":\"eq3\",\"type\":\"latex\",\"content\":\"\\\\boxed{x=4}\"}]}</board>",
+      "usage": {
+        "input_tokens": 2755,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2752
+        },
+        "output_tokens": 129,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2884
+      },
+      "latencies": {
+        "firstRawOutputMs": 640.2,
+        "firstSpokenMs": 646.7,
+        "firstSyntheticAudioMs": 1003.2,
+        "generationCompleteMs": 1630.7,
+        "boardReadyMs": 1632.3
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": false
+      },
+      "inputBytes": 1609,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the worked sequence, with each operation shown between the equations.",
+        "board": {
+          "title": "Solve for x",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "eq1",
+              "type": "latex",
+              "content": "2x+3=11"
+            },
+            {
+              "id": "note1",
+              "type": "text",
+              "content": "subtract 3 from both sides"
+            },
+            {
+              "id": "eq2",
+              "type": "latex",
+              "content": "2x=8"
+            },
+            {
+              "id": "note2",
+              "type": "text",
+              "content": "divide both sides by 2"
+            },
+            {
+              "id": "eq3",
+              "type": "latex",
+              "content": "\\boxed{x=4}"
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 640,
+          "totalMs": 1631,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Solve for x",
+        "revision": "823ed9ca-44c2-4f57-9418-5c09af7b0b90",
+        "blocks": [
+          {
+            "id": "eq1",
+            "type": "latex",
+            "content": "2x+3=11"
+          },
+          {
+            "id": "eq2",
+            "type": "latex",
+            "content": "2x=8"
+          },
+          {
+            "id": "eq3",
+            "type": "latex",
+            "content": "\\boxed{x=4}"
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Solve for x",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "eq1",
+            "type": "latex",
+            "content": "2x+3=11"
+          },
+          {
+            "id": "note1",
+            "type": "text",
+            "content": "subtract 3 from both sides"
+          },
+          {
+            "id": "eq2",
+            "type": "latex",
+            "content": "2x=8"
+          },
+          {
+            "id": "note2",
+            "type": "text",
+            "content": "divide both sides by 2"
+          },
+          {
+            "id": "eq3",
+            "type": "latex",
+            "content": "\\boxed{x=4}"
+          }
+        ]
+      },
+      "outputBytes": 433,
+      "wireBoardBytes": 329,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:34.087Z"
+    },
+    {
+      "id": "physics-forces-production-final-2",
+      "scenario": "physics-forces",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-physics-forces",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit mechanics rendering fixture\",\"objects\":[\"block\",\"horizontal surface\"],\"forces\":{\"N\":\"up\",\"mg\":\"down\",\"F\":\"right\",\"f\":\"left\"},\"equations\":[\"ΣFᵧ = N − mg = 0\",\"ΣFₓ = F − f = ma\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "physics-forces",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-physics-forces"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+          }
+        ],
+        "currentProblem": {
+          "title": "physics-forces",
+          "request": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "e7ec799b4dcea0972f97e43f8cab618ab222bdc31f6ae280e4b9e9fa37447011",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s the free-body diagram with the supplied force directions and equations.</say><board>{\"title\":\"Forces on a block\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"surface\",\"type\":\"line\",\"x1\":120,\"y1\":280,\"x2\":680,\"y2\":280,\"label\":\"horizontal surface\"},{\"id\":\"block\",\"type\":\"rect\",\"x\":340,\"y\":190,\"width\":120,\"height\":90,\"label\":\"block\"},{\"id\":\"force-N\",\"type\":\"arrow\",\"x1\":400,\"y1\":235,\"x2\":400,\"y2\":95,\"label\":\"N\"},{\"id\":\"force-mg\",\"type\":\"arrow\",\"x1\":400,\"y1\":235,\"x2\":400,\"y2\":390,\"label\":\"mg\"},{\"id\":\"force-F\",\"type\":\"arrow\",\"x1\":400,\"y1\":235,\"x2\":590,\"y2\":235,\"label\":\"F\"},{\"id\":\"force-f\",\"type\":\"arrow\",\"x1\":400,\"y1\":235,\"x2\":210,\"y2\":235,\"label\":\"f\"}]},{\"id\":\"eq-y\",\"type\":\"latex\",\"content\":\"\\\\Sigma F_y = N - mg = 0\"},{\"id\":\"eq-x\",\"type\":\"latex\",\"content\":\"\\\\Sigma F_x = F - f = ma\"}]}</board>",
+      "usage": {
+        "input_tokens": 2757,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2754
+        },
+        "output_tokens": 374,
+        "output_tokens_details": {
+          "reasoning_tokens": 69
+        },
+        "total_tokens": 3131
+      },
+      "latencies": {
+        "firstRawOutputMs": 1665.1,
+        "firstSpokenMs": 1693,
+        "firstSyntheticAudioMs": 1913,
+        "generationCompleteMs": 3627.7,
+        "boardReadyMs": 3628.6
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1604,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the free-body diagram with the supplied force directions and equations.",
+        "board": {
+          "title": "Forces on a block",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "surface",
+                  "type": "line",
+                  "x1": 120,
+                  "y1": 280,
+                  "x2": 680,
+                  "y2": 280,
+                  "label": "horizontal surface"
+                },
+                {
+                  "id": "block",
+                  "type": "rect",
+                  "x": 340,
+                  "y": 190,
+                  "width": 120,
+                  "height": 90,
+                  "label": "block"
+                },
+                {
+                  "id": "force-N",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 235,
+                  "x2": 400,
+                  "y2": 95,
+                  "label": "N"
+                },
+                {
+                  "id": "force-mg",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 235,
+                  "x2": 400,
+                  "y2": 390,
+                  "label": "mg"
+                },
+                {
+                  "id": "force-F",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 235,
+                  "x2": 590,
+                  "y2": 235,
+                  "label": "F"
+                },
+                {
+                  "id": "force-f",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 235,
+                  "x2": 210,
+                  "y2": 235,
+                  "label": "f"
+                }
+              ]
+            },
+            {
+              "id": "eq-y",
+              "type": "latex",
+              "content": "\\Sigma F_y = N - mg = 0"
+            },
+            {
+              "id": "eq-x",
+              "type": "latex",
+              "content": "\\Sigma F_x = F - f = ma"
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1665,
+          "totalMs": 3628,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Forces on a block",
+        "revision": "fcfc274c-ed5a-4a20-9087-d391838bb367",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 280,
+                "x2": 680,
+                "y2": 280,
+                "label": "horizontal surface"
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 190,
+                "width": 120,
+                "height": 90,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 95,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 390,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 590,
+                "y2": 235,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 210,
+                "y2": 235,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Forces on a block",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 280,
+                "x2": 680,
+                "y2": 280,
+                "label": "horizontal surface"
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 190,
+                "width": 120,
+                "height": 90,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 95,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 390,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 590,
+                "y2": 235,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 210,
+                "y2": 235,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "outputBytes": 864,
+      "wireBoardBytes": 758,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:37.720Z"
+    },
+    {
+      "id": "grammar-annotation-production-final-2",
+      "scenario": "grammar-annotation",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grammar-annotation",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit grammar rendering fixture\",\"sentence\":\"Although it was raining, Maya walked to class.\",\"clauses\":[{\"id\":\"dependent\",\"text\":\"Although it was raining\",\"label\":\"dependent clause\"},{\"id\":\"main\",\"text\":\"Maya walked to class.\",\"label\":\"main clause\"}]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "grammar-annotation",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grammar-annotation"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+          }
+        ],
+        "currentProblem": {
+          "title": "grammar-annotation",
+          "request": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "22d8e4e0a5eecdae34f1c8e00f265683a32da4394928a401c7c2c7fb5e951941",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>Here’s the sentence with each clause marked in reading order.</say><board>{\"title\":\"Clause annotation\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":280,\"objects\":[{\"id\":\"sentence\",\"type\":\"text\",\"x\":60,\"y\":70,\"width\":680,\"height\":45,\"text\":\"Although it was raining, Maya walked to class.\",\"fontSize\":28},{\"id\":\"dependent-mark\",\"type\":\"polyline\",\"points\":[[60,125],[345,125]],\"tone\":\"accent\"},{\"id\":\"main-mark\",\"type\":\"polyline\",\"points\":[[365,125],[690,125]],\"tone\":\"ink\"},{\"id\":\"dependent-label\",\"type\":\"text\",\"x\":105,\"y\":155,\"width\":220,\"height\":32,\"text\":\"dependent clause\",\"fontSize\":22,\"tone\":\"accent\"},{\"id\":\"main-label\",\"type\":\"text\",\"x\":420,\"y\":155,\"width\":180,\"height\":32,\"text\":\"main clause\",\"fontSize\":22,\"tone\":\"ink\"}],\"zones\":[{\"id\":\"dependent-clause\",\"label\":\"dependent clause\",\"anchor\":{\"kind\":\"object\",\"id\":\"sentence\",\"quote\":\"Although it was raining\",\"occurrence\":0}},{\"id\":\"main-clause\",\"label\":\"main clause\",\"anchor\":{\"kind\":\"object\",\"id\":\"sentence\",\"quote\":\"Maya walked to class.\",\"occurrence\":0}}]}]}</board>",
+      "usage": {
+        "input_tokens": 2744,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2741
+        },
+        "output_tokens": 363,
+        "output_tokens_details": {
+          "reasoning_tokens": 60
+        },
+        "total_tokens": 3107
+      },
+      "latencies": {
+        "firstRawOutputMs": 1488,
+        "firstSpokenMs": 1494.3,
+        "firstSyntheticAudioMs": 1739.2,
+        "generationCompleteMs": 3581.2,
+        "boardReadyMs": 3581.8
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1840,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "Here’s the sentence with each clause marked in reading order.",
+        "board": {
+          "title": "Clause annotation",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 280,
+              "objects": [
+                {
+                  "id": "sentence",
+                  "type": "text",
+                  "x": 60,
+                  "y": 70,
+                  "width": 680,
+                  "height": 45,
+                  "text": "Although it was raining, Maya walked to class.",
+                  "fontSize": 28
+                },
+                {
+                  "id": "dependent-mark",
+                  "type": "polyline",
+                  "points": [
+                    [
+                      60,
+                      125
+                    ],
+                    [
+                      345,
+                      125
+                    ]
+                  ],
+                  "tone": "accent"
+                },
+                {
+                  "id": "main-mark",
+                  "type": "polyline",
+                  "points": [
+                    [
+                      365,
+                      125
+                    ],
+                    [
+                      690,
+                      125
+                    ]
+                  ],
+                  "tone": "ink"
+                },
+                {
+                  "id": "dependent-label",
+                  "type": "text",
+                  "x": 105,
+                  "y": 155,
+                  "width": 220,
+                  "height": 32,
+                  "text": "dependent clause",
+                  "fontSize": 22,
+                  "tone": "accent"
+                },
+                {
+                  "id": "main-label",
+                  "type": "text",
+                  "x": 420,
+                  "y": 155,
+                  "width": 180,
+                  "height": 32,
+                  "text": "main clause",
+                  "fontSize": 22,
+                  "tone": "ink"
+                }
+              ],
+              "zones": [
+                {
+                  "id": "dependent-clause",
+                  "label": "dependent clause",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "sentence",
+                    "quote": "Although it was raining",
+                    "occurrence": 0
+                  }
+                },
+                {
+                  "id": "main-clause",
+                  "label": "main clause",
+                  "anchor": {
+                    "kind": "object",
+                    "id": "sentence",
+                    "quote": "Maya walked to class.",
+                    "occurrence": 0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1488,
+          "totalMs": 3581,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Clause annotation",
+        "revision": "da016924-591d-4368-ac96-b5482f1b1eb6",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 280,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 60,
+                "y": 70,
+                "width": 680,
+                "height": 45,
+                "text": "Although it was raining, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dependent-mark",
+                "type": "polyline",
+                "points": [
+                  [
+                    60,
+                    125
+                  ],
+                  [
+                    345,
+                    125
+                  ]
+                ],
+                "tone": "accent"
+              },
+              {
+                "id": "main-mark",
+                "type": "polyline",
+                "points": [
+                  [
+                    365,
+                    125
+                  ],
+                  [
+                    690,
+                    125
+                  ]
+                ],
+                "tone": "ink"
+              },
+              {
+                "id": "dependent-label",
+                "type": "text",
+                "x": 105,
+                "y": 155,
+                "width": 220,
+                "height": 32,
+                "text": "dependent clause",
+                "fontSize": 22,
+                "tone": "accent"
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 420,
+                "y": 155,
+                "width": 180,
+                "height": 32,
+                "text": "main clause",
+                "fontSize": 22,
+                "tone": "ink"
+              }
+            ],
+            "zones": [
+              {
+                "id": "dependent-clause",
+                "label": "dependent clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Although it was raining",
+                  "occurrence": 0
+                }
+              },
+              {
+                "id": "main-clause",
+                "label": "main clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Maya walked to class.",
+                  "occurrence": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Clause annotation",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 280,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 60,
+                "y": 70,
+                "width": 680,
+                "height": 45,
+                "text": "Although it was raining, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dependent-mark",
+                "type": "polyline",
+                "points": [
+                  [
+                    60,
+                    125
+                  ],
+                  [
+                    345,
+                    125
+                  ]
+                ],
+                "tone": "accent"
+              },
+              {
+                "id": "main-mark",
+                "type": "polyline",
+                "points": [
+                  [
+                    365,
+                    125
+                  ],
+                  [
+                    690,
+                    125
+                  ]
+                ],
+                "tone": "ink"
+              },
+              {
+                "id": "dependent-label",
+                "type": "text",
+                "x": 105,
+                "y": 155,
+                "width": 220,
+                "height": 32,
+                "text": "dependent clause",
+                "fontSize": 22,
+                "tone": "accent"
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 420,
+                "y": 155,
+                "width": 180,
+                "height": 32,
+                "text": "main clause",
+                "fontSize": 22,
+                "tone": "ink"
+              }
+            ],
+            "zones": [
+              {
+                "id": "dependent-clause",
+                "label": "dependent clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Although it was raining",
+                  "occurrence": 0
+                }
+              },
+              {
+                "id": "main-clause",
+                "label": "main clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Maya walked to class.",
+                  "occurrence": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 1067,
+      "wireBoardBytes": 978,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:22:41.303Z"
+    },
+    {
+      "id": "object-patch-production-final-1",
+      "scenario": "object-patch",
+      "condition": "production-final",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-object-patch",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Same established scene\",\"targetId\":\"block\",\"currentObject\":{\"id\":\"block\",\"type\":\"rect\",\"x\":340,\"y\":220,\"width\":120,\"height\":80,\"label\":\"block\"},\"change\":{\"y\":232}}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "object-patch",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-object-patch"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Keep this exact physics board visible. Change only object block: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+          }
+        ],
+        "currentProblem": {
+          "title": "object-patch",
+          "request": "Keep this exact physics board visible. Change only object block: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+        },
+        "whiteboardContext": {
+          "visible": true,
+          "board": {
+            "title": "Forces on a block",
+            "revision": "db8db8d4-b043-426a-918f-010533e4f264",
+            "blocks": [
+              {
+                "id": "world",
+                "type": "scene",
+                "width": 800,
+                "height": 500,
+                "objects": [
+                  {
+                    "id": "surface",
+                    "type": "line",
+                    "x1": 120,
+                    "y1": 300,
+                    "x2": 680,
+                    "y2": 300
+                  },
+                  {
+                    "id": "block",
+                    "type": "rect",
+                    "x": 340,
+                    "y": 220,
+                    "width": 120,
+                    "height": 80,
+                    "label": "block"
+                  },
+                  {
+                    "id": "force-N",
+                    "type": "arrow",
+                    "x1": 400,
+                    "y1": 220,
+                    "x2": 400,
+                    "y2": 120,
+                    "label": "N"
+                  },
+                  {
+                    "id": "force-mg",
+                    "type": "arrow",
+                    "x1": 400,
+                    "y1": 300,
+                    "x2": 400,
+                    "y2": 400,
+                    "label": "mg"
+                  },
+                  {
+                    "id": "force-F",
+                    "type": "arrow",
+                    "x1": 460,
+                    "y1": 260,
+                    "x2": 590,
+                    "y2": 260,
+                    "label": "F"
+                  },
+                  {
+                    "id": "force-f",
+                    "type": "arrow",
+                    "x1": 340,
+                    "y1": 260,
+                    "x2": 210,
+                    "y2": 260,
+                    "label": "f"
+                  }
+                ]
+              },
+              {
+                "id": "eq-y",
+                "type": "latex",
+                "content": "\\Sigma F_y = N - mg = 0"
+              },
+              {
+                "id": "eq-x",
+                "type": "latex",
+                "content": "\\Sigma F_x = F - f = ma"
+              }
+            ]
+          },
+          "title": "Forces on a block",
+          "text": "block\nN\nmg\nF\nf\n\\Sigma F_y = N - mg = 0\n\\Sigma F_x = F - f = ma"
+        }
+      },
+      "inputSha256": "b6b84f8558a88425ededf2ee443c8d999f773b382a933840ee7a6b58b8b82c40",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>I’ll move only the block downward by 12 pixels.</say><board>{\"title\":\"Forces on a block\",\"mode\":\"patch\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"block\",\"type\":\"rect\",\"x\":340,\"y\":232,\"width\":120,\"height\":80,\"label\":\"block\"}]}]}</board>",
+      "usage": {
+        "input_tokens": 2986,
+        "input_tokens_details": {
+          "cache_write_tokens": 593,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 88,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3074
+      },
+      "latencies": {
+        "firstRawOutputMs": 820.2,
+        "firstSpokenMs": 821.4,
+        "firstSyntheticAudioMs": 1057.1,
+        "generationCompleteMs": 1474.7,
+        "boardReadyMs": 1493.7
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true,
+        "priorObjectIdsRetained": true,
+        "onlyTargetChanged": true,
+        "patchNotReplacement": true,
+        "requestedPosition": true,
+        "patchIsSparse": true
+      },
+      "inputBytes": 2340,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "I’ll move only the block downward by 12 pixels.",
+        "board": {
+          "title": "Forces on a block",
+          "mode": "patch",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "block",
+                  "type": "rect",
+                  "x": 340,
+                  "y": 232,
+                  "width": 120,
+                  "height": 80,
+                  "label": "block"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 820,
+          "totalMs": 1479,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Forces on a block",
+        "revision": "7fcfa8a3-96c2-452f-b9c1-165db50b479f",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 300,
+                "x2": 680,
+                "y2": 300
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 232,
+                "width": 120,
+                "height": 80,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 220,
+                "x2": 400,
+                "y2": 120,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 300,
+                "x2": 400,
+                "y2": 400,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 460,
+                "y1": 260,
+                "x2": 590,
+                "y2": 260,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 340,
+                "y1": 260,
+                "x2": 210,
+                "y2": 260,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Forces on a block",
+        "mode": "patch",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 232,
+                "width": 120,
+                "height": 80,
+                "label": "block"
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 282,
+      "wireBoardBytes": 207,
+      "requiresManualVisualReview": true,
+      "objectDiff": [
+        {
+          "id": "surface",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "block",
+          "preserved": true,
+          "unchanged": false
+        },
+        {
+          "id": "force-N",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "force-mg",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "force-F",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "force-f",
+          "preserved": true,
+          "unchanged": true
+        }
+      ],
+      "finishedAt": "2026-10-02T08:23:15.287Z"
+    },
+    {
+      "id": "object-patch-production-final-2",
+      "scenario": "object-patch",
+      "condition": "production-final",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-object-patch",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Same established scene\",\"targetId\":\"block\",\"currentObject\":{\"id\":\"block\",\"type\":\"rect\",\"x\":340,\"y\":190,\"width\":120,\"height\":90,\"label\":\"block\"},\"change\":{\"y\":202}}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "object-patch",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-object-patch"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Keep this exact physics board visible. Change only object block: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+          }
+        ],
+        "currentProblem": {
+          "title": "object-patch",
+          "request": "Keep this exact physics board visible. Change only object block: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+        },
+        "whiteboardContext": {
+          "visible": true,
+          "board": {
+            "title": "Forces on a block",
+            "revision": "fcfc274c-ed5a-4a20-9087-d391838bb367",
+            "blocks": [
+              {
+                "id": "world",
+                "type": "scene",
+                "width": 800,
+                "height": 500,
+                "objects": [
+                  {
+                    "id": "surface",
+                    "type": "line",
+                    "x1": 120,
+                    "y1": 280,
+                    "x2": 680,
+                    "y2": 280,
+                    "label": "horizontal surface"
+                  },
+                  {
+                    "id": "block",
+                    "type": "rect",
+                    "x": 340,
+                    "y": 190,
+                    "width": 120,
+                    "height": 90,
+                    "label": "block"
+                  },
+                  {
+                    "id": "force-N",
+                    "type": "arrow",
+                    "x1": 400,
+                    "y1": 235,
+                    "x2": 400,
+                    "y2": 95,
+                    "label": "N"
+                  },
+                  {
+                    "id": "force-mg",
+                    "type": "arrow",
+                    "x1": 400,
+                    "y1": 235,
+                    "x2": 400,
+                    "y2": 390,
+                    "label": "mg"
+                  },
+                  {
+                    "id": "force-F",
+                    "type": "arrow",
+                    "x1": 400,
+                    "y1": 235,
+                    "x2": 590,
+                    "y2": 235,
+                    "label": "F"
+                  },
+                  {
+                    "id": "force-f",
+                    "type": "arrow",
+                    "x1": 400,
+                    "y1": 235,
+                    "x2": 210,
+                    "y2": 235,
+                    "label": "f"
+                  }
+                ]
+              },
+              {
+                "id": "eq-y",
+                "type": "latex",
+                "content": "\\Sigma F_y = N - mg = 0"
+              },
+              {
+                "id": "eq-x",
+                "type": "latex",
+                "content": "\\Sigma F_x = F - f = ma"
+              }
+            ]
+          },
+          "title": "Forces on a block",
+          "text": "horizontal surface\nblock\nN\nmg\nF\nf\n\\Sigma F_y = N - mg = 0\n\\Sigma F_x = F - f = ma"
+        }
+      },
+      "inputSha256": "c5554af1a91281c7e803bb9f7aeee5733a7e6e9714b11a9b9a706e75385cd197",
+      "instructionSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "raw": "<say>The block moves 12 pixels downward; everything else stays fixed.</say><board>{\"title\":\"Forces on a block\",\"mode\":\"patch\",\"blocks\":[{\"id\":\"world\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"block\",\"type\":\"rect\",\"x\":340,\"y\":202,\"width\":120,\"height\":90,\"label\":\"block\"}]}]}</board>",
+      "usage": {
+        "input_tokens": 2992,
+        "input_tokens_details": {
+          "cache_write_tokens": 599,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 123,
+        "output_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "total_tokens": 3115
+      },
+      "latencies": {
+        "firstRawOutputMs": 1240.1,
+        "firstSpokenMs": 1273.3,
+        "firstSyntheticAudioMs": 1519.1,
+        "generationCompleteMs": 1956.1,
+        "boardReadyMs": 1958
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true,
+        "priorObjectIdsRetained": true,
+        "onlyTargetChanged": true,
+        "patchNotReplacement": true,
+        "requestedPosition": true,
+        "patchIsSparse": true
+      },
+      "inputBytes": 2393,
+      "instructionBytes": 11955,
+      "httpStatus": 200,
+      "serviceTier": "default",
+      "result": {
+        "reply": "The block moves 12 pixels downward; everything else stays fixed.",
+        "board": {
+          "title": "Forces on a block",
+          "mode": "patch",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "block",
+                  "type": "rect",
+                  "x": 340,
+                  "y": 202,
+                  "width": 120,
+                  "height": 90,
+                  "label": "block"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1240,
+          "totalMs": 1956,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Forces on a block",
+        "revision": "1aa739e5-9a1d-4fbf-9e0b-a03631ca4deb",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 280,
+                "x2": 680,
+                "y2": 280,
+                "label": "horizontal surface"
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 202,
+                "width": 120,
+                "height": 90,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 95,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 390,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 590,
+                "y2": 235,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 210,
+                "y2": 235,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Forces on a block",
+        "mode": "patch",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 202,
+                "width": 120,
+                "height": 90,
+                "label": "block"
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 297,
+      "wireBoardBytes": 207,
+      "requiresManualVisualReview": true,
+      "objectDiff": [
+        {
+          "id": "surface",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "block",
+          "preserved": true,
+          "unchanged": false
+        },
+        {
+          "id": "force-N",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "force-mg",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "force-F",
+          "preserved": true,
+          "unchanged": true
+        },
+        {
+          "id": "force-f",
+          "preserved": true,
+          "unchanged": true
+        }
+      ],
+      "finishedAt": "2026-10-02T08:23:17.251Z"
+    }
+  ],
+  "methodology": {
+    "pairs": "Three paired identical-input blank8×10 requests. Alternating baseline/compact order. Both use the full saved baseline instructions; only two matrix wire-syntax fragments change. Current production prompt is used only for separate generic scene cases.",
+    "clock": "Prepared context through production OpenAI streaming adapter/decoder and canonical board merge. Shared provider lock acquisition excluded. Browser render is measured separately offline. No STT, Jev, retrieval or actual ElevenLabs request.",
+    "syntheticAudio": "Production speech text buffer plus fixed100ms timer. This is a synthetic dispatch marker, not an estimate of real ElevenLabs latency.",
+    "continuity": "Canonical question ID and exact spoken wording are checked; no grade is inferred from drawing. Full live routing, grading and cancellation are verified by separate production lifecycle tests.",
+    "patch": "One real object-update request on the previously generated physics scene; unchanged object IDs/content are compared after production merging.",
+    "finalFollowup": "Two rounds of the same four public subject fixtures and same sparse physics-object edit after prompt and schema fixes. Original eleven requests remain immutable; no matrix pairs rerun.",
+    "patchTargetAdaptation": "Both final physics outputs put equations in separate LaTeX blocks; with no scene text/math object, the remaining two authorized calls move the existing block rectangle down 12px. Other objects and blocks must stay unchanged."
+  },
+  "patchSkipped": "No valid generated physics scene/object to patch.",
+  "finishedAt": "2026-10-02T08:23:17.254Z"
+}

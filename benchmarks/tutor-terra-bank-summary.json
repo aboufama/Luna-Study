@@ -1,0 +1,588 @@
+{
+  "startedAt": "2026-10-02T07:28:47.289Z",
+  "finishedAt": "2026-10-02T07:29:28.821Z",
+  "budget": {
+    "maxPaidHttpRequests": 70,
+    "maxPerProvider": {
+      "openai": 30,
+      "jev": 40
+    },
+    "used": 42,
+    "openai": 15,
+    "jev": 27
+  },
+  "evaluationAudit": [
+    {
+      "scenario": "source-payoff",
+      "round": 2,
+      "check": "payoffTupleCorrect",
+      "raw": false,
+      "evaluated": true,
+      "reason": "The original evaluator only accepted a contiguous tuple. The saved reply explicitly gives the same correct values for players 1, 2, and 3 in order.",
+      "evidence": "The payoffs are 1 for player 1, 6 for player 2, and 1 for player 3."
+    },
+    {
+      "scenario": "source-payoff",
+      "round": 3,
+      "check": "payoffTupleCorrect",
+      "raw": false,
+      "evaluated": true,
+      "reason": "The original evaluator only accepted a contiguous tuple. The saved reply explicitly gives the same correct values for players 1, 2, and 3 in order.",
+      "evidence": "The payoffs are 1 for player 1, 6 for player 2, and 1 for player 3."
+    }
+  ],
+  "trials": 12,
+  "completed": 12,
+  "allChecksPassed": 12,
+  "exactBilledUsd": null,
+  "estimatedUsd": 0.178933034,
+  "estimatePartial": true,
+  "incompleteProviderOperations": [
+    {
+      "round": 1,
+      "scenario": "source-payoff",
+      "operation": "material-prefetch",
+      "provider": "typesafe",
+      "status": "failed",
+      "measuredUnits": {}
+    }
+  ],
+  "medianFirstTextMs": 1548.1,
+  "medianSyntheticAudioMs": 1722.85,
+  "medianTextCompleteMs": 2328.3,
+  "medianContextBytes": 17364,
+  "unitsByModel": {
+    "jev-latest": {
+      "operations": 12,
+      "inputTokens": 90883,
+      "outputTokens": 7271,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "reasoningTokens": 0
+    },
+    "gpt-5.6-terra": {
+      "operations": 12,
+      "inputTokens": 87623,
+      "outputTokens": 1511,
+      "cachedInputTokens": 28699,
+      "cacheWriteTokens": 58888,
+      "reasoningTokens": 341
+    },
+    "jev-1.13.0": {
+      "operations": 15,
+      "inputTokens": 17134,
+      "outputTokens": 366,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "reasoningTokens": 0
+    },
+    "gpt-6-luna": {
+      "operations": 3,
+      "inputTokens": 25639,
+      "outputTokens": 622,
+      "cachedInputTokens": 2462,
+      "cacheWriteTokens": 23168,
+      "reasoningTokens": 262
+    }
+  },
+  "runs": [
+    {
+      "scenario": "source-payoff",
+      "round": 1,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "payoffTupleCorrect": true,
+        "noUnrequestedBoard": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1951.6,
+        "modelReportedFirstTextMs": 1094,
+        "committedTranscriptToSyntheticAudioMs": 2195.9,
+        "committedTranscriptToTextCompleteMs": 2191.8,
+        "committedTranscriptToBoardMs": null,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "71c521fe-ba19-430d-9a26-130cf44f53a1",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 22222,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.023026202,
+        "partial": true,
+        "estimatedOperations": 2,
+        "unestimatedOperations": 1
+      }
+    },
+    {
+      "scenario": "blank-grid",
+      "round": 1,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1607.7,
+        "modelReportedFirstTextMs": 1423,
+        "committedTranscriptToSyntheticAudioMs": 1708.2,
+        "committedTranscriptToTextCompleteMs": 2148.3,
+        "committedTranscriptToBoardMs": 2284.5,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "a146d04a-d34c-4ff5-b22e-c65ca0bc198f",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 17476,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.015443664,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "scene-switch",
+      "round": 1,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "stalePayoffRemoved": true,
+        "cityDiagramShown": true,
+        "trialPositionsGeometricallyCorrect": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1429.8,
+        "modelReportedFirstTextMs": 1234,
+        "committedTranscriptToSyntheticAudioMs": 1675.5,
+        "committedTranscriptToTextCompleteMs": 2464.8,
+        "committedTranscriptToBoardMs": 2603.8,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "5e444148-b2a9-4a4c-8c79-4f9de336e9d0",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 13338,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.01320448,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "answer-feedback",
+      "round": 1,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "boundFeedbackPresent": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 2019.9,
+        "modelReportedFirstTextMs": 1829,
+        "committedTranscriptToSyntheticAudioMs": 2727.6,
+        "committedTranscriptToTextCompleteMs": 3123.8,
+        "committedTranscriptToBoardMs": 6396.2,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "6fbb5219-9a06-4189-8ef1-f6a73ed83064",
+      "openaiRequests": 2,
+      "jevRequests": 3,
+      "recoveryRequests": 1,
+      "firstContextBytes": 17364,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.015933222,
+        "partial": false,
+        "estimatedOperations": 5,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "source-payoff",
+      "round": 2,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "payoffTupleCorrect": true,
+        "noUnrequestedBoard": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1136.6,
+        "modelReportedFirstTextMs": 959,
+        "committedTranscriptToSyntheticAudioMs": 1414.7,
+        "committedTranscriptToTextCompleteMs": 1414.7,
+        "committedTranscriptToBoardMs": null,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "4a50bfbd-d126-4417-89d3-be320ae5bdc8",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 12166,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.01050245,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "blank-grid",
+      "round": 2,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 2345.3,
+        "modelReportedFirstTextMs": 2143,
+        "committedTranscriptToSyntheticAudioMs": 2446.7,
+        "committedTranscriptToTextCompleteMs": 3133.9,
+        "committedTranscriptToBoardMs": 3260.3,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "5de67e96-0a1b-4de9-ad2b-7b3a3e274e0a",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 17476,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.015707164,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "scene-switch",
+      "round": 2,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "stalePayoffRemoved": true,
+        "cityDiagramShown": true,
+        "trialPositionsGeometricallyCorrect": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 827.5,
+        "modelReportedFirstTextMs": 645,
+        "committedTranscriptToSyntheticAudioMs": 1184.9,
+        "committedTranscriptToTextCompleteMs": 2172.5,
+        "committedTranscriptToBoardMs": 2320.1,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "b519683c-eed3-40ee-ac4f-69b0a3a7dd14",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 13338,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.013271652,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "answer-feedback",
+      "round": 2,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "boundFeedbackPresent": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 2794.7,
+        "modelReportedFirstTextMs": 2597,
+        "committedTranscriptToSyntheticAudioMs": 2912.2,
+        "committedTranscriptToTextCompleteMs": 3539.7,
+        "committedTranscriptToBoardMs": 6021,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "6715ddc8-42e2-4f24-80c3-65f1eb7b6a45",
+      "openaiRequests": 2,
+      "jevRequests": 3,
+      "recoveryRequests": 1,
+      "firstContextBytes": 17364,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.016740641,
+        "partial": false,
+        "estimatedOperations": 5,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "source-payoff",
+      "round": 3,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "payoffTupleCorrect": true,
+        "noUnrequestedBoard": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 786.5,
+        "modelReportedFirstTextMs": 579,
+        "committedTranscriptToSyntheticAudioMs": 1042.3,
+        "committedTranscriptToTextCompleteMs": 1029.4,
+        "committedTranscriptToBoardMs": null,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "a5041159-edd0-47ad-a87a-192fa2490afd",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 12166,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.01048745,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "blank-grid",
+      "round": 3,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "bankIdResolvedWithoutPrivateAnswer": true,
+        "bankConsumedByIdExactlyOnce": true,
+        "askProtocolReturnedCanonicalId": true,
+        "questionUnavailableAfterConsumption": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1900.2,
+        "modelReportedFirstTextMs": 1697,
+        "committedTranscriptToSyntheticAudioMs": 2000.4,
+        "committedTranscriptToTextCompleteMs": 2507.9,
+        "committedTranscriptToBoardMs": 2635,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "135717a0-c1fe-400d-b5d2-7b63e69f3721",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 17476,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.015647164,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "scene-switch",
+      "round": 3,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "stalePayoffRemoved": true,
+        "cityDiagramShown": true,
+        "trialPositionsGeometricallyCorrect": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1488.5,
+        "modelReportedFirstTextMs": 1316,
+        "committedTranscriptToSyntheticAudioMs": 1737.5,
+        "committedTranscriptToTextCompleteMs": 4492.1,
+        "committedTranscriptToBoardMs": 4668.1,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "b30ab1e4-1688-4bf8-811a-e721d74e12fc",
+      "openaiRequests": 1,
+      "jevRequests": 2,
+      "recoveryRequests": 0,
+      "firstContextBytes": 13338,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.013225816,
+        "partial": false,
+        "estimatedOperations": 3,
+        "unestimatedOperations": 0
+      }
+    },
+    {
+      "scenario": "answer-feedback",
+      "round": 3,
+      "status": "completed",
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "answerEligibleExactlyOnce": true,
+        "firstAttemptUnassisted": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "boundFeedbackPresent": true
+      },
+      "failedChecks": [],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1387.1,
+        "modelReportedFirstTextMs": 1195,
+        "committedTranscriptToSyntheticAudioMs": 1494.1,
+        "committedTranscriptToTextCompleteMs": 1949.5,
+        "committedTranscriptToBoardMs": 4460.6,
+        "committedTranscriptToHideMs": null
+      },
+      "canonicalQuestionId": "f2df7df8-da0b-4674-9a5c-9bf61a95b160",
+      "openaiRequests": 2,
+      "jevRequests": 3,
+      "recoveryRequests": 1,
+      "firstContextBytes": 17364,
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.015743129,
+        "partial": false,
+        "estimatedOperations": 5,
+        "unestimatedOperations": 0
+      }
+    }
+  ]
+}

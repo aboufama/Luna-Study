@@ -1,0 +1,4956 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T07:12:48.626Z",
+  "liveProviders": true,
+  "baseline": "/Users/andreboufama/Documents/Luna-Study/benchmarks/baselines/tutor-before-retrieval",
+  "source": {
+    "name": "Problem Set 3 Econ 2801 2026.pdf",
+    "sha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+    "pages": 2,
+    "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+    "corpus": [
+      {
+        "id": "econ2801-pset3",
+        "name": "Problem Set 3 Econ 2801 2026.pdf",
+        "characters": 4366,
+        "textSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b"
+      },
+      {
+        "id": "econ2801-pset2-solutions",
+        "name": "Problem_Set_2_Detailed_Answer_Discussion_Fall_2026_ECON_2801.pdf",
+        "characters": 10412,
+        "textSha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a"
+      },
+      {
+        "id": "econ2801-pset5-solutions",
+        "name": "Solution_Problem_Set_5_Fall_2026_ECON_2801__Corrected_.pdf",
+        "characters": 10903,
+        "textSha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180"
+      }
+    ],
+    "totalCharacters": 25681
+  },
+  "budget": {
+    "maxPaidHttpRequests": 36,
+    "maxPerProvider": {
+      "openai": 16,
+      "jev": 20
+    },
+    "used": 31,
+    "openai": 13,
+    "jev": 18
+  },
+  "boundaries": [
+    "Real loopback WebSocket client and selected production attachLiveVoice/adapter; live mode uses real OpenAI plus Jev retrieval and canvas decisions.",
+    "ElevenLabs STT is simulated using exact committed_transcript messages. A synthetic 100 ms delay produces counted silent PCM output; no microphone, speaker, voice provider, or audio file is used.",
+    "Greeting/history priming and follow-up grading are explicit fixtures. Student intent and grade verdict are simulated, so no claims about STT accuracy, Jev intent classification, or grading accuracy.",
+    "Synthetic audio latency is pipeline timing plus the fixed fixture delay, not an estimate or measurement of ElevenLabs latency.",
+    "One trial per source scenario/condition; this is a small integrated case study, not a quality benchmark or production percentile.",
+    "No provider dollars are fabricated; reported token counts and billed dollars remain separate."
+  ],
+  "conditions": [
+    {
+      "id": "after-luna",
+      "model": "gpt-6-luna",
+      "root": "/Users/andreboufama/Documents/Luna-Study/",
+      "files": [
+        {
+          "file": "server/live-voice.mjs",
+          "sha256": "170c52ecf10cbec49d1230b79b953255d42b91af495c74abad5a27ac65c16a92"
+        },
+        {
+          "file": "server/openai-luna.mjs",
+          "sha256": "7fa113f14797a4e70fd32a42f18f5701bbbf936216a423bb1022772d159d6515"
+        },
+        {
+          "file": "server/luna-fast.mjs",
+          "sha256": "1761216837fa2798e8d4ffd1422234e805f575103b2e2ca7fb6f34750b06a9bc"
+        },
+        {
+          "file": "server/tutor-output.mjs",
+          "sha256": "39f9b08a0c5f1010eb71beb66f189a3b5f55da07ee6723259b77e152d5c77667"
+        }
+      ],
+      "additionalSourceHashesAfterRun": {
+        "capturedAt": "2026-10-02T07:14:19.808Z",
+        "note": "Production files held stable during this run; these additional files were hashed immediately after completion.",
+        "files": [
+          {
+            "file": "server/material-retrieval.mjs",
+            "sha256": "375708ff2d4e097760f64aa4480385a8af9d5434e5f9eb021e622056db19187f"
+          },
+          {
+            "file": "server/tutor-context.mjs",
+            "sha256": "c91731e8d4c17c8f25c164cb93e8df834685c1e85d3773fa163c0b8be35ce857"
+          }
+        ]
+      }
+    },
+    {
+      "id": "after-terra",
+      "model": "gpt-5.6-terra",
+      "root": "/Users/andreboufama/Documents/Luna-Study/",
+      "files": [
+        {
+          "file": "server/live-voice.mjs",
+          "sha256": "170c52ecf10cbec49d1230b79b953255d42b91af495c74abad5a27ac65c16a92"
+        },
+        {
+          "file": "server/openai-luna.mjs",
+          "sha256": "7fa113f14797a4e70fd32a42f18f5701bbbf936216a423bb1022772d159d6515"
+        },
+        {
+          "file": "server/luna-fast.mjs",
+          "sha256": "1761216837fa2798e8d4ffd1422234e805f575103b2e2ca7fb6f34750b06a9bc"
+        },
+        {
+          "file": "server/tutor-output.mjs",
+          "sha256": "39f9b08a0c5f1010eb71beb66f189a3b5f55da07ee6723259b77e152d5c77667"
+        }
+      ],
+      "additionalSourceHashesAfterRun": {
+        "capturedAt": "2026-10-02T07:14:19.809Z",
+        "note": "Production files held stable during this run; these additional files were hashed immediately after completion.",
+        "files": [
+          {
+            "file": "server/material-retrieval.mjs",
+            "sha256": "375708ff2d4e097760f64aa4480385a8af9d5434e5f9eb021e622056db19187f"
+          },
+          {
+            "file": "server/tutor-context.mjs",
+            "sha256": "c91731e8d4c17c8f25c164cb93e8df834685c1e85d3773fa163c0b8be35ce857"
+          }
+        ]
+      }
+    }
+  ],
+  "runs": [
+    {
+      "condition": "after-luna",
+      "model": "gpt-6-luna",
+      "scenario": "source-payoff",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 1.2,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 326
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 344.9,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 11674,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5",
+              "q6"
+            ],
+            "bankSha256": "8efe51a95eb1b7d20d107e464eb9e63939ad8c6865b11e35d60503de3383f218",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 3894,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": false,
+              "scene-switch": true,
+              "answer-feedback": false
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 1015.4
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 1760.1,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "toolRound": true,
+            "inputBytes": 18824,
+            "toolResults": [
+              {
+                "sourceIds": [
+                  "econ2801-pset3"
+                ],
+                "sourceCharacters": 4366,
+                "evidence": {
+                  "source-payoff": true,
+                  "blank-grid": true,
+                  "scene-switch": true,
+                  "answer-feedback": true
+                },
+                "status": "selected"
+              }
+            ]
+          },
+          "headersMs": 2141.8
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 3014.8,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 3184.9
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 2745.3,
+        "modelReportedFirstTextMs": 2405,
+        "committedTranscriptToSyntheticAudioMs": 3037.5,
+        "committedTranscriptToTextCompleteMs": 3017.9,
+        "committedTranscriptToBoardMs": null,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "payoffTupleCorrect": true,
+        "noUnrequestedBoard": true
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 0
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:12:48.674Z",
+      "reply": "When player one chooses U, player two chooses R, and player three chooses B, their payoffs, in player order, are one, six, and one.",
+      "board": null,
+      "boardMessages": [],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.3
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_fd07264e74ceee731ca09fc53ae6",
+              "c_2cb2bc8613af8ba4110abcf191d5"
+            ],
+            "sourceIds": [
+              "econ2801-pset3"
+            ],
+            "sourceCount": 1,
+            "total": 2,
+            "characters": 3892,
+            "latencyMs": 339,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 339.1
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-6-luna",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 340.1
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 3894,
+            "contextCharacters": 11650,
+            "historyCharacters": 1143,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2050,
+            "reason": "selected"
+          },
+          "atMs": 340.9
+        },
+        {
+          "type": "retrieval.tool-read",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "operation": "search_materials",
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_fd07264e74ceee731ca09fc53ae6",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_b7142dcf8e923a3b0d08755d4883"
+            ],
+            "reason": "selected",
+            "characters": 4366,
+            "total": 3
+          },
+          "atMs": 1759.5
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "latencyMs": 2405
+          },
+          "atMs": 2745.1
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reply": "When player one chooses U, player two chooses R, and player three chooses B, their payoffs, in player order, are one, six, and one.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 2672
+          },
+          "atMs": 3012
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "When player one chooses U, player two chooses R, and player three chooses B, their payoffs, in player order, are one, six, and one."
+          },
+          "atMs": 3012.5
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "latencyMs": 2696
+          },
+          "atMs": 3036.7
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 132,
+            "outputAudioMs": 10
+          },
+          "atMs": 3037.2
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "verbal-explanation",
+            "source": "jev",
+            "probability": 0.13,
+            "latencyMs": 174,
+            "visible": false,
+            "hasBoard": false
+          },
+          "atMs": 3187.1
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "no-new-visual"
+          },
+          "atMs": 3187.2
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "d41d47f4-e268-42ac-b86e-d86c6ca209f5",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8330,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-6-luna",
+          "testId": "d41d47f4-e268-42ac-b86e-d86c6ca209f5",
+          "status": "completed",
+          "units": {
+            "inputTokens": 5885,
+            "outputTokens": 85,
+            "cachedInputTokens": 0,
+            "cacheWriteTokens": 5882,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor-retrieval",
+          "model": "gpt-6-luna",
+          "testId": "d41d47f4-e268-42ac-b86e-d86c6ca209f5",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7647,
+            "outputTokens": 42,
+            "cachedInputTokens": 5882,
+            "cacheWriteTokens": 1762,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "d41d47f4-e268-42ac-b86e-d86c6ca209f5",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1009,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 1,
+      "finishedAt": "2026-10-02T07:12:51.905Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.001470658,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-6-luna"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 13532,
+        "outputTokens": 127,
+        "cachedInputTokens": 5882,
+        "cacheWriteTokens": 7644,
+        "reasoningTokens": 0
+      }
+    },
+    {
+      "condition": "after-terra",
+      "model": "gpt-5.6-terra",
+      "scenario": "source-payoff",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 1.7,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 179.6
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "startedMs": 184.2,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 11674,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5",
+              "q6"
+            ],
+            "bankSha256": "8efe51a95eb1b7d20d107e464eb9e63939ad8c6865b11e35d60503de3383f218",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 3894,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": false,
+              "scene-switch": true,
+              "answer-feedback": false
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 573.8
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 1150.6,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 1310.9
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 883.2,
+        "modelReportedFirstTextMs": 700,
+        "committedTranscriptToSyntheticAudioMs": 1146.6,
+        "committedTranscriptToTextCompleteMs": 1153.2,
+        "committedTranscriptToBoardMs": null,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "payoffTupleCorrect": true,
+        "noUnrequestedBoard": true
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 0
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:12:51.941Z",
+      "reply": "The payoffs, in player order, are one, six, one.",
+      "board": null,
+      "boardMessages": [],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.3
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_fd07264e74ceee731ca09fc53ae6",
+              "c_2cb2bc8613af8ba4110abcf191d5"
+            ],
+            "sourceIds": [
+              "econ2801-pset3"
+            ],
+            "sourceCount": 1,
+            "total": 2,
+            "characters": 3892,
+            "latencyMs": 182,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 181.9
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 182.6
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 3894,
+            "contextCharacters": 11650,
+            "historyCharacters": 1143,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2050,
+            "reason": "selected"
+          },
+          "atMs": 183.4
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "latencyMs": 700
+          },
+          "atMs": 882.8
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "latencyMs": 963
+          },
+          "atMs": 1146.1
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reply": "The payoffs, in player order, are one, six, one.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 967
+          },
+          "atMs": 1149.6
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "The payoffs, in player order, are one, six, one."
+          },
+          "atMs": 1149.8
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 49,
+            "outputAudioMs": 10
+          },
+          "atMs": 1152.1
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "needsCanvas": false,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "verbal-explanation",
+            "source": "jev",
+            "probability": 0.11,
+            "latencyMs": 162,
+            "visible": false,
+            "hasBoard": false
+          },
+          "atMs": 1311.9
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "turnId": 13,
+          "sessionId": "fixture-source-payoff",
+          "details": {
+            "reason": "no-new-visual"
+          },
+          "atMs": 1311.9
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "e985b7c4-1db3-45ae-915c-323104b90827",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8330,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "e985b7c4-1db3-45ae-915c-323104b90827",
+          "status": "completed",
+          "units": {
+            "inputTokens": 5885,
+            "outputTokens": 23,
+            "cachedInputTokens": 0,
+            "cacheWriteTokens": 5882,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "e985b7c4-1db3-45ae-915c-323104b90827",
+          "status": "completed",
+          "units": {
+            "inputTokens": 973,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 1,
+      "finishedAt": "2026-10-02T07:12:53.296Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.015377726,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 5885,
+        "outputTokens": 23,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": 5882,
+        "reasoningTokens": 0
+      }
+    },
+    {
+      "condition": "after-luna",
+      "model": "gpt-6-luna",
+      "scenario": "blank-grid",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 1.5,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 177.8
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 181.9,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 16984,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5",
+              "q6"
+            ],
+            "bankSha256": "8efe51a95eb1b7d20d107e464eb9e63939ad8c6865b11e35d60503de3383f218",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 608.8
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 1475.2,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "toolRound": true,
+            "inputBytes": 24413,
+            "toolResults": [
+              {
+                "sourceIds": [
+                  "econ2801-pset3"
+                ],
+                "sourceCharacters": 4366,
+                "evidence": {
+                  "source-payoff": true,
+                  "blank-grid": true,
+                  "scene-switch": true,
+                  "answer-feedback": true
+                },
+                "status": "selected"
+              }
+            ]
+          },
+          "headersMs": 1755.6
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 3366.3,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 3511.8
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 3514.6,
+          "status": 200,
+          "kind": "recovery",
+          "context": {
+            "inputBytes": 27908,
+            "instructionBytes": 5635,
+            "inputKeys": [
+              "title",
+              "materials",
+              "conversation",
+              "visualRecovery"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions",
+              "econ2801-pset5-solutions"
+            ],
+            "materialChars": 25681,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": false,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 3836
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 5740.6,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 5878.2
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 2631.1,
+        "modelReportedFirstTextMs": 2450,
+        "committedTranscriptToSyntheticAudioMs": 2760.1,
+        "committedTranscriptToTextCompleteMs": 3369.1,
+        "committedTranscriptToBoardMs": 5881,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": false,
+        "noPrematureBoundAnswer": true,
+        "answerEligibleExactlyOnce": false,
+        "gradingKeptOriginalSource": false,
+        "gradingKeptEarlyConversation": false
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 0,
+        "calls": [],
+        "records": []
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:12:53.319Z",
+      "reply": "6. Consider a 2-player normal-form game in which player 1 has 8 strategies and player 2 has 10 strategies. What is the maximum number of strict Nash equilibria that this game can have? Briefly explain your answer.",
+      "board": {
+        "title": "8 × 10 Game",
+        "revision": "23a48fc3-c399-4f6d-a6f7-54b4cb02ac59",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 13,
+          "board": {
+            "title": "8 × 10 Game",
+            "revision": "23a48fc3-c399-4f6d-a6f7-54b4cb02ac59",
+            "blocks": [
+              {
+                "id": "game-grid",
+                "type": "matrix",
+                "rows": [
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 5881
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.4
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 180,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 179.7
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-6-luna",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 180.3
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 16950,
+            "historyCharacters": 1192,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2050,
+            "reason": "selected"
+          },
+          "atMs": 181.2
+        },
+        {
+          "type": "retrieval.tool-read",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "operation": "search_materials",
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_fd07264e74ceee731ca09fc53ae6",
+              "c_2cb2bc8613af8ba4110abcf191d5"
+            ],
+            "reason": "selected",
+            "characters": 4366,
+            "total": 3
+          },
+          "atMs": 1474.2
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 2450
+          },
+          "atMs": 2630.6
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 2579
+          },
+          "atMs": 2759.7
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "6. Consider a 2-player normal-form game in which player 1 has 8 strategies and player 2 has 10 strategies. What is the maximum number of strict Nash equilibria that this game can have? Briefly explain your answer.",
+            "hasBoard": false,
+            "candidateStatus": "invalid",
+            "latencyMs": 3183
+          },
+          "atMs": 3363.6
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "6. Consider a 2-player normal-form game in which player 1 has 8 strategies and player 2 has 10 strategies. What is the maximum number of strict Nash equilibria that this game can have? Briefly explain your answer."
+          },
+          "atMs": 3365.7
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 214,
+            "outputAudioMs": 10
+          },
+          "atMs": 3368.1
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.8,
+            "latencyMs": 147,
+            "visible": false,
+            "hasBoard": false
+          },
+          "atMs": 3513
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "visual-requested-without-board"
+          },
+          "atMs": 3513.1
+        },
+        {
+          "type": "whiteboard.recovery-started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "invalid-or-incomplete-visual",
+            "model": "gpt-6-luna"
+          },
+          "atMs": 3513.5
+        },
+        {
+          "type": "whiteboard.recovery-completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 2226
+          },
+          "atMs": 5739.6
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "6. Consider a 2-player normal-form game in which player 1 has 8 strategies and player 2 has 10 strategies. What is the maximum number of strict Nash equilibria that this game can have? Briefly explain your answer.",
+            "boardJson": "{\"title\":\"8 × 10 Game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 5740.1
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.81,
+            "latencyMs": 139,
+            "visible": false,
+            "hasBoard": true
+          },
+          "atMs": 5879.5
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "23a48fc3-c399-4f6d-a6f7-54b4cb02ac59",
+            "boardJson": "{\"title\":\"8 × 10 Game\",\"revision\":\"23a48fc3-c399-4f6d-a6f7-54b4cb02ac59\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 5880.2
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "990960d1-afd5-44e6-ac88-1706f9c25b0e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8194,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-6-luna",
+          "testId": "990960d1-afd5-44e6-ac88-1706f9c25b0e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7292,
+            "outputTokens": 108,
+            "cachedInputTokens": 2542,
+            "cacheWriteTokens": 4747,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor-retrieval",
+          "model": "gpt-6-luna",
+          "testId": "990960d1-afd5-44e6-ac88-1706f9c25b0e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 9078,
+            "outputTokens": 157,
+            "cachedInputTokens": 7289,
+            "cacheWriteTokens": 1786,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "990960d1-afd5-44e6-ac88-1706f9c25b0e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1059,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "whiteboard-recovery",
+          "model": "gpt-6-luna",
+          "testId": "990960d1-afd5-44e6-ac88-1706f9c25b0e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8555,
+            "outputTokens": 149,
+            "cachedInputTokens": 1224,
+            "cacheWriteTokens": 7328,
+            "reasoningTokens": 48
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "990960d1-afd5-44e6-ac88-1706f9c25b0e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1202,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 2,
+      "finishedAt": "2026-10-02T07:12:59.392Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.002490185,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-6-luna"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 24925,
+        "outputTokens": 414,
+        "cachedInputTokens": 11055,
+        "cacheWriteTokens": 13861,
+        "reasoningTokens": 48
+      }
+    },
+    {
+      "condition": "after-terra",
+      "model": "gpt-5.6-terra",
+      "scenario": "blank-grid",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 2.1,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 187.2
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "startedMs": 190.3,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 16984,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5",
+              "q6"
+            ],
+            "bankSha256": "8efe51a95eb1b7d20d107e464eb9e63939ad8c6865b11e35d60503de3383f218",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 634
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 2171.6,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 2517.1
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1366.4,
+        "modelReportedFirstTextMs": 1177,
+        "committedTranscriptToSyntheticAudioMs": 1598.9,
+        "committedTranscriptToTextCompleteMs": 2174.2,
+        "committedTranscriptToBoardMs": 2520.3,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "exactGridDimensions": true,
+        "noInventedPayoffsOrMarkedSolutions": true,
+        "exactQueuedQuestionAsked": true,
+        "noPrematureBoundAnswer": true,
+        "answerEligibleExactlyOnce": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 1,
+        "calls": [
+          {
+            "questionId": "q6",
+            "answer": "My answer is eight: strict equilibria cannot share a row or column, and eight disjoint pairs can attain it.",
+            "fullHistoryCount": 16,
+            "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+            "hasEarlyPreference": true
+          }
+        ],
+        "records": [
+          {
+            "questionId": "q6",
+            "attempt": 1,
+            "unassisted": true,
+            "checked": true
+          }
+        ]
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:12:59.424Z",
+      "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+      "board": {
+        "title": "8-by-10 normal-form game",
+        "revision": "90011c90-4374-450d-bdfb-d3a3d17d451c",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 13,
+          "board": {
+            "title": "8-by-10 normal-form game",
+            "revision": "90011c90-4374-450d-bdfb-d3a3d17d451c",
+            "blocks": [
+              {
+                "id": "game-grid",
+                "type": "matrix",
+                "rows": [
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 2520.3
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.5
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 188,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 188.2
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 188.8
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 16950,
+            "historyCharacters": 1192,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2050,
+            "reason": "selected"
+          },
+          "atMs": 189.6
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1177
+          },
+          "atMs": 1365.9
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "latencyMs": 1409
+          },
+          "atMs": 1598.2
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 1981
+          },
+          "atMs": 2169.4
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+            "boardJson": "{\"title\":\"8-by-10 normal-form game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 2169.9
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 97,
+            "outputAudioMs": 10
+          },
+          "atMs": 2173.4
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.75,
+            "latencyMs": 348,
+            "visible": false,
+            "hasBoard": true
+          },
+          "atMs": 2518.6
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 13,
+          "sessionId": "fixture-blank-grid",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "90011c90-4374-450d-bdfb-d3a3d17d451c",
+            "boardJson": "{\"title\":\"8-by-10 normal-form game\",\"revision\":\"90011c90-4374-450d-bdfb-d3a3d17d451c\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 2519
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "6f385499-bd6f-4f5a-97d2-41ea3bde33f4",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8194,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "6f385499-bd6f-4f5a-97d2-41ea3bde33f4",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7295,
+            "outputTokens": 153,
+            "cachedInputTokens": 2542,
+            "cacheWriteTokens": 4750,
+            "reasoningTokens": 27
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "6f385499-bd6f-4f5a-97d2-41ea3bde33f4",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1148,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 1,
+      "finishedAt": "2026-10-02T07:13:02.098Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.014617764,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 7295,
+        "outputTokens": 153,
+        "cachedInputTokens": 2542,
+        "cacheWriteTokens": 4750,
+        "reasoningTokens": 27
+      }
+    },
+    {
+      "condition": "after-luna",
+      "model": "gpt-6-luna",
+      "scenario": "scene-switch",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 1.7,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 186.2
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 190.3,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 12846,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "whiteboardContext",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5",
+              "q6"
+            ],
+            "bankSha256": "8efe51a95eb1b7d20d107e464eb9e63939ad8c6865b11e35d60503de3383f218",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4370,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 528.9
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 1948.5,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 2,
+          "headersMs": 2092.9
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 813.4,
+        "modelReportedFirstTextMs": 624,
+        "committedTranscriptToSyntheticAudioMs": 1097.7,
+        "committedTranscriptToTextCompleteMs": 1950.6,
+        "committedTranscriptToBoardMs": 2094.5,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "stalePayoffRemoved": true,
+        "cityDiagramShown": true,
+        "trialPositionsGeometricallyCorrect": true
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 0
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:13:02.131Z",
+      "reply": "Switching to question 4: here’s the line city with A and B at your trial positions, without solving for an equilibrium.",
+      "board": {
+        "title": "Line city",
+        "revision": "93aefa83-9b59-41b0-aaa8-e3bfa6ce7b05",
+        "blocks": [
+          {
+            "id": "city-line",
+            "type": "diagram",
+            "elements": [
+              {
+                "type": "line",
+                "x1": 10,
+                "y1": 55,
+                "x2": 90,
+                "y2": 55
+              },
+              {
+                "type": "circle",
+                "x": 26,
+                "y": 55,
+                "r": 2,
+                "label": "A"
+              },
+              {
+                "type": "circle",
+                "x": 74,
+                "y": 55,
+                "r": 2,
+                "label": "B"
+              },
+              {
+                "type": "text",
+                "x": 8,
+                "y": 68,
+                "text": "0"
+              },
+              {
+                "type": "text",
+                "x": 88,
+                "y": 68,
+                "text": "1"
+              },
+              {
+                "type": "text",
+                "x": 23,
+                "y": 68,
+                "text": "0.2"
+              },
+              {
+                "type": "text",
+                "x": 71,
+                "y": 68,
+                "text": "0.8"
+              }
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 13,
+          "board": {
+            "title": "Line city",
+            "revision": "93aefa83-9b59-41b0-aaa8-e3bfa6ce7b05",
+            "blocks": [
+              {
+                "id": "city-line",
+                "type": "diagram",
+                "elements": [
+                  {
+                    "type": "line",
+                    "x1": 10,
+                    "y1": 55,
+                    "x2": 90,
+                    "y2": 55
+                  },
+                  {
+                    "type": "circle",
+                    "x": 26,
+                    "y": 55,
+                    "r": 2,
+                    "label": "A"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 74,
+                    "y": 55,
+                    "r": 2,
+                    "label": "B"
+                  },
+                  {
+                    "type": "text",
+                    "x": 8,
+                    "y": 68,
+                    "text": "0"
+                  },
+                  {
+                    "type": "text",
+                    "x": 88,
+                    "y": 68,
+                    "text": "1"
+                  },
+                  {
+                    "type": "text",
+                    "x": 23,
+                    "y": 68,
+                    "text": "0.2"
+                  },
+                  {
+                    "type": "text",
+                    "x": 71,
+                    "y": 68,
+                    "text": "0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 2094.5
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.4
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_fd07264e74ceee731ca09fc53ae6",
+              "c_b7142dcf8e923a3b0d08755d4883"
+            ],
+            "sourceIds": [
+              "econ2801-pset3"
+            ],
+            "sourceCount": 1,
+            "total": 3,
+            "characters": 4366,
+            "latencyMs": 188,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 187.8
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-6-luna",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 188.6
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 4370,
+            "contextCharacters": 12822,
+            "historyCharacters": 1182,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2050,
+            "reason": "selected"
+          },
+          "atMs": 189.5
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "latencyMs": 624
+          },
+          "atMs": 813.1
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "latencyMs": 908
+          },
+          "atMs": 1097.1
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reply": "Switching to question 4: here’s the line city with A and B at your trial positions, without solving for an equilibrium.",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 1756
+          },
+          "atMs": 1944.8
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "diagram"
+            ],
+            "reply": "Switching to question 4: here’s the line city with A and B at your trial positions, without solving for an equilibrium.",
+            "boardJson": "{\"title\":\"Line city\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"city-line\",\"type\":\"diagram\",\"elements\":[{\"type\":\"line\",\"x1\":10,\"y1\":55,\"x2\":90,\"y2\":55},{\"type\":\"circle\",\"x\":26,\"y\":55,\"r\":2,\"label\":\"A\"},{\"type\":\"circle\",\"x\":74,\"y\":55,\"r\":2,\"label\":\"B\"},{\"type\":\"text\",\"x\":8,\"y\":68,\"text\":\"0\"},{\"type\":\"text\",\"x\":88,\"y\":68,\"text\":\"1\"},{\"type\":\"text\",\"x\":23,\"y\":68,\"text\":\"0.2\"},{\"type\":\"text\",\"x\":71,\"y\":68,\"text\":\"0.8\"}]}]}"
+          },
+          "atMs": 1945.4
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 120,
+            "outputAudioMs": 10
+          },
+          "atMs": 1949.8
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": true,
+            "replaceProbability": 0.93,
+            "reason": "different-visual-problem",
+            "source": "jev",
+            "probability": 0.77,
+            "latencyMs": 148,
+            "visible": true,
+            "hasBoard": true
+          },
+          "atMs": 2093.6
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "93aefa83-9b59-41b0-aaa8-e3bfa6ce7b05",
+            "boardJson": "{\"title\":\"Line city\",\"revision\":\"93aefa83-9b59-41b0-aaa8-e3bfa6ce7b05\",\"blocks\":[{\"id\":\"city-line\",\"type\":\"diagram\",\"elements\":[{\"type\":\"line\",\"x1\":10,\"y1\":55,\"x2\":90,\"y2\":55},{\"type\":\"circle\",\"x\":26,\"y\":55,\"r\":2,\"label\":\"A\"},{\"type\":\"circle\",\"x\":74,\"y\":55,\"r\":2,\"label\":\"B\"},{\"type\":\"text\",\"x\":8,\"y\":68,\"text\":\"0\"},{\"type\":\"text\",\"x\":88,\"y\":68,\"text\":\"1\"},{\"type\":\"text\",\"x\":23,\"y\":68,\"text\":\"0.2\"},{\"type\":\"text\",\"x\":71,\"y\":68,\"text\":\"0.8\"}]}]}"
+          },
+          "atMs": 2093.8
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "4c8fdfb0-9ccf-41ba-9341-80ab9488fb50",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8224,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-6-luna",
+          "testId": "4c8fdfb0-9ccf-41ba-9341-80ab9488fb50",
+          "status": "completed",
+          "units": {
+            "inputTokens": 6267,
+            "outputTokens": 198,
+            "cachedInputTokens": 2542,
+            "cacheWriteTokens": 3722,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "4c8fdfb0-9ccf-41ba-9341-80ab9488fb50",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1360,
+            "outputTokens": 38
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 1,
+      "finishedAt": "2026-10-02T07:13:04.269Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.000992498,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-6-luna"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 6267,
+        "outputTokens": 198,
+        "cachedInputTokens": 2542,
+        "cacheWriteTokens": 3722,
+        "reasoningTokens": 0
+      },
+      "boardDetailObservations": {
+        "normalizedA": 0.2,
+        "normalizedB": 0.8,
+        "numericTrialPositionsExplicitlyLabeled": true,
+        "note": "Geometry is scored separately from numeric coordinate labels. All source and received board evidence is retained."
+      }
+    },
+    {
+      "condition": "after-terra",
+      "model": "gpt-5.6-terra",
+      "scenario": "scene-switch",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 2.3,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 198.4
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "startedMs": 201.9,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 12846,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "whiteboardContext",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 12,
+              "earlierTurns": 4,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5",
+              "q6"
+            ],
+            "bankSha256": "8efe51a95eb1b7d20d107e464eb9e63939ad8c6865b11e35d60503de3383f218",
+            "materialIds": [
+              "econ2801-pset3"
+            ],
+            "materialChars": 4370,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": null,
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 592
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 2305.3,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 2,
+          "headersMs": 2474.1
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1040,
+        "modelReportedFirstTextMs": 839,
+        "committedTranscriptToSyntheticAudioMs": 1370.1,
+        "committedTranscriptToTextCompleteMs": 2307.5,
+        "committedTranscriptToBoardMs": 2476.7,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "stalePayoffRemoved": true,
+        "cityDiagramShown": true,
+        "trialPositionsGeometricallyCorrect": true
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 0
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:13:04.300Z",
+      "reply": "Here are the trial locations for question 4.",
+      "board": {
+        "title": "Line city",
+        "revision": "6da364d7-5b0e-4fed-b2d2-7477aafa4d62",
+        "blocks": [
+          {
+            "id": "city-line",
+            "type": "diagram",
+            "elements": [
+              {
+                "type": "line",
+                "x1": 8,
+                "y1": 50,
+                "x2": 92,
+                "y2": 50
+              },
+              {
+                "type": "text",
+                "x": 5,
+                "y": 57,
+                "text": "0"
+              },
+              {
+                "type": "text",
+                "x": 93,
+                "y": 57,
+                "text": "1"
+              },
+              {
+                "type": "circle",
+                "x": 25,
+                "y": 50,
+                "r": 3,
+                "label": "A"
+              },
+              {
+                "type": "circle",
+                "x": 75,
+                "y": 50,
+                "r": 3,
+                "label": "B"
+              }
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 13,
+          "board": {
+            "title": "Line city",
+            "revision": "6da364d7-5b0e-4fed-b2d2-7477aafa4d62",
+            "blocks": [
+              {
+                "id": "city-line",
+                "type": "diagram",
+                "elements": [
+                  {
+                    "type": "line",
+                    "x1": 8,
+                    "y1": 50,
+                    "x2": 92,
+                    "y2": 50
+                  },
+                  {
+                    "type": "text",
+                    "x": 5,
+                    "y": 57,
+                    "text": "0"
+                  },
+                  {
+                    "type": "text",
+                    "x": 93,
+                    "y": 57,
+                    "text": "1"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 25,
+                    "y": 50,
+                    "r": 3,
+                    "label": "A"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 75,
+                    "y": 50,
+                    "r": 3,
+                    "label": "B"
+                  }
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 2476.7
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 11,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 11,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 35,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.6
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_fd07264e74ceee731ca09fc53ae6",
+              "c_b7142dcf8e923a3b0d08755d4883"
+            ],
+            "sourceIds": [
+              "econ2801-pset3"
+            ],
+            "sourceCount": 1,
+            "total": 3,
+            "characters": 4366,
+            "latencyMs": 199,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 199.7
+        },
+        {
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 200.3
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 4370,
+            "contextCharacters": 12822,
+            "historyCharacters": 1182,
+            "recentTurns": 8,
+            "olderTurns": 4,
+            "bankCharacters": 2050,
+            "reason": "selected"
+          },
+          "atMs": 201
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "latencyMs": 839
+          },
+          "atMs": 1039.7
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "latencyMs": 1169
+          },
+          "atMs": 1369.4
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reply": "Here are the trial locations for question 4.",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 2103
+          },
+          "atMs": 2303.6
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "diagram"
+            ],
+            "reply": "Here are the trial locations for question 4.",
+            "boardJson": "{\"title\":\"Line city\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"city-line\",\"type\":\"diagram\",\"elements\":[{\"type\":\"line\",\"x1\":8,\"y1\":50,\"x2\":92,\"y2\":50},{\"type\":\"text\",\"x\":5,\"y\":57,\"text\":\"0\"},{\"type\":\"text\",\"x\":93,\"y\":57,\"text\":\"1\"},{\"type\":\"circle\",\"x\":25,\"y\":50,\"r\":3,\"label\":\"A\"},{\"type\":\"circle\",\"x\":75,\"y\":50,\"r\":3,\"label\":\"B\"}]}],\"removedIds\":[\"old-q1-payoffs\"]}"
+          },
+          "atMs": 2304.1
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 45,
+            "outputAudioMs": 10
+          },
+          "atMs": 2306.9
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": true,
+            "replaceProbability": 0.87,
+            "reason": "different-visual-problem",
+            "source": "jev",
+            "probability": 0.64,
+            "latencyMs": 171,
+            "visible": true,
+            "hasBoard": true
+          },
+          "atMs": 2475.7
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 13,
+          "sessionId": "fixture-scene-switch",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "6da364d7-5b0e-4fed-b2d2-7477aafa4d62",
+            "boardJson": "{\"title\":\"Line city\",\"revision\":\"6da364d7-5b0e-4fed-b2d2-7477aafa4d62\",\"blocks\":[{\"id\":\"city-line\",\"type\":\"diagram\",\"elements\":[{\"type\":\"line\",\"x1\":8,\"y1\":50,\"x2\":92,\"y2\":50},{\"type\":\"text\",\"x\":5,\"y\":57,\"text\":\"0\"},{\"type\":\"text\",\"x\":93,\"y\":57,\"text\":\"1\"},{\"type\":\"circle\",\"x\":25,\"y\":50,\"r\":3,\"label\":\"A\"},{\"type\":\"circle\",\"x\":75,\"y\":50,\"r\":3,\"label\":\"B\"}]}]}"
+          },
+          "atMs": 2476.2
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "fd92a94b-eb09-462d-ab97-4419d067674e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8224,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "fd92a94b-eb09-462d-ab97-4419d067674e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 6266,
+            "outputTokens": 155,
+            "cachedInputTokens": 2542,
+            "cacheWriteTokens": 3721,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "fd92a94b-eb09-462d-ab97-4419d067674e",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1316,
+            "outputTokens": 38
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 1,
+      "finishedAt": "2026-10-02T07:13:06.820Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.01207758,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 6266,
+        "outputTokens": 155,
+        "cachedInputTokens": 2542,
+        "cacheWriteTokens": 3721,
+        "reasoningTokens": 0
+      },
+      "boardDetailObservations": {
+        "normalizedA": 0.20238095238095238,
+        "normalizedB": 0.7976190476190477,
+        "numericTrialPositionsExplicitlyLabeled": false,
+        "note": "Geometry is scored separately from numeric coordinate labels. All source and received board evidence is retained."
+      }
+    },
+    {
+      "condition": "after-luna",
+      "model": "gpt-6-luna",
+      "scenario": "answer-feedback",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 1.7,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 214.4
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 217.5,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 16888,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 14,
+              "earlierTurns": 6,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5"
+            ],
+            "bankSha256": "c93511a4b7631e40761f3f75d97f39c8571c82efad0004e990262fa797546aba",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": {
+              "id": "q6",
+              "hasAnswer": false,
+              "attempts": 1,
+              "assisted": true
+            },
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 538.3
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 1346.1,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "toolRound": true,
+            "inputBytes": 24240,
+            "toolResults": [
+              {
+                "sourceIds": [
+                  "econ2801-pset3"
+                ],
+                "sourceCharacters": 4366,
+                "evidence": {
+                  "source-payoff": true,
+                  "blank-grid": true,
+                  "scene-switch": true,
+                  "answer-feedback": true
+                },
+                "status": "selected"
+              }
+            ]
+          },
+          "headersMs": 1667.2
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 2541.7,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 2679.5
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "startedMs": 2682.1,
+          "status": 200,
+          "kind": "recovery",
+          "context": {
+            "inputBytes": 27982,
+            "instructionBytes": 5635,
+            "inputKeys": [
+              "title",
+              "materials",
+              "conversation",
+              "visualRecovery"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": null,
+            "bankQuestionIds": [],
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions",
+              "econ2801-pset5-solutions"
+            ],
+            "materialChars": 25681,
+            "evidence": {
+              "source-payoff": true,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": false,
+            "activeQuestion": null,
+            "retrievalStatus": null,
+            "tools": []
+          },
+          "headersMs": 2968.2
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 4626.2,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 4799.6
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 1932.4,
+        "modelReportedFirstTextMs": 1716,
+        "committedTranscriptToSyntheticAudioMs": 2069.6,
+        "committedTranscriptToTextCompleteMs": 2544.6,
+        "committedTranscriptToBoardMs": 4803.4,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "answerEligibleExactlyOnce": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "boundFeedbackPresent": true
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 1,
+        "calls": [
+          {
+            "questionId": "q6",
+            "answer": "My answer is eight. Strict equilibria cannot share a row or column, and eight disjoint pairs can attain it. Is my argument right?",
+            "fullHistoryCount": 14,
+            "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+            "hasEarlyPreference": true
+          }
+        ],
+        "records": [
+          {
+            "questionId": "q6",
+            "attempt": 1,
+            "unassisted": true,
+            "checked": true
+          }
+        ]
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:13:06.861Z",
+      "reply": "Yes—eight is the maximum. In a strict equilibrium, no two equilibria can share a row or a column, since the shared player would then need two strictly best responses to the same opposing strategy. So there can be at most eight; eight disjoint pairs can attain that bound.",
+      "board": {
+        "title": "8×10 Game",
+        "revision": "f986d4e5-9047-4b00-bd1e-de9c6033c7c5",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 15,
+          "board": {
+            "title": "8×10 Game",
+            "revision": "f986d4e5-9047-4b00-bd1e-de9c6033c7c5",
+            "blocks": [
+              {
+                "id": "game-grid",
+                "type": "matrix",
+                "rows": [
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 4803.4
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 13,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 97,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.5
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 215,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 215.3
+        },
+        {
+          "type": "turn.started",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-6-luna",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 215.7
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 16854,
+            "historyCharacters": 1312,
+            "recentTurns": 8,
+            "olderTurns": 6,
+            "bankCharacters": 1598,
+            "reason": "selected"
+          },
+          "atMs": 216.8
+        },
+        {
+          "type": "retrieval.tool-read",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "operation": "search_materials",
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_fd07264e74ceee731ca09fc53ae6",
+              "c_2cb2bc8613af8ba4110abcf191d5"
+            ],
+            "reason": "selected",
+            "characters": 4366,
+            "total": 3
+          },
+          "atMs": 1345.6
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "latencyMs": 1716
+          },
+          "atMs": 1931.8
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "latencyMs": 1853
+          },
+          "atMs": 2069.2
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reply": "Yes—eight is the maximum. In a strict equilibrium, no two equilibria can share a row or a column, since the shared player would then need two strictly best responses to the same opposing strategy. So there can be at most eight; eight disjoint pairs can attain that bound.",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 2324
+          },
+          "atMs": 2539.7
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "Yes—eight is the maximum. In a strict equilibrium, no two equilibria can share a row or a column, since the shared player would then need two strictly best responses to the same opposing strategy. So there can be at most eight; eight disjoint pairs can attain that bound."
+          },
+          "atMs": 2541.1
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 272,
+            "outputAudioMs": 10
+          },
+          "atMs": 2543.3
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.63,
+            "latencyMs": 140,
+            "visible": false,
+            "hasBoard": false
+          },
+          "atMs": 2680.9
+        },
+        {
+          "type": "whiteboard.not-shown",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "visual-requested-without-board"
+          },
+          "atMs": 2680.9
+        },
+        {
+          "type": "whiteboard.recovery-started",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "needed-visual-missing",
+            "model": "gpt-6-luna"
+          },
+          "atMs": 2681
+        },
+        {
+          "type": "whiteboard.recovery-completed",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "latencyMs": 1945
+          },
+          "atMs": 4625.5
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "Yes—eight is the maximum. In a strict equilibrium, no two equilibria can share a row or a column, since the shared player would then need two strictly best responses to the same opposing strategy. So there can be at most eight; eight disjoint pairs can attain that bound.",
+            "boardJson": "{\"title\":\"8×10 Game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 4625.7
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.63,
+            "latencyMs": 175,
+            "visible": false,
+            "hasBoard": true
+          },
+          "atMs": 4800.8
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "f986d4e5-9047-4b00-bd1e-de9c6033c7c5",
+            "boardJson": "{\"title\":\"8×10 Game\",\"revision\":\"f986d4e5-9047-4b00-bd1e-de9c6033c7c5\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}"
+          },
+          "atMs": 4801.2
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "d24ef662-f5d0-4955-851f-1aa11d6707ad",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8323,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-6-luna",
+          "testId": "d24ef662-f5d0-4955-851f-1aa11d6707ad",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7270,
+            "outputTokens": 84,
+            "cachedInputTokens": 2542,
+            "cacheWriteTokens": 4725,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor-retrieval",
+          "model": "gpt-6-luna",
+          "testId": "d24ef662-f5d0-4955-851f-1aa11d6707ad",
+          "status": "completed",
+          "units": {
+            "inputTokens": 9032,
+            "outputTokens": 67,
+            "cachedInputTokens": 7267,
+            "cacheWriteTokens": 1762,
+            "reasoningTokens": 0
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "d24ef662-f5d0-4955-851f-1aa11d6707ad",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1065,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "whiteboard-recovery",
+          "model": "gpt-6-luna",
+          "testId": "d24ef662-f5d0-4955-851f-1aa11d6707ad",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8558,
+            "outputTokens": 153,
+            "cachedInputTokens": 1224,
+            "cacheWriteTokens": 7331,
+            "reasoningTokens": 53
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "d24ef662-f5d0-4955-851f-1aa11d6707ad",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1208,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 2,
+      "finishedAt": "2026-10-02T07:13:11.848Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.002435512,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-6-luna"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 24860,
+        "outputTokens": 304,
+        "cachedInputTokens": 11033,
+        "cacheWriteTokens": 13818,
+        "reasoningTokens": 53
+      }
+    },
+    {
+      "condition": "after-terra",
+      "model": "gpt-5.6-terra",
+      "scenario": "answer-feedback",
+      "status": "completed",
+      "requests": [
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 2,
+          "status": 200,
+          "kind": "prefetch",
+          "questions": 16,
+          "headersMs": 186.9
+        },
+        {
+          "provider": "openai",
+          "model": "gpt-5.6-terra",
+          "startedMs": 190.2,
+          "status": 200,
+          "kind": "main-or-tool",
+          "context": {
+            "inputBytes": 16888,
+            "instructionBytes": 11778,
+            "inputKeys": [
+              "title",
+              "materials",
+              "date",
+              "difficulty",
+              "localToday",
+              "indexStatus",
+              "testId",
+              "topics",
+              "calendarContext",
+              "conversation",
+              "activeQuestion",
+              "conversationMemory",
+              "currentProblem",
+              "readinessContext",
+              "masteryContext",
+              "masteryScope",
+              "privateQuestionBank",
+              "materialCatalog",
+              "sourceRevision",
+              "retrievalStatus",
+              "materialCoverage",
+              "passageReferences"
+            ],
+            "conversationTurns": 8,
+            "conversationMemory": {
+              "totalEntries": 14,
+              "earlierTurns": 6,
+              "omittedPublicTurns": 0
+            },
+            "bankQuestionIds": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5"
+            ],
+            "bankSha256": "c93511a4b7631e40761f3f75d97f39c8571c82efad0004e990262fa797546aba",
+            "materialIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "materialChars": 8110,
+            "evidence": {
+              "source-payoff": false,
+              "blank-grid": true,
+              "scene-switch": true,
+              "answer-feedback": true
+            },
+            "includesEarlyPreference": true,
+            "activeQuestion": {
+              "id": "q6",
+              "hasAnswer": false,
+              "attempts": 1,
+              "assisted": true
+            },
+            "retrievalStatus": {
+              "status": "selected",
+              "unresolved": false,
+              "evidence": "original-extracted-passages",
+              "completeness": "partial-source-excerpts",
+              "method": "jev-prefetch",
+              "candidateCount": 16,
+              "candidatesOmitted": 0
+            },
+            "tools": [
+              "search_materials",
+              "read_materials"
+            ]
+          },
+          "headersMs": 594.8
+        },
+        {
+          "provider": "jev",
+          "model": "jev-latest",
+          "startedMs": 6820.9,
+          "status": 200,
+          "kind": "canvas",
+          "questions": 1,
+          "headersMs": 7006.3
+        }
+      ],
+      "latencies": {
+        "committedTranscriptToFirstTextMs": 2234.3,
+        "modelReportedFirstTextMs": 2045,
+        "committedTranscriptToSyntheticAudioMs": 2370.1,
+        "committedTranscriptToTextCompleteMs": 6824.6,
+        "committedTranscriptToBoardMs": 7009.7,
+        "committedTranscriptToHideMs": null
+      },
+      "checks": {
+        "completeReply": true,
+        "bankUnchangedAtFirstRequest": true,
+        "bankContainsAllPendingQuestions": true,
+        "earlyStudentPreferencePreserved": true,
+        "noPrivateReferenceVerbatim": true,
+        "noBoardMarkupInSpeech": true,
+        "diagramOnlyBoard": true,
+        "relevantOriginalEvidenceProvided": true,
+        "answerEligibleExactlyOnce": true,
+        "gradingKeptOriginalSource": true,
+        "gradingKeptEarlyConversation": true,
+        "boundFeedbackPresent": true
+      },
+      "bankInputExpectedIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "gradeFixture": {
+        "eligibleCalls": 1,
+        "calls": [
+          {
+            "questionId": "q6",
+            "answer": "My answer is eight. Strict equilibria cannot share a row or column, and eight disjoint pairs can attain it. Is my argument right?",
+            "fullHistoryCount": 14,
+            "materialTextSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+            "hasEarlyPreference": true
+          }
+        ],
+        "records": [
+          {
+            "questionId": "q6",
+            "attempt": 1,
+            "unassisted": true,
+            "checked": true
+          }
+        ]
+      },
+      "voiceSimulated": true,
+      "startedAt": "2026-10-02T07:13:11.888Z",
+      "reply": "Yes, that is exactly right. Strict equilibria cannot share a row or a column because a fixed opposing strategy can have only one strict best response; so there can be at most min of 8 and 10, which is 8, and eight matched row-column pairs can attain it.",
+      "board": {
+        "title": "Strict equilibria matching",
+        "revision": "d0e94377-6cd0-480e-8603-da9be5301db0",
+        "blocks": [
+          {
+            "id": "matching",
+            "type": "diagram",
+            "elements": [
+              {
+                "type": "text",
+                "x": 8,
+                "y": 8,
+                "text": "Player 1: 8 rows"
+              },
+              {
+                "type": "text",
+                "x": 70,
+                "y": 8,
+                "text": "Player 2: 10 columns"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 18,
+                "r": 2,
+                "label": "1"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 27,
+                "r": 2,
+                "label": "2"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 36,
+                "r": 2,
+                "label": "3"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 45,
+                "r": 2,
+                "label": "4"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 54,
+                "r": 2,
+                "label": "5"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 63,
+                "r": 2,
+                "label": "6"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 72,
+                "r": 2,
+                "label": "7"
+              },
+              {
+                "type": "circle",
+                "x": 20,
+                "y": 81,
+                "r": 2,
+                "label": "8"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 18,
+                "r": 2,
+                "label": "1"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 27,
+                "r": 2,
+                "label": "2"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 36,
+                "r": 2,
+                "label": "3"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 45,
+                "r": 2,
+                "label": "4"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 54,
+                "r": 2,
+                "label": "5"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 63,
+                "r": 2,
+                "label": "6"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 72,
+                "r": 2,
+                "label": "7"
+              },
+              {
+                "type": "circle",
+                "x": 80,
+                "y": 81,
+                "r": 2,
+                "label": "8"
+              },
+              {
+                "type": "circle",
+                "x": 92,
+                "y": 30,
+                "r": 2,
+                "label": "9"
+              },
+              {
+                "type": "circle",
+                "x": 92,
+                "y": 70,
+                "r": 2,
+                "label": "10"
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 18,
+                "x2": 78,
+                "y2": 18
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 27,
+                "x2": 78,
+                "y2": 27
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 36,
+                "x2": 78,
+                "y2": 36
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 45,
+                "x2": 78,
+                "y2": 45
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 54,
+                "x2": 78,
+                "y2": 54
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 63,
+                "x2": 78,
+                "y2": 63
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 72,
+                "x2": 78,
+                "y2": 72
+              },
+              {
+                "type": "line",
+                "x1": 22,
+                "y1": 81,
+                "x2": 78,
+                "y2": 81
+              },
+              {
+                "type": "text",
+                "x": 39,
+                "y": 94,
+                "text": "maximum = min(8,10) = 8"
+              }
+            ]
+          }
+        ]
+      },
+      "boardMessages": [
+        {
+          "type": "canvas",
+          "visible": true,
+          "id": 15,
+          "board": {
+            "title": "Strict equilibria matching",
+            "revision": "d0e94377-6cd0-480e-8603-da9be5301db0",
+            "blocks": [
+              {
+                "id": "matching",
+                "type": "diagram",
+                "elements": [
+                  {
+                    "type": "text",
+                    "x": 8,
+                    "y": 8,
+                    "text": "Player 1: 8 rows"
+                  },
+                  {
+                    "type": "text",
+                    "x": 70,
+                    "y": 8,
+                    "text": "Player 2: 10 columns"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 18,
+                    "r": 2,
+                    "label": "1"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 27,
+                    "r": 2,
+                    "label": "2"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 36,
+                    "r": 2,
+                    "label": "3"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 45,
+                    "r": 2,
+                    "label": "4"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 54,
+                    "r": 2,
+                    "label": "5"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 63,
+                    "r": 2,
+                    "label": "6"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 72,
+                    "r": 2,
+                    "label": "7"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 20,
+                    "y": 81,
+                    "r": 2,
+                    "label": "8"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 18,
+                    "r": 2,
+                    "label": "1"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 27,
+                    "r": 2,
+                    "label": "2"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 36,
+                    "r": 2,
+                    "label": "3"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 45,
+                    "r": 2,
+                    "label": "4"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 54,
+                    "r": 2,
+                    "label": "5"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 63,
+                    "r": 2,
+                    "label": "6"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 72,
+                    "r": 2,
+                    "label": "7"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 80,
+                    "y": 81,
+                    "r": 2,
+                    "label": "8"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 92,
+                    "y": 30,
+                    "r": 2,
+                    "label": "9"
+                  },
+                  {
+                    "type": "circle",
+                    "x": 92,
+                    "y": 70,
+                    "r": 2,
+                    "label": "10"
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 18,
+                    "x2": 78,
+                    "y2": 18
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 27,
+                    "x2": 78,
+                    "y2": 27
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 36,
+                    "x2": 78,
+                    "y2": 36
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 45,
+                    "x2": 78,
+                    "y2": 45
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 54,
+                    "x2": 78,
+                    "y2": 54
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 63,
+                    "x2": 78,
+                    "y2": 63
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 72,
+                    "x2": 78,
+                    "y2": 72
+                  },
+                  {
+                    "type": "line",
+                    "x1": 22,
+                    "y1": 81,
+                    "x2": 78,
+                    "y2": 81
+                  },
+                  {
+                    "type": "text",
+                    "x": 39,
+                    "y": 94,
+                    "text": "maximum = min(8,10) = 8"
+                  }
+                ]
+              }
+            ]
+          },
+          "selection": null,
+          "receivedMs": 7009.7
+        }
+      ],
+      "diagnostics": [
+        {
+          "type": "turn.interrupted",
+          "turnId": 13,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "interrupted"
+          },
+          "atMs": 0
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 97,
+            "outputAudioMs": 0
+          },
+          "atMs": 0.1
+        },
+        {
+          "type": "retrieval.prefetch-started",
+          "details": {
+            "sourceCount": 3,
+            "total": 16,
+            "operation": "material-prefetch"
+          },
+          "atMs": 0.5
+        },
+        {
+          "type": "retrieval.prefetch-ready",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "chunkIds": [
+              "c_b7142dcf8e923a3b0d08755d4883",
+              "c_8f7ab80c4af1629be84eee9e16bd",
+              "c_2cb2bc8613af8ba4110abcf191d5",
+              "c_73eb8a8b0368217f81d4dc025fce",
+              "c_07d162b06b71ee015cde184b0531"
+            ],
+            "sourceIds": [
+              "econ2801-pset3",
+              "econ2801-pset2-solutions"
+            ],
+            "sourceCount": 2,
+            "total": 5,
+            "characters": 8104,
+            "latencyMs": 188,
+            "reason": "selected-original-passages"
+          },
+          "atMs": 188.1
+        },
+        {
+          "type": "turn.started",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 3,
+            "indexStatus": "ready",
+            "missing": []
+          },
+          "atMs": 188.6
+        },
+        {
+          "type": "tutor.context-built",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "sourceRevision": "404514b48e73b84a24459e348f900da07df4fa8d070a348b4313e584dbfe1891",
+            "sourceCharacters": 25681,
+            "retrievedCharacters": 8110,
+            "contextCharacters": 16854,
+            "historyCharacters": 1312,
+            "recentTurns": 8,
+            "olderTurns": 6,
+            "bankCharacters": 1598,
+            "reason": "selected"
+          },
+          "atMs": 189.4
+        },
+        {
+          "type": "llm.first-text",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "latencyMs": 2045
+          },
+          "atMs": 2233.8
+        },
+        {
+          "type": "voice.first-audio",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "latencyMs": 2181
+          },
+          "atMs": 2369.7
+        },
+        {
+          "type": "llm.completed",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reply": "Yes, that is exactly right. Strict equilibria cannot share a row or a column because a fixed opposing strategy can have only one strict best response; so there can be at most min of 8 and 10, which is 8, and eight matched row-column pairs can attain it.",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 6631
+          },
+          "atMs": 6819.8
+        },
+        {
+          "type": "whiteboard.candidate",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "diagram"
+            ],
+            "reply": "Yes, that is exactly right. Strict equilibria cannot share a row or a column because a fixed opposing strategy can have only one strict best response; so there can be at most min of 8 and 10, which is 8, and eight matched row-column pairs can attain it.",
+            "boardJson": "{\"title\":\"Strict equilibria matching\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"matching\",\"type\":\"diagram\",\"elements\":[{\"type\":\"text\",\"x\":8,\"y\":8,\"text\":\"Player 1: 8 rows\"},{\"type\":\"text\",\"x\":70,\"y\":8,\"text\":\"Player 2: 10 columns\"},{\"type\":\"circle\",\"x\":20,\"y\":18,\"r\":2,\"label\":\"1\"},{\"type\":\"circle\",\"x\":20,\"y\":27,\"r\":2,\"label\":\"2\"},{\"type\":\"circle\",\"x\":20,\"y\":36,\"r\":2,\"label\":\"3\"},{\"type\":\"circle\",\"x\":20,\"y\":45,\"r\":2,\"label\":\"4\"},{\"type\":\"circle\",\"x\":20,\"y\":54,\"r\":2,\"label\":\"5\"},{\"type\":\"circle\",\"x\":20,\"y\":63,\"r\":2,\"label\":\"6\"},{\"type\":\"circle\",\"x\":20,\"y\":72,\"r\":2,\"label\":\"7\"},{\"type\":\"circle\",\"x\":20,\"y\":81,\"r\":2,\"label\":\"8\"},{\"type\":\"circle\",\"x\":80,\"y\":18,\"r\":2,\"label\":\"1\"},{\"type\":\"circle\",\"x\":80,\"y\":27,\"r\":2,\"label\":\"2\"},{\"type\":\"circle\",\"x\":80,\"y\":36,\"r\":2,\"label\":\"3\"},{\"type\":\"circle\",\"x\":80,\"y\":45,\"r\":2,\"label\":\"4\"},{\"type\":\"circle\",\"x\":80,\"y\":54,\"r\":2,\"label\":\"5\"},{\"type\":\"circle\",\"x\":80,\"y\":63,\"r\":2,\"label\":\"6\"},{\"type\":\"circle\",\"x\":80,\"y\":72,\"r\":2,\"label\":\"7\"},{\"type\":\"circle\",\"x\":80,\"y\":81,\"r\":2,\"label\":\"8\"},{\"type\":\"circle\",\"x\":92,\"y\":30,\"r\":2,\"label\":\"9\"},{\"type\":\"circle\",\"x\":92,\"y\":70,\"r\":2,\"label\":\"10\"},{\"type\":\"line\",\"x1\":22,\"y1\":18,\"x2\":78,\"y2\":18},{\"type\":\"line\",\"x1\":22,\"y1\":27,\"x2\":78,\"y2\":27},{\"type\":\"line\",\"x1\":22,\"y1\":36,\"x2\":78,\"y2\":36},{\"type\":\"line\",\"x1\":22,\"y1\":45,\"x2\":78,\"y2\":45},{\"type\":\"line\",\"x1\":22,\"y1\":54,\"x2\":78,\"y2\":54},{\"type\":\"line\",\"x1\":22,\"y1\":63,\"x2\":78,\"y2\":63},{\"type\":\"line\",\"x1\":22,\"y1\":72,\"x2\":78,\"y2\":72},{\"type\":\"line\",\"x1\":22,\"y1\":81,\"x2\":78,\"y2\":81},{\"type\":\"text\",\"x\":39,\"y\":94,\"text\":\"maximum = min(8,10) = 8\"}]}]}"
+          },
+          "atMs": 6820.3
+        },
+        {
+          "type": "voice.finished",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 254,
+            "outputAudioMs": 10
+          },
+          "atMs": 6823.7
+        },
+        {
+          "type": "whiteboard.decision",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.67,
+            "latencyMs": 188,
+            "visible": false,
+            "hasBoard": true
+          },
+          "atMs": 7008.2
+        },
+        {
+          "type": "whiteboard.shown",
+          "turnId": 15,
+          "sessionId": "fixture-answer-feedback",
+          "details": {
+            "reason": "structured-visual",
+            "boardRevision": "d0e94377-6cd0-480e-8603-da9be5301db0",
+            "boardJson": "{\"title\":\"Strict equilibria matching\",\"revision\":\"d0e94377-6cd0-480e-8603-da9be5301db0\",\"blocks\":[{\"id\":\"matching\",\"type\":\"diagram\",\"elements\":[{\"type\":\"text\",\"x\":8,\"y\":8,\"text\":\"Player 1: 8 rows\"},{\"type\":\"text\",\"x\":70,\"y\":8,\"text\":\"Player 2: 10 columns\"},{\"type\":\"circle\",\"x\":20,\"y\":18,\"r\":2,\"label\":\"1\"},{\"type\":\"circle\",\"x\":20,\"y\":27,\"r\":2,\"label\":\"2\"},{\"type\":\"circle\",\"x\":20,\"y\":36,\"r\":2,\"label\":\"3\"},{\"type\":\"circle\",\"x\":20,\"y\":45,\"r\":2,\"label\":\"4\"},{\"type\":\"circle\",\"x\":20,\"y\":54,\"r\":2,\"label\":\"5\"},{\"type\":\"circle\",\"x\":20,\"y\":63,\"r\":2,\"label\":\"6\"},{\"type\":\"circle\",\"x\":20,\"y\":72,\"r\":2,\"label\":\"7\"},{\"type\":\"circle\",\"x\":20,\"y\":81,\"r\":2,\"label\":\"8\"},{\"type\":\"circle\",\"x\":80,\"y\":18,\"r\":2,\"label\":\"1\"},{\"type\":\"circle\",\"x\":80,\"y\":27,\"r\":2,\"label\":\"2\"},{\"type\":\"circle\",\"x\":80,\"y\":36,\"r\":2,\"label\":\"3\"},{\"type\":\"circle\",\"x\":80,\"y\":45,\"r\":2,\"label\":\"4\"},{\"type\":\"circle\",\"x\":80,\"y\":54,\"r\":2,\"label\":\"5\"},{\"type\":\"circle\",\"x\":80,\"y\":63,\"r\":2,\"label\":\"6\"},{\"type\":\"circle\",\"x\":80,\"y\":72,\"r\":2,\"label\":\"7\"},{\"type\":\"circle\",\"x\":80,\"y\":81,\"r\":2,\"label\":\"8\"},{\"type\":\"circle\",\"x\":92,\"y\":30,\"r\":2,\"label\":\"9\"},{\"type\":\"circle\",\"x\":92,\"y\":70,\"r\":2,\"label\":\"10\"},{\"type\":\"line\",\"x1\":22,\"y1\":18,\"x2\":78,\"y2\":18},{\"type\":\"line\",\"x1\":22,\"y1\":27,\"x2\":78,\"y2\":27},{\"type\":\"line\",\"x1\":22,\"y1\":36,\"x2\":78,\"y2\":36},{\"type\":\"line\",\"x1\":22,\"y1\":45,\"x2\":78,\"y2\":45},{\"type\":\"line\",\"x1\":22,\"y1\":54,\"x2\":78,\"y2\":54},{\"type\":\"line\",\"x1\":22,\"y1\":63,\"x2\":78,\"y2\":63},{\"type\":\"line\",\"x1\":22,\"y1\":72,\"x2\":78,\"y2\":72},{\"type\":\"line\",\"x1\":22,\"y1\":81,\"x2\":78,\"y2\":81},{\"type\":\"text\",\"x\":39,\"y\":94,\"text\":\"maximum = min(8,10) = 8\"}]}]}"
+          },
+          "atMs": 7008.9
+        }
+      ],
+      "usage": [
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "material-prefetch",
+          "model": "jev-latest",
+          "testId": "4143e7b1-2b6a-4140-8026-dc40fdcc5939",
+          "status": "completed",
+          "units": {
+            "inputTokens": 8323,
+            "outputTokens": 661
+          },
+          "providerReportedUsd": null
+        },
+        {
+          "category": "llm",
+          "provider": "openai",
+          "operation": "tutor",
+          "model": "gpt-5.6-terra",
+          "testId": "4143e7b1-2b6a-4140-8026-dc40fdcc5939",
+          "status": "completed",
+          "units": {
+            "inputTokens": 7272,
+            "outputTokens": 808,
+            "cachedInputTokens": 2542,
+            "cacheWriteTokens": 4727,
+            "reasoningTokens": 84
+          },
+          "providerReportedUsd": null,
+          "serviceTier": "default"
+        },
+        {
+          "category": "jev",
+          "provider": "typesafe",
+          "operation": "whiteboard-routing",
+          "model": "jev-1.13.0",
+          "testId": "4143e7b1-2b6a-4140-8026-dc40fdcc5939",
+          "status": "completed",
+          "units": {
+            "inputTokens": 1131,
+            "outputTokens": 21
+          },
+          "providerReportedUsd": null
+        }
+      ],
+      "providerCalls": 1,
+      "finishedAt": "2026-10-02T07:13:19.043Z",
+      "cost": {
+        "exactBilledUsd": null,
+        "estimatedUsd": 0.022424968,
+        "estimatedPartial": false,
+        "note": "Global standard public token rates including reported cache reads/writes. Estimate only; excludes credits, discounts, tax and unreported/in-flight usage. No paid voice calls.",
+        "rateSources": [
+          "https://docs.typesafe.ai/models",
+          "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+        ]
+      },
+      "openaiTokens": {
+        "inputTokens": 7272,
+        "outputTokens": 808,
+        "cachedInputTokens": 2542,
+        "cacheWriteTokens": 4727,
+        "reasoningTokens": 84
+      }
+    }
+  ],
+  "finishedAt": "2026-10-02T07:13:19.045Z",
+  "evaluationAudit": [
+    "The initial geometry checker also required numeric coordinate labels. Geometry is corrected offline from the actual received line/circle coordinates; omitted numeric labels remain a separate observation."
+  ]
+}

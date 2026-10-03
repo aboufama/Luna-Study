@@ -1,0 +1,78 @@
+{
+  "providerCalls": 0,
+  "method": "Manual review of all twelve saved 800x500 browser screenshots against public fixture requests; raw outputs untouched. A pass requires all requested visible content and layout. Semantic facts and layout failures are distinguished in notes; this is not a general reliability estimate.",
+  "runs": [
+    {
+      "id": "biology-cell-html-1",
+      "rawSha256": "f40b4ed88727136b1a7df07d79c0fbd311684d79107820a7f730c49e6c0720ef",
+      "pass": true,
+      "note": "Containment, three leader labels and separate teaching note are readable. Leader lines cross each other but do not cross label text."
+    },
+    {
+      "id": "biology-cell-dsl-1",
+      "rawSha256": "1abe2f7cec518195c4f75c794cb5e916524416d360570aa44b66ade211fc475c",
+      "pass": false,
+      "note": "Cell facts and containment are correct, but leaders cross the cytoplasm and nucleus labels. Compartments are composite lines rather than dedicated semantic regions."
+    },
+    {
+      "id": "algebra-steps-html-1",
+      "rawSha256": "dc5ea9cd871e542a68fe4b72321631a63bd662e2a3e73dc0ff1e0732134d9869",
+      "pass": true,
+      "note": "All three steps, two annotations and final boxed answer are correct and readable."
+    },
+    {
+      "id": "algebra-steps-dsl-1",
+      "rawSha256": "fda827bb942d16f31b9d89bfdb77c0736a2f10a85a792794b03b16f8d6c9eaaa",
+      "pass": true,
+      "note": "All three steps, two annotations and final boxed answer are correct and readable."
+    },
+    {
+      "id": "physics-forces-dsl-1",
+      "rawSha256": "19e8c728c9d1ac343ff37c0fa7c73b8c23392a8df65cd9a44ff3a5f32d7972d9",
+      "pass": false,
+      "note": "Force strokes lack arrowheads, the block and mg labels overlap, and the large outline does not communicate the requested block resting on a plane. Equation text is correct."
+    },
+    {
+      "id": "physics-forces-html-1",
+      "rawSha256": "1c7e1a12e0dde9b0dc3754bc199d2ca23da2301e78088b9aada33d8cdbd1749f",
+      "pass": true,
+      "note": "All four force arrows point correctly and both equations are readable."
+    },
+    {
+      "id": "history-timeline-html-1",
+      "rawSha256": "de32a5bbed24b75be75be5791639ca1be47e8cad9d4974ba291974c6022710e9",
+      "pass": false,
+      "note": "All dates and labels are correct, but explicit proportional spacing is off: middle marker fraction 271/620=0.4371, versus (1905-1859)/(1969-1859)=0.4182. This is a small layout accuracy failure, not a wrong historical fact."
+    },
+    {
+      "id": "history-timeline-dsl-1",
+      "rawSha256": "d1a99b6afc78468d4bd9c7e250e895c6f5be2e2da1a1257e3f6479d02600e76e",
+      "pass": false,
+      "note": "Date positions are proportional, but endpoint text clips outside the canvas and the requested heading is hidden in metadata rather than rendered."
+    },
+    {
+      "id": "grammar-annotation-dsl-1",
+      "rawSha256": "5735d54e0fdcef2617346fc96b9154770a3937549f0056690be8098cf9014075",
+      "pass": false,
+      "note": "The opening of the exact sentence clips off the left edge, with annotation/layout problems. Text-presence alone is insufficient."
+    },
+    {
+      "id": "grammar-annotation-html-1",
+      "rawSha256": "74532c5139698ec6b76d02c4b8fac6694caaeaa164de7bb4cc25c8dd46b58d01",
+      "pass": false,
+      "note": "Raw comma span includes a trailing space, but inline-block whitespace collapse renders raining,Maya without a space. The requested exact visible sentence is not preserved."
+    },
+    {
+      "id": "chemistry-equation-dsl-1",
+      "rawSha256": "5396d24d436c6db289ab5a09df415df5cc7a8d3dd4c423e75430834619fed941",
+      "pass": false,
+      "note": "Equation, atom counts and molecules are correct. Reactants are above products, contrary to the requested left/right arrangement."
+    },
+    {
+      "id": "chemistry-equation-html-1",
+      "rawSha256": "2d8f91d411b81628c462645f7df34c015eb1f7530150e841df85c6acdf2ed821",
+      "pass": true,
+      "note": "Subscripts, atom counts, reactants on the left, products on the right, and note are correct and readable."
+    }
+  ]
+}

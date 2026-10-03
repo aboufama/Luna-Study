@@ -1,0 +1,98 @@
+{
+  "title": "Clause annotation",
+  "revision": "da016924-591d-4368-ac96-b5482f1b1eb6",
+  "blocks": [
+    {
+      "id": "world",
+      "type": "scene",
+      "width": 800,
+      "height": 280,
+      "objects": [
+        {
+          "id": "sentence",
+          "type": "text",
+          "x": 60,
+          "y": 70,
+          "width": 680,
+          "height": 45,
+          "text": "Although it was raining, Maya walked to class.",
+          "fontSize": 28
+        },
+        {
+          "id": "dependent-mark",
+          "type": "polyline",
+          "points": [
+            [
+              60,
+              125
+            ],
+            [
+              345,
+              125
+            ]
+          ],
+          "tone": "accent"
+        },
+        {
+          "id": "main-mark",
+          "type": "polyline",
+          "points": [
+            [
+              365,
+              125
+            ],
+            [
+              690,
+              125
+            ]
+          ],
+          "tone": "ink"
+        },
+        {
+          "id": "dependent-label",
+          "type": "text",
+          "x": 105,
+          "y": 155,
+          "width": 220,
+          "height": 32,
+          "text": "dependent clause",
+          "fontSize": 22,
+          "tone": "accent"
+        },
+        {
+          "id": "main-label",
+          "type": "text",
+          "x": 420,
+          "y": 155,
+          "width": 180,
+          "height": 32,
+          "text": "main clause",
+          "fontSize": 22,
+          "tone": "ink"
+        }
+      ],
+      "zones": [
+        {
+          "id": "dependent-clause",
+          "label": "dependent clause",
+          "anchor": {
+            "kind": "object",
+            "id": "sentence",
+            "quote": "Although it was raining",
+            "occurrence": 0
+          }
+        },
+        {
+          "id": "main-clause",
+          "label": "main clause",
+          "anchor": {
+            "kind": "object",
+            "id": "sentence",
+            "quote": "Maya walked to class.",
+            "occurrence": 0
+          }
+        }
+      ]
+    }
+  ]
+}

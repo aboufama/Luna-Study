@@ -1,0 +1,3299 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:16:45.743Z",
+  "liveProviders": false,
+  "model": "gpt-5.6-terra",
+  "reasoning": "low",
+  "budget": {
+    "maximumPaidRequests": 11,
+    "paidRequests": 0
+  },
+  "instructions": {
+    "baseline": {
+      "chars": 11945,
+      "sha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc"
+    },
+    "formatOnly": {
+      "chars": 11999,
+      "sha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "replacements": [
+        [
+          "{\"type\":\"matrix\",\"rows\":[[\"cell LaTeX\"]],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}",
+          "{\"type\":\"matrix\",\"size\":[1,1],\"cells\":[{\"row\":0,\"col\":0,\"value\":\"cell LaTeX\"}],\"rowLabels\":[\"label\"],\"columnLabels\":[\"label\"],\"label\":\"matrix label\"}"
+        ],
+        [
+          "for an 8-by-10 game, provide exactly 8 rows of 10 empty cells. Use \"\" for unspecified cells;",
+          "for an 8-by-10 game, provide size:[8,10] and cells:[]. Omit unspecified cells from the required cells array;"
+        ]
+      ]
+    },
+    "production": {
+      "chars": 11550,
+      "sha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d"
+    }
+  },
+  "runs": [
+    {
+      "id": "blank-grid-baseline-1",
+      "scenario": "blank-grid",
+      "condition": "baseline",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Blank game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 7.3,
+        "firstSpokenMs": 7.6,
+        "generationCompleteMs": 8.1,
+        "boardReadyMs": 9.5,
+        "firstSyntheticAudioMs": 109
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 11947,
+      "httpStatus": 200,
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Blank game",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "game",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 7,
+          "totalMs": 9,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Blank game",
+        "revision": "511b108f-6a1f-485c-8b6c-2be822651adc",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Blank game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "outputBytes": 377,
+      "wireBoardBytes": 345,
+      "finishedAt": "2026-10-02T08:16:45.854Z"
+    },
+    {
+      "id": "blank-grid-compact-1",
+      "scenario": "blank-grid",
+      "condition": "compact",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Blank game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game\",\"type\":\"matrix\",\"size\":[8,10],\"cells\":[]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.4,
+        "firstSpokenMs": 0.4,
+        "generationCompleteMs": 0.6,
+        "boardReadyMs": 0.7,
+        "firstSyntheticAudioMs": 102
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 12001,
+      "httpStatus": 200,
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Blank game",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "game",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 0,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Blank game",
+        "revision": "3e09aec2-3805-4cf2-bac4-2d3e2febad20",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Blank game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "size": [
+              8,
+              10
+            ],
+            "cells": []
+          }
+        ]
+      },
+      "outputBytes": 137,
+      "wireBoardBytes": 105,
+      "finishedAt": "2026-10-02T08:16:45.957Z"
+    },
+    {
+      "id": "blank-grid-compact-2",
+      "scenario": "blank-grid",
+      "condition": "compact",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Blank game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game\",\"type\":\"matrix\",\"size\":[8,10],\"cells\":[]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.6,
+        "firstSpokenMs": 0.6,
+        "generationCompleteMs": 0.7,
+        "boardReadyMs": 0.9,
+        "firstSyntheticAudioMs": 102.1
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 12001,
+      "httpStatus": 200,
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Blank game",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "game",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 0,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Blank game",
+        "revision": "0b1012e1-34be-43ae-b1a8-d15f193e18bb",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Blank game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "size": [
+              8,
+              10
+            ],
+            "cells": []
+          }
+        ]
+      },
+      "outputBytes": 137,
+      "wireBoardBytes": 105,
+      "finishedAt": "2026-10-02T08:16:46.061Z"
+    },
+    {
+      "id": "blank-grid-baseline-2",
+      "scenario": "blank-grid",
+      "condition": "baseline",
+      "round": 2,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Blank game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.9,
+        "firstSpokenMs": 1,
+        "generationCompleteMs": 1.2,
+        "boardReadyMs": 1.6,
+        "firstSyntheticAudioMs": 101.9
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 11947,
+      "httpStatus": 200,
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Blank game",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "game",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Blank game",
+        "revision": "33698cb6-2d7d-404d-a88a-bebff391ad7d",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Blank game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "outputBytes": 377,
+      "wireBoardBytes": 345,
+      "finishedAt": "2026-10-02T08:16:46.167Z"
+    },
+    {
+      "id": "blank-grid-baseline-3",
+      "scenario": "blank-grid",
+      "condition": "baseline",
+      "round": 3,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "03af4d5c694510d240141a54c0378fd101b7402ea8154f060dc0de8e3ceec2cc",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Blank game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1.7,
+        "firstSpokenMs": 1.8,
+        "generationCompleteMs": 2,
+        "boardReadyMs": 2.5,
+        "firstSyntheticAudioMs": 102.9
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 11947,
+      "httpStatus": 200,
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Blank game",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "game",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 2,
+          "totalMs": 2,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Blank game",
+        "revision": "b61c2094-b277-4d50-bf21-771432e85be6",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Blank game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "outputBytes": 377,
+      "wireBoardBytes": 345,
+      "finishedAt": "2026-10-02T08:16:46.274Z"
+    },
+    {
+      "id": "blank-grid-compact-3",
+      "scenario": "blank-grid",
+      "condition": "compact",
+      "round": 3,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grid",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Public dimensional fixture\",\"player1Strategies\":8,\"player2Strategies\":10,\"payoffsProvided\":false}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "blank-grid",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grid"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+          }
+        ],
+        "currentProblem": {
+          "title": "blank-grid",
+          "request": "Ask the queued question q-grid in its canonical wording and show exactly an 8-row by 10-column empty payoff grid. Do not fill cells, mark equilibria, or reveal the answer. Use the whiteboard now."
+        },
+        "privateQuestionBank": {
+          "topics": [
+            {
+              "topicId": "strict-ne",
+              "title": "Strict Nash equilibria",
+              "questions": [
+                {
+                  "id": "q-grid",
+                  "topicId": "strict-ne",
+                  "topicTitle": "Strict Nash equilibria",
+                  "difficulty": "medium",
+                  "sourceIds": [
+                    "source-grid"
+                  ],
+                  "question": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+                  "answer": "Eight. Strict Nash equilibria cannot share a row or column, so the bound is the smaller dimension."
+                }
+              ]
+            }
+          ]
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "5601b88279be3f6886a08c82ecc6dcaaf3784a7956dd7b83972bb75e260980c1",
+      "instructionSha256": "baaf546565efb5b8ea3a5c420fc1922bed5962f3371922c5a0bd95129289c9e9",
+      "raw": "<ask>q-grid</ask><board>{\"title\":\"Blank game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game\",\"type\":\"matrix\",\"size\":[8,10],\"cells\":[]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1.4,
+        "firstSpokenMs": 1.5,
+        "generationCompleteMs": 1.6,
+        "boardReadyMs": 2,
+        "firstSyntheticAudioMs": 102.4
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "exactBlank8x10": true,
+        "canonicalQuestion": true,
+        "noAnswerSpoiler": true,
+        "expectedWire": true
+      },
+      "inputBytes": 1635,
+      "instructionBytes": 12001,
+      "httpStatus": 200,
+      "result": {
+        "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+        "questionId": "q-grid",
+        "board": {
+          "title": "Blank game",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "game",
+              "type": "matrix",
+              "rows": [
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 2,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Blank game",
+        "revision": "170f27d7-d068-4f7f-9776-cd36c4c24b36",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "Blank game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game",
+            "type": "matrix",
+            "size": [
+              8,
+              10
+            ],
+            "cells": []
+          }
+        ]
+      },
+      "outputBytes": 137,
+      "wireBoardBytes": 105,
+      "finishedAt": "2026-10-02T08:16:46.381Z"
+    },
+    {
+      "id": "biology-cell-production-1",
+      "scenario": "biology-cell",
+      "condition": "production",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-biology-cell",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit biology rendering fixture\",\"compartments\":[\"cell membrane\",\"cytoplasm\",\"nucleus\"],\"containment\":\"nucleus inside cytoplasm, cytoplasm inside cell membrane\",\"note\":\"Membrane: selective boundary\"}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "biology-cell",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-biology-cell"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+          }
+        ],
+        "currentProblem": {
+          "title": "biology-cell",
+          "request": "Draw a simple animal cell with an outer cell membrane, cytoplasm inside, and a nucleus inside the cytoplasm. Use leader lines to label all three without crossing text. Add one short teaching note: \"Membrane: selective boundary\". Keep the note readable and separate from diagram labels. Give compartments and note stable selectable identities."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "a572e1987563b2c95b76253dbd759b7b9cb784d69e4e9a2a9eabb0ac0748eeda",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"biology-cell\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1.1,
+        "firstSpokenMs": 1.2,
+        "generationCompleteMs": 1.9,
+        "boardReadyMs": 2.3,
+        "firstSyntheticAudioMs": 102.5
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1602,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "biology-cell",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 2,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "biology-cell",
+        "revision": "dd970fd0-b95a-4969-ac20-fabc4d97465f",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "biology-cell",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 342,
+      "wireBoardBytes": 288,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:16:46.487Z"
+    },
+    {
+      "id": "algebra-steps-production-1",
+      "scenario": "algebra-steps",
+      "condition": "production",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-algebra-steps",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit requested worked example\",\"steps\":[\"2x + 3 = 11\",\"2x = 8\",\"x = 4\"],\"operations\":[\"subtract 3 from both sides\",\"divide both sides by 2\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "algebra-steps",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-algebra-steps"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+          }
+        ],
+        "currentProblem": {
+          "title": "algebra-steps",
+          "request": "Show this requested fully worked algebra example as three aligned lines: 2x + 3 = 11; 2x = 8; x = 4. Annotate the first transition \"subtract 3 from both sides\" and the second \"divide both sides by 2\". Highlight or box the final result. Preserve readable spacing and stable identities for each equation and annotation. Text and math are the useful teaching content here."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "2300666b8285e216bf7bde2f435e29eab92866ddc4de4fc60404403c42e0135f",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"algebra-steps\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1,
+        "firstSpokenMs": 1,
+        "generationCompleteMs": 1.2,
+        "boardReadyMs": 1.6,
+        "firstSyntheticAudioMs": 101.7
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1609,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "algebra-steps",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "algebra-steps",
+        "revision": "6af68f32-8259-4c70-996d-b8bea3bf34ab",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "algebra-steps",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 343,
+      "wireBoardBytes": 289,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:16:46.593Z"
+    },
+    {
+      "id": "physics-forces-production-1",
+      "scenario": "physics-forces",
+      "condition": "production",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-physics-forces",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit mechanics rendering fixture\",\"objects\":[\"block\",\"horizontal surface\"],\"forces\":{\"N\":\"up\",\"mg\":\"down\",\"F\":\"right\",\"f\":\"left\"},\"equations\":[\"ΣFᵧ = N − mg = 0\",\"ΣFₓ = F − f = ma\"]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "physics-forces",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-physics-forces"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+          }
+        ],
+        "currentProblem": {
+          "title": "physics-forces",
+          "request": "Draw a block on a horizontal surface with four arrows originating at the block: N upward, mg downward, F to the right, and f to the left. Put the short equations ΣFᵧ = N − mg = 0 and ΣFₓ = F − f = ma in a readable area below. Do not invent force magnitudes. Each force and equation needs a stable selectable identity."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "e7ec799b4dcea0972f97e43f8cab618ab222bdc31f6ae280e4b9e9fa37447011",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"physics-forces\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 1.1,
+        "firstSpokenMs": 1.2,
+        "generationCompleteMs": 1.4,
+        "boardReadyMs": 1.8,
+        "firstSyntheticAudioMs": 102.2
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1604,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "physics-forces",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "physics-forces",
+        "revision": "3bd0581f-1b22-4d94-9239-cd4bf551eb84",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "physics-forces",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 344,
+      "wireBoardBytes": 290,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:16:46.698Z"
+    },
+    {
+      "id": "grammar-annotation-production-1",
+      "scenario": "grammar-annotation",
+      "condition": "production",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-grammar-annotation",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Explicit grammar rendering fixture\",\"sentence\":\"Although it was raining, Maya walked to class.\",\"clauses\":[{\"id\":\"dependent\",\"text\":\"Although it was raining\",\"label\":\"dependent clause\"},{\"id\":\"main\",\"text\":\"Maya walked to class.\",\"label\":\"main clause\"}]}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "grammar-annotation",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-grammar-annotation"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+          }
+        ],
+        "currentProblem": {
+          "title": "grammar-annotation",
+          "request": "Write the sentence exactly: \"Although it was raining, Maya walked to class.\" Visually bracket or underline the first clause and label it \"dependent clause\". Separately mark the second clause and label it \"main clause\". Keep the sentence in reading order, use concise annotations, and give each clause a selectable identity. This board intentionally teaches with text, not a generic diagram."
+        },
+        "whiteboardContext": {
+          "visible": false
+        }
+      },
+      "inputSha256": "22d8e4e0a5eecdae34f1c8e00f265683a32da4394928a401c7c2c7fb5e951941",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"grammar-annotation\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},{\"id\":\"frame\",\"type\":\"rect\",\"x\":30,\"y\":30,\"width\":740,\"height\":110}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.9,
+        "firstSpokenMs": 0.9,
+        "generationCompleteMs": 1.1,
+        "boardReadyMs": 1.4,
+        "firstSyntheticAudioMs": 102.6
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true
+      },
+      "inputBytes": 1840,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "grammar-annotation",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 40,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                },
+                {
+                  "id": "frame",
+                  "type": "rect",
+                  "x": 30,
+                  "y": 30,
+                  "width": 740,
+                  "height": 110
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "grammar-annotation",
+        "revision": "676fc6e6-a036-4966-9b52-e11efb5590ff",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "grammar-annotation",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 40,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 348,
+      "wireBoardBytes": 294,
+      "requiresManualVisualReview": true,
+      "finishedAt": "2026-10-02T08:16:46.804Z"
+    },
+    {
+      "id": "object-patch-production-1",
+      "scenario": "object-patch",
+      "condition": "production",
+      "round": 1,
+      "status": "completed",
+      "input": {
+        "title": "Teaching board benchmark",
+        "indexStatus": "ready",
+        "readinessContext": {
+          "ready": true,
+          "trigger": "student-turn",
+          "missing": []
+        },
+        "sourceRevision": "synthetic-public-v1",
+        "materials": [
+          {
+            "id": "source-object-patch",
+            "name": "Explicit public fixture",
+            "text": "{\"source\":\"Same established scene\",\"targetId\":\"note\",\"currentObject\":{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":40,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"},\"change\":{\"y\":52}}"
+          }
+        ],
+        "topics": [
+          {
+            "title": "object-patch",
+            "summary": "Render the supplied public facts",
+            "sourceIds": [
+              "source-object-patch"
+            ]
+          }
+        ],
+        "retrievalStatus": {
+          "status": "resolved"
+        },
+        "conversation": [
+          {
+            "role": "user",
+            "content": "Keep this exact physics board visible. Change only object note: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+          }
+        ],
+        "currentProblem": {
+          "title": "object-patch",
+          "request": "Keep this exact physics board visible. Change only object note: move it 12 pixels downward, preserving its text and all other objects. Return a sparse object patch, not a new scene."
+        },
+        "whiteboardContext": {
+          "visible": true,
+          "board": {
+            "title": "physics-forces",
+            "revision": "3bd0581f-1b22-4d94-9239-cd4bf551eb84",
+            "blocks": [
+              {
+                "id": "scene",
+                "type": "scene",
+                "width": 800,
+                "height": 500,
+                "objects": [
+                  {
+                    "id": "note",
+                    "type": "text",
+                    "x": 40,
+                    "y": 40,
+                    "width": 700,
+                    "height": 80,
+                    "text": "Offline rendering fixture"
+                  },
+                  {
+                    "id": "frame",
+                    "type": "rect",
+                    "x": 30,
+                    "y": 30,
+                    "width": 740,
+                    "height": 110
+                  }
+                ]
+              }
+            ]
+          },
+          "title": "physics-forces",
+          "text": "Offline rendering fixture"
+        }
+      },
+      "inputSha256": "096533c050396e462f4a34de8b4b8f2f7d06f09dd267721ec8dd857f686fb7f7",
+      "instructionSha256": "6cb4099416e86f9cc887f05e00be2fd43be5ab843c21f7da3be903f1a54f619d",
+      "raw": "<say>Here is the requested scene.</say><board>{\"title\":\"physics-forces\",\"mode\":\"patch\",\"blocks\":[{\"id\":\"scene\",\"type\":\"scene\",\"width\":800,\"height\":500,\"objects\":[{\"id\":\"note\",\"type\":\"text\",\"x\":40,\"y\":52,\"width\":700,\"height\":80,\"text\":\"Offline rendering fixture\"}]}]}</board>",
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 80
+      },
+      "latencies": {
+        "firstRawOutputMs": 0.8,
+        "firstSpokenMs": 0.9,
+        "generationCompleteMs": 1,
+        "boardReadyMs": 1.5,
+        "firstSyntheticAudioMs": 101.8
+      },
+      "checks": {
+        "validCanonicalBoard": true,
+        "spokenPresent": true,
+        "retainedScene": true,
+        "priorObjectIdsRetained": true,
+        "onlyTargetChanged": true,
+        "patchNotReplacement": true,
+        "requestedPosition": true,
+        "patchIsSparse": true
+      },
+      "inputBytes": 1746,
+      "instructionBytes": 11550,
+      "httpStatus": 200,
+      "result": {
+        "reply": "Here is the requested scene.",
+        "board": {
+          "title": "physics-forces",
+          "mode": "patch",
+          "blocks": [
+            {
+              "id": "scene",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 40,
+                  "y": 52,
+                  "width": 700,
+                  "height": 80,
+                  "text": "Offline rendering fixture"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1,
+          "totalMs": 1,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "physics-forces",
+        "revision": "099d5a32-5e0e-4c9e-9bcd-6cbe5a793ea1",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 52,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              },
+              {
+                "id": "frame",
+                "type": "rect",
+                "x": 30,
+                "y": 30,
+                "width": 740,
+                "height": 110
+              }
+            ]
+          }
+        ]
+      },
+      "wireBoard": {
+        "title": "physics-forces",
+        "mode": "patch",
+        "blocks": [
+          {
+            "id": "scene",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "note",
+                "type": "text",
+                "x": 40,
+                "y": 52,
+                "width": 700,
+                "height": 80,
+                "text": "Offline rendering fixture"
+              }
+            ]
+          }
+        ]
+      },
+      "outputBytes": 274,
+      "wireBoardBytes": 220,
+      "requiresManualVisualReview": true,
+      "objectDiff": [
+        {
+          "id": "note",
+          "preserved": true,
+          "unchanged": false
+        },
+        {
+          "id": "frame",
+          "preserved": true,
+          "unchanged": true
+        }
+      ],
+      "finishedAt": "2026-10-02T08:16:46.910Z"
+    }
+  ],
+  "methodology": {
+    "pairs": "Three paired identical-input blank8×10 requests. Alternating baseline/compact order. Both use the full saved baseline instructions; only two matrix wire-syntax fragments change. Current production prompt is used only for separate generic scene cases.",
+    "clock": "Prepared context through production OpenAI streaming adapter/decoder and canonical board merge. Shared provider lock acquisition excluded. Browser render is measured separately offline. No STT, Jev, retrieval or actual ElevenLabs request.",
+    "syntheticAudio": "Production speech text buffer plus fixed100ms timer. This is a synthetic dispatch marker, not an estimate of real ElevenLabs latency.",
+    "continuity": "Canonical question ID and exact spoken wording are checked; no grade is inferred from drawing. Full live routing, grading and cancellation are verified by separate production lifecycle tests.",
+    "patch": "One real object-update request on the previously generated physics scene; unchanged object IDs/content are compared after production merging."
+  },
+  "finishedAt": "2026-10-02T08:16:46.912Z"
+}

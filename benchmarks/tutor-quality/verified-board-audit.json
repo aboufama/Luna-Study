@@ -1,0 +1,683 @@
+{
+  "finishedAt": "2026-10-02T12:12:27.988Z",
+  "providerCalls": 0,
+  "sourceFile": "live-adaptive-final-verified.json",
+  "sourceSha256": "8530e9b3af7fec302f85557db5be391c9c5b397542acefe12005b9b7e0abd056",
+  "sourceHashes": {
+    "src/Whiteboard.jsx": "bb8460595f2e2d2efc7235b50349475a11174d619c9806a9e9870517ae4023cc",
+    "src/board-reading.css": "95172cb84d2490d64e3aa42ffea360ab4345c666064a69ca288d3aabe3f20461",
+    "shared/equation-chain.mjs": "e81cbd322bba45365a5fa38f20825e3e75e6811f2346530eff0a4f9fbea7d572",
+    "shared/flow-layout.mjs": "acd14a26c34a4af1dd706d77730e6d967bac36f35f28ed62633c9ccce7b8d1e7",
+    "src/TeachingScene.jsx": "b37ca1366e3156f68a03a961c2ceeb5085dfab33612d062c268f2cfbea384912",
+    "src/teaching-scene.css": "d6877fff839ef8c45780ffffc5aa273751d1df8102ac15701379361f39e8cc64"
+  },
+  "method": "Completed saved session exact accepted canvas packets replayed through production readonly Whiteboard. Desktop and mobile component fixture, no provider or microphone. Original canonical boards and revisions retained. This checks rendering, not a second live conversation or full app camera layout.",
+  "acceptedPackets": 12,
+  "errors": [],
+  "runs": [
+    {
+      "index": 1,
+      "stepId": "clarify-current",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-01-clarify-current.png",
+      "sourceBoardSha256": "7e41b04290c79127f0b5124294341daab1bc8cc5b079f1fc301071d3a8430f82",
+      "measurement": {
+        "text": "2x+3=11\nExplain the equal operations used and why they preserve the equation.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 566,
+            "scroll": 566,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 2,
+      "stepId": "answer-shortcut",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-02-answer-shortcut.png",
+      "sourceBoardSha256": "8d2f9b3f7cf2443f6a1692799f8111a16b8f84b0c734b4c04d6f101850862690",
+      "measurement": {
+        "text": "2x+3=11\n→2x=8\n→x=4\nSubtract 3 from both sides, then divide both sides by 2.\nSame operation on each side preserves equality.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11→2x=8→x=4",
+            "width": 456,
+            "scroll": 456,
+            "fontSize": "21px",
+            "parts": [
+              {
+                "width": 156,
+                "scroll": 156
+              },
+              {
+                "width": 157,
+                "scroll": 157
+              },
+              {
+                "width": 119,
+                "scroll": 119
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 3,
+      "stepId": "hint-three",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-03-hint-three.png",
+      "sourceBoardSha256": "39e35325429b3f69c7bea45b8531f7694745f3b943aae9c9dd8a1b528116cc32",
+      "measurement": {
+        "text": "2x+3=11\nApply the same subtraction to both sides.\nThen write the new equation.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 334,
+            "scroll": 334,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 4,
+      "stepId": "incorrect-full-target",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-04-incorrect-full-target.png",
+      "sourceBoardSha256": "916b4c8a9504d191e46c1863cbbc3e029b533700b8add87639756f2f4551e032",
+      "measurement": {
+        "text": "2x+3=11\n⟶2x=□\nAfter subtracting 3 from both sides, keep the coefficient 2 attached to x.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11⟶2x=□",
+            "width": 579,
+            "scroll": 579,
+            "fontSize": "21px",
+            "parts": [
+              {
+                "width": 156,
+                "scroll": 156
+              },
+              {
+                "width": 159,
+                "scroll": 159
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 5,
+      "stepId": "biology-partial",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-05-biology-partial.png",
+      "sourceBoardSha256": "bef25ed8845c2d0623ec9bfdac2b4e514a65229b6a0ae395e6c1120d05fa4761",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy\nCell membrane\t\nControls what crosses between cell and surroundings\n\t\n\t\n\nPassive transport\t\n\t\n_____ a concentration gradient\n\t\nuses energy? _____\n\nActive transport\t\n\t\n_____ a concentration gradient\n\t\nuses energy? _____",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Controls what crosses between cell and surroundings",
+          "",
+          "",
+          "",
+          "_____ a concentration gradient",
+          "uses energy? _____",
+          "",
+          "_____ a concentration gradient",
+          "uses energy? _____"
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 6,
+      "stepId": "biology-full",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-06-biology-full.png",
+      "sourceBoardSha256": "de2f62b07336a87a2cf9b92206dc72e657610357ab3ec27dfe9e79e615aa0705",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy\nCell membrane\t\nControls what crosses between cell and surroundings\n\t\n\t\n\nDiffusion\t\n\t\nDown a concentration gradient\n\t\nNo energy input\n\nActive transport\t\n\t\nAgainst a concentration gradient\n\t\nUses energy",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Controls what crosses between cell and surroundings",
+          "",
+          "",
+          "",
+          "Down a concentration gradient",
+          "No energy input",
+          "",
+          "Against a concentration gradient",
+          "Uses energy"
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 7,
+      "stepId": "resume-study",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-07-resume-study.png",
+      "sourceBoardSha256": "e5aac93c58283879721684644d1c8ad2bef82b15feed5c0bd78514fc439bf967",
+      "measurement": {
+        "text": "3y−6=9\nExplain the equal operations you choose and why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 570,
+            "scroll": 570,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 8,
+      "stepId": "third-equation",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-08-third-equation.png",
+      "sourceBoardSha256": "bfea9cfa2f62a8d94de914bce2fd35faca1a8946c63fb710cecebccbc24814ac",
+      "measurement": {
+        "text": "3y−6=9\n→3y=15\n→y=5\nAdd 6 to both sides, then divide both sides by 3.\nThe same operation on both sides preserves equality.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9→3y=15→y=5",
+            "width": 452,
+            "scroll": 452,
+            "fontSize": "21px",
+            "parts": [
+              {
+                "width": 142,
+                "scroll": 142
+              },
+              {
+                "width": 169,
+                "scroll": 169
+              },
+              {
+                "width": 118,
+                "scroll": 118
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 9,
+      "stepId": "ask-next",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-09-ask-next.png",
+      "sourceBoardSha256": "f5d2ee1875d8079779abc80953bb516e7a91daa3ddb3e93c5b8513c5716929b1",
+      "measurement": {
+        "text": "5w−10=20\nExplain each equal operation and why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20",
+            "width": 477,
+            "scroll": 477,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 10,
+      "stepId": "fourth-equation",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-10-fourth-equation.png",
+      "sourceBoardSha256": "8a5dd07ac16d4518aa1d9f486f8c50eb4981bebe99f00f1a1f6ee2e226dc0e1c",
+      "measurement": {
+        "text": "5w−10=20\n→5w=30\n→w=6\nAdd 10 to both sides, then divide both sides by 5.\nEqual operations on both sides preserve equality.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20→5w=30→w=6",
+            "width": 494,
+            "scroll": 494,
+            "fontSize": "21px",
+            "parts": [
+              {
+                "width": 173,
+                "scroll": 173
+              },
+              {
+                "width": 174,
+                "scroll": 174
+              },
+              {
+                "width": 123,
+                "scroll": 123
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 11,
+      "stepId": "explain-back",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-11-explain-back.png",
+      "sourceBoardSha256": "582fa2bad843bbd805e5dfee702f2eb4b43e2c9d912473f3f17809195d990eb4",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy use\nCell membrane\t\nSelectively permeable boundary\n\t\n\t\n\nDiffusion\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Selectively permeable boundary",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 12,
+      "stepId": "transfer-response",
+      "viewport": "desktop",
+      "screenshot": "renders/verified-accepted-desktop-12-transfer-response.png",
+      "sourceBoardSha256": "5946d3eef43b83c9a2c2c46e0f01f448b3e7fd3222db12f4f4ad8b80a3d3c9ab",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy use\nCell membrane\t\nSelectively permeable boundary\n\t\n\t\n\nDiffusion\t\n\t\nDown the gradient\n\t\nNo energy input\n\nActive transport\t\n\t\nAgainst the gradient\n\t\nUses energy",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Selectively permeable boundary",
+          "",
+          "",
+          "",
+          "Down the gradient",
+          "No energy input",
+          "",
+          "Against the gradient",
+          "Uses energy"
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 1,
+      "stepId": "clarify-current",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-01-clarify-current.png",
+      "sourceBoardSha256": "7e41b04290c79127f0b5124294341daab1bc8cc5b079f1fc301071d3a8430f82",
+      "measurement": {
+        "text": "2x+3=11\nExplain the equal operations used and why they preserve the equation.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 2,
+      "stepId": "answer-shortcut",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-02-answer-shortcut.png",
+      "sourceBoardSha256": "8d2f9b3f7cf2443f6a1692799f8111a16b8f84b0c734b4c04d6f101850862690",
+      "measurement": {
+        "text": "2x+3=11\n→2x=8\n→x=4\nSubtract 3 from both sides, then divide both sides by 2.\nSame operation on each side preserves equality.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11→2x=8→x=4",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": [
+              {
+                "width": 133,
+                "scroll": 133
+              },
+              {
+                "width": 135,
+                "scroll": 135
+              },
+              {
+                "width": 102,
+                "scroll": 102
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 3,
+      "stepId": "hint-three",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-03-hint-three.png",
+      "sourceBoardSha256": "39e35325429b3f69c7bea45b8531f7694745f3b943aae9c9dd8a1b528116cc32",
+      "measurement": {
+        "text": "2x+3=11\nApply the same subtraction to both sides.\nThen write the new equation.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 302,
+            "scroll": 302,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 4,
+      "stepId": "incorrect-full-target",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-04-incorrect-full-target.png",
+      "sourceBoardSha256": "916b4c8a9504d191e46c1863cbbc3e029b533700b8add87639756f2f4551e032",
+      "measurement": {
+        "text": "2x+3=11\n⟶2x=□\nAfter subtracting 3 from both sides, keep the coefficient 2 attached to x.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11⟶2x=□",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": [
+              {
+                "width": 133,
+                "scroll": 133
+              },
+              {
+                "width": 136,
+                "scroll": 136
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 5,
+      "stepId": "biology-partial",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-05-biology-partial.png",
+      "sourceBoardSha256": "bef25ed8845c2d0623ec9bfdac2b4e514a65229b6a0ae395e6c1120d05fa4761",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy\nCell membrane\t\nControls what crosses between cell and surroundings\n\t\n\t\n\nPassive transport\t\n\t\n_____ a concentration gradient\n\t\nuses energy? _____\n\nActive transport\t\n\t\n_____ a concentration gradient\n\t\nuses energy? _____",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Controls what crosses between cell and surroundings",
+          "",
+          "",
+          "",
+          "_____ a concentration gradient",
+          "uses energy? _____",
+          "",
+          "_____ a concentration gradient",
+          "uses energy? _____"
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 6,
+      "stepId": "biology-full",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-06-biology-full.png",
+      "sourceBoardSha256": "de2f62b07336a87a2cf9b92206dc72e657610357ab3ec27dfe9e79e615aa0705",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy\nCell membrane\t\nControls what crosses between cell and surroundings\n\t\n\t\n\nDiffusion\t\n\t\nDown a concentration gradient\n\t\nNo energy input\n\nActive transport\t\n\t\nAgainst a concentration gradient\n\t\nUses energy",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Controls what crosses between cell and surroundings",
+          "",
+          "",
+          "",
+          "Down a concentration gradient",
+          "No energy input",
+          "",
+          "Against a concentration gradient",
+          "Uses energy"
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 7,
+      "stepId": "resume-study",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-07-resume-study.png",
+      "sourceBoardSha256": "e5aac93c58283879721684644d1c8ad2bef82b15feed5c0bd78514fc439bf967",
+      "measurement": {
+        "text": "3y−6=9\nExplain the equal operations you choose and why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 8,
+      "stepId": "third-equation",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-08-third-equation.png",
+      "sourceBoardSha256": "bfea9cfa2f62a8d94de914bce2fd35faca1a8946c63fb710cecebccbc24814ac",
+      "measurement": {
+        "text": "3y−6=9\n→3y=15\n→y=5\nAdd 6 to both sides, then divide both sides by 3.\nThe same operation on both sides preserves equality.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9→3y=15→y=5",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": [
+              {
+                "width": 122,
+                "scroll": 122
+              },
+              {
+                "width": 145,
+                "scroll": 145
+              },
+              {
+                "width": 101,
+                "scroll": 101
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 9,
+      "stepId": "ask-next",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-09-ask-next.png",
+      "sourceBoardSha256": "f5d2ee1875d8079779abc80953bb516e7a91daa3ddb3e93c5b8513c5716929b1",
+      "measurement": {
+        "text": "5w−10=20\nExplain each equal operation and why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 10,
+      "stepId": "fourth-equation",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-10-fourth-equation.png",
+      "sourceBoardSha256": "8a5dd07ac16d4518aa1d9f486f8c50eb4981bebe99f00f1a1f6ee2e226dc0e1c",
+      "measurement": {
+        "text": "5w−10=20\n→5w=30\n→w=6\nAdd 10 to both sides, then divide both sides by 5.\nEqual operations on both sides preserve equality.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20→5w=30→w=6",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": [
+              {
+                "width": 148,
+                "scroll": 148
+              },
+              {
+                "width": 149,
+                "scroll": 149
+              },
+              {
+                "width": 106,
+                "scroll": 106
+              }
+            ]
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 11,
+      "stepId": "explain-back",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-11-explain-back.png",
+      "sourceBoardSha256": "582fa2bad843bbd805e5dfee702f2eb4b43e2c9d912473f3f17809195d990eb4",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy use\nCell membrane\t\nSelectively permeable boundary\n\t\n\t\n\nDiffusion\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Selectively permeable boundary",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 12,
+      "stepId": "transfer-response",
+      "viewport": "mobile",
+      "screenshot": "renders/verified-accepted-mobile-12-transfer-response.png",
+      "sourceBoardSha256": "5946d3eef43b83c9a2c2c46e0f01f448b3e7fd3222db12f4f4ad8b80a3d3c9ab",
+      "measurement": {
+        "text": "\tRole\tGradient direction\tEnergy use\nCell membrane\t\nSelectively permeable boundary\n\t\n\t\n\nDiffusion\t\n\t\nDown the gradient\n\t\nNo energy input\n\nActive transport\t\n\t\nAgainst the gradient\n\t\nUses energy",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Selectively permeable boundary",
+          "",
+          "",
+          "",
+          "Down the gradient",
+          "No energy input",
+          "",
+          "Against the gradient",
+          "Uses energy"
+        ],
+        "scenes": []
+      }
+    }
+  ]
+}

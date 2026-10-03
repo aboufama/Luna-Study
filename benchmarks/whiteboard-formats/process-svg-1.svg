@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Observe to Hypothesize to Test, with a Revise return arrow from Test to Observe">
+  <g id="process">
+    <g id="observe">
+      <rect id="observe-box" x="55" y="205" width="150" height="72" rx="8" fill="#ffffff" stroke="#202a35" stroke-width="2"/>
+      <text id="observe-label" x="130" y="241" fill="#202a35" font-family="sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle">Observe</text>
+    </g>
+    <g id="hypothesize">
+      <rect id="hypothesize-box" x="325" y="205" width="150" height="72" rx="8" fill="#ffffff" stroke="#202a35" stroke-width="2"/>
+      <text id="hypothesize-label" x="400" y="241" fill="#202a35" font-family="sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle">Hypothesize</text>
+    </g>
+    <g id="test">
+      <rect id="test-box" x="595" y="205" width="150" height="72" rx="8" fill="#ffffff" stroke="#202a35" stroke-width="2"/>
+      <text id="test-label" x="670" y="241" fill="#202a35" font-family="sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle">Test</text>
+    </g>
+    <g id="observe-to-hypothesize">
+      <line id="observe-to-hypothesize-line" x1="205" y1="241" x2="315" y2="241" stroke="#202a35" stroke-width="2" stroke-linecap="round"/>
+      <polygon id="observe-to-hypothesize-arrowhead" points="325,241 313,235 313,247" fill="#202a35"/>
+    </g>
+    <g id="hypothesize-to-test">
+      <line id="hypothesize-to-test-line" x1="475" y1="241" x2="585" y2="241" stroke="#202a35" stroke-width="2" stroke-linecap="round"/>
+      <polygon id="hypothesize-to-test-arrowhead" points="595,241 583,235 583,247" fill="#202a35"/>
+    </g>
+    <g id="test-to-observe-revise">
+      <polyline id="revise-return-line" points="670,277 670,350 130,350 130,289" fill="none" stroke="#202a35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polygon id="revise-return-arrowhead" points="130,277 124,289 136,289" fill="#202a35"/>
+      <text id="revise-label" x="400" y="382" fill="#202a35" font-family="sans-serif" font-size="18" text-anchor="middle" dominant-baseline="middle">Revise</text>
+    </g>
+  </g>
+</svg>

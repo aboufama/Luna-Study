@@ -1,0 +1,1465 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T07:16:31.738Z",
+  "liveProviders": true,
+  "model": "gpt-6-luna",
+  "experiment": "Prepared-context primary generation plus validation/routing; current integrated response vs benchmark-only speculative parallel renderer",
+  "limitations": [
+    "One paired trial for each of three explicit public requests; fixed baseline-then-prototype order, no production percentiles or statistical speed claim.",
+    "Clock starts when the identical prepared context is submitted. STT, student-intent and passage-prefetch latency are excluded from both conditions.",
+    "Original passages are deterministically selected once using the production local retrieval implementation and shared unchanged within each pair. No gold board or reference answer enters renderer input.",
+    "Uses production streaming adapter, decoder, speech text buffer, validation, board merge and Jev routing. It is a generation/routing phase experiment, not the full live WebSocket lifecycle.",
+    "First synthetic audio is the first speech-buffer dispatch plus a fixed 100 ms timer. It does not measure or estimate ElevenLabs latency; no voice provider is called.",
+    "Prototype main and silent renderer start concurrently; the proposed board is gated on both completing and a Jev speech/board consistency check. The renderer receives no question bank.",
+    "Prototype is restricted to an explicit already established public problem. It cannot safely predict a new question selected later by the main tutor.",
+    "No automatic visual recovery in this phase experiment; missing primary boards count as failures. Production can perform a separate silent recovery.",
+    "Provider-reported usage is recorded per HTTP request. No dollar estimates or provider-cost inference."
+  ],
+  "budget": {
+    "maxOpenAI": 12,
+    "maxJev": 6,
+    "openai": 9,
+    "jev": 6
+  },
+  "runs": [
+    {
+      "scenario": "blank-grid",
+      "condition": "integrated",
+      "status": "completed",
+      "latencies": {
+        "firstSpokenMs": 1784.9,
+        "firstSyntheticAudioMs": 2011.1,
+        "mainCompleteMs": 2579.4,
+        "candidateValidatedMs": 2579.5,
+        "routingCompleteMs": 2781.6,
+        "validatedBoardShownMs": 2782.1
+      },
+      "requests": [
+        {
+          "kind": "integrated",
+          "startedMs": 0.9,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 5783,
+            "input_tokens_details": {
+              "cache_write_tokens": 3238,
+              "cached_tokens": 2542
+            },
+            "output_tokens": 222,
+            "output_tokens_details": {
+              "reasoning_tokens": 99
+            },
+            "total_tokens": 6005
+          },
+          "publicOutput": "<say>In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?</say><board>{\"title\":\"8-by-10 game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]]}]}</board>",
+          "input": {
+            "bytes": 12044,
+            "instructionBytes": 11778,
+            "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+            "hasBank": true,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 545,
+          "completedMs": 2568.7
+        },
+        {
+          "kind": "jev",
+          "startedMs": 2582.1,
+          "model": "jev-latest",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 1653,
+            "output_tokens": 42
+          },
+          "publicOutput": "",
+          "headersMs": 2778.1,
+          "answers": {
+            "needs_canvas": {
+              "type": "noul",
+              "noul": 0.79
+            },
+            "agrees_with_speech": {
+              "type": "noul",
+              "noul": 0.86
+            }
+          }
+        }
+      ],
+      "checks": {
+        "speechPresent": true,
+        "speechBoardAgreement": true,
+        "diagramOnly": true,
+        "sameFullBank": true,
+        "rendererPrivateBankAbsent": true,
+        "exactBlank8x10": true,
+        "exactQueuedQuestion": true,
+        "noAnswerSpoiler": true
+      },
+      "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+      "candidate": {
+        "title": "8-by-10 game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "board": {
+        "title": "8-by-10 game",
+        "revision": "50ae64a9-2a8c-4f31-ab05-3aafd7c48bae",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "agreementProbability": 0.86,
+      "context": {
+        "sha256": "be7d80293d472d95c267e2288a473558a7855c3b3360505fcaea91931448a07d",
+        "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+        "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc",
+        "passageCharacters": 4370,
+        "passageSha256": "448a4561b5935418e3239f19021d71ed22a15a2d11c2fc8dea2940025beda9eb"
+      },
+      "boardStatus": "valid",
+      "routing": {
+        "needsCanvas": true,
+        "shouldClose": false,
+        "shouldReopen": false,
+        "shouldReplace": false,
+        "reason": "visual-teaching",
+        "source": "jev",
+        "probability": 0.79,
+        "latencyMs": 201
+      },
+      "finishedAt": "2026-10-02T07:16:34.526Z"
+    },
+    {
+      "scenario": "blank-grid",
+      "condition": "parallel",
+      "status": "completed",
+      "latencies": {
+        "firstSpokenMs": 2284.2,
+        "firstSyntheticAudioMs": 2525.8,
+        "mainCompleteMs": 2532.5,
+        "rendererCompleteMs": 2823.3,
+        "candidateValidatedMs": 2823.5,
+        "routingCompleteMs": 2980.1,
+        "validatedBoardShownMs": 2980.5
+      },
+      "requests": [
+        {
+          "kind": "renderer",
+          "startedMs": 1.2,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 3041,
+            "input_tokens_details": {
+              "cache_write_tokens": 3038,
+              "cached_tokens": 0
+            },
+            "output_tokens": 321,
+            "output_tokens_details": {
+              "reasoning_tokens": 164
+            },
+            "total_tokens": 3362
+          },
+          "publicOutput": "<say>Drawing.</say><board>{\"title\":\"8-by-10 game\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"game-grid\",\"type\":\"matrix\",\"label\":\"Player 1 strategies × Player 2 strategies\",\"rows\":[[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"],[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]],\"rowLabels\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"columnLabels\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\"]}]}</board>",
+          "input": {
+            "bytes": 6354,
+            "instructionBytes": 6108,
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "hasBank": false,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 357.8,
+          "completedMs": 2821.6
+        },
+        {
+          "kind": "speech",
+          "startedMs": 3.6,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 4657,
+            "input_tokens_details": {
+              "cache_write_tokens": 4654,
+              "cached_tokens": 0
+            },
+            "output_tokens": 236,
+            "output_tokens_details": {
+              "reasoning_tokens": 201
+            },
+            "total_tokens": 4893
+          },
+          "publicOutput": "<say>In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?</say>",
+          "input": {
+            "bytes": 12044,
+            "instructionBytes": 6606,
+            "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+            "hasBank": true,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 340.8,
+          "completedMs": 2531.3
+        },
+        {
+          "kind": "jev",
+          "startedMs": 2825.7,
+          "model": "jev-latest",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 1825,
+            "output_tokens": 42
+          },
+          "publicOutput": "",
+          "headersMs": 2978.2,
+          "answers": {
+            "needs_canvas": {
+              "type": "noul",
+              "noul": 0.83
+            },
+            "agrees_with_speech": {
+              "type": "noul",
+              "noul": 0.9
+            }
+          }
+        }
+      ],
+      "checks": {
+        "speechPresent": true,
+        "speechBoardAgreement": true,
+        "diagramOnly": true,
+        "sameFullBank": true,
+        "rendererPrivateBankAbsent": true,
+        "exactBlank8x10": true,
+        "exactQueuedQuestion": true,
+        "noAnswerSpoiler": true
+      },
+      "reply": "In an 8-by-10 two-player normal-form game, what is the maximum number of strict Nash equilibria?",
+      "candidate": {
+        "title": "8-by-10 game",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "label": "Player 1 strategies × Player 2 strategies",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "rowLabels": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "columnLabels": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ]
+          }
+        ]
+      },
+      "board": {
+        "title": "8-by-10 game",
+        "revision": "57111f4a-4f4d-4436-a46b-b802aff96598",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "label": "Player 1 strategies × Player 2 strategies",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ],
+            "rowLabels": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "columnLabels": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ]
+          }
+        ]
+      },
+      "agreementProbability": 0.9,
+      "context": {
+        "sha256": "be7d80293d472d95c267e2288a473558a7855c3b3360505fcaea91931448a07d",
+        "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+        "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc",
+        "passageCharacters": 4370,
+        "passageSha256": "448a4561b5935418e3239f19021d71ed22a15a2d11c2fc8dea2940025beda9eb"
+      },
+      "boardStatus": "valid",
+      "routing": {
+        "needsCanvas": true,
+        "shouldClose": false,
+        "shouldReopen": false,
+        "shouldReplace": false,
+        "reason": "visual-teaching",
+        "source": "jev",
+        "probability": 0.83,
+        "latencyMs": 156
+      },
+      "finishedAt": "2026-10-02T07:16:37.509Z"
+    },
+    {
+      "scenario": "scene-switch",
+      "condition": "integrated",
+      "status": "completed",
+      "latencies": {
+        "firstSpokenMs": 573.6,
+        "firstSyntheticAudioMs": 730.9,
+        "mainCompleteMs": 1520.4,
+        "candidateValidatedMs": 1520.5,
+        "routingCompleteMs": 1718.4,
+        "validatedBoardShownMs": 1718.9
+      },
+      "requests": [
+        {
+          "kind": "integrated",
+          "startedMs": 1.2,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 5966,
+            "input_tokens_details": {
+              "cache_write_tokens": 3421,
+              "cached_tokens": 2542
+            },
+            "output_tokens": 168,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 6134
+          },
+          "publicOutput": "<say>Switching to question 4. Here’s the line city with A and B at the trial positions; I won’t solve for an equilibrium.</say><board>{\"title\":\"Question 4: line city\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"city-line\",\"type\":\"diagram\",\"elements\":[{\"type\":\"line\",\"x1\":10,\"y1\":50,\"x2\":90,\"y2\":50},{\"type\":\"circle\",\"x\":26,\"y\":50,\"r\":2,\"label\":\"A\"},{\"type\":\"circle\",\"x\":74,\"y\":50,\"r\":2,\"label\":\"B\"},{\"type\":\"text\",\"x\":10,\"y\":64,\"text\":\"0\"},{\"type\":\"text\",\"x\":90,\"y\":64,\"text\":\"1\"}]}]}</board>",
+          "input": {
+            "bytes": 12594,
+            "instructionBytes": 11778,
+            "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+            "hasBank": true,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 297.4,
+          "completedMs": 1519
+        },
+        {
+          "kind": "jev",
+          "startedMs": 1524.1,
+          "model": "jev-latest",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 1788,
+            "output_tokens": 59
+          },
+          "publicOutput": "",
+          "headersMs": 1716.9,
+          "answers": {
+            "needs_canvas": {
+              "type": "noul",
+              "noul": 0.8
+            },
+            "replace_canvas": {
+              "type": "noul",
+              "noul": 0.93
+            },
+            "agrees_with_speech": {
+              "type": "noul",
+              "noul": 0.79
+            }
+          }
+        }
+      ],
+      "checks": {
+        "speechPresent": true,
+        "speechBoardAgreement": true,
+        "diagramOnly": true,
+        "sameFullBank": true,
+        "rendererPrivateBankAbsent": true,
+        "oldMatrixRemoved": true,
+        "cityTrialGeometry": true
+      },
+      "reply": "Switching to question 4. Here’s the line city with A and B at the trial positions; I won’t solve for an equilibrium.",
+      "candidate": {
+        "title": "Question 4: line city",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "city-line",
+            "type": "diagram",
+            "elements": [
+              {
+                "type": "line",
+                "x1": 10,
+                "y1": 50,
+                "x2": 90,
+                "y2": 50
+              },
+              {
+                "type": "circle",
+                "x": 26,
+                "y": 50,
+                "r": 2,
+                "label": "A"
+              },
+              {
+                "type": "circle",
+                "x": 74,
+                "y": 50,
+                "r": 2,
+                "label": "B"
+              },
+              {
+                "type": "text",
+                "x": 10,
+                "y": 64,
+                "text": "0"
+              },
+              {
+                "type": "text",
+                "x": 90,
+                "y": 64,
+                "text": "1"
+              }
+            ]
+          }
+        ]
+      },
+      "board": {
+        "title": "Question 4: line city",
+        "revision": "7eea0d28-8d46-46e1-8fb5-4248c3ea13d7",
+        "blocks": [
+          {
+            "id": "city-line",
+            "type": "diagram",
+            "elements": [
+              {
+                "type": "line",
+                "x1": 10,
+                "y1": 50,
+                "x2": 90,
+                "y2": 50
+              },
+              {
+                "type": "circle",
+                "x": 26,
+                "y": 50,
+                "r": 2,
+                "label": "A"
+              },
+              {
+                "type": "circle",
+                "x": 74,
+                "y": 50,
+                "r": 2,
+                "label": "B"
+              },
+              {
+                "type": "text",
+                "x": 10,
+                "y": 64,
+                "text": "0"
+              },
+              {
+                "type": "text",
+                "x": 90,
+                "y": 64,
+                "text": "1"
+              }
+            ]
+          }
+        ]
+      },
+      "agreementProbability": 0.79,
+      "context": {
+        "sha256": "5b94d7cbdd20653a70b570612f2b751d8a8bca96e539efc0a4c918a91223ea30",
+        "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+        "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc",
+        "passageCharacters": 4370,
+        "passageSha256": "448a4561b5935418e3239f19021d71ed22a15a2d11c2fc8dea2940025beda9eb"
+      },
+      "boardStatus": "valid",
+      "routing": {
+        "needsCanvas": true,
+        "shouldClose": false,
+        "shouldReopen": false,
+        "shouldReplace": true,
+        "replaceProbability": 0.93,
+        "reason": "different-visual-problem",
+        "source": "jev",
+        "probability": 0.8,
+        "latencyMs": 198
+      },
+      "finishedAt": "2026-10-02T07:16:39.234Z"
+    },
+    {
+      "scenario": "scene-switch",
+      "condition": "parallel",
+      "status": "completed",
+      "latencies": {
+        "firstSpokenMs": 1731.9,
+        "firstSyntheticAudioMs": 1939.4,
+        "mainCompleteMs": 2297,
+        "rendererCompleteMs": 2475.7,
+        "candidateValidatedMs": 2475.9,
+        "routingCompleteMs": 2646.6,
+        "validatedBoardShownMs": 2646.8
+      },
+      "requests": [
+        {
+          "kind": "renderer",
+          "startedMs": 1.1,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 3213,
+            "input_tokens_details": {
+              "cache_write_tokens": 1901,
+              "cached_tokens": 1309
+            },
+            "output_tokens": 284,
+            "output_tokens_details": {
+              "reasoning_tokens": 88
+            },
+            "total_tokens": 3497
+          },
+          "publicOutput": "<say>Drawing.</say>\n<board>{\"title\":\"Question 4: Line City\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"q4-trial-locations\",\"type\":\"diagram\",\"elements\":[{\"type\":\"line\",\"x1\":5,\"y1\":55,\"x2\":95,\"y2\":55},{\"type\":\"line\",\"x1\":5,\"y1\":51,\"x2\":5,\"y2\":59},{\"type\":\"line\",\"x1\":95,\"y1\":51,\"x2\":95,\"y2\":59},{\"type\":\"text\",\"x\":5,\"y\":72,\"text\":\"0\"},{\"type\":\"text\",\"x\":95,\"y\":72,\"text\":\"1\"},{\"type\":\"circle\",\"x\":23,\"y\":55,\"r\":2,\"label\":\"A\"},{\"type\":\"circle\",\"x\":77,\"y\":55,\"r\":2,\"label\":\"B\"}]}]}</board>",
+          "input": {
+            "bytes": 6836,
+            "instructionBytes": 6108,
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "hasBank": false,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 292,
+          "completedMs": 2474.3
+        },
+        {
+          "kind": "speech",
+          "startedMs": 2.6,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 4840,
+            "input_tokens_details": {
+              "cache_write_tokens": 3421,
+              "cached_tokens": 1416
+            },
+            "output_tokens": 147,
+            "output_tokens_details": {
+              "reasoning_tokens": 92
+            },
+            "total_tokens": 4987
+          },
+          "publicOutput": "<say>We’re switching to question 4, and I’ll leave the equilibrium unsolved. The trial positions are A at 0.2 and B at 0.8 on the line from 0 to 1.</say>",
+          "input": {
+            "bytes": 12594,
+            "instructionBytes": 6606,
+            "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+            "hasBank": true,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 395.8,
+          "completedMs": 2295.8
+        },
+        {
+          "kind": "jev",
+          "startedMs": 2476.6,
+          "model": "jev-latest",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 1918,
+            "output_tokens": 59
+          },
+          "publicOutput": "",
+          "headersMs": 2645.8,
+          "answers": {
+            "needs_canvas": {
+              "type": "noul",
+              "noul": 0.69
+            },
+            "replace_canvas": {
+              "type": "noul",
+              "noul": 0.95
+            },
+            "agrees_with_speech": {
+              "type": "noul",
+              "noul": 0.94
+            }
+          }
+        }
+      ],
+      "checks": {
+        "speechPresent": true,
+        "speechBoardAgreement": true,
+        "diagramOnly": true,
+        "sameFullBank": true,
+        "rendererPrivateBankAbsent": true,
+        "oldMatrixRemoved": true,
+        "cityTrialGeometry": true
+      },
+      "reply": "We’re switching to question 4, and I’ll leave the equilibrium unsolved. The trial positions are A at 0.2 and B at 0.8 on the line from 0 to 1.",
+      "candidate": {
+        "title": "Question 4: Line City",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "q4-trial-locations",
+            "type": "diagram",
+            "elements": [
+              {
+                "type": "line",
+                "x1": 5,
+                "y1": 55,
+                "x2": 95,
+                "y2": 55
+              },
+              {
+                "type": "line",
+                "x1": 5,
+                "y1": 51,
+                "x2": 5,
+                "y2": 59
+              },
+              {
+                "type": "line",
+                "x1": 95,
+                "y1": 51,
+                "x2": 95,
+                "y2": 59
+              },
+              {
+                "type": "text",
+                "x": 5,
+                "y": 72,
+                "text": "0"
+              },
+              {
+                "type": "text",
+                "x": 95,
+                "y": 72,
+                "text": "1"
+              },
+              {
+                "type": "circle",
+                "x": 23,
+                "y": 55,
+                "r": 2,
+                "label": "A"
+              },
+              {
+                "type": "circle",
+                "x": 77,
+                "y": 55,
+                "r": 2,
+                "label": "B"
+              }
+            ]
+          }
+        ]
+      },
+      "board": {
+        "title": "Question 4: Line City",
+        "revision": "a3d05055-9516-4519-9ee8-506f1f2302e4",
+        "blocks": [
+          {
+            "id": "q4-trial-locations",
+            "type": "diagram",
+            "elements": [
+              {
+                "type": "line",
+                "x1": 5,
+                "y1": 55,
+                "x2": 95,
+                "y2": 55
+              },
+              {
+                "type": "line",
+                "x1": 5,
+                "y1": 51,
+                "x2": 5,
+                "y2": 59
+              },
+              {
+                "type": "line",
+                "x1": 95,
+                "y1": 51,
+                "x2": 95,
+                "y2": 59
+              },
+              {
+                "type": "text",
+                "x": 5,
+                "y": 72,
+                "text": "0"
+              },
+              {
+                "type": "text",
+                "x": 95,
+                "y": 72,
+                "text": "1"
+              },
+              {
+                "type": "circle",
+                "x": 23,
+                "y": 55,
+                "r": 2,
+                "label": "A"
+              },
+              {
+                "type": "circle",
+                "x": 77,
+                "y": 55,
+                "r": 2,
+                "label": "B"
+              }
+            ]
+          }
+        ]
+      },
+      "agreementProbability": 0.94,
+      "context": {
+        "sha256": "5b94d7cbdd20653a70b570612f2b751d8a8bca96e539efc0a4c918a91223ea30",
+        "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+        "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc",
+        "passageCharacters": 4370,
+        "passageSha256": "448a4561b5935418e3239f19021d71ed22a15a2d11c2fc8dea2940025beda9eb"
+      },
+      "boardStatus": "valid",
+      "routing": {
+        "needsCanvas": true,
+        "shouldClose": false,
+        "shouldReopen": false,
+        "shouldReplace": true,
+        "replaceProbability": 0.95,
+        "reason": "different-visual-problem",
+        "source": "jev",
+        "probability": 0.69,
+        "latencyMs": 170
+      },
+      "finishedAt": "2026-10-02T07:16:41.883Z"
+    },
+    {
+      "scenario": "source-payoff",
+      "condition": "integrated",
+      "status": "completed",
+      "latencies": {
+        "firstSpokenMs": 573,
+        "mainCompleteMs": 790.7,
+        "candidateValidatedMs": null,
+        "firstSyntheticAudioMs": 819.6,
+        "routingCompleteMs": 939.1,
+        "validatedBoardShownMs": null
+      },
+      "requests": [
+        {
+          "kind": "integrated",
+          "startedMs": 0.6,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 5767,
+            "input_tokens_details": {
+              "cache_write_tokens": 3222,
+              "cached_tokens": 2542
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 5798
+          },
+          "publicOutput": "<say>For U, R, and B, the payoffs in player order are one, six, and one.</say>",
+          "input": {
+            "bytes": 11946,
+            "instructionBytes": 11778,
+            "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+            "hasBank": true,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 298.1,
+          "completedMs": 789.8
+        },
+        {
+          "kind": "jev",
+          "startedMs": 790.9,
+          "model": "jev-latest",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 1180,
+            "output_tokens": 42
+          },
+          "publicOutput": "",
+          "headersMs": 937.9,
+          "answers": {
+            "needs_canvas": {
+              "type": "noul",
+              "noul": 0.1
+            },
+            "agrees_with_speech": {
+              "type": "noul",
+              "noul": 0.94
+            }
+          }
+        }
+      ],
+      "checks": {
+        "speechPresent": true,
+        "speechBoardAgreement": true,
+        "diagramOnly": true,
+        "sameFullBank": true,
+        "rendererPrivateBankAbsent": true,
+        "noBoard": true,
+        "payoffCorrect": true
+      },
+      "reply": "For U, R, and B, the payoffs in player order are one, six, and one.",
+      "candidate": null,
+      "board": null,
+      "agreementProbability": 0.94,
+      "context": {
+        "sha256": "16119c1127fc9eee7d05c5e1476bdb05330c727bf243576f3ceb42b1617fed5d",
+        "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+        "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc",
+        "passageCharacters": 4370,
+        "passageSha256": "448a4561b5935418e3239f19021d71ed22a15a2d11c2fc8dea2940025beda9eb"
+      },
+      "boardStatus": "none",
+      "routing": {
+        "needsCanvas": false,
+        "shouldClose": false,
+        "shouldReopen": false,
+        "shouldReplace": false,
+        "reason": "verbal-explanation",
+        "source": "jev",
+        "probability": 0.1,
+        "latencyMs": 148
+      },
+      "finishedAt": "2026-10-02T07:16:42.826Z"
+    },
+    {
+      "scenario": "source-payoff",
+      "condition": "parallel",
+      "status": "completed",
+      "latencies": {
+        "rendererCompleteMs": 689.1,
+        "firstSpokenMs": 703.1,
+        "firstSyntheticAudioMs": 933,
+        "mainCompleteMs": 937.5,
+        "candidateValidatedMs": null,
+        "routingCompleteMs": 1142.7,
+        "validatedBoardShownMs": null
+      },
+      "requests": [
+        {
+          "kind": "renderer",
+          "startedMs": 1.1,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 3017,
+            "input_tokens_details": {
+              "cache_write_tokens": 1705,
+              "cached_tokens": 1309
+            },
+            "output_tokens": 11,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 3028
+          },
+          "publicOutput": "<say>Drawing.</say>",
+          "input": {
+            "bytes": 6207,
+            "instructionBytes": 6108,
+            "bankSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "hasBank": false,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 305.6,
+          "completedMs": 688.2
+        },
+        {
+          "kind": "speech",
+          "startedMs": 2.9,
+          "model": "gpt-6-luna",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 4641,
+            "input_tokens_details": {
+              "cache_write_tokens": 3222,
+              "cached_tokens": 1416
+            },
+            "output_tokens": 26,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 4667
+          },
+          "publicOutput": "<say>The payoffs, in player order, are (1, 6, 1).</say>",
+          "input": {
+            "bytes": 11946,
+            "instructionBytes": 6606,
+            "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+            "hasBank": true,
+            "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc"
+          },
+          "headersMs": 317.1,
+          "completedMs": 936.5
+        },
+        {
+          "kind": "jev",
+          "startedMs": 937.7,
+          "model": "jev-latest",
+          "status": 200,
+          "rawUsage": {
+            "input_tokens": 1168,
+            "output_tokens": 42
+          },
+          "publicOutput": "",
+          "headersMs": 1139.6,
+          "answers": {
+            "needs_canvas": {
+              "type": "noul",
+              "noul": 0.1
+            },
+            "agrees_with_speech": {
+              "type": "noul",
+              "noul": 0.95
+            }
+          }
+        }
+      ],
+      "checks": {
+        "speechPresent": true,
+        "speechBoardAgreement": true,
+        "diagramOnly": true,
+        "sameFullBank": true,
+        "rendererPrivateBankAbsent": true,
+        "noBoard": true,
+        "payoffCorrect": true
+      },
+      "reply": "The payoffs, in player order, are (1, 6, 1).",
+      "candidate": null,
+      "board": null,
+      "agreementProbability": 0.95,
+      "context": {
+        "sha256": "16119c1127fc9eee7d05c5e1476bdb05330c727bf243576f3ceb42b1617fed5d",
+        "bankSha256": "0419f13825e41bd0f133a460d74670b664858ea653957e3bc59aed4c9d2e7bc1",
+        "sourceRevision": "efaab91233345950e95b039c0a11517550c150d87d53e7674d79fc5e1f675dbc",
+        "passageCharacters": 4370,
+        "passageSha256": "448a4561b5935418e3239f19021d71ed22a15a2d11c2fc8dea2940025beda9eb"
+      },
+      "boardStatus": "none",
+      "routing": {
+        "needsCanvas": false,
+        "shouldClose": false,
+        "shouldReopen": false,
+        "shouldReplace": false,
+        "reason": "verbal-explanation",
+        "source": "jev",
+        "probability": 0.1,
+        "latencyMs": 205
+      },
+      "finishedAt": "2026-10-02T07:16:43.970Z"
+    }
+  ],
+  "source": {
+    "name": "Problem Set 3 Econ 2801 2026.pdf",
+    "sha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+    "corpus": [
+      {
+        "id": "econ2801-pset3",
+        "characters": 4366,
+        "sha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b"
+      },
+      {
+        "id": "econ2801-pset2-solutions",
+        "characters": 10412,
+        "sha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a"
+      },
+      {
+        "id": "econ2801-pset5-solutions",
+        "characters": 10903,
+        "sha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180"
+      }
+    ]
+  },
+  "instructions": {
+    "integratedBytes": 11778,
+    "speechOnlyBytes": 6606,
+    "rendererBytes": 6108
+  },
+  "productionFiles": [
+    {
+      "name": "server/openai-luna.mjs",
+      "sha256": "7fa113f14797a4e70fd32a42f18f5701bbbf936216a423bb1022772d159d6515"
+    },
+    {
+      "name": "server/luna-fast.mjs",
+      "sha256": "1761216837fa2798e8d4ffd1422234e805f575103b2e2ca7fb6f34750b06a9bc"
+    },
+    {
+      "name": "server/tutor-output.mjs",
+      "sha256": "39f9b08a0c5f1010eb71beb66f189a3b5f55da07ee6723259b77e152d5c77667"
+    },
+    {
+      "name": "server/jev.mjs",
+      "sha256": "ad4b8776b6d3d30d388801c46617aadddca50d6c85c07157aeb3bf71b4564232"
+    },
+    {
+      "name": "server/whiteboard.mjs",
+      "sha256": "e46db6fca83d66fbebf83f3e172fd63241ca0068689a4fea78d56907c028808a"
+    },
+    {
+      "name": "server/material-retrieval.mjs",
+      "sha256": "375708ff2d4e097760f64aa4480385a8af9d5434e5f9eb021e622056db19187f"
+    },
+    {
+      "name": "server/tutor-context.mjs",
+      "sha256": "c91731e8d4c17c8f25c164cb93e8df834685c1e85d3773fa163c0b8be35ce857"
+    }
+  ],
+  "finishedAt": "2026-10-02T07:16:43.975Z",
+  "usageTotals": {
+    "integrated": {
+      "openaiRequests": 3,
+      "inputTokens": 17516,
+      "cachedInputTokens": 7626,
+      "outputTokens": 421,
+      "reasoningTokens": 99
+    },
+    "parallel": {
+      "openaiRequests": 6,
+      "inputTokens": 23409,
+      "cachedInputTokens": 5450,
+      "outputTokens": 1025,
+      "reasoningTokens": 545
+    }
+  },
+  "observations": [
+    "Both conditions passed all measured content checks on all three scenarios.",
+    "Parallel was slower in both visual trials and did not improve first speech in this run.",
+    "Cache warmth and model-generated reasoning differed, so these single paired trials do not isolate a causal speed effect.",
+    "Parallel renderer used an additional OpenAI request even for the verbal-only request; production should not blindly start it for every turn.",
+    "The baseline is the current main-model integrated speech/board generation phase with shared prepared passages, not the historical pre-retrieval app. No numbers should be pooled with end-to-end transcript benchmarks."
+  ]
+}

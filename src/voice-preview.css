@@ -1,0 +1,6 @@
+.topbar-right{display:flex;align-items:center;gap:16px}
+.voice-preview{display:flex;align-items:center;gap:9px;color:#777;font-size:11px}
+.voice-preview select{min-height:40px;max-width:210px;padding:8px 26px 8px 12px;border:0;border-radius:9px;background:#f7f7f7;color:#454545;font:inherit;cursor:pointer;box-shadow:inset 0 0 0 1px #00000006}
+.voice-preview select:focus-visible{outline:2px solid #777;outline-offset:3px}
+.voice-preview[data-experimental="true"] select{background:#f1f5f3;color:#375447}
+@media(max-width:520px){.topbar-right{gap:9px}.voice-preview{gap:0}.voice-preview>span{display:none}.voice-preview select{max-width:180px;font-size:10px}}

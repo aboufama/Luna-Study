@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'"><style>*{box-sizing:border-box}html,body{margin:0;width:800px;height:500px;overflow:hidden;font-family:Arial,sans-serif;background:white}#stage{position:relative;width:800px;height:500px}svg{overflow:visible}</style></head><body><main id="stage"><canvas width="800" height="500"></canvas></main><script>window.__done=false;window.__error=null;window.__texts=[];window.__hits=[];window.__draws=[];window.addEventListener('error',e=>window.__error=String(e.message).slice(0,180));
+
+function draw(ctx, hit) {
+	ctx.clearRect(0, 0, 800, 500);
+	ctx.fillStyle = "#ffffff";
+	ctx.fillRect(0, 0, 800, 500);
+	ctx.strokeStyle = "#202020";
+	ctx.fillStyle = "#202020";
+	ctx.lineWidth = 2;
+	ctx.lineJoin = "round";
+	ctx.lineCap = "round";
+	ctx.font = "18px Arial";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
+	const stages = [
+		{
+			id: "observe",
+			label: "Observe",
+			x: 80
+		},
+		{
+			id: "hypothesize",
+			label: "Hypothesize",
+			x: 320
+		},
+		{
+			id: "test",
+			label: "Test",
+			x: 560
+		}
+	];
+	const boxY = 205, boxW = 160, boxH = 70;
+	for (const stage of stages) {
+		ctx.strokeRect(stage.x, boxY, boxW, boxH);
+		ctx.fillText(stage.label, stage.x + boxW / 2, boxY + boxH / 2);
+		hit(stage.id, stage.x, boxY, boxW, boxH);
+	}
+	function arrow(x1, y1, x2, y2, id) {
+		ctx.beginPath();
+		ctx.moveTo(x1, y1);
+		ctx.lineTo(x2, y2);
+		ctx.stroke();
+		const angle = Math.atan2(y2 - y1, x2 - x1);
+		const size = 9;
+		ctx.beginPath();
+		ctx.moveTo(x2, y2);
+		ctx.lineTo(x2 - size * Math.cos(angle - Math.PI / 6), y2 - size * Math.sin(angle - Math.PI / 6));
+		ctx.lineTo(x2 - size * Math.cos(angle + Math.PI / 6), y2 - size * Math.sin(angle + Math.PI / 6));
+		ctx.closePath();
+		ctx.fill();
+		hit(id, Math.min(x1, x2) - 10, Math.min(y1, y2) - 10, Math.abs(x2 - x1) + 20, Math.abs(y2 - y1) + 20);
+	}
+	arrow(240, 240, 308, 240, "observe-to-hypothesize");
+	arrow(480, 240, 548, 240, "hypothesize-to-test");
+	ctx.beginPath();
+	ctx.moveTo(640, boxY);
+	ctx.lineTo(640, 110);
+	ctx.lineTo(160, 110);
+	ctx.lineTo(160, boxY - 8);
+	ctx.stroke();
+	const a = Math.PI / 2, size = 9;
+	ctx.beginPath();
+	ctx.moveTo(160, boxY - 8);
+	ctx.lineTo(160 - size * Math.cos(a - Math.PI / 6), boxY - 8 - size * Math.sin(a - Math.PI / 6));
+	ctx.lineTo(160 - size * Math.cos(a + Math.PI / 6), boxY - 8 - size * Math.sin(a + Math.PI / 6));
+	ctx.closePath();
+	ctx.fill();
+	ctx.fillText("Revise", 400, 82);
+	hit("test-to-observe-revise", 150, 72, 500, 126);
+}
+
+try{const canvas=document.querySelector('canvas'),native=canvas.getContext('2d');let count=0;
+ native.fillStyle='white';native.fillRect(0,0,800,500);native.fillStyle='#243544';native.strokeStyle='#243544';native.lineWidth=2;native.font='18px Arial';
+ const ctx=new Proxy(native,{get(target,key){const v=target[key];if(typeof v!=='function')return v;return(...args)=>{if(++count>12000)throw Error('Drawing call limit');if(key==='fillText'||key==='strokeText'){const [text,x,y]=args,m=target.measureText(String(text)),fontSize=parseFloat(target.font),transform=target.getTransform(),p=new DOMPoint(x,y).matrixTransform(transform);let left=p.x;if(target.textAlign==='center')left-=m.width/2;else if(['right','end'].includes(target.textAlign))left-=m.width;let y0=p.y-fontSize;if(target.textBaseline==='middle')y0=p.y-fontSize/2;else if(['top','hanging'].includes(target.textBaseline))y0=p.y;window.__texts.push({text:String(text),x:left,y:y0,width:m.width,height:fontSize,fontSize});}if(window.__draws.length<3000)window.__draws.push({op:key,args:args.map(v=>typeof v==='number'||typeof v==='string'?v:null)});return v.apply(target,args);};},set(target,key,value){target[key]=value;return true;}});
+ const hit=(id,x,y,width,height)=>{if(typeof id!=='string'||id.length>120||![x,y,width,height].every(Number.isFinite)||width<0||height<0||window.__hits.length>=2000)throw Error('Invalid hit region');window.__hits.push({id,x,y,width,height});};
+ draw(ctx,hit);window.__done=true;}catch(error){window.__error=String(error.message).slice(0,180);window.__done=true;}</script></body></html>

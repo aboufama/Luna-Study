@@ -1,0 +1,94 @@
+{
+  "finishedAt": "2026-10-02T10:18:15.272Z",
+  "providerCalls": 0,
+  "method": "Exact saved model-result boards rendered through production Whiteboard in read-only mode. Only a synthetic revision is added for replay; text and row data are unchanged.",
+  "sourceSha256": "2ff2f77aefe5f6c8f290931c57a637a3a4a6a1474c0e2aba7f8b9563cd012c90",
+  "errors": [],
+  "runs": [
+    {
+      "stepId": "wrong-attempt",
+      "sourceFile": "live-repair-results.matched-current.json",
+      "sourceBoardSha256": "362b8bf99f896ed286e279724e496152015cb95d4ea6c71b59beac30fc9ac715",
+      "screenshot": "renders/repair-transcript-wrong-attempt.png",
+      "sourceMath": [
+        {
+          "content": "2x + 3 - 3 = 11 - 3 \\quad\\Rightarrow\\quad 2x = 8",
+          "slashRunLengths": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "measurement": {
+        "text": "2x+3−3=11−3⇒2x=8",
+        "mathErrors": 0,
+        "mathCount": 1,
+        "buttons": 1,
+        "cells": []
+      }
+    },
+    {
+      "stepId": "reasoned-retry",
+      "sourceFile": "live-repair-results.matched-current.json",
+      "sourceBoardSha256": "114ff33959203cde65d235b9cac583ff6a41935994435c6e23430bf689a122df",
+      "screenshot": "renders/repair-transcript-reasoned-retry.png",
+      "sourceMath": [
+        {
+          "content": "2x+3=11\\quad\\Rightarrow\\quad2x=8\\quad\\Rightarrow\\quad x=4",
+          "slashRunLengths": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "measurement": {
+        "text": "2x+3=11⇒2x=8⇒x=4",
+        "mathErrors": 0,
+        "mathCount": 1,
+        "buttons": 1,
+        "cells": []
+      }
+    },
+    {
+      "stepId": "reasoned-biology",
+      "sourceFile": "live-repair-results.matched-current.json",
+      "sourceBoardSha256": "67f5abc5920cc7e9085de43869e6968f2dad9ef0d9ac6a8f1f0725a8bef9225f",
+      "screenshot": "renders/repair-transcript-reasoned-biology.png",
+      "sourceMath": [],
+      "measurement": {
+        "text": "\tProcess\tEnergy use\tDirection\nFeature\t\nDiffusion\n\t\nNo energy input\n\t\nDown concentration gradient\n\nDiffusion\t\nActive transport\n\t\nUses energy\n\t\nAgainst concentration gradient\n\nActive transport\t\nCell membrane\n\t\nSelectively permeable boundary\n\t\nControls substances crossing",
+        "mathErrors": 0,
+        "mathCount": 0,
+        "buttons": 1,
+        "cells": [
+          "Diffusion",
+          "No energy input",
+          "Down concentration gradient",
+          "Active transport",
+          "Uses energy",
+          "Against concentration gradient",
+          "Cell membrane",
+          "Selectively permeable boundary",
+          "Controls substances crossing"
+        ]
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "math-not-overescaped",
+      "status": "pass",
+      "note": "Every decoded command has one literal backslash. Both equations render implication arrows and no literal quad/Rightarrow. JSON serialization escaping was mistaken for a source defect; no normalization change is warranted."
+    },
+    {
+      "id": "biology-semantic-headings",
+      "status": "fail",
+      "note": "Rendered cells faithfully expose wrong source-authored row headings: Feature labels Diffusion data, Diffusion labels Active transport data, Active transport labels Cell membrane data. A membrane definition is placed under Energy use and a boundary description under Direction. This is a semantic table-authoring error, not a rendering defect."
+    }
+  ]
+}

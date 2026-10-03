@@ -1,0 +1,15 @@
+# Creator tier: read-only review, October 2, 2026
+
+Authenticated subscription GET confirmed active monthly Creator: 121,009-credit current limit, 41 used, **120,968 remaining**. The limit matches 121,000 monthly credits plus nine carried over. Reset: November 2, 2026 at 05:21:44 UTC / 00:21:44 EST. The 41 credits are not attributed to this audit; it made only three read-only GETs. Voice slots: 30; professional clone slots: one; instant and professional cloning enabled. Subscription extension flags were false and the legacy extension limit zero. Separate PAYG Auto Top Up settings were not inspected. [Subscription API](https://elevenlabs.io/docs/api-reference/user/subscription/get).
+
+Creator increases the monthly allowance 12.1 times over Free. Published price: $22/month, advertised first month $11; actual invoice not inspected. Commercial use and credit rollover are included. The advertised additional v4 credits through October 12 apply **only in ElevenLabs web/mobile apps**, not Luna's API. [Official Creative pricing, including promotion terms](https://elevenlabs.io/pricing).
+
+For the actual Luna transport, documented concurrent Text to Dialogue WebSocket sessions rise from 14 to 35, realtime Scribe sessions from six to 15, and queue priority from three to five. This increases capacity and priority, not proven single-turn speed. [Official concurrency and priority](https://elevenlabs.io/docs/overview/models#concurrency-and-priority) and [dialogue sessions](https://elevenlabs.io/docs/overview/models#text-to-dialogue-concurrency).
+
+Luna uses v4 Turbo for live speech, Scribe v2 Realtime for listening, the premade George voice, and PCM 24 kHz output. Standard nonlive synthesis is configured for v4. The authenticated model catalogue reports Turbo at 0.5 credit per character versus standard v4 at 1.0, both with discount multiplier 1. Turbo's existing advantage is not a new Creator discount.
+
+Public API dollar pricing lists Turbo at $0.011 per 1,000 characters until October 12, then $0.04, and realtime Scribe at $0.39/hour. These published dollar prices and included-character marketing tables should not be converted directly into this account's credit balance without verifying billing conversion. [Official API pricing](https://elevenlabs.io/pricing/api). Subscription credits are used before any PAYG balance; PAYG and legacy overage billing are distinct. [PAYG billing](https://elevenlabs.io/docs/overview/administration/pay-as-you-go).
+
+Keep the current voice, model, reasoning and natural sentence streaming. Safe efficiency opportunities are idle/background closure, prompt cancellation, duplicate greeting suppression, and caching exact static audio by text/model/voice/settings. Retain PCM for exact turn boundaries. A persistent multi-context transport needs compatibility verification: its current reference specifies v3 models, while Luna uses v4 Turbo. Do not switch blindly. [Multi-context protocol](https://elevenlabs.io/docs/api-reference/text-to-dialogue/ttd-multi-websocket).
+
+No plan changes, synthesis, STT, paid benchmarks, audio playback or product-code changes were made for this review.

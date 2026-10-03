@@ -1,0 +1,125 @@
+{
+  "width": 680,
+  "height": 380,
+  "background": "white",
+  "data": {
+    "values": [
+      {
+        "id": "point-1",
+        "x": -2,
+        "y": 4
+      },
+      {
+        "id": "point-2",
+        "x": -1,
+        "y": 1
+      },
+      {
+        "id": "point-3",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "point-4",
+        "x": 1,
+        "y": 1
+      },
+      {
+        "id": "point-5",
+        "x": 2,
+        "y": 4
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true,
+    "color": "#222222",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "quantitative",
+      "title": "x",
+      "scale": {
+        "domain": [
+          -2,
+          2
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "labelFontSize": 14,
+        "titleFontSize": 14,
+        "domain": true,
+        "ticks": true,
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "title": "y",
+      "scale": {
+        "domain": [
+          0,
+          4
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "labelFontSize": 14,
+        "titleFontSize": 14,
+        "domain": true,
+        "ticks": true,
+        "grid": false
+      }
+    },
+    "order": {
+      "field": "x",
+      "type": "quantitative",
+      "sort": "ascending"
+    },
+    "tooltip": [
+      {
+        "field": "id",
+        "type": "nominal",
+        "title": "id"
+      },
+      {
+        "field": "x",
+        "type": "quantitative"
+      },
+      {
+        "field": "y",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#222222",
+      "titleColor": "#222222",
+      "domainColor": "#222222",
+      "tickColor": "#222222"
+    }
+  }
+}

@@ -1,0 +1,1934 @@
+{
+  "providerCalls": 0,
+  "method": "Offline actual React rendering of saved canonical boards; elapsed browser injection/render time is separate from generation timing.",
+  "errors": [],
+  "runs": [
+    {
+      "canonicalBoard": {
+        "title": "Animal cell",
+        "revision": "d9aed667-1b6f-4487-aac7-4baeab33704a",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 150,
+                "y": 70,
+                "width": 410,
+                "height": 330,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 170,
+                "y": 90,
+                "width": 370,
+                "height": 290,
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 300,
+                "y": 175,
+                "width": 120,
+                "height": 100,
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-leader",
+                "type": "line",
+                "x1": 175,
+                "y1": 135,
+                "x2": 75,
+                "y2": 100,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-leader",
+                "type": "line",
+                "x1": 205,
+                "y1": 315,
+                "x2": 75,
+                "y2": 350,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-leader",
+                "type": "line",
+                "x1": 420,
+                "y1": 210,
+                "x2": 650,
+                "y2": 150,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 25,
+                "y": 65,
+                "width": 150,
+                "height": 35,
+                "text": "Cell membrane",
+                "fontSize": 22
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 25,
+                "y": 350,
+                "width": 145,
+                "height": 35,
+                "text": "Cytoplasm",
+                "fontSize": 22
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 650,
+                "y": 115,
+                "width": 120,
+                "height": 35,
+                "text": "Nucleus",
+                "fontSize": 22
+              },
+              {
+                "id": "teaching-note",
+                "type": "text",
+                "x": 590,
+                "y": 350,
+                "width": 190,
+                "height": 70,
+                "text": "Membrane: selective boundary",
+                "fontSize": 20,
+                "tone": "accent"
+              }
+            ],
+            "zones": [
+              {
+                "id": "select-membrane",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "select-cytoplasm",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "select-nucleus",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "select-note",
+                "label": "teaching note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "teaching-note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world"
+        ],
+        "currentBlockIds": [
+          "world"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "biology-cell-production-final-1",
+      "renderMs": 32.1,
+      "screenshot": "biology-cell-production-final-1.png",
+      "measured": {
+        "sceneObjectIds": [
+          "cell-membrane",
+          "cytoplasm",
+          "nucleus",
+          "membrane-leader",
+          "cytoplasm-leader",
+          "nucleus-leader",
+          "membrane-label",
+          "cytoplasm-label",
+          "nucleus-label",
+          "teaching-note"
+        ],
+        "katexErrors": [],
+        "visibleText": "Cell membrane\nCytoplasm\nNucleus\nMembrane: selective boundary",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "cell-membrane",
+            "text": "",
+            "box": {
+              "x": 325,
+              "y": 135,
+              "width": 369,
+              "height": 297
+            }
+          },
+          {
+            "id": "cytoplasm",
+            "text": "",
+            "box": {
+              "x": 343,
+              "y": 153,
+              "width": 333,
+              "height": 261
+            }
+          },
+          {
+            "id": "nucleus",
+            "text": "",
+            "box": {
+              "x": 460,
+              "y": 229.5,
+              "width": 108,
+              "height": 90
+            }
+          },
+          {
+            "id": "membrane-leader",
+            "text": "",
+            "box": {
+              "x": 257.5,
+              "y": 162,
+              "width": 90,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "cytoplasm-leader",
+            "text": "",
+            "box": {
+              "x": 257.5,
+              "y": 355.5,
+              "width": 117,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "nucleus-leader",
+            "text": "",
+            "box": {
+              "x": 568,
+              "y": 207,
+              "width": 207,
+              "height": 54
+            }
+          },
+          {
+            "id": "membrane-label",
+            "text": "Cell membrane",
+            "box": {
+              "x": 212.5,
+              "y": 130.5,
+              "width": 135,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "cytoplasm-label",
+            "text": "Cytoplasm",
+            "box": {
+              "x": 212.5,
+              "y": 387,
+              "width": 130.5,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "nucleus-label",
+            "text": "Nucleus",
+            "box": {
+              "x": 775,
+              "y": 175.5,
+              "width": 108,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "teaching-note",
+            "text": "Membrane: selective boundary",
+            "box": {
+              "x": 721,
+              "y": 387,
+              "width": 171,
+              "height": 63
+            }
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "d9aed667-1b6f-4487-aac7-4baeab33704a",
+        "targets": [
+          {
+            "blockId": "world",
+            "zoneId": "select-membrane"
+          }
+        ]
+      },
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Solve for x",
+        "revision": "7cc6be8c-a113-4d4c-a1b9-8d303231bd88",
+        "blocks": [
+          {
+            "id": "work",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "eq1",
+                "type": "math",
+                "x": 130,
+                "y": 60,
+                "width": 360,
+                "height": 55,
+                "text": "2x+3=11",
+                "fontSize": 32
+              },
+              {
+                "id": "arrow1",
+                "type": "arrow",
+                "x1": 310,
+                "y1": 125,
+                "x2": 310,
+                "y2": 175,
+                "label": "subtract 3 from both sides",
+                "tone": "muted"
+              },
+              {
+                "id": "eq2",
+                "type": "math",
+                "x": 130,
+                "y": 200,
+                "width": 360,
+                "height": 55,
+                "text": "2x=8",
+                "fontSize": 32
+              },
+              {
+                "id": "arrow2",
+                "type": "arrow",
+                "x1": 310,
+                "y1": 265,
+                "x2": 310,
+                "y2": 315,
+                "label": "divide both sides by 2",
+                "tone": "muted"
+              },
+              {
+                "id": "finalBox",
+                "type": "rect",
+                "x": 110,
+                "y": 350,
+                "width": 400,
+                "height": 85,
+                "tone": "accent"
+              },
+              {
+                "id": "eq3",
+                "type": "math",
+                "x": 150,
+                "y": 365,
+                "width": 320,
+                "height": 52,
+                "text": "x=4",
+                "fontSize": 36
+              }
+            ]
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "work"
+        ],
+        "currentBlockIds": [
+          "work"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "algebra-steps-production-final-1",
+      "renderMs": 33.3,
+      "screenshot": "algebra-steps-production-final-1.png",
+      "measured": {
+        "sceneObjectIds": [
+          "eq1",
+          "arrow1",
+          "eq2",
+          "arrow2",
+          "finalBox",
+          "eq3"
+        ],
+        "katexErrors": [],
+        "visibleText": "2x+3=11\nsubtract 3 from both sides\n2x=8\ndivide both sides by 2\nx=4",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "eq1",
+            "text": "2x+3=11",
+            "box": {
+              "x": 307,
+              "y": 126,
+              "width": 324,
+              "height": 49.5
+            }
+          },
+          {
+            "id": "arrow1",
+            "text": "subtract 3 from both sides",
+            "box": {
+              "x": 469,
+              "y": 184.5,
+              "width": 246.5999755859375,
+              "height": 45
+            }
+          },
+          {
+            "id": "eq2",
+            "text": "2x=8",
+            "box": {
+              "x": 307,
+              "y": 252,
+              "width": 324,
+              "height": 49.5
+            }
+          },
+          {
+            "id": "arrow2",
+            "text": "divide both sides by 2",
+            "box": {
+              "x": 469,
+              "y": 310.5,
+              "width": 210.5999755859375,
+              "height": 45
+            }
+          },
+          {
+            "id": "finalBox",
+            "text": "",
+            "box": {
+              "x": 289,
+              "y": 387,
+              "width": 360,
+              "height": 76.5
+            }
+          },
+          {
+            "id": "eq3",
+            "text": "x=4",
+            "box": {
+              "x": 325,
+              "y": 400.5,
+              "width": 288,
+              "height": 46.79998779296875
+            }
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "7cc6be8c-a113-4d4c-a1b9-8d303231bd88",
+        "targets": [
+          {
+            "blockId": "work",
+            "zoneId": "eq1"
+          }
+        ]
+      },
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Forces on a block",
+        "revision": "d3f8fddc-5d3d-4961-8d09-50f6b2631138",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 300,
+                "x2": 680,
+                "y2": 300
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 220,
+                "width": 120,
+                "height": 80,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 220,
+                "x2": 400,
+                "y2": 120,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 300,
+                "x2": 400,
+                "y2": 400,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 460,
+                "y1": 260,
+                "x2": 590,
+                "y2": 260,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 340,
+                "y1": 260,
+                "x2": 210,
+                "y2": 260,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ],
+        "currentBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ]
+      },
+      "lowerScreenshot": "physics-forces-production-final-1-lower.png",
+      "id": "physics-forces-production-final-1",
+      "renderMs": 33.6,
+      "screenshot": "physics-forces-production-final-1.png",
+      "measured": {
+        "sceneObjectIds": [
+          "surface",
+          "block",
+          "force-N",
+          "force-mg",
+          "force-F",
+          "force-f"
+        ],
+        "katexErrors": [],
+        "visibleText": "block\nN\nmg\nF\nf\nΣF\ny\n\t​\n\n=N−mg=0\nΣF\nx\n\t​\n\n=F−f=ma",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "surface",
+            "text": "",
+            "box": {
+              "x": 298,
+              "y": 342,
+              "width": 504,
+              "height": 0
+            }
+          },
+          {
+            "id": "block",
+            "text": "block",
+            "box": {
+              "x": 496,
+              "y": 270,
+              "width": 108,
+              "height": 72
+            }
+          },
+          {
+            "id": "force-N",
+            "text": "N",
+            "box": {
+              "x": 550,
+              "y": 180,
+              "width": 50.4000244140625,
+              "height": 90
+            }
+          },
+          {
+            "id": "force-mg",
+            "text": "mg",
+            "box": {
+              "x": 550,
+              "y": 342,
+              "width": 50.4000244140625,
+              "height": 90
+            }
+          },
+          {
+            "id": "force-F",
+            "text": "F",
+            "box": {
+              "x": 604,
+              "y": 268.20001220703125,
+              "width": 117,
+              "height": 37.79998779296875
+            }
+          },
+          {
+            "id": "force-f",
+            "text": "f",
+            "box": {
+              "x": 379,
+              "y": 268.20001220703125,
+              "width": 117,
+              "height": 37.79998779296875
+            }
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "d3f8fddc-5d3d-4961-8d09-50f6b2631138",
+        "targets": [
+          {
+            "blockId": "world",
+            "zoneId": "surface"
+          }
+        ]
+      },
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Clause annotation",
+        "revision": "4d76c7a6-3476-4738-bf41-12a70d8a6edd",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 300,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 55,
+                "y": 80,
+                "width": 690,
+                "height": 45,
+                "text": "Although it was raining, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dependent-underline",
+                "type": "line",
+                "x1": 55,
+                "y1": 132,
+                "x2": 365,
+                "y2": 132,
+                "label": "dependent clause"
+              },
+              {
+                "id": "main-underline",
+                "type": "line",
+                "x1": 382,
+                "y1": 132,
+                "x2": 700,
+                "y2": 132,
+                "label": "main clause"
+              },
+              {
+                "id": "dependent-label",
+                "type": "text",
+                "x": 105,
+                "y": 175,
+                "width": 220,
+                "height": 30,
+                "text": "dependent clause",
+                "fontSize": 22
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 450,
+                "y": 175,
+                "width": 180,
+                "height": 30,
+                "text": "main clause",
+                "fontSize": 22
+              }
+            ],
+            "zones": [
+              {
+                "id": "dependent-clause",
+                "label": "dependent clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Although it was raining",
+                  "occurrence": 0
+                }
+              },
+              {
+                "id": "main-clause",
+                "label": "main clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Maya walked to class.",
+                  "occurrence": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world"
+        ],
+        "currentBlockIds": [
+          "world"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "grammar-annotation-production-final-1",
+      "renderMs": 29.2,
+      "screenshot": "grammar-annotation-production-final-1.png",
+      "measured": {
+        "sceneObjectIds": [
+          "sentence",
+          "dependent-underline",
+          "main-underline",
+          "dependent-label",
+          "main-label"
+        ],
+        "katexErrors": [],
+        "visibleText": "Although it was raining, Maya walked to class.\ndependent clause\nmain clause",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "sentence",
+            "text": "Although it was raining, Maya walked to class.",
+            "box": {
+              "x": 239.5,
+              "y": 144,
+              "width": 621,
+              "height": 40.5
+            }
+          },
+          {
+            "id": "dependent-underline",
+            "text": "",
+            "box": {
+              "x": 239.5,
+              "y": 190.8000030517578,
+              "width": 279,
+              "height": 0
+            }
+          },
+          {
+            "id": "main-underline",
+            "text": "",
+            "box": {
+              "x": 533.7999877929688,
+              "y": 190.8000030517578,
+              "width": 286.20001220703125,
+              "height": 0
+            }
+          },
+          {
+            "id": "dependent-label",
+            "text": "dependent clause",
+            "box": {
+              "x": 284.5,
+              "y": 229.5,
+              "width": 198,
+              "height": 27
+            }
+          },
+          {
+            "id": "main-label",
+            "text": "main clause",
+            "box": {
+              "x": 595,
+              "y": 229.5,
+              "width": 162,
+              "height": 27
+            }
+          }
+        ]
+      },
+      "selection": null,
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Animal cell",
+        "revision": "0604de5d-419b-4eaf-9511-4c03eb68d98e",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "cell-membrane",
+                "type": "ellipse",
+                "x": 180,
+                "y": 90,
+                "width": 390,
+                "height": 300,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm",
+                "type": "ellipse",
+                "x": 200,
+                "y": 110,
+                "width": 350,
+                "height": 260,
+                "tone": "muted"
+              },
+              {
+                "id": "nucleus",
+                "type": "ellipse",
+                "x": 330,
+                "y": 190,
+                "width": 110,
+                "height": 90,
+                "tone": "accent"
+              },
+              {
+                "id": "membrane-line",
+                "type": "line",
+                "x1": 190,
+                "y1": 135,
+                "x2": 95,
+                "y2": 85,
+                "tone": "ink"
+              },
+              {
+                "id": "membrane-label",
+                "type": "text",
+                "x": 20,
+                "y": 50,
+                "width": 160,
+                "height": 35,
+                "text": "cell membrane",
+                "fontSize": 22
+              },
+              {
+                "id": "cytoplasm-line",
+                "type": "line",
+                "x1": 535,
+                "y1": 170,
+                "x2": 680,
+                "y2": 115,
+                "tone": "ink"
+              },
+              {
+                "id": "cytoplasm-label",
+                "type": "text",
+                "x": 600,
+                "y": 75,
+                "width": 175,
+                "height": 35,
+                "text": "cytoplasm",
+                "fontSize": 22
+              },
+              {
+                "id": "nucleus-line",
+                "type": "line",
+                "x1": 440,
+                "y1": 235,
+                "x2": 670,
+                "y2": 260,
+                "tone": "ink"
+              },
+              {
+                "id": "nucleus-label",
+                "type": "text",
+                "x": 680,
+                "y": 242,
+                "width": 110,
+                "height": 35,
+                "text": "nucleus",
+                "fontSize": 22
+              },
+              {
+                "id": "note",
+                "type": "text",
+                "x": 235,
+                "y": 420,
+                "width": 330,
+                "height": 35,
+                "text": "Membrane: selective boundary",
+                "fontSize": 24
+              }
+            ],
+            "zones": [
+              {
+                "id": "cell-membrane-zone",
+                "label": "cell membrane",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cell-membrane"
+                }
+              },
+              {
+                "id": "cytoplasm-zone",
+                "label": "cytoplasm",
+                "anchor": {
+                  "kind": "object",
+                  "id": "cytoplasm"
+                }
+              },
+              {
+                "id": "nucleus-zone",
+                "label": "nucleus",
+                "anchor": {
+                  "kind": "object",
+                  "id": "nucleus"
+                }
+              },
+              {
+                "id": "membrane-note-zone",
+                "label": "Membrane note",
+                "anchor": {
+                  "kind": "object",
+                  "id": "note"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world"
+        ],
+        "currentBlockIds": [
+          "world"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "biology-cell-production-final-2",
+      "renderMs": 31.8,
+      "screenshot": "biology-cell-production-final-2.png",
+      "measured": {
+        "sceneObjectIds": [
+          "cell-membrane",
+          "cytoplasm",
+          "nucleus",
+          "membrane-line",
+          "membrane-label",
+          "cytoplasm-line",
+          "cytoplasm-label",
+          "nucleus-line",
+          "nucleus-label",
+          "note"
+        ],
+        "katexErrors": [],
+        "visibleText": "cell membrane\ncytoplasm\nnucleus\nMembrane: selective boundary",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "cell-membrane",
+            "text": "",
+            "box": {
+              "x": 352,
+              "y": 153,
+              "width": 351,
+              "height": 270
+            }
+          },
+          {
+            "id": "cytoplasm",
+            "text": "",
+            "box": {
+              "x": 370,
+              "y": 171,
+              "width": 315,
+              "height": 234
+            }
+          },
+          {
+            "id": "nucleus",
+            "text": "",
+            "box": {
+              "x": 487,
+              "y": 243,
+              "width": 99,
+              "height": 81
+            }
+          },
+          {
+            "id": "membrane-line",
+            "text": "",
+            "box": {
+              "x": 275.5,
+              "y": 148.5,
+              "width": 85.5,
+              "height": 45
+            }
+          },
+          {
+            "id": "membrane-label",
+            "text": "cell membrane",
+            "box": {
+              "x": 208,
+              "y": 117,
+              "width": 144,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "cytoplasm-line",
+            "text": "",
+            "box": {
+              "x": 671.5,
+              "y": 175.5,
+              "width": 130.5,
+              "height": 49.5
+            }
+          },
+          {
+            "id": "cytoplasm-label",
+            "text": "cytoplasm",
+            "box": {
+              "x": 730,
+              "y": 139.5,
+              "width": 157.5,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "nucleus-line",
+            "text": "",
+            "box": {
+              "x": 586,
+              "y": 283.5,
+              "width": 207,
+              "height": 22.5
+            }
+          },
+          {
+            "id": "nucleus-label",
+            "text": "nucleus",
+            "box": {
+              "x": 802,
+              "y": 289.79998779296875,
+              "width": 99,
+              "height": 31.5
+            }
+          },
+          {
+            "id": "note",
+            "text": "Membrane: selective boundary",
+            "box": {
+              "x": 401.5,
+              "y": 450,
+              "width": 297,
+              "height": 31.5
+            }
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "0604de5d-419b-4eaf-9511-4c03eb68d98e",
+        "targets": [
+          {
+            "blockId": "world",
+            "zoneId": "cell-membrane-zone"
+          }
+        ]
+      },
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Solve for x",
+        "revision": "38e055eb-8a0e-465e-95bf-1ae051f850ae",
+        "blocks": [
+          {
+            "id": "eq1",
+            "type": "latex",
+            "content": "2x+3=11"
+          },
+          {
+            "id": "note1",
+            "type": "text",
+            "content": "subtract 3 from both sides"
+          },
+          {
+            "id": "eq2",
+            "type": "latex",
+            "content": "2x=8"
+          },
+          {
+            "id": "note2",
+            "type": "text",
+            "content": "divide both sides by 2"
+          },
+          {
+            "id": "eq3",
+            "type": "latex",
+            "content": "\\boxed{x=4}"
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "eq1",
+          "eq2",
+          "eq3"
+        ],
+        "currentBlockIds": [
+          "eq1",
+          "note1",
+          "eq2",
+          "note2",
+          "eq3"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "algebra-steps-production-final-2",
+      "renderMs": 30.8,
+      "screenshot": "algebra-steps-production-final-2.png",
+      "measured": {
+        "sceneObjectIds": [],
+        "katexErrors": [],
+        "visibleText": "2x+3=11\nsubtract 3 from both sides\n2x=8\ndivide both sides by 2\nx=4\n\t​\n",
+        "matrixRows": [],
+        "cells": [],
+        "objects": []
+      },
+      "selection": null,
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Forces on a block",
+        "revision": "85750629-b6e4-4c54-bbeb-cb04611a27d1",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 280,
+                "x2": 680,
+                "y2": 280,
+                "label": "horizontal surface"
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 190,
+                "width": 120,
+                "height": 90,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 95,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 390,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 590,
+                "y2": 235,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 210,
+                "y2": 235,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ],
+        "currentBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ]
+      },
+      "lowerScreenshot": "physics-forces-production-final-2-lower.png",
+      "id": "physics-forces-production-final-2",
+      "renderMs": 31,
+      "screenshot": "physics-forces-production-final-2.png",
+      "measured": {
+        "sceneObjectIds": [
+          "surface",
+          "block",
+          "force-N",
+          "force-mg",
+          "force-F",
+          "force-f"
+        ],
+        "katexErrors": [],
+        "visibleText": "horizontal surface\nblock\nN\nmg\nF\nf\nΣF\ny\n\t​\n\n=N−mg=0\nΣF\nx\n\t​\n\n=F−f=ma",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "surface",
+            "text": "horizontal surface",
+            "box": {
+              "x": 298,
+              "y": 286.20001220703125,
+              "width": 504,
+              "height": 37.79998779296875
+            }
+          },
+          {
+            "id": "block",
+            "text": "block",
+            "box": {
+              "x": 496,
+              "y": 243,
+              "width": 108,
+              "height": 81
+            }
+          },
+          {
+            "id": "force-N",
+            "text": "N",
+            "box": {
+              "x": 550,
+              "y": 157.5,
+              "width": 50.4000244140625,
+              "height": 126
+            }
+          },
+          {
+            "id": "force-mg",
+            "text": "mg",
+            "box": {
+              "x": 550,
+              "y": 283.5,
+              "width": 50.4000244140625,
+              "height": 139.5
+            }
+          },
+          {
+            "id": "force-F",
+            "text": "F",
+            "box": {
+              "x": 550,
+              "y": 245.6999969482422,
+              "width": 171,
+              "height": 37.80000305175781
+            }
+          },
+          {
+            "id": "force-f",
+            "text": "f",
+            "box": {
+              "x": 379,
+              "y": 245.6999969482422,
+              "width": 171,
+              "height": 37.80000305175781
+            }
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "85750629-b6e4-4c54-bbeb-cb04611a27d1",
+        "targets": [
+          {
+            "blockId": "world",
+            "zoneId": "surface"
+          }
+        ]
+      },
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Clause annotation",
+        "revision": "0ef3f5b0-447d-4431-804f-254e99e208b7",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 280,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 60,
+                "y": 70,
+                "width": 680,
+                "height": 45,
+                "text": "Although it was raining, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dependent-mark",
+                "type": "polyline",
+                "points": [
+                  [
+                    60,
+                    125
+                  ],
+                  [
+                    345,
+                    125
+                  ]
+                ],
+                "tone": "accent"
+              },
+              {
+                "id": "main-mark",
+                "type": "polyline",
+                "points": [
+                  [
+                    365,
+                    125
+                  ],
+                  [
+                    690,
+                    125
+                  ]
+                ],
+                "tone": "ink"
+              },
+              {
+                "id": "dependent-label",
+                "type": "text",
+                "x": 105,
+                "y": 155,
+                "width": 220,
+                "height": 32,
+                "text": "dependent clause",
+                "fontSize": 22,
+                "tone": "accent"
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 420,
+                "y": 155,
+                "width": 180,
+                "height": 32,
+                "text": "main clause",
+                "fontSize": 22,
+                "tone": "ink"
+              }
+            ],
+            "zones": [
+              {
+                "id": "dependent-clause",
+                "label": "dependent clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Although it was raining",
+                  "occurrence": 0
+                }
+              },
+              {
+                "id": "main-clause",
+                "label": "main clause",
+                "anchor": {
+                  "kind": "object",
+                  "id": "sentence",
+                  "quote": "Maya walked to class.",
+                  "occurrence": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world"
+        ],
+        "currentBlockIds": [
+          "world"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "grammar-annotation-production-final-2",
+      "renderMs": 32.6,
+      "screenshot": "grammar-annotation-production-final-2.png",
+      "measured": {
+        "sceneObjectIds": [
+          "sentence",
+          "dependent-mark",
+          "main-mark",
+          "dependent-label",
+          "main-label"
+        ],
+        "katexErrors": [],
+        "visibleText": "Although it was raining, Maya walked to class.\ndependent clause\nmain clause",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "sentence",
+            "text": "Although it was raining, Maya walked to class.",
+            "box": {
+              "x": 244,
+              "y": 135,
+              "width": 612,
+              "height": 40.5
+            }
+          },
+          {
+            "id": "dependent-mark",
+            "text": "",
+            "box": {
+              "x": 244,
+              "y": 184.5,
+              "width": 256.5,
+              "height": 0
+            }
+          },
+          {
+            "id": "main-mark",
+            "text": "",
+            "box": {
+              "x": 518.5,
+              "y": 184.5,
+              "width": 292.5,
+              "height": 0
+            }
+          },
+          {
+            "id": "dependent-label",
+            "text": "dependent clause",
+            "box": {
+              "x": 284.5,
+              "y": 211.5,
+              "width": 198,
+              "height": 28.800003051757812
+            }
+          },
+          {
+            "id": "main-label",
+            "text": "main clause",
+            "box": {
+              "x": 568,
+              "y": 211.5,
+              "width": 162,
+              "height": 28.800003051757812
+            }
+          }
+        ]
+      },
+      "selection": null,
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Forces on a block",
+        "revision": "a434e27b-45a5-44bb-9d72-db677f27a23f",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 300,
+                "x2": 680,
+                "y2": 300
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 232,
+                "width": 120,
+                "height": 80,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 220,
+                "x2": 400,
+                "y2": 120,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 300,
+                "x2": 400,
+                "y2": 400,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 460,
+                "y1": 260,
+                "x2": 590,
+                "y2": 260,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 340,
+                "y1": 260,
+                "x2": 210,
+                "y2": 260,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ],
+        "currentBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "object-patch-production-final-1",
+      "renderMs": 29.9,
+      "screenshot": "object-patch-production-final-1.png",
+      "measured": {
+        "sceneObjectIds": [
+          "surface",
+          "block",
+          "force-N",
+          "force-mg",
+          "force-F",
+          "force-f"
+        ],
+        "katexErrors": [],
+        "visibleText": "block\nN\nmg\nF\nf\nΣF\ny\n\t​\n\n=N−mg=0\nΣF\nx\n\t​\n\n=F−f=ma",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "surface",
+            "text": "",
+            "box": {
+              "x": 298,
+              "y": 342,
+              "width": 504,
+              "height": 0
+            }
+          },
+          {
+            "id": "block",
+            "text": "block",
+            "box": {
+              "x": 496,
+              "y": 280.79998779296875,
+              "width": 108,
+              "height": 72
+            }
+          },
+          {
+            "id": "force-N",
+            "text": "N",
+            "box": {
+              "x": 550,
+              "y": 180,
+              "width": 50.4000244140625,
+              "height": 90
+            }
+          },
+          {
+            "id": "force-mg",
+            "text": "mg",
+            "box": {
+              "x": 550,
+              "y": 342,
+              "width": 50.4000244140625,
+              "height": 90
+            }
+          },
+          {
+            "id": "force-F",
+            "text": "F",
+            "box": {
+              "x": 604,
+              "y": 268.20001220703125,
+              "width": 117,
+              "height": 37.79998779296875
+            }
+          },
+          {
+            "id": "force-f",
+            "text": "f",
+            "box": {
+              "x": 379,
+              "y": 268.20001220703125,
+              "width": 117,
+              "height": 37.79998779296875
+            }
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "a434e27b-45a5-44bb-9d72-db677f27a23f",
+        "targets": [
+          {
+            "blockId": "world",
+            "zoneId": "surface"
+          }
+        ]
+      },
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    },
+    {
+      "canonicalBoard": {
+        "title": "Forces on a block",
+        "revision": "edd8dbab-2133-485d-987e-c331993bfc2b",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "surface",
+                "type": "line",
+                "x1": 120,
+                "y1": 280,
+                "x2": 680,
+                "y2": 280,
+                "label": "horizontal surface"
+              },
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 340,
+                "y": 202,
+                "width": 120,
+                "height": 90,
+                "label": "block"
+              },
+              {
+                "id": "force-N",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 95,
+                "label": "N"
+              },
+              {
+                "id": "force-mg",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 400,
+                "y2": 390,
+                "label": "mg"
+              },
+              {
+                "id": "force-F",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 590,
+                "y2": 235,
+                "label": "F"
+              },
+              {
+                "id": "force-f",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 235,
+                "x2": 210,
+                "y2": 235,
+                "label": "f"
+              }
+            ]
+          },
+          {
+            "id": "eq-y",
+            "type": "latex",
+            "content": "\\Sigma F_y = N - mg = 0"
+          },
+          {
+            "id": "eq-x",
+            "type": "latex",
+            "content": "\\Sigma F_x = F - f = ma"
+          }
+        ]
+      },
+      "canonicalCorrection": {
+        "reason": "Offline application of current production merge (no obsolete visualOnly filter); raw result and original timing preserved.",
+        "originalBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ],
+        "currentBlockIds": [
+          "world",
+          "eq-y",
+          "eq-x"
+        ]
+      },
+      "lowerScreenshot": null,
+      "id": "object-patch-production-final-2",
+      "renderMs": 31.4,
+      "screenshot": "object-patch-production-final-2.png",
+      "measured": {
+        "sceneObjectIds": [
+          "surface",
+          "block",
+          "force-N",
+          "force-mg",
+          "force-F",
+          "force-f"
+        ],
+        "katexErrors": [],
+        "visibleText": "horizontal surface\nblock\nN\nmg\nF\nf\nΣF\ny\n\t​\n\n=N−mg=0\nΣF\nx\n\t​\n\n=F−f=ma",
+        "matrixRows": [],
+        "cells": [],
+        "objects": [
+          {
+            "id": "surface",
+            "text": "horizontal surface",
+            "box": {
+              "x": 298,
+              "y": 286.20001220703125,
+              "width": 504,
+              "height": 37.79998779296875
+            }
+          },
+          {
+            "id": "block",
+            "text": "block",
+            "box": {
+              "x": 496,
+              "y": 253.8000030517578,
+              "width": 108,
+              "height": 80.99998474121094
+            }
+          },
+          {
+            "id": "force-N",
+            "text": "N",
+            "box": {
+              "x": 550,
+              "y": 157.5,
+              "width": 50.4000244140625,
+              "height": 126
+            }
+          },
+          {
+            "id": "force-mg",
+            "text": "mg",
+            "box": {
+              "x": 550,
+              "y": 283.5,
+              "width": 50.4000244140625,
+              "height": 139.5
+            }
+          },
+          {
+            "id": "force-F",
+            "text": "F",
+            "box": {
+              "x": 550,
+              "y": 245.6999969482422,
+              "width": 171,
+              "height": 37.80000305175781
+            }
+          },
+          {
+            "id": "force-f",
+            "text": "f",
+            "box": {
+              "x": 379,
+              "y": 245.6999969482422,
+              "width": 171,
+              "height": 37.80000305175781
+            }
+          }
+        ]
+      },
+      "selection": {
+        "boardRevision": "edd8dbab-2133-485d-987e-c331993bfc2b",
+        "targets": [
+          {
+            "blockId": "world",
+            "zoneId": "surface"
+          }
+        ]
+      },
+      "selectionMethod": "Keyboard focus and Enter; avoids incorrectly demanding the center of a containing shape win over its nested nucleus.",
+      "checks": {
+        "noKatexErrors": true,
+        "objectsPresent": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "method": "Four synthetic candidate-target structure cases using the unchanged production validator, candidateBoardContext, and Jev canvas router. Expected labels are recorded only in this artifact and never sent as classifier input. One call per case, no retries, no OpenAI/voice calls. Confidence values are classifier outputs, not calibrated probabilities.",
+  "live": false,
+  "limits": {
+    "openai": 0,
+    "jev": 4
+  },
+  "counts": {
+    "openai": 0,
+    "jev": 0
+  },
+  "runs": [
+    {
+      "id": "grid-eight-by-ten",
+      "expected": true,
+      "question": "In an 8-row, 10-column game, which cells could hold strict Nash equilibria? Use the blank grid without inventing any payoffs.",
+      "board": {
+        "title": "Game grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "context": {
+        "title": "Geometry and game-grid study",
+        "phase": "study",
+        "boardVisible": false,
+        "hasBoardUpdate": true,
+        "candidateTextOnly": false,
+        "currentQuestion": {
+          "id": "current-question",
+          "question": "In an 8-row, 10-column game, which cells could hold strict Nash equilibria? Use the blank grid without inventing any payoffs."
+        },
+        "candidateBoard": {
+          "text": " |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | ",
+          "shape": "[{\"type\":\"matrix\",\"rows\":8,\"columns\":10}]"
+        }
+      },
+      "decision": null,
+      "latencyMs": 0,
+      "passes": null
+    },
+    {
+      "id": "grid-seven-by-ten",
+      "expected": false,
+      "question": "In an 8-row, 10-column game, which cells could hold strict Nash equilibria? Use the blank grid without inventing any payoffs.",
+      "board": {
+        "title": "Game grid",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "grid",
+            "type": "matrix",
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        ]
+      },
+      "context": {
+        "title": "Geometry and game-grid study",
+        "phase": "study",
+        "boardVisible": false,
+        "hasBoardUpdate": true,
+        "candidateTextOnly": false,
+        "currentQuestion": {
+          "id": "current-question",
+          "question": "In an 8-row, 10-column game, which cells could hold strict Nash equilibria? Use the blank grid without inventing any payoffs."
+        },
+        "candidateBoard": {
+          "text": " |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | \n |  |  |  |  |  |  |  |  | ",
+          "shape": "[{\"type\":\"matrix\",\"rows\":7,\"columns\":10}]"
+        }
+      },
+      "decision": null,
+      "latencyMs": 0,
+      "passes": null
+    },
+    {
+      "id": "unlabeled-triangle",
+      "expected": true,
+      "question": "For this triangle, how would a median connect its top vertex to the opposite side? Inspect the triangle before drawing a median.",
+      "board": {
+        "title": "Plane figure",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "outline",
+                "type": "polyline",
+                "points": [
+                  [
+                    100,
+                    400
+                  ],
+                  [
+                    400,
+                    100
+                  ],
+                  [
+                    700,
+                    400
+                  ],
+                  [
+                    100,
+                    400
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "context": {
+        "title": "Geometry and game-grid study",
+        "phase": "study",
+        "boardVisible": false,
+        "hasBoardUpdate": true,
+        "candidateTextOnly": false,
+        "currentQuestion": {
+          "id": "current-question",
+          "question": "For this triangle, how would a median connect its top vertex to the opposite side? Inspect the triangle before drawing a median."
+        },
+        "candidateBoard": {
+          "text": "",
+          "shape": "[{\"type\":\"scene\",\"width\":800,\"height\":500,\"objectCount\":1,\"objects\":[{\"type\":\"polyline\",\"points\":[[100,400],[400,100],[700,400],[100,400]]}]}]"
+        }
+      },
+      "decision": null,
+      "latencyMs": 0,
+      "passes": null
+    },
+    {
+      "id": "ellipse-for-triangle",
+      "expected": false,
+      "question": "For this triangle, how would a median connect its top vertex to the opposite side? Inspect the triangle before drawing a median.",
+      "board": {
+        "title": "Plane figure",
+        "mode": "replace",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "outline",
+                "type": "ellipse",
+                "x": 100,
+                "y": 100,
+                "width": 600,
+                "height": 300
+              }
+            ]
+          }
+        ]
+      },
+      "context": {
+        "title": "Geometry and game-grid study",
+        "phase": "study",
+        "boardVisible": false,
+        "hasBoardUpdate": true,
+        "candidateTextOnly": false,
+        "currentQuestion": {
+          "id": "current-question",
+          "question": "For this triangle, how would a median connect its top vertex to the opposite side? Inspect the triangle before drawing a median."
+        },
+        "candidateBoard": {
+          "text": "",
+          "shape": "[{\"type\":\"scene\",\"width\":800,\"height\":500,\"objectCount\":1,\"objects\":[{\"type\":\"ellipse\",\"x\":100,\"y\":100,\"width\":600,\"height\":300}]}]"
+        }
+      },
+      "decision": null,
+      "latencyMs": 0,
+      "passes": null
+    }
+  ],
+  "usage": [],
+  "requests": [],
+  "codeHashes": {
+    "server/jev.mjs": "8d718e038abf0281824307f21d3f5c9701ae4866635f9c9de1df1157e6312fb7",
+    "server/board-routing-context.mjs": "9ab10be9c8b02435aa4df64c9cebfb2505becfa86690d71d58013942034ceb77",
+    "server/tutor-output.mjs": "e59b3f124838d63d3b0b66f5db9e26408e7fbcd0e2051296c036028166cc9e49",
+    "server/live-voice.mjs": "265dbba97c42ca6f4573fc2dfdfdd67c6dbea02863ea997e0b71369b916d4d51",
+    "benchmarks/tutor-quality-board-match.mjs": "3c5f76f5c3f22af5966067cfc91507a4a773d293b163214ead57265565a38f4c"
+  },
+  "startedAt": "2026-10-02T11:13:39.259Z",
+  "finishedAt": "2026-10-02T11:13:39.262Z",
+  "estimatedUsd": 0
+}

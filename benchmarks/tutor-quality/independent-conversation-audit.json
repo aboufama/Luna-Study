@@ -1,0 +1,934 @@
+{
+  "finishedAt": "2026-10-02T10:00:43.098Z",
+  "reviewer": "Independent read-only conversation review by relevance_design",
+  "providerCallsByThisReview": 0,
+  "artifacts": {
+    "before": {
+      "path": "live-paired-results.before.json",
+      "sha256": "3f3a61a9a036f355ed6908a56013c5c83f2e29d27a98d94f5b83fe9831575a2f",
+      "live": true,
+      "status": "completed",
+      "method": "Real production loopback voice orchestration, canonical question bank and persisted mastery. Virtual interaction/absence clock. Synthetic ElevenLabs transport; original synthetic sources. Live mode uses actual tutor, Jev decisions and two independent graders. Fixed bank preparation isolates tutoring/policy behavior from question-generator variation.",
+      "instructionsSha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b",
+      "providerCounts": {
+        "openai": 16,
+        "jev": 23
+      },
+      "actualWallMs": 49350,
+      "simulatedMinutes": 30
+    },
+    "current": {
+      "path": "live-paired-results.current.json",
+      "sha256": "382adf7c2207d06c1082bab12116675ee40fe3c2ea257bada142da01ebcd953b",
+      "live": true,
+      "status": "completed",
+      "method": "Real production loopback voice orchestration, canonical question bank and persisted mastery. Virtual interaction/absence clock. Synthetic ElevenLabs transport; original synthetic sources. Live mode uses actual tutor, Jev decisions and two independent graders. Fixed bank preparation isolates tutoring/policy behavior from question-generator variation.",
+      "instructionsSha256": "806fd8810e96ff4f44a4fec8833f59556516eb0e7851932b255454ac94267c26",
+      "providerCounts": {
+        "openai": 14,
+        "jev": 24
+      },
+      "actualWallMs": 55255,
+      "simulatedMinutes": 30
+    }
+  },
+  "method": "Review exact final public replies and scripted student inputs from two live-provider loopback artifacts. Voice transport and student timing were synthetic; simulated30minutes is not30minutes of human interaction. No model calls made by this review.",
+  "rubric": [
+    {
+      "criterion": "proactive-lead",
+      "definition": "Begin with a concrete useful study action without repeated readiness permission or an unnecessary topic menu.",
+      "before": "pass",
+      "current": "pass",
+      "evidence": [
+        {
+          "arm": "before",
+          "step": "welcome",
+          "quote": "Welcome back—your test is on October 14, so let’s start with equations."
+        },
+        {
+          "arm": "current",
+          "step": "welcome",
+          "quote": "Let’s begin with a test-level equations question."
+        }
+      ],
+      "note": "Both welcomes lead proactively. This pair does not establish a new gain at greeting; the current welcome does use the tracked canonical question."
+    },
+    {
+      "criterion": "same-problem-continuity",
+      "definition": "Treat confusion or help requests as staying with the problem unless the student explicitly skips or changes topics.",
+      "before": "pass",
+      "current": "fail",
+      "evidence": [
+        {
+          "arm": "current",
+          "step": "answer-bypass",
+          "student": "I don't know. Can you just solve it for me?",
+          "quote": "No problem—we can switch to an easier equation or try cell transport instead. Which would you prefer?"
+        }
+      ],
+      "note": "The current reply avoids solving but prematurely offers a topic menu. This is a conversational finding; the separate state loss also affected this exchange, so a repaired run is needed to determine persistence."
+    },
+    {
+      "criterion": "truthful-feedback",
+      "definition": "Respond to the work actually submitted; do not invent successful intermediate work or award unverified mastery.",
+      "before": "fail",
+      "current": "qualified",
+      "evidence": [
+        {
+          "arm": "before",
+          "step": "wrong-attempt",
+          "student": "My answer is x = 7, because I subtracted 3 and then stopped.",
+          "quote": "Close—you correctly got 2x = 8, but that still has 2 times x."
+        },
+        {
+          "arm": "current",
+          "step": "wrong-attempt",
+          "quote": "You made a useful first move by subtracting 3 from both sides, but there’s still a coefficient attached to x."
+        }
+      ],
+      "note": "The baseline invents that the student obtained2x=8. The current acknowledges a reasonable operation without inventing that value, but does not explicitly identify whyx=7 fails. Academic feedback and verified mastery are different; neither transcript announces fabricated mastery."
+    },
+    {
+      "criterion": "no-unauthorized-solution-or-hint",
+      "definition": "Follow the policy active in each arm, withholding unattempted solutions and unauthorized targeted strategy nudges.",
+      "before": "policy-compliant-explicit-answer",
+      "current": "fail-targeted-hint",
+      "evidence": [
+        {
+          "arm": "before",
+          "step": "answer-bypass",
+          "quote": "Subtract 3 from both sides to get 2x = 8. Then divide both sides by 2, so x = 4."
+        },
+        {
+          "arm": "current",
+          "step": "no-calculator",
+          "quote": "Look for the number being added to 2x, then think of the opposite operation you could apply equally to both sides. What operation would undo “plus 3”?"
+        },
+        {
+          "arm": "current",
+          "step": "decline-optional-planning",
+          "quote": "What operation could you apply to both sides first to undo the plus 8?"
+        }
+      ],
+      "note": "The baseline explicitly allowed worked answers on direct request, so the solution is a policy difference rather than proof of violating its instructions. The current gives no final unattempted solution, but its targeted inverse-operation prompts bypass its stricter button-only hint rule. A calculator or date preference is not a grant."
+    },
+    {
+      "criterion": "respectful-clarification",
+      "definition": "Clarify problem identity, givens or notation neutrally without blame, mind-reading or unnecessary refusal.",
+      "before": "pass",
+      "current": "fail",
+      "evidence": [
+        {
+          "arm": "current",
+          "step": "clarify-problem",
+          "student": "Wait, which problem are we on?",
+          "quote": "We were on the equation 2x plus 3 equals 11. You chose not to solve it yet, so we can either try an easier equation or switch to cell transport."
+        }
+      ],
+      "note": "The first sentence is useful. “You chose not to solve it” incorrectly turns uncertainty/help-seeking into a decision to refuse. Neutral restatement would be clearer and more respectful."
+    },
+    {
+      "criterion": "optional-planning",
+      "definition": "Accept an unknown or declined date and continue without making scheduling a study prerequisite.",
+      "before": "pass",
+      "current": "pass",
+      "evidence": [
+        {
+          "arm": "before",
+          "step": "decline-optional-planning",
+          "quote": "No problem—we can keep practicing this equation without setting a date."
+        },
+        {
+          "arm": "current",
+          "step": "decline-optional-planning",
+          "quote": "We’ll stay with 4z plus 8 equals 0."
+        }
+      ],
+      "note": "Both accept the refusal. The current account retains the correct spoken equation; any setup-triggered question-state clearing is a separate bug. Its targeted nudge is assessed under hint permissions."
+    },
+    {
+      "criterion": "useful-progression",
+      "definition": "After an attempt, give proportionate feedback and move to an appropriate next step while honoring topic changes and breaks.",
+      "before": "qualified",
+      "current": "pass-conversation-only",
+      "evidence": [
+        {
+          "arm": "before",
+          "step": "reasoned-retry",
+          "quote": "Exactly right. You isolated x by subtracting 3, then dividing by 2, and your explanation of why equal operations preserve the equation is correct."
+        },
+        {
+          "arm": "current",
+          "step": "reasoned-retry",
+          "quote": "Exactly right: each operation is applied to both sides, preserving equality. Let’s try the next equation."
+        },
+        {
+          "arm": "current",
+          "step": "return-without-solution",
+          "quote": "Welcome back—try this equation one step at a time."
+        }
+      ],
+      "note": "The current reply leads into a new canonical problem after the reasoned answer, honors the explicit topic switch and returns without revealing the new solution. The baseline often stops after feedback. This does not establish successful grading or saved progression."
+    }
+  ],
+  "policyDifferences": [
+    "Before permitted a worked solution after an explicit request; current disallows answer requests from authorizing spoilers.",
+    "Before had no Hint button or explicit Resume control; unsupported baseline control steps were intentionally not sent and are not baseline model refusals."
+  ],
+  "stateFailures": [
+    {
+      "id": "working-anchor-lost",
+      "evidence": "current start-equation: hint-state questionId:null and question.tracked reason:untracked; subsequent help/control steps remain unanchored.",
+      "impact": "The tutor referred to the same equation while server hint/grading identity was absent. This is a protocol/state failure, not an overall teaching-quality score."
+    },
+    {
+      "id": "unusable-hint-invitation",
+      "evidence": "current wrong-attempt tells the student to use the Hint button while hint-state has available:false and reason:no-question.",
+      "impact": "The suggestion cannot be followed. Do not call this successful hint guidance."
+    },
+    {
+      "id": "hint-path-unmeasured",
+      "evidence": "current hint-one,duplicate-hint,hint-two,hint-three,hint-cap all have no tutor reply and questionId:null.",
+      "impact": "This pair does not measure hint content quality, successful cooldown handling or the cap. Separate policy tests may exist, but are not evidence from this conversation."
+    },
+    {
+      "id": "grading-not-successful",
+      "evidence": "current reasoned-retry was not recorded as a grade; reasoned-biology grade:null, mastery overall remained0.",
+      "impact": "Verbal correct feedback is not proof of independent verification or awarded mastery."
+    }
+  ],
+  "minimalInstructionCorrections": [
+    "Treat uncertainty and requests for help as staying on the current problem unless the student explicitly asks to skip. Restate the givens neutrally; do not describe confusion as a refusal.",
+    "When help is requested, prefer the currently available Hint button over an unrequested topic menu. Never suggest a disabled or unconfirmed hint action.",
+    "Feedback should refer only to work the student actually supplied. Identify the actual discrepancy without inventing a correct intermediate result.",
+    "No-calculator and scheduling preferences permit reassurance and setup clarification, not a targeted strategy hint unless the hint policy authorizes it."
+  ],
+  "limitations": [
+    "No overall quality percentage is assigned. Rubric judgments are qualitative and specific to these turns.",
+    "The prescribed student replies are identical and nonadaptive, so they are useful regressions but not natural-user diversity.",
+    "State bugs contaminate later current-arm behavior; repaired and adaptive live transcripts must be reviewed separately, retaining these failures.",
+    "Synthetic voice transport does not establish real speech recognition, audio quality, microphone behavior or human timing."
+  ],
+  "followUp": {
+    "repairedLive": {
+      "reviewedAt": "2026-10-02T10:20:01.338Z",
+      "sources": [
+        {
+          "path": "live-repair-results.matched-current.json",
+          "sha256": "2ff2f77aefe5f6c8f290931c57a637a3a4a6a1474c0e2aba7f8b9563cd012c90",
+          "live": true,
+          "status": "completed",
+          "instructionSha256": "0a7968755273a6400007b7db9ffe501f46d0a515c76fc433a27e9cb7a56208d4",
+          "actualWallMs": 54191,
+          "simulatedMinutes": 30
+        },
+        {
+          "path": "live-repair-results.unknown-date.json",
+          "sha256": "ec1eb6943e886727f983a9eab2e7ab09da77065c75e3d483ea078ebfd94ab367",
+          "live": true,
+          "status": "completed",
+          "instructionSha256": "0a7968755273a6400007b7db9ffe501f46d0a515c76fc433a27e9cb7a56208d4",
+          "actualWallMs": 5540,
+          "simulatedMinutes": 0.4166666666666667
+        }
+      ],
+      "providerCallsByReview": 0,
+      "method": "Review final public replies, hint states, actual request attribution and saved board data. Both artifacts are live-provider runs with scripted student behavior and synthetic speech transport; the adaptive student cohort has not run.",
+      "rubric": [
+        {
+          "criterion": "proactive-lead",
+          "status": "pass",
+          "evidence": "welcome asks the canonical2x+3=11 question directly; return-without-solution introduces a fresh3y-6=9 question without its answer."
+        },
+        {
+          "criterion": "same-problem-continuity",
+          "status": "improved-with-state-limit",
+          "evidence": "answer-bypass no longer offers a topic menu; clarify-problem neutrally restates2x+3=11; the same working question keeps its allowance through all three hints and after date metadata changes.",
+          "limit": "Strict activeQuestion is still null during equation attempts, though workingProblem is present. Algebra grading remains absent in this artifact."
+        },
+        {
+          "criterion": "truthful-feedback",
+          "status": "fail",
+          "step": "wrong-attempt",
+          "student": "My answer is x = 7, because I subtracted 3 and then stopped.",
+          "quote": "You correctly got the right side to 8, but subtracting 3 leaves 2x = 8, not x = 7.",
+          "note": "The correct equation is valid feedback; claiming the student already got8 is invented. This persists despite an instruction explicitly prohibiting invented intermediate work."
+        },
+        {
+          "criterion": "no-unauthorized-solution-or-hint",
+          "status": "qualified",
+          "evidence": "Button hints progress to one subtraction step without givingx=4; duplicate-hint has no reply and cooldown40000ms; hint-cap has no reply and remaining0/exhausted.",
+          "failure": "unknown-date/decline-unknown-date supplies “undo the plus3” without a hint grant. Equation-attempt replies also receive incorrect answerAttemptReceived:false, so their permission mismatch must be assessed alongside the state bug rather than as a clean model-only test."
+        },
+        {
+          "criterion": "respectful-clarification",
+          "status": "qualified",
+          "evidence": "clarify-problem removes the earlier blame-like framing and restates the setup.",
+          "failure": "no-calculator gets the exact same generic Hint-button sentence as answer-bypass, without reassuring that mental arithmetic is sufficient. Both replies have zero tutor requests and zero modelResults: this is server fallback wording, not model generation. Reassurance arrives only after hint-one."
+        },
+        {
+          "criterion": "optional-planning",
+          "status": "pass-refusal",
+          "evidence": "Both refusal cases continue studying and never require a date. clear-optional-date preserves the working question and remaining allowance.",
+          "limit": "The unknown-date welcome asks a question immediately; it does not demonstrate the intended brief optional planning question. The refusal turn additionally leaks a targeted nudge, assessed above."
+        },
+        {
+          "criterion": "useful-progression",
+          "status": "qualified",
+          "evidence": "Explicit topic switch and requested fresh question are honored; reasoned-biology is independently checked correct/unassisted and raises overall mastery to15.",
+          "failure": "After reasoned-retry and reasoned-biology, feedback stops without independently choosing a next task. Algebra has no grade despite a correct answer, so narrative correctness is not equivalent to saved progression."
+        }
+      ],
+      "hintQuality": {
+        "orientation": "Hint1 directs attention to the additive term without supplying the arithmetic result.",
+        "strategy": "Hint2 names reverse-order undoing. It overlaps substantially with hint1, but is somewhat more explicit.",
+        "nextStep": "Hint3 gives subtract3 from both sides and asks for the resulting equation; final answer remains withheld.",
+        "note": "This repaired run finally exercises the actual hint path. It does not establish generalized hint quality across subjects."
+      },
+      "boardFindings": [
+        {
+          "id": "math-escaping-false-alarm",
+          "status": "pass",
+          "evidence": "live-repair-board-audit.json",
+          "note": "Exact decoded math strings have one literal backslash per command and render implication arrows correctly. No production normalization was warranted. Genuine TeX row breaks remain covered by tests."
+        },
+        {
+          "id": "biology-row-semantics",
+          "status": "fail",
+          "step": "reasoned-biology",
+          "evidence": "renders/repair-transcript-reasoned-biology.png",
+          "note": "Wrong rowLabels pair Feature with Diffusion data, Diffusion with Active transport data, and Active transport with Cell membrane data. The final row also puts a membrane definition under Energy use. This is a source-authored factual-layout failure, not a renderer bug.",
+          "minimalPromptCorrection": "For comparison tables, use either rowLabels as the item names or a first item-name column, not both with conflicting values. Every cell must answer its column heading for that row; put context definitions outside an energy/direction comparison."
+        }
+      ],
+      "remainingStateFailure": "workingProblem identity and hint state are retained, but strict question matching still prevents algebra attempt grading. The persisted weakness is neither complete recovery nor an excuse to erase independent conversational failures."
+    },
+    "adaptiveLive": {
+      "artifact": "live-adaptive-results.json",
+      "sha256": "a101d934f82c368e2d2b9d8f6b0fa3721cf3259998c11e68e0a3e3e47d5d7fdc",
+      "finishedAt": "2026-10-02T10:50:41.663Z",
+      "providerCallsByThisReview": 0,
+      "liveProviderCalls": {
+        "openai": 41,
+        "jev": 52
+      },
+      "method": "Sustained30-minute virtual session with academic exchanges through minute29 and a30-second controlled pause. Scripted student adapts answers to the actual public canonical working problem; unrecognized targets cause clarification instead of a guessed answer. Correct replies are drawn from original synthetic notes. Real providers only in live mode; no paid ElevenLabs or human learning-gain claim.",
+      "studentUtterances": 25,
+      "rubric": [
+        {
+          "criterion": "proactive-lead",
+          "status": "qualified",
+          "note": "The correct x retry immediately leads to a canonical y problem. After later z and w feedback, further progression requires a student request; the final revisit enters a clarification loop."
+        },
+        {
+          "criterion": "same-problem-continuity",
+          "status": "fail",
+          "steps": [
+            "ask-next",
+            "fourth-equation",
+            "identify-review-target",
+            "explain-back",
+            "method-recap",
+            "ask-transfer-check",
+            "transfer-response",
+            "final-review"
+          ],
+          "note": "The earlier canonical y question was consumed, then skipped for z. After w, Luna revisits y in prose. The current/ready-only resolver cannot restore its consumed identity. All final eight tutor replies have no-question state; repeated full-wording clarifications never repair it."
+        },
+        {
+          "criterion": "truthful-feedback",
+          "status": "qualified",
+          "note": "x, z and w arithmetic feedback is mathematically sound and no final answer is provided before a submitted target result. z receives spoken Correct, but both independent graders call it partial/insufficient reasoning and disagree on assistance, so no grade is saved. This exposes feedback/grading consistency and assistance-scope limitations, not a successful checked grade."
+        },
+        {
+          "criterion": "no-unauthorized-solution-or-hint",
+          "status": "fail-delivery",
+          "note": "Solve requests remain gated and there is no observed pre-attempt final-answer giveaway. However, Hint 2 consumes an allowance for calculator reassurance rather than a strategy; Hint 3 consumes its allowance for denial despite an active grant. Authority and content quality must be assessed separately."
+        },
+        {
+          "criterion": "respectful-clarification",
+          "status": "qualified",
+          "note": "Early equation clarification is patient and no-calculator reassurance respects the preference. The late repeat loop is polite but fails to provide a usable tracked task. Biology clarification names gradient/energy comparison dimensions; both graders later count the partial answer as assisted, so this is not clean unassisted recall."
+        },
+        {
+          "criterion": "optional-planning",
+          "status": "not-tested",
+          "note": "This adaptive run starts with a known date. Its scope does not replace the separate unknown-date checkpoint."
+        },
+        {
+          "criterion": "useful-progression",
+          "status": "fail-late",
+          "note": "Earlier x incorrect/retry, biology partial/full and w answer receive checked results. The last eight replies stall without a usable current identity. The final recap accurately does not declare either topic mastered."
+        }
+      ],
+      "hintFailures": [
+        {
+          "step": "hint-two",
+          "grant": {
+            "hintAllowed": true,
+            "hintNumber": 2,
+            "hintLevel": "strategy"
+          },
+          "reply": "Absolutely—no calculator needed, and you’ll choose the operations. What would you try first?",
+          "finding": "The model repeats the previous no-calculator conversation instead of delivering the current authorized strategy hint; allowance drops to 1."
+        },
+        {
+          "step": "hint-three",
+          "grant": {
+            "hintAllowed": true,
+            "hintNumber": 3,
+            "hintLevel": "next-step",
+            "hintsRemaining": 0,
+            "requiresAttempt": true
+          },
+          "reply": "You’ve used all available hints for this problem. Give your best attempt—even just the first operation and why it keeps the equation balanced.",
+          "finding": "The reserved final hint has contradictory exhaustion context. Model denies the grant while its allowance is consumed. Root repair addresses context and turn-event priority; this artifact predates that repair."
+        }
+      ],
+      "grading": {
+        "localSubstep": {
+          "independentTargetJudgments": [
+            false,
+            false
+          ],
+          "reservedAttempt": false,
+          "note": "The principle-only scaffold response does not consume the eventual original-target first attempt."
+        },
+        "checkedEvents": [
+          {
+            "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+            "attempt": 1,
+            "verdict": "incorrect",
+            "firstAttempt": true,
+            "unassisted": false
+          },
+          {
+            "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+            "attempt": 2,
+            "verdict": "correct",
+            "firstAttempt": false,
+            "unassisted": false
+          },
+          {
+            "questionId": "9952a9f8-c308-420b-8226-77bd939c74de",
+            "attempt": 1,
+            "verdict": "partial",
+            "firstAttempt": true,
+            "unassisted": false
+          },
+          {
+            "questionId": "9952a9f8-c308-420b-8226-77bd939c74de",
+            "attempt": 2,
+            "verdict": "correct",
+            "firstAttempt": false,
+            "unassisted": false
+          },
+          {
+            "questionId": "7e57a840-2115-4bc1-a678-98a66a64f553",
+            "attempt": 1,
+            "verdict": "correct",
+            "firstAttempt": true,
+            "unassisted": true
+          }
+        ],
+        "unresolvedZ": {
+          "grade": null,
+          "graderVerdicts": [
+            "partial",
+            "partial"
+          ],
+          "reasoningSufficient": [
+            false,
+            false
+          ],
+          "assistanceUsed": [
+            true,
+            false
+          ],
+          "note": "The arithmetic is correct, but graders both require more reasoning and disagree on prior assistance. Scoring fails closed. Earlier x help should not automatically be treated as help on a fresh z target."
+        },
+        "finalScores": {
+          "equations": 60,
+          "cellTransport": 33,
+          "roundedOverall": 47,
+          "masteredTopics": 0
+        },
+        "note": "These are application scores under its policy, not teaching-quality percentages or human learning-gain measurements."
+      },
+      "boards": {
+        "audit": "adaptive-board-audit.json",
+        "acceptedCanvasPackets": 10,
+        "renderErrors": 0,
+        "math": "All decoded commands have one literal backslash; all eight equation renders are legible and arithmetically correct.",
+        "biology": "Row labels now match content and gradient/energy cells are correct. A residual semantic heading issue remains: Diffusion is an example under Role, while other Role cells describe functions. This is substantially improved but not a perfectly consistent comparison table.",
+        "transition": "The revised-full-target reply canonically asks y while the accepted board still displays the completed x solution. The later z and w starts replace appropriately. This is a same-turn target/candidate routing mismatch, not a TeX or layout defect."
+      },
+      "limitations": [
+        "Scripted student adapts to the actual canonical question and asks for clarification when identity is unavailable. The final clarification turns therefore reveal pipeline failure rather than fabricated successful answers.",
+        "Thirty virtual minutes and simulated speech transport are not thirty minutes of human tutoring or paid ElevenLabs audio.",
+        "No aggregate quality percentage is assigned. Smaller prior successes do not erase these sustained-session failures."
+      ],
+      "gradingConsistencyComparison": {
+        "instructionSha256": "a271e1e414341262338036b99319458e260c5461460f3c0cd2bdfc4874fd7373",
+        "sameOriginalSource": true,
+        "zAnswer": "Subtract 8 from both sides to get 4z = -8, then divide both sides by 4 to get z = -2. Equal operations preserve equality.",
+        "wAnswer": "Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality.",
+        "finding": "Both submissions supply correct operations on both sides, an intermediate equation, the final result, and identical equality-preservation justification. Yet both z grades are partial/insufficient reasoning, while both w grades are correct/sufficient. z additionally has disagreement on assistance, while w has none.",
+        "inference": "Nearby earlier x help may contaminate z assistance or evaluation, but these observations do not establish a causal explanation. A controlled replay would be needed.",
+        "minimalInstructionSuggestion": "Grade correctness and completeness from this studentAnswer only; earlier student responses do not replace or diminish it. Use conversation only to identify help actually delivered toward this exact target before this submission.",
+        "diagnosticSuggestion": "A bounded public missing-requirement code and server-owned IDs for cited prior assistance turns would expose what was missing or counted as help, without requesting private reasoning. Current boolean fields cannot establish why z was downgraded.",
+        "policy": "Keep the current hard-question reasoning threshold and independent agreement rule; do not silently grant credit."
+      }
+    },
+    "coachingCheckpointBeforeProvisional": {
+      "artifact": "live-coaching-repair.json",
+      "sha256": "6b954ee557ff599dc12b6503d099c83901c032330918e634a6bf3aa371781996",
+      "providerCallsByThisReview": 0,
+      "method": "Targeted coaching repair checkpoint; actual source-ready neutral unknown-date welcome, refusal combined with explicit equation request, no calculator, help request, one authorized hint, and wrong target answer asking is-that-right. No paid ElevenLabs; separate8/12 cap. All public classifier inputs/answers and grader decisions retained.",
+      "findings": [
+        {
+          "criterion": "respectful-clarification",
+          "status": "pass",
+          "step": "no-calculator",
+          "quote": "Absolutely—you can reason through it mentally; no calculator is needed. What would you try first?",
+          "note": "The tutor now gives practical reassurance without supplying the solving operation. This is actual tutor output, unlike the earlier generic server fallback."
+        },
+        {
+          "criterion": "optional-planning",
+          "status": "pass-refusal",
+          "step": "decline-unknown-date",
+          "quote": "Let’s do it. How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+          "note": "The request to defer planning is respected and the exact requested problem starts."
+        },
+        {
+          "criterion": "no-unauthorized-solution-or-hint",
+          "status": "qualified",
+          "step": "answer-bypass / hint-button",
+          "note": "The explicit solve request gets the server Hint-button invitation. One button grant then directs attention to the term attached to 2x. It does not give the final answer; only one hint is tested here."
+        },
+        {
+          "criterion": "truthful-feedback",
+          "status": "improved-with-limit",
+          "step": "wrong-attempt-after-hint",
+          "quote": "Not quite—you stopped while x still has a coefficient of 2. Try again and make sure x is by itself.",
+          "note": "This removes the earlier invented claim that the student got 8. It addresses stopping before isolating x, but does not explicitly address why the claimed 7 is arithmetically inconsistent."
+        },
+        {
+          "criterion": "same-problem-continuity",
+          "status": "pass-identity-fail-grading",
+          "step": "wrong-attempt-after-hint",
+          "note": "The working question and hint count survive, but Jev yields 0.89 below the 0.90 whole-target threshold, so this attempted target answer gets no independent grade. The later provisional-review change is not present in this artifact."
+        },
+        {
+          "criterion": "useful-progression",
+          "status": "not-tested",
+          "note": "The checkpoint ends after the wrong-answer feedback. It does not demonstrate a correct retry, saved score, independent next problem, or longer adaptive progression."
+        }
+      ],
+      "limitations": [
+        "Small scripted live-provider checkpoint, not a student study or reliability estimate.",
+        "No-calculator and truthfulness improvements do not erase the retained earlier failures.",
+        "Provisional grading and the new adaptive cohort require separate review."
+      ]
+    },
+    "provisionalCoaching": {
+      "artifact": "live-provisional-coaching.json",
+      "sha256": "5f3322fd726d80955468326a7c7de33f1c32e202697ff48e7e41bf2693c55865",
+      "finishedAt": "2026-10-02T10:48:06.872Z",
+      "providerCallsByThisReview": 0,
+      "liveProviderCalls": {
+        "openai": 7,
+        "jev": 9
+      },
+      "method": "Targeted coaching repair checkpoint; actual source-ready neutral unknown-date welcome, refusal combined with explicit equation request, no calculator, help request, one authorized hint, and wrong target answer asking is-that-right. No paid ElevenLabs; separate8/12 cap. All public classifier inputs/answers and grader decisions retained.",
+      "rubric": [
+        {
+          "criterion": "proactive-lead",
+          "status": "pass-limited",
+          "quote": "When is your test? We can start practicing right away either way.",
+          "note": "A brief optional planning question opens the source-ready session and refusal transitions directly to the requested task."
+        },
+        {
+          "criterion": "same-problem-continuity",
+          "status": "pass",
+          "note": "The canonical equation and hint count survive the narrower scaffold and help turn. The 0.88 target-intent abstention now receives independent review and is durably recognized as attempt 1."
+        },
+        {
+          "criterion": "truthful-feedback",
+          "status": "pass",
+          "step": "wrong-attempt-after-hint",
+          "quote": "Subtracting 3 from both sides gives 2x = 8, not x = 7; the coefficient 2 is still attached to x.",
+          "note": "This supplies a correction without claiming the student already produced 8. It addresses the actual submitted target result and stated stopping point."
+        },
+        {
+          "criterion": "no-unauthorized-solution-or-hint",
+          "status": "pass-limited",
+          "note": "The solve request is routed to the server button invitation; only the explicit button grants a hint. The subsequent submitted answer permits feedback. The final x value is not given in this checkpoint."
+        },
+        {
+          "criterion": "respectful-clarification",
+          "status": "pass",
+          "step": "no-calculator",
+          "quote": "Absolutely—no calculator is needed. Try stating the first step you’d take mentally and why you’d do the same thing to both sides.",
+          "note": "Reassurance does not name a solving operation. Asking about equal operations follows the already stated canonical task."
+        },
+        {
+          "criterion": "optional-planning",
+          "status": "pass",
+          "note": "The unknown date is asked once, explicitly optional, and the refusal is honored immediately."
+        },
+        {
+          "criterion": "useful-progression",
+          "status": "qualified",
+          "note": "Wrong-answer feedback provides a useful next reasoning task, but the run ends there. It does not establish a correct retry, scored progress or a next independent problem."
+        }
+      ],
+      "gradingEvidence": {
+        "jevProbability": 0.88,
+        "jevThreshold": 0.9,
+        "targetJudgments": [
+          {
+            "targetAttempt": true,
+            "verdict": "incorrect",
+            "assistanceUsed": true,
+            "reasoningSufficient": false
+          },
+          {
+            "targetAttempt": true,
+            "verdict": "partial",
+            "assistanceUsed": true,
+            "reasoningSufficient": false
+          }
+        ],
+        "recognizedAttempts": [
+          {
+            "questionId": "4a404518-c5f8-432a-a4ee-62e0806a4d53",
+            "attempt": 1
+          }
+        ],
+        "scoringEvents": 0,
+        "pendingCandidates": 0,
+        "note": "Target agreement records an attempt independently of grading agreement. Incorrect versus partial disagreement correctly yields no scoring event. Both graders identify the earlier authorized hint as assistance."
+      },
+      "hintQuality": {
+        "status": "qualified",
+        "quote": "Yes—start by identifying the operation attached to the variable. Use the Hint button for the next nudge when you’re ready.",
+        "note": "The orientation is safe but ambiguous between multiplication and addition in this equation. It also promotes another hint immediately while a 45-second cooldown begins, instead of pausing for the learner to try. This is a teaching-quality limitation, not an allowance/cooldown violation."
+      },
+      "limitations": [
+        "One small scripted live-provider checkpoint with simulated speech transport; no real microphone or paid ElevenLabs.",
+        "Only one hint is exercised, and no subsequent correct answer is tested.",
+        "No aggregate quality percentage or general reliability estimate is inferred.",
+        "Earlier failures remain retained as separate immutable evidence."
+      ]
+    },
+    "repairedAdaptive": {
+      "reviewedAt": "2026-10-02T11:30:26.179Z",
+      "providerCallsByThisReview": 0,
+      "artifacts": [
+        {
+          "file": "live-hint-grant-repair.json",
+          "sha256": "2edb9d8ded28a095c06f86027e89936f4f6628d55c1db57298d26582c47f2547"
+        },
+        {
+          "file": "live-adaptive-repaired.json",
+          "sha256": "c0a476d56d71e21eaee3d92420455ae7573b4b442265d632eee57e41e0e9e672"
+        }
+      ],
+      "method": "Independent reading of exact completed public replies, current request hint/task metadata, raw independent judgments, persisted mastery, and actual canvas messages. Real provider cohorts, scripted adaptive student, synthetic ElevenLabs, accelerated scenario clock. Saved raw outputs remain unchanged.",
+      "targetedHints": {
+        "providerCounts": {
+          "openai": 5,
+          "jev": 6
+        },
+        "verdict": "Three authorized and distinct nudges, no final answer; first orientation ambiguous.",
+        "steps": [
+          {
+            "id": "hint-one",
+            "reply": "Think about the operation attached directly to x. Your first goal is to remove that same operation while keeping both sides balanced. What operation will you apply to both sides first?",
+            "hintContext": {
+              "questionId": "6353fe5d-4079-43a0-b0c4-4ec4185e6857",
+              "maxHints": 3,
+              "hintsUsed": 0,
+              "hintsRemaining": 3,
+              "hintAllowed": true,
+              "hintNumber": 1,
+              "hintLevel": "orientation",
+              "hintAvailable": false,
+              "retryAfterMs": 0,
+              "allowAnswerReview": false,
+              "requiresAttempt": false,
+              "answerAttemptReceived": false,
+              "answerReviewPending": false,
+              "setupClarification": false
+            },
+            "turnTask": {
+              "kind": "deliver-authorized-hint",
+              "questionId": "6353fe5d-4079-43a0-b0c4-4ec4185e6857",
+              "hintNumber": 1,
+              "hintLevel": "orientation",
+              "instruction": "The student clicked Hint NOW. Deliver this granted hint for the working problem. Earlier conversation has already been answered: do not repeat its last reply. Give a useful incremental nudge at this level, never the final answer. This grant remains valid even when no later hints remain. Then invite one student step; do not advertise another hint during cooldown."
+            }
+          },
+          {
+            "id": "hint-two",
+            "reply": "Use inverse operations in reverse order: first undo the added constant, then undo the multiplication. State the same operation on each side, and tell me the equation you get after that first operation.",
+            "hintContext": {
+              "questionId": "6353fe5d-4079-43a0-b0c4-4ec4185e6857",
+              "maxHints": 3,
+              "hintsUsed": 1,
+              "hintsRemaining": 2,
+              "hintAllowed": true,
+              "hintNumber": 2,
+              "hintLevel": "strategy",
+              "hintAvailable": false,
+              "retryAfterMs": 0,
+              "allowAnswerReview": false,
+              "requiresAttempt": false,
+              "answerAttemptReceived": false,
+              "answerReviewPending": false,
+              "setupClarification": false
+            },
+            "turnTask": {
+              "kind": "deliver-authorized-hint",
+              "questionId": "6353fe5d-4079-43a0-b0c4-4ec4185e6857",
+              "hintNumber": 2,
+              "hintLevel": "strategy",
+              "instruction": "The student clicked Hint NOW. Deliver this granted hint for the working problem. Earlier conversation has already been answered: do not repeat its last reply. Give a useful incremental nudge at this level, never the final answer. This grant remains valid even when no later hints remain. Then invite one student step; do not advertise another hint during cooldown."
+            }
+          },
+          {
+            "id": "hint-three",
+            "reply": "Write the subtraction on both sides explicitly: 2x + 3 − 3 = 11 − 3. Now simplify that line yourself and tell me what equation remains.",
+            "hintContext": {
+              "questionId": "6353fe5d-4079-43a0-b0c4-4ec4185e6857",
+              "maxHints": 3,
+              "hintsUsed": 2,
+              "hintsRemaining": 1,
+              "hintAllowed": true,
+              "hintNumber": 3,
+              "hintLevel": "next-step",
+              "hintAvailable": false,
+              "retryAfterMs": 0,
+              "allowAnswerReview": false,
+              "requiresAttempt": false,
+              "answerAttemptReceived": false,
+              "answerReviewPending": false,
+              "setupClarification": false
+            },
+            "turnTask": {
+              "kind": "deliver-authorized-hint",
+              "questionId": "6353fe5d-4079-43a0-b0c4-4ec4185e6857",
+              "hintNumber": 3,
+              "hintLevel": "next-step",
+              "instruction": "The student clicked Hint NOW. Deliver this granted hint for the working problem. Earlier conversation has already been answered: do not repeat its last reply. Give a useful incremental nudge at this level, never the final answer. This grant remains valid even when no later hints remain. Then invite one student step; do not advertise another hint during cooldown."
+            }
+          }
+        ],
+        "blocked": [
+          {
+            "id": "hint-cooldown",
+            "requests": 0,
+            "replies": []
+          },
+          {
+            "id": "hint-cap",
+            "requests": 0,
+            "replies": []
+          }
+        ],
+        "limitation": "Operation attached directly to x could mean multiplication by2, although the board goal says isolate the x-term. Later strategy and local subtraction clarify the intended order. This single equation is not broad hint-quality evidence."
+      },
+      "adaptive": {
+        "providerCounts": {
+          "openai": 50,
+          "jev": 55
+        },
+        "completedFinalTurn": false,
+        "budgetBlocks": [
+          {
+            "stepId": "transfer-response",
+            "kind": "recovery",
+            "provider": "openai"
+          },
+          {
+            "stepId": "final-review",
+            "kind": "tutor",
+            "provider": "openai"
+          }
+        ],
+        "rubric": [
+          {
+            "criterion": "proactive-lead",
+            "verdict": "qualified",
+            "evidence": "x retry asks new y; z,w,y feedback invites another target. Wrong x feedback and biology-full end without an actionable next step despite the explicit rule."
+          },
+          {
+            "criterion": "same-problem-continuity",
+            "verdict": "improved",
+            "evidence": "Earlier y canonical ID restored at ask-next, then correct first attempt is checked. Original final8 no-question failure does not recur. Later unqueued prompts safely suspend hints; generic method recap and transfer answer trigger canonical restatement, which can feel repetitive."
+          },
+          {
+            "criterion": "truthful-feedback",
+            "verdict": "pass-wording/qualified-grading",
+            "evidence": "No invented successful student arithmetic in this cohort. Spoken correct z feedback conflicts with unresolved independent grading, not a false arithmetic statement."
+          },
+          {
+            "criterion": "no-unauthorized-solution-or-hint",
+            "verdict": "qualified-premature-correction",
+            "evidence": "Unattempted solve/final-answer requests stay gated; all3 hint grants deliver. After submitted x7 and3hints, while review pending, tutor states x4. Feedback permission exists, but final-value correction exceeds desirable guided feedback and worked-review permission is still false. The complete worked board is rejected and never displayed; do not call it a visible leak."
+          },
+          {
+            "criterion": "respectful-clarification",
+            "verdict": "pass",
+            "evidence": "No-calculator acknowledged without supplying a new operation; full problem restated neutrally; biology clarifies required comparison dimensions rather than values."
+          },
+          {
+            "criterion": "optional-planning",
+            "verdict": "not-retested",
+            "evidence": "This cohort already supplies an exam date. It does not replace the earlier unknown-date/refusal evidence."
+          },
+          {
+            "criterion": "useful-progression",
+            "verdict": "qualified",
+            "evidence": "Canonical revisit and7checked grades work. z remains unscored, final recap blocked by benchmark cap, and late unqueued review prompts are not a clean scored progression."
+          }
+        ],
+        "hintQuality": {
+          "reply2": "Use inverse operations in reverse order to isolate the variable, while making each move to both sides. What operation would you choose first?",
+          "reply3": "For the next move, divide both sides of the equation 2x = 8 by 2. Write the resulting equation yourself.",
+          "note": "Hint2 gives strategy rather than stale reassurance; hint3 is delivered rather than denied. Hint3 supplies2x=8 before the learner has produced that intermediate, then requests final local division. It does not explicitly sayx4 but skips uncompleted learner work."
+        },
+        "prematureCorrection": {
+          "stepId": "incorrect-full-target",
+          "submission": "My answer is: The variable equals 7. I subtracted a number but did not check the remaining coefficient.",
+          "reply": "That result is not correct: after subtracting 3 from both sides, the remaining equation is 2x = 8, so the variable is 4, not 7. The coefficient 2 still has to be accounted for.",
+          "hintContext": {
+            "questionId": "4044cbec-88ed-45fe-bbed-2ed439a497cd",
+            "maxHints": 3,
+            "hintsUsed": 3,
+            "hintsRemaining": 0,
+            "hintAllowed": false,
+            "hintNumber": null,
+            "hintLevel": null,
+            "hintAvailable": false,
+            "retryAfterMs": 0,
+            "allowAnswerReview": false,
+            "requiresAttempt": true,
+            "answerAttemptReceived": false,
+            "answerReviewPending": true,
+            "setupClarification": false
+          },
+          "policyInterpretation": "Current instructions permit feedback on submitted work while review is pending; the boundary between final-value correction and worked review is ambiguous. Treat as premature coaching disclosure, distinct from solving an unattempted shortcut. Tighten corrective-feedback scope rather than falsely claiming no submitted attempt."
+        },
+        "grading": {
+          "recognizedAttempts": 8,
+          "acceptedCheckedGrades": 7,
+          "persistedGradeEvents": 7,
+          "z": [
+            {
+              "questionId": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+              "topicId": "7fafcd4cb67a69bee132bb17",
+              "sourceIds": [
+                "equation-notes"
+              ],
+              "verdict": "correct",
+              "reasoningSufficient": true,
+              "assistanceUsed": false,
+              "answerCitationIds": [
+                "a-61e563d507ed5285-0"
+              ],
+              "sourceCitationIds": [
+                "s-697fcd0044d150c6-0"
+              ]
+            },
+            {
+              "questionId": "01183fd2-396a-4a39-a4c7-8fa56841ccae",
+              "topicId": "7fafcd4cb67a69bee132bb17",
+              "sourceIds": [
+                "equation-notes"
+              ],
+              "verdict": "partial",
+              "reasoningSufficient": false,
+              "assistanceUsed": false,
+              "answerCitationIds": [
+                "a-61e563d507ed5285-0"
+              ],
+              "sourceCitationIds": [
+                "s-697fcd0044d150c6-0"
+              ]
+            }
+          ],
+          "yRevisitId": "1141063a-0b77-4198-901e-9e4c73fcf015",
+          "yOriginalId": "1141063a-0b77-4198-901e-9e4c73fcf015",
+          "yGrades": [
+            {
+              "virtualMs": 1290000,
+              "wallMs": 115575,
+              "stepId": "fourth-equation",
+              "questionId": "1141063a-0b77-4198-901e-9e4c73fcf015",
+              "question": "How do equal operations solve 3y - 6 = 9, and why are those operations valid?",
+              "answer": "My answer is: Add 6 to both sides to get 3y = 15, then divide both sides by 3 to get y = 5. Equal operations preserve equality.",
+              "grade": {
+                "verdict": "correct",
+                "unassisted": true,
+                "checked": true
+              }
+            },
+            {
+              "virtualMs": 1470000,
+              "wallMs": 126766,
+              "stepId": "explain-back",
+              "questionId": "1141063a-0b77-4198-901e-9e4c73fcf015",
+              "question": "How do equal operations solve 3y - 6 = 9, and why are those operations valid?",
+              "answer": "My answer is: Add 6 to both sides to get 3y = 15, then divide both sides by 3 to get y = 5. Equal operations preserve equality.",
+              "grade": {
+                "verdict": "correct",
+                "unassisted": false,
+                "checked": true
+              }
+            }
+          ],
+          "limits": "Same y record preserves attempts: revisit first submission unassisted firstattempt, later explain-back assisted secondattempt; no repeat hard win. z is recognized attempt1 with no grade because correct/true and partial/false judgments disagree; both now say assistance=false. This remains a fairness/reliability limitation, not proof of cheating or missing learner reasoning."
+        },
+        "boards": {
+          "actualCanvasPackets": 0,
+          "actualShownEvents": 0,
+          "candidateNotShown": {
+            "candidate-target-uncertain": 21,
+            "no-new-visual": 6,
+            "visual-requested-without-board": 3
+          },
+          "evidence": "repaired-candidate-board-audit.json",
+          "finding": "No actual boards were displayed.21candidates rendered offline without math/browser errors, but this is not student-facing success. Biology matrix repeats a category error (Selective boundary under Energy); w annotated math is clipped at right. Cell geometry and z flow are readable/correct. Exact x→y candidate now shows y, but threshold withholds it."
+        },
+        "finalAppState": {
+          "topics": [
+            {
+              "score": 90,
+              "mastered": false,
+              "hardWins": 2
+            },
+            {
+              "score": 33,
+              "mastered": false,
+              "hardWins": 0
+            }
+          ],
+          "note": "App scores are not a teaching-quality percentage. No topic is mastered."
+        },
+        "limits": [
+          "One live realization with fixed synthetic original sources and scripted student, not human learning evidence.",
+          "50OpenAI cap prevented transfer-response recovery and final-review tutor before network; final reply is untested, not a model-quality failure.",
+          "The adaptive student answers the tracked canonical y question during a freeform reasoning prompt. That final input is not a clean answer to the actual latest prompt; do not count it as a new grading false negative.",
+          "No broad aggregate quality percentage assigned. Failed prior cohorts remain preserved."
+        ]
+      }
+    },
+    "finalAdaptive": {
+      "file": "final-independent-audit.json",
+      "sourceSha256": "a21282087e57ff1c438943937693b4c4cea7be23cbcc94a2f55b124600aeb0ab",
+      "reviewedAt": "2026-10-02T12:01:27.944Z"
+    }
+  }
+}

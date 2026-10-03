@@ -1,0 +1,67 @@
+{
+  "summaries": [
+    {
+      "format": "excalidraw",
+      "total": 8,
+      "rendered": 8,
+      "recordedChecksPass": 6,
+      "auditedContentChecksPass": 7,
+      "medianFirstOutputMs": 3947.95,
+      "medianValidRenderMs": 8838.85,
+      "inputTokens": 5352,
+      "outputTokens": 15846,
+      "estimatedUsd": 0.008490225
+    },
+    {
+      "format": "vega",
+      "total": 4,
+      "rendered": 4,
+      "recordedChecksPass": 4,
+      "auditedContentChecksPass": 4,
+      "medianFirstOutputMs": 3884,
+      "medianValidRenderMs": 8178.799999999999,
+      "inputTokens": 1851,
+      "outputTokens": 3383,
+      "estimatedUsd": 0.0018766
+    }
+  ],
+  "evaluationCorrections": [
+    {
+      "runId": "patch-city-excalidraw-1",
+      "check": "unchangedNativeObjects",
+      "original": false,
+      "audited": true,
+      "reason": "Original evaluator assumed IDs started A or A-. Actual native IDs are opaque; identify A from visible label and nearest marker.",
+      "evidence": {
+        "pass": true,
+        "movedIds": [
+          "vendor-a-label",
+          "vendor-a-marker"
+        ],
+        "idsPreserved": true,
+        "differences": [
+          {
+            "id": "vendor-a-marker",
+            "key": "x",
+            "before": 242,
+            "after": 292
+          },
+          {
+            "id": "vendor-a-label",
+            "key": "x",
+            "before": 212.96728515625,
+            "after": 262.96728515625
+          },
+          {
+            "id": "vendor-a-label",
+            "key": "text",
+            "before": "Vendor A\n0.2",
+            "after": "Vendor A\n0.3"
+          }
+        ]
+      }
+    }
+  ],
+  "paidRequests": 12,
+  "estimatedUsd": 0.010366825
+}

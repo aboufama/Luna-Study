@@ -1,0 +1,40 @@
+// Production component verification with fixture data, no model or voice calls.
+import {chromium} from '@playwright/test';
+import {writeFile,mkdir} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const dir=new URL('./retained-scene/',import.meta.url);await mkdir(dir,{recursive:true});
+const browser=await chromium.launch({headless:true}),page=await browser.newPage({viewport:{width:1100,height:800}}),errors=[];
+page.on('pageerror',e=>errors.push(e.message));page.setDefaultTimeout(5000);
+const result={providerCalls:0,checks:{},errors};
+try{
+ await page.goto('http://127.0.0.1:5188/benchmarks/retained-scene-preview.html');
+ await page.locator('[data-scene-object="nucleus"]').waitFor();
+ await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:new URL('biology-desktop.png',dir).pathname});
+ await page.locator('[data-scene-object="nucleus"]').click();
+ assert.equal((await page.evaluate(()=>window.__scenePreview.selection)).targets[0].zoneId,'nucleus');result.checks.objectSelection=true;
+ const world=page.locator('.teaching-scene-world'),initial=await world.getAttribute('viewBox');
+ await page.getByRole('button',{name:'Zoom in',exact:true}).click();const zoom=await world.getAttribute('viewBox');assert.notEqual(zoom,initial);
+ await page.locator('.teaching-scene').focus();await page.keyboard.press('ArrowRight');const moved=await world.getAttribute('viewBox');assert.notEqual(moved,zoom);result.checks.zoomAndKeyboardPan=true;
+ await page.evaluate(()=>{const s=window.__scenePreview;window.__oldNucleus=document.querySelector('[data-scene-object="nucleus"]');s.setBoard({...s.board,revision:'fixture-2',blocks:s.board.blocks.map(b=>({...b,objects:b.objects.map(o=>o.id==='note'?{...o,text:'Membrane controls exchange'}:o)}))});s.setSelection({...s.selection,boardRevision:'fixture-2'});});
+ await page.getByText('Membrane controls exchange',{exact:true}).waitFor();
+ assert.equal(await world.getAttribute('viewBox'),moved);assert.equal(await page.evaluate(()=>window.__oldNucleus===document.querySelector('[data-scene-object="nucleus"]')),true);result.checks.cameraAndObjectDomSurvivePatch=true;
+ assert.equal(await page.locator('[data-scene-object="nucleus"]').getAttribute('aria-pressed'),'true');result.checks.selectionSurvivesUnrelatedPatch=true;
+ await page.getByRole('button',{name:'Close whiteboard',exact:true}).click();assert.equal(await world.count(),0);await page.locator('#restore').click();assert.equal(await world.getAttribute('viewBox'),moved);result.checks.cameraSurvivesHideReopen=true;
+ await page.getByRole('button',{name:'Fit canvas',exact:true}).click();assert.equal(await world.getAttribute('viewBox'),initial);result.checks.fit=true;
+ await page.getByRole('button',{name:'Pan canvas',exact:true}).click();const box=await world.boundingBox();await page.mouse.move(box.x+box.width*.6,box.y+box.height*.7);await page.mouse.down();await page.mouse.move(box.x+box.width*.7,box.y+box.height*.75,{steps:3});await page.mouse.up();assert.notEqual(await world.getAttribute('viewBox'),initial);assert.equal(await page.locator('.board-lasso').count(),0);result.checks.pointerPanDoesNotLasso=true;
+ await page.getByRole('button',{name:'Pan canvas',exact:true}).click();await page.getByRole('button',{name:'Fit canvas',exact:true}).click();
+ await page.evaluate(()=>{const s=window.__scenePreview;s.setBoard({title:'Algebra',revision:'algebra',blocks:[{id:'steps',type:'scene',width:800,height:500,objects:[{id:'step1',type:'math',x:100,y:60,width:500,height:60,text:'2x+3=11',fontSize:30},{id:'op1',type:'text',x:150,y:145,width:500,height:40,text:'subtract 3 from both sides'},{id:'step2',type:'math',x:100,y:215,width:500,height:60,text:'2x=8',fontSize:30},{id:'op2',type:'text',x:150,y:300,width:500,height:40,text:'divide both sides by 2'},{id:'result',type:'math',x:100,y:370,width:500,height:70,text:'\\boxed{x=4}',fontSize:30}]}]});s.setSelection(null);});
+ await page.locator('.katex').first().waitFor();assert.equal(await page.locator('.katex-error').count(),0);assert.equal(await page.locator('[data-scene-object]').count(),5);result.checks.mathAndAnnotations=true;
+ await page.screenshot({path:new URL('algebra-desktop.png',dir).pathname});
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:new URL('algebra-mobile.png',dir).pathname});
+ const bounds=await page.locator('.teaching-scene').boundingBox();assert.ok(bounds.x>=0&&bounds.x+bounds.width<=390);assert.ok((await world.boundingBox()).width>=600);result.checks.mobileReadableScrollableWorld=true;
+ await page.emulateMedia({reducedMotion:'reduce'});assert.equal(await page.locator('.scene-tools').evaluate(e=>getComputedStyle(e).transitionDuration),'0s');result.checks.reducedMotion=true;
+ await page.setViewportSize({width:1100,height:800});
+ await page.evaluate(()=>{const s=window.__scenePreview;s.setBoard({title:'Parts',revision:'parts',blocks:[{id:'parts',type:'scene',width:800,height:500,objects:[{id:'sentence',type:'text',x:70,y:80,width:670,height:80,text:'Although it was raining, Maya walked to class.'},{id:'equation',type:'math',x:100,y:220,width:550,height:70,text:'x+3=11'}],zones:[{id:'dependent',label:'Dependent clause',anchor:{kind:'object',id:'sentence',quote:'Although it was raining'}},{id:'main',label:'Main clause',anchor:{kind:'object',id:'sentence',quote:'Maya walked to class.'}},{id:'variable',label:'Unknown x',anchor:{kind:'object',id:'equation',quote:'x'}},{id:'constant',label:'Constant three',anchor:{kind:'object',id:'equation',quote:'3'}}]}]});s.setSelection(null);});
+ await page.locator('[data-board-zone="main"]').click();assert.deepEqual((await page.evaluate(()=>window.__scenePreview.selection)).targets,[{blockId:'parts',zoneId:'main'}]);
+ await page.locator('[data-board-zone="constant"]').focus();await page.keyboard.press('Enter');
+ assert.deepEqual((await page.evaluate(()=>window.__scenePreview.selection)).targets,[{blockId:'parts',zoneId:'constant'},{blockId:'parts',zoneId:'main'}]);
+ assert.equal(await page.locator('[data-scene-object="sentence"]').getAttribute('role'),null);assert.equal(await page.locator('.katex-error').count(),0);result.checks.exactPhraseAndMathSelection=true;
+ assert.deepEqual(errors,[]);result.checks.noBrowserErrors=true;
+}finally{await browser.close();await writeFile(new URL('browser-verification.json',dir),JSON.stringify(result,null,2)+'\n');}
+console.log(JSON.stringify(result));

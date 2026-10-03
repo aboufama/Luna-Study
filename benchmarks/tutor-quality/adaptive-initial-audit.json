@@ -1,0 +1,138 @@
+{
+  "artifact": "benchmarks/tutor-quality/live-adaptive-results.json",
+  "sha256": "a101d934f82c368e2d2b9d8f6b0fa3721cf3259998c11e68e0a3e3e47d5d7fdc",
+  "assessment": "Partial behavior improvement; not a complete session quality pass.",
+  "actualRequests": {
+    "openai": 41,
+    "jev": 52
+  },
+  "usageComplete": true,
+  "estimatedUsd": 0.22572600499999998,
+  "grades": {
+    "reviewJobs": 7,
+    "providerRequests": 14,
+    "recognizedAttempts": 6,
+    "acceptedCheckedGrades": 5,
+    "rejectedReviews": 2,
+    "targetRejectedReviews": 1,
+    "persistedGradeEvents": 5
+  },
+  "finalMastery": {
+    "overall": 47,
+    "topics": [
+      {
+        "id": "7fafcd4cb67a69bee132bb17",
+        "title": "Equations",
+        "score": 60,
+        "mastered": false
+      },
+      {
+        "id": "590da97ebea25bdca1ead597",
+        "title": "Cell transport",
+        "score": 33,
+        "mastered": false
+      }
+    ]
+  },
+  "unrecognizedAdaptiveTargets": [
+    {
+      "step": "fourth-equation",
+      "virtualMs": 1290000
+    },
+    {
+      "step": "explain-back",
+      "virtualMs": 1470000
+    },
+    {
+      "step": "transfer-response",
+      "virtualMs": 1650000
+    }
+  ],
+  "findings": [
+    {
+      "code": "CURRENT_HINT_NOT_DELIVERED",
+      "severity": "functional",
+      "steps": [
+        "hint-two",
+        "hint-three"
+      ],
+      "evidence": [
+        {
+          "step": "hint-one",
+          "context": {
+            "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+            "maxHints": 3,
+            "hintsUsed": 0,
+            "hintsRemaining": 2,
+            "hintAllowed": true,
+            "hintNumber": 1,
+            "hintLevel": "orientation",
+            "allowAnswerReview": false,
+            "requiresAttempt": false,
+            "answerAttemptReceived": false,
+            "answerReviewPending": false,
+            "setupClarification": false
+          },
+          "publicOutput": "<say>Start by identifying the operations attached to x, then think about which inverse operations could isolate x while keeping both sides equal. What would you try first?</say>\n<board>{\"title\":\"Equation\",\"mode\":\"patch\",\"blocks\":[{\"id\":\"focus\",\"type\":\"text\",\"content\":\"Goal: isolate x using equal operations on both sides.\"}]}</board>"
+        },
+        {
+          "step": "hint-two",
+          "context": {
+            "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+            "maxHints": 3,
+            "hintsUsed": 1,
+            "hintsRemaining": 1,
+            "hintAllowed": true,
+            "hintNumber": 2,
+            "hintLevel": "strategy",
+            "allowAnswerReview": false,
+            "requiresAttempt": false,
+            "answerAttemptReceived": false,
+            "answerReviewPending": false,
+            "setupClarification": false
+          },
+          "publicOutput": "<say>Absolutely—no calculator needed, and you’ll choose the operations. What would you try first?</say>"
+        },
+        {
+          "step": "hint-three",
+          "context": {
+            "questionId": "aa61ed46-a572-4d72-a851-1128e7c71cd1",
+            "maxHints": 3,
+            "hintsUsed": 2,
+            "hintsRemaining": 0,
+            "hintAllowed": true,
+            "hintNumber": 3,
+            "hintLevel": "next-step",
+            "allowAnswerReview": false,
+            "requiresAttempt": true,
+            "answerAttemptReceived": false,
+            "answerReviewPending": false,
+            "setupClarification": false
+          },
+          "publicOutput": "<say>You’ve used all available hints for this problem. Give your best attempt—even just the first operation and why it keeps the equation balanced.</say>"
+        }
+      ]
+    },
+    {
+      "code": "CONSUMED_SKIPPED_QUESTION_NOT_RESTORED",
+      "severity": "functional",
+      "questionId": "eb88bd74-175e-4275-b4c3-5f4c21d9ac45",
+      "askedAt": 630000,
+      "revisitedAt": 1230000,
+      "untrackedFinalTurns": 8
+    },
+    {
+      "code": "CORRECT_ANSWER_DOUBLE_GRADE_REJECTED",
+      "severity": "conservative-uncertainty",
+      "step": "independent-equation",
+      "detail": "Both verdicts partial, reasoningSufficient false; assistanceUsed true versus false. No grade persisted."
+    }
+  ],
+  "limitations": [
+    "30-minute virtual timeline, not human learning research",
+    "Synthetic speech adapter, no actual ElevenLabs latency",
+    "Complete short synthetic originals and deterministic question-bank preparation",
+    "Adaptive student restores canonical question when no current identity, which deliberately exposes tracking failures",
+    "Recognized attempts are separate from review jobs and scoring events"
+  ]
+}

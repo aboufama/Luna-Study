@@ -1,0 +1,524 @@
+{
+  "startedAt": "2026-10-02T09:38:25.222Z",
+  "maximumPaidRequests": 4,
+  "paidRequests": 4,
+  "model": "gpt-5.6-terra",
+  "method": "Four fresh follow-up calls after nested annotations, table prose and flow connector fixes, with optional shape-preserving smooth plots. Public fixtures unchanged; preserves prior failed cohorts. Not a paired latency comparison.",
+  "instructions": {
+    "before": {
+      "chars": 11955,
+      "sha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b"
+    },
+    "current": {
+      "chars": 13680,
+      "sha256": "806fd8810e96ff4f44a4fec8833f59556516eb0e7851932b255454ac94267c26"
+    }
+  },
+  "runs": [
+    {
+      "id": "hydraulic-legend-current",
+      "scenario": "hydraulic-legend",
+      "condition": "current",
+      "source": "The equation is P = rho g H Q. rho denotes fluid density, g gravitational acceleration, H head (vertical height difference), and Q volume flow rate.",
+      "request": "Put the hydraulic power formula and its symbol key on the whiteboard so I can read it. Keep the symbols mathematical and the definitions compact.",
+      "latencies": {
+        "firstTextMs": 1690,
+        "speechCompleteMs": 1704,
+        "completeMs": 2733
+      },
+      "status": "valid-board",
+      "inputCharacters": 557,
+      "raw": "<say>Here’s the formula with a compact symbol key.</say>\n<board>{\"title\":\"Hydraulic power\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"formula\",\"type\":\"latex\",\"content\":\"P = \\\\rho g H Q\"},{\"id\":\"key\",\"type\":\"matrix\",\"size\":[5,2],\"columnLabels\":[\"Symbol\",\"Meaning\"],\"cells\":[{\"row\":0,\"col\":0,\"value\":\"P\"},{\"row\":0,\"col\":1,\"value\":\"hydraulic power\"},{\"row\":1,\"col\":0,\"value\":\"\\\\rho\"},{\"row\":1,\"col\":1,\"value\":\"fluid density\"},{\"row\":2,\"col\":0,\"value\":\"g\"},{\"row\":2,\"col\":1,\"value\":\"gravitational acceleration\"},{\"row\":3,\"col\":0,\"value\":\"H\"},{\"row\":3,\"col\":1,\"value\":\"head: vertical height difference\"},{\"row\":4,\"col\":0,\"value\":\"Q\"},{\"row\":4,\"col\":1,\"value\":\"volume flow rate\"}]}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2948,
+          "outputTokens": 231,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 2945,
+          "reasoningTokens": 14
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the formula with a compact symbol key.",
+        "board": {
+          "title": "Hydraulic power",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "formula",
+              "type": "latex",
+              "content": "P = \\rho g H Q"
+            },
+            {
+              "id": "key",
+              "type": "matrix",
+              "columnLabels": [
+                "Symbol",
+                "Meaning"
+              ],
+              "rows": [
+                [
+                  "P",
+                  "hydraulic power"
+                ],
+                [
+                  "\\rho",
+                  "fluid density"
+                ],
+                [
+                  "g",
+                  "gravitational acceleration"
+                ],
+                [
+                  "H",
+                  "head: vertical height difference"
+                ],
+                [
+                  "Q",
+                  "volume flow rate"
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1688,
+          "totalMs": 2729,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Hydraulic power",
+        "revision": "4ae56642-6a95-4b4c-8773-42f6c88cf9d6",
+        "blocks": [
+          {
+            "id": "formula",
+            "type": "latex",
+            "content": "P = \\rho g H Q"
+          },
+          {
+            "id": "key",
+            "type": "matrix",
+            "columnLabels": [
+              "Symbol",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "P",
+                "hydraulic power"
+              ],
+              [
+                "\\rho",
+                "fluid density"
+              ],
+              [
+                "g",
+                "gravitational acceleration"
+              ],
+              [
+                "H",
+                "head: vertical height difference"
+              ],
+              [
+                "Q",
+                "volume flow rate"
+              ]
+            ]
+          }
+        ]
+      },
+      "visibleText": "P = \\rho g H Q\nSymbol | Meaning\nP | hydraulic power\n\\rho | fluid density\ng | gravitational acceleration\nH | head: vertical height difference\nQ | volume flow rate",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "programming-branch-current",
+      "scenario": "programming-branch",
+      "condition": "current",
+      "source": "In a sorted-array search, compare the target with the middle value. If equal, the search succeeds. If target is smaller, keep the left half. If target is larger, keep the right half. Each smaller or larger branch returns to a comparison on the remaining range. For a single decision step, show compare middle branching to found, left half, or right half.",
+      "request": "Draw a clear decision diagram for this search algorithm, including the two outcomes of the comparison.",
+      "latencies": {
+        "firstTextMs": 828,
+        "speechCompleteMs": 1020,
+        "completeMs": 1815
+      },
+      "status": "valid-board",
+      "inputCharacters": 722,
+      "raw": "<say>Here’s the single decision step: compare the target to the middle value, then choose the matching outcome.</say>\n<board>{\"title\":\"Binary search decision\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"decision-flow\",\"type\":\"flow\",\"direction\":\"down\",\"nodes\":[{\"id\":\"compare\",\"label\":\"Compare target with middle value\"},{\"id\":\"found\",\"label\":\"Equal → found\"},{\"id\":\"left\",\"label\":\"Target smaller → keep left half\"},{\"id\":\"right\",\"label\":\"Target larger → keep right half\"}],\"edges\":[{\"from\":\"compare\",\"to\":\"found\",\"label\":\"equal\"},{\"from\":\"compare\",\"to\":\"left\",\"label\":\"smaller\"},{\"from\":\"compare\",\"to\":\"right\",\"label\":\"larger\"}]}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2980,
+          "outputTokens": 181,
+          "cachedInputTokens": 2814,
+          "cacheWriteTokens": 163,
+          "reasoningTokens": 23
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the single decision step: compare the target to the middle value, then choose the matching outcome.",
+        "board": {
+          "title": "Binary search decision",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "decision-flow",
+              "type": "flow",
+              "direction": "down",
+              "nodes": [
+                {
+                  "id": "compare",
+                  "label": "Compare target with middle value"
+                },
+                {
+                  "id": "found",
+                  "label": "Equal → found"
+                },
+                {
+                  "id": "left",
+                  "label": "Target smaller → keep left half"
+                },
+                {
+                  "id": "right",
+                  "label": "Target larger → keep right half"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "compare",
+                  "to": "found",
+                  "label": "equal"
+                },
+                {
+                  "from": "compare",
+                  "to": "left",
+                  "label": "smaller"
+                },
+                {
+                  "from": "compare",
+                  "to": "right",
+                  "label": "larger"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 809,
+          "totalMs": 1814,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Binary search decision",
+        "revision": "829b822e-77b6-40e4-a125-8fe97efa430b",
+        "blocks": [
+          {
+            "id": "decision-flow",
+            "type": "flow",
+            "direction": "down",
+            "nodes": [
+              {
+                "id": "compare",
+                "label": "Compare target with middle value"
+              },
+              {
+                "id": "found",
+                "label": "Equal → found"
+              },
+              {
+                "id": "left",
+                "label": "Target smaller → keep left half"
+              },
+              {
+                "id": "right",
+                "label": "Target larger → keep right half"
+              }
+            ],
+            "edges": [
+              {
+                "from": "compare",
+                "to": "found",
+                "label": "equal"
+              },
+              {
+                "from": "compare",
+                "to": "left",
+                "label": "smaller"
+              },
+              {
+                "from": "compare",
+                "to": "right",
+                "label": "larger"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Compare target with middle value\nEqual → found\nTarget smaller → keep left half\nTarget larger → keep right half\nCompare target with middle value → Equal → found: equal\nCompare target with middle value → Target smaller → keep left half: smaller\nCompare target with middle value → Target larger → keep right half: larger",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "grammar-annotation-current",
+      "scenario": "grammar-annotation",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 862,
+        "speechCompleteMs": 964,
+        "completeMs": 1525
+      },
+      "status": "valid-board",
+      "inputCharacters": 660,
+      "raw": "<say>Here’s the sentence structure, with each clause marked directly in the sentence.</say>\n<board>{\"title\":\"Sentence structure\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"sentence\",\"type\":\"annotation\",\"text\":\"After the rain stopped, Maya walked to class.\",\"spans\":[{\"quote\":\"After the rain stopped\",\"label\":\"Dependent clause\"},{\"quote\":\"Maya walked to class\",\"label\":\"Main clause\"},{\"quote\":\"After\",\"label\":\"Subordinating conjunction\"},{\"quote\":\"Maya\",\"label\":\"Main-clause subject\"}]}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2968,
+          "outputTokens": 115,
+          "cachedInputTokens": 2814,
+          "cacheWriteTokens": 151,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence structure, with each clause marked directly in the sentence.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "sentence",
+              "type": "annotation",
+              "text": "After the rain stopped, Maya walked to class.",
+              "spans": [
+                {
+                  "quote": "After the rain stopped",
+                  "label": "Dependent clause"
+                },
+                {
+                  "quote": "Maya walked to class",
+                  "label": "Main clause"
+                },
+                {
+                  "quote": "After",
+                  "label": "Subordinating conjunction"
+                },
+                {
+                  "quote": "Maya",
+                  "label": "Main-clause subject"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 857,
+          "totalMs": 1525,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "fa8bda7a-a206-4c01-9311-fcb5647976b1",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "annotation",
+            "text": "After the rain stopped, Maya walked to class.",
+            "spans": [
+              {
+                "quote": "After the rain stopped",
+                "label": "Dependent clause"
+              },
+              {
+                "quote": "Maya walked to class",
+                "label": "Main clause"
+              },
+              {
+                "quote": "After",
+                "label": "Subordinating conjunction"
+              },
+              {
+                "quote": "Maya",
+                "label": "Main-clause subject"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "After the rain stopped, Maya walked to class.\nAfter the rain stopped: Dependent clause\nMaya walked to class: Main clause\nAfter: Subordinating conjunction\nMaya: Main-clause subject",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "math-parabola-current",
+      "scenario": "math-parabola",
+      "condition": "current",
+      "source": "For y=x^2, the five points are (-2,4), (-1,1), (0,0), (1,1), (2,4). The graph is symmetric about the vertical y axis. Its vertex is (0,0). The positive y direction is upward; x increases rightward.",
+      "request": "Sketch y = x squared from x = minus two to two, with axes, tick values and the origin clear. Use the supplied points accurately.",
+      "latencies": {
+        "firstTextMs": 805,
+        "speechCompleteMs": 927,
+        "completeMs": 1682
+      },
+      "status": "valid-board",
+      "inputCharacters": 586,
+      "raw": "<say>Here is the sketch using the supplied points.</say><board>{\"title\":\"Parabola\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"graph\",\"type\":\"plot\",\"xRange\":[-2,2],\"yRange\":[0,4],\"xLabel\":\"x\",\"yLabel\":\"y\",\"series\":[{\"id\":\"parabola\",\"label\":\"y = x²\",\"interpolation\":\"monotone\",\"tone\":\"ink\",\"points\":[[-2,4],[-1,1],[0,0],[1,1],[2,4]]}]}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2982,
+          "outputTokens": 142,
+          "cachedInputTokens": 2814,
+          "cacheWriteTokens": 165,
+          "reasoningTokens": 18
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here is the sketch using the supplied points.",
+        "board": {
+          "title": "Parabola",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "graph",
+              "type": "plot",
+              "xRange": [
+                -2,
+                2
+              ],
+              "yRange": [
+                0,
+                4
+              ],
+              "xLabel": "x",
+              "yLabel": "y",
+              "series": [
+                {
+                  "id": "parabola",
+                  "label": "y = x²",
+                  "interpolation": "monotone",
+                  "tone": "ink",
+                  "points": [
+                    [
+                      -2,
+                      4
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      2,
+                      4
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 803,
+          "totalMs": 1681,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Parabola",
+        "revision": "4796b73a-ce58-442e-b501-4d6e8ee83595",
+        "blocks": [
+          {
+            "id": "graph",
+            "type": "plot",
+            "xRange": [
+              -2,
+              2
+            ],
+            "yRange": [
+              0,
+              4
+            ],
+            "xLabel": "x",
+            "yLabel": "y",
+            "series": [
+              {
+                "id": "parabola",
+                "label": "y = x²",
+                "interpolation": "monotone",
+                "tone": "ink",
+                "points": [
+                  [
+                    -2,
+                    4
+                  ],
+                  [
+                    -1,
+                    1
+                  ],
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "x\ny\ny = x²: (-2, 4); (-1, 1); (0, 0); (1, 1); (2, 4)",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    }
+  ],
+  "finishedAt": "2026-10-02T09:38:32.990Z"
+}

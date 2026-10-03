@@ -1,0 +1,6210 @@
+{
+  "startedAt": "2026-10-02T18:02:10.976Z",
+  "status": "incomplete",
+  "scenario": "policy",
+  "script": [
+    {
+      "id": "canonical-question",
+      "text": "Please ask me the membrane transport question."
+    },
+    {
+      "id": "unauthorized-hint",
+      "text": "I don't know. Please give me a hint."
+    },
+    {
+      "id": "problem-switch",
+      "text": "Let's switch to solving two x plus three equals eleven. Ask me without solving it."
+    }
+  ],
+  "sessions": [
+    {
+      "arm": "eleven",
+      "index": 1,
+      "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+      "status": "complete",
+      "diagnostics": [
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "session.started",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.started",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "tutor.context-built",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "encounteredCount": 0,
+            "sourceCharacters": 745,
+            "retrievedCharacters": 745,
+            "contextCharacters": 2367,
+            "historyCharacters": 2,
+            "recentTurns": 0,
+            "olderTurns": 0,
+            "bankCharacters": 0,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "llm.first-text",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 3854
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.first-audio",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 4946
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "llm.completed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reply": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 5698
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.candidate",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "matrix"
+            ],
+            "reply": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "boardJson": "{\"title\":\"Cell transport\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"transport-compare\",\"type\":\"matrix\",\"columnLabels\":[\"Process\",\"Energy used?\",\"Direction vs. concentration gradient\"],\"rows\":[[\"Diffusion\",\"\",\"\"],[\"Active transport\",\"\",\"\"],[\"\",\"\",\"\"]]}]}"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.decision",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "needsCanvas": true,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "reason": "visual-teaching",
+            "source": "jev",
+            "probability": 0.76,
+            "latencyMs": 198,
+            "visible": false,
+            "hasBoard": true
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.shown",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "structured-visual",
+            "boardObjectCount": 1,
+            "addedObjects": 1,
+            "changedObjects": 0,
+            "preservedObjects": 0,
+            "removedObjects": 0,
+            "boardCharacters": 278,
+            "latencyMs": 199,
+            "boardRevision": "ad0916f7-745c-4aa5-8f59-2ffe6bddcd61",
+            "boardJson": "{\"title\":\"Cell transport\",\"revision\":\"ad0916f7-745c-4aa5-8f59-2ffe6bddcd61\",\"blocks\":[{\"id\":\"transport-compare\",\"type\":\"matrix\",\"columnLabels\":[\"Process\",\"Energy used?\",\"Direction vs. concentration gradient\"],\"rows\":[[\"Diffusion\",\"\",\"\"],[\"Active transport\",\"\",\"\"],[\"\",\"\",\"\"]]}]}"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.finished",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 149,
+            "outputAudioMs": 10000
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.interrupted",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "interrupted"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "grading.eligibility",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "reason": "not-an-attempt",
+            "canonicalPromptActive": false,
+            "workingRelation": "none",
+            "attemptIntent": "no",
+            "helpIntent": "no",
+            "deadlineIntent": "no",
+            "answerAttemptProbability": 0.05,
+            "answerAttemptThreshold": 0.8,
+            "provisional": false,
+            "intentSource": "jev"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.started",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "tutor.context-built",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "taskKind": "respond-to-student",
+            "encounteredCount": 0,
+            "sourceCharacters": 745,
+            "retrievedCharacters": 745,
+            "contextCharacters": 6307,
+            "historyCharacters": 427,
+            "recentTurns": 3,
+            "olderTurns": 0,
+            "bankCharacters": 1548,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "llm.first-text",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 1890
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "llm.completed",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reply": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 1997
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "question.tracked",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "tracked",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.closed",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "canonical-target-changed",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.candidate",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.first-audio",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 2012
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.decision",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "needsCanvas": false,
+            "reason": "uncertain",
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "source": "fallback",
+            "fallbackReason": "uncertain",
+            "latencyMs": 174,
+            "probability": 0.44,
+            "reopenProbability": 0.51,
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.not-shown",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "no-new-visual"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.finished",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 100,
+            "outputAudioMs": 6720
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.interrupted",
+          "turnId": 4,
+          "sessionId": null,
+          "details": {
+            "reason": "interrupted"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "grading.eligibility",
+          "turnId": 5,
+          "sessionId": null,
+          "details": {
+            "reason": "help-request",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "canonicalPromptActive": true,
+            "workingRelation": "current",
+            "attemptIntent": "no",
+            "helpIntent": "yes",
+            "deadlineIntent": "no",
+            "answerAttemptProbability": 0.03,
+            "answerAttemptThreshold": 0.8,
+            "provisional": false,
+            "intentSource": "jev"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.fixed-reply",
+          "turnId": 7,
+          "sessionId": null,
+          "details": {
+            "reason": "hint-button-invitation"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.first-audio",
+          "turnId": 7,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 233
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.finished",
+          "turnId": 7,
+          "sessionId": null,
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 60,
+            "outputAudioMs": 4000
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.interrupted",
+          "turnId": 7,
+          "sessionId": null,
+          "details": {
+            "reason": "interrupted"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "grading.eligibility",
+          "turnId": 8,
+          "sessionId": null,
+          "details": {
+            "reason": "not-an-attempt",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "canonicalPromptActive": true,
+            "workingRelation": "current",
+            "attemptIntent": "no",
+            "helpIntent": "unknown",
+            "deadlineIntent": "no",
+            "answerAttemptProbability": 0.02,
+            "answerAttemptThreshold": 0.8,
+            "provisional": false,
+            "intentSource": "jev"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.started",
+          "turnId": 10,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "tutor.context-built",
+          "turnId": 10,
+          "sessionId": null,
+          "details": {
+            "taskKind": "respond-to-student",
+            "encounteredCount": 1,
+            "sourceCharacters": 745,
+            "retrievedCharacters": 745,
+            "contextCharacters": 7318,
+            "historyCharacters": 792,
+            "recentTurns": 7,
+            "olderTurns": 0,
+            "bankCharacters": 1272,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.interrupted",
+          "turnId": 10,
+          "sessionId": null,
+          "details": {
+            "reason": "interrupted"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.finished",
+          "turnId": 10,
+          "sessionId": null,
+          "details": {
+            "reason": "canceled",
+            "speechCharacters": 0,
+            "outputAudioMs": 0
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "benchmark.backend-error",
+          "message": "The Luna request was canceled."
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "llm.failed",
+          "turnId": 10,
+          "sessionId": null,
+          "details": {
+            "reason": "canceled",
+            "errorCode": "499",
+            "latencyMs": 615
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "grading.eligibility",
+          "turnId": 11,
+          "sessionId": null,
+          "details": {
+            "reason": "not-an-attempt",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "canonicalPromptActive": true,
+            "workingRelation": "current",
+            "attemptIntent": "no",
+            "helpIntent": "unknown",
+            "deadlineIntent": "no",
+            "answerAttemptProbability": 0.04,
+            "answerAttemptThreshold": 0.8,
+            "provisional": false,
+            "intentSource": "jev"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "turn.started",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "tutor.context-built",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "taskKind": "respond-to-student",
+            "encounteredCount": 1,
+            "sourceCharacters": 745,
+            "retrievedCharacters": 745,
+            "contextCharacters": 7337,
+            "historyCharacters": 847,
+            "recentTurns": 8,
+            "olderTurns": 0,
+            "bankCharacters": 1272,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "llm.first-text",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 1866
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "llm.completed",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "reply": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+            "hasBoard": false,
+            "candidateStatus": "none",
+            "latencyMs": 1903
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "question.tracked",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "reason": "tracked",
+            "questionId": "3c11deea-6198-4f22-ab54-90199c645e48"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.candidate",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "missing",
+            "candidateTypes": [],
+            "reply": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.first-audio",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 1991
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.decision",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "needsCanvas": true,
+            "reason": "uncertain",
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "source": "fallback",
+            "fallbackReason": "uncertain",
+            "latencyMs": 187,
+            "probability": 0.56,
+            "reopenProbability": 0.04,
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.not-shown",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "reason": "visual-requested-without-board"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "whiteboard.recovery-started",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "reason": "needed-visual-missing",
+            "model": "gpt-6-luna"
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "voice.finished",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "reason": "completed",
+            "speechCharacters": 79,
+            "outputAudioMs": 6880
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "session.closed",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "reason": 1006,
+            "inputAudioMs": 43202.5625
+          }
+        },
+        {
+          "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+          "type": "benchmark.backend-error",
+          "message": "The Luna request was canceled."
+        },
+        {
+          "type": "whiteboard.recovery-failed",
+          "turnId": 13,
+          "sessionId": null,
+          "details": {
+            "reason": "canceled",
+            "latencyMs": 852
+          }
+        }
+      ],
+      "probe": {
+        "origin": "http://127.0.0.1:54074",
+        "path": "/api/live-voice",
+        "timeoutMs": 60000,
+        "microphoneUsed": false,
+        "playbackUsed": false,
+        "audioSaved": false,
+        "events": [
+          {
+            "type": "connected",
+            "atMs": 8.4,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 12.4,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 12.4,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": []
+            },
+            "atMs": 12.9,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 14,
+            "phase": "startup"
+          },
+          {
+            "type": "ready",
+            "sampleRate": 16000,
+            "greetingSuppressed": false,
+            "atMs": 119,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 119.1,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 119.2,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "first-text",
+            "ms": 3854,
+            "atMs": 3966.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 3966.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 3970.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 3972.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 3974.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 3974.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4029.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport:",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4029.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4075.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4118.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4180.8,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4186,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4189,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4189,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4189,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4213.3,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4287.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4334,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4352.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4352.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4377.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4483,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4497.1,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4503.7,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a concentration",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4644.1,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a concentration gradient",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4670.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 4874.1,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "speaking",
+            "atMs": 5058.6,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "first-audio",
+            "ms": 4946,
+            "atMs": 5058.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 5058.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 5078.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 5102.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 5114.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 5147.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 5260.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 54648,
+            "sampleRate": 24000,
+            "atMs": 5387.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 5387.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 42504,
+            "sampleRate": 24000,
+            "atMs": 5579.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 40986,
+            "sampleRate": 24000,
+            "atMs": 5683.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 39468,
+            "sampleRate": 24000,
+            "atMs": 5757.1,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 5816.7,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 5816.7,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with cell transport: how do diffusion and active transport differ in both energy use and direction relative to a concentration gradient?",
+            "final": true,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 5816.7,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "text-complete",
+            "ms": 5698,
+            "atMs": 5816.7,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 5816.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 37950,
+            "sampleRate": 24000,
+            "atMs": 5867.8,
+            "phase": "startup"
+          },
+          {
+            "type": "canvas",
+            "visible": true,
+            "id": 1,
+            "board": {
+              "title": "Cell transport",
+              "revision": "ad0916f7-745c-4aa5-8f59-2ffe6bddcd61",
+              "blocks": [
+                {
+                  "id": "transport-compare",
+                  "type": "matrix",
+                  "columnLabels": [
+                    "Process",
+                    "Energy used?",
+                    "Direction vs. concentration gradient"
+                  ],
+                  "rows": [
+                    [
+                      "Diffusion",
+                      "",
+                      ""
+                    ],
+                    [
+                      "Active transport",
+                      "",
+                      ""
+                    ],
+                    [
+                      "",
+                      "",
+                      ""
+                    ]
+                  ]
+                }
+              ]
+            },
+            "selection": null,
+            "atMs": 6014.6,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 6014.7,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 6014.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 42504,
+            "sampleRate": 24000,
+            "atMs": 6043.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 42504,
+            "sampleRate": 24000,
+            "atMs": 6126.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 37950,
+            "sampleRate": 24000,
+            "atMs": 6241.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 34914,
+            "sampleRate": 24000,
+            "atMs": 6326.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 39468,
+            "sampleRate": 24000,
+            "atMs": 6411.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 312,
+            "sampleRate": 24000,
+            "atMs": 6411.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio-end",
+            "turnId": 1,
+            "atMs": 6411.9,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 6411.9,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 15073.8,
+            "phase": "startup"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 16977.9,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 16978,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 16978,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask me the membr",
+            "final": false,
+            "turnId": 2,
+            "atMs": 16978,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 16978,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask me the membrane transport question.",
+            "final": false,
+            "turnId": 2,
+            "atMs": 17981.9,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 17982,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask me the membrane transport question.",
+            "final": true,
+            "turnId": 2,
+            "atMs": 18619.9,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 18620,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 18620,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 18620,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 18620,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 18827.7,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 18827.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 18827.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 18827.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 18827.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 18827.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 18827.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "latency",
+            "turnId": 4,
+            "stage": "first-text",
+            "ms": 1890,
+            "atMs": 20711.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": false,
+            "turnId": 4,
+            "atMs": 20711.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 20826,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 20826,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 20826,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 20826,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": true,
+            "turnId": 4,
+            "atMs": 20826,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "latency",
+            "turnId": 4,
+            "stage": "text-complete",
+            "ms": 1999,
+            "atMs": 20826.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "canvas",
+            "visible": false,
+            "id": 4,
+            "atMs": 20826.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 20826.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "state",
+            "state": "speaking",
+            "atMs": 20833.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "latency",
+            "turnId": 4,
+            "stage": "first-audio",
+            "ms": 2012,
+            "atMs": 20833.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 20833.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 20843.5,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 20867.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 20881.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 20934.7,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 20995.7,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 20995.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 21053.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 39468,
+            "sampleRate": 24000,
+            "atMs": 21166.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 22770,
+            "sampleRate": 24000,
+            "atMs": 21186.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 45540,
+            "sampleRate": 24000,
+            "atMs": 21431.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 21435.4,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 34914,
+            "sampleRate": 24000,
+            "atMs": 21478.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 42504,
+            "sampleRate": 24000,
+            "atMs": 21583.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 40986,
+            "sampleRate": 24000,
+            "atMs": 21680,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 36432,
+            "sampleRate": 24000,
+            "atMs": 21881.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio",
+            "turnId": 4,
+            "bytes": 744,
+            "sampleRate": 24000,
+            "atMs": 21881.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "audio-end",
+            "turnId": 4,
+            "atMs": 21881.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 21881.7,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": false,
+            "reason": "ready",
+            "atMs": 27555.4,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 29068.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 29068.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 29068.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "I don't know.",
+            "final": false,
+            "turnId": 5,
+            "atMs": 29068.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 29068.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "I don't know. Please give me a hint.",
+            "final": false,
+            "turnId": 5,
+            "atMs": 30098.3,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 30098.3,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "I don't know. Please give me a hint.",
+            "final": true,
+            "turnId": 5,
+            "atMs": 30256,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 30256,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": false,
+            "reason": "ready",
+            "atMs": 30256,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 30256,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 30256,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 30444.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": true,
+            "reason": "ready",
+            "atMs": 30444.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Use the Hint button for a nudge, or tell me your first step.",
+            "final": true,
+            "turnId": 7,
+            "atMs": 30444.2,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 30444.2,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 30444.2,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "state",
+            "state": "speaking",
+            "atMs": 30676.4,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "latency",
+            "turnId": 7,
+            "stage": "first-audio",
+            "ms": 234,
+            "atMs": 30676.4,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 30676.4,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 30687.2,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 30711.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 30727,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 30764.1,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 30874.6,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 34914,
+            "sampleRate": 24000,
+            "atMs": 30975.8,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 27324,
+            "sampleRate": 24000,
+            "atMs": 31034.3,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 31233.3,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 34914,
+            "sampleRate": 24000,
+            "atMs": 31340,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 31360.6,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio",
+            "turnId": 7,
+            "bytes": 732,
+            "sampleRate": 24000,
+            "atMs": 31362.7,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "audio-end",
+            "turnId": 7,
+            "atMs": 31362.7,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 31362.7,
+            "phase": "unauthorized-hint"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": true,
+            "reason": "ready",
+            "atMs": 34680.8,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 35935.8,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 35935.8,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 35935.8,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Let's switch to",
+            "final": false,
+            "turnId": 8,
+            "atMs": 35935.8,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 35935.8,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Let's switch to solving 2",
+            "final": false,
+            "turnId": 8,
+            "atMs": 36942.4,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 36942.4,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Let's switch to solving 2x plus 3",
+            "final": false,
+            "turnId": 8,
+            "atMs": 37951.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 37951.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Let's switch to solving 2x plus 3 equals 11.",
+            "final": true,
+            "turnId": 8,
+            "atMs": 38670.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 38670.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": true,
+            "reason": "ready",
+            "atMs": 38670.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 38670.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": true,
+            "reason": "busy",
+            "atMs": 38670.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 38950.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 38950.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": false,
+            "reason": "ready",
+            "atMs": 38950.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 38950.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 38950.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 38950.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 38950.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 39563.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 39563.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 39563.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Ask me",
+            "final": false,
+            "turnId": 11,
+            "atMs": 39563.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 39563.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Ask me without solving it.",
+            "final": false,
+            "turnId": 11,
+            "atMs": 40600.9,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 40600.9,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Ask me without solving it.",
+            "final": true,
+            "turnId": 11,
+            "atMs": 40716.2,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 40716.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": false,
+            "reason": "ready",
+            "atMs": 40716.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 40716.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 40716.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 40861.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 40861.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": false,
+            "reason": "ready",
+            "atMs": 40861.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 40861.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 40861.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 40861.4,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 40861.4,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "latency",
+            "turnId": 13,
+            "stage": "first-text",
+            "ms": 1866,
+            "atMs": 42723,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+            "final": false,
+            "turnId": 13,
+            "atMs": 42723.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 42764.4,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+              "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+              "topicTitle": "Equations",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [
+              {
+                "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+                "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+                "topicTitle": "Cell transport",
+                "attempts": 0,
+                "assisted": false,
+                "status": "set-aside"
+              }
+            ],
+            "atMs": 42764.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 42764.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+              "question": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+              "topicTitle": "Equations",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [
+              {
+                "questionId": "14e96ea6-67e7-405b-8942-e754431085de",
+                "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+                "topicTitle": "Cell transport",
+                "attempts": 0,
+                "assisted": false,
+                "status": "set-aside"
+              }
+            ],
+            "atMs": 42764.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "How do equal operations solve 2x + 3 = 11, and why are those operations valid?",
+            "final": true,
+            "turnId": 13,
+            "atMs": 42764.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "latency",
+            "turnId": 13,
+            "stage": "text-complete",
+            "ms": 1904,
+            "atMs": 42764.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 42764.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "state",
+            "state": "speaking",
+            "atMs": 42847.9,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "latency",
+            "turnId": 13,
+            "stage": "first-audio",
+            "ms": 1991,
+            "atMs": 42847.9,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 1518,
+            "sampleRate": 24000,
+            "atMs": 42847.9,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 4554,
+            "sampleRate": 24000,
+            "atMs": 42857,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 7590,
+            "sampleRate": 24000,
+            "atMs": 42884.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 3036,
+            "sampleRate": 24000,
+            "atMs": 42890.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 42928,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 30360,
+            "sampleRate": 24000,
+            "atMs": 43033.7,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 47058,
+            "sampleRate": 24000,
+            "atMs": 43151.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 15180,
+            "sampleRate": 24000,
+            "atMs": 43153.3,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 42504,
+            "sampleRate": 24000,
+            "atMs": 43322,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 40986,
+            "sampleRate": 24000,
+            "atMs": 43424.9,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 39468,
+            "sampleRate": 24000,
+            "atMs": 43515.1,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 22770,
+            "sampleRate": 24000,
+            "atMs": 43601.5,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 50094,
+            "sampleRate": 24000,
+            "atMs": 43781,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 12144,
+            "sampleRate": 24000,
+            "atMs": 43794.4,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio",
+            "turnId": 13,
+            "bytes": 834,
+            "sampleRate": 24000,
+            "atMs": 43794.6,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "audio-end",
+            "turnId": 13,
+            "atMs": 43795.4,
+            "phase": "problem-switch"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "3c11deea-6198-4f22-ab54-90199c645e48",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 43795.5,
+            "phase": "problem-switch"
+          }
+        ],
+        "trials": [
+          {
+            "id": "canonical-question",
+            "expectedUserText": "Please ask me the membrane transport question.",
+            "status": "complete",
+            "startedAtMs": 15359.9,
+            "inputPcmBytes": 84706,
+            "sampleRate": 16000,
+            "pcmEndAtMs": 18008.1,
+            "energySpeechEndAtMs": 17820.8,
+            "committedUserMs": 18619.9,
+            "firstAssistantTextMs": 20711.3,
+            "firstAudioMs": 20833.2,
+            "finalAssistantTextMs": 20826,
+            "audioEndMs": 21881.3,
+            "energySpeechEndToCommitMs": 799.1,
+            "energySpeechEndToFirstTextMs": 2890.5,
+            "energySpeechEndToFirstAudioMs": 3012.4,
+            "pcmEndToFirstAudioMs": 2825.1,
+            "commitToFirstAudioMs": 2213.3,
+            "outputAudioBytes": 322560,
+            "outputAudioChunks": 14,
+            "userTranscripts": [
+              "Please ask me the membrane transport question."
+            ],
+            "assistantTranscripts": [
+              "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?"
+            ],
+            "actualSpokenTranscripts": [],
+            "firstUsefulAudioMs": null,
+            "usefulAudioAnnotation": "Not inferable from packet arrival alone; annotate aligned public transcript/audio before claiming a useful-answer latency.",
+            "outputOverlapsInput": false,
+            "estimatedPlaybackEndMs": 27553.2,
+            "finishedAtMs": 21913.2
+          },
+          {
+            "id": "unauthorized-hint",
+            "expectedUserText": "I don't know. Please give me a hint.",
+            "status": "complete",
+            "startedAtMs": 27554.3,
+            "inputPcmBytes": 69846,
+            "sampleRate": 16000,
+            "pcmEndAtMs": 29738.4,
+            "energySpeechEndAtMs": 29496,
+            "committedUserMs": 30256,
+            "firstAssistantTextMs": 30444.2,
+            "firstAudioMs": 30676.4,
+            "finalAssistantTextMs": 30444.2,
+            "audioEndMs": 31362.7,
+            "energySpeechEndToCommitMs": 760,
+            "energySpeechEndToFirstTextMs": 948.2,
+            "energySpeechEndToFirstAudioMs": 1180.4,
+            "pcmEndToFirstAudioMs": 938,
+            "commitToFirstAudioMs": 420.4,
+            "outputAudioBytes": 192000,
+            "outputAudioChunks": 12,
+            "userTranscripts": [
+              "I don't know. Please give me a hint."
+            ],
+            "assistantTranscripts": [
+              "Use the Hint button for a nudge, or tell me your first step."
+            ],
+            "actualSpokenTranscripts": [],
+            "firstUsefulAudioMs": null,
+            "usefulAudioAnnotation": "Not inferable from packet arrival alone; annotate aligned public transcript/audio before claiming a useful-answer latency.",
+            "outputOverlapsInput": false,
+            "estimatedPlaybackEndMs": 34676.4,
+            "finishedAtMs": 31362.9
+          },
+          {
+            "id": "problem-switch",
+            "expectedUserText": "Let's switch to solving two x plus three equals eleven. Ask me without solving it.",
+            "status": "complete",
+            "startedAtMs": 34677.3,
+            "inputPcmBytes": 178330,
+            "sampleRate": 16000,
+            "pcmEndAtMs": 40253.7,
+            "energySpeechEndAtMs": 39960.5,
+            "committedUserMs": 38670.7,
+            "firstAssistantTextMs": 42723.1,
+            "firstAudioMs": 42847.9,
+            "finalAssistantTextMs": 42764.5,
+            "audioEndMs": 43795.4,
+            "energySpeechEndToCommitMs": -1289.8,
+            "energySpeechEndToFirstTextMs": 2762.6,
+            "energySpeechEndToFirstAudioMs": 2887.4,
+            "pcmEndToFirstAudioMs": 2594.2,
+            "commitToFirstAudioMs": 4177.2,
+            "outputAudioBytes": 330240,
+            "outputAudioChunks": 15,
+            "userTranscripts": [
+              "Let's switch to solving 2x plus 3 equals 11.",
+              "Ask me without solving it."
+            ],
+            "assistantTranscripts": [
+              "How do equal operations solve 2x + 3 = 11, and why are those operations valid?"
+            ],
+            "actualSpokenTranscripts": [],
+            "firstUsefulAudioMs": null,
+            "usefulAudioAnnotation": "Not inferable from packet arrival alone; annotate aligned public transcript/audio before claiming a useful-answer latency.",
+            "outputOverlapsInput": false,
+            "estimatedPlaybackEndMs": 49727.9,
+            "finishedAtMs": 43795.9
+          }
+        ],
+        "startedAt": "2026-10-02T18:02:13.196Z",
+        "greetingEndMs": 6411.9,
+        "greetingPlaybackDrainMs": 15358.8,
+        "finishedAt": "2026-10-02T18:02:56.993Z",
+        "sessionElapsedMs": 43796.5,
+        "failure": null,
+        "receivedAudioBytes": 1324800
+      },
+      "usage": {
+        "testId": "35ee1c1b-205a-4e2d-a689-47543e6b34f1",
+        "trackingStartedAt": "2026-10-02T18:02:13.189Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 18,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 18,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.027431019604,
+          "estimatedRequests": 16,
+          "partialEstimatedRequests": 1,
+          "unestimatedRequests": 2,
+          "estimateComplete": false,
+          "missingUsageRequests": 2,
+          "statusCounts": {
+            "completed": 15,
+            "canceled": 3
+          },
+          "units": {
+            "audioInputMs": 43202.5625,
+            "characters": 388,
+            "audioOutputMs": 27600,
+            "inputTokens": 21954,
+            "outputTokens": 888,
+            "cachedInputTokens": 8568,
+            "cacheWriteTokens": 4326,
+            "reasoningTokens": 281
+          },
+          "unitCoverage": {
+            "audioInputMs": 1,
+            "characters": 5,
+            "audioOutputMs": 5,
+            "inputTokens": 10,
+            "outputTokens": 10,
+            "cachedInputTokens": 3,
+            "cacheWriteTokens": 3,
+            "reasoningTokens": 3
+          },
+          "estimateSources": [
+            {
+              "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+              ]
+            },
+            {
+              "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+              "source": "https://elevenlabs.io/pricing/api",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                "Characters measure submitted text, not verified billed characters or played audio.",
+                "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            },
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 7,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 7,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000380142,
+            "estimatedRequests": 7,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 7
+            },
+            "units": {
+              "inputTokens": 9051,
+              "outputTokens": 425
+            },
+            "unitCoverage": {
+              "inputTokens": 7,
+              "outputTokens": 7
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 5,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 5,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0181026,
+            "estimatedRequests": 3,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 2,
+            "estimateComplete": false,
+            "missingUsageRequests": 2,
+            "statusCounts": {
+              "completed": 3,
+              "canceled": 2
+            },
+            "units": {
+              "inputTokens": 12903,
+              "outputTokens": 463,
+              "cachedInputTokens": 8568,
+              "cacheWriteTokens": 4326,
+              "reasoningTokens": 281
+            },
+            "unitCoverage": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "cachedInputTokens": 3,
+              "cacheWriteTokens": 3,
+              "reasoningTokens": 3
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 6,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 6,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.008948277604,
+            "estimatedRequests": 6,
+            "partialEstimatedRequests": 1,
+            "unestimatedRequests": 0,
+            "estimateComplete": false,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 5,
+              "canceled": 1
+            },
+            "units": {
+              "audioInputMs": 43202.5625,
+              "characters": 388,
+              "audioOutputMs": 27600
+            },
+            "unitCoverage": {
+              "audioInputMs": 1,
+              "characters": 5,
+              "audioOutputMs": 5
+            },
+            "estimateSources": [
+              {
+                "rateId": "eleven-scribe-v2-realtime-2026-10-02",
+                "source": "https://elevenlabs.io/pricing/api",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses measured audio sent, not connection time or speech-only time (https://elevenlabs.io/docs/overview/capabilities/speech-to-text).",
+                  "Base transcription estimate excludes unverified billing rounding and optional transcription add-ons; no minimum duration is invented."
+                ]
+              },
+              {
+                "rateId": "eleven-v4-promo-2026-10-02:eleven_v4_turbo",
+                "source": "https://elevenlabs.io/pricing/api",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses the published promotional character rate for the recorded request date; no promotional rate is assumed from October 12 onward.",
+                  "Characters measure submitted text, not verified billed characters or played audio.",
+                  "Measured usage may be incomplete for this pending, interrupted, canceled, or failed request."
+                ]
+              }
+            ]
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": false
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      },
+      "spokenFidelity": [],
+      "qualityStatus": "not-semantically-reviewed"
+    },
+    {
+      "arm": "gpt-live",
+      "index": 2,
+      "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+      "status": "failed",
+      "diagnostics": [
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "session.started",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "visible": false,
+            "hasBoard": false
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 0,
+          "sessionId": null,
+          "details": {
+            "stage": "live-session-started"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "turn.started",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "transport": "openai-stream",
+            "model": "gpt-5.6-terra",
+            "sourceCount": 2,
+            "indexStatus": "ready",
+            "missing": []
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "tutor.context-built",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "encounteredCount": 0,
+            "sourceCharacters": 745,
+            "retrievedCharacters": 745,
+            "contextCharacters": 3938,
+            "historyCharacters": 2,
+            "recentTurns": 0,
+            "olderTurns": 0,
+            "bankCharacters": 1548,
+            "reason": "full-sources"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "llm.first-text",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 1541
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "llm.completed",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reply": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "hasBoard": true,
+            "candidateStatus": "valid",
+            "latencyMs": 2706
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "question.tracked",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "tracked",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "whiteboard.candidate",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "phase": "study",
+            "candidateStatus": "valid",
+            "candidateTypes": [
+              "flow"
+            ],
+            "reply": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "boardJson": "{\"title\":\"Membrane transport\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"transport-flow\",\"type\":\"flow\",\"direction\":\"right\",\"nodes\":[{\"id\":\"outside\",\"label\":\"Cell surroundings\"},{\"id\":\"membrane\",\"label\":\"Selectively permeable cell membrane\"},{\"id\":\"inside\",\"label\":\"Cell interior\"}],\"edges\":[{\"from\":\"outside\",\"to\":\"membrane\",\"label\":\"substances may cross\"},{\"from\":\"membrane\",\"to\":\"inside\",\"label\":\"controlled passage\"}]}]}"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "whiteboard.decision",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "needsCanvas": false,
+            "reason": "uncertain",
+            "candidateMatchesQuestion": null,
+            "shouldClose": false,
+            "shouldReopen": false,
+            "shouldReplace": false,
+            "source": "fallback",
+            "fallbackReason": "uncertain",
+            "latencyMs": 199,
+            "candidateMatchProbability": 0.41,
+            "probability": 0.55,
+            "visible": false,
+            "hasBoard": true
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "whiteboard.not-shown",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "reason": "candidate-target-uncertain"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " Let’s"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " start"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.first-audio",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "latencyMs": 3637
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " with membrane"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " transport."
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " Why"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " is"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " a cell"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " membrane"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " called"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " a"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " selective"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " boundary,"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " and"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " how"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " do"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " passive"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " and"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " active"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " transport"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " differ?"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.content-checked",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reply": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "reason": "exact-transcript-match"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-speech-fidelity"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-speech-end"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "stage": "live-input-transcript",
+            "reply": " Please"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "turn.interrupted",
+          "turnId": 1,
+          "sessionId": null,
+          "details": {
+            "reason": "interrupted"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-input-transcript",
+            "reply": " ask"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-input-transcript",
+            "reply": " me the"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-input-transcript",
+            "reply": " membrane"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-input-transcript",
+            "reply": " transport"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-input-transcript",
+            "reply": " question"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " Why is"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " a cell"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " membrane"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " called"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " a"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " selective"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " boundary,"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " and"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " how"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " do passive"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " and"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " active"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " transport"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-output-transcript",
+            "reply": " differ?"
+          }
+        },
+        {
+          "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+          "type": "session.closed",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "reason": 1006,
+            "inputAudioMs": 39847.0625
+          }
+        },
+        {
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-session-closed",
+            "reason": "close_requested"
+          }
+        },
+        {
+          "type": "voice.live-event",
+          "turnId": 2,
+          "sessionId": null,
+          "details": {
+            "stage": "live-session-finalized",
+            "durationMs": 40000
+          }
+        }
+      ],
+      "probe": {
+        "origin": "http://127.0.0.1:54224",
+        "path": "/api/gpt-live",
+        "timeoutMs": 60000,
+        "microphoneUsed": false,
+        "playbackUsed": false,
+        "audioSaved": false,
+        "events": [
+          {
+            "type": "connected",
+            "atMs": 2.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 5.1,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 5.2,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": []
+            },
+            "atMs": 5.6,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 7.2,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "model": "gpt-live-1",
+            "sampleRate": 16000,
+            "eventType": "live-session-started",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "ready",
+            "sampleRate": 16000,
+            "greetingSuppressed": false,
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": null,
+            "recent": [],
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": false,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "thinking",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": null,
+            "remaining": 0,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "no-question",
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "mastery",
+            "mastery": {
+              "overall": 0,
+              "topics": [
+                {
+                  "id": "ab81b36a0fe1c5e22af968d9",
+                  "title": "Cell transport",
+                  "score": 0,
+                  "mastered": false
+                },
+                {
+                  "id": "2698bf943df528125ed0a836",
+                  "title": "Equations",
+                  "score": 0,
+                  "mastered": false
+                }
+              ]
+            },
+            "atMs": 611.9,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "first-text",
+            "ms": 1541,
+            "atMs": 2151.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2151.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2172.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2172.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2192.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with membrane",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2194.4,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with membrane transport",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2199.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with membrane transport.",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2215.1,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": false,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 2554.3,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 3321.8,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 3321.8,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 3321.8,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 3321.8,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": true,
+            "turnId": 1,
+            "setup": true,
+            "atMs": 3321.8,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "text-complete",
+            "ms": 2707,
+            "atMs": 3321.8,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 3321.9,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 3516.9,
+            "phase": "startup"
+          },
+          {
+            "type": "practice-state",
+            "current": {
+              "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+              "question": "Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+              "topicTitle": "Cell transport",
+              "attempts": 0,
+              "assisted": false,
+              "status": "set-aside"
+            },
+            "recent": [],
+            "atMs": 3516.9,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " Let’s",
+            "startMs": 2600,
+            "endMs": 2800,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 3968.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 3968.5,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " start",
+            "startMs": 2800,
+            "endMs": 3000,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 4162.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 4162.7,
+            "phase": "startup"
+          },
+          {
+            "type": "state",
+            "state": "speaking",
+            "atMs": 4248.1,
+            "phase": "startup"
+          },
+          {
+            "type": "latency",
+            "turnId": 1,
+            "stage": "first-audio",
+            "ms": 3637,
+            "atMs": 4248.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4248.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4341.6,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " with membrane",
+            "startMs": 3000,
+            "endMs": 3200,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 4346.8,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 4346.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4441.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4545.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4640.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4741.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4851.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 4952.9,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " transport.",
+            "startMs": 3600,
+            "endMs": 3800,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 4953,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport.",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 4953,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5051.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5159,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5250.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5353,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5451.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5551.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5651.1,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " Why",
+            "startMs": 4400,
+            "endMs": 4600,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 5751.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 5751.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5751.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5856.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 5950.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6057.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6157.7,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " is",
+            "startMs": 4800,
+            "endMs": 5000,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 6184.7,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 6184.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6260.7,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " a cell",
+            "startMs": 5000,
+            "endMs": 5200,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 6293.8,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 6293.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6359.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6459.4,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " membrane",
+            "startMs": 5200,
+            "endMs": 5400,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 6476.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 6477,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6560,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6679.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6779.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 6902.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7055.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7059.8,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " called",
+            "startMs": 5800,
+            "endMs": 6000,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 7128.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 7129,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7159.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7260.4,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " a",
+            "startMs": 6000,
+            "endMs": 6200,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 7318.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 7318.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7359.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7485.1,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " selective",
+            "startMs": 6200,
+            "endMs": 6400,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 7511.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 7511.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7576,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7678.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7783.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7868.9,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " boundary,",
+            "startMs": 6600,
+            "endMs": 6800,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 7880.9,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary,",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 7880.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 7959.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8059.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8160,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8260.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8360.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8460.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8560.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8660.2,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " and",
+            "startMs": 7400,
+            "endMs": 7600,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 8701.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 8701.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8760.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8860.2,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " how",
+            "startMs": 7600,
+            "endMs": 7800,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 8907.1,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 8907.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 8959.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9060.6,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " do",
+            "startMs": 7800,
+            "endMs": 8000,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 9119.2,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 9119.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9188.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9261.8,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " passive",
+            "startMs": 8000,
+            "endMs": 8200,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 9290.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 9290.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9359.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9460.3,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9560.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9660.3,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " and",
+            "startMs": 8400,
+            "endMs": 8600,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 9713.1,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 9713.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9760,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9860,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " active",
+            "startMs": 8600,
+            "endMs": 8800,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 9896.5,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 9896.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 9960.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10076.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10188,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10261.2,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " transport",
+            "startMs": 9000,
+            "endMs": 9200,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 10304.6,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 10304.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10359.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10459.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10559.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10660.2,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " differ?",
+            "startMs": 9400,
+            "endMs": 9600,
+            "deliveredStreamActive": true,
+            "eventType": "live-output-transcript",
+            "atMs": 10710.7,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": false,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 10710.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10759.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10860.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 10961.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11061.6,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11160.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11259.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11360.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11519.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11619.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11720.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11820,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 11920.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12020.5,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12121.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12219.8,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12320.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12420.1,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12523.7,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12620.4,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12721.9,
+            "phase": "startup"
+          },
+          {
+            "type": "audio",
+            "turnId": 1,
+            "bytes": 3200,
+            "sampleRate": 16000,
+            "atMs": 12821,
+            "phase": "startup"
+          },
+          {
+            "type": "transcript",
+            "role": "assistant",
+            "text": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "final": true,
+            "turnId": 1,
+            "source": "gpt-live-spoken",
+            "atMs": 12862,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "matched": true,
+            "actualCharacters": 137,
+            "approvedCharacters": 137,
+            "audioBinding": "active-stream-only-not-provider-turn-id",
+            "eventType": "live-speech-fidelity",
+            "atMs": 12862.1,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "heuristic": "output-quiet-and-exact-transcript",
+            "quietMs": 1500,
+            "confirmedByProvider": false,
+            "transcript": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+            "approvedText": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ? ",
+            "matched": true,
+            "eventType": "live-speech-end",
+            "atMs": 12862.2,
+            "phase": "startup"
+          },
+          {
+            "type": "audio-end",
+            "turnId": 1,
+            "approx": true,
+            "reason": "silence-heuristic",
+            "atMs": 12862.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 12862.2,
+            "phase": "startup"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": true,
+            "busy": false,
+            "suggested": false,
+            "reason": "ready",
+            "atMs": 12956.6,
+            "phase": "startup"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " Please",
+            "startMs": 13400,
+            "endMs": 13600,
+            "eventType": "live-input-transcript",
+            "atMs": 14554.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "interrupt",
+            "atMs": 14554.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "state",
+            "state": "listening",
+            "atMs": 14554.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 14554.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please",
+            "final": false,
+            "turnId": 2,
+            "atMs": 14554.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 14554.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " ask",
+            "startMs": 13600,
+            "endMs": 13800,
+            "eventType": "live-input-transcript",
+            "atMs": 14744,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask",
+            "final": false,
+            "turnId": 2,
+            "atMs": 14744,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 14744,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " me the",
+            "startMs": 13800,
+            "endMs": 14000,
+            "eventType": "live-input-transcript",
+            "atMs": 14887,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask me the",
+            "final": false,
+            "turnId": 2,
+            "atMs": 14887,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 14887,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " membrane",
+            "startMs": 14400,
+            "endMs": 14600,
+            "eventType": "live-input-transcript",
+            "atMs": 15498.4,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask me the membrane",
+            "final": false,
+            "turnId": 2,
+            "atMs": 15498.4,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 15498.5,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " transport",
+            "startMs": 15000,
+            "endMs": 15200,
+            "eventType": "live-input-transcript",
+            "atMs": 16095.2,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask me the membrane transport",
+            "final": false,
+            "turnId": 2,
+            "atMs": 16095.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 16095.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " question",
+            "startMs": 15600,
+            "endMs": 15800,
+            "eventType": "live-input-transcript",
+            "atMs": 16853.6,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "transcript",
+            "role": "user",
+            "text": "Please ask me the membrane transport question",
+            "final": false,
+            "turnId": 2,
+            "atMs": 16853.6,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "hint-state",
+            "questionId": "a28eb85a-3ff0-4b6e-916c-4466e4eec5ba",
+            "remaining": 3,
+            "cooldownUntil": null,
+            "retryAfterMs": 0,
+            "available": false,
+            "busy": true,
+            "suggested": false,
+            "reason": "busy",
+            "atMs": 16853.6,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " Why is",
+            "startMs": 15600,
+            "endMs": 15800,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 16855.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " a cell",
+            "startMs": 15800,
+            "endMs": 16000,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 17035.5,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " membrane",
+            "startMs": 16200,
+            "endMs": 16400,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 17435,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " called",
+            "startMs": 16600,
+            "endMs": 16800,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 17829.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " a",
+            "startMs": 17000,
+            "endMs": 17200,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 18260.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " selective",
+            "startMs": 17200,
+            "endMs": 17400,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 18435.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " boundary,",
+            "startMs": 17600,
+            "endMs": 17800,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 18834.1,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " and",
+            "startMs": 18400,
+            "endMs": 18600,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 19640.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " how",
+            "startMs": 18800,
+            "endMs": 19000,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 20037.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " do passive",
+            "startMs": 19200,
+            "endMs": 19400,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 20443.7,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " and",
+            "startMs": 19800,
+            "endMs": 20000,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 21062.9,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " active",
+            "startMs": 20000,
+            "endMs": 20200,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 21262.3,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " transport",
+            "startMs": 20400,
+            "endMs": 20600,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 21586.8,
+            "phase": "canonical-question"
+          },
+          {
+            "type": "voice-debug",
+            "delta": " differ?",
+            "startMs": 20800,
+            "endMs": 21000,
+            "deliveredStreamActive": false,
+            "eventType": "live-output-transcript",
+            "atMs": 22002.9,
+            "phase": "canonical-question"
+          }
+        ],
+        "trials": [
+          {
+            "id": "canonical-question",
+            "expectedUserText": "Please ask me the membrane transport question.",
+            "status": "failed",
+            "startedAtMs": 13258,
+            "inputPcmBytes": 84706,
+            "sampleRate": 16000,
+            "pcmEndAtMs": 15905.3,
+            "energySpeechEndAtMs": 15718.9,
+            "error": "Timed out waiting for final assistant transcript and audio-end",
+            "committedUserMs": null,
+            "firstAssistantTextMs": null,
+            "firstAudioMs": null,
+            "finalAssistantTextMs": null,
+            "audioEndMs": null,
+            "energySpeechEndToCommitMs": null,
+            "energySpeechEndToFirstTextMs": null,
+            "energySpeechEndToFirstAudioMs": null,
+            "pcmEndToFirstAudioMs": null,
+            "commitToFirstAudioMs": null,
+            "outputAudioBytes": 0,
+            "outputAudioChunks": 0,
+            "userTranscripts": [],
+            "assistantTranscripts": [],
+            "actualSpokenTranscripts": [],
+            "firstUsefulAudioMs": null,
+            "usefulAudioAnnotation": "Not inferable from packet arrival alone; annotate aligned public transcript/audio before claiming a useful-answer latency.",
+            "outputOverlapsInput": false,
+            "estimatedPlaybackEndMs": 14554.1,
+            "finishedAtMs": 40908.2
+          }
+        ],
+        "startedAt": "2026-10-02T18:02:58.204Z",
+        "greetingEndMs": 12862.2,
+        "greetingPlaybackDrainMs": 13257.4,
+        "finishedAt": "2026-10-02T18:03:39.114Z",
+        "sessionElapsedMs": 40909.2,
+        "failure": null,
+        "receivedAudioBytes": 275200
+      },
+      "usage": {
+        "testId": "eaec6c75-adcd-4f80-b165-c4c7d7a4f4a8",
+        "trackingStartedAt": "2026-10-02T18:02:58.201Z",
+        "scope": "since-tracking-started",
+        "currency": "USD",
+        "totals": {
+          "requests": 3,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 3,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": 0.039290557333,
+          "estimatedRequests": 3,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": true,
+          "missingUsageRequests": 0,
+          "statusCounts": {
+            "completed": 3
+          },
+          "units": {
+            "sessionDurationMs": 40000,
+            "inputTokens": 5346,
+            "outputTokens": 240,
+            "cachedInputTokens": 2856,
+            "cacheWriteTokens": 1165,
+            "reasoningTokens": 52
+          },
+          "unitCoverage": {
+            "sessionDurationMs": 1,
+            "inputTokens": 2,
+            "outputTokens": 2,
+            "cachedInputTokens": 1,
+            "cacheWriteTokens": 1,
+            "reasoningTokens": 1
+          },
+          "estimateSources": [
+            {
+              "rateId": "openai-gpt-live-1-2026-10-02",
+              "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+              ]
+            },
+            {
+              "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+              "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Uses global processing rates; any regional processing premium is excluded.",
+                "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+              ]
+            },
+            {
+              "rateId": "typesafe-jev-1.13-2026-10-02",
+              "source": "https://docs.typesafe.ai/models",
+              "verifiedAt": "2026-10-02",
+              "notes": [
+                "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                "Jev is priced per input token; output tokens have no list-price charge."
+              ]
+            }
+          ]
+        },
+        "categories": [
+          {
+            "id": "jev",
+            "label": "Jev",
+            "requests": 1,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.000055524,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 1
+            },
+            "units": {
+              "inputTokens": 1322,
+              "outputTokens": 39
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "typesafe-jev-1.13-2026-10-02",
+                "source": "https://docs.typesafe.ai/models",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Jev is priced per input token; output tokens have no list-price charge."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "llm",
+            "label": "Thinking / LLM",
+            "requests": 1,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.0059017,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 1
+            },
+            "units": {
+              "inputTokens": 4024,
+              "outputTokens": 201,
+              "cachedInputTokens": 2856,
+              "cacheWriteTokens": 1165,
+              "reasoningTokens": 52
+            },
+            "unitCoverage": {
+              "inputTokens": 1,
+              "outputTokens": 1,
+              "cachedInputTokens": 1,
+              "cacheWriteTokens": 1,
+              "reasoningTokens": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+                "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses global processing rates; any regional processing premium is excluded.",
+                  "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Voice",
+            "requests": 1,
+            "pendingRequests": 0,
+            "reportedCostRequests": 0,
+            "unpricedRequests": 1,
+            "providerReportedUsd": null,
+            "exactUsd": null,
+            "complete": false,
+            "estimatedUsd": 0.033333333333,
+            "estimatedRequests": 1,
+            "partialEstimatedRequests": 0,
+            "unestimatedRequests": 0,
+            "estimateComplete": true,
+            "missingUsageRequests": 0,
+            "statusCounts": {
+              "completed": 1
+            },
+            "units": {
+              "sessionDurationMs": 40000
+            },
+            "unitCoverage": {
+              "sessionDurationMs": 1
+            },
+            "estimateSources": [
+              {
+                "rateId": "openai-gpt-live-1-2026-10-02",
+                "source": "https://developers.openai.com/api/docs/models/gpt-live-1",
+                "verifiedAt": "2026-10-02",
+                "notes": [
+                  "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+                  "Uses provider-reported session seconds including silence; backend model/tool charges are recorded separately."
+                ]
+              }
+            ]
+          }
+        ],
+        "unattributed": {
+          "requests": 0,
+          "pendingRequests": 0,
+          "reportedCostRequests": 0,
+          "unpricedRequests": 0,
+          "providerReportedUsd": null,
+          "exactUsd": null,
+          "complete": false,
+          "estimatedUsd": null,
+          "estimatedRequests": 0,
+          "partialEstimatedRequests": 0,
+          "unestimatedRequests": 0,
+          "estimateComplete": false,
+          "missingUsageRequests": 0,
+          "statusCounts": {},
+          "units": {},
+          "unitCoverage": {},
+          "estimateSources": []
+        },
+        "storage": {
+          "status": "memory",
+          "lastSavedAt": null,
+          "pendingWrite": false
+        },
+        "notes": [
+          "Only requests tracked since recording began are included; older activity cannot be reconstructed.",
+          "Billed USD is shown only when a provider reports a charge. Estimates apply documented API list prices to measured usage; they exclude account credits, subscription allowances, discounts, tax and unreported usage.",
+          "Jev responses report token counts without a dollar charge field.",
+          "Codex signed-in plan token counts are usage measurements, not an OpenAI API bill. OpenAI API responses also report tokens rather than the final account charge.",
+          "Voice characters and PCM duration measure submitted text and transmitted or generated audio; they do not verify playback or billed duration. Unverified model rates and missing measurements remain unestimated."
+        ]
+      },
+      "spokenFidelity": [
+        {
+          "phase": "startup",
+          "approved": "Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "providerTranscript": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "transcriptWhileDeliveryActive": " Let’s start with membrane transport. Why is a cell membrane called a selective boundary, and how do passive and active transport differ?",
+          "exactReportedTextMatch": true,
+          "approximateAudioEnd": true,
+          "limitation": "Provider text deltas and audio packets have separate arrival times. Active-stream membership is an exposure warning, not proof that every corresponding sound was played. Exact normalized match is a fidelity check, not a semantic grading score."
+        }
+      ],
+      "qualityStatus": "not-semantically-reviewed"
+    }
+  ],
+  "method": "Matched synthetic 16 kHz PCM replayed at real-time cadence into isolated production voice orchestration. Startup speech is drained before measured requests. No microphone/speaker, no saved audio, no human learning claim. First received PCM can be filler; useful academic answer audio latency is unmeasured. GPT-Live audio-end may be a silence heuristic. Stop for manual review at the first native voice/backend text mismatch.",
+  "ceilings": {
+    "sessions": 4,
+    "sessionSeconds": 60,
+    "openaiBackendRequests": 40,
+    "jevRequests": 72
+  },
+  "sources": [
+    {
+      "id": "canonical-question",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 84706,
+      "sha256": "37949648177259c46843599525f2c0b3673ddba36ed99df3be6e667362af4165",
+      "durationMs": 2647.0625,
+      "energySpeechEndMs": 2460,
+      "generationCharacters": 46
+    },
+    {
+      "id": "unauthorized-hint",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 69846,
+      "sha256": "e8f68707c62015cbba963b22bfe47ebefc2142d6356a5c9f4cc9a20ead5233b8",
+      "durationMs": 2182.6875,
+      "energySpeechEndMs": 1940,
+      "generationCharacters": 36
+    },
+    {
+      "id": "problem-switch",
+      "model": "eleven_flash_v2_5",
+      "pcmBytes": 178330,
+      "sha256": "ca0b0d68c7aecad697b9aa67d07a300542ad264fb7d7e63ad65202519c949a53",
+      "durationMs": 5572.8125,
+      "energySpeechEndMs": 5280,
+      "generationCharacters": 82
+    }
+  ],
+  "providerRequests": {
+    "openai": 6,
+    "jev": 8
+  },
+  "models": {
+    "tutor": "gpt-5.6-terra",
+    "gptLive": "gpt-live-1",
+    "stt": "scribe_v2_realtime",
+    "tts": "eleven_v4_turbo"
+  },
+  "stoppedEarly": "Stopped on the first failed session. No automatic paid retry.",
+  "summary": [
+    {
+      "arm": "eleven",
+      "sessions": 1,
+      "completed": 1,
+      "firstAudio": {
+        "n": 3,
+        "median": 2887.4,
+        "minimum": 1180.4,
+        "maximum": 3012.4
+      },
+      "firstText": {
+        "n": 3,
+        "median": 2762.6,
+        "minimum": 948.2,
+        "maximum": 2890.5
+      },
+      "estimatedUsd": 0.027431019604,
+      "usageComplete": false
+    },
+    {
+      "arm": "gpt-live",
+      "sessions": 1,
+      "completed": 0,
+      "firstAudio": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "firstText": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null
+      },
+      "estimatedUsd": 0.039290557333,
+      "usageComplete": true
+    }
+  ],
+  "elevenBudget": {
+    "name": "gpt-live-compare",
+    "provider": "ElevenLabs",
+    "maximumCredits": 14000,
+    "maximumProviderRequests": 24,
+    "before": {
+      "used": 3115,
+      "limit": 121009,
+      "remaining": 117894
+    },
+    "reservedCredits": 6552,
+    "providerRequests": 9,
+    "ttsCharacters": 552,
+    "sttReservedSeconds": 60,
+    "modelCreditCeilings": {
+      "eleven_v4_turbo": 1,
+      "eleven_flash_v2_5": 1
+    },
+    "sttCreditsPerSecondReservation": 100,
+    "reservations": [
+      {
+        "credits": 46,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 46
+      },
+      {
+        "credits": 36,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 36
+      },
+      {
+        "credits": 82,
+        "kind": "tts",
+        "model": "eleven_flash_v2_5",
+        "characters": 82
+      },
+      {
+        "credits": 6000,
+        "kind": "stt-session",
+        "seconds": 60
+      },
+      {
+        "credits": 149,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 149
+      },
+      {
+        "credits": 100,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 100
+      },
+      {
+        "credits": 60,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 60
+      },
+      {
+        "credits": 79,
+        "kind": "tts",
+        "model": "eleven_v4_turbo",
+        "characters": 79
+      }
+    ],
+    "limitation": "This enforces a local reservation ceiling using verified character pricing for premade voices and deliberately conservative STT duration reservations. Provider accounting can lag, and account balance changes may include other activity. It is not an account-wide billing limit.",
+    "after": {
+      "used": 3201,
+      "limit": 121009,
+      "remaining": 117808
+    },
+    "observedAccountCreditDelta": 86
+  },
+  "finishedAt": "2026-10-02T18:03:42.383Z"
+}

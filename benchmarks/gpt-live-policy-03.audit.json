@@ -1,0 +1,98 @@
+{
+  "source": "benchmarks/gpt-live-policy-03.json",
+  "sourceSha256": "6761cbb0d631999e7675e525937bc71e11421e49ba2bbf54b277b5f353989dc8",
+  "status": "incomplete",
+  "environment": null,
+  "timingEnvironment": {
+    "inputChunkMs": 100,
+    "continuousSilenceChunkMs": 100,
+    "browserMicrophoneBatchingTested": false,
+    "maxEventLoopLagMs": 3,
+    "valid": true
+  },
+  "validForComparativeLatency": false,
+  "method": {
+    "inputPcmSampleRate": 16000,
+    "inputChunkMs": 100,
+    "continuousSilenceChunkMs": 100,
+    "simulatedPlaybackDrain": true,
+    "browserMicrophoneBatchingTested": false,
+    "physicalPlaybackTested": false,
+    "firstUsefulAudioMeasured": false,
+    "pairedPcm": "One in-memory synthetic clip per scenario reused across all arms within this report; original per-scenario hashes are in the source report.",
+    "normalizerSha256": "54cc0ce74e55338893d3b77b762886bbf92aac5e1d1da65a791e10f351db2b69"
+  },
+  "requestedSessions": 4,
+  "completedSessions": 0,
+  "phases": [
+    {
+      "arm": "eleven",
+      "index": 1,
+      "status": "failed",
+      "error": "Microphone audio is arriving faster than the connection can send it.",
+      "trialFailures": [],
+      "fidelity": [],
+      "spokenFidelityEvents": [],
+      "applicationFallbacks": [],
+      "modelDelegations": 0,
+      "finalHints": {
+        "type": "hint-state",
+        "questionId": null,
+        "remaining": 0,
+        "cooldownUntil": null,
+        "retryAfterMs": 0,
+        "available": false,
+        "busy": true,
+        "suggested": false,
+        "reason": "no-question",
+        "atMs": 227,
+        "phase": "startup"
+      },
+      "finalMastery": {
+        "type": "mastery",
+        "mastery": {
+          "overall": 0,
+          "topics": [
+            {
+              "id": "ab81b36a0fe1c5e22af968d9",
+              "title": "Cell transport",
+              "score": 0,
+              "mastered": false
+            },
+            {
+              "id": "2698bf943df528125ed0a836",
+              "title": "Equations",
+              "score": 0,
+              "mastered": false
+            }
+          ]
+        },
+        "atMs": 227,
+        "phase": "startup"
+      },
+      "finalPractice": {
+        "type": "practice-state",
+        "current": null,
+        "recent": [],
+        "atMs": 227,
+        "phase": "startup"
+      },
+      "boards": [],
+      "deliveredWords": [],
+      "recognizedWords": [],
+      "sessionElapsedMs": 20077.9,
+      "costEstimateUsd": 0.005563333333,
+      "estimateComplete": false,
+      "missingUsageRequests": 1,
+      "liveProviderSeconds": 0
+    }
+  ],
+  "byScenario": [],
+  "limitations": [
+    "Tiny exploratory sample; no stable p95, no learning-outcome claim.",
+    "Comparative latency requires successful paired trials and reviewed spoken fidelity; failures stay in the denominator.",
+    "Backend captions and native spoken transcripts are separate evidence.",
+    "A normalizer match is not an independent semantic quality score; public text remains reviewable.",
+    "Application cost estimates exclude unpriced source-synthesis requests and any missing provider counters; they are not billed account charges."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "width": 680,
+  "height": 380,
+  "data": {
+    "values": [
+      {
+        "id": "matrix-cell-0-0",
+        "row": "U",
+        "column": "L",
+        "payoff": "7,7,0"
+      },
+      {
+        "id": "matrix-cell-0-1",
+        "row": "U",
+        "column": "R",
+        "payoff": "1,6,1"
+      },
+      {
+        "id": "matrix-cell-1-0",
+        "row": "D",
+        "column": "L",
+        "payoff": "6,1,1"
+      },
+      {
+        "id": "matrix-cell-1-1",
+        "row": "D",
+        "column": "R",
+        "payoff": "0,0,1"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "column",
+      "type": "nominal",
+      "sort": [
+        "L",
+        "R"
+      ],
+      "axis": {
+        "orient": "top"
+      }
+    },
+    "y": {
+      "field": "row",
+      "type": "nominal",
+      "sort": [
+        "U",
+        "D"
+      ]
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "fill": "white",
+        "stroke": "#243544"
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "id"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 18,
+        "color": "#243544"
+      },
+      "encoding": {
+        "text": {
+          "field": "payoff"
+        },
+        "tooltip": [
+          {
+            "field": "id"
+          }
+        ]
+      }
+    }
+  ]
+}

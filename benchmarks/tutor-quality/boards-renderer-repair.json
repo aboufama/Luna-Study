@@ -1,0 +1,31 @@
+{
+  "sourceArtifact": "benchmarks/tutor-quality/live-adaptive-repaired.session.json",
+  "sourceSha256": "a90c42f3eeb6e67364c7e3cf0f0da2a35ac64afbef45ab5e7a6585c2bd24bca2",
+  "kind": "rejected-live-candidate-renderer-repair",
+  "runs": [
+    {
+      "scenario": "math-long-chain",
+      "board": {
+        "title": "Equation steps",
+        "revision": "b1bfed53-8185-4837-8d8f-6c8438c57e4e",
+        "blocks": [
+          {
+            "id": "steps",
+            "type": "latex",
+            "content": "5w-10=20\\quad\\xrightarrow{+10\\text{ to both sides}}\\quad5w=30\\quad\\xrightarrow{\\div5\\text{ on both sides}}\\quad w=6"
+          },
+          {
+            "id": "reason",
+            "type": "text",
+            "content": "The same operation on both sides preserves equality."
+          }
+        ]
+      },
+      "result": {
+        "reply": "Correct. Adding 10 to both sides gives 5w = 30, then dividing both sides by 5 gives w = 6. Your reason is right too: equal operations preserve the equation because both sides change identically. Want to return to cell transport next?"
+      },
+      "source": "Exact saved candidate from the repaired adaptive session. The live target-match gate rejected every candidate in that session; this board was never shown live. Its original long equation clipped at the right edge in an offline render. The current renderer wraps complete steps at arrows without changing any source math.",
+      "request": "My answer is: Add 10 to both sides to get 5w = 30, then divide both sides by 5 to get w = 6. Equal operations preserve equality."
+    }
+  ]
+}

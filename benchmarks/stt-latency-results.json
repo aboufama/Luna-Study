@@ -1,0 +1,161 @@
+{
+  "startedAt": "2026-10-02T03:45:11.857Z",
+  "syntheticPhrase": "What is the difference between active and passive transport?",
+  "source": {
+    "model": "eleven_flash_v2_5",
+    "format": "pcm_16000",
+    "sampleRate": 16000,
+    "generationRequests": 1,
+    "audioSaved": false,
+    "microphoneUsed": false,
+    "playbackUsed": false,
+    "pcmBytes": 101054,
+    "durationMs": 3157.9,
+    "estimatedSpeechEndMs": 2920,
+    "generationMs": 435.6
+  },
+  "method": {
+    "trials": [
+      1,
+      0.5,
+      1,
+      0.5
+    ],
+    "chunkMs": 100,
+    "timeoutMs": 15000,
+    "model": "scribe_v2_realtime",
+    "commitStrategy": "vad",
+    "vadThreshold": 0.4,
+    "minSpeechDurationMs": 100,
+    "minSilenceDurationMs": 100,
+    "description": "The same generated PCM is sent at real-time pace in 100 ms chunks, followed by zero-valued silence. No manual commit is sent. PCM-end latency starts when the final PCM chunk is sent; speech-end latency uses the final 10 ms PCM frame with RMS above 160/32768, adjusted for trailing audio in its transmission chunk. These are network/provider timings, not microphone-to-speaker timings.",
+    "documentedVadSilenceBoundsSeconds": [
+      0.3,
+      3
+    ],
+    "boundsSource": "https://ui.elevenlabs.io/docs/components/speech-input",
+    "endpointSource": "https://elevenlabs.io/docs/api-reference/speech-to-text/v-1-speech-to-text-realtime",
+    "chunkSource": "https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/realtime/transcripts-and-commit-strategies"
+  },
+  "runs": [
+    {
+      "trial": 1,
+      "vadSilenceSeconds": 1,
+      "accepted": true,
+      "status": "committed",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 32000,
+      "commits": [
+        {
+          "atMs": 4308.4,
+          "text": "What is the difference between active and passive transport?"
+        }
+      ],
+      "partialCount": 4,
+      "readyMs": 97,
+      "transcript": "What is the difference between active and passive transport?",
+      "exactWords": true,
+      "wordErrorRate": 0,
+      "sessionElapsedMs": 4309.1,
+      "pcmEndMs": 3255.2,
+      "estimatedSpeechEndMs": 3017.1,
+      "firstPartialMs": 2310.8,
+      "commitAfterPcmEndMs": 1053.2,
+      "commitAfterEstimatedSpeechEndMs": 1291.3
+    },
+    {
+      "trial": 2,
+      "vadSilenceSeconds": 0.5,
+      "accepted": true,
+      "status": "committed",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 19200,
+      "commits": [
+        {
+          "atMs": 3936.7,
+          "text": "What is the difference between active and passive transport?"
+        }
+      ],
+      "partialCount": 3,
+      "readyMs": 93.5,
+      "transcript": "What is the difference between active and passive transport?",
+      "exactWords": true,
+      "wordErrorRate": 0,
+      "sessionElapsedMs": 3936.8,
+      "pcmEndMs": 3251.6,
+      "estimatedSpeechEndMs": 3013.5,
+      "firstPartialMs": 2312.9,
+      "commitAfterPcmEndMs": 685.1,
+      "commitAfterEstimatedSpeechEndMs": 923.2
+    },
+    {
+      "trial": 3,
+      "vadSilenceSeconds": 1,
+      "accepted": true,
+      "status": "committed",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 32000,
+      "commits": [
+        {
+          "atMs": 4340.2,
+          "text": "What is the difference between active and passive transport?"
+        }
+      ],
+      "partialCount": 4,
+      "readyMs": 107.1,
+      "transcript": "What is the difference between active and passive transport?",
+      "exactWords": true,
+      "wordErrorRate": 0,
+      "sessionElapsedMs": 4340.4,
+      "pcmEndMs": 3265.5,
+      "estimatedSpeechEndMs": 3028.1,
+      "firstPartialMs": 2423.1,
+      "commitAfterPcmEndMs": 1074.7,
+      "commitAfterEstimatedSpeechEndMs": 1312.1
+    },
+    {
+      "trial": 4,
+      "vadSilenceSeconds": 0.5,
+      "accepted": true,
+      "status": "committed",
+      "audioBytesSent": 101054,
+      "silenceBytesSent": 22400,
+      "commits": [
+        {
+          "atMs": 3983,
+          "text": "What is the difference between active and passive transport?"
+        }
+      ],
+      "partialCount": 3,
+      "readyMs": 96.2,
+      "transcript": "What is the difference between active and passive transport?",
+      "exactWords": true,
+      "wordErrorRate": 0,
+      "sessionElapsedMs": 3983.1,
+      "pcmEndMs": 3254.8,
+      "estimatedSpeechEndMs": 3016.6,
+      "firstPartialMs": 2385,
+      "commitAfterPcmEndMs": 728.2,
+      "commitAfterEstimatedSpeechEndMs": 966.4
+    }
+  ],
+  "summary": [
+    {
+      "vadSilenceSeconds": 1,
+      "acceptedRuns": 2,
+      "exactWordRuns": 2,
+      "measuredRuns": 2,
+      "meanCommitAfterPcmEndMs": 1064,
+      "meanCommitAfterEstimatedSpeechEndMs": 1301.7
+    },
+    {
+      "vadSilenceSeconds": 0.5,
+      "acceptedRuns": 2,
+      "exactWordRuns": 2,
+      "measuredRuns": 2,
+      "meanCommitAfterPcmEndMs": 706.7,
+      "meanCommitAfterEstimatedSpeechEndMs": 944.8
+    }
+  ],
+  "finishedAt": "2026-10-02T03:45:28.871Z"
+}

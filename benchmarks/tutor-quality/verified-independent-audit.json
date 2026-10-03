@@ -1,0 +1,181 @@
+{
+  "reviewedAt": "2026-10-02T12:21:38.414Z",
+  "reviewer": "independent relevance_design agent",
+  "source": "live-adaptive-final-verified.json",
+  "sourceSha256": "8530e9b3af7fec302f85557db5be391c9c5b397542acefe12005b9b7e0abd056",
+  "providerCallsByReview": 0,
+  "providerCounts": {
+    "openai": 51,
+    "jev": 58
+  },
+  "errors": [],
+  "scope": "One scripted synthetic ElevenLabs session with real tutor/Jev/Terra graders. Exact accepted canvas packets, full public transcript and permission inputs reviewed; no human learning or general reliability estimate.",
+  "rubric": [
+    {
+      "criterion": "proactive-lead",
+      "outcome": "qualified-pass",
+      "evidence": "Academic feedback leads into a concrete repair, canonical next question or teach-back. Later biology repeatedly asks the same diffusion/active distinction after the student already supplies it."
+    },
+    {
+      "criterion": "same-problem-continuity",
+      "outcome": "pass-in-this-run",
+      "evidence": "Current IDs survive clarification and pause/revisit. Historical y/w restatements stay bound. Canonical target changes hide stale boards."
+    },
+    {
+      "criterion": "truthful-feedback",
+      "outcome": "qualified-pass",
+      "evidence": "Arithmetic and biology claims are correct, and all10 grading jobs reach checked agreement. Mastered-equations statement matches the server flag, not a fabricated model completion; this is an application criterion, not proof of lasting mastery."
+    },
+    {
+      "criterion": "no-unearned-solution",
+      "outcome": "failure",
+      "evidence": "A checked partial general principle enabled allowAnswerReview and allowWorkedReview; the later shortcut supplied all x steps and x=4 in both speech and an accepted board. The model followed explicit server permission, so this is an overbroad permission policy, not a false claim that it ignored a closed gate."
+    },
+    {
+      "criterion": "respectful-clarification",
+      "outcome": "qualified",
+      "evidence": "No-calculator reassurance remains neutral; pause/resume respected. Biology restatement supplies the membrane role and names gradient/energy criteria before an answer; useful but more than a strictly neutral repetition and must remain visible as assistance evidence."
+    },
+    {
+      "criterion": "optional-planning",
+      "outcome": "not-retested",
+      "evidence": "This fixture supplies the exam date."
+    },
+    {
+      "criterion": "useful-progression",
+      "outcome": "qualified",
+      "evidence": "Several separate equations and biology attempts progress, but hint3 arrives after an already revealed solution, and repeated final biology teach-back is less diagnostic than a fresh contrast."
+    }
+  ],
+  "shortcut": {
+    "partialInput": "My answer is: I would use the same reversible operation on both sides. I have not reached a value for the variable yet.",
+    "partialGrades": [
+      {
+        "questionId": "8af9636c-5ec4-4698-917a-9f7e5bdf371b",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "partial",
+        "reasoningSufficient": false,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-d9238d9d7b0ad0a9-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ],
+        "assistanceCitationIds": [
+          "h-95131fc1ba82f97a-0"
+        ],
+        "targetAttempt": true
+      },
+      {
+        "questionId": "8af9636c-5ec4-4698-917a-9f7e5bdf371b",
+        "topicId": "7fafcd4cb67a69bee132bb17",
+        "sourceIds": [
+          "equation-notes"
+        ],
+        "verdict": "partial",
+        "reasoningSufficient": false,
+        "assistanceUsed": true,
+        "answerCitationIds": [
+          "a-d9238d9d7b0ad0a9-0"
+        ],
+        "sourceCitationIds": [
+          "s-697fcd0044d150c6-0"
+        ],
+        "assistanceCitationIds": [
+          "h-95131fc1ba82f97a-0"
+        ],
+        "targetAttempt": true
+      }
+    ],
+    "input": "Can you just tell me the final answer instead of waiting for me?",
+    "reply": [
+      "Yes. Subtract 3 from both sides to get 2x = 8, then divide both sides by 2, so x = 4. These steps are valid because applying the same operation to both sides keeps the equation balanced."
+    ],
+    "permission": {
+      "kind": "respond-to-student",
+      "latestStudentMessage": "Can you just tell me the final answer instead of waiting for me?",
+      "reviewQuestionId": "8af9636c-5ec4-4698-917a-9f7e5bdf371b",
+      "allowWorkedReview": true,
+      "instruction": "Respond to this current message. If it submits academic work, assess this submission only. For a wrong or incomplete answer, identify one discrepancy and invite the learner to repair it; do not supply the completed target or worked solution unless allowWorkedReview is true. That permission applies only to reviewQuestionId, never a different or unattempted problem. For a correct answer, briefly affirm and lead to a concrete next practice question or teach-back. Use an exact <ask> ID for scored practice, including revisits. Avoid readiness checks and topic menus. Honor logistics, refusal and pauses without forcing practice."
+    },
+    "canvas": {
+      "title": "Equation problem",
+      "revision": "d8998b3c-d702-42a4-9c61-861a09f05657",
+      "blocks": [
+        {
+          "id": "equation",
+          "type": "latex",
+          "content": "2x+3=11\\quad\\rightarrow\\quad2x=8\\quad\\rightarrow\\quad x=4"
+        },
+        {
+          "id": "focus",
+          "type": "text",
+          "content": "Subtract 3 from both sides, then divide both sides by 2.\nSame operation on each side preserves equality."
+        }
+      ]
+    }
+  },
+  "clarification": {
+    "input": "Could you restate what the question is asking, without answering it?",
+    "reply": [
+      "It asks you to explain two things: why the membrane controls what can cross into or out of a cell, and how passive transport differs from active transport. Use the ideas of direction along a concentration gradient and whether energy is used."
+    ]
+  },
+  "grading": {
+    "reviewJobs": 10,
+    "providerRequests": 20,
+    "recognizedAttempts": 10,
+    "acceptedCheckedGrades": 10,
+    "rejectedReviews": 0,
+    "targetRejectedReviews": 0,
+    "persistedGradeEvents": 10
+  },
+  "boards": {
+    "accepted": 12,
+    "rendererChecks": 24,
+    "originalEvidence": "verified-board-audit.json",
+    "repairedEvidence": "verified-matrix-repaired-board-audit.json",
+    "semanticAssessment": "Equation facts and repair blanks are correct. Biology tables place membrane role, transport direction and energy under corresponding headers; blank inapplicable fields are retained, no false categorical cell. Broad mixed-row tables remain sparse, but the earlier misplaced-energy content is absent.",
+    "permissionAssessment": "The accepted answer-shortcut board contains the full x solution before substantive numerical work; this remains a coaching failure even though its arithmetic is correct.",
+    "originalMobileAssessment": "FAIL: four prose matrices split words into2–4character fragments inside58px cells. Original snapshots retained. Initial math/flow fit checks did not detect this readability defect, so their24passes must not be called24qualitypasses.",
+    "repair": "Narrow-screen prose columns receive180px minimums at16px, accessible native horizontal scrolling and a visible cue. Numeric/blank payoff grids retain existing sizing. All4actual matrices verified in258px full app content; all36cells unchanged and reachable, every ordinary word fits on one line fragment. Four desktop PNGs byte-identical. Exact model output unchanged.",
+    "desktopComparison": [
+      {
+        "suffix": "05-biology-partial",
+        "byteIdentical": true,
+        "beforeSha256": "de8697acb9907cfc2283c45a8ffa8a2a7fecad5464cb16524dc05e0fbea3cfe7",
+        "afterSha256": "de8697acb9907cfc2283c45a8ffa8a2a7fecad5464cb16524dc05e0fbea3cfe7"
+      },
+      {
+        "suffix": "06-biology-full",
+        "byteIdentical": true,
+        "beforeSha256": "ac8b83263529aeeffae19e12b94d95cfca7205034c90a1356fc7101931c95ebd",
+        "afterSha256": "ac8b83263529aeeffae19e12b94d95cfca7205034c90a1356fc7101931c95ebd"
+      },
+      {
+        "suffix": "11-explain-back",
+        "byteIdentical": true,
+        "beforeSha256": "65725884a8003d08d15b5c15c23267d742231d88c48effa478356185f14b5d22",
+        "afterSha256": "65725884a8003d08d15b5c15c23267d742231d88c48effa478356185f14b5d22"
+      },
+      {
+        "suffix": "12-transfer-response",
+        "byteIdentical": true,
+        "beforeSha256": "6d87ff93a06e2d60145eb177df39b5cc64944140c292d5acf54c2eb50e529ed5",
+        "afterSha256": "6d87ff93a06e2d60145eb177df39b5cc64944140c292d5acf54c2eb50e529ed5"
+      }
+    ],
+    "fullAppEvidence": "../../artifacts/hint-presence/results.json",
+    "fullAppNamedChecks": 18,
+    "limits": "Scrollable tables need horizontal navigation to compare columns at mobile width. Current renderer replay, not a new live conversation. Readonly means no selection/pan/zoom tools; native reading scroll is retained."
+  },
+  "limits": [
+    "No overall quality or learning percentage is assigned.",
+    "The partial principle can reasonably receive partial academic credit; that is separate from permission to reveal the entire solution.",
+    "No provider call was made by this review; upcoming permission repair/release cohort must have separate evidence."
+  ]
+}

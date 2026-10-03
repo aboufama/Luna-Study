@@ -1,0 +1,689 @@
+{
+  "providerCalls": 21,
+  "model": "gpt-5.6-terra",
+  "matrix": [
+    {
+      "condition": "baseline",
+      "requests": 3,
+      "firstSpokenMs": 1124.2,
+      "firstSyntheticAudioMs": 1225.3,
+      "boardReadyMs": 2418.2,
+      "outputTokens": 228,
+      "wireBytes": 529
+    },
+    {
+      "condition": "compact",
+      "requests": 3,
+      "firstSpokenMs": 1181.7,
+      "firstSyntheticAudioMs": 1282,
+      "boardReadyMs": 1768,
+      "outputTokens": 187,
+      "wireBytes": 313
+    }
+  ],
+  "finalSceneCalls": 8,
+  "finalSceneBoardsAccepted": 8,
+  "finalSceneSourceContentCorrect": 8,
+  "finalSceneRetainedScene": 7,
+  "finalPatchCalls": 2,
+  "finalPatchAllChecks": 2,
+  "manual": [
+    {
+      "id": "biology-cell-production-final-1",
+      "rawSha256": "3fd434a7b8af046d96cd93f47bcf5c251c0dcd59ea95bd5692e15d87fe376b6f",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "Membrane/cytoplasm/nucleus containment, three labels and requested note are correct and readable; some leaders stop short of the shape boundary."
+    },
+    {
+      "id": "algebra-steps-production-final-1",
+      "rawSha256": "ce6c31ada9d304081361def396b5a608f54b56d13a87e3ca1172bfa731ff3e76",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "All three equations, both operation annotations and boxed final answer are correct. Round 2 uses ordinary text/LaTeX blocks instead of a retained scene, which is supported."
+    },
+    {
+      "id": "physics-forces-production-final-1",
+      "rawSha256": "d6972f3626326f291ed9815dfca0f488b44ba35d34d4ff2051b45a6ca3bf6cb7",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "All four directions and both equations are correct. The second equation requires normal board scrolling. Round 2 has a force stroke through the generic block label, a remaining visual polish issue."
+    },
+    {
+      "id": "grammar-annotation-production-final-1",
+      "rawSha256": "8e25e9b2862a50906db8b2996eccf394d354c8cf679c0347eea4117a89538daf",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "Exact sentence, clause labels and quote zones are correct. Model-authored underline endpoints are approximate and do not align exactly with text spans, including after trusted left alignment repair. See grammar-geometry-audit.json."
+    },
+    {
+      "id": "biology-cell-production-final-2",
+      "rawSha256": "30419408736eca75f5bcc1a64eb37646875b25e34724531c4b5d4cd45596bca7",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "Membrane/cytoplasm/nucleus containment, three labels and requested note are correct and readable; some leaders stop short of the shape boundary."
+    },
+    {
+      "id": "algebra-steps-production-final-2",
+      "rawSha256": "2acab58dd41352d68659232a3fa900a890aeb5cd616e2d0856bba50cb049abc5",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "All three equations, both operation annotations and boxed final answer are correct. Round 2 uses ordinary text/LaTeX blocks instead of a retained scene, which is supported."
+    },
+    {
+      "id": "physics-forces-production-final-2",
+      "rawSha256": "8c07747aca510dfc94daad408d356060ce6b32541f5f1fa94f325c6a5c7d84ce",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "All four directions and both equations are correct. The second equation requires normal board scrolling. Round 2 has a force stroke through the generic block label, a remaining visual polish issue."
+    },
+    {
+      "id": "grammar-annotation-production-final-2",
+      "rawSha256": "a4f386f04872e2e2f4b07329dfa49daac0ed25824974a1f7c8e87644c78e21e8",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "Exact sentence, clause labels and quote zones are correct. Model-authored underline endpoints are approximate and do not align exactly with text spans, including after trusted left alignment repair. See grammar-geometry-audit.json."
+    },
+    {
+      "id": "object-patch-production-final-1",
+      "rawSha256": "1c9520f0e773e62238cfd3f676f401e26e0a600a421d009c3228118c1215483c",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "Exactly one existing rectangle moved down 12px; all other object IDs/content and both equation blocks were retained. This tests literal object editing, not the physical plausibility of moving a block through its original surface."
+    },
+    {
+      "id": "object-patch-production-final-2",
+      "rawSha256": "dd7974671be099777b587c83b85ced5ca8868b19cefd1216b1e8a1fab7942cae",
+      "sourceContentCorrect": true,
+      "acceptedBoard": true,
+      "review": "Exactly one existing rectangle moved down 12px; all other object IDs/content and both equation blocks were retained. This tests literal object editing, not the physical plausibility of moving a block through its original surface."
+    }
+  ],
+  "usage": [
+    {
+      "id": "blank-grid-baseline-1",
+      "raw": {
+        "input_tokens": 2705,
+        "input_tokens_details": {
+          "cache_write_tokens": 2702,
+          "cached_tokens": 0
+        },
+        "output_tokens": 138,
+        "output_tokens_details": {
+          "reasoning_tokens": 37
+        },
+        "total_tokens": 2843
+      },
+      "estimate": {
+        "usd": 0.008417,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "blank-grid-compact-1",
+      "raw": {
+        "input_tokens": 2725,
+        "input_tokens_details": {
+          "cache_write_tokens": 2722,
+          "cached_tokens": 0
+        },
+        "output_tokens": 81,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 2806
+      },
+      "estimate": {
+        "usd": 0.007783,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "blank-grid-compact-2",
+      "raw": {
+        "input_tokens": 2725,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2722
+        },
+        "output_tokens": 187,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 2912
+      },
+      "estimate": {
+        "usd": 0.0027944,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "blank-grid-baseline-2",
+      "raw": {
+        "input_tokens": 2705,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2702
+        },
+        "output_tokens": 228,
+        "output_tokens_details": {
+          "reasoning_tokens": 19
+        },
+        "total_tokens": 2933
+      },
+      "estimate": {
+        "usd": 0.0032824,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "blank-grid-baseline-3",
+      "raw": {
+        "input_tokens": 2705,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2702
+        },
+        "output_tokens": 235,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 2940
+      },
+      "estimate": {
+        "usd": 0.0033664,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "blank-grid-compact-3",
+      "raw": {
+        "input_tokens": 2725,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2722
+        },
+        "output_tokens": 187,
+        "output_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "total_tokens": 2912
+      },
+      "estimate": {
+        "usd": 0.0027944,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "biology-cell-production-1",
+      "raw": {
+        "input_tokens": 2591,
+        "input_tokens_details": {
+          "cache_write_tokens": 2588,
+          "cached_tokens": 0
+        },
+        "output_tokens": 601,
+        "output_tokens_details": {
+          "reasoning_tokens": 54
+        },
+        "total_tokens": 3192
+      },
+      "estimate": {
+        "usd": 0.013688,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "algebra-steps-production-1",
+      "raw": {
+        "input_tokens": 2643,
+        "input_tokens_details": {
+          "cache_write_tokens": 362,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 346,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 2989
+      },
+      "estimate": {
+        "usd": 0.0055186,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "physics-forces-production-1",
+      "raw": {
+        "input_tokens": 2645,
+        "input_tokens_details": {
+          "cache_write_tokens": 364,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 629,
+        "output_tokens_details": {
+          "reasoning_tokens": 117
+        },
+        "total_tokens": 3274
+      },
+      "estimate": {
+        "usd": 0.0089196,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "grammar-annotation-production-1",
+      "raw": {
+        "input_tokens": 2632,
+        "input_tokens_details": {
+          "cache_write_tokens": 351,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 282,
+        "output_tokens_details": {
+          "reasoning_tokens": 129
+        },
+        "total_tokens": 2914
+      },
+      "estimate": {
+        "usd": 0.0047231,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "object-patch-production-1",
+      "raw": {
+        "input_tokens": 3109,
+        "input_tokens_details": {
+          "cache_write_tokens": 828,
+          "cached_tokens": 2278
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3186
+      },
+      "estimate": {
+        "usd": 0.0034556,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "biology-cell-production-final-1",
+      "raw": {
+        "input_tokens": 2703,
+        "input_tokens_details": {
+          "cache_write_tokens": 2700,
+          "cached_tokens": 0
+        },
+        "output_tokens": 585,
+        "output_tokens_details": {
+          "reasoning_tokens": 69
+        },
+        "total_tokens": 3288
+      },
+      "estimate": {
+        "usd": 0.013776,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "algebra-steps-production-final-1",
+      "raw": {
+        "input_tokens": 2755,
+        "input_tokens_details": {
+          "cache_write_tokens": 362,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 315,
+        "output_tokens_details": {
+          "reasoning_tokens": 24
+        },
+        "total_tokens": 3070
+      },
+      "estimate": {
+        "usd": 0.005169,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "physics-forces-production-final-1",
+      "raw": {
+        "input_tokens": 2757,
+        "input_tokens_details": {
+          "cache_write_tokens": 364,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 353,
+        "output_tokens_details": {
+          "reasoning_tokens": 55
+        },
+        "total_tokens": 3110
+      },
+      "estimate": {
+        "usd": 0.00563,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "grammar-annotation-production-final-1",
+      "raw": {
+        "input_tokens": 2744,
+        "input_tokens_details": {
+          "cache_write_tokens": 351,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 409,
+        "output_tokens_details": {
+          "reasoning_tokens": 99
+        },
+        "total_tokens": 3153
+      },
+      "estimate": {
+        "usd": 0.0062695,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "biology-cell-production-final-2",
+      "raw": {
+        "input_tokens": 2703,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2700
+        },
+        "output_tokens": 573,
+        "output_tokens_details": {
+          "reasoning_tokens": 59
+        },
+        "total_tokens": 3276
+      },
+      "estimate": {
+        "usd": 0.007422,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "algebra-steps-production-final-2",
+      "raw": {
+        "input_tokens": 2755,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2752
+        },
+        "output_tokens": 129,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2884
+      },
+      "estimate": {
+        "usd": 0.0021044,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "physics-forces-production-final-2",
+      "raw": {
+        "input_tokens": 2757,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2754
+        },
+        "output_tokens": 374,
+        "output_tokens_details": {
+          "reasoning_tokens": 69
+        },
+        "total_tokens": 3131
+      },
+      "estimate": {
+        "usd": 0.0050448,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "grammar-annotation-production-final-2",
+      "raw": {
+        "input_tokens": 2744,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2741
+        },
+        "output_tokens": 363,
+        "output_tokens_details": {
+          "reasoning_tokens": 60
+        },
+        "total_tokens": 3107
+      },
+      "estimate": {
+        "usd": 0.0049102,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "object-patch-production-final-1",
+      "raw": {
+        "input_tokens": 2986,
+        "input_tokens_details": {
+          "cache_write_tokens": 593,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 88,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3074
+      },
+      "estimate": {
+        "usd": 0.0030225,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    },
+    {
+      "id": "object-patch-production-final-2",
+      "raw": {
+        "input_tokens": 2992,
+        "input_tokens_details": {
+          "cache_write_tokens": 599,
+          "cached_tokens": 2390
+        },
+        "output_tokens": 123,
+        "output_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "total_tokens": 3115
+      },
+      "estimate": {
+        "usd": 0.0034575,
+        "rateId": "openai-gpt-5.6-terra-2026-10-02:default",
+        "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "verifiedAt": "2026-10-02",
+        "partial": false,
+        "notes": [
+          "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+          "Uses global processing rates; any regional processing premium is excluded.",
+          "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+        ]
+      }
+    }
+  ],
+  "totalEstimatedUsd": 0.1215484,
+  "tokens": {
+    "input": 57806,
+    "cachedInput": 42857,
+    "output": 6303
+  },
+  "browser": {
+    "rendered": 10,
+    "errors": [],
+    "providerCalls": 0
+  },
+  "limitations": [
+    "Initial eleven raw calls are retained separately from ten final calls. Original failures were not discarded.",
+    "The eight final source-content checks are not eight flawless spatial-layout passes; grammar underline endpoints remain approximate.",
+    "The generic scene follow-up changed prompt/schema and trusted rendering; it is not a controlled model-level latency A/B. Only the six matrix calls isolate wire syntax.",
+    "Only decoded spoken text, a synthetic audio marker, production validation and canonical merge are timed. No live STT, Jev, TTS, grade or websocket routing is included.",
+    "A later offline renderer correction removes the benchmark-only obsolete visualOnly filter and fixes inherited text alignment; raw outputs and historical latencies are not rewritten."
+  ]
+}

@@ -1,0 +1,4377 @@
+{
+  "startedAt": "2026-10-02T09:20:34.825Z",
+  "maximumPaidRequests": 20,
+  "paidRequests": 20,
+  "model": "gpt-5.6-terra",
+  "method": "Ten public teaching scenarios, matched input and same Terra model/low reasoning. Alternating before/current order. Latency is production streaming adapter through validated board completion, excluding provider lock. No STT/TTS in this arm; visual quality is separately inspected from actual browser renders. All failed outputs retained.",
+  "instructions": {
+    "before": {
+      "chars": 11955,
+      "sha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b"
+    },
+    "current": {
+      "chars": 12112,
+      "sha256": "2ecc7dd762c7281e96e097edabd2d2a923bb401b3eb0ea8db064eaa12864e99f"
+    }
+  },
+  "runs": [
+    {
+      "id": "hydraulic-legend-before",
+      "scenario": "hydraulic-legend",
+      "condition": "before",
+      "source": "The equation is P = rho g H Q. rho denotes fluid density, g gravitational acceleration, H head (vertical height difference), and Q volume flow rate.",
+      "request": "Put the hydraulic power formula and its symbol key on the whiteboard so I can read it. Keep the symbols mathematical and the definitions compact.",
+      "latencies": {
+        "firstTextMs": 1112,
+        "speechCompleteMs": 1226,
+        "completeMs": 1797
+      },
+      "status": "valid-board",
+      "inputCharacters": 557,
+      "usage": {
+        "units": {
+          "inputTokens": 2524,
+          "outputTokens": 121,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 131,
+          "reasoningTokens": 24
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the hydraulic power relationship with a compact symbol key.",
+        "board": {
+          "title": "Hydraulic power",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "formula",
+              "type": "latex",
+              "content": "P=\\rho g H Q"
+            },
+            {
+              "id": "key",
+              "type": "text",
+              "content": "P: hydraulic power\n\\rho: fluid density\ng: gravitational acceleration\nH: vertical head difference\nQ: volume flow rate"
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1091,
+          "totalMs": 1796,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Hydraulic power",
+        "revision": "67b7cb02-be19-49dc-bd33-c85a0965890e",
+        "blocks": [
+          {
+            "id": "formula",
+            "type": "latex",
+            "content": "P=\\rho g H Q"
+          },
+          {
+            "id": "key",
+            "type": "text",
+            "content": "P: hydraulic power\n\\rho: fluid density\ng: gravitational acceleration\nH: vertical head difference\nQ: volume flow rate"
+          }
+        ]
+      },
+      "visibleText": "P=\\rho g H Q\nP: hydraulic power\n\\rho: fluid density\ng: gravitational acceleration\nH: vertical head difference\nQ: volume flow rate",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "hydraulic-legend-current",
+      "scenario": "hydraulic-legend",
+      "condition": "current",
+      "source": "The equation is P = rho g H Q. rho denotes fluid density, g gravitational acceleration, H head (vertical height difference), and Q volume flow rate.",
+      "request": "Put the hydraulic power formula and its symbol key on the whiteboard so I can read it. Keep the symbols mathematical and the definitions compact.",
+      "latencies": {
+        "firstTextMs": 1021,
+        "speechCompleteMs": 1085,
+        "completeMs": 2212
+      },
+      "status": "valid-board",
+      "inputCharacters": 557,
+      "usage": {
+        "units": {
+          "inputTokens": 2588,
+          "outputTokens": 249,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 2585,
+          "reasoningTokens": 32
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the hydraulic power relationship with a compact symbol key.",
+        "board": {
+          "title": "Hydraulic power",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "formula",
+              "type": "latex",
+              "content": "P=\\rho g H Q"
+            },
+            {
+              "id": "symbols",
+              "type": "matrix",
+              "columnLabels": [
+                "Symbol",
+                "Meaning"
+              ],
+              "rows": [
+                [
+                  "P",
+                  "hydraulic power"
+                ],
+                [
+                  "\\rho",
+                  "fluid density"
+                ],
+                [
+                  "g",
+                  "gravitational acceleration"
+                ],
+                [
+                  "H",
+                  "vertical head difference"
+                ],
+                [
+                  "Q",
+                  "volume flow rate"
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 991,
+          "totalMs": 2212,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Hydraulic power",
+        "revision": "2117d60c-891c-4c47-81f7-ea90013d4b9f",
+        "blocks": [
+          {
+            "id": "formula",
+            "type": "latex",
+            "content": "P=\\rho g H Q"
+          },
+          {
+            "id": "symbols",
+            "type": "matrix",
+            "columnLabels": [
+              "Symbol",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "P",
+                "hydraulic power"
+              ],
+              [
+                "\\rho",
+                "fluid density"
+              ],
+              [
+                "g",
+                "gravitational acceleration"
+              ],
+              [
+                "H",
+                "vertical head difference"
+              ],
+              [
+                "Q",
+                "volume flow rate"
+              ]
+            ]
+          }
+        ]
+      },
+      "visibleText": "P=\\rho g H Q\nSymbol | Meaning\nP | hydraulic power\n\\rho | fluid density\ng | gravitational acceleration\nH | vertical head difference\nQ | volume flow rate",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "biology-process-current",
+      "scenario": "biology-process",
+      "condition": "current",
+      "source": "DNA is transcribed into RNA. RNA is translated into protein. A diagram of this simplified information flow uses DNA → RNA → protein, with transcription and translation labeling the respective arrows.",
+      "request": "Teach me the flow from DNA to protein visually. Show the two named processes and the direction, with no repeated explanation paragraph.",
+      "latencies": {
+        "firstTextMs": 687,
+        "speechCompleteMs": 785,
+        "completeMs": 1404
+      },
+      "status": "valid-board",
+      "inputCharacters": 597,
+      "usage": {
+        "units": {
+          "inputTokens": 2587,
+          "outputTokens": 103,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 130,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the core information flow.",
+        "board": {
+          "title": "DNA to protein",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "process",
+              "type": "flow",
+              "direction": "right",
+              "nodes": [
+                {
+                  "id": "dna",
+                  "label": "DNA"
+                },
+                {
+                  "id": "rna",
+                  "label": "RNA"
+                },
+                {
+                  "id": "protein",
+                  "label": "Protein"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "dna",
+                  "to": "rna",
+                  "label": "transcription"
+                },
+                {
+                  "from": "rna",
+                  "to": "protein",
+                  "label": "translation"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 685,
+          "totalMs": 1404,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "DNA to protein",
+        "revision": "b1c2aa78-e3a2-4988-8b6c-add56c44c34e",
+        "blocks": [
+          {
+            "id": "process",
+            "type": "flow",
+            "direction": "right",
+            "nodes": [
+              {
+                "id": "dna",
+                "label": "DNA"
+              },
+              {
+                "id": "rna",
+                "label": "RNA"
+              },
+              {
+                "id": "protein",
+                "label": "Protein"
+              }
+            ],
+            "edges": [
+              {
+                "from": "dna",
+                "to": "rna",
+                "label": "transcription"
+              },
+              {
+                "from": "rna",
+                "to": "protein",
+                "label": "translation"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "DNA\nRNA\nProtein\nDNA → RNA: transcription\nRNA → Protein: translation",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "biology-process-before",
+      "scenario": "biology-process",
+      "condition": "before",
+      "source": "DNA is transcribed into RNA. RNA is translated into protein. A diagram of this simplified information flow uses DNA → RNA → protein, with transcription and translation labeling the respective arrows.",
+      "request": "Teach me the flow from DNA to protein visually. Show the two named processes and the direction, with no repeated explanation paragraph.",
+      "latencies": {
+        "firstTextMs": 1010,
+        "speechCompleteMs": 1163,
+        "completeMs": 2598
+      },
+      "status": "valid-board",
+      "inputCharacters": 597,
+      "usage": {
+        "units": {
+          "inputTokens": 2523,
+          "outputTokens": 249,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 130,
+          "reasoningTokens": 16
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the simplified information flow, with each process labeling its arrow.",
+        "board": {
+          "title": "DNA to protein",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 300,
+              "objects": [
+                {
+                  "id": "dna",
+                  "type": "rect",
+                  "x": 70,
+                  "y": 110,
+                  "width": 170,
+                  "height": 75,
+                  "label": "DNA",
+                  "tone": "ink"
+                },
+                {
+                  "id": "rna",
+                  "type": "rect",
+                  "x": 315,
+                  "y": 110,
+                  "width": 170,
+                  "height": 75,
+                  "label": "RNA",
+                  "tone": "ink"
+                },
+                {
+                  "id": "protein",
+                  "type": "rect",
+                  "x": 560,
+                  "y": 110,
+                  "width": 170,
+                  "height": 75,
+                  "label": "Protein",
+                  "tone": "ink"
+                },
+                {
+                  "id": "transcription",
+                  "type": "arrow",
+                  "x1": 245,
+                  "y1": 147,
+                  "x2": 307,
+                  "y2": 147,
+                  "label": "transcription",
+                  "tone": "accent"
+                },
+                {
+                  "id": "translation",
+                  "type": "arrow",
+                  "x1": 490,
+                  "y1": 147,
+                  "x2": 552,
+                  "y2": 147,
+                  "label": "translation",
+                  "tone": "accent"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 990,
+          "totalMs": 2598,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "DNA to protein",
+        "revision": "e8ff6b4f-b0a7-4245-88ae-e30ba17d437f",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 300,
+            "objects": [
+              {
+                "id": "dna",
+                "type": "rect",
+                "x": 70,
+                "y": 110,
+                "width": 170,
+                "height": 75,
+                "label": "DNA",
+                "tone": "ink"
+              },
+              {
+                "id": "rna",
+                "type": "rect",
+                "x": 315,
+                "y": 110,
+                "width": 170,
+                "height": 75,
+                "label": "RNA",
+                "tone": "ink"
+              },
+              {
+                "id": "protein",
+                "type": "rect",
+                "x": 560,
+                "y": 110,
+                "width": 170,
+                "height": 75,
+                "label": "Protein",
+                "tone": "ink"
+              },
+              {
+                "id": "transcription",
+                "type": "arrow",
+                "x1": 245,
+                "y1": 147,
+                "x2": 307,
+                "y2": 147,
+                "label": "transcription",
+                "tone": "accent"
+              },
+              {
+                "id": "translation",
+                "type": "arrow",
+                "x1": 490,
+                "y1": 147,
+                "x2": 552,
+                "y2": 147,
+                "label": "translation",
+                "tone": "accent"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "DNA\nRNA\nProtein\ntranscription\ntranslation",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "chemistry-process-before",
+      "scenario": "chemistry-process",
+      "condition": "before",
+      "source": "For this simplified heating sequence, a solid melts into a liquid. The liquid vaporizes into a gas. The intermediate state is liquid; melting and vaporization label the two changes.",
+      "request": "Show how heating changes a solid into a gas, including the intermediate state and names of the changes. Make the diagram easy to scan.",
+      "latencies": {
+        "firstTextMs": 662,
+        "speechCompleteMs": 971,
+        "completeMs": 2743
+      },
+      "status": "valid-board",
+      "inputCharacters": 580,
+      "usage": {
+        "units": {
+          "inputTokens": 2526,
+          "outputTokens": 302,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 133,
+          "reasoningTokens": 19
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the heating sequence: the solid melts into a liquid, then the liquid vaporizes into a gas.",
+        "board": {
+          "title": "Heating changes",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 350,
+              "objects": [
+                {
+                  "id": "solid",
+                  "type": "rect",
+                  "x": 55,
+                  "y": 120,
+                  "width": 170,
+                  "height": 100,
+                  "label": "Solid",
+                  "tone": "ink"
+                },
+                {
+                  "id": "melt-arrow",
+                  "type": "arrow",
+                  "x1": 240,
+                  "y1": 170,
+                  "x2": 355,
+                  "y2": 170,
+                  "label": "melting",
+                  "tone": "accent"
+                },
+                {
+                  "id": "liquid",
+                  "type": "rect",
+                  "x": 370,
+                  "y": 120,
+                  "width": 170,
+                  "height": 100,
+                  "label": "Liquid",
+                  "tone": "ink"
+                },
+                {
+                  "id": "vapor-arrow",
+                  "type": "arrow",
+                  "x1": 555,
+                  "y1": 170,
+                  "x2": 670,
+                  "y2": 170,
+                  "label": "vaporization",
+                  "tone": "accent"
+                },
+                {
+                  "id": "gas",
+                  "type": "rect",
+                  "x": 685,
+                  "y": 120,
+                  "width": 90,
+                  "height": 100,
+                  "label": "Gas",
+                  "tone": "ink"
+                },
+                {
+                  "id": "heat",
+                  "type": "text",
+                  "x": 335,
+                  "y": 45,
+                  "width": 150,
+                  "height": 35,
+                  "text": "Heating",
+                  "fontSize": 28,
+                  "tone": "accent"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 633,
+          "totalMs": 2743,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Heating changes",
+        "revision": "9c94dc5f-cb8f-4a27-8ba6-83b1f7504ba9",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 350,
+            "objects": [
+              {
+                "id": "solid",
+                "type": "rect",
+                "x": 55,
+                "y": 120,
+                "width": 170,
+                "height": 100,
+                "label": "Solid",
+                "tone": "ink"
+              },
+              {
+                "id": "melt-arrow",
+                "type": "arrow",
+                "x1": 240,
+                "y1": 170,
+                "x2": 355,
+                "y2": 170,
+                "label": "melting",
+                "tone": "accent"
+              },
+              {
+                "id": "liquid",
+                "type": "rect",
+                "x": 370,
+                "y": 120,
+                "width": 170,
+                "height": 100,
+                "label": "Liquid",
+                "tone": "ink"
+              },
+              {
+                "id": "vapor-arrow",
+                "type": "arrow",
+                "x1": 555,
+                "y1": 170,
+                "x2": 670,
+                "y2": 170,
+                "label": "vaporization",
+                "tone": "accent"
+              },
+              {
+                "id": "gas",
+                "type": "rect",
+                "x": 685,
+                "y": 120,
+                "width": 90,
+                "height": 100,
+                "label": "Gas",
+                "tone": "ink"
+              },
+              {
+                "id": "heat",
+                "type": "text",
+                "x": 335,
+                "y": 45,
+                "width": 150,
+                "height": 35,
+                "text": "Heating",
+                "fontSize": 28,
+                "tone": "accent"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Solid\nmelting\nLiquid\nvaporization\nGas\nHeating",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "chemistry-process-current",
+      "scenario": "chemistry-process",
+      "condition": "current",
+      "source": "For this simplified heating sequence, a solid melts into a liquid. The liquid vaporizes into a gas. The intermediate state is liquid; melting and vaporization label the two changes.",
+      "request": "Show how heating changes a solid into a gas, including the intermediate state and names of the changes. Make the diagram easy to scan.",
+      "latencies": {
+        "firstTextMs": 866,
+        "speechCompleteMs": 1281,
+        "completeMs": 1981
+      },
+      "status": "valid-board",
+      "inputCharacters": 580,
+      "usage": {
+        "units": {
+          "inputTokens": 2590,
+          "outputTokens": 138,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 133,
+          "reasoningTokens": 12
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the heating sequence in one scan: follow the arrows from solid to liquid to gas.",
+        "board": {
+          "title": "Heating changes of state",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "heating-flow",
+              "type": "flow",
+              "direction": "right",
+              "nodes": [
+                {
+                  "id": "solid",
+                  "label": "Solid"
+                },
+                {
+                  "id": "liquid",
+                  "label": "Liquid"
+                },
+                {
+                  "id": "gas",
+                  "label": "Gas"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "solid",
+                  "to": "liquid",
+                  "label": "melting"
+                },
+                {
+                  "from": "liquid",
+                  "to": "gas",
+                  "label": "vaporization"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 842,
+          "totalMs": 1981,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Heating changes of state",
+        "revision": "cd85342f-450c-456a-91d2-e8d6ae19cd77",
+        "blocks": [
+          {
+            "id": "heating-flow",
+            "type": "flow",
+            "direction": "right",
+            "nodes": [
+              {
+                "id": "solid",
+                "label": "Solid"
+              },
+              {
+                "id": "liquid",
+                "label": "Liquid"
+              },
+              {
+                "id": "gas",
+                "label": "Gas"
+              }
+            ],
+            "edges": [
+              {
+                "from": "solid",
+                "to": "liquid",
+                "label": "melting"
+              },
+              {
+                "from": "liquid",
+                "to": "gas",
+                "label": "vaporization"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Solid\nLiquid\nGas\nSolid → Liquid: melting\nLiquid → Gas: vaporization",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "programming-branch-current",
+      "scenario": "programming-branch",
+      "condition": "current",
+      "source": "In a sorted-array search, compare the target with the middle value. If equal, the search succeeds. If target is smaller, keep the left half. If target is larger, keep the right half. Each smaller or larger branch returns to a comparison on the remaining range. For a single decision step, show compare middle branching to found, left half, or right half.",
+      "request": "Draw a clear decision diagram for this search algorithm, including the two outcomes of the comparison.",
+      "latencies": {
+        "firstTextMs": 916,
+        "speechCompleteMs": 1303,
+        "completeMs": 2217
+      },
+      "status": "valid-board",
+      "inputCharacters": 722,
+      "usage": {
+        "units": {
+          "inputTokens": 2620,
+          "outputTokens": 213,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 163,
+          "reasoningTokens": 24
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the single comparison step: equality ends the search, while either inequality narrows the remaining range and repeats the comparison.",
+        "board": {
+          "title": "Sorted-array search decision",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "process",
+              "type": "flow",
+              "direction": "down",
+              "nodes": [
+                {
+                  "id": "compare",
+                  "label": "Compare target to middle value"
+                },
+                {
+                  "id": "found",
+                  "label": "Equal: found"
+                },
+                {
+                  "id": "left",
+                  "label": "Target smaller: keep left half"
+                },
+                {
+                  "id": "right",
+                  "label": "Target larger: keep right half"
+                },
+                {
+                  "id": "again",
+                  "label": "Compare middle of remaining range"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "compare",
+                  "to": "found",
+                  "label": "equal"
+                },
+                {
+                  "from": "compare",
+                  "to": "left",
+                  "label": "smaller"
+                },
+                {
+                  "from": "compare",
+                  "to": "right",
+                  "label": "larger"
+                },
+                {
+                  "from": "left",
+                  "to": "again"
+                },
+                {
+                  "from": "right",
+                  "to": "again"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 860,
+          "totalMs": 2217,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Sorted-array search decision",
+        "revision": "7e7f5cc7-78c0-43ab-afd2-0a609c432f47",
+        "blocks": [
+          {
+            "id": "process",
+            "type": "flow",
+            "direction": "down",
+            "nodes": [
+              {
+                "id": "compare",
+                "label": "Compare target to middle value"
+              },
+              {
+                "id": "found",
+                "label": "Equal: found"
+              },
+              {
+                "id": "left",
+                "label": "Target smaller: keep left half"
+              },
+              {
+                "id": "right",
+                "label": "Target larger: keep right half"
+              },
+              {
+                "id": "again",
+                "label": "Compare middle of remaining range"
+              }
+            ],
+            "edges": [
+              {
+                "from": "compare",
+                "to": "found",
+                "label": "equal"
+              },
+              {
+                "from": "compare",
+                "to": "left",
+                "label": "smaller"
+              },
+              {
+                "from": "compare",
+                "to": "right",
+                "label": "larger"
+              },
+              {
+                "from": "left",
+                "to": "again"
+              },
+              {
+                "from": "right",
+                "to": "again"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Compare target to middle value\nEqual: found\nTarget smaller: keep left half\nTarget larger: keep right half\nCompare middle of remaining range\nCompare target to middle value → Equal: found: equal\nCompare target to middle value → Target smaller: keep left half: smaller\nCompare target to middle value → Target larger: keep right half: larger\nTarget smaller: keep left half → Compare middle of remaining range\nTarget larger: keep right half → Compare middle of remaining range",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "programming-branch-before",
+      "scenario": "programming-branch",
+      "condition": "before",
+      "source": "In a sorted-array search, compare the target with the middle value. If equal, the search succeeds. If target is smaller, keep the left half. If target is larger, keep the right half. Each smaller or larger branch returns to a comparison on the remaining range. For a single decision step, show compare middle branching to found, left half, or right half.",
+      "request": "Draw a clear decision diagram for this search algorithm, including the two outcomes of the comparison.",
+      "latencies": {
+        "firstTextMs": 1002,
+        "speechCompleteMs": 1237,
+        "completeMs": 3385
+      },
+      "status": "valid-board",
+      "inputCharacters": 722,
+      "usage": {
+        "units": {
+          "inputTokens": 2556,
+          "outputTokens": 408,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 163,
+          "reasoningTokens": 27
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the single comparison step: equality ends the search, while the two comparison outcomes narrow the remaining range.",
+        "board": {
+          "title": "Binary search decision",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "compare",
+                  "type": "rect",
+                  "x": 270,
+                  "y": 55,
+                  "width": 260,
+                  "height": 70,
+                  "label": "Compare target to middle"
+                },
+                {
+                  "id": "found",
+                  "type": "rect",
+                  "x": 300,
+                  "y": 365,
+                  "width": 200,
+                  "height": 60,
+                  "label": "Found: search succeeds",
+                  "tone": "accent"
+                },
+                {
+                  "id": "left",
+                  "type": "rect",
+                  "x": 50,
+                  "y": 365,
+                  "width": 210,
+                  "height": 60,
+                  "label": "Keep left half",
+                  "tone": "muted"
+                },
+                {
+                  "id": "right",
+                  "type": "rect",
+                  "x": 540,
+                  "y": 365,
+                  "width": 210,
+                  "height": 60,
+                  "label": "Keep right half",
+                  "tone": "muted"
+                },
+                {
+                  "id": "eq",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 125,
+                  "x2": 400,
+                  "y2": 365,
+                  "label": "target = middle"
+                },
+                {
+                  "id": "smaller",
+                  "type": "arrow",
+                  "x1": 330,
+                  "y1": 125,
+                  "x2": 155,
+                  "y2": 365,
+                  "label": "target < middle"
+                },
+                {
+                  "id": "larger",
+                  "type": "arrow",
+                  "x1": 470,
+                  "y1": 125,
+                  "x2": 645,
+                  "y2": 365,
+                  "label": "target > middle"
+                },
+                {
+                  "id": "leftloop",
+                  "type": "arrow",
+                  "x1": 155,
+                  "y1": 365,
+                  "x2": 270,
+                  "y2": 125,
+                  "label": "compare remaining range"
+                },
+                {
+                  "id": "rightloop",
+                  "type": "arrow",
+                  "x1": 645,
+                  "y1": 365,
+                  "x2": 530,
+                  "y2": 125,
+                  "label": "compare remaining range"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 970,
+          "totalMs": 3384,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Binary search decision",
+        "revision": "11087030-0f7c-4917-a4bd-8d52e6c28f7f",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "compare",
+                "type": "rect",
+                "x": 270,
+                "y": 55,
+                "width": 260,
+                "height": 70,
+                "label": "Compare target to middle"
+              },
+              {
+                "id": "found",
+                "type": "rect",
+                "x": 300,
+                "y": 365,
+                "width": 200,
+                "height": 60,
+                "label": "Found: search succeeds",
+                "tone": "accent"
+              },
+              {
+                "id": "left",
+                "type": "rect",
+                "x": 50,
+                "y": 365,
+                "width": 210,
+                "height": 60,
+                "label": "Keep left half",
+                "tone": "muted"
+              },
+              {
+                "id": "right",
+                "type": "rect",
+                "x": 540,
+                "y": 365,
+                "width": 210,
+                "height": 60,
+                "label": "Keep right half",
+                "tone": "muted"
+              },
+              {
+                "id": "eq",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 125,
+                "x2": 400,
+                "y2": 365,
+                "label": "target = middle"
+              },
+              {
+                "id": "smaller",
+                "type": "arrow",
+                "x1": 330,
+                "y1": 125,
+                "x2": 155,
+                "y2": 365,
+                "label": "target < middle"
+              },
+              {
+                "id": "larger",
+                "type": "arrow",
+                "x1": 470,
+                "y1": 125,
+                "x2": 645,
+                "y2": 365,
+                "label": "target > middle"
+              },
+              {
+                "id": "leftloop",
+                "type": "arrow",
+                "x1": 155,
+                "y1": 365,
+                "x2": 270,
+                "y2": 125,
+                "label": "compare remaining range"
+              },
+              {
+                "id": "rightloop",
+                "type": "arrow",
+                "x1": 645,
+                "y1": 365,
+                "x2": 530,
+                "y2": 125,
+                "label": "compare remaining range"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Compare target to middle\nFound: search succeeds\nKeep left half\nKeep right half\ntarget = middle\ntarget < middle\ntarget > middle\ncompare remaining range\ncompare remaining range",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "grammar-annotation-before",
+      "scenario": "grammar-annotation",
+      "condition": "before",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 703,
+        "speechCompleteMs": 772,
+        "completeMs": 3407
+      },
+      "status": "valid-board",
+      "inputCharacters": 660,
+      "usage": {
+        "units": {
+          "inputTokens": 2544,
+          "outputTokens": 399,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 151,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence structure, with each clause marked once.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "sentence",
+                  "type": "text",
+                  "x": 70,
+                  "y": 90,
+                  "width": 660,
+                  "height": 50,
+                  "text": "After the rain stopped, Maya walked to class.",
+                  "fontSize": 28
+                },
+                {
+                  "id": "dep-bracket",
+                  "type": "polyline",
+                  "points": [
+                    [
+                      70,
+                      165
+                    ],
+                    [
+                      70,
+                      195
+                    ],
+                    [
+                      350,
+                      195
+                    ],
+                    [
+                      350,
+                      165
+                    ]
+                  ],
+                  "tone": "accent"
+                },
+                {
+                  "id": "dep-label",
+                  "type": "text",
+                  "x": 105,
+                  "y": 220,
+                  "width": 220,
+                  "height": 36,
+                  "text": "dependent clause",
+                  "fontSize": 24,
+                  "tone": "accent"
+                },
+                {
+                  "id": "main-bracket",
+                  "type": "polyline",
+                  "points": [
+                    [
+                      370,
+                      165
+                    ],
+                    [
+                      370,
+                      195
+                    ],
+                    [
+                      730,
+                      195
+                    ],
+                    [
+                      730,
+                      165
+                    ]
+                  ],
+                  "tone": "ink"
+                },
+                {
+                  "id": "main-label",
+                  "type": "text",
+                  "x": 455,
+                  "y": 220,
+                  "width": 210,
+                  "height": 36,
+                  "text": "main clause",
+                  "fontSize": 24
+                },
+                {
+                  "id": "after-note",
+                  "type": "text",
+                  "x": 75,
+                  "y": 305,
+                  "width": 260,
+                  "height": 40,
+                  "text": "After = subordinating conjunction",
+                  "fontSize": 20,
+                  "tone": "muted"
+                },
+                {
+                  "id": "maya-note",
+                  "type": "text",
+                  "x": 410,
+                  "y": 305,
+                  "width": 250,
+                  "height": 40,
+                  "text": "Maya = main-clause subject",
+                  "fontSize": 20,
+                  "tone": "muted"
+                },
+                {
+                  "id": "after-arrow",
+                  "type": "arrow",
+                  "x1": 165,
+                  "y1": 290,
+                  "x2": 105,
+                  "y2": 140,
+                  "tone": "muted"
+                },
+                {
+                  "id": "maya-arrow",
+                  "type": "arrow",
+                  "x1": 510,
+                  "y1": 290,
+                  "x2": 465,
+                  "y2": 140,
+                  "tone": "muted"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 630,
+          "totalMs": 3407,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "86eb550f-9397-4823-89da-d849c2845b20",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 70,
+                "y": 90,
+                "width": 660,
+                "height": 50,
+                "text": "After the rain stopped, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dep-bracket",
+                "type": "polyline",
+                "points": [
+                  [
+                    70,
+                    165
+                  ],
+                  [
+                    70,
+                    195
+                  ],
+                  [
+                    350,
+                    195
+                  ],
+                  [
+                    350,
+                    165
+                  ]
+                ],
+                "tone": "accent"
+              },
+              {
+                "id": "dep-label",
+                "type": "text",
+                "x": 105,
+                "y": 220,
+                "width": 220,
+                "height": 36,
+                "text": "dependent clause",
+                "fontSize": 24,
+                "tone": "accent"
+              },
+              {
+                "id": "main-bracket",
+                "type": "polyline",
+                "points": [
+                  [
+                    370,
+                    165
+                  ],
+                  [
+                    370,
+                    195
+                  ],
+                  [
+                    730,
+                    195
+                  ],
+                  [
+                    730,
+                    165
+                  ]
+                ],
+                "tone": "ink"
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 455,
+                "y": 220,
+                "width": 210,
+                "height": 36,
+                "text": "main clause",
+                "fontSize": 24
+              },
+              {
+                "id": "after-note",
+                "type": "text",
+                "x": 75,
+                "y": 305,
+                "width": 260,
+                "height": 40,
+                "text": "After = subordinating conjunction",
+                "fontSize": 20,
+                "tone": "muted"
+              },
+              {
+                "id": "maya-note",
+                "type": "text",
+                "x": 410,
+                "y": 305,
+                "width": 250,
+                "height": 40,
+                "text": "Maya = main-clause subject",
+                "fontSize": 20,
+                "tone": "muted"
+              },
+              {
+                "id": "after-arrow",
+                "type": "arrow",
+                "x1": 165,
+                "y1": 290,
+                "x2": 105,
+                "y2": 140,
+                "tone": "muted"
+              },
+              {
+                "id": "maya-arrow",
+                "type": "arrow",
+                "x1": 510,
+                "y1": 290,
+                "x2": 465,
+                "y2": 140,
+                "tone": "muted"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "After the rain stopped, Maya walked to class.\ndependent clause\nmain clause\nAfter = subordinating conjunction\nMaya = main-clause subject",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "grammar-annotation-current",
+      "scenario": "grammar-annotation",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 1084,
+        "speechCompleteMs": 1145,
+        "completeMs": 2982
+      },
+      "status": "valid-board",
+      "inputCharacters": 660,
+      "usage": {
+        "units": {
+          "inputTokens": 2608,
+          "outputTokens": 335,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 151,
+          "reasoningTokens": 18
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence structure, with each clause marked once.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "sentence",
+                  "type": "text",
+                  "x": 85,
+                  "y": 95,
+                  "width": 640,
+                  "height": 45,
+                  "text": "After the rain stopped, Maya walked to class.",
+                  "fontSize": 28
+                },
+                {
+                  "id": "dependent-box",
+                  "type": "rect",
+                  "x": 75,
+                  "y": 175,
+                  "width": 330,
+                  "height": 105,
+                  "tone": "accent"
+                },
+                {
+                  "id": "dependent-label",
+                  "type": "text",
+                  "x": 95,
+                  "y": 195,
+                  "width": 290,
+                  "height": 65,
+                  "text": "Dependent clause\nAfter the rain stopped",
+                  "fontSize": 23
+                },
+                {
+                  "id": "main-box",
+                  "type": "rect",
+                  "x": 430,
+                  "y": 175,
+                  "width": 295,
+                  "height": 105,
+                  "tone": "ink"
+                },
+                {
+                  "id": "main-label",
+                  "type": "text",
+                  "x": 450,
+                  "y": 195,
+                  "width": 255,
+                  "height": 65,
+                  "text": "Main clause\nMaya walked to class",
+                  "fontSize": 23
+                },
+                {
+                  "id": "after-arrow",
+                  "type": "arrow",
+                  "x1": 165,
+                  "y1": 290,
+                  "x2": 165,
+                  "y2": 365,
+                  "label": "After = subordinating conjunction"
+                },
+                {
+                  "id": "maya-arrow",
+                  "type": "arrow",
+                  "x1": 570,
+                  "y1": 290,
+                  "x2": 570,
+                  "y2": 365,
+                  "label": "Maya = subject of main clause"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1078,
+          "totalMs": 2982,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "a77ba731-c71b-4d29-96c9-71bb8a49d7ef",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "sentence",
+                "type": "text",
+                "x": 85,
+                "y": 95,
+                "width": 640,
+                "height": 45,
+                "text": "After the rain stopped, Maya walked to class.",
+                "fontSize": 28
+              },
+              {
+                "id": "dependent-box",
+                "type": "rect",
+                "x": 75,
+                "y": 175,
+                "width": 330,
+                "height": 105,
+                "tone": "accent"
+              },
+              {
+                "id": "dependent-label",
+                "type": "text",
+                "x": 95,
+                "y": 195,
+                "width": 290,
+                "height": 65,
+                "text": "Dependent clause\nAfter the rain stopped",
+                "fontSize": 23
+              },
+              {
+                "id": "main-box",
+                "type": "rect",
+                "x": 430,
+                "y": 175,
+                "width": 295,
+                "height": 105,
+                "tone": "ink"
+              },
+              {
+                "id": "main-label",
+                "type": "text",
+                "x": 450,
+                "y": 195,
+                "width": 255,
+                "height": 65,
+                "text": "Main clause\nMaya walked to class",
+                "fontSize": 23
+              },
+              {
+                "id": "after-arrow",
+                "type": "arrow",
+                "x1": 165,
+                "y1": 290,
+                "x2": 165,
+                "y2": 365,
+                "label": "After = subordinating conjunction"
+              },
+              {
+                "id": "maya-arrow",
+                "type": "arrow",
+                "x1": 570,
+                "y1": 290,
+                "x2": 570,
+                "y2": 365,
+                "label": "Maya = subject of main clause"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "After the rain stopped, Maya walked to class.\nDependent clause\nAfter the rain stopped\nMain clause\nMaya walked to class\nAfter = subordinating conjunction\nMaya = subject of main clause",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "history-timeline-current",
+      "scenario": "history-timeline",
+      "condition": "current",
+      "source": "The United States Declaration of Independence dates to 1776, the Constitution was signed in 1787, and the Bill of Rights was ratified in 1791. The gaps between these dates are 11 years and 4 years.",
+      "request": "Make a clean horizontal chronology with these three events and years. I want to see their ordering and spacing without a wall of text.",
+      "latencies": {
+        "firstTextMs": 879,
+        "speechCompleteMs": 977,
+        "completeMs": 3779
+      },
+      "status": "valid-board",
+      "inputCharacters": 595,
+      "usage": {
+        "units": {
+          "inputTokens": 2600,
+          "outputTokens": 492,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 143,
+          "reasoningTokens": 23
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s a clean chronology showing the order and the stated gaps.",
+        "board": {
+          "title": "U.S. founding chronology",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "timeline",
+              "type": "scene",
+              "width": 800,
+              "height": 300,
+              "objects": [
+                {
+                  "id": "base",
+                  "type": "line",
+                  "x1": 100,
+                  "y1": 150,
+                  "x2": 700,
+                  "y2": 150
+                },
+                {
+                  "id": "p1",
+                  "type": "line",
+                  "x1": 130,
+                  "y1": 135,
+                  "x2": 130,
+                  "y2": 165
+                },
+                {
+                  "id": "p2",
+                  "type": "line",
+                  "x1": 530,
+                  "y1": 135,
+                  "x2": 530,
+                  "y2": 165
+                },
+                {
+                  "id": "p3",
+                  "type": "line",
+                  "x1": 675,
+                  "y1": 135,
+                  "x2": 675,
+                  "y2": 165
+                },
+                {
+                  "id": "e1",
+                  "type": "text",
+                  "x": 55,
+                  "y": 62,
+                  "width": 160,
+                  "height": 50,
+                  "text": "Declaration of\nIndependence",
+                  "fontSize": 22
+                },
+                {
+                  "id": "y1",
+                  "type": "text",
+                  "x": 91,
+                  "y": 178,
+                  "width": 80,
+                  "height": 35,
+                  "text": "1776",
+                  "fontSize": 26
+                },
+                {
+                  "id": "e2",
+                  "type": "text",
+                  "x": 455,
+                  "y": 62,
+                  "width": 160,
+                  "height": 50,
+                  "text": "Constitution\nsigned",
+                  "fontSize": 22
+                },
+                {
+                  "id": "y2",
+                  "type": "text",
+                  "x": 490,
+                  "y": 178,
+                  "width": 80,
+                  "height": 35,
+                  "text": "1787",
+                  "fontSize": 26
+                },
+                {
+                  "id": "e3",
+                  "type": "text",
+                  "x": 615,
+                  "y": 62,
+                  "width": 150,
+                  "height": 50,
+                  "text": "Bill of Rights\nratified",
+                  "fontSize": 22
+                },
+                {
+                  "id": "y3",
+                  "type": "text",
+                  "x": 635,
+                  "y": 178,
+                  "width": 80,
+                  "height": 35,
+                  "text": "1791",
+                  "fontSize": 26
+                },
+                {
+                  "id": "gap1",
+                  "type": "text",
+                  "x": 290,
+                  "y": 118,
+                  "width": 100,
+                  "height": 28,
+                  "text": "11 years",
+                  "fontSize": 20
+                },
+                {
+                  "id": "gap2",
+                  "type": "text",
+                  "x": 550,
+                  "y": 118,
+                  "width": 90,
+                  "height": 28,
+                  "text": "4 years",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 846,
+          "totalMs": 3778,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "U.S. founding chronology",
+        "revision": "66f02319-df00-4ea0-b122-489ec2518c18",
+        "blocks": [
+          {
+            "id": "timeline",
+            "type": "scene",
+            "width": 800,
+            "height": 300,
+            "objects": [
+              {
+                "id": "base",
+                "type": "line",
+                "x1": 100,
+                "y1": 150,
+                "x2": 700,
+                "y2": 150
+              },
+              {
+                "id": "p1",
+                "type": "line",
+                "x1": 130,
+                "y1": 135,
+                "x2": 130,
+                "y2": 165
+              },
+              {
+                "id": "p2",
+                "type": "line",
+                "x1": 530,
+                "y1": 135,
+                "x2": 530,
+                "y2": 165
+              },
+              {
+                "id": "p3",
+                "type": "line",
+                "x1": 675,
+                "y1": 135,
+                "x2": 675,
+                "y2": 165
+              },
+              {
+                "id": "e1",
+                "type": "text",
+                "x": 55,
+                "y": 62,
+                "width": 160,
+                "height": 50,
+                "text": "Declaration of\nIndependence",
+                "fontSize": 22
+              },
+              {
+                "id": "y1",
+                "type": "text",
+                "x": 91,
+                "y": 178,
+                "width": 80,
+                "height": 35,
+                "text": "1776",
+                "fontSize": 26
+              },
+              {
+                "id": "e2",
+                "type": "text",
+                "x": 455,
+                "y": 62,
+                "width": 160,
+                "height": 50,
+                "text": "Constitution\nsigned",
+                "fontSize": 22
+              },
+              {
+                "id": "y2",
+                "type": "text",
+                "x": 490,
+                "y": 178,
+                "width": 80,
+                "height": 35,
+                "text": "1787",
+                "fontSize": 26
+              },
+              {
+                "id": "e3",
+                "type": "text",
+                "x": 615,
+                "y": 62,
+                "width": 150,
+                "height": 50,
+                "text": "Bill of Rights\nratified",
+                "fontSize": 22
+              },
+              {
+                "id": "y3",
+                "type": "text",
+                "x": 635,
+                "y": 178,
+                "width": 80,
+                "height": 35,
+                "text": "1791",
+                "fontSize": 26
+              },
+              {
+                "id": "gap1",
+                "type": "text",
+                "x": 290,
+                "y": 118,
+                "width": 100,
+                "height": 28,
+                "text": "11 years",
+                "fontSize": 20
+              },
+              {
+                "id": "gap2",
+                "type": "text",
+                "x": 550,
+                "y": 118,
+                "width": 90,
+                "height": 28,
+                "text": "4 years",
+                "fontSize": 20
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Declaration of\nIndependence\n1776\nConstitution\nsigned\n1787\nBill of Rights\nratified\n1791\n11 years\n4 years",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "history-timeline-before",
+      "scenario": "history-timeline",
+      "condition": "before",
+      "source": "The United States Declaration of Independence dates to 1776, the Constitution was signed in 1787, and the Bill of Rights was ratified in 1791. The gaps between these dates are 11 years and 4 years.",
+      "request": "Make a clean horizontal chronology with these three events and years. I want to see their ordering and spacing without a wall of text.",
+      "latencies": {
+        "firstTextMs": 928,
+        "speechCompleteMs": 1110,
+        "completeMs": 4243
+      },
+      "status": "valid-board",
+      "inputCharacters": 595,
+      "usage": {
+        "units": {
+          "inputTokens": 2536,
+          "outputTokens": 535,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 143,
+          "reasoningTokens": 34
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sequence with the time gaps shown proportionally.",
+        "board": {
+          "title": "US founding chronology",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 300,
+              "objects": [
+                {
+                  "id": "timeline",
+                  "type": "line",
+                  "x1": 110,
+                  "y1": 160,
+                  "x2": 700,
+                  "y2": 160,
+                  "tone": "ink"
+                },
+                {
+                  "id": "tick1776",
+                  "type": "line",
+                  "x1": 140,
+                  "y1": 140,
+                  "x2": 140,
+                  "y2": 180,
+                  "tone": "accent"
+                },
+                {
+                  "id": "tick1787",
+                  "type": "line",
+                  "x1": 546,
+                  "y1": 140,
+                  "x2": 546,
+                  "y2": 180,
+                  "tone": "accent"
+                },
+                {
+                  "id": "tick1791",
+                  "type": "line",
+                  "x1": 694,
+                  "y1": 140,
+                  "x2": 694,
+                  "y2": 180,
+                  "tone": "accent"
+                },
+                {
+                  "id": "event1776",
+                  "type": "text",
+                  "x": 65,
+                  "y": 65,
+                  "width": 150,
+                  "height": 55,
+                  "text": "Declaration of\nIndependence",
+                  "fontSize": 22
+                },
+                {
+                  "id": "year1776",
+                  "type": "text",
+                  "x": 105,
+                  "y": 190,
+                  "width": 75,
+                  "height": 35,
+                  "text": "1776",
+                  "fontSize": 25
+                },
+                {
+                  "id": "event1787",
+                  "type": "text",
+                  "x": 466,
+                  "y": 65,
+                  "width": 160,
+                  "height": 55,
+                  "text": "Constitution\nsigned",
+                  "fontSize": 22
+                },
+                {
+                  "id": "year1787",
+                  "type": "text",
+                  "x": 511,
+                  "y": 190,
+                  "width": 75,
+                  "height": 35,
+                  "text": "1787",
+                  "fontSize": 25
+                },
+                {
+                  "id": "event1791",
+                  "type": "text",
+                  "x": 630,
+                  "y": 65,
+                  "width": 140,
+                  "height": 55,
+                  "text": "Bill of Rights\nratified",
+                  "fontSize": 22
+                },
+                {
+                  "id": "year1791",
+                  "type": "text",
+                  "x": 659,
+                  "y": 190,
+                  "width": 75,
+                  "height": 35,
+                  "text": "1791",
+                  "fontSize": 25
+                },
+                {
+                  "id": "gap1",
+                  "type": "text",
+                  "x": 310,
+                  "y": 235,
+                  "width": 90,
+                  "height": 30,
+                  "text": "11 years",
+                  "fontSize": 20,
+                  "tone": "muted"
+                },
+                {
+                  "id": "gap2",
+                  "type": "text",
+                  "x": 575,
+                  "y": 235,
+                  "width": 80,
+                  "height": 30,
+                  "text": "4 years",
+                  "fontSize": 20,
+                  "tone": "muted"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 897,
+          "totalMs": 4243,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "US founding chronology",
+        "revision": "a50761fe-b5a6-47f4-877b-cc11d5b4942d",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 300,
+            "objects": [
+              {
+                "id": "timeline",
+                "type": "line",
+                "x1": 110,
+                "y1": 160,
+                "x2": 700,
+                "y2": 160,
+                "tone": "ink"
+              },
+              {
+                "id": "tick1776",
+                "type": "line",
+                "x1": 140,
+                "y1": 140,
+                "x2": 140,
+                "y2": 180,
+                "tone": "accent"
+              },
+              {
+                "id": "tick1787",
+                "type": "line",
+                "x1": 546,
+                "y1": 140,
+                "x2": 546,
+                "y2": 180,
+                "tone": "accent"
+              },
+              {
+                "id": "tick1791",
+                "type": "line",
+                "x1": 694,
+                "y1": 140,
+                "x2": 694,
+                "y2": 180,
+                "tone": "accent"
+              },
+              {
+                "id": "event1776",
+                "type": "text",
+                "x": 65,
+                "y": 65,
+                "width": 150,
+                "height": 55,
+                "text": "Declaration of\nIndependence",
+                "fontSize": 22
+              },
+              {
+                "id": "year1776",
+                "type": "text",
+                "x": 105,
+                "y": 190,
+                "width": 75,
+                "height": 35,
+                "text": "1776",
+                "fontSize": 25
+              },
+              {
+                "id": "event1787",
+                "type": "text",
+                "x": 466,
+                "y": 65,
+                "width": 160,
+                "height": 55,
+                "text": "Constitution\nsigned",
+                "fontSize": 22
+              },
+              {
+                "id": "year1787",
+                "type": "text",
+                "x": 511,
+                "y": 190,
+                "width": 75,
+                "height": 35,
+                "text": "1787",
+                "fontSize": 25
+              },
+              {
+                "id": "event1791",
+                "type": "text",
+                "x": 630,
+                "y": 65,
+                "width": 140,
+                "height": 55,
+                "text": "Bill of Rights\nratified",
+                "fontSize": 22
+              },
+              {
+                "id": "year1791",
+                "type": "text",
+                "x": 659,
+                "y": 190,
+                "width": 75,
+                "height": 35,
+                "text": "1791",
+                "fontSize": 25
+              },
+              {
+                "id": "gap1",
+                "type": "text",
+                "x": 310,
+                "y": 235,
+                "width": 90,
+                "height": 30,
+                "text": "11 years",
+                "fontSize": 20,
+                "tone": "muted"
+              },
+              {
+                "id": "gap2",
+                "type": "text",
+                "x": 575,
+                "y": 235,
+                "width": 80,
+                "height": 30,
+                "text": "4 years",
+                "fontSize": 20,
+                "tone": "muted"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Declaration of\nIndependence\n1776\nConstitution\nsigned\n1787\nBill of Rights\nratified\n1791\n11 years\n4 years",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "physics-forces-before",
+      "scenario": "physics-forces",
+      "condition": "before",
+      "source": "A block rests on a horizontal surface. Weight mg acts vertically downward. The normal force N acts vertically upward. An applied force F acts rightward, while kinetic friction f_k acts leftward. No numerical force values are provided.",
+      "request": "Draw the free-body diagram for this block with each force named. Separate labels from arrow strokes and do not add a solved numerical result.",
+      "latencies": {
+        "firstTextMs": 850,
+        "speechCompleteMs": 978,
+        "completeMs": 3654
+      },
+      "status": "no-board",
+      "inputCharacters": 637,
+      "usage": {
+        "units": {
+          "inputTokens": 2536,
+          "outputTokens": 411,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 143,
+          "reasoningTokens": 22
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here is the free-body diagram, with each force shown in its stated direction.",
+        "boardStatus": "invalid",
+        "timings": {
+          "firstDeltaMs": 830,
+          "totalMs": 3654,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": null,
+      "visibleText": "",
+      "checks": {
+        "validBoard": false,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "physics-forces-current",
+      "scenario": "physics-forces",
+      "condition": "current",
+      "source": "A block rests on a horizontal surface. Weight mg acts vertically downward. The normal force N acts vertically upward. An applied force F acts rightward, while kinetic friction f_k acts leftward. No numerical force values are provided.",
+      "request": "Draw the free-body diagram for this block with each force named. Separate labels from arrow strokes and do not add a solved numerical result.",
+      "latencies": {
+        "firstTextMs": 817,
+        "speechCompleteMs": 966,
+        "completeMs": 2808
+      },
+      "status": "valid-board",
+      "inputCharacters": 637,
+      "usage": {
+        "units": {
+          "inputTokens": 2600,
+          "outputTokens": 386,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 143,
+          "reasoningTokens": 19
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here is the free-body diagram, with each force shown in its stated direction.",
+        "board": {
+          "title": "Free-body diagram",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "block",
+                  "type": "rect",
+                  "x": 350,
+                  "y": 210,
+                  "width": 120,
+                  "height": 80,
+                  "tone": "ink"
+                },
+                {
+                  "id": "weight-arrow",
+                  "type": "arrow",
+                  "x1": 410,
+                  "y1": 290,
+                  "x2": 410,
+                  "y2": 410,
+                  "tone": "ink"
+                },
+                {
+                  "id": "normal-arrow",
+                  "type": "arrow",
+                  "x1": 410,
+                  "y1": 210,
+                  "x2": 410,
+                  "y2": 90,
+                  "tone": "ink"
+                },
+                {
+                  "id": "applied-arrow",
+                  "type": "arrow",
+                  "x1": 470,
+                  "y1": 250,
+                  "x2": 650,
+                  "y2": 250,
+                  "tone": "ink"
+                },
+                {
+                  "id": "friction-arrow",
+                  "type": "arrow",
+                  "x1": 350,
+                  "y1": 250,
+                  "x2": 170,
+                  "y2": 250,
+                  "tone": "ink"
+                },
+                {
+                  "id": "weight-label",
+                  "type": "math",
+                  "x": 440,
+                  "y": 360,
+                  "width": 100,
+                  "height": 40,
+                  "text": "mg",
+                  "fontSize": 28
+                },
+                {
+                  "id": "normal-label",
+                  "type": "math",
+                  "x": 440,
+                  "y": 105,
+                  "width": 80,
+                  "height": 40,
+                  "text": "N",
+                  "fontSize": 28
+                },
+                {
+                  "id": "applied-label",
+                  "type": "math",
+                  "x": 550,
+                  "y": 205,
+                  "width": 80,
+                  "height": 40,
+                  "text": "F",
+                  "fontSize": 28
+                },
+                {
+                  "id": "friction-label",
+                  "type": "math",
+                  "x": 185,
+                  "y": 205,
+                  "width": 100,
+                  "height": 40,
+                  "text": "f_k",
+                  "fontSize": 28
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 800,
+          "totalMs": 2808,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Free-body diagram",
+        "revision": "3d10f036-b4d5-4b7f-a71f-cd390b7728e5",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "block",
+                "type": "rect",
+                "x": 350,
+                "y": 210,
+                "width": 120,
+                "height": 80,
+                "tone": "ink"
+              },
+              {
+                "id": "weight-arrow",
+                "type": "arrow",
+                "x1": 410,
+                "y1": 290,
+                "x2": 410,
+                "y2": 410,
+                "tone": "ink"
+              },
+              {
+                "id": "normal-arrow",
+                "type": "arrow",
+                "x1": 410,
+                "y1": 210,
+                "x2": 410,
+                "y2": 90,
+                "tone": "ink"
+              },
+              {
+                "id": "applied-arrow",
+                "type": "arrow",
+                "x1": 470,
+                "y1": 250,
+                "x2": 650,
+                "y2": 250,
+                "tone": "ink"
+              },
+              {
+                "id": "friction-arrow",
+                "type": "arrow",
+                "x1": 350,
+                "y1": 250,
+                "x2": 170,
+                "y2": 250,
+                "tone": "ink"
+              },
+              {
+                "id": "weight-label",
+                "type": "math",
+                "x": 440,
+                "y": 360,
+                "width": 100,
+                "height": 40,
+                "text": "mg",
+                "fontSize": 28
+              },
+              {
+                "id": "normal-label",
+                "type": "math",
+                "x": 440,
+                "y": 105,
+                "width": 80,
+                "height": 40,
+                "text": "N",
+                "fontSize": 28
+              },
+              {
+                "id": "applied-label",
+                "type": "math",
+                "x": 550,
+                "y": 205,
+                "width": 80,
+                "height": 40,
+                "text": "F",
+                "fontSize": 28
+              },
+              {
+                "id": "friction-label",
+                "type": "math",
+                "x": 185,
+                "y": 205,
+                "width": 100,
+                "height": 40,
+                "text": "f_k",
+                "fontSize": 28
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "mg\nN\nF\nf_k",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "math-parabola-current",
+      "scenario": "math-parabola",
+      "condition": "current",
+      "source": "For y=x^2, the five points are (-2,4), (-1,1), (0,0), (1,1), (2,4). The graph is symmetric about the vertical y axis. Its vertex is (0,0). The positive y direction is upward; x increases rightward.",
+      "request": "Sketch y = x squared from x = minus two to two, with axes, tick values and the origin clear. Use the supplied points accurately.",
+      "latencies": {
+        "firstTextMs": 692,
+        "speechCompleteMs": 825,
+        "completeMs": 4936
+      },
+      "status": "valid-board",
+      "inputCharacters": 586,
+      "usage": {
+        "units": {
+          "inputTokens": 2622,
+          "outputTokens": 789,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 165,
+          "reasoningTokens": 14
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the parabola using the supplied points, with the vertex at the origin.",
+        "board": {
+          "title": "Parabola graph",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "xaxis",
+                  "type": "arrow",
+                  "x1": 80,
+                  "y1": 400,
+                  "x2": 740,
+                  "y2": 400,
+                  "label": "x"
+                },
+                {
+                  "id": "yaxis",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 450,
+                  "x2": 400,
+                  "y2": 50,
+                  "label": "y"
+                },
+                {
+                  "id": "xtickm2",
+                  "type": "line",
+                  "x1": 160,
+                  "y1": 392,
+                  "x2": 160,
+                  "y2": 408
+                },
+                {
+                  "id": "xtickm1",
+                  "type": "line",
+                  "x1": 280,
+                  "y1": 392,
+                  "x2": 280,
+                  "y2": 408
+                },
+                {
+                  "id": "xtick0",
+                  "type": "line",
+                  "x1": 400,
+                  "y1": 392,
+                  "x2": 400,
+                  "y2": 408
+                },
+                {
+                  "id": "xtick1",
+                  "type": "line",
+                  "x1": 520,
+                  "y1": 392,
+                  "x2": 520,
+                  "y2": 408
+                },
+                {
+                  "id": "xtick2",
+                  "type": "line",
+                  "x1": 640,
+                  "y1": 392,
+                  "x2": 640,
+                  "y2": 408
+                },
+                {
+                  "id": "ytick1",
+                  "type": "line",
+                  "x1": 392,
+                  "y1": 320,
+                  "x2": 408,
+                  "y2": 320
+                },
+                {
+                  "id": "ytick2",
+                  "type": "line",
+                  "x1": 392,
+                  "y1": 240,
+                  "x2": 408,
+                  "y2": 240
+                },
+                {
+                  "id": "ytick3",
+                  "type": "line",
+                  "x1": 392,
+                  "y1": 160,
+                  "x2": 408,
+                  "y2": 160
+                },
+                {
+                  "id": "ytick4",
+                  "type": "line",
+                  "x1": 392,
+                  "y1": 80,
+                  "x2": 408,
+                  "y2": 80
+                },
+                {
+                  "id": "xlabels",
+                  "type": "text",
+                  "x": 142,
+                  "y": 414,
+                  "width": 520,
+                  "height": 28,
+                  "text": "−2          −1           0           1           2",
+                  "fontSize": 20
+                },
+                {
+                  "id": "ylabels",
+                  "type": "text",
+                  "x": 355,
+                  "y": 66,
+                  "width": 35,
+                  "height": 275,
+                  "text": "4\n\n2\n\n1",
+                  "fontSize": 18
+                },
+                {
+                  "id": "origin",
+                  "type": "text",
+                  "x": 410,
+                  "y": 407,
+                  "width": 80,
+                  "height": 28,
+                  "text": "(0,0)",
+                  "fontSize": 18
+                },
+                {
+                  "id": "curve",
+                  "type": "polyline",
+                  "points": [
+                    [
+                      160,
+                      80
+                    ],
+                    [
+                      190,
+                      170
+                    ],
+                    [
+                      220,
+                      240
+                    ],
+                    [
+                      250,
+                      290
+                    ],
+                    [
+                      280,
+                      320
+                    ],
+                    [
+                      310,
+                      350
+                    ],
+                    [
+                      340,
+                      375
+                    ],
+                    [
+                      370,
+                      394
+                    ],
+                    [
+                      400,
+                      400
+                    ],
+                    [
+                      430,
+                      394
+                    ],
+                    [
+                      460,
+                      375
+                    ],
+                    [
+                      490,
+                      350
+                    ],
+                    [
+                      520,
+                      320
+                    ],
+                    [
+                      550,
+                      290
+                    ],
+                    [
+                      580,
+                      240
+                    ],
+                    [
+                      610,
+                      170
+                    ],
+                    [
+                      640,
+                      80
+                    ]
+                  ],
+                  "tone": "accent"
+                },
+                {
+                  "id": "p1",
+                  "type": "ellipse",
+                  "x": 153,
+                  "y": 73,
+                  "width": 14,
+                  "height": 14
+                },
+                {
+                  "id": "p2",
+                  "type": "ellipse",
+                  "x": 273,
+                  "y": 313,
+                  "width": 14,
+                  "height": 14
+                },
+                {
+                  "id": "p3",
+                  "type": "ellipse",
+                  "x": 393,
+                  "y": 393,
+                  "width": 14,
+                  "height": 14
+                },
+                {
+                  "id": "p4",
+                  "type": "ellipse",
+                  "x": 513,
+                  "y": 313,
+                  "width": 14,
+                  "height": 14
+                },
+                {
+                  "id": "p5",
+                  "type": "ellipse",
+                  "x": 633,
+                  "y": 73,
+                  "width": 14,
+                  "height": 14
+                },
+                {
+                  "id": "eq",
+                  "type": "math",
+                  "x": 565,
+                  "y": 115,
+                  "width": 170,
+                  "height": 35,
+                  "text": "y=x^2",
+                  "fontSize": 28
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 681,
+          "totalMs": 4936,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Parabola graph",
+        "revision": "d97b0840-7c49-4fb0-9e49-3940cf65c945",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "xaxis",
+                "type": "arrow",
+                "x1": 80,
+                "y1": 400,
+                "x2": 740,
+                "y2": 400,
+                "label": "x"
+              },
+              {
+                "id": "yaxis",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 450,
+                "x2": 400,
+                "y2": 50,
+                "label": "y"
+              },
+              {
+                "id": "xtickm2",
+                "type": "line",
+                "x1": 160,
+                "y1": 392,
+                "x2": 160,
+                "y2": 408
+              },
+              {
+                "id": "xtickm1",
+                "type": "line",
+                "x1": 280,
+                "y1": 392,
+                "x2": 280,
+                "y2": 408
+              },
+              {
+                "id": "xtick0",
+                "type": "line",
+                "x1": 400,
+                "y1": 392,
+                "x2": 400,
+                "y2": 408
+              },
+              {
+                "id": "xtick1",
+                "type": "line",
+                "x1": 520,
+                "y1": 392,
+                "x2": 520,
+                "y2": 408
+              },
+              {
+                "id": "xtick2",
+                "type": "line",
+                "x1": 640,
+                "y1": 392,
+                "x2": 640,
+                "y2": 408
+              },
+              {
+                "id": "ytick1",
+                "type": "line",
+                "x1": 392,
+                "y1": 320,
+                "x2": 408,
+                "y2": 320
+              },
+              {
+                "id": "ytick2",
+                "type": "line",
+                "x1": 392,
+                "y1": 240,
+                "x2": 408,
+                "y2": 240
+              },
+              {
+                "id": "ytick3",
+                "type": "line",
+                "x1": 392,
+                "y1": 160,
+                "x2": 408,
+                "y2": 160
+              },
+              {
+                "id": "ytick4",
+                "type": "line",
+                "x1": 392,
+                "y1": 80,
+                "x2": 408,
+                "y2": 80
+              },
+              {
+                "id": "xlabels",
+                "type": "text",
+                "x": 142,
+                "y": 414,
+                "width": 520,
+                "height": 28,
+                "text": "−2          −1           0           1           2",
+                "fontSize": 20
+              },
+              {
+                "id": "ylabels",
+                "type": "text",
+                "x": 355,
+                "y": 66,
+                "width": 35,
+                "height": 275,
+                "text": "4\n\n2\n\n1",
+                "fontSize": 18
+              },
+              {
+                "id": "origin",
+                "type": "text",
+                "x": 410,
+                "y": 407,
+                "width": 80,
+                "height": 28,
+                "text": "(0,0)",
+                "fontSize": 18
+              },
+              {
+                "id": "curve",
+                "type": "polyline",
+                "points": [
+                  [
+                    160,
+                    80
+                  ],
+                  [
+                    190,
+                    170
+                  ],
+                  [
+                    220,
+                    240
+                  ],
+                  [
+                    250,
+                    290
+                  ],
+                  [
+                    280,
+                    320
+                  ],
+                  [
+                    310,
+                    350
+                  ],
+                  [
+                    340,
+                    375
+                  ],
+                  [
+                    370,
+                    394
+                  ],
+                  [
+                    400,
+                    400
+                  ],
+                  [
+                    430,
+                    394
+                  ],
+                  [
+                    460,
+                    375
+                  ],
+                  [
+                    490,
+                    350
+                  ],
+                  [
+                    520,
+                    320
+                  ],
+                  [
+                    550,
+                    290
+                  ],
+                  [
+                    580,
+                    240
+                  ],
+                  [
+                    610,
+                    170
+                  ],
+                  [
+                    640,
+                    80
+                  ]
+                ],
+                "tone": "accent"
+              },
+              {
+                "id": "p1",
+                "type": "ellipse",
+                "x": 153,
+                "y": 73,
+                "width": 14,
+                "height": 14
+              },
+              {
+                "id": "p2",
+                "type": "ellipse",
+                "x": 273,
+                "y": 313,
+                "width": 14,
+                "height": 14
+              },
+              {
+                "id": "p3",
+                "type": "ellipse",
+                "x": 393,
+                "y": 393,
+                "width": 14,
+                "height": 14
+              },
+              {
+                "id": "p4",
+                "type": "ellipse",
+                "x": 513,
+                "y": 313,
+                "width": 14,
+                "height": 14
+              },
+              {
+                "id": "p5",
+                "type": "ellipse",
+                "x": 633,
+                "y": 73,
+                "width": 14,
+                "height": 14
+              },
+              {
+                "id": "eq",
+                "type": "math",
+                "x": 565,
+                "y": 115,
+                "width": 170,
+                "height": 35,
+                "text": "y=x^2",
+                "fontSize": 28
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "x\ny\n−2          −1           0           1           2\n4\n\n2\n\n1\n(0,0)\ny=x^2",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "math-parabola-before",
+      "scenario": "math-parabola",
+      "condition": "before",
+      "source": "For y=x^2, the five points are (-2,4), (-1,1), (0,0), (1,1), (2,4). The graph is symmetric about the vertical y axis. Its vertex is (0,0). The positive y direction is upward; x increases rightward.",
+      "request": "Sketch y = x squared from x = minus two to two, with axes, tick values and the origin clear. Use the supplied points accurately.",
+      "latencies": {
+        "firstTextMs": 870,
+        "speechCompleteMs": 974,
+        "completeMs": 4364
+      },
+      "status": "valid-board",
+      "inputCharacters": 586,
+      "usage": {
+        "units": {
+          "inputTokens": 2558,
+          "outputTokens": 527,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 165,
+          "reasoningTokens": 21
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here is the sketch using the five supplied points and clear axes.",
+        "board": {
+          "title": "Parabola graph",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "xaxis",
+                  "type": "arrow",
+                  "x1": 90,
+                  "y1": 400,
+                  "x2": 740,
+                  "y2": 400,
+                  "label": "x"
+                },
+                {
+                  "id": "yaxis",
+                  "type": "arrow",
+                  "x1": 400,
+                  "y1": 450,
+                  "x2": 400,
+                  "y2": 55,
+                  "label": "y"
+                },
+                {
+                  "id": "curve",
+                  "type": "polyline",
+                  "points": [
+                    [
+                      160,
+                      100
+                    ],
+                    [
+                      200,
+                      185
+                    ],
+                    [
+                      250,
+                      270
+                    ],
+                    [
+                      320,
+                      365
+                    ],
+                    [
+                      400,
+                      400
+                    ],
+                    [
+                      480,
+                      365
+                    ],
+                    [
+                      550,
+                      270
+                    ],
+                    [
+                      600,
+                      185
+                    ],
+                    [
+                      640,
+                      100
+                    ]
+                  ],
+                  "label": "y=x^2"
+                },
+                {
+                  "id": "pneg2",
+                  "type": "ellipse",
+                  "x": 152,
+                  "y": 92,
+                  "width": 16,
+                  "height": 16,
+                  "label": ""
+                },
+                {
+                  "id": "pneg1",
+                  "type": "ellipse",
+                  "x": 242,
+                  "y": 262,
+                  "width": 16,
+                  "height": 16,
+                  "label": ""
+                },
+                {
+                  "id": "p0",
+                  "type": "ellipse",
+                  "x": 392,
+                  "y": 392,
+                  "width": 16,
+                  "height": 16,
+                  "label": ""
+                },
+                {
+                  "id": "p1",
+                  "type": "ellipse",
+                  "x": 472,
+                  "y": 357,
+                  "width": 16,
+                  "height": 16,
+                  "label": ""
+                },
+                {
+                  "id": "p2",
+                  "type": "ellipse",
+                  "x": 632,
+                  "y": 92,
+                  "width": 16,
+                  "height": 16,
+                  "label": ""
+                },
+                {
+                  "id": "xticks",
+                  "type": "text",
+                  "x": 135,
+                  "y": 415,
+                  "width": 520,
+                  "height": 35,
+                  "text": "−2       −1        0        1       2",
+                  "fontSize": 20
+                },
+                {
+                  "id": "yticks",
+                  "type": "text",
+                  "x": 350,
+                  "y": 80,
+                  "width": 45,
+                  "height": 325,
+                  "text": "4\n\n\n\n\n1\n\n\n\n0",
+                  "fontSize": 20
+                },
+                {
+                  "id": "labels",
+                  "type": "text",
+                  "x": 105,
+                  "y": 45,
+                  "width": 600,
+                  "height": 45,
+                  "text": "(−2,4)                         (2,4)",
+                  "fontSize": 18
+                },
+                {
+                  "id": "vertex",
+                  "type": "text",
+                  "x": 410,
+                  "y": 415,
+                  "width": 125,
+                  "height": 30,
+                  "text": "vertex (0,0)",
+                  "fontSize": 18
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 854,
+          "totalMs": 4364,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Parabola graph",
+        "revision": "c520dced-0469-4af7-8dbe-29aef8dce15d",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "xaxis",
+                "type": "arrow",
+                "x1": 90,
+                "y1": 400,
+                "x2": 740,
+                "y2": 400,
+                "label": "x"
+              },
+              {
+                "id": "yaxis",
+                "type": "arrow",
+                "x1": 400,
+                "y1": 450,
+                "x2": 400,
+                "y2": 55,
+                "label": "y"
+              },
+              {
+                "id": "curve",
+                "type": "polyline",
+                "points": [
+                  [
+                    160,
+                    100
+                  ],
+                  [
+                    200,
+                    185
+                  ],
+                  [
+                    250,
+                    270
+                  ],
+                  [
+                    320,
+                    365
+                  ],
+                  [
+                    400,
+                    400
+                  ],
+                  [
+                    480,
+                    365
+                  ],
+                  [
+                    550,
+                    270
+                  ],
+                  [
+                    600,
+                    185
+                  ],
+                  [
+                    640,
+                    100
+                  ]
+                ],
+                "label": "y=x^2"
+              },
+              {
+                "id": "pneg2",
+                "type": "ellipse",
+                "x": 152,
+                "y": 92,
+                "width": 16,
+                "height": 16,
+                "label": ""
+              },
+              {
+                "id": "pneg1",
+                "type": "ellipse",
+                "x": 242,
+                "y": 262,
+                "width": 16,
+                "height": 16,
+                "label": ""
+              },
+              {
+                "id": "p0",
+                "type": "ellipse",
+                "x": 392,
+                "y": 392,
+                "width": 16,
+                "height": 16,
+                "label": ""
+              },
+              {
+                "id": "p1",
+                "type": "ellipse",
+                "x": 472,
+                "y": 357,
+                "width": 16,
+                "height": 16,
+                "label": ""
+              },
+              {
+                "id": "p2",
+                "type": "ellipse",
+                "x": 632,
+                "y": 92,
+                "width": 16,
+                "height": 16,
+                "label": ""
+              },
+              {
+                "id": "xticks",
+                "type": "text",
+                "x": 135,
+                "y": 415,
+                "width": 520,
+                "height": 35,
+                "text": "−2       −1        0        1       2",
+                "fontSize": 20
+              },
+              {
+                "id": "yticks",
+                "type": "text",
+                "x": 350,
+                "y": 80,
+                "width": 45,
+                "height": 325,
+                "text": "4\n\n\n\n\n1\n\n\n\n0",
+                "fontSize": 20
+              },
+              {
+                "id": "labels",
+                "type": "text",
+                "x": 105,
+                "y": 45,
+                "width": 600,
+                "height": 45,
+                "text": "(−2,4)                         (2,4)",
+                "fontSize": 18
+              },
+              {
+                "id": "vertex",
+                "type": "text",
+                "x": 410,
+                "y": 415,
+                "width": 125,
+                "height": 30,
+                "text": "vertex (0,0)",
+                "fontSize": 18
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "x\ny\ny=x^2\n−2       −1        0        1       2\n4\n\n\n\n\n1\n\n\n\n0\n(−2,4)                         (2,4)\nvertex (0,0)",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "probability-tree-before",
+      "scenario": "probability-tree",
+      "condition": "before",
+      "source": "Two independent tosses of a fair coin yield HH, HT, TH, TT. First toss branches to H and T with probability 1/2 each. From each first outcome the second toss branches to H and T with probability 1/2 each. Each final outcome has probability 1/4.",
+      "request": "Show a two-toss fair-coin tree with the outcome labels and branch probabilities. Keep each label readable.",
+      "latencies": {
+        "firstTextMs": 845,
+        "speechCompleteMs": 1030,
+        "completeMs": 4268
+      },
+      "status": "valid-board",
+      "inputCharacters": 614,
+      "usage": {
+        "units": {
+          "inputTokens": 2547,
+          "outputTokens": 581,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 154,
+          "reasoningTokens": 19
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the two-toss tree; each complete outcome has probability one quarter.",
+        "board": {
+          "title": "Coin toss tree",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "start",
+                  "type": "ellipse",
+                  "x": 55,
+                  "y": 215,
+                  "width": 100,
+                  "height": 60,
+                  "label": "Start"
+                },
+                {
+                  "id": "h1",
+                  "type": "ellipse",
+                  "x": 290,
+                  "y": 100,
+                  "width": 90,
+                  "height": 55,
+                  "label": "H"
+                },
+                {
+                  "id": "t1",
+                  "type": "ellipse",
+                  "x": 290,
+                  "y": 330,
+                  "width": 90,
+                  "height": 55,
+                  "label": "T"
+                },
+                {
+                  "id": "hh",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 35,
+                  "width": 110,
+                  "height": 50,
+                  "label": "HH   1/4"
+                },
+                {
+                  "id": "ht",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 150,
+                  "width": 110,
+                  "height": 50,
+                  "label": "HT   1/4"
+                },
+                {
+                  "id": "th",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 270,
+                  "width": 110,
+                  "height": 50,
+                  "label": "TH   1/4"
+                },
+                {
+                  "id": "tt",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 385,
+                  "width": 110,
+                  "height": 50,
+                  "label": "TT   1/4"
+                },
+                {
+                  "id": "a1",
+                  "type": "arrow",
+                  "x1": 155,
+                  "y1": 230,
+                  "x2": 290,
+                  "y2": 127,
+                  "label": "H: 1/2"
+                },
+                {
+                  "id": "a2",
+                  "type": "arrow",
+                  "x1": 155,
+                  "y1": 260,
+                  "x2": 290,
+                  "y2": 357,
+                  "label": "T: 1/2"
+                },
+                {
+                  "id": "b1",
+                  "type": "arrow",
+                  "x1": 380,
+                  "y1": 116,
+                  "x2": 610,
+                  "y2": 60,
+                  "label": "H: 1/2"
+                },
+                {
+                  "id": "b2",
+                  "type": "arrow",
+                  "x1": 380,
+                  "y1": 140,
+                  "x2": 610,
+                  "y2": 175,
+                  "label": "T: 1/2"
+                },
+                {
+                  "id": "b3",
+                  "type": "arrow",
+                  "x1": 380,
+                  "y1": 345,
+                  "x2": 610,
+                  "y2": 295,
+                  "label": "H: 1/2"
+                },
+                {
+                  "id": "b4",
+                  "type": "arrow",
+                  "x1": 380,
+                  "y1": 370,
+                  "x2": 610,
+                  "y2": 410,
+                  "label": "T: 1/2"
+                },
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 80,
+                  "y": 455,
+                  "width": 650,
+                  "height": 30,
+                  "text": "Multiply along a path: 1/2 × 1/2 = 1/4.",
+                  "fontSize": 22
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 826,
+          "totalMs": 4268,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Coin toss tree",
+        "revision": "b0ea1d9c-b2e7-4e2e-ad7f-4d26829d11b7",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "start",
+                "type": "ellipse",
+                "x": 55,
+                "y": 215,
+                "width": 100,
+                "height": 60,
+                "label": "Start"
+              },
+              {
+                "id": "h1",
+                "type": "ellipse",
+                "x": 290,
+                "y": 100,
+                "width": 90,
+                "height": 55,
+                "label": "H"
+              },
+              {
+                "id": "t1",
+                "type": "ellipse",
+                "x": 290,
+                "y": 330,
+                "width": 90,
+                "height": 55,
+                "label": "T"
+              },
+              {
+                "id": "hh",
+                "type": "rect",
+                "x": 610,
+                "y": 35,
+                "width": 110,
+                "height": 50,
+                "label": "HH   1/4"
+              },
+              {
+                "id": "ht",
+                "type": "rect",
+                "x": 610,
+                "y": 150,
+                "width": 110,
+                "height": 50,
+                "label": "HT   1/4"
+              },
+              {
+                "id": "th",
+                "type": "rect",
+                "x": 610,
+                "y": 270,
+                "width": 110,
+                "height": 50,
+                "label": "TH   1/4"
+              },
+              {
+                "id": "tt",
+                "type": "rect",
+                "x": 610,
+                "y": 385,
+                "width": 110,
+                "height": 50,
+                "label": "TT   1/4"
+              },
+              {
+                "id": "a1",
+                "type": "arrow",
+                "x1": 155,
+                "y1": 230,
+                "x2": 290,
+                "y2": 127,
+                "label": "H: 1/2"
+              },
+              {
+                "id": "a2",
+                "type": "arrow",
+                "x1": 155,
+                "y1": 260,
+                "x2": 290,
+                "y2": 357,
+                "label": "T: 1/2"
+              },
+              {
+                "id": "b1",
+                "type": "arrow",
+                "x1": 380,
+                "y1": 116,
+                "x2": 610,
+                "y2": 60,
+                "label": "H: 1/2"
+              },
+              {
+                "id": "b2",
+                "type": "arrow",
+                "x1": 380,
+                "y1": 140,
+                "x2": 610,
+                "y2": 175,
+                "label": "T: 1/2"
+              },
+              {
+                "id": "b3",
+                "type": "arrow",
+                "x1": 380,
+                "y1": 345,
+                "x2": 610,
+                "y2": 295,
+                "label": "H: 1/2"
+              },
+              {
+                "id": "b4",
+                "type": "arrow",
+                "x1": 380,
+                "y1": 370,
+                "x2": 610,
+                "y2": 410,
+                "label": "T: 1/2"
+              },
+              {
+                "id": "note",
+                "type": "text",
+                "x": 80,
+                "y": 455,
+                "width": 650,
+                "height": 30,
+                "text": "Multiply along a path: 1/2 × 1/2 = 1/4.",
+                "fontSize": 22
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Start\nH\nT\nHH   1/4\nHT   1/4\nTH   1/4\nTT   1/4\nH: 1/2\nT: 1/2\nH: 1/2\nT: 1/2\nH: 1/2\nT: 1/2\nMultiply along a path: 1/2 × 1/2 = 1/4.",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "probability-tree-current",
+      "scenario": "probability-tree",
+      "condition": "current",
+      "source": "Two independent tosses of a fair coin yield HH, HT, TH, TT. First toss branches to H and T with probability 1/2 each. From each first outcome the second toss branches to H and T with probability 1/2 each. Each final outcome has probability 1/4.",
+      "request": "Show a two-toss fair-coin tree with the outcome labels and branch probabilities. Keep each label readable.",
+      "latencies": {
+        "firstTextMs": 848,
+        "speechCompleteMs": 1020,
+        "completeMs": 4095
+      },
+      "status": "valid-board",
+      "inputCharacters": 614,
+      "usage": {
+        "units": {
+          "inputTokens": 2611,
+          "outputTokens": 589,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 154,
+          "reasoningTokens": 20
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the two-toss tree, with each branch labeled by its probability.",
+        "board": {
+          "title": "Two fair coin tosses",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "world",
+              "type": "scene",
+              "width": 800,
+              "height": 500,
+              "objects": [
+                {
+                  "id": "start",
+                  "type": "ellipse",
+                  "x": 55,
+                  "y": 210,
+                  "width": 90,
+                  "height": 55,
+                  "label": "Start"
+                },
+                {
+                  "id": "h1",
+                  "type": "ellipse",
+                  "x": 285,
+                  "y": 105,
+                  "width": 75,
+                  "height": 50,
+                  "label": "H"
+                },
+                {
+                  "id": "t1",
+                  "type": "ellipse",
+                  "x": 285,
+                  "y": 335,
+                  "width": 75,
+                  "height": 50,
+                  "label": "T"
+                },
+                {
+                  "id": "hh",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 45,
+                  "width": 105,
+                  "height": 48,
+                  "label": "HH  (1/4)"
+                },
+                {
+                  "id": "ht",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 155,
+                  "width": 105,
+                  "height": 48,
+                  "label": "HT  (1/4)"
+                },
+                {
+                  "id": "th",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 285,
+                  "width": 105,
+                  "height": 48,
+                  "label": "TH  (1/4)"
+                },
+                {
+                  "id": "tt",
+                  "type": "rect",
+                  "x": 610,
+                  "y": 395,
+                  "width": 105,
+                  "height": 48,
+                  "label": "TT  (1/4)"
+                },
+                {
+                  "id": "a1",
+                  "type": "arrow",
+                  "x1": 145,
+                  "y1": 225,
+                  "x2": 285,
+                  "y2": 130,
+                  "label": "H, 1/2"
+                },
+                {
+                  "id": "a2",
+                  "type": "arrow",
+                  "x1": 145,
+                  "y1": 250,
+                  "x2": 285,
+                  "y2": 360,
+                  "label": "T, 1/2"
+                },
+                {
+                  "id": "a3",
+                  "type": "arrow",
+                  "x1": 360,
+                  "y1": 120,
+                  "x2": 610,
+                  "y2": 70,
+                  "label": "H, 1/2"
+                },
+                {
+                  "id": "a4",
+                  "type": "arrow",
+                  "x1": 360,
+                  "y1": 140,
+                  "x2": 610,
+                  "y2": 180,
+                  "label": "T, 1/2"
+                },
+                {
+                  "id": "a5",
+                  "type": "arrow",
+                  "x1": 360,
+                  "y1": 350,
+                  "x2": 610,
+                  "y2": 310,
+                  "label": "H, 1/2"
+                },
+                {
+                  "id": "a6",
+                  "type": "arrow",
+                  "x1": 360,
+                  "y1": 370,
+                  "x2": 610,
+                  "y2": 420,
+                  "label": "T, 1/2"
+                },
+                {
+                  "id": "note",
+                  "type": "text",
+                  "x": 45,
+                  "y": 20,
+                  "width": 620,
+                  "height": 28,
+                  "text": "Each outcome path has probability: (1/2)(1/2) = 1/4",
+                  "fontSize": 22
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 828,
+          "totalMs": 4094,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Two fair coin tosses",
+        "revision": "8fa8bfd7-3509-499c-953a-b7f076a7eb0a",
+        "blocks": [
+          {
+            "id": "world",
+            "type": "scene",
+            "width": 800,
+            "height": 500,
+            "objects": [
+              {
+                "id": "start",
+                "type": "ellipse",
+                "x": 55,
+                "y": 210,
+                "width": 90,
+                "height": 55,
+                "label": "Start"
+              },
+              {
+                "id": "h1",
+                "type": "ellipse",
+                "x": 285,
+                "y": 105,
+                "width": 75,
+                "height": 50,
+                "label": "H"
+              },
+              {
+                "id": "t1",
+                "type": "ellipse",
+                "x": 285,
+                "y": 335,
+                "width": 75,
+                "height": 50,
+                "label": "T"
+              },
+              {
+                "id": "hh",
+                "type": "rect",
+                "x": 610,
+                "y": 45,
+                "width": 105,
+                "height": 48,
+                "label": "HH  (1/4)"
+              },
+              {
+                "id": "ht",
+                "type": "rect",
+                "x": 610,
+                "y": 155,
+                "width": 105,
+                "height": 48,
+                "label": "HT  (1/4)"
+              },
+              {
+                "id": "th",
+                "type": "rect",
+                "x": 610,
+                "y": 285,
+                "width": 105,
+                "height": 48,
+                "label": "TH  (1/4)"
+              },
+              {
+                "id": "tt",
+                "type": "rect",
+                "x": 610,
+                "y": 395,
+                "width": 105,
+                "height": 48,
+                "label": "TT  (1/4)"
+              },
+              {
+                "id": "a1",
+                "type": "arrow",
+                "x1": 145,
+                "y1": 225,
+                "x2": 285,
+                "y2": 130,
+                "label": "H, 1/2"
+              },
+              {
+                "id": "a2",
+                "type": "arrow",
+                "x1": 145,
+                "y1": 250,
+                "x2": 285,
+                "y2": 360,
+                "label": "T, 1/2"
+              },
+              {
+                "id": "a3",
+                "type": "arrow",
+                "x1": 360,
+                "y1": 120,
+                "x2": 610,
+                "y2": 70,
+                "label": "H, 1/2"
+              },
+              {
+                "id": "a4",
+                "type": "arrow",
+                "x1": 360,
+                "y1": 140,
+                "x2": 610,
+                "y2": 180,
+                "label": "T, 1/2"
+              },
+              {
+                "id": "a5",
+                "type": "arrow",
+                "x1": 360,
+                "y1": 350,
+                "x2": 610,
+                "y2": 310,
+                "label": "H, 1/2"
+              },
+              {
+                "id": "a6",
+                "type": "arrow",
+                "x1": 360,
+                "y1": 370,
+                "x2": 610,
+                "y2": 420,
+                "label": "T, 1/2"
+              },
+              {
+                "id": "note",
+                "type": "text",
+                "x": 45,
+                "y": 20,
+                "width": 620,
+                "height": 28,
+                "text": "Each outcome path has probability: (1/2)(1/2) = 1/4",
+                "fontSize": 22
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Start\nH\nT\nHH  (1/4)\nHT  (1/4)\nTH  (1/4)\nTT  (1/4)\nH, 1/2\nT, 1/2\nH, 1/2\nT, 1/2\nH, 1/2\nT, 1/2\nEach outcome path has probability: (1/2)(1/2) = 1/4",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "game-table-current",
+      "scenario": "game-table",
+      "condition": "current",
+      "source": "Row player strategies are Up and Down. Column player strategies are Left and Right. In row-major order the payoffs are (3,2), (0,1), (1,0), (2,3). These are the complete given payoffs.",
+      "request": "Show this two-by-two payoff matrix clearly, with row and column strategy labels. Leave it as a problem setup and do not mark an equilibrium.",
+      "latencies": {
+        "firstTextMs": 695,
+        "speechCompleteMs": 951,
+        "completeMs": 1978
+      },
+      "status": "valid-board",
+      "inputCharacters": 582,
+      "usage": {
+        "units": {
+          "inputTokens": 2606,
+          "outputTokens": 213,
+          "cachedInputTokens": 2454,
+          "cacheWriteTokens": 149,
+          "reasoningTokens": 23
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the complete payoff matrix; each ordered pair is row player first, column player second.",
+        "board": {
+          "title": "Payoff matrix",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "game-grid",
+              "type": "matrix",
+              "label": "Column player",
+              "rowLabels": [
+                "Up",
+                "Down"
+              ],
+              "columnLabels": [
+                "Left",
+                "Right"
+              ],
+              "rows": [
+                [
+                  "(3,2)",
+                  "(0,1)"
+                ],
+                [
+                  "(1,0)",
+                  "(2,3)"
+                ]
+              ]
+            },
+            {
+              "id": "key",
+              "type": "text",
+              "content": "Row player chooses Up or Down. Column player chooses Left or Right.\nPayoffs: (row player, column player)."
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 684,
+          "totalMs": 1978,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff matrix",
+        "revision": "09b68efe-5606-41cc-808a-de1ea8068ec4",
+        "blocks": [
+          {
+            "id": "game-grid",
+            "type": "matrix",
+            "label": "Column player",
+            "rowLabels": [
+              "Up",
+              "Down"
+            ],
+            "columnLabels": [
+              "Left",
+              "Right"
+            ],
+            "rows": [
+              [
+                "(3,2)",
+                "(0,1)"
+              ],
+              [
+                "(1,0)",
+                "(2,3)"
+              ]
+            ]
+          },
+          {
+            "id": "key",
+            "type": "text",
+            "content": "Row player chooses Up or Down. Column player chooses Left or Right.\nPayoffs: (row player, column player)."
+          }
+        ]
+      },
+      "visibleText": "Column player\nLeft | Right\nUp | (3,2) | (0,1)\nDown | (1,0) | (2,3)\nRow player chooses Up or Down. Column player chooses Left or Right.\nPayoffs: (row player, column player).",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "game-table-before",
+      "scenario": "game-table",
+      "condition": "before",
+      "source": "Row player strategies are Up and Down. Column player strategies are Left and Right. In row-major order the payoffs are (3,2), (0,1), (1,0), (2,3). These are the complete given payoffs.",
+      "request": "Show this two-by-two payoff matrix clearly, with row and column strategy labels. Leave it as a problem setup and do not mark an equilibrium.",
+      "latencies": {
+        "firstTextMs": 1167,
+        "speechCompleteMs": 1324,
+        "completeMs": 2187
+      },
+      "status": "valid-board",
+      "inputCharacters": 582,
+      "usage": {
+        "units": {
+          "inputTokens": 2542,
+          "outputTokens": 185,
+          "cachedInputTokens": 2390,
+          "cacheWriteTokens": 149,
+          "reasoningTokens": 27
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here is the complete payoff matrix, with the row player’s payoff listed first in each cell.",
+        "board": {
+          "title": "Payoff matrix",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "grid",
+              "type": "matrix",
+              "rowLabels": [
+                "Up",
+                "Down"
+              ],
+              "columnLabels": [
+                "Left",
+                "Right"
+              ],
+              "label": "Row player × Column player",
+              "rows": [
+                [
+                  "(3, 2)",
+                  "(0, 1)"
+                ],
+                [
+                  "(1, 0)",
+                  "(2, 3)"
+                ]
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1151,
+          "totalMs": 2187,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Payoff matrix",
+        "revision": "8bd24553-ca69-4b6f-86eb-8ae405d4d71b",
+        "blocks": [
+          {
+            "id": "grid",
+            "type": "matrix",
+            "rowLabels": [
+              "Up",
+              "Down"
+            ],
+            "columnLabels": [
+              "Left",
+              "Right"
+            ],
+            "label": "Row player × Column player",
+            "rows": [
+              [
+                "(3, 2)",
+                "(0, 1)"
+              ],
+              [
+                "(1, 0)",
+                "(2, 3)"
+              ]
+            ]
+          }
+        ]
+      },
+      "visibleText": "Row player × Column player\nLeft | Right\nUp | (3, 2) | (0, 1)\nDown | (1, 0) | (2, 3)",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    }
+  ],
+  "finishedAt": "2026-10-02T09:21:35.895Z"
+}

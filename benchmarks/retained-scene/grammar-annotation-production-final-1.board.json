@@ -1,0 +1,84 @@
+{
+  "title": "Clause annotation",
+  "revision": "907f26ae-32d7-46b8-889c-66c4ce493b5e",
+  "blocks": [
+    {
+      "id": "world",
+      "type": "scene",
+      "width": 800,
+      "height": 300,
+      "objects": [
+        {
+          "id": "sentence",
+          "type": "text",
+          "x": 55,
+          "y": 80,
+          "width": 690,
+          "height": 45,
+          "text": "Although it was raining, Maya walked to class.",
+          "fontSize": 28
+        },
+        {
+          "id": "dependent-underline",
+          "type": "line",
+          "x1": 55,
+          "y1": 132,
+          "x2": 365,
+          "y2": 132,
+          "label": "dependent clause"
+        },
+        {
+          "id": "main-underline",
+          "type": "line",
+          "x1": 382,
+          "y1": 132,
+          "x2": 700,
+          "y2": 132,
+          "label": "main clause"
+        },
+        {
+          "id": "dependent-label",
+          "type": "text",
+          "x": 105,
+          "y": 175,
+          "width": 220,
+          "height": 30,
+          "text": "dependent clause",
+          "fontSize": 22
+        },
+        {
+          "id": "main-label",
+          "type": "text",
+          "x": 450,
+          "y": 175,
+          "width": 180,
+          "height": 30,
+          "text": "main clause",
+          "fontSize": 22
+        }
+      ],
+      "zones": [
+        {
+          "id": "dependent-clause",
+          "label": "dependent clause",
+          "anchor": {
+            "kind": "object",
+            "id": "sentence",
+            "quote": "Although it was raining",
+            "occurrence": 0
+          }
+        },
+        {
+          "id": "main-clause",
+          "label": "main clause",
+          "anchor": {
+            "kind": "object",
+            "id": "sentence",
+            "quote": "Maya walked to class.",
+            "occurrence": 0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1096 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-02T08:42:32.079Z",
+  "liveProviders": true,
+  "model": "gpt-6-luna",
+  "budget": {
+    "maximumPaidRequests": 3,
+    "paidRequests": 3
+  },
+  "sources": [
+    {
+      "id": "econ2801-pset3",
+      "name": "Problem Set 3 Econ 2801 2026.pdf",
+      "pdfSha256": "10ec2c3dfc64a9e8063d19aab395560274228a79ed672a7f6da5d9b5e623f24a",
+      "pdfBytes": 107943,
+      "pages": 2,
+      "characters": 4366,
+      "textSha256": "d94a37363ae233857bf07ac58b06cdab5df9ef72a699829fd9d16e274e6cb32b",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset2-solutions",
+      "name": "Problem_Set_2_Detailed_Answer_Discussion_Fall_2026_ECON_2801.pdf",
+      "pdfSha256": "637afcb2362a123dd12012a6209a8299d01ef308ddbb413542509e7e56640f43",
+      "pdfBytes": 108259,
+      "pages": 5,
+      "characters": 10412,
+      "textSha256": "36cd2e9f6e2dc94a2e52f4b1cf5bd6d018b34d7e2e33cc25c26f05c2bfb1ec8a",
+      "chunks": 1
+    },
+    {
+      "id": "econ2801-pset5-solutions",
+      "name": "Solution_Problem_Set_5_Fall_2026_ECON_2801__Corrected_.pdf",
+      "pdfSha256": "949198239c729af4f88de8fbe2512fa368f62d489b999e5615c26f299a0d31cf",
+      "pdfBytes": 115074,
+      "pages": 6,
+      "characters": 10903,
+      "textSha256": "de4a2823ba09d3eed1c8936cb6cc689b00e2112d5ae63f994450db880ee2e180",
+      "chunks": 1
+    }
+  ],
+  "totalCharacters": 25681,
+  "codeHashes": {
+    "server/indexing.mjs": "6e958bbee92f7e5d942d39aa1746bc8987433a3cf930e04a53de97afc2ce502e",
+    "server/index-citations.mjs": "c7f972ab1f7fe73788a29093df254d24c66394ee241b4998f5c4bf84c77c3bf1",
+    "server/api.mjs": "d5cca4acb0f84694860512a16a6ebe9491b5089ab97a2f8d7ad81d03bb477aa8",
+    "server/openai-luna.mjs": "10b77b58ade0f834c9c8b65de1aadf5e5b0be7d6cfc1a2627d1e70a34de7f7b5"
+  },
+  "settings": {
+    "concurrency": 5,
+    "directChars": 32000,
+    "chunkChars": 18000,
+    "batchChars": 22000
+  },
+  "trials": [
+    {
+      "round": 1,
+      "testId": "9b99259f-24ae-465c-ac45-b6c5e407b570",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-direct",
+          "startedMs": 0.7,
+          "inputBytes": 26692,
+          "inputSha256": "29f30db1f1494a36ebf62ce3acd0447335a8a845ce5cf837e4b8074500ffffe4",
+          "instructionSha256": "936dcfb11fd68a35f9f33094d699a3cc148cfce972c0b41ceed431dbbf3ed0a6",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 25681,
+          "status": "completed",
+          "usage": {
+            "units": {
+              "inputTokens": 7370,
+              "outputTokens": 622,
+              "cachedInputTokens": 0,
+              "cacheWriteTokens": 7367,
+              "reasoningTokens": 0
+            },
+            "model": "gpt-6-luna",
+            "serviceTier": "default"
+          },
+          "estimatedCost": {
+            "usd": 0.001232175,
+            "rateId": "openai-gpt-6-luna-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "result": {
+            "overview": "Materials cover Nash and strict equilibria, best responses, strategic transformations, location games, sequential and repeated-game reasoning. Problem Set 3 supplies questions without solutions; topics drawn from it describe prompts, not established answers.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash strategy pair gives each player a best response; strict Nash requires a strictly best response. In an m×n game, the number of strict equilibria is at most min(m,n), since each opposing strategy permits at most one strict best response. Examples include all outcomes being Nash and a zero-sum game having equilibria.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preferences",
+                "summary": "The materials contrast standard Traveler’s Dilemma reasoning with choices motivated by bounded reasoning or regret. Problem Set 3 asks how equilibria change when both players, or only one, maximize total payoff; its solutions are not supplied.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Location and coordination games",
+                "summary": "Vendor-location prompts consider uniform populations, three vendors, and four discrete apartment locations. A supplied solution says endpoint–middle–endpoint locations are not a Nash equilibrium; for a chopped triangular city, no equilibrium exists because no central point bisects the population in every direction. Coordination prompts include Assurance and meeting games.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Sequential and repeated-game reasoning",
+                "summary": "Backward induction predicts outcomes in sequential Hawk–Dove and finite repeated games. For the supplied infinitely repeated Prisoner’s Dilemma, trigger-strategy cooperation requires δ ≥ 1/5; infinite Centipede examples show both always-Pass and always-Keep can be Nash equilibria under the stated payoffs.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Hawk–Dove and strategic commitment",
+                "summary": "The supplied Hawk–Dove game has Nash equilibria (H,D) and (D,H); sequential play with player 1 moving first leads to (H,D) by backward induction. A solution frames the Cuban missile crisis as strategic advantage from announcing a threatening stance first.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Payoff transformations and Prisoner’s Dilemma",
+                "summary": "Multiplying a player’s payoffs by a positive constant or adding a constant preserves that player’s payoff rankings and Nash equilibria. Problem Set 3 asks which x values make a displayed game a Prisoner’s Dilemma or Assurance Game, but provides no answers.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 6329.4,
+          "durationMs": 6328.7
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.6,
+          "type": "index.direct.started",
+          "details": {
+            "requestId": "dc552605-bfc0-47d8-8b7e-9482ee1e30f9",
+            "sourceCount": 3,
+            "characters": 25681
+          }
+        },
+        {
+          "atMs": 1,
+          "type": "llm.background-started",
+          "details": {
+            "requestId": "11592eda-b51f-47ce-ac55-16360a6fbadd",
+            "operation": "index-direct",
+            "model": "gpt-6-luna"
+          }
+        },
+        {
+          "atMs": 6329.4,
+          "type": "llm.background-completed",
+          "details": {
+            "requestId": "11592eda-b51f-47ce-ac55-16360a6fbadd",
+            "operation": "index-direct",
+            "model": "gpt-6-luna",
+            "latencyMs": 6328
+          }
+        },
+        {
+          "atMs": 6333.7,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "dedcd1c5-7a1b-491d-92de-b77f129a97ca",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.1,
+          "status": "ready",
+          "durationMs": 6330,
+          "topicOnly": true,
+          "topicCount": 6,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Materials cover Nash and strict equilibria, best responses, strategic transformations, location games, sequential and repeated-game reasoning. Problem Set 3 supplies questions without solutions; topics drawn from it describe prompts, not established answers.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash strategy pair gives each player a best response; strict Nash requires a strictly best response. In an m×n game, the number of strict equilibria is at most min(m,n), since each opposing strategy permits at most one strict best response. Examples include all outcomes being Nash and a zero-sum game having equilibria.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preferences",
+                "summary": "The materials contrast standard Traveler’s Dilemma reasoning with choices motivated by bounded reasoning or regret. Problem Set 3 asks how equilibria change when both players, or only one, maximize total payoff; its solutions are not supplied.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Location and coordination games",
+                "summary": "Vendor-location prompts consider uniform populations, three vendors, and four discrete apartment locations. A supplied solution says endpoint–middle–endpoint locations are not a Nash equilibrium; for a chopped triangular city, no equilibrium exists because no central point bisects the population in every direction. Coordination prompts include Assurance and meeting games.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Sequential and repeated-game reasoning",
+                "summary": "Backward induction predicts outcomes in sequential Hawk–Dove and finite repeated games. For the supplied infinitely repeated Prisoner’s Dilemma, trigger-strategy cooperation requires δ ≥ 1/5; infinite Centipede examples show both always-Pass and always-Keep can be Nash equilibria under the stated payoffs.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Hawk–Dove and strategic commitment",
+                "summary": "The supplied Hawk–Dove game has Nash equilibria (H,D) and (D,H); sequential play with player 1 moving first leads to (H,D) by backward induction. A solution frames the Cuban missile crisis as strategic advantage from announcing a threatening stance first.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Payoff transformations and Prisoner’s Dilemma",
+                "summary": "Multiplying a player’s payoffs by a positive constant or adding a constant preserves that player’s payoff rankings and Nash equilibria. Problem Set 3 asks which x values make a displayed game a Prisoner’s Dilemma or Assurance Game, but provides no answers.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 1,
+          "events": [
+            {
+              "atMs": 0.6,
+              "type": "index.direct.started",
+              "details": {
+                "requestId": "dc552605-bfc0-47d8-8b7e-9482ee1e30f9",
+                "sourceCount": 3,
+                "characters": 25681
+              }
+            },
+            {
+              "atMs": 1,
+              "type": "llm.background-started",
+              "details": {
+                "requestId": "11592eda-b51f-47ce-ac55-16360a6fbadd",
+                "operation": "index-direct",
+                "model": "gpt-6-luna"
+              }
+            },
+            {
+              "atMs": 6329.4,
+              "type": "llm.background-completed",
+              "details": {
+                "requestId": "11592eda-b51f-47ce-ac55-16360a6fbadd",
+                "operation": "index-direct",
+                "model": "gpt-6-luna",
+                "latencyMs": 6328
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 2804,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 6333,
+          "status": "ready",
+          "durationMs": 0.8,
+          "topicOnly": true,
+          "topicCount": 6,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Materials cover Nash and strict equilibria, best responses, strategic transformations, location games, sequential and repeated-game reasoning. Problem Set 3 supplies questions without solutions; topics drawn from it describe prompts, not established answers.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash strategy pair gives each player a best response; strict Nash requires a strictly best response. In an m×n game, the number of strict equilibria is at most min(m,n), since each opposing strategy permits at most one strict best response. Examples include all outcomes being Nash and a zero-sum game having equilibria.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preferences",
+                "summary": "The materials contrast standard Traveler’s Dilemma reasoning with choices motivated by bounded reasoning or regret. Problem Set 3 asks how equilibria change when both players, or only one, maximize total payoff; its solutions are not supplied.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Location and coordination games",
+                "summary": "Vendor-location prompts consider uniform populations, three vendors, and four discrete apartment locations. A supplied solution says endpoint–middle–endpoint locations are not a Nash equilibrium; for a chopped triangular city, no equilibrium exists because no central point bisects the population in every direction. Coordination prompts include Assurance and meeting games.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Sequential and repeated-game reasoning",
+                "summary": "Backward induction predicts outcomes in sequential Hawk–Dove and finite repeated games. For the supplied infinitely repeated Prisoner’s Dilemma, trigger-strategy cooperation requires δ ≥ 1/5; infinite Centipede examples show both always-Pass and always-Keep can be Nash equilibria under the stated payoffs.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Hawk–Dove and strategic commitment",
+                "summary": "The supplied Hawk–Dove game has Nash equilibria (H,D) and (D,H); sequential play with player 1 moving first leads to (H,D) by backward induction. A solution frames the Cuban missile crisis as strategic advantage from announcing a threatening stance first.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Payoff transformations and Prisoner’s Dilemma",
+                "summary": "Multiplying a player’s payoffs by a positive constant or adding a constant preserves that player’s payoff rankings and Nash equilibria. Problem Set 3 asks which x values make a displayed game a Prisoner’s Dilemma or Assurance Game, but provides no answers.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 6333.7,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "dedcd1c5-7a1b-491d-92de-b77f129a97ca",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 2804,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 1
+    },
+    {
+      "round": 2,
+      "testId": "46b5e0e2-588f-4a89-9f6c-ff9a6c911bb4",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-direct",
+          "startedMs": 0.6,
+          "inputBytes": 26692,
+          "inputSha256": "a6c54044fb449f03750c85b0282029fe6945339337279d46b346c564d71dfa1b",
+          "instructionSha256": "936dcfb11fd68a35f9f33094d699a3cc148cfce972c0b41ceed431dbbf3ed0a6",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 25681,
+          "status": "completed",
+          "usage": {
+            "units": {
+              "inputTokens": 7377,
+              "outputTokens": 587,
+              "cachedInputTokens": 0,
+              "cacheWriteTokens": 7374,
+              "reasoningTokens": 0
+            },
+            "model": "gpt-6-luna",
+            "serviceTier": "default"
+          },
+          "estimatedCost": {
+            "usd": 0.00121555,
+            "rateId": "openai-gpt-6-luna-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "result": {
+            "overview": "Materials cover Nash and strict Nash equilibria, best responses, strategic transformations, location games, sequential reasoning, and repeated-game cooperation. Pset 3 poses several problems without solutions; its specific equilibrium answers are not supplied.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash profile gives each player a best response; strict Nash requires a strictly best response. In an m×n two-player game, there can be at most min(m,n) strict Nash equilibria; examples include all profiles being Nash in a constant-payoff game.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preference changes",
+                "summary": "The materials discuss standard Traveler’s Dilemma reasoning and an even-integer variant: every equal-bid profile is Nash, while (2,2) is the unique strict Nash equilibrium. Pset 3 asks how utilitarian preferences change equilibria, but provides no solutions.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Coordination, Hawk–Dove, and Prisoner’s Dilemma",
+                "summary": "Hawk–Dove has equilibria (H,D) and (D,H); adding M in the supplied variant also makes (M,M) Nash, and only (M,M) is strict. Repeated PD solutions use trigger strategies, with cooperation requiring δ ≥ 1/5 in the stated game.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Location and vendor games",
+                "summary": "Vendor incentives depend on the population’s spatial distribution. The supplied solutions rule out the endpoint–middle–endpoint arrangement on a uniform line and find no equilibrium for the chopped-triangle city; Pset 3 asks about three vendors and four discrete locations without solutions.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Sequential and repeated-game reasoning",
+                "summary": "Backward induction predicts outcomes in the sequential Hawk–Dove game and finite repeated PD; the supplied infinite Centipede example has both all-Pass and all-Keep Nash equilibria. The materials also note that limited reasoning or regret concerns may conflict with formal predictions.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Payoff transformations and zero-sum games",
+                "summary": "Positive affine transformations of each player’s payoffs preserve Nash equilibria. Zero-sum games can have Nash equilibria, including every outcome when all payoffs are (0,0).",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 5110.8,
+          "durationMs": 5110.2
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.5,
+          "type": "index.direct.started",
+          "details": {
+            "requestId": "d94b1922-ad32-4ba5-a26c-39dd43514509",
+            "sourceCount": 3,
+            "characters": 25681
+          }
+        },
+        {
+          "atMs": 1.6,
+          "type": "llm.background-started",
+          "details": {
+            "requestId": "d9e889e5-b74a-41fc-aa9f-a091a52c31a9",
+            "operation": "index-direct",
+            "model": "gpt-6-luna"
+          }
+        },
+        {
+          "atMs": 5110.8,
+          "type": "llm.background-completed",
+          "details": {
+            "requestId": "d9e889e5-b74a-41fc-aa9f-a091a52c31a9",
+            "operation": "index-direct",
+            "model": "gpt-6-luna",
+            "latencyMs": 5109
+          }
+        },
+        {
+          "atMs": 5113.3,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "b2d97b03-9b72-4afc-a734-bf20353e728e",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.2,
+          "status": "ready",
+          "durationMs": 5111,
+          "topicOnly": true,
+          "topicCount": 6,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Materials cover Nash and strict Nash equilibria, best responses, strategic transformations, location games, sequential reasoning, and repeated-game cooperation. Pset 3 poses several problems without solutions; its specific equilibrium answers are not supplied.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash profile gives each player a best response; strict Nash requires a strictly best response. In an m×n two-player game, there can be at most min(m,n) strict Nash equilibria; examples include all profiles being Nash in a constant-payoff game.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preference changes",
+                "summary": "The materials discuss standard Traveler’s Dilemma reasoning and an even-integer variant: every equal-bid profile is Nash, while (2,2) is the unique strict Nash equilibrium. Pset 3 asks how utilitarian preferences change equilibria, but provides no solutions.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Coordination, Hawk–Dove, and Prisoner’s Dilemma",
+                "summary": "Hawk–Dove has equilibria (H,D) and (D,H); adding M in the supplied variant also makes (M,M) Nash, and only (M,M) is strict. Repeated PD solutions use trigger strategies, with cooperation requiring δ ≥ 1/5 in the stated game.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Location and vendor games",
+                "summary": "Vendor incentives depend on the population’s spatial distribution. The supplied solutions rule out the endpoint–middle–endpoint arrangement on a uniform line and find no equilibrium for the chopped-triangle city; Pset 3 asks about three vendors and four discrete locations without solutions.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Sequential and repeated-game reasoning",
+                "summary": "Backward induction predicts outcomes in the sequential Hawk–Dove game and finite repeated PD; the supplied infinite Centipede example has both all-Pass and all-Keep Nash equilibria. The materials also note that limited reasoning or regret concerns may conflict with formal predictions.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Payoff transformations and zero-sum games",
+                "summary": "Positive affine transformations of each player’s payoffs preserve Nash equilibria. Zero-sum games can have Nash equilibria, including every outcome when all payoffs are (0,0).",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 1,
+          "events": [
+            {
+              "atMs": 0.5,
+              "type": "index.direct.started",
+              "details": {
+                "requestId": "d94b1922-ad32-4ba5-a26c-39dd43514509",
+                "sourceCount": 3,
+                "characters": 25681
+              }
+            },
+            {
+              "atMs": 1.6,
+              "type": "llm.background-started",
+              "details": {
+                "requestId": "d9e889e5-b74a-41fc-aa9f-a091a52c31a9",
+                "operation": "index-direct",
+                "model": "gpt-6-luna"
+              }
+            },
+            {
+              "atMs": 5110.8,
+              "type": "llm.background-completed",
+              "details": {
+                "requestId": "d9e889e5-b74a-41fc-aa9f-a091a52c31a9",
+                "operation": "index-direct",
+                "model": "gpt-6-luna",
+                "latencyMs": 5109
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 2511,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 5112.9,
+          "status": "ready",
+          "durationMs": 0.5,
+          "topicOnly": true,
+          "topicCount": 6,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Materials cover Nash and strict Nash equilibria, best responses, strategic transformations, location games, sequential reasoning, and repeated-game cooperation. Pset 3 poses several problems without solutions; its specific equilibrium answers are not supplied.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash profile gives each player a best response; strict Nash requires a strictly best response. In an m×n two-player game, there can be at most min(m,n) strict Nash equilibria; examples include all profiles being Nash in a constant-payoff game.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preference changes",
+                "summary": "The materials discuss standard Traveler’s Dilemma reasoning and an even-integer variant: every equal-bid profile is Nash, while (2,2) is the unique strict Nash equilibrium. Pset 3 asks how utilitarian preferences change equilibria, but provides no solutions.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Coordination, Hawk–Dove, and Prisoner’s Dilemma",
+                "summary": "Hawk–Dove has equilibria (H,D) and (D,H); adding M in the supplied variant also makes (M,M) Nash, and only (M,M) is strict. Repeated PD solutions use trigger strategies, with cooperation requiring δ ≥ 1/5 in the stated game.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Location and vendor games",
+                "summary": "Vendor incentives depend on the population’s spatial distribution. The supplied solutions rule out the endpoint–middle–endpoint arrangement on a uniform line and find no equilibrium for the chopped-triangle city; Pset 3 asks about three vendors and four discrete locations without solutions.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Sequential and repeated-game reasoning",
+                "summary": "Backward induction predicts outcomes in the sequential Hawk–Dove game and finite repeated PD; the supplied infinite Centipede example has both all-Pass and all-Keep Nash equilibria. The materials also note that limited reasoning or regret concerns may conflict with formal predictions.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Payoff transformations and zero-sum games",
+                "summary": "Positive affine transformations of each player’s payoffs preserve Nash equilibria. Zero-sum games can have Nash equilibria, including every outcome when all payoffs are (0,0).",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 5113.3,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "b2d97b03-9b72-4afc-a734-bf20353e728e",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 2511,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 1
+    },
+    {
+      "round": 3,
+      "testId": "74d6f485-6b22-423e-9c1a-3ea3befa9052",
+      "providerCalls": [
+        {
+          "id": 1,
+          "operation": "index-direct",
+          "startedMs": 0.8,
+          "inputBytes": 26692,
+          "inputSha256": "e1badecd555dff0cb86a40190ed5ca9a0c588e8143752f0ce910ee02b645cc3c",
+          "instructionSha256": "936dcfb11fd68a35f9f33094d699a3cc148cfce972c0b41ceed431dbbf3ed0a6",
+          "schemaSha256": "c6b72db2c23fdc73fe9ebda47ab23877e6f823517238b5b8381f293b51a54b73",
+          "sourceIds": [
+            "econ2801-pset3",
+            "econ2801-pset2-solutions",
+            "econ2801-pset5-solutions"
+          ],
+          "characters": 25681,
+          "status": "completed",
+          "usage": {
+            "units": {
+              "inputTokens": 7374,
+              "outputTokens": 576,
+              "cachedInputTokens": 0,
+              "cacheWriteTokens": 7371,
+              "reasoningTokens": 0
+            },
+            "model": "gpt-6-luna",
+            "serviceTier": "default"
+          },
+          "estimatedCost": {
+            "usd": 0.001209675,
+            "rateId": "openai-gpt-6-luna-2026-10-02:default",
+            "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+            "verifiedAt": "2026-10-02",
+            "partial": false,
+            "notes": [
+              "Public list-price estimate, not a billed charge. Account allowances, credits, negotiated rates, and taxes are excluded.",
+              "Uses global processing rates; any regional processing premium is excluded.",
+              "Standard processing rates are assumed because an explicit priced service tier was not recorded."
+            ]
+          },
+          "result": {
+            "overview": "Materials cover Nash and strict equilibria, best responses, strategic transformations, location games, sequential and repeated play, and incentive constraints. Some prompts are unsolved questions; the supplied solutions address related but not always identical variants.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash strategy profile gives each player a best response; strict Nash requires a strictly best response. In an m×n two-player game, strict equilibria number at most min(m,n), since each opponent strategy can support at most one strictly best response. Positive payoff scaling and additive constants preserve best responses.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preferences",
+                "summary": "Changing the objective from individual payoff to total payoff can change best responses and equilibria. Pset 3 asks for equilibria when both players, or only one, is utilitarian; Pset 2 discusses standard analysis and a variant with an added $2 bonus/penalty, where equal bids are Nash and (2,2) is uniquely strict.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "Coordination, conflict, and sequential moves",
+                "summary": "Hawk-Dove has asymmetric Nash profiles (H,D) and (D,H); in the supplied sequential version, backward induction yields (H,D). Adding a Moderate action can create (M,M), the only strict equilibrium in the supplied variant. Assurance and Prisoner’s Dilemma illustrate coordination and conflicting incentives.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Vendor location games",
+                "summary": "Location equilibria depend on population geometry and the number of vendors. The materials state that endpoint vendors in a three-vendor line arrangement can profitably move inward, and that a chopped triangular city has no equilibrium; Pset 3 asks about three vendors on a continuous line and two vendors serving four discrete buildings.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Repeated games, incentives, and backward induction",
+                "summary": "For the supplied infinite Prisoner’s Dilemma with trigger strategies, cooperation requires 4/(1−δ) ≥ 5, hence δ ≥ 1/5; finite repetition unravels to defection under common knowledge of rationality. In a later Assurance Game, the maximum punishment is 1, below the 2-point deviation gain, so first-period cooperation cannot be supported.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "finishedMs": 5916.3,
+          "durationMs": 5915.5
+        }
+      ],
+      "events": [
+        {
+          "atMs": 0.8,
+          "type": "index.direct.started",
+          "details": {
+            "requestId": "1ef92199-b273-4d6f-8e22-c56a5565e1b4",
+            "sourceCount": 3,
+            "characters": 25681
+          }
+        },
+        {
+          "atMs": 1.6,
+          "type": "llm.background-started",
+          "details": {
+            "requestId": "2a6fdcf6-2e63-41aa-ba79-2e0ecc38173f",
+            "operation": "index-direct",
+            "model": "gpt-6-luna"
+          }
+        },
+        {
+          "atMs": 5916.3,
+          "type": "llm.background-completed",
+          "details": {
+            "requestId": "2a6fdcf6-2e63-41aa-ba79-2e0ecc38173f",
+            "operation": "index-direct",
+            "model": "gpt-6-luna",
+            "latencyMs": 5915
+          }
+        },
+        {
+          "atMs": 5917.7,
+          "type": "index.cache.hit",
+          "details": {
+            "requestId": "ae5dbf9a-7502-416d-98b5-057ca0bb411d",
+            "stage": "complete-guide",
+            "sourceCount": 3
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "cold",
+          "startedMs": 0.3,
+          "status": "ready",
+          "durationMs": 5916.1,
+          "topicOnly": true,
+          "topicCount": 5,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Materials cover Nash and strict equilibria, best responses, strategic transformations, location games, sequential and repeated play, and incentive constraints. Some prompts are unsolved questions; the supplied solutions address related but not always identical variants.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash strategy profile gives each player a best response; strict Nash requires a strictly best response. In an m×n two-player game, strict equilibria number at most min(m,n), since each opponent strategy can support at most one strictly best response. Positive payoff scaling and additive constants preserve best responses.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preferences",
+                "summary": "Changing the objective from individual payoff to total payoff can change best responses and equilibria. Pset 3 asks for equilibria when both players, or only one, is utilitarian; Pset 2 discusses standard analysis and a variant with an added $2 bonus/penalty, where equal bids are Nash and (2,2) is uniquely strict.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "Coordination, conflict, and sequential moves",
+                "summary": "Hawk-Dove has asymmetric Nash profiles (H,D) and (D,H); in the supplied sequential version, backward induction yields (H,D). Adding a Moderate action can create (M,M), the only strict equilibrium in the supplied variant. Assurance and Prisoner’s Dilemma illustrate coordination and conflicting incentives.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Vendor location games",
+                "summary": "Location equilibria depend on population geometry and the number of vendors. The materials state that endpoint vendors in a three-vendor line arrangement can profitably move inward, and that a chopped triangular city has no equilibrium; Pset 3 asks about three vendors on a continuous line and two vendors serving four discrete buildings.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Repeated games, incentives, and backward induction",
+                "summary": "For the supplied infinite Prisoner’s Dilemma with trigger strategies, cooperation requires 4/(1−δ) ≥ 5, hence δ ≥ 1/5; finite repetition unravels to defection under common knowledge of rationality. In a later Assurance Game, the maximum punishment is 1, below the 2-point deviation gain, so first-period cooperation cannot be supported.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 1,
+          "events": [
+            {
+              "atMs": 0.8,
+              "type": "index.direct.started",
+              "details": {
+                "requestId": "1ef92199-b273-4d6f-8e22-c56a5565e1b4",
+                "sourceCount": 3,
+                "characters": 25681
+              }
+            },
+            {
+              "atMs": 1.6,
+              "type": "llm.background-started",
+              "details": {
+                "requestId": "2a6fdcf6-2e63-41aa-ba79-2e0ecc38173f",
+                "operation": "index-direct",
+                "model": "gpt-6-luna"
+              }
+            },
+            {
+              "atMs": 5916.3,
+              "type": "llm.background-completed",
+              "details": {
+                "requestId": "2a6fdcf6-2e63-41aa-ba79-2e0ecc38173f",
+                "operation": "index-direct",
+                "model": "gpt-6-luna",
+                "latencyMs": 5915
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 2551,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        },
+        {
+          "label": "same-test-cached",
+          "startedMs": 5917.6,
+          "status": "ready",
+          "durationMs": 0.2,
+          "topicOnly": true,
+          "topicCount": 5,
+          "sourceCoverage": [
+            {
+              "id": "econ2801-pset3",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset2-solutions",
+              "representedInTopics": true
+            },
+            {
+              "id": "econ2801-pset5-solutions",
+              "representedInTopics": true
+            }
+          ],
+          "guide": {
+            "overview": "Materials cover Nash and strict equilibria, best responses, strategic transformations, location games, sequential and repeated play, and incentive constraints. Some prompts are unsolved questions; the supplied solutions address related but not always identical variants.",
+            "topics": [
+              {
+                "title": "Nash and strict Nash equilibria",
+                "summary": "A Nash strategy profile gives each player a best response; strict Nash requires a strictly best response. In an m×n two-player game, strict equilibria number at most min(m,n), since each opponent strategy can support at most one strictly best response. Positive payoff scaling and additive constants preserve best responses.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Traveler’s Dilemma and preferences",
+                "summary": "Changing the objective from individual payoff to total payoff can change best responses and equilibria. Pset 3 asks for equilibria when both players, or only one, is utilitarian; Pset 2 discusses standard analysis and a variant with an added $2 bonus/penalty, where equal bids are Nash and (2,2) is uniquely strict.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset2-solutions"
+                ]
+              },
+              {
+                "title": "Coordination, conflict, and sequential moves",
+                "summary": "Hawk-Dove has asymmetric Nash profiles (H,D) and (D,H); in the supplied sequential version, backward induction yields (H,D). Adding a Moderate action can create (M,M), the only strict equilibrium in the supplied variant. Assurance and Prisoner’s Dilemma illustrate coordination and conflicting incentives.",
+                "sourceIds": [
+                  "econ2801-pset2-solutions",
+                  "econ2801-pset5-solutions",
+                  "econ2801-pset3"
+                ]
+              },
+              {
+                "title": "Vendor location games",
+                "summary": "Location equilibria depend on population geometry and the number of vendors. The materials state that endpoint vendors in a three-vendor line arrangement can profitably move inward, and that a chopped triangular city has no equilibrium; Pset 3 asks about three vendors on a continuous line and two vendors serving four discrete buildings.",
+                "sourceIds": [
+                  "econ2801-pset3",
+                  "econ2801-pset5-solutions"
+                ]
+              },
+              {
+                "title": "Repeated games, incentives, and backward induction",
+                "summary": "For the supplied infinite Prisoner’s Dilemma with trigger strategies, cooperation requires 4/(1−δ) ≥ 5, hence δ ≥ 1/5; finite repetition unravels to defection under common knowledge of rationality. In a later Assurance Game, the maximum punishment is 1, below the 2-point deviation gain, so first-period cooperation cannot be supported.",
+                "sourceIds": [
+                  "econ2801-pset5-solutions"
+                ]
+              }
+            ]
+          },
+          "actualRequests": 0,
+          "events": [
+            {
+              "atMs": 5917.7,
+              "type": "index.cache.hit",
+              "details": {
+                "requestId": "ae5dbf9a-7502-416d-98b5-057ca0bb411d",
+                "stage": "complete-guide",
+                "sourceCount": 3
+              }
+            }
+          ],
+          "cacheStats": {
+            "cacheEntries": 1,
+            "cacheChars": 2551,
+            "inFlight": 0,
+            "active": 0,
+            "queued": 0
+          }
+        }
+      ],
+      "maxParallelRequests": 1
+    }
+  ],
+  "method": "Three fresh production indexer instances. Each cold request is followed by exact same-test cached input on that instance. Provider slot is held across each cold+cached pair; acquisition excluded. The same already-extracted original PDF corpus is used. No question preparation, Jev, microphone or paid voice. Empty application cache does not imply cold provider prompt cache.",
+  "comparison": "Explicit 32,000-character direct-path override; all original source text, no map stage. Production default unchanged during this experiment. This is an algorithm comparison, not a quote-repair-only timing change.",
+  "finishedAt": "2026-10-02T08:42:49.454Z",
+  "assessment": {
+    "readyCold": 3,
+    "underTenSeconds": 3,
+    "cachedWithoutProviderCalls": 3,
+    "allRequiredSourcesRepresented": 3,
+    "limitation": "Three samples of one real corpus, not latency percentiles or a guarantee. Source citation coverage is not exhaustive topic coverage; manual guide review is recorded separately."
+  }
+}

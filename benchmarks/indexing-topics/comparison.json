@@ -1,0 +1,338 @@
+{
+  "phases": [
+    {
+      "name": "Exact copied quotes",
+      "file": "results.json",
+      "trials": 1,
+      "ready": 0,
+      "under10": 0,
+      "medianMs": 6504.3,
+      "timesMs": [
+        6504.3
+      ],
+      "providerCalls": 2,
+      "sourceCoverage": 0,
+      "qualityPass": null,
+      "audit": null,
+      "reportedInput": 3255,
+      "reportedOutput": 900,
+      "reportedCachedInput": 0,
+      "estimatedUsd": 0.0008568,
+      "usageMissing": 1,
+      "cached": []
+    },
+    {
+      "name": "Exact copied quotes, diagnostic retry",
+      "file": "diagnostic-retry.json",
+      "trials": 1,
+      "ready": 0,
+      "under10": 0,
+      "medianMs": 9726.6,
+      "timesMs": [
+        9726.6
+      ],
+      "providerCalls": 2,
+      "sourceCoverage": 0,
+      "qualityPass": null,
+      "audit": null,
+      "reportedInput": 3255,
+      "reportedOutput": 1667,
+      "reportedCachedInput": 3252,
+      "estimatedUsd": 0.00086632,
+      "usageMissing": 1,
+      "cached": []
+    },
+    {
+      "name": "ID-backed map + merge v4",
+      "file": "repaired-results.json",
+      "trials": 3,
+      "ready": 3,
+      "under10": 0,
+      "medianMs": 12629.7,
+      "timesMs": [
+        11824.1,
+        12924.5,
+        12629.7
+      ],
+      "providerCalls": 9,
+      "sourceCoverage": 3,
+      "qualityPass": 3,
+      "audit": {
+        "reviewer": "Independent usage_debug_ui agent",
+        "providerCalls": 0,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "sourceContent": "All three completed guides checked against all three original PDF texts. No unsupported numeric or conceptual claim found. Each five-topic index reasonably represents all three files but is not exhaustive; chess/zero-sum and some individual exercise variants are omitted.",
+        "citationEvidence": "All nine original chunk catalogs recomputed losslessly. All 51 selected IDs checked against exact source and chunk identity. All same-test cached guides identical to their cold guide.",
+        "sourceAttribution": "Some Pset2 source references are broader than specific Pset5 sequential/repeated-game examples; no false source identity was found.",
+        "readiness": "3/3 cold trials returned validated topic-only guides. 0/3 completed under 10 seconds. No semantic blocker found in these three outputs.",
+        "limitation": "Manual review is a bounded audit of these outputs, not proof of exhaustive coverage or future correctness."
+      },
+      "reportedInput": 52843,
+      "reportedOutput": 5266,
+      "reportedCachedInput": 0,
+      "estimatedUsd": 0.009237700000000001,
+      "usageMissing": 0,
+      "cached": [
+        {
+          "ms": 0.5,
+          "requests": 0
+        },
+        {
+          "ms": 0.5,
+          "requests": 0
+        },
+        {
+          "ms": 0.3,
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "name": "Full-source direct 32k v4",
+      "file": "direct-results.json",
+      "trials": 3,
+      "ready": 3,
+      "under10": 3,
+      "medianMs": 5916.1,
+      "timesMs": [
+        6330,
+        5111,
+        5916.1
+      ],
+      "providerCalls": 3,
+      "sourceCoverage": 3,
+      "qualityPass": 2,
+      "audit": {
+        "reviewer": "Independent usage_debug_ui agent",
+        "providerCalls": 0,
+        "rounds": [
+          {
+            "round": 1,
+            "sound": true,
+            "note": "No material unsupported claim found against all three original PDFs."
+          },
+          {
+            "round": 2,
+            "sound": true,
+            "note": "No material unsupported claim found; preserves even-integer bid restriction."
+          },
+          {
+            "round": 3,
+            "sound": false,
+            "note": "Traveler's Dilemma summary describes the $2 bonus/penalty variant and equal-bid Nash conclusion while omitting the essential even-integer bid restriction. Without that restriction, undercutting by one is profitable. This is a material missing qualification."
+          }
+        ],
+        "coverage": "Every guide represents all three source IDs with broadly comparable but non-exhaustive topic coverage. Direct round 3 omits infinite Centipede/chess/zero-sum details; mapped guides also omit some individual ideas.",
+        "assessment": "3/3 ready and under ten seconds; 2/3 academically sound in this audit. Do not equate structural readiness and latency with semantic correctness."
+      },
+      "reportedInput": 22121,
+      "reportedOutput": 1785,
+      "reportedCachedInput": 0,
+      "estimatedUsd": 0.0036574,
+      "usageMissing": 0,
+      "cached": [
+        {
+          "ms": 0.8,
+          "requests": 0
+        },
+        {
+          "ms": 0.5,
+          "requests": 0
+        },
+        {
+          "ms": 0.2,
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "name": "Full-source direct 32k v5",
+      "file": "direct-final-results.json",
+      "trials": 3,
+      "ready": 3,
+      "under10": 3,
+      "medianMs": 5007.6,
+      "timesMs": [
+        5045.8,
+        4830.7,
+        5007.6
+      ],
+      "providerCalls": 3,
+      "sourceCoverage": 3,
+      "qualityPass": 2,
+      "audit": {
+        "reviewer": "Independent usage_debug_ui agent",
+        "providerCalls": 0,
+        "rounds": [
+          {
+            "round": 1,
+            "sound": true,
+            "note": "No material unsupported claim found against original sources."
+          },
+          {
+            "round": 2,
+            "sound": true,
+            "note": "Broadly grounded. Wording 'infinitely repeated Centipede' is loose terminology for the infinitely long game."
+          },
+          {
+            "round": 3,
+            "sound": false,
+            "note": "Location summary incorrectly says Pset2 rules out a line-vendor profile and gives the chopped-triangle Nash result. These are Pset5 Q1C/Q4; Pset2 contains no vendor problem. The correct Pset5 source ID is listed, but prose attribution is false. The earlier even-bid qualification is preserved correctly."
+          }
+        ],
+        "assessment": "All three valid topic-only guides finish under ten seconds; only two have clear semantic passes. Structured source coverage does not excuse incorrect prose attribution.",
+        "limitation": "This preserves the generic-v5 prompt's actual outcomes and does not silently fix or regenerate them."
+      },
+      "reportedInput": 22250,
+      "reportedOutput": 1447,
+      "reportedCachedInput": 0,
+      "estimatedUsd": 0.003504525,
+      "usageMissing": 0,
+      "cached": [
+        {
+          "ms": 0.5,
+          "requests": 0
+        },
+        {
+          "ms": 0.5,
+          "requests": 0
+        },
+        {
+          "ms": 0.5,
+          "requests": 0
+        }
+      ]
+    },
+    {
+      "name": "Full-source direct 32k catalog v6",
+      "file": "direct-catalog-results.json",
+      "trials": 3,
+      "ready": 3,
+      "under10": 3,
+      "medianMs": 4461.3,
+      "timesMs": [
+        4461.3,
+        3517.3,
+        4960.8
+      ],
+      "providerCalls": 3,
+      "sourceCoverage": 3,
+      "qualityPass": 3,
+      "audit": {
+        "reviewer": "Independent usage_debug_ui agent",
+        "providerCalls": 0,
+        "rounds": [
+          {
+            "round": 1,
+            "sound": true,
+            "note": "Grounded topic/activity catalog matching original material and structured source IDs. No unsupported solved-result claim or invented inline attribution."
+          },
+          {
+            "round": 2,
+            "sound": true,
+            "note": "Grounded topic/activity catalog matching original material and structured source IDs. No unsupported solved-result claim or invented inline attribution."
+          },
+          {
+            "round": 3,
+            "sound": true,
+            "note": "Grounded topic/activity catalog matching original material and structured source IDs. No unsupported solved-result claim or invented inline attribution."
+          }
+        ],
+        "coverage": "Comparable coarse coverage of 5–6 topics, not exhaustive. Chess/zero-sum and individual variants are omitted in some or all guides.",
+        "provenance": "Independently recomputed full input hashes for all 25,681 original characters and confirmed identical cold/cached guides in all three trials. Actual instruction hash is the same v6 prompt across all three.",
+        "assessment": "3/3 ready under ten seconds and 3/3 grounded catalogs in this bounded review. Catalogs remain fallible metadata, not authoritative teaching or a general semantic success-rate guarantee.",
+        "metadataNote": "Inherited followup field says v5; actual captured code/instruction hashes and catalogFollowup establish v6. Raw artifact unchanged."
+      },
+      "reportedInput": 22304,
+      "reportedOutput": 1297,
+      "reportedCachedInput": 0,
+      "estimatedUsd": 0.003436275,
+      "usageMissing": 0,
+      "cached": [
+        {
+          "ms": 0.4,
+          "requests": 0
+        },
+        {
+          "ms": 0.4,
+          "requests": 0
+        },
+        {
+          "ms": 0.6,
+          "requests": 0
+        }
+      ]
+    }
+  ],
+  "totalPaidRequests": 22,
+  "latest": {
+    "name": "Full-source direct 32k catalog v6",
+    "file": "direct-catalog-results.json",
+    "trials": 3,
+    "ready": 3,
+    "under10": 3,
+    "medianMs": 4461.3,
+    "timesMs": [
+      4461.3,
+      3517.3,
+      4960.8
+    ],
+    "providerCalls": 3,
+    "sourceCoverage": 3,
+    "qualityPass": 3,
+    "audit": {
+      "reviewer": "Independent usage_debug_ui agent",
+      "providerCalls": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "sound": true,
+          "note": "Grounded topic/activity catalog matching original material and structured source IDs. No unsupported solved-result claim or invented inline attribution."
+        },
+        {
+          "round": 2,
+          "sound": true,
+          "note": "Grounded topic/activity catalog matching original material and structured source IDs. No unsupported solved-result claim or invented inline attribution."
+        },
+        {
+          "round": 3,
+          "sound": true,
+          "note": "Grounded topic/activity catalog matching original material and structured source IDs. No unsupported solved-result claim or invented inline attribution."
+        }
+      ],
+      "coverage": "Comparable coarse coverage of 5–6 topics, not exhaustive. Chess/zero-sum and individual variants are omitted in some or all guides.",
+      "provenance": "Independently recomputed full input hashes for all 25,681 original characters and confirmed identical cold/cached guides in all three trials. Actual instruction hash is the same v6 prompt across all three.",
+      "assessment": "3/3 ready under ten seconds and 3/3 grounded catalogs in this bounded review. Catalogs remain fallible metadata, not authoritative teaching or a general semantic success-rate guarantee.",
+      "metadataNote": "Inherited followup field says v5; actual captured code/instruction hashes and catalogFollowup establish v6. Raw artifact unchanged."
+    },
+    "reportedInput": 22304,
+    "reportedOutput": 1297,
+    "reportedCachedInput": 0,
+    "estimatedUsd": 0.003436275,
+    "usageMissing": 0,
+    "cached": [
+      {
+        "ms": 0.4,
+        "requests": 0
+      },
+      {
+        "ms": 0.4,
+        "requests": 0
+      },
+      {
+        "ms": 0.6,
+        "requests": 0
+      }
+    ]
+  },
+  "limitations": [
+    "One three-PDF corpus and three samples per completed stage, not a general latency or correctness guarantee.",
+    "Later phases were not time-interleaved; caching and provider load can differ. Actual cache usage retained.",
+    "Direct dispatch and generic catalog prompting are separate changes from citation-map repair.",
+    "Original failures and semantic issues remain in immutable raw phase artifacts."
+  ]
+}

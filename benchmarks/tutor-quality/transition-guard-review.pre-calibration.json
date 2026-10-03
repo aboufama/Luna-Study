@@ -1,0 +1,89 @@
+{
+  "finishedAt": "2026-10-02T11:17:53.785Z",
+  "command": "node benchmarks/tutor-quality/review-transition-guard.mjs",
+  "providerCalls": 0,
+  "productionEdits": 0,
+  "method": "Independent real WebSocket loopback with fake tutor, Jev and speech transport; source inputs are synthetic and stores are fixture-local. Semantic matching results are injected, so this verifies lifecycle enforcement, not classifier accuracy.",
+  "codeHashes": {
+    "server/live-voice.mjs": "a192af63bae2e493a5af5aba21f3820a3f43f4d5ee2ab8a66489e41af210313f",
+    "server/board-routing-context.mjs": "9ab10be9c8b02435aa4df64c9cebfb2505becfa86690d71d58013942034ceb77",
+    "server/openai-luna.mjs": "ae9b29b4f253866451b5fb823ab2a79b3b40f8cfc4b28dd3ab86d1fbcf4289a6",
+    "tests/helpers/session-policy.mjs": "70977aadd471b588588ca2a1f7e017f50b3ad08f7c8e58695865c12e5dfc2f0b",
+    "server/jev.mjs": "8d718e038abf0281824307f21d3f5c9701ae4866635f9c9de1df1157e6312fb7",
+    "server/tutor-output.mjs": "e59b3f124838d63d3b0b66f5db9e26408e7fbcd0e2051296c036028166cc9e49",
+    "server/hint-policy.mjs": "9eeff1ebc9209ba6b3068066b77789ac1fdb8ef59d40fdc38c1d0d5f6f721589",
+    "server/luna-fast.mjs": "7b8c1a45f2c8595bd7437f0942832847ff6dd4621720b8a87276c0da042fe7f2",
+    "benchmarks/tutor-quality/review-transition-guard.mjs": "8a39714b0819739ba54ef4b9f799c9d632d84d45a50a23a1da02c1ab4397404d"
+  },
+  "cases": [
+    {
+      "id": "transition-missing-match-stays-hidden",
+      "passed": true
+    },
+    {
+      "id": "transition-unknown-match-stays-hidden",
+      "passed": true
+    },
+    {
+      "id": "transition-rejected-match-stays-hidden",
+      "passed": true
+    },
+    {
+      "id": "matching-new-target-replaces-all-old-blocks",
+      "passed": true
+    },
+    {
+      "id": "same-target-structured-patch-retains-omitted-blocks",
+      "passed": true
+    },
+    {
+      "id": "late-match-after-source-change-never-reopens",
+      "passed": true
+    },
+    {
+      "id": "late-match-after-new-student-turn-never-reopens",
+      "passed": true
+    },
+    {
+      "id": "later-turn-cannot-reopen-old-target-after-rejected-transition",
+      "passed": true
+    },
+    {
+      "id": "shape-evidence-blank-matrix",
+      "passed": true
+    },
+    {
+      "id": "shape-evidence-unlabeled-scene",
+      "passed": true
+    },
+    {
+      "id": "jev-receives-shape-without-visible-label-text",
+      "passed": true
+    },
+    {
+      "id": "jev-match-boundary-0.9",
+      "passed": true
+    },
+    {
+      "id": "jev-match-boundary-0.89",
+      "passed": true
+    },
+    {
+      "id": "jev-match-boundary-0.1",
+      "passed": true
+    },
+    {
+      "id": "jev-match-boundary-null",
+      "passed": true
+    },
+    {
+      "id": "confirmed-departure-releases-pending-canonical-hold",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0
+  }
+}

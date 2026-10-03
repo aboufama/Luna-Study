@@ -1,0 +1,348 @@
+{
+  "method": "Zero new model calls. Reparse all four immutable diagnostic model outputs using nested-span validator. Preserves original statuses and timings, which are not rerun measurements.",
+  "paidRequests": 0,
+  "runs": [
+    {
+      "id": "grammar-annotation-diagnostic-1-current-replay",
+      "scenario": "grammar-annotation-diagnostic-1",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 1144,
+        "speechCompleteMs": 1202,
+        "completeMs": 1807
+      },
+      "status": "valid-board",
+      "inputCharacters": 673,
+      "raw": "<say>Here’s the sentence with each clause clearly marked.</say>\n<board>{\"title\":\"Sentence structure\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"sentence\",\"type\":\"annotation\",\"text\":\"After the rain stopped, Maya walked to class.\",\"spans\":[{\"quote\":\"After the rain stopped\",\"label\":\"Dependent clause\"},{\"quote\":\"Maya walked to class\",\"label\":\"Main clause\"}]}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2833,
+          "outputTokens": 112,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 155,
+          "reasoningTokens": 23
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence with each clause clearly marked.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "sentence",
+              "type": "annotation",
+              "text": "After the rain stopped, Maya walked to class.",
+              "spans": [
+                {
+                  "quote": "After the rain stopped",
+                  "label": "Dependent clause"
+                },
+                {
+                  "quote": "Maya walked to class",
+                  "label": "Main clause"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid"
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "b846af6a-2e5f-492a-905e-5c551d9e6075",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "annotation",
+            "text": "After the rain stopped, Maya walked to class.",
+            "spans": [
+              {
+                "quote": "After the rain stopped",
+                "label": "Dependent clause"
+              },
+              {
+                "quote": "Maya walked to class",
+                "label": "Main clause"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "After the rain stopped, Maya walked to class.\nAfter the rain stopped: Dependent clause\nMaya walked to class: Main clause",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      },
+      "previousStatus": "valid-board"
+    },
+    {
+      "id": "grammar-annotation-diagnostic-2-current-replay",
+      "scenario": "grammar-annotation-diagnostic-2",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 646,
+        "speechCompleteMs": 848,
+        "completeMs": 1484
+      },
+      "status": "valid-board",
+      "inputCharacters": 673,
+      "raw": "<say>Here’s the sentence structure, with each clause marked directly in the sentence.</say>\n<board>{\"title\":\"Sentence structure\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"sentence\",\"type\":\"annotation\",\"text\":\"After the rain stopped, Maya walked to class.\",\"spans\":[{\"quote\":\"After the rain stopped\",\"label\":\"Dependent clause\"},{\"quote\":\"Maya walked to class\",\"label\":\"Main clause\"},{\"quote\":\"After\",\"label\":\"Subordinating conjunction\"},{\"quote\":\"Maya\",\"label\":\"Subject of main clause\"}]}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2833,
+          "outputTokens": 115,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 155,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence structure, with each clause marked directly in the sentence.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "sentence",
+              "type": "annotation",
+              "text": "After the rain stopped, Maya walked to class.",
+              "spans": [
+                {
+                  "quote": "After the rain stopped",
+                  "label": "Dependent clause"
+                },
+                {
+                  "quote": "Maya walked to class",
+                  "label": "Main clause"
+                },
+                {
+                  "quote": "After",
+                  "label": "Subordinating conjunction"
+                },
+                {
+                  "quote": "Maya",
+                  "label": "Subject of main clause"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid"
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "da75eba2-3d2d-44f7-a3d8-0fc81d1d0c46",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "annotation",
+            "text": "After the rain stopped, Maya walked to class.",
+            "spans": [
+              {
+                "quote": "After the rain stopped",
+                "label": "Dependent clause"
+              },
+              {
+                "quote": "Maya walked to class",
+                "label": "Main clause"
+              },
+              {
+                "quote": "After",
+                "label": "Subordinating conjunction"
+              },
+              {
+                "quote": "Maya",
+                "label": "Subject of main clause"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "",
+      "checks": {
+        "validBoard": false,
+        "speech": true,
+        "noExecutableMarkup": true
+      },
+      "previousStatus": "no-board"
+    },
+    {
+      "id": "grammar-annotation-diagnostic-3-current-replay",
+      "scenario": "grammar-annotation-diagnostic-3",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 961,
+        "speechCompleteMs": 1088,
+        "completeMs": 1722
+      },
+      "status": "valid-board",
+      "inputCharacters": 673,
+      "raw": "<say>Here’s the sentence structure, with each clause labeled once.</say><board>{\"title\":\"Sentence structure\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"sentence\",\"type\":\"annotation\",\"text\":\"After the rain stopped, Maya walked to class.\",\"spans\":[{\"quote\":\"After the rain stopped\",\"label\":\"Dependent clause\"},{\"quote\":\"Maya walked to class\",\"label\":\"Main clause\"}]},{\"id\":\"roles\",\"type\":\"text\",\"content\":\"After = subordinating conjunction\\nMaya = subject of the main clause\"}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2833,
+          "outputTokens": 114,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 155,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence structure, with each clause labeled once.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "sentence",
+              "type": "annotation",
+              "text": "After the rain stopped, Maya walked to class.",
+              "spans": [
+                {
+                  "quote": "After the rain stopped",
+                  "label": "Dependent clause"
+                },
+                {
+                  "quote": "Maya walked to class",
+                  "label": "Main clause"
+                }
+              ]
+            },
+            {
+              "id": "roles",
+              "type": "text",
+              "content": "After = subordinating conjunction\nMaya = subject of the main clause"
+            }
+          ]
+        },
+        "boardStatus": "valid"
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "6b22e7c7-a25d-4a30-a5e8-ffadbc716dcd",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "annotation",
+            "text": "After the rain stopped, Maya walked to class.",
+            "spans": [
+              {
+                "quote": "After the rain stopped",
+                "label": "Dependent clause"
+              },
+              {
+                "quote": "Maya walked to class",
+                "label": "Main clause"
+              }
+            ]
+          },
+          {
+            "id": "roles",
+            "type": "text",
+            "content": "After = subordinating conjunction\nMaya = subject of the main clause"
+          }
+        ]
+      },
+      "visibleText": "After the rain stopped, Maya walked to class.\nAfter the rain stopped: Dependent clause\nMaya walked to class: Main clause\nAfter = subordinating conjunction\nMaya = subject of the main clause",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      },
+      "previousStatus": "valid-board"
+    },
+    {
+      "id": "grammar-annotation-diagnostic-4-current-replay",
+      "scenario": "grammar-annotation-diagnostic-4",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 718,
+        "speechCompleteMs": 764,
+        "completeMs": 1193
+      },
+      "status": "valid-board",
+      "inputCharacters": 673,
+      "raw": "<say>Here’s the sentence with its two clauses clearly marked.</say>\n<board>{\"title\":\"Sentence structure\",\"mode\":\"replace\",\"blocks\":[{\"id\":\"sentence\",\"type\":\"annotation\",\"text\":\"After the rain stopped, Maya walked to class.\",\"spans\":[{\"quote\":\"After the rain stopped\",\"label\":\"Dependent clause\"},{\"quote\":\"Maya walked to class\",\"label\":\"Main clause\"}]}]}</board>",
+      "usage": {
+        "units": {
+          "inputTokens": 2833,
+          "outputTokens": 108,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 155,
+          "reasoningTokens": 18
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence with its two clauses clearly marked.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "sentence",
+              "type": "annotation",
+              "text": "After the rain stopped, Maya walked to class.",
+              "spans": [
+                {
+                  "quote": "After the rain stopped",
+                  "label": "Dependent clause"
+                },
+                {
+                  "quote": "Maya walked to class",
+                  "label": "Main clause"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid"
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "76126766-061f-4e8e-9e88-c48529ace219",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "annotation",
+            "text": "After the rain stopped, Maya walked to class.",
+            "spans": [
+              {
+                "quote": "After the rain stopped",
+                "label": "Dependent clause"
+              },
+              {
+                "quote": "Maya walked to class",
+                "label": "Main clause"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "After the rain stopped, Maya walked to class.\nAfter the rain stopped: Dependent clause\nMaya walked to class: Main clause",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      },
+      "previousStatus": "valid-board"
+    }
+  ]
+}

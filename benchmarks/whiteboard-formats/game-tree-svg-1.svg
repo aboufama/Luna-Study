@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <g id="game-tree">
+    <g id="branch-root-left">
+      <line x1="400" y1="90" x2="220" y2="220" stroke="#111111" stroke-width="2"/>
+      <text id="action-left" x="302" y="144" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">left</text>
+    </g>
+    <g id="branch-root-right">
+      <line x1="400" y1="90" x2="580" y2="220" stroke="#111111" stroke-width="2"/>
+      <text id="action-right" x="498" y="144" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">right</text>
+    </g>
+    <g id="branch-ll">
+      <line x1="220" y1="236" x2="130" y2="380" stroke="#111111" stroke-width="2"/>
+      <text id="action-l-left" x="167" y="296" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">l</text>
+    </g>
+    <g id="branch-lr">
+      <line x1="220" y1="236" x2="310" y2="380" stroke="#111111" stroke-width="2"/>
+      <text id="action-r-left" x="273" y="296" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">r</text>
+    </g>
+    <g id="branch-rl">
+      <line x1="580" y1="236" x2="490" y2="380" stroke="#111111" stroke-width="2"/>
+      <text id="action-l-right" x="527" y="296" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">l</text>
+    </g>
+    <g id="branch-rr">
+      <line x1="580" y1="236" x2="670" y2="380" stroke="#111111" stroke-width="2"/>
+      <text id="action-r-right" x="633" y="296" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">r</text>
+    </g>
+    <g id="root">
+      <circle cx="400" cy="82" r="9" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+      <text id="root-player" x="400" y="48" fill="#111111" font-size="20" font-family="sans-serif" text-anchor="middle">P1</text>
+    </g>
+    <g id="left">
+      <circle cx="220" cy="228" r="9" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+      <text id="left-player" x="220" y="198" fill="#111111" font-size="20" font-family="sans-serif" text-anchor="middle">P2</text>
+    </g>
+    <g id="right">
+      <circle cx="580" cy="228" r="9" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+      <text id="right-player" x="580" y="198" fill="#111111" font-size="20" font-family="sans-serif" text-anchor="middle">P2</text>
+    </g>
+    <g id="ll">
+      <circle cx="130" cy="388" r="7" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+      <text id="ll-payoff" x="130" y="423" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">(3,2)</text>
+    </g>
+    <g id="lr">
+      <circle cx="310" cy="388" r="7" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+      <text id="lr-payoff" x="310" y="423" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">(0,0)</text>
+    </g>
+    <g id="rl">
+      <circle cx="490" cy="388" r="7" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+      <text id="rl-payoff" x="490" y="423" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">(1,1)</text>
+    </g>
+    <g id="rr">
+      <circle cx="670" cy="388" r="7" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+      <text id="rr-payoff" x="670" y="423" fill="#111111" font-size="18" font-family="sans-serif" text-anchor="middle">(2,3)</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+{
+  "startedAt": "2026-10-02T03:44:07.700Z",
+  "model": "eleven_v4_turbo",
+  "outputFormat": "pcm_24000",
+  "text": "Diffusion moves particles from higher to lower concentration. What changes when the concentration becomes equal?",
+  "microphoneUsed": false,
+  "audioPlayed": false,
+  "audioSaved": false,
+  "providerCallLimit": 3,
+  "notes": [
+    "Synthetic text only. First audio measures received bytes, not audible playback.",
+    "Prewarm trial opens and registers the voice one second before text becomes available. That deliberate wait is included in from-start times, excluded in after-send times.",
+    "Three sequential observations are not a statistically stable provider latency estimate."
+  ],
+  "docs": [
+    "https://elevenlabs.io/docs/eleven-api/guides/how-to/websockets/realtime-tdd",
+    "https://elevenlabs.io/docs/api-reference/text-to-dialogue/ttd-websocket"
+  ],
+  "trials": [
+    {
+      "name": "immediate-1",
+      "prewarmMs": 0,
+      "model": "eleven_v4_turbo",
+      "ok": true,
+      "connectMs": 106.3,
+      "textSentMs": 106.7,
+      "firstAudioMs": 243.4,
+      "firstAudioAfterSendMs": 136.7,
+      "completeMs": 2180.2,
+      "completeAfterSendMs": 2073.6,
+      "audioBytesDiscarded": 357120,
+      "audioChunks": 16,
+      "finalForTurnSeen": true,
+      "finalSeen": true,
+      "closeCode": 1005,
+      "elapsedMs": 2180.4
+    },
+    {
+      "name": "immediate-2",
+      "prewarmMs": 0,
+      "model": "eleven_v4_turbo",
+      "ok": true,
+      "connectMs": 99.6,
+      "textSentMs": 99.8,
+      "firstAudioMs": 222.8,
+      "firstAudioAfterSendMs": 123,
+      "completeMs": 2233.1,
+      "completeAfterSendMs": 2133.3,
+      "audioBytesDiscarded": 364800,
+      "audioChunks": 16,
+      "finalForTurnSeen": true,
+      "finalSeen": true,
+      "closeCode": 1005,
+      "elapsedMs": 2233.2
+    },
+    {
+      "name": "preopened-1",
+      "prewarmMs": 1000,
+      "model": "eleven_v4_turbo",
+      "ok": true,
+      "connectMs": 97.9,
+      "textSentMs": 1098.5,
+      "firstAudioMs": 1262,
+      "firstAudioAfterSendMs": 163.5,
+      "completeMs": 3216.8,
+      "completeAfterSendMs": 2118.4,
+      "audioBytesDiscarded": 357120,
+      "audioChunks": 16,
+      "finalForTurnSeen": true,
+      "finalSeen": true,
+      "closeCode": null,
+      "elapsedMs": 3216.9
+    }
+  ],
+  "completedAt": "2026-10-02T03:44:15.338Z"
+}

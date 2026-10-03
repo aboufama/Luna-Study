@@ -1,0 +1,633 @@
+{
+  "finishedAt": "2026-10-02T12:30:21.260Z",
+  "providerCalls": 0,
+  "sourceFile": "live-adaptive-release.json",
+  "sourceSha256": "786c3b10d603a3f48d86dfef557e8fd53db27917e283dd0f5a275e8f6b84f21b",
+  "sourceHashes": {
+    "src/Whiteboard.jsx": "d1c1d0b2416a599499c4e025d8e97c12f68afeb8d771d49619646850973439ca",
+    "src/board-reading.css": "ff3b104ed17d76c1f690014a1a4caaa1eb867cebe5c8142750d69eeaa7b433c0",
+    "shared/equation-chain.mjs": "e81cbd322bba45365a5fa38f20825e3e75e6811f2346530eff0a4f9fbea7d572",
+    "shared/flow-layout.mjs": "acd14a26c34a4af1dd706d77730e6d967bac36f35f28ed62633c9ccce7b8d1e7",
+    "src/TeachingScene.jsx": "b37ca1366e3156f68a03a961c2ceeb5085dfab33612d062c268f2cfbea384912",
+    "src/teaching-scene.css": "d6877fff839ef8c45780ffffc5aa273751d1df8102ac15701379361f39e8cc64"
+  },
+  "method": "Completed saved session exact accepted canvas packets replayed through production readonly Whiteboard. Desktop and mobile component fixture, no provider or microphone. Original canonical boards and revisions retained. This checks rendering, not a second live conversation or full app camera layout.",
+  "acceptedPackets": 13,
+  "errors": [],
+  "runs": [
+    {
+      "index": 1,
+      "stepId": "welcome",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-01-welcome.png",
+      "sourceBoardSha256": "8079e8860ca0f27819ef7853da33b989b8fe25923c5ae3481d40a3c8add42d01",
+      "measurement": {
+        "text": "2x+3=11\nUse the same operation on both sides.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 309,
+            "scroll": 309,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 2,
+      "stepId": "partial-step",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-02-partial-step.png",
+      "sourceBoardSha256": "51c486f47840f81ef12a182575ad91cf6a7e413b83e4189f73498cd9decddd0a",
+      "measurement": {
+        "text": "2x+3=11\nUse the same reversible operation on both sides.\n\nYour revision: name each equal operation, then state x.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 438,
+            "scroll": 438,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 3,
+      "stepId": "next-equation",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-03-next-equation.png",
+      "sourceBoardSha256": "c959a12ad92ba059859cea33b032441c6675e5973f4a0e9ef4e6f2a5d292c2ac",
+      "measurement": {
+        "text": "4z+8=0\nShow the equal operations and why they preserve the equation.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "4z+8=0",
+            "width": 509,
+            "scroll": 509,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 4,
+      "stepId": "independent-equation",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-04-independent-equation.png",
+      "sourceBoardSha256": "67e9a315d940ba90ce705be7ac36420286b85454f61157a3270fb0bb105752bd",
+      "measurement": {
+        "text": "5w−10=20\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20",
+            "width": 525,
+            "scroll": 525,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 5,
+      "stepId": "biology-partial",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-05-biology-partial.png",
+      "sourceBoardSha256": "1906a907f5cdeeb5b831bbd6f8a0293d10e476cd02d6716e476e7371a762361c",
+      "measurement": {
+        "text": "\tRole\tConcentration gradient\tEnergy\nMembrane\t\nControls what crosses between cell and surroundings\n\t\n\t\n\nPassive transport\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Controls what crosses between cell and surroundings",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 6,
+      "stepId": "biology-full",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-06-biology-full.png",
+      "sourceBoardSha256": "6072caf2c4d2c8c2c684a09dd9590efd6fbb36ce723f1f00b050fd82080e36ee",
+      "measurement": {
+        "text": "3y−6=9\nShow each operation applied equally to both sides, then explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 716,
+            "scroll": 716,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 7,
+      "stepId": "resume-study",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-07-resume-study.png",
+      "sourceBoardSha256": "33997e372955d2b59167b55d1faa7c52c8c802f5b693c1006deca85f63f1f453",
+      "measurement": {
+        "text": "5w−10=20\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20",
+            "width": 525,
+            "scroll": 525,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 8,
+      "stepId": "third-equation",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-08-third-equation.png",
+      "sourceBoardSha256": "72a9b3d402daba6de92080063537b42fc6afe9165573aa04f1960f3fb20004bf",
+      "measurement": {
+        "text": "3y−6=9\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 525,
+            "scroll": 525,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 9,
+      "stepId": "ask-next",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-09-ask-next.png",
+      "sourceBoardSha256": "4afb66ecc85d76fff7fce475ee670e11f0e9927cca7958f1ebd30fdf2fcf7afe",
+      "measurement": {
+        "text": "3y−6=9\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 525,
+            "scroll": 525,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 10,
+      "stepId": "fourth-equation",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-10-fourth-equation.png",
+      "sourceBoardSha256": "5e2ebb0afffaf1c73e4f094090e7176b62c73d4016c4c5af32e875f002835601",
+      "measurement": {
+        "text": "\tRole or direction\tEnergy use\tKey detail\nCell membrane\t\nSelectively permeable boundary\n\t\n\t\nControls substances crossing between cell and surroundings\n\nPassive transport\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Selectively permeable boundary",
+          "",
+          "Controls substances crossing between cell and surroundings",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 11,
+      "stepId": "explain-back",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-11-explain-back.png",
+      "sourceBoardSha256": "5a02f9ecc72e79e5856cb287a1a71c31ba10a95a85da8741036efb109960ac0f",
+      "measurement": {
+        "text": "3y−6=9",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 226,
+            "scroll": 226,
+            "fontSize": "21px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 12,
+      "stepId": "transfer-response",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-12-transfer-response.png",
+      "sourceBoardSha256": "13ca9e96ff8313351c29894cbd99cf3a1d016f687676099b37ea9f9e1c34cad0",
+      "measurement": {
+        "text": "\tDirection relative to concentration gradient\tEnergy use\tRole or description\nCell membrane\t\n\t\n\t\n\nDiffusion\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 13,
+      "stepId": "final-review",
+      "viewport": "desktop",
+      "screenshot": "renders/release-accepted-desktop-13-final-review.png",
+      "sourceBoardSha256": "1871f82e8bed07492f5fa1647adc081c69628b3b886cce87371fdc577f910e44",
+      "measurement": {
+        "text": "\tDirection relative to concentration gradient\tEnergy use\tRole or description\nCell membrane\t\n\t\n\t\nThe selectively permeable boundary controls which substances cross between the cell and its surroundings.\n\nDiffusion\t\nDown the concentration gradient\n\t\nPassive; no energy use\n\t\nMovement down a concentration gradient.\n\nActive transport\t\nAgainst the concentration gradient\n\t\nUses energy\n\t\nMovement against a concentration gradient.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "",
+          "",
+          "The selectively permeable boundary controls which substances cross between the cell and its surroundings.",
+          "Down the concentration gradient",
+          "Passive; no energy use",
+          "Movement down a concentration gradient.",
+          "Against the concentration gradient",
+          "Uses energy",
+          "Movement against a concentration gradient."
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 1,
+      "stepId": "welcome",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-01-welcome.png",
+      "sourceBoardSha256": "8079e8860ca0f27819ef7853da33b989b8fe25923c5ae3481d40a3c8add42d01",
+      "measurement": {
+        "text": "2x+3=11\nUse the same operation on both sides.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 279,
+            "scroll": 279,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 2,
+      "stepId": "partial-step",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-02-partial-step.png",
+      "sourceBoardSha256": "51c486f47840f81ef12a182575ad91cf6a7e413b83e4189f73498cd9decddd0a",
+      "measurement": {
+        "text": "2x+3=11\nUse the same reversible operation on both sides.\n\nYour revision: name each equal operation, then state x.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "2x+3=11",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 3,
+      "stepId": "next-equation",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-03-next-equation.png",
+      "sourceBoardSha256": "c959a12ad92ba059859cea33b032441c6675e5973f4a0e9ef4e6f2a5d292c2ac",
+      "measurement": {
+        "text": "4z+8=0\nShow the equal operations and why they preserve the equation.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "4z+8=0",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 4,
+      "stepId": "independent-equation",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-04-independent-equation.png",
+      "sourceBoardSha256": "67e9a315d940ba90ce705be7ac36420286b85454f61157a3270fb0bb105752bd",
+      "measurement": {
+        "text": "5w−10=20\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 5,
+      "stepId": "biology-partial",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-05-biology-partial.png",
+      "sourceBoardSha256": "1906a907f5cdeeb5b831bbd6f8a0293d10e476cd02d6716e476e7371a762361c",
+      "measurement": {
+        "text": "Scroll to see every column\n\n\tRole\tConcentration gradient\tEnergy\nMembrane\t\nControls what crosses between cell and surroundings\n\t\n\t\n\nPassive transport\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Controls what crosses between cell and surroundings",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 6,
+      "stepId": "biology-full",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-06-biology-full.png",
+      "sourceBoardSha256": "6072caf2c4d2c8c2c684a09dd9590efd6fbb36ce723f1f00b050fd82080e36ee",
+      "measurement": {
+        "text": "3y−6=9\nShow each operation applied equally to both sides, then explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 7,
+      "stepId": "resume-study",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-07-resume-study.png",
+      "sourceBoardSha256": "33997e372955d2b59167b55d1faa7c52c8c802f5b693c1006deca85f63f1f453",
+      "measurement": {
+        "text": "5w−10=20\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "5w−10=20",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 8,
+      "stepId": "third-equation",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-08-third-equation.png",
+      "sourceBoardSha256": "72a9b3d402daba6de92080063537b42fc6afe9165573aa04f1960f3fb20004bf",
+      "measurement": {
+        "text": "3y−6=9\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 9,
+      "stepId": "ask-next",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-09-ask-next.png",
+      "sourceBoardSha256": "4afb66ecc85d76fff7fce475ee670e11f0e9927cca7958f1ebd30fdf2fcf7afe",
+      "measurement": {
+        "text": "3y−6=9\nShow each equal operation and explain why equality is preserved.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 316,
+            "scroll": 316,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 10,
+      "stepId": "fourth-equation",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-10-fourth-equation.png",
+      "sourceBoardSha256": "5e2ebb0afffaf1c73e4f094090e7176b62c73d4016c4c5af32e875f002835601",
+      "measurement": {
+        "text": "Scroll to see every column\n\n\tRole or direction\tEnergy use\tKey detail\nCell membrane\t\nSelectively permeable boundary\n\t\n\t\nControls substances crossing between cell and surroundings\n\nPassive transport\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "Selectively permeable boundary",
+          "",
+          "Controls substances crossing between cell and surroundings",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 11,
+      "stepId": "explain-back",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-11-explain-back.png",
+      "sourceBoardSha256": "5a02f9ecc72e79e5856cb287a1a71c31ba10a95a85da8741036efb109960ac0f",
+      "measurement": {
+        "text": "3y−6=9",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [
+          {
+            "text": "3y−6=9",
+            "width": 226,
+            "scroll": 226,
+            "fontSize": "18px",
+            "parts": []
+          }
+        ],
+        "cells": [],
+        "scenes": []
+      }
+    },
+    {
+      "index": 12,
+      "stepId": "transfer-response",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-12-transfer-response.png",
+      "sourceBoardSha256": "13ca9e96ff8313351c29894cbd99cf3a1d016f687676099b37ea9f9e1c34cad0",
+      "measurement": {
+        "text": "Scroll to see every column\n\n\tDirection relative to concentration gradient\tEnergy use\tRole or description\nCell membrane\t\n\t\n\t\n\nDiffusion\t\n\t\n\t\n\nActive transport\t\n\t\n\t",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scenes": []
+      }
+    },
+    {
+      "index": 13,
+      "stepId": "final-review",
+      "viewport": "mobile",
+      "screenshot": "renders/release-accepted-mobile-13-final-review.png",
+      "sourceBoardSha256": "1871f82e8bed07492f5fa1647adc081c69628b3b886cce87371fdc577f910e44",
+      "measurement": {
+        "text": "Scroll to see every column\n\n\tDirection relative to concentration gradient\tEnergy use\tRole or description\nCell membrane\t\n\t\n\t\nThe selectively permeable boundary controls which substances cross between the cell and its surroundings.\n\nDiffusion\t\nDown the concentration gradient\n\t\nPassive; no energy use\n\t\nMovement down a concentration gradient.\n\nActive transport\t\nAgainst the concentration gradient\n\t\nUses energy\n\t\nMovement against a concentration gradient.",
+        "mathErrors": 0,
+        "selectableZones": 0,
+        "math": [],
+        "cells": [
+          "",
+          "",
+          "The selectively permeable boundary controls which substances cross between the cell and its surroundings.",
+          "Down the concentration gradient",
+          "Passive; no energy use",
+          "Movement down a concentration gradient.",
+          "Against the concentration gradient",
+          "Uses energy",
+          "Movement against a concentration gradient."
+        ],
+        "scenes": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,927 @@
+{
+  "startedAt": "2026-10-02T09:26:35.926Z",
+  "maximumPaidRequests": 8,
+  "paidRequests": 8,
+  "model": "gpt-5.6-terra",
+  "method": "Targeted follow-up after manual review exposed wrong axis labels, overlapping connector labels and duplicated grammar text. Six subject scenarios plus repeat math/grammar, eight calls maximum, same Terra model. Added semantic plots and exact phrase annotations; preserved the original 20-call comparison unchanged. All outputs retained.",
+  "instructions": {
+    "before": {
+      "chars": 11955,
+      "sha256": "7be8ec55c5fe6e7cff2df8bb8f34f8dbfb503705ca59ba6b614c0f909b61228b"
+    },
+    "current": {
+      "chars": 12938,
+      "sha256": "5837735b662934f6db87ebefb036e26814b2be1ea1f6ae377ef29ad2a4b95e20"
+    }
+  },
+  "runs": [
+    {
+      "id": "biology-process-current",
+      "scenario": "biology-process",
+      "condition": "current",
+      "source": "DNA is transcribed into RNA. RNA is translated into protein. A diagram of this simplified information flow uses DNA → RNA → protein, with transcription and translation labeling the respective arrows.",
+      "request": "Teach me the flow from DNA to protein visually. Show the two named processes and the direction, with no repeated explanation paragraph.",
+      "latencies": {
+        "firstTextMs": 1057,
+        "speechCompleteMs": 1166,
+        "completeMs": 2343
+      },
+      "status": "valid-board",
+      "inputCharacters": 597,
+      "usage": {
+        "units": {
+          "inputTokens": 2808,
+          "outputTokens": 121,
+          "cachedInputTokens": 0,
+          "cacheWriteTokens": 2805,
+          "reasoningTokens": 15
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the simplified information flow.",
+        "board": {
+          "title": "DNA to protein",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "info-flow",
+              "type": "flow",
+              "direction": "right",
+              "nodes": [
+                {
+                  "id": "dna",
+                  "label": "DNA"
+                },
+                {
+                  "id": "rna",
+                  "label": "RNA"
+                },
+                {
+                  "id": "protein",
+                  "label": "Protein"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "dna",
+                  "to": "rna",
+                  "label": "transcription"
+                },
+                {
+                  "from": "rna",
+                  "to": "protein",
+                  "label": "translation"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1024,
+          "totalMs": 2342,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "DNA to protein",
+        "revision": "c20ded61-b66f-4994-898f-dcef311f1d1b",
+        "blocks": [
+          {
+            "id": "info-flow",
+            "type": "flow",
+            "direction": "right",
+            "nodes": [
+              {
+                "id": "dna",
+                "label": "DNA"
+              },
+              {
+                "id": "rna",
+                "label": "RNA"
+              },
+              {
+                "id": "protein",
+                "label": "Protein"
+              }
+            ],
+            "edges": [
+              {
+                "from": "dna",
+                "to": "rna",
+                "label": "transcription"
+              },
+              {
+                "from": "rna",
+                "to": "protein",
+                "label": "translation"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "DNA\nRNA\nProtein\nDNA → RNA: transcription\nRNA → Protein: translation",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "programming-branch-current",
+      "scenario": "programming-branch",
+      "condition": "current",
+      "source": "In a sorted-array search, compare the target with the middle value. If equal, the search succeeds. If target is smaller, keep the left half. If target is larger, keep the right half. Each smaller or larger branch returns to a comparison on the remaining range. For a single decision step, show compare middle branching to found, left half, or right half.",
+      "request": "Draw a clear decision diagram for this search algorithm, including the two outcomes of the comparison.",
+      "latencies": {
+        "firstTextMs": 1146,
+        "speechCompleteMs": 1423,
+        "completeMs": 2202
+      },
+      "status": "valid-board",
+      "inputCharacters": 722,
+      "usage": {
+        "units": {
+          "inputTokens": 2841,
+          "outputTokens": 196,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 163,
+          "reasoningTokens": 35
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the single decision step: compare the target to the middle value, then either find it or continue in the appropriate half.",
+        "board": {
+          "title": "Binary search decision",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "decision",
+              "type": "flow",
+              "direction": "down",
+              "nodes": [
+                {
+                  "id": "compare",
+                  "label": "Compare target with middle value"
+                },
+                {
+                  "id": "found",
+                  "label": "Equal → found"
+                },
+                {
+                  "id": "left",
+                  "label": "Target smaller → search left half"
+                },
+                {
+                  "id": "right",
+                  "label": "Target larger → search right half"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "compare",
+                  "to": "found",
+                  "label": "equal"
+                },
+                {
+                  "from": "compare",
+                  "to": "left",
+                  "label": "smaller"
+                },
+                {
+                  "from": "compare",
+                  "to": "right",
+                  "label": "larger"
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 1143,
+          "totalMs": 2202,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Binary search decision",
+        "revision": "34ab5244-6400-49ab-9209-dcbf53c68468",
+        "blocks": [
+          {
+            "id": "decision",
+            "type": "flow",
+            "direction": "down",
+            "nodes": [
+              {
+                "id": "compare",
+                "label": "Compare target with middle value"
+              },
+              {
+                "id": "found",
+                "label": "Equal → found"
+              },
+              {
+                "id": "left",
+                "label": "Target smaller → search left half"
+              },
+              {
+                "id": "right",
+                "label": "Target larger → search right half"
+              }
+            ],
+            "edges": [
+              {
+                "from": "compare",
+                "to": "found",
+                "label": "equal"
+              },
+              {
+                "from": "compare",
+                "to": "left",
+                "label": "smaller"
+              },
+              {
+                "from": "compare",
+                "to": "right",
+                "label": "larger"
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Compare target with middle value\nEqual → found\nTarget smaller → search left half\nTarget larger → search right half\nCompare target with middle value → Equal → found: equal\nCompare target with middle value → Target smaller → search left half: smaller\nCompare target with middle value → Target larger → search right half: larger",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "grammar-annotation-current",
+      "scenario": "grammar-annotation",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 655,
+        "speechCompleteMs": 772,
+        "completeMs": 1388
+      },
+      "status": "valid-board",
+      "inputCharacters": 660,
+      "usage": {
+        "units": {
+          "inputTokens": 2829,
+          "outputTokens": 118,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 151,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence structure, with each clause marked directly in the sentence.",
+        "board": {
+          "title": "Sentence structure",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "sentence",
+              "type": "annotation",
+              "text": "After the rain stopped, Maya walked to class.",
+              "spans": [
+                {
+                  "quote": "After the rain stopped",
+                  "label": "Dependent clause"
+                },
+                {
+                  "quote": "Maya walked to class",
+                  "label": "Main clause"
+                }
+              ]
+            },
+            {
+              "id": "roles",
+              "type": "text",
+              "content": "After = subordinating conjunction\nMaya = subject of the main clause"
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 649,
+          "totalMs": 1388,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Sentence structure",
+        "revision": "4e33295c-b08c-4042-bbde-acea0c305671",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "annotation",
+            "text": "After the rain stopped, Maya walked to class.",
+            "spans": [
+              {
+                "quote": "After the rain stopped",
+                "label": "Dependent clause"
+              },
+              {
+                "quote": "Maya walked to class",
+                "label": "Main clause"
+              }
+            ]
+          },
+          {
+            "id": "roles",
+            "type": "text",
+            "content": "After = subordinating conjunction\nMaya = subject of the main clause"
+          }
+        ]
+      },
+      "visibleText": "After the rain stopped, Maya walked to class.\nAfter the rain stopped: Dependent clause\nMaya walked to class: Main clause\nAfter = subordinating conjunction\nMaya = subject of the main clause",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "math-parabola-current",
+      "scenario": "math-parabola",
+      "condition": "current",
+      "source": "For y=x^2, the five points are (-2,4), (-1,1), (0,0), (1,1), (2,4). The graph is symmetric about the vertical y axis. Its vertex is (0,0). The positive y direction is upward; x increases rightward.",
+      "request": "Sketch y = x squared from x = minus two to two, with axes, tick values and the origin clear. Use the supplied points accurately.",
+      "latencies": {
+        "firstTextMs": 991,
+        "speechCompleteMs": 1095,
+        "completeMs": 1745
+      },
+      "status": "valid-board",
+      "inputCharacters": 586,
+      "usage": {
+        "units": {
+          "inputTokens": 2843,
+          "outputTokens": 148,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 165,
+          "reasoningTokens": 25
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sketch using the supplied points and symmetry about the y-axis.",
+        "board": {
+          "title": "Parabola",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "graph",
+              "type": "plot",
+              "xRange": [
+                -2,
+                2
+              ],
+              "yRange": [
+                0,
+                4
+              ],
+              "xLabel": "x",
+              "yLabel": "y",
+              "series": [
+                {
+                  "id": "parabola",
+                  "label": "y = x²",
+                  "tone": "ink",
+                  "points": [
+                    [
+                      -2,
+                      4
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      2,
+                      4
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 956,
+          "totalMs": 1744,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Parabola",
+        "revision": "a7ebd812-76e3-49c1-847c-8b5c33fabe49",
+        "blocks": [
+          {
+            "id": "graph",
+            "type": "plot",
+            "xRange": [
+              -2,
+              2
+            ],
+            "yRange": [
+              0,
+              4
+            ],
+            "xLabel": "x",
+            "yLabel": "y",
+            "series": [
+              {
+                "id": "parabola",
+                "label": "y = x²",
+                "tone": "ink",
+                "points": [
+                  [
+                    -2,
+                    4
+                  ],
+                  [
+                    -1,
+                    1
+                  ],
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "x\ny\ny = x²: (-2, 4); (-1, 1); (0, 0); (1, 1); (2, 4)",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "math-negative-slope-current",
+      "scenario": "math-negative-slope",
+      "condition": "current",
+      "source": "The demand line has price P=10-2Q. Quantity Q ranges from0to5. Supplied points(Q,P)are(0,10),(1,8),(2,6),(3,4),(4,2),(5,0). The vertical axis is Price, the horizontal axis Quantity.",
+      "request": "Graph these supplied demand points accurately with numerical axes, x for quantity and y for price. Use the provided values and no invented labels.",
+      "latencies": {
+        "firstTextMs": 914,
+        "speechCompleteMs": 959,
+        "completeMs": 2570
+      },
+      "status": "valid-board",
+      "inputCharacters": 594,
+      "usage": {
+        "units": {
+          "inputTokens": 2839,
+          "outputTokens": 152,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 161,
+          "reasoningTokens": 33
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here are the supplied demand points on numerical axes.",
+        "board": {
+          "title": "Demand points",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "graph",
+              "type": "plot",
+              "xRange": [
+                0,
+                5
+              ],
+              "yRange": [
+                0,
+                10
+              ],
+              "xLabel": "Quantity",
+              "yLabel": "Price",
+              "series": [
+                {
+                  "id": "demand",
+                  "label": "P = 10 - 2Q",
+                  "points": [
+                    [
+                      0,
+                      10
+                    ],
+                    [
+                      1,
+                      8
+                    ],
+                    [
+                      2,
+                      6
+                    ],
+                    [
+                      3,
+                      4
+                    ],
+                    [
+                      4,
+                      2
+                    ],
+                    [
+                      5,
+                      0
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 891,
+          "totalMs": 2569,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Demand points",
+        "revision": "46829531-2a2c-4d6a-b209-19eee74189de",
+        "blocks": [
+          {
+            "id": "graph",
+            "type": "plot",
+            "xRange": [
+              0,
+              5
+            ],
+            "yRange": [
+              0,
+              10
+            ],
+            "xLabel": "Quantity",
+            "yLabel": "Price",
+            "series": [
+              {
+                "id": "demand",
+                "label": "P = 10 - 2Q",
+                "points": [
+                  [
+                    0,
+                    10
+                  ],
+                  [
+                    1,
+                    8
+                  ],
+                  [
+                    2,
+                    6
+                  ],
+                  [
+                    3,
+                    4
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    5,
+                    0
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "Quantity\nPrice\nP = 10 - 2Q: (0, 10); (1, 8); (2, 6); (3, 4); (4, 2); (5, 0)",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "literature-annotation-current",
+      "scenario": "literature-annotation",
+      "condition": "current",
+      "source": "In the fictional sentence “Her memory was a locked garden.”, the subject is “Her memory” and “a locked garden” is the metaphorical image. This is figurative language, not a claim about a physical garden.",
+      "request": "Show which words form the central metaphor and who its subject is. Put the original sentence on the board once with the annotations underneath.",
+      "latencies": {
+        "firstTextMs": 913,
+        "speechCompleteMs": 1307,
+        "completeMs": 2230
+      },
+      "status": "valid-board",
+      "inputCharacters": 615,
+      "usage": {
+        "units": {
+          "inputTokens": 2820,
+          "outputTokens": 128,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 142,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "The image compares her memory to something enclosed and inaccessible. Can you name the two parts being compared?",
+        "board": {
+          "title": "Metaphor parts",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "sentence",
+              "type": "annotation",
+              "text": "Her memory was a locked garden.",
+              "spans": [
+                {
+                  "quote": "Her memory",
+                  "label": "Subject being described"
+                },
+                {
+                  "quote": "a locked garden",
+                  "label": "Metaphorical image"
+                }
+              ]
+            },
+            {
+              "id": "note",
+              "type": "text",
+              "content": "Central metaphor: memory is compared to a locked garden.\nThis is figurative language, not a literal garden."
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 912,
+          "totalMs": 2230,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Metaphor parts",
+        "revision": "fda57cd1-99d3-420f-8267-a64bb413cb75",
+        "blocks": [
+          {
+            "id": "sentence",
+            "type": "annotation",
+            "text": "Her memory was a locked garden.",
+            "spans": [
+              {
+                "quote": "Her memory",
+                "label": "Subject being described"
+              },
+              {
+                "quote": "a locked garden",
+                "label": "Metaphorical image"
+              }
+            ]
+          },
+          {
+            "id": "note",
+            "type": "text",
+            "content": "Central metaphor: memory is compared to a locked garden.\nThis is figurative language, not a literal garden."
+          }
+        ]
+      },
+      "visibleText": "Her memory was a locked garden.\nHer memory: Subject being described\na locked garden: Metaphorical image\nCentral metaphor: memory is compared to a locked garden.\nThis is figurative language, not a literal garden.",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "grammar-annotation-repeat-current",
+      "scenario": "grammar-annotation-repeat",
+      "condition": "current",
+      "source": "In “After the rain stopped, Maya walked to class.”, “After the rain stopped” is the dependent clause and “Maya walked to class” is the main clause. After is the subordinating conjunction; Maya is the subject of the main clause.",
+      "request": "Show the structure of this sentence on the board. Mark the dependent clause and main clause with readable annotations, without repeating the sentence in several boxes.",
+      "latencies": {
+        "firstTextMs": 742,
+        "speechCompleteMs": 862,
+        "completeMs": 1429
+      },
+      "status": "no-board",
+      "inputCharacters": 667,
+      "usage": {
+        "units": {
+          "inputTokens": 2830,
+          "outputTokens": 112,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 152,
+          "reasoningTokens": 0
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the sentence structure, with each clause marked once.",
+        "boardStatus": "invalid",
+        "timings": {
+          "firstDeltaMs": 706,
+          "totalMs": 1429,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": null,
+      "visibleText": "",
+      "checks": {
+        "validBoard": false,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "id": "math-parabola-repeat-current",
+      "scenario": "math-parabola-repeat",
+      "condition": "current",
+      "source": "For y=x^2, the five points are (-2,4), (-1,1), (0,0), (1,1), (2,4). The graph is symmetric about the vertical y axis. Its vertex is (0,0). The positive y direction is upward; x increases rightward.",
+      "request": "Sketch y = x squared from x = minus two to two, with axes, tick values and the origin clear. Use the supplied points accurately.",
+      "latencies": {
+        "firstTextMs": 750,
+        "speechCompleteMs": 821,
+        "completeMs": 1490
+      },
+      "status": "valid-board",
+      "inputCharacters": 593,
+      "usage": {
+        "units": {
+          "inputTokens": 2844,
+          "outputTokens": 148,
+          "cachedInputTokens": 2675,
+          "cacheWriteTokens": 166,
+          "reasoningTokens": 22
+        },
+        "model": "gpt-5.6-terra",
+        "serviceTier": "default"
+      },
+      "result": {
+        "reply": "Here’s the parabola using the supplied points and a clear origin.",
+        "board": {
+          "title": "Graph of y = x²",
+          "mode": "replace",
+          "blocks": [
+            {
+              "id": "graph",
+              "type": "plot",
+              "xRange": [
+                -2,
+                2
+              ],
+              "yRange": [
+                0,
+                4
+              ],
+              "xLabel": "x",
+              "yLabel": "y",
+              "series": [
+                {
+                  "id": "parabola",
+                  "label": "y = x²",
+                  "tone": "ink",
+                  "points": [
+                    [
+                      -2,
+                      4
+                    ],
+                    [
+                      -1,
+                      1
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      2,
+                      4
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "boardStatus": "valid",
+        "timings": {
+          "firstDeltaMs": 743,
+          "totalMs": 1490,
+          "reusedThread": false,
+          "retrievalCalls": 0,
+          "modelRequests": 1
+        }
+      },
+      "board": {
+        "title": "Graph of y = x²",
+        "revision": "a28ea416-5615-4ad1-96ea-9928322fa091",
+        "blocks": [
+          {
+            "id": "graph",
+            "type": "plot",
+            "xRange": [
+              -2,
+              2
+            ],
+            "yRange": [
+              0,
+              4
+            ],
+            "xLabel": "x",
+            "yLabel": "y",
+            "series": [
+              {
+                "id": "parabola",
+                "label": "y = x²",
+                "tone": "ink",
+                "points": [
+                  [
+                    -2,
+                    4
+                  ],
+                  [
+                    -1,
+                    1
+                  ],
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "visibleText": "x\ny\ny = x²: (-2, 4); (-1, 1); (0, 0); (1, 1); (2, 4)",
+      "checks": {
+        "validBoard": true,
+        "speech": true,
+        "noExecutableMarkup": true
+      }
+    }
+  ],
+  "finishedAt": "2026-10-02T09:26:51.338Z"
+}
