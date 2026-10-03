@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "voice-lab": "node --env-file-if-exists=.env voice-lab/server.mjs",
+    "voice-lab:build": "vite build voice-lab --config voice-lab/vite.config.mjs",
+    "voice-lab:test": "node --test voice-lab/tests/*.test.mjs",
     "dev": "node --env-file-if-exists=.env server/index.mjs",
     "build": "vite build",
     "start": "node --env-file-if-exists=.env server/index.mjs --production",

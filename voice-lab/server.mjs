@@ -1,7 +1,7 @@
 import http from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import { createServer as createViteServer } from 'vite';
 import react from '@vitejs/plugin-react';
 import WebSocket, { WebSocketServer } from 'ws';
@@ -9,10 +9,11 @@ import { createCodexOrganizer } from '../server/codex.mjs';
 import { createSpeechStream, createSpeechTextBuffer } from '../server/speech-stream.mjs';
 import { PROVIDERS, PROMPT } from './catalog.mjs';
 import { pcmWav, validPcm, sseData, localRequestAllowed } from './protocol.mjs';
+import { createOAuthVoice } from './oauth.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
-const port = Number(process.env.VOICE_LAB_PORT || 5190);
-const cli = await createCodexOrganizer();
+const port = Number(process.env.VOICE_LAB_PORT || 5196);
+const cli = await createCodexOrganizer({ env: { ...process.env, LUNA_CLI_MODEL: process.env.VOICE_LAB_CLI_MODEL || 'gpt-5.6-luna' } });
 const vite = await createViteServer({ root, configFile: false, plugins: [react()], server: { middlewareMode: true, hmr: { port: port + 1 }, fs: { deny: ['.env', '.env.*', '**/*.pem', '**/*.key', '**/.git/**'] } }, appType: 'spa' });
 const keyNames = ['OPENAI_API_KEY', 'GEMINI_API_KEY', 'ELEVENLABS_API_KEY', 'DEEPGRAM_API_KEY', 'GROQ_API_KEY'];
 const baseKeys = Object.fromEntries(keyNames.map(k => [k, process.env[k] || (k === 'GEMINI_API_KEY' ? process.env.GOOGLE_API_KEY : '') || '']));
@@ -69,21 +70,21 @@ async function checkedFetch(url, init, name) {
 
 wss.on('connection', client => {
   let upstream, provider, config, keys, ready = false, stopped = false, started = false, turn, speech, turnNumber = 0, history = [], keepalive;
-  let responseActive = false, responseItem, responseAudioMs = 0;
+  let responseActive = false, responseItem, responseAudioMs = 0, oauth;
   const lifetime = new AbortController();
   const timeout = setTimeout(() => fail('The 10-minute comparison session ended. Start a new session to continue.'), 600000);
   const handshake = setTimeout(() => fail('The voice provider did not become ready within 30 seconds.'), 30000);
   const send = data => { if (!stopped && client.readyState === WebSocket.OPEN) client.send(JSON.stringify(data)); };
   const up = data => { if (!stopped && upstream?.readyState === WebSocket.OPEN) upstream.send(typeof data === 'object' && !Buffer.isBuffer(data) ? JSON.stringify(data) : data); };
   function cancelTurn() { turn?.abort(); speech?.cancel(); turn = null; speech = null; }
-  function cleanup() { if (stopped) return; stopped = true; ready = false; clearTimeout(timeout); clearTimeout(handshake); clearInterval(keepalive); lifetime.abort(); cancelTurn(); upstream?.terminate(); }
+  function cleanup() { if (stopped) return; stopped = true; ready = false; clearTimeout(timeout); clearTimeout(handshake); clearInterval(keepalive); lifetime.abort(); cancelTurn(); upstream?.terminate(); void oauth?.close(); }
   function fail(message) { send({ type: 'error', message }); cleanup(); client.close(); }
   function markReady(rate) { if (ready || stopped) return; clearTimeout(handshake); ready = true; send({ type: 'ready', inputRate: rate, model: config.model || PROVIDERS.find(p => p.id === provider).model, llm: config.llm }); }
   function socket(url, options, onOpen, onMessage) {
     if (stopped) return;
     upstream = new WebSocket(url, { ...options, handshakeTimeout: 20000, maxPayload: 4_000_000 });
     upstream.on('open', () => { if (stopped) return upstream.terminate(); onOpen(); });
-    upstream.on('message', (data, binary) => { if (stopped) return; try { onMessage(binary ? data : JSON.parse(data.toString()), binary); } catch { fail('The provider returned an unsupported message.'); } });
+    upstream.on('message', (data, binary) => { if (stopped) return; try { onMessage(provider === 'deepgram' && binary ? data : JSON.parse(data.toString()), binary); } catch { fail('The provider returned an unsupported message.'); } });
     upstream.on('unexpected-response', (_, res) => { res.resume(); fail(`Provider handshake returned HTTP ${res.statusCode}. Check credentials and access.`); });
     upstream.on('error', () => { if (!stopped) fail('The provider connection failed. Check the key, model access, and network.'); });
     upstream.on('close', () => { if (!stopped) fail('The provider closed the conversation. Start a new session.'); });
@@ -100,15 +101,16 @@ wss.on('connection', client => {
       if (!['groq','openai','codex'].includes(config.llm)) throw new Error('Unsupported text model provider.');
       if (config.llm === 'codex' && !cli.available) throw new Error('Sign in with codex login to use the OAuth text model.');
       if (config.llm !== 'codex' && !keys[config.llm === 'groq' ? 'GROQ_API_KEY' : 'OPENAI_API_KEY']) throw new Error('Add the selected text provider key in Connections.');
+      if (config.llm === 'codex') { oauth = createOAuthVoice({ model: cli.model, instructions: config.prompt }); await oauth.ready(); if (stopped) { await oauth.close(); return; } }
       markReady(16000); return;
     }
     if (provider === 'openai') {
       socket('wss://api.openai.com/v1/realtime?model=' + encodeURIComponent(config.model || 'gpt-realtime-2.1'), { headers: { Authorization: `Bearer ${keys.OPENAI_API_KEY}` } }, () => up({ type: 'session.update', session: { type: 'realtime', instructions: config.prompt, output_modalities: ['audio'], audio: { input: { format: { type: 'audio/pcm', rate: 24000 }, transcription: { model: 'gpt-4o-mini-transcribe' }, turn_detection: { type: 'server_vad', threshold: 0.5, prefix_padding_ms: 300, silence_duration_ms: 450, create_response: true, interrupt_response: true } }, output: { format: { type: 'audio/pcm', rate: 24000 }, voice: 'marin' } } } }), m => {
         if (m.type === 'session.updated') markReady(24000);
         if (m.type === 'error') fail('OpenAI rejected the session or event. Check model access and configuration.');
-        if (m.type === 'input_audio_buffer.speech_started') { send({ type: 'interrupt' }); if (responseItem && responseAudioMs > 0) up({ type: 'conversation.item.truncate', item_id: responseItem, content_index: 0, audio_end_ms: Math.floor(Math.min(responseAudioMs, m.audio_start_ms || responseAudioMs)) }); }
+        if (m.type === 'input_audio_buffer.speech_started') send({ type: 'interrupt', itemId: responseItem });
         if (m.type === 'conversation.item.input_audio_transcription.completed') send({ type: 'transcript', role: 'user', text: m.transcript });
-        if (m.type === 'response.created') { responseActive = true; responseItem = null; responseAudioMs = 0; }
+        if (m.type === 'response.created') { responseActive = true; responseItem = null; responseAudioMs = 0; send({ type: 'response_start' }); }
         if (m.type === 'response.output_audio.delta') { responseItem = m.item_id; responseAudioMs += Buffer.from(m.delta,'base64').length / 48; send({ type: 'audio', data: m.delta, rate: 24000 }); }
         if (m.type === 'response.output_audio_transcript.delta') send({ type: 'transcript', role: 'assistant', delta: m.delta });
         if (m.type === 'response.done') { responseActive = false; send({ type: 'done' }); }
@@ -171,8 +173,7 @@ wss.on('connection', client => {
       speech = tts; const buffer = createSpeechTextBuffer(value => tts.write(value));
       function delta(value) { if (signal.aborted || !value) return; if (first) { first = false; emit({ type: 'timing', stage: 'llm', ms: performance.now() - llmAt }); } answer += value; if (answer.length > 1700) throw new Error('The AI reply exceeded the voice limit.'); emit({ type: 'transcript', role: 'assistant', delta: value }); buffer.push(value); }
       if (config.llm === 'codex') {
-        const result = await cli.organize({ messages: history }, { schema: { type: 'object', properties: { reply: { type: 'string' } }, required: ['reply'], additionalProperties: false }, instructions: config.prompt, signal, timeoutMs: 45000 });
-        delta(result.reply);
+        await oauth.respond(history, { signal, onText: delta });
       } else if (config.llm === 'groq') {
         const r = await checkedFetch('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', signal, headers: { Authorization: `Bearer ${keys.GROQ_API_KEY}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ model: config.textModel || 'llama-3.1-8b-instant', messages: [{ role: 'system', content: config.prompt }, ...history], max_tokens: 200, stream: true, temperature: 0.5 }) }, 'Groq');
         for await (const part of sseData(r.body)) { if (part.error) throw new Error('Groq text generation failed.'); delta(part.choices?.[0]?.delta?.content); }
@@ -192,6 +193,7 @@ wss.on('connection', client => {
       if (m.type === 'start') { if (started) throw new Error('A session is already starting.'); started = true; start(m).catch(e => { if (!stopped) fail(e.message); }); return; }
       if (m.type === 'stop') { cleanup(); client.close(); return; }
       if (!ready) return;
+      if (m.type === 'playback_truncate' && provider === 'openai' && m.itemId === responseItem && Number.isFinite(m.playedMs) && m.playedMs >= 0) { up({ type: 'conversation.item.truncate', item_id: responseItem, content_index: 0, audio_end_ms: Math.floor(Math.min(responseAudioMs, m.playedMs)) }); return; }
       if (m.type === 'interrupt') { cancelTurn(); if (provider === 'openai' && responseActive) up({ type: 'response.cancel' }); send({ type: 'interrupt' }); return; }
       if (m.type === 'utterance' && ['local', 'groq'].includes(provider)) { pipeline(m); return; }
       if (m.type === 'audio' && validPcm(m.data, 16000)) {

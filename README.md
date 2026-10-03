@@ -1,5 +1,9 @@
 # Luna Study
 
+## Separate voice comparison lab
+
+Run `npm run voice-lab` and open [localhost:5196](http://localhost:5196) to compare five hosted voice approaches plus an in-house browser-STT → streaming AI → ElevenLabs pipeline. Includes replaying the same audio, transcripts, response timing, listening ratings, and JSON export. It runs independently of the study app. See [setup](voice-lab/README.md), [the 34-repository research review](voice-lab/RESEARCH.md), and [live test results](voice-lab/RESULTS.md).
+
 A local proof of concept for studying through conversation. The monochrome board starts empty with a book illustration rendered through ordered dithering on a browser canvas; each test has its own material, date, and voice session. This app is separate from the CUPI website.
 
 The current local configuration uses **GPT-5.6 Terra through the OpenAI Responses API** for the main tutor and **GPT-6 Luna** for source preparation and visual recovery. `LUNA_TUTOR_MODEL` selects the tutor, defaulting to `LUNA_API_MODEL`; `LUNA_GRADING_MODEL` independently selects the two graders and defaults to **GPT-5.6 Terra**. `LUNA_API_MODEL` selects indexing, question preparation, planning, and rendering. See [the current quality report and measured failures](docs/tutor-quality-report.md) and [the exact import, whiteboard, and debug flow](docs/import-and-debug.md). In development, the small dollar icon inside each test opens measured provider usage, explicitly labeled price estimates, separately reported billed charges, and an activity timeline. Missing costs are never displayed as zero.
