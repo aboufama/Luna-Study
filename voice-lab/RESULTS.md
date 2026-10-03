@@ -23,7 +23,7 @@ Moonshine remains available in Fine-tune as a speed experiment. The most useful 
 | ElevenLabs streaming TTS | Real PCM produced for the custom pipeline; no browser TTS substitution |
 | Browser-local recognition | WASM worker loaded and transcribed real synthetic speech; both final Whisper transcripts exact |
 | OpenAI OAuth | Signed-in CLI verified; GPT-5.6 Luna appears in its model catalog; streaming replies and speech tested |
-| OpenAI Realtime | Adapter implemented; configured API key rejected with HTTP 401. No successful Realtime conversation measured |
+| OpenAI Realtime | Adapter implemented; REST rejected the configured API key with HTTP 401. A direct Realtime diagnostic subsequently identified `account_deactivated` for that key. No successful Realtime conversation measured |
 | Gemini Live | Adapter implemented against current official schema; no key supplied, live path unverified |
 | Deepgram | Adapter implemented against current official schema; no key supplied, live path unverified |
 | Groq cloud pipeline | STT and streaming-text adapters implemented; no key supplied, live path unverified |

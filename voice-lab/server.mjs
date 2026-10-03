@@ -10,6 +10,7 @@ import { createSpeechStream, createSpeechTextBuffer } from '../server/speech-str
 import { PROVIDERS, PROMPT } from './catalog.mjs';
 import { pcmWav, validPcm, sseData, localRequestAllowed } from './protocol.mjs';
 import { createOAuthVoice } from './oauth.mjs';
+import { openaiErrorMessage } from './openai-errors.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.VOICE_LAB_PORT || 5196);
@@ -70,7 +71,7 @@ async function checkedFetch(url, init, name) {
 
 wss.on('connection', client => {
   let upstream, provider, config, keys, ready = false, stopped = false, started = false, turn, speech, turnNumber = 0, history = [], keepalive;
-  let responseActive = false, responseItem, responseAudioMs = 0, oauth;
+  let responseActive = false, responseItem, responseAudioMs = 0, oauth, openaiKeySource = 'environment';
   const lifetime = new AbortController();
   const timeout = setTimeout(() => fail('The 10-minute comparison session ended. Start a new session to continue.'), 600000);
   const handshake = setTimeout(() => fail('The voice provider did not become ready within 30 seconds.'), 30000);
@@ -85,7 +86,18 @@ wss.on('connection', client => {
     upstream = new WebSocket(url, { ...options, handshakeTimeout: 20000, maxPayload: 4_000_000 });
     upstream.on('open', () => { if (stopped) return upstream.terminate(); onOpen(); });
     upstream.on('message', (data, binary) => { if (stopped) return; try { onMessage(provider === 'deepgram' && binary ? data : JSON.parse(data.toString()), binary); } catch { fail('The provider returned an unsupported message.'); } });
-    upstream.on('unexpected-response', (_, res) => { res.resume(); fail(`Provider handshake returned HTTP ${res.statusCode}. Check credentials and access.`); });
+    upstream.on('unexpected-response', (_, res) => {
+      if (provider !== 'openai') { res.resume(); fail(`Provider handshake returned HTTP ${res.statusCode}. Check credentials and access.`); return; }
+      let body = '', finished = false;
+      const finish = () => {
+        if (finished) return; finished = true; clearTimeout(timer);
+        let error; try { error = JSON.parse(body).error; } catch {}
+        fail(openaiErrorMessage(error, { source: openaiKeySource, status: res.statusCode }));
+      };
+      const timer = setTimeout(() => { finish(); res.destroy(); }, 3000);
+      res.on('data', chunk => { body += chunk; if (body.length > 16000) { body = ''; finish(); res.destroy(); } });
+      res.on('end', finish); res.on('error', finish);
+    });
     upstream.on('error', () => { if (!stopped) fail('The provider connection failed. Check the key, model access, and network.'); });
     upstream.on('close', () => { if (!stopped) fail('The provider closed the conversation. Start a new session.'); });
   }
@@ -94,6 +106,7 @@ wss.on('connection', client => {
     if (!PROVIDERS.some(p => p.id === provider)) throw new Error('Choose a supported voice option.');
     keys = { ...baseKeys };
     for (const name of keyNames) if (typeof m.keys?.[name] === 'string' && m.keys[name].length < 1000 && m.keys[name].trim()) keys[name] = m.keys[name].trim();
+    if (typeof m.keys?.OPENAI_API_KEY === 'string' && m.keys.OPENAI_API_KEY.length < 1000 && m.keys.OPENAI_API_KEY.trim()) openaiKeySource = 'connection';
     for (const key of PROVIDERS.find(p => p.id === provider).needs) if (!keys[key]) throw new Error(`Add ${key} in Connections first.`);
     config.prompt = (typeof config.prompt === 'string' && config.prompt.trim() ? config.prompt : PROMPT).slice(0,6000);
     if (provider === 'local' || provider === 'groq') {
@@ -107,7 +120,7 @@ wss.on('connection', client => {
     if (provider === 'openai') {
       socket('wss://api.openai.com/v1/realtime?model=' + encodeURIComponent(config.model || 'gpt-realtime-2.1'), { headers: { Authorization: `Bearer ${keys.OPENAI_API_KEY}` } }, () => up({ type: 'session.update', session: { type: 'realtime', instructions: config.prompt, output_modalities: ['audio'], audio: { input: { format: { type: 'audio/pcm', rate: 24000 }, transcription: { model: 'gpt-4o-mini-transcribe' }, turn_detection: { type: 'server_vad', threshold: 0.5, prefix_padding_ms: 300, silence_duration_ms: 450, create_response: true, interrupt_response: true } }, output: { format: { type: 'audio/pcm', rate: 24000 }, voice: 'marin' } } } }), m => {
         if (m.type === 'session.updated') markReady(24000);
-        if (m.type === 'error') fail('OpenAI rejected the session or event. Check model access and configuration.');
+        if (m.type === 'error') fail(openaiErrorMessage(m.error, { source: openaiKeySource }));
         if (m.type === 'input_audio_buffer.speech_started') send({ type: 'interrupt', itemId: responseItem });
         if (m.type === 'conversation.item.input_audio_transcription.completed') send({ type: 'transcript', role: 'user', text: m.transcript });
         if (m.type === 'response.created') { responseActive = true; responseItem = null; responseAudioMs = 0; send({ type: 'response_start' }); }

@@ -8,6 +8,8 @@ Six real adapters: OpenAI Realtime, Gemini Live, ElevenLabs Agents, Deepgram Voi
 
 The server reads the root `.env`. Keys can also be added temporarily in **Connections**. Temporary keys stay in tab memory and in the active server session, never localStorage or files. Environment key values are never returned to the browser. A configured key is not proof of valid access. Failed connections surface in the page.
 
+Realtime errors distinguish a deactivated API account, an invalid key, unavailable models, quota limits, and invalid session settings. The error identifies whether the credential came from Connections or the server environment, without exposing keys or raw provider messages. A working Codex OAuth login does not replace the API key used by this adapter. For `account_deactivated`, supply a key from your active API account in Connections; changing the Realtime model or signing into Codex again will not repair that rejected key.
+
 - `ELEVENLABS_API_KEY`: Agents plus speech for both custom pipelines.
 - `ELEVENLABS_VOICE_ID`: optional; defaults to the provider's George voice.
 - `OPENAI_API_KEY`: Realtime and optional streaming text in the local challenger.
